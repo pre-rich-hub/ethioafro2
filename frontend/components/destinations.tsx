@@ -142,11 +142,8 @@ export function Destinations() {
               className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-charcoal/75" />
-            <p className="relative text-balance font-serif text-2xl text-background sm:text-3xl">
-              Two more regions are waiting past the edge of this screen.
-            </p>
             <span className="relative inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-colors duration-300 group-hover:bg-accent/90">
-              Explore All Destinations
+              Explore More Destinations
               <ArrowRight className="h-4 w-4" />
             </span>
           </Link>
