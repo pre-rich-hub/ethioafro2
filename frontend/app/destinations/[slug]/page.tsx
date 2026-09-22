@@ -55,12 +55,6 @@ export default async function DestinationPage({
           { label: 'Destinations', href: '/destinations' },
           { label: d.name },
         ]}
-        meta={[
-          { label: 'Best Time', value: d.bestTime },
-          { label: 'Suggested Stay', value: d.duration },
-          { label: 'Altitude', value: d.altitude },
-          { label: 'Region', value: d.region },
-        ]}
       />
 
       {/* Essay + highlights */}

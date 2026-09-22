@@ -13,6 +13,7 @@ interface PageHeroProps {
   crumbs?: Crumb[]
   meta?: { label: string; value: string }[]
   align?: 'left' | 'center'
+  compact?: boolean
 }
 
 export function PageHero({
@@ -24,9 +25,16 @@ export function PageHero({
   crumbs = [],
   meta,
   align = 'left',
+  compact = false,
 }: PageHeroProps) {
   return (
-    <section className="relative isolate flex min-h-[74svh] items-end overflow-hidden pt-28 sm:min-h-[68svh] lg:min-h-[76vh]">
+    <section
+      className={`relative isolate flex items-end overflow-hidden pt-28 ${
+        compact
+          ? 'min-h-[52svh] sm:min-h-[50svh] lg:min-h-[54vh]'
+          : 'min-h-[74svh] sm:min-h-[68svh] lg:min-h-[76vh]'
+      }`}
+    >
       <div className="absolute inset-0 -z-10">
         <Image
           src={image || '/placeholder.svg'}

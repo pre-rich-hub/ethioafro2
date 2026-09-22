@@ -24,6 +24,7 @@ const columns = [
   {
     title: 'Explore',
     links: [
+      { label: 'Signature Experiences', href: '/experiences' },
       { label: 'Outbound Tours', href: '/outbound' },
       { label: 'Travel Journal', href: '/blog' },
       { label: 'Responsible Tourism', href: '/blog/responsible-travel-in-the-omo' },

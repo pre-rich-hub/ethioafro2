@@ -24,12 +24,7 @@ export default function DestinationsPage() {
         image="/images/gondar.png"
         imageAlt="The royal enclosure of Fasil Ghebbi in Gondar at golden hour"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Destinations' }]}
-        meta={[
-          { label: 'Destinations', value: '8' },
-          { label: 'UNESCO Sites', value: '5' },
-          { label: 'Altitude Range', value: '-125 – 4,533 m' },
-          { label: 'Best Months', value: 'Oct – Mar' },
-        ]}
+        compact
       />
 
       <section className="shell py-16 sm:py-20 lg:py-28">
@@ -50,18 +45,10 @@ export default function DestinationsPage() {
           ))}
         </Reveal>
 
-        <div className="grid gap-5 sm:gap-6 lg:grid-cols-12">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {destinations.map((d, i) => (
-            <Reveal
-              key={d.slug}
-              delay={(i % 2) * 90}
-              className={d.span ?? 'lg:col-span-6'}
-            >
-              <DestinationCard
-                destination={d}
-                height={i < 2 ? 'lg' : 'md'}
-                sizes="(max-width: 1024px) 100vw, 55vw"
-              />
+            <Reveal key={d.slug} delay={(i % 3) * 90} className="h-full">
+              <DestinationCard destination={d} className="h-full" />
             </Reveal>
           ))}
         </div>

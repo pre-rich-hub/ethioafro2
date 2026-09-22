@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
-import { PostCard } from '@/components/post-card'
 import { PostsGrid } from '@/components/posts-grid'
 import { SectionHeading } from '@/components/section-heading'
 import { NewsletterForm } from '@/components/newsletter-form'
@@ -15,9 +14,6 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  const featured = posts.find((p) => p.featured) ?? posts[0]
-  const rest = posts.filter((p) => p.slug !== featured.slug)
-
   return (
     <>
       <PageHero
@@ -27,30 +23,18 @@ export default function BlogPage() {
         image="/images/coffee-ceremony.png"
         imageAlt="Green coffee beans roasting over coals during an Ethiopian coffee ceremony"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Journal' }]}
+        compact
       />
 
-      {/* Featured */}
-      <section className="shell py-16 sm:py-20 lg:py-24">
-        <Reveal className="mb-8">
-          <p className="eyebrow text-accent">
-            <span className="rule" />
-            Latest Dispatch
-          </p>
-        </Reveal>
-        <Reveal delay={80}>
-          <PostCard post={featured} wide />
-        </Reveal>
-      </section>
-
       {/* All posts */}
-      <section className="border-t border-border">
+      <section>
         <div className="shell py-16 sm:py-20 lg:py-28">
           <SectionHeading
             eyebrow="Archive"
-            title="The rest of what we've written"
+            title="Everything we've written"
             aside="Six pieces so far, each one written to actually answer something."
           />
-          <PostsGrid posts={rest} />
+          <PostsGrid posts={posts} />
         </div>
       </section>
 

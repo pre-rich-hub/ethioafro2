@@ -131,12 +131,21 @@ export function Destinations() {
             href="/destinations"
             onClick={onCardClick}
             draggable={false}
-            className="group flex h-[440px] w-[280px] shrink-0 select-none snap-start flex-col items-center justify-center gap-6 rounded-sm bg-secondary p-8 text-center sm:h-[560px] sm:w-[360px]"
+            className="group relative flex h-[440px] w-[280px] shrink-0 select-none snap-start flex-col items-center justify-center gap-6 overflow-hidden rounded-sm p-8 text-center sm:h-[560px] sm:w-[360px]"
           >
-            <p className="text-balance font-serif text-2xl text-secondary-foreground sm:text-3xl">
-              Nine regions. One story each.
+            <Image
+              src="/images/bale-gelada.png"
+              alt="Ethiopian wolf territory in the Bale Mountains"
+              fill
+              draggable={false}
+              sizes="(max-width: 640px) 280px, 360px"
+              className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-charcoal/75" />
+            <p className="relative text-balance font-serif text-2xl text-background sm:text-3xl">
+              Two more regions are waiting past the edge of this screen.
             </p>
-            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-colors duration-300 group-hover:bg-accent/90">
+            <span className="relative inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-colors duration-300 group-hover:bg-accent/90">
               Explore All Destinations
               <ArrowRight className="h-4 w-4" />
             </span>

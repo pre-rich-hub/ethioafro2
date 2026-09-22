@@ -1013,6 +1013,135 @@ export const testimonials = [
   },
 ]
 
+export type Experience = {
+  slug: string
+  number: string
+  title: string
+  tagline: string
+  image: string
+  gallery: string[]
+  intro: string
+  paragraphs: string[]
+  highlights: string[]
+  facts: { label: string; value: string }[]
+  relatedTourSlug: string
+}
+
+export const experiences: Experience[] = [
+  {
+    slug: 'coffee-traced-to-origin',
+    number: '01',
+    title: 'Follow the bean home',
+    tagline: 'Where coffee was born, roasted the way it always has been',
+    image: '/images/coffee-ceremony.png',
+    gallery: ['/images/coffee-ceremony.png', '/images/lake-tana.png'],
+    intro:
+      'Wild coffee still grows under the canopy in Kaffa, where the plant was first found. We take you from forest floor to open-coal roast, in the hands of a family that has done this for generations.',
+    paragraphs: [
+      'Most coffee tourism stops at a demonstration. Ours starts a day earlier, in the Bonga forest understorey, where wild Arabica still grows exactly as it did before anyone thought to cultivate it — no rows, no irrigation, just shade trees and red cherries hanging at head height.',
+      'From there it is a short drive to a family compound where the same beans are washed, dried and roasted over open coals, the way it has been done for longer than anyone in the household can date precisely. You sit on the floor mat, not a tourist bench, and the three rounds — abol, tona, baraka — are not shortened for the schedule.',
+      'What you leave with is not a photograph of a ceremony. It is an understanding of why Ethiopians will tell you, without exaggeration, that coffee is a relationship rather than a drink.',
+    ],
+    highlights: [
+      'A guided walk through wild coffee forest in Kaffa, with a botanist-trained local guide',
+      'A full three-round coffee ceremony inside a family home, not a staged tourist stop',
+      'Time with the family who grows and roasts it — through a translator, unhurried',
+      'The chance to buy beans directly from the household that roasted them',
+    ],
+    facts: [
+      { label: 'Best paired with', value: 'Sacred Waters & Coffee' },
+      { label: 'Typical setting', value: 'Kaffa & Bonga forest' },
+      { label: 'Time needed', value: 'Half a day, minimum' },
+      { label: 'Season', value: 'Year-round' },
+    ],
+    relatedTourSlug: 'sacred-waters-and-coffee',
+  },
+  {
+    slug: 'light-first-photography',
+    number: '02',
+    title: 'Work around the light, not the schedule',
+    tagline: 'A photographer-guide, not a driver who waits in the car',
+    image: '/images/danakil.png',
+    gallery: ['/images/danakil.png', '/images/lalibela.png', '/images/omo-valley.png'],
+    intro:
+      'A photographer-guide reads each site for its hour — the churches at dawn, the salt flats at dusk — so the camera is never fighting flat midday sun.',
+    paragraphs: [
+      'Every stop on a photography-led route is scheduled around the light rather than the itinerary. That means a 4am departure for Lalibela more often than not, and it means leaving Dallol at exactly the moment the light turns from harsh to workable rather than sticking to a printed timetable.',
+      'Your guide is a working photographer first, a driver second. They know which ridge at Imet Gogo gets the clean sunrise line, which angle on the Erta Ale caldera avoids the sulphur haze, and when to simply stop the vehicle because the light will not hold.',
+      'In the Omo Valley, portraits are arranged in advance through a cultural mediator, with consent asked and respected — never a photograph taken from a moving vehicle. Prints are sent back afterward, which is usually the more meaningful exchange of the two.',
+    ],
+    highlights: [
+      'A working photographer as guide, not a generalist driver-guide',
+      'Golden-hour and blue-hour access built into the schedule at every major site',
+      'A vehicle with windows that actually open, and stops made on request',
+      'Consent-based portrait sessions in the Omo Valley, with a mediator present',
+    ],
+    facts: [
+      { label: 'Best paired with', value: 'Ethiopia Through the Lens' },
+      { label: 'Typical setting', value: 'Lalibela, Danakil, Omo Valley' },
+      { label: 'Group size', value: '2 – 4 guests, by design' },
+      { label: 'Season', value: 'Oct – Mar' },
+    ],
+    relatedTourSlug: 'ethiopia-through-the-lens',
+  },
+  {
+    slug: 'access-through-relationship',
+    number: '03',
+    title: 'Arrive as a guest, not a tourist',
+    tagline: 'Doors that open because of years of trust, not a fee',
+    image: '/images/textile.png',
+    gallery: ['/images/textile.png', '/images/omo-valley.png'],
+    intro:
+      'Years of standing relationships with artisans, elders and monks mean doors open before you knock. What you see is offered, never staged.',
+    paragraphs: [
+      'The lower Omo Valley has a well-documented problem: an economy where a stranger arrives, pays a few birr per photograph, and leaves having learned nothing. We built our access here differently, over more than a decade, and it shows in how a visit actually unfolds.',
+      'Community fees are agreed annually with elders and published to guests — nothing negotiated at the roadside. A cultural mediator travels with every journey, and their job is arranging the visit in advance, not translating on the fly. That is the difference between being tolerated and being invited.',
+      'The same principle holds further north — a monk unwrapping an illuminated gospel at Lake Tana, a weaver in Dorze explaining a pattern passed through four generations. None of it is a performance scheduled for tour groups; it is simply what happens when the same guides return, respectfully, year after year.',
+    ],
+    highlights: [
+      'Community fees agreed with elders and published in advance, never negotiated on arrival',
+      'A resident cultural mediator on every Omo Valley journey',
+      'Access to artisans, monks and elders built on years of standing relationship',
+      'A firm no-photography-without-consent standard, explained to guests before arrival',
+    ],
+    facts: [
+      { label: 'Best paired with', value: 'Omo Valley Immersion' },
+      { label: 'Typical setting', value: 'Omo Valley, Lake Tana, Dorze' },
+      { label: 'Time needed', value: '3 days or more' },
+      { label: 'Season', value: 'Jun – Sep, Dec – Mar' },
+    ],
+    relatedTourSlug: 'omo-valley-immersion',
+  },
+  {
+    slug: 'rest-at-the-edge-of-the-wild',
+    number: '04',
+    title: 'Sleep at the edge of the wild',
+    tagline: 'Lodges chosen for the view, not the brochure',
+    image: '/images/luxury-lodge.png',
+    gallery: ['/images/luxury-lodge.png', '/images/hero-simien.png'],
+    intro:
+      'Each evening ends somewhere chosen for its view and its quiet — lodges set into escarpments and forest edges, built to disappear into what surrounds them.',
+    paragraphs: [
+      'We do not select lodges from a chain\'s sales sheet. Each property on our list has been slept in by someone on our team, usually more than once, and judged on the same short list: the view from the room, how the light enters at both ends of the day, and whether the staff would still be warm to you if no one was watching.',
+      'On the Simien rim, that means a lodge positioned so the escarpment drop is the first thing you see on waking, with a fire lit before you are back from the day\'s walk. In the lowlands, it means a camp with proper bedding and a cook rather than a tent pitched wherever the vehicle stopped.',
+      'The common thread is restraint — comfort that supports the day rather than competing with the landscape for attention.',
+    ],
+    highlights: [
+      'Every lodge personally inspected and slept in by our team before it is recommended',
+      'Rooms and camps chosen for their view first, amenities second',
+      'A fire, hot water and proper bedding even in genuinely remote settings',
+      'Never a chain hotel where a family-run alternative exists and performs as well',
+    ],
+    facts: [
+      { label: 'Best paired with', value: 'Highlands & Wildlife' },
+      { label: 'Typical setting', value: 'Simien rim, forest edges' },
+      { label: 'Style', value: 'Boutique lodges & serviced camps' },
+      { label: 'Season', value: 'Year-round' },
+    ],
+    relatedTourSlug: 'highlands-and-wildlife',
+  },
+]
+
 export const journeyStyles = [
   'Luxury',
   'Photography',
