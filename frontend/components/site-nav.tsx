@@ -44,6 +44,24 @@ function Wordmark({
         alt="Simien Ethiopia Tours Logo"
         className="h-14 w-14 rounded-full object-cover border border-accent/25 shadow-md transition-transform duration-300 hover:scale-105"
       />
+      <span className="ml-3 flex flex-col">
+        <span
+          className={cn(
+            'font-serif text-2xl leading-none transition-colors duration-300',
+            tone === 'dark' ? 'text-foreground' : 'text-background',
+          )}
+        >
+          Simien Ethiopia
+        </span>
+        <span
+          className={cn(
+            'mt-1 text-[9px] font-semibold uppercase tracking-[0.28em]',
+            tone === 'dark' ? 'text-accent' : 'text-accent-light',
+          )}
+        >
+          Tours
+        </span>
+      </span>
     </Link>
   )
 }

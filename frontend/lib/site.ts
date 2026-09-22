@@ -256,7 +256,7 @@ export const tours: Tour[] = [
   {
     slug: 'the-historic-route',
     title: 'The Historic Route',
-    image: '/images/gondar.png',
+    image: '/images/hero-lalibela.png',
     days: '11 Days',
     nights: 10,
     style: 'Cultural · Private',
@@ -380,7 +380,7 @@ export const tours: Tour[] = [
   {
     slug: 'sacred-waters-and-coffee',
     title: 'Sacred Waters & Coffee',
-    image: '/images/lake-tana.png',
+    image: '/images/coffee-ceremony.png',
     days: '7 Days',
     nights: 6,
     style: 'Slow Travel · Private',
