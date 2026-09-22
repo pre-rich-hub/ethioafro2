@@ -1,0 +1,25 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: light) {
+      .background { fill: black; }
+      .foreground { fill: white; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .background { fill: white; }
+      .foreground { fill: black; }
+    }
+  </style>
+  <g clip-path="url(#clip0_simien)">
+    <rect class="background" width="180" height="180" rx="37" />
+    <g style="transform: scale(95%); transform-origin: center">
+      <circle class="foreground" cx="90" cy="46" r="13" />
+      <path class="foreground" d="M32,129 L56,91 L73,110 L90,60 L108,109 L125,87 L149,129 Z" />
+      <rect class="foreground" x="26" y="129" width="128" height="4" rx="2" />
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0_simien">
+      <rect width="180" height="180" fill="white" />
+    </clipPath>
+  </defs>
+</svg>

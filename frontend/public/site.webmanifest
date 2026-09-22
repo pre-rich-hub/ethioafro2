@@ -1,0 +1,21 @@
+{
+  "name": "Simien Ethiopia Tours",
+  "short_name": "Simien Ethiopia Tours",
+  "description": "Private, tailor-made journeys through Ethiopia — the Land of Origins.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F8F3",
+  "theme_color": "#1A1A1A",
+  "icons": [
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-dark-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+
+  /* Brand palette */
+  --color-charcoal: var(--charcoal);
+  --color-sand: var(--sand);
+  --color-accent-light: var(--accent-light);
+  --color-pop: var(--pop);
+  --color-pop-foreground: var(--pop-foreground);
+
+  /* Semantic tokens */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --animate-slow-zoom: slow-zoom 22s ease-out forwards;
+  --animate-marquee: marquee 42s linear infinite;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Parchment — sampled directly from jacadatravel.com screenshots (#F9F8F3 / their --primary-parchment) */
+  --background: #f9f8f3;
+  --foreground: #1a1a1a;
+
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+
+  /* Off-black — sampled directly from jacadatravel.com screenshots (#1A1A1A / their --primary-off-black) */
+  --primary: #1a1a1a;
+  --primary-foreground: #f9f8f3;
+
+  /* Charcoal — their --primary-charcoal, used for dark editorial bands */
+  --secondary: #393732;
+  --secondary-foreground: #f9f8f3;
+
+  --muted: oklch(0.938 0.013 78);
+  --muted-foreground: oklch(0.46 0.017 55);
+
+  /* Gold — sampled directly from jacadatravel.com screenshots (#C1AA7F / their --primary-gold), single value used everywhere as they do */
+  --accent: #c1aa7f;
+  --accent-foreground: #1a1a1a;
+
+  --accent-light: #c1aa7f;
+
+  --destructive: oklch(0.55 0.19 27);
+  --border: oklch(0.875 0.014 76);
+  --input: oklch(0.875 0.014 76);
+  --ring: #1a1a1a;
+
+  --charcoal: #1a1a1a;
+  --sand: oklch(0.918 0.02 78);
+
+  /* Pop — sampled from jacadatravel.com's "Start Planning" button (#E6CCF6, their --primary-jacaranda). Reserved for the site's single highest-intent CTA, used sparingly. */
+  --pop: #e6ccf6;
+  --pop-foreground: #1a1a1a;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    font-size: 15px;
+  }
+  body {
+    @apply bg-background font-sans text-foreground;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  blockquote {
+    @apply font-serif;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  }
+}
+
+@layer utilities {
+  /* Editorial micro-label: uppercase, letterspaced, hairline rule */
+  .eyebrow {
+    @apply flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] sm:text-[11px];
+  }
+  .rule {
+    @apply h-px w-8 shrink-0 bg-current opacity-60 sm:w-10;
+  }
+  .shell {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-10;
+  }
+  .hairline-grid {
+    background-image: linear-gradient(
+        to right,
+        var(--border) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 88px 88px;
+  }
+  .text-shadow-soft {
+    text-shadow: 0 1px 24px oklch(0.185 0.012 58 / 0.35);
+  }
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: inherit;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Premium form control shared by enquiry + contact forms */
+.input {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--foreground);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.input::placeholder {
+  color: var(--muted-foreground);
+  opacity: 0.75;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 14%, transparent);
+}
