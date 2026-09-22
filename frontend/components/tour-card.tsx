@@ -41,7 +41,7 @@ export function TourCard({
         </p>
 
         {/* See the Journey link */}
-        <div className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent-light/90 group-hover:text-accent-light transition-colors duration-300">
+        <div className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-accent-light/90 group-hover:text-accent-light transition-colors duration-300">
           <span>See the Journey</span>
           <span className="transition-transform duration-300 group-hover:translate-x-1">
             &rarr;

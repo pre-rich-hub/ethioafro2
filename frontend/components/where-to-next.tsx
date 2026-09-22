@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -15,38 +15,101 @@ const stops = [
   { src: '/images/lake-tana.png', location: 'Lake Tana' },
 ]
 
+// Three copies of the set so there's always more track to scroll into in
+// either direction — the effect of an infinite loop without ever actually
+// wrapping the DOM around.
+const loopStops = [...stops, ...stops, ...stops]
+
+const AUTO_SCROLL_SPEED = 0.4 // pixels per animation frame, ~24px/sec
+
 export function WhereToNext() {
   const trackRef = useRef<HTMLDivElement>(null)
   const isDragging = useRef(false)
   const dragMoved = useRef(false)
   const dragStartX = useRef(0)
   const dragStartScroll = useRef(0)
+  const pointerId = useRef<number | null>(null)
+  const normalizeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const isPaused = useRef(false)
+
+  // Start the visible viewport inside the middle copy, so there's a full
+  // set's worth of track to scroll through before either edge is reached.
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+    track.scrollLeft = track.scrollWidth / 3
+  }, [])
+
+  // Drift slowly to the right when no one is touching it. Paused on hover
+  // or drag, and wraps instantly (same content on either side) so it never
+  // visibly reaches an end.
+  useEffect(() => {
+    let frame: number
+    const tick = () => {
+      const track = trackRef.current
+      if (track && !isPaused.current && !isDragging.current) {
+        track.scrollLeft += AUTO_SCROLL_SPEED
+        const singleWidth = track.scrollWidth / 3
+        if (track.scrollLeft > singleWidth * 1.5) {
+          track.scrollLeft -= singleWidth
+        }
+      }
+      frame = requestAnimationFrame(tick)
+    }
+    frame = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(frame)
+  }, [])
+
+  // Once scrolling settles, silently jump back into the middle copy if the
+  // viewport has drifted into the first or third copy — same content, so
+  // the jump is invisible to the eye.
+  const scheduleNormalize = () => {
+    if (normalizeTimeout.current) clearTimeout(normalizeTimeout.current)
+    normalizeTimeout.current = setTimeout(() => {
+      const track = trackRef.current
+      if (!track) return
+      const singleWidth = track.scrollWidth / 3
+      if (track.scrollLeft < singleWidth * 0.5) {
+        track.scrollLeft += singleWidth
+      } else if (track.scrollLeft > singleWidth * 1.5) {
+        track.scrollLeft -= singleWidth
+      }
+    }, 120)
+  }
 
   const scrollBy = (dir: 1 | -1) => {
     trackRef.current?.scrollBy({ left: dir * 340, behavior: 'smooth' })
+    scheduleNormalize()
   }
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     if (e.pointerType !== 'mouse') return
     const track = trackRef.current
     if (!track) return
-    isDragging.current = true
+    isDragging.current = false
     dragMoved.current = false
     dragStartX.current = e.clientX
     dragStartScroll.current = track.scrollLeft
-    track.setPointerCapture(e.pointerId)
+    pointerId.current = e.pointerId
   }
 
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     const track = trackRef.current
-    if (!track || !isDragging.current) return
+    if (!track || pointerId.current === null) return
     const delta = e.clientX - dragStartX.current
-    if (Math.abs(delta) > 4) dragMoved.current = true
+    if (!isDragging.current) {
+      if (Math.abs(delta) <= 8) return
+      isDragging.current = true
+      dragMoved.current = true
+      track.setPointerCapture(pointerId.current)
+    }
     track.scrollLeft = dragStartScroll.current - delta
   }
 
   const endDrag = () => {
     isDragging.current = false
+    pointerId.current = null
+    scheduleNormalize()
   }
 
   return (
@@ -62,11 +125,18 @@ export function WhereToNext() {
           onPointerMove={onPointerMove}
           onPointerUp={endDrag}
           onPointerLeave={endDrag}
+          onScroll={scheduleNormalize}
+          onMouseEnter={() => {
+            isPaused.current = true
+          }}
+          onMouseLeave={() => {
+            isPaused.current = false
+          }}
           className="flex cursor-grab gap-3 overflow-x-auto px-3 pb-2 active:cursor-grabbing [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden"
         >
-          {stops.map((s) => (
+          {loopStops.map((s, i) => (
             <div
-              key={s.location}
+              key={`${s.location}-${i}`}
               className="group relative h-[220px] w-[150px] shrink-0 select-none overflow-hidden rounded-sm sm:h-[320px] sm:w-[220px]"
             >
               <Image

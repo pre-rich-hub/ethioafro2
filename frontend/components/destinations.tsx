@@ -15,6 +15,7 @@ export function Destinations() {
   const dragMoved = useRef(false)
   const dragStartX = useRef(0)
   const dragStartScroll = useRef(0)
+  const pointerId = useRef<number | null>(null)
 
   const scrollToIndex = (i: number) => {
     const track = trackRef.current
@@ -29,23 +30,29 @@ export function Destinations() {
     if (e.pointerType !== 'mouse') return
     const track = trackRef.current
     if (!track) return
-    isDragging.current = true
+    isDragging.current = false
     dragMoved.current = false
     dragStartX.current = e.clientX
     dragStartScroll.current = track.scrollLeft
-    track.setPointerCapture(e.pointerId)
+    pointerId.current = e.pointerId
   }
 
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     const track = trackRef.current
-    if (!track || !isDragging.current) return
+    if (!track || pointerId.current === null) return
     const delta = e.clientX - dragStartX.current
-    if (Math.abs(delta) > 4) dragMoved.current = true
+    if (!isDragging.current) {
+      if (Math.abs(delta) <= 8) return
+      isDragging.current = true
+      dragMoved.current = true
+      track.setPointerCapture(pointerId.current)
+    }
     track.scrollLeft = dragStartScroll.current - delta
   }
 
   const endDrag = () => {
     isDragging.current = false
+    pointerId.current = null
   }
 
   const onCardClick = (e: React.MouseEvent) => {
@@ -143,7 +150,7 @@ export function Destinations() {
             />
             <div className="absolute inset-0 bg-charcoal/75" />
             <span className="relative inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-colors duration-300 group-hover:bg-accent/90">
-              Explore More Destinations
+              Explore All Destinations
               <ArrowRight className="h-4 w-4" />
             </span>
           </Link>
