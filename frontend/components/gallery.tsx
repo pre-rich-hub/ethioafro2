@@ -76,13 +76,6 @@ export function Gallery() {
           )
         })}
 
-        {/* Top-right overlay indicating index */}
-        <div className="absolute top-4 right-4 z-20 bg-charcoal/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-sand/10">
-          <span className="text-[10px] font-mono tracking-widest text-sand uppercase">
-            Exhibition {activeIndex + 1} / {shots.length}
-          </span>
-        </div>
-
         {/* Bottom-left metadata overlay */}
         <div className="absolute bottom-6 left-6 z-20 max-w-[70vw] md:max-w-md text-balance">
           <span className="text-[9px] uppercase tracking-[0.2em] text-accent-light font-semibold">
@@ -156,22 +149,7 @@ export function Gallery() {
           .animate-kb-2 {
             animation: kb-pan-2 8000ms ease-out forwards;
           }
-          @keyframes progress-grow {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
-          }
-          .animate-progress-grow {
-            animation: progress-grow 7000ms linear forwards;
-          }
         `}</style>
-
-        {/* Progress Bar indicating time remaining for current slide */}
-        {isPlaying && (
-          <div
-            key={activeIndex}
-            className="absolute bottom-0 left-0 right-0 h-[3px] bg-accent/90 z-20 origin-left animate-progress-grow"
-          />
-        )}
       </div>
     </section>
   )

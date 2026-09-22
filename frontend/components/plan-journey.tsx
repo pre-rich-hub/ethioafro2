@@ -9,21 +9,22 @@ export function PlanJourney() {
         <Reveal>
           <p className="eyebrow mb-6 text-accent-light">
             <span className="rule" />
-            Plan Your Journey
+            Where It Begins
           </p>
           <h2 className="max-w-[16ch] text-balance font-serif text-[2.1rem] leading-[1.08] sm:text-5xl lg:text-[3.4rem]">
-            Let&apos;s design your Ethiopian journey
+            A journey shaped entirely around you
           </h2>
           <p className="mt-7 max-w-md text-pretty text-base leading-relaxed text-secondary-foreground/70 sm:text-lg">
-            Every itinerary begins with a conversation. No templates, no
-            compromises — only a journey designed entirely around you. A travel
-            designer replies within 24 hours.
+            There's no fixed package to adapt — just a conversation about
+            where you want to go, how you like to travel, and how much time
+            you actually have. From there, a designer builds a route made
+            specifically for that trip, and nothing else.
           </p>
           <ul className="mt-10 space-y-4">
             {[
-              'Locally designed, privately guided',
-              'Transparent, tailor-made pricing',
-              '24/7 concierge before, during & after',
+              'Planned in Addis, guided by people who live here',
+              'One quote up front, no add-ons later',
+              'A single point of contact from first email to touchdown home',
             ].map((item) => (
               <li
                 key={item}

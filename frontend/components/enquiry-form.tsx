@@ -79,10 +79,10 @@ export function EnquiryForm({
         ) : null}
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <Field label="Full name" id="name">
-            <input id="name" name="name" required className="input" placeholder="Your name" />
+          <Field label="Your name" id="name">
+            <input id="name" name="name" required className="input" placeholder="First and last name" />
           </Field>
-          <Field label="Email address" id="email">
+          <Field label="Best email to reach you" id="email">
             <input
               id="email"
               name="email"
@@ -95,17 +95,17 @@ export function EnquiryForm({
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <Field label="Preferred travel dates" id="when">
-            <input id="when" name="when" className="input" placeholder="e.g. March 2026" />
+          <Field label="When are you thinking of travelling?" id="when">
+            <input id="when" name="when" className="input" placeholder="e.g. March 2026, or just a season" />
           </Field>
-          <Field label="Number of travellers" id="travellers">
-            <input id="travellers" name="travellers" className="input" placeholder="2 adults" />
+          <Field label="How many are travelling?" id="travellers">
+            <input id="travellers" name="travellers" className="input" placeholder="e.g. 2 adults" />
           </Field>
         </div>
 
         <div>
           <span className="mb-3 block text-sm font-medium text-foreground">
-            What kind of journey do you imagine?
+            Which of these sounds like you?
           </span>
           <div className="flex flex-wrap gap-2">
             {journeyStyles.map((style) => {
@@ -129,13 +129,13 @@ export function EnquiryForm({
           </div>
         </div>
 
-        <Field label="Tell us about the journey you've imagined" id="dream">
+        <Field label="Describe the trip you keep picturing" id="dream">
           <textarea
             id="dream"
             name="dream"
             rows={4}
             className="input resize-none"
-            placeholder="A private coffee journey, mornings above the clouds, evenings by the fire..."
+            placeholder="Sunrise over the Simien escarpment, a coffee ceremony in someone's home, slow evenings by a fire..."
           />
         </Field>
 
@@ -149,11 +149,11 @@ export function EnquiryForm({
           type="submit"
           className="group inline-flex w-full items-center justify-center gap-2.5 bg-primary px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-colors duration-300 hover:bg-charcoal sm:w-auto"
         >
-          Begin the conversation
+          Talk to a designer
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
         <p className="text-xs leading-relaxed text-muted-foreground">
-          We reply personally within 24 hours. Your details are never shared.
+          A real person replies within a day. Nothing you share here goes any further than that.
         </p>
       </form>
     </div>
