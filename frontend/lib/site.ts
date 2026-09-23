@@ -1856,123 +1856,192 @@ export type Experience = {
   paragraphs: string[]
   highlights: string[]
   facts: { label: string; value: string }[]
-  relatedTourSlug: string
+  // Where the idea happens and which journeys carry it, by slug. The first
+  // tour is the one we point to first.
+  destinationSlugs: string[]
+  tourSlugs: string[]
 }
 
 export const experiences: Experience[] = [
   {
-    slug: 'coffee-traced-to-origin',
+    slug: 'walk-with-the-people-who-live-there',
     number: '01',
-    title: 'Follow the bean home',
-    tagline: 'Where coffee was born, roasted the way it always has been',
-    image: '/images/coffee-ceremony.png',
-    gallery: ['/images/coffee-ceremony.png', '/images/lake-tana.png'],
+    title: 'Walk with the people who live there',
+    tagline: 'Village-run treks where the hosts are the guides',
+    image: '/images/hero-lalibela.png',
+    gallery: ['/images/hero-lalibela.png', '/images/hero-simien.png'],
     intro:
-      'Wild coffee still grows under the canopy in Kaffa, where the plant was first found. We take you from forest floor to open-coal roast, in the hands of a family that has done this for generations.',
+      'In the northern highlands, some of the best walking is run by the villages themselves — thatched tukul camps on escarpment edges, local guides from the farms you pass, and fees that go straight to the community hosting you.',
     paragraphs: [
-      'Most coffee tourism stops at a demonstration. Ours starts a day earlier, in the Bonga forest understorey, where wild Arabica still grows exactly as it did before anyone thought to cultivate it — no rows, no irrigation, just shade trees and red cherries hanging at head height.',
-      'From there it is a short drive to a family compound where the same beans are washed, dried and roasted over open coals, the way it has been done for longer than anyone in the household can date precisely. You sit on the floor mat, not a tourist bench, and the three rounds — abol, tona, baraka — are not shortened for the schedule.',
-      'What you leave with is not a photograph of a ceremony. It is an understanding of why Ethiopians will tell you, without exaggeration, that coffee is a relationship rather than a drink.',
+      'On the Meket escarpment south of Lalibela, the TESFA community programme has hosted walkers since 2003, when Mequat Mariam became its first camp. The route runs along the plateau rim at 2,800 to 3,100 metres, mostly flat or gently graded, and horses can be hired for any stretch.',
+      'Further west, the Choke Mountains ecovillage in Gojjam was named one of UN Tourism\'s Best Tourism Villages in 2022, and north-east of Addis Ababa the Guassa Plateau has been protected by its own communities under the Qero system for around four hundred years.',
+      'What these places share is who is in charge. You sleep where the village has chosen to build, eat what the village cooks, and walk with people who know every path because they farm beside it — the difference between visiting a landscape and being welcomed into one.',
     ],
     highlights: [
-      'A guided walk through wild coffee forest in Kaffa, with a botanist-trained local guide',
-      'A full three-round coffee ceremony inside a family home, not a staged tourist stop',
-      'Time with the family who grows and roasts it — through a translator, unhurried',
-      'The chance to buy beans directly from the household that roasted them',
+      'Nights in community-owned tukul camps with the drop on three sides',
+      'Local guides from the villages along the route, alongside our own senior guide',
+      'Walking that is mostly gentle, with horses available whenever you want them',
+      'Fees paid directly to the communities who host you',
     ],
     facts: [
-      { label: 'Best paired with', value: 'Sacred Waters & Coffee' },
-      { label: 'Typical setting', value: 'Kaffa & Bonga forest' },
-      { label: 'Time needed', value: 'Half a day, minimum' },
-      { label: 'Season', value: 'Year-round' },
-    ],
-    relatedTourSlug: 'sacred-waters-and-coffee',
-  },
-  {
-    slug: 'light-first-photography',
-    number: '02',
-    title: 'Work around the light, not the schedule',
-    tagline: 'A photographer-guide, not a driver who waits in the car',
-    image: '/images/danakil.png',
-    gallery: ['/images/danakil.png', '/images/lalibela.png', '/images/omo-valley.png'],
-    intro:
-      'A photographer-guide reads each site for its hour — the churches at dawn, the salt flats at dusk — so the camera is never fighting flat midday sun.',
-    paragraphs: [
-      'Every stop on a photography-led route is scheduled around the light rather than the itinerary. That means a 4am departure for Lalibela more often than not, and it means leaving Dallol at exactly the moment the light turns from harsh to workable rather than sticking to a printed timetable.',
-      'Your guide is a working photographer first, a driver second. They know which ridge at Imet Gogo gets the clean sunrise line, which angle on the Erta Ale caldera avoids the sulphur haze, and when to simply stop the vehicle because the light will not hold.',
-      'In the Omo Valley, portraits are arranged in advance through a cultural mediator, with consent asked and respected — never a photograph taken from a moving vehicle. Prints are sent back afterward, which is usually the more meaningful exchange of the two.',
-    ],
-    highlights: [
-      'A working photographer as guide, not a generalist driver-guide',
-      'Golden-hour and blue-hour access built into the schedule at every major site',
-      'A vehicle with windows that actually open, and stops made on request',
-      'Consent-based portrait sessions in the Omo Valley, with a mediator present',
-    ],
-    facts: [
-      { label: 'Best paired with', value: 'Ethiopia Through the Lens' },
-      { label: 'Typical setting', value: 'Lalibela, Danakil, Omo Valley' },
-      { label: 'Group size', value: '2 – 4 guests, by design' },
+      { label: 'Typical setting', value: 'Meket, Choke, Guassa' },
+      { label: 'Altitude', value: '2,800 – 3,700 m' },
+      { label: 'Time needed', value: '3 – 5 days' },
       { label: 'Season', value: 'Oct – Mar' },
     ],
-    relatedTourSlug: 'ethiopia-through-the-lens',
+    destinationSlugs: ['lalibela', 'choke-mountains', 'guassa-plateau'],
+    tourSlugs: ['lalibela-highlands-community-trek', 'choke-mountains-trek', 'the-road-north'],
   },
   {
-    slug: 'access-through-relationship',
-    number: '03',
-    title: 'Arrive as a guest, not a tourist',
-    tagline: 'Doors that open because of years of trust, not a fee',
-    image: '/images/textile.png',
-    gallery: ['/images/textile.png', '/images/omo-valley.png'],
+    slug: 'arrive-for-the-feast-days',
+    number: '02',
+    title: 'Arrive for the feast days',
+    tagline: 'Christmas at the rock churches, Epiphany at the royal bath',
+    image: '/images/festival-timkat.png',
+    gallery: ['/images/festival-timkat.png', '/images/lalibela.png'],
     intro:
-      'Years of standing relationships with artisans, elders and monks mean doors open before you knock. What you see is offered, never staged.',
+      'Twice each January the north gathers. Pilgrims in white fill the trenches of Lalibela for Genna, Ethiopian Christmas, and twelve days later Gondar carries its tabots to Fasilides\' Bath for Timkat.',
     paragraphs: [
-      'The lower Omo Valley has a well-documented problem: an economy where a stranger arrives, pays a few birr per photograph, and leaves having learned nothing. We built our access here differently, over more than a decade, and it shows in how a visit actually unfolds.',
-      'Community fees are agreed annually with elders and published to guests — nothing negotiated at the roadside. A cultural mediator travels with every journey, and their job is arranging the visit in advance, not translating on the fly. That is the difference between being tolerated and being invited.',
-      'The same principle holds further north — a monk unwrapping an illuminated gospel at Lake Tana, a weaver in Dorze explaining a pattern passed through four generations. None of it is a performance scheduled for tour groups; it is simply what happens when the same guides return, respectfully, year after year.',
+      'Genna falls on January 7th. The night before, thousands of pilgrims keep vigil among Lalibela\'s rock-hewn churches, and at dawn the priests chant from the rock above them. It is a working act of faith rather than a performance, and the best way to see it is quietly, from a place arranged well in advance.',
+      'Timkat follows on January 19th. On the eve, the tabots — the consecrated tablets of each church — are carried in procession to Fasilides\' Bath in Gondar; the vigil runs through the night, and at dawn the water is blessed. Both dates follow the Ethiopian calendar and move by a day in some years, so we confirm them when you book.',
+      'Rooms and vantage points go early, which is why we plan festival journeys a year ahead — and why we travel with an Orthodox Christian scholar who can explain what is happening, and when to put the camera down.',
     ],
     highlights: [
-      'Community fees agreed with elders and published in advance, never negotiated on arrival',
-      'A resident cultural mediator on every Omo Valley journey',
-      'Access to artisans, monks and elders built on years of standing relationship',
-      'A firm no-photography-without-consent standard, explained to guests before arrival',
+      'The Genna vigil at Lalibela among pilgrims dressed in white',
+      'The Timkat procession and the blessing of the water at Fasilides\' Bath',
+      'An Orthodox Christian scholar as your festival guide',
+      'Accommodation and viewing positions secured twelve months ahead',
     ],
     facts: [
-      { label: 'Best paired with', value: 'Omo Valley Immersion' },
-      { label: 'Typical setting', value: 'Omo Valley, Lake Tana, Dorze' },
-      { label: 'Time needed', value: '3 days or more' },
-      { label: 'Season', value: 'Jun – Sep, Dec – Mar' },
+      { label: 'Typical setting', value: 'Lalibela & Gondar' },
+      { label: 'Dates', value: 'Jan 7 & Jan 19' },
+      { label: 'Time needed', value: '8 – 16 days' },
+      { label: 'Season', value: 'January only' },
     ],
-    relatedTourSlug: 'omo-valley-immersion',
+    destinationSlugs: ['lalibela', 'gondar'],
+    tourSlugs: ['christmas-to-epiphany', 'timkat-festival-journey'],
   },
   {
     slug: 'rest-at-the-edge-of-the-wild',
-    number: '04',
+    number: '03',
     title: 'Sleep at the edge of the wild',
-    tagline: 'Lodges chosen for the view, not the brochure',
+    tagline: 'Lodges and camps chosen for the view, not the brochure',
     image: '/images/luxury-lodge.png',
     gallery: ['/images/luxury-lodge.png', '/images/hero-simien.png'],
     intro:
-      'Each evening ends somewhere chosen for its view and its quiet — lodges set into escarpments and forest edges, built to disappear into what surrounds them.',
+      'Each evening ends somewhere chosen for its view and its quiet — a lodge on the Simien rim, a camp above the cloud, a community guesthouse on a plateau where wolves hunt at dawn.',
     paragraphs: [
-      'We do not select lodges from a chain\'s sales sheet. Each property on our list has been slept in by someone on our team, usually more than once, and judged on the same short list: the view from the room, how the light enters at both ends of the day, and whether the staff would still be warm to you if no one was watching.',
-      'On the Simien rim, that means a lodge positioned so the escarpment drop is the first thing you see on waking, with a fire lit before you are back from the day\'s walk. In the lowlands, it means a camp with proper bedding and a cook rather than a tent pitched wherever the vehicle stopped.',
-      'The common thread is restraint — comfort that supports the day rather than competing with the landscape for attention.',
+      'We do not choose where you sleep from a sales sheet. Every lodge we recommend has been stayed in by our team, and judged on a short list: what you see from the room, how the light arrives at both ends of the day, and how the staff treat guests when nobody is watching.',
+      'On the Simien escarpment that means waking to a drop of well over a thousand metres, with gelada troops grazing the grass outside and a fire lit before you return from the day\'s walk. On the Guassa Plateau it means a simple community lodge with no mains electricity, a cook we bring ourselves, and a sky with almost no light in it.',
+      'The common thread is restraint: comfort that supports the day rather than competing with the landscape for your attention.',
     ],
     highlights: [
-      'Every lodge personally inspected and slept in by our team before it is recommended',
+      'Lodges personally stayed in by our team before we recommend them',
       'Rooms and camps chosen for their view first, amenities second',
-      'A fire, hot water and proper bedding even in genuinely remote settings',
-      'Never a chain hotel where a family-run alternative exists and performs as well',
+      'A fire, hot water and proper bedding even in remote settings',
+      'Family-run places wherever they perform as well as a chain',
     ],
     facts: [
-      { label: 'Best paired with', value: 'Highlands & Wildlife' },
-      { label: 'Typical setting', value: 'Simien rim, forest edges' },
-      { label: 'Style', value: 'Boutique lodges & serviced camps' },
+      { label: 'Typical setting', value: 'Simien rim, Guassa' },
+      { label: 'Style', value: 'Lodges & serviced camps' },
+      { label: 'Time needed', value: '2 nights or more' },
+      { label: 'Season', value: 'Oct – May' },
+    ],
+    destinationSlugs: ['simien-mountains', 'guassa-plateau', 'ras-dashen'],
+    tourSlugs: ['gondar-and-the-simien-rim', 'simien-escarpment-trek', 'highlands-and-wildlife'],
+  },
+  {
+    slug: 'light-first-photography',
+    number: '04',
+    title: 'Work around the light, not the schedule',
+    tagline: 'A photographer-guide, not a driver who waits in the car',
+    image: '/images/hero-simien.png',
+    gallery: ['/images/hero-simien.png', '/images/lalibela.png', '/images/danakil.png'],
+    intro:
+      'A photographer-guide reads each place for its hour — Imet Gogo at sunrise, the Lalibela trenches at first light, the salt flats as the heat goes — so the camera never fights flat midday sun.',
+    paragraphs: [
+      'Every stop on a light-led journey is timed to the sun rather than the itinerary. In the Simien that means being on the rim at Imet Gogo before dawn, when three ridgelines stand out of the cloud below you. In Lalibela it means arriving while pilgrims are still gathering, before the light drops into the trench at Bete Maryam.',
+      'Your guide is a working photographer first. They know which angle clears the haze, which ridge catches the first light, and when to simply stop because the light will not hold — and they plan the long drives for the flat hours in between.',
+      'Portraits are only ever taken with consent, asked for and respected, and never from a moving vehicle. Sending prints back afterwards is often the more meaningful part of the exchange.',
+    ],
+    highlights: [
+      'A working photographer as guide, not a generalist driver-guide',
+      'Dawn and dusk built into the schedule at every major site',
+      'A vehicle with windows that open, and stops made on request',
+      'A clear consent-first approach to every portrait',
+    ],
+    facts: [
+      { label: 'Typical setting', value: 'Simien, Lalibela, Danakil' },
+      { label: 'Group size', value: '2 – 4 guests' },
+      { label: 'Time needed', value: '5 days or more' },
+      { label: 'Season', value: 'Oct – Mar' },
+    ],
+    destinationSlugs: ['simien-mountains', 'lalibela', 'danakil-depression'],
+    tourSlugs: ['ethiopia-through-the-lens', 'simien-escarpment-trek', 'lalibela-beyond-the-churches'],
+  },
+  {
+    slug: 'access-through-relationship',
+    number: '05',
+    title: 'Arrive as a guest, not a tourist',
+    tagline: 'Doors that open through relationship, not a fee',
+    image: '/images/textile.png',
+    gallery: ['/images/textile.png', '/images/lake-tana.png', '/images/gondar.png'],
+    intro:
+      'A monk unwrapping an illuminated gospel on Lake Tana. A potter at work in Wolleka, the old Beta Israel village outside Gondar. A weaver at Awra Amba explaining how the community decides everything together. None of it is staged.',
+    paragraphs: [
+      'The best moments in the north happen when people choose to share something with you, and that depends on who you arrive with. Our guides return to the same monasteries, villages and workshops season after season, and are known there as people rather than as a tour.',
+      'On Lake Tana that can mean a monastery\'s manuscripts brought out by the monks who keep them. Outside Gondar it means time at Wolleka with the potters who still work in the village of Gondar\'s Beta Israel community. At Awra Amba, a weaving cooperative founded in 1980 on shared work between men and women, it means an open conversation about how the community runs itself.',
+      'We ask one thing of guests: arrive curious, ask before every photograph, and accept a no gracefully. It is the difference between being tolerated and being welcomed.',
+    ],
+    highlights: [
+      'Manuscripts shown by the monks who keep them on Lake Tana',
+      'Time with the potters of Wolleka and the weavers of Awra Amba',
+      'Guides known by name in the places they take you',
+      'A firm ask-before-every-photograph standard, explained before you arrive',
+    ],
+    facts: [
+      { label: 'Typical setting', value: 'Lake Tana, Gondar, Awra Amba' },
+      { label: 'Time needed', value: '2 days or more' },
+      { label: 'Pace', value: 'Slow, unhurried' },
       { label: 'Season', value: 'Year-round' },
     ],
-    relatedTourSlug: 'highlands-and-wildlife',
+    destinationSlugs: ['lake-tana', 'gondar', 'awra-amba'],
+    tourSlugs: ['around-lake-tana', 'the-historic-route'],
+  },
+  {
+    slug: 'coffee-traced-to-origin',
+    number: '06',
+    title: 'Follow the bean home',
+    tagline: 'Coffee forest walks, and a ceremony done properly',
+    image: '/images/coffee-ceremony.png',
+    gallery: ['/images/coffee-ceremony.png', '/images/lake-tana.png'],
+    intro:
+      'Coffee is part of daily life everywhere in Ethiopia, and in the north it grows closer than most visitors expect — under the trees of Lake Tana\'s Zege Peninsula, where shaded trails link the monasteries through a working coffee forest.',
+    paragraphs: [
+      'On the Zege Peninsula, the coffee forest is the landscape itself: paths wind under the canopy between the monasteries, past the red cherries of trees that local families still harvest. It is an easy half-day on foot, reached by boat from Bahir Dar.',
+      'Then comes the ceremony, done the way it is at home rather than in a hotel lobby: green beans roasted over coals in front of you, ground by hand, brewed in a clay jebena and poured in three rounds — abol, tona and baraka, the last meaning blessing. It takes the better part of an hour, and nobody hurries it.',
+      'For guests who want to go further, wild Arabica still grows in the forests of Kaffa in the south-west, where the plant is thought to have originated — an extension we can add to any northern journey.',
+    ],
+    highlights: [
+      'A walk through Zege\'s coffee forest between Lake Tana\'s monasteries',
+      'A full three-round coffee ceremony in a family home',
+      'The chance to buy beans directly from the household that roasted them',
+      'An optional extension to the wild coffee forests of Kaffa',
+    ],
+    facts: [
+      { label: 'Typical setting', value: 'Zege Peninsula, Lake Tana' },
+      { label: 'Time needed', value: 'Half a day, minimum' },
+      { label: 'Extension', value: 'Kaffa forests' },
+      { label: 'Season', value: 'Year-round' },
+    ],
+    destinationSlugs: ['lake-tana'],
+    tourSlugs: ['around-lake-tana', 'sacred-waters-and-coffee'],
   },
 ]
+
+export function getExperience(slug: string) {
+  return experiences.find((e) => e.slug === slug)
+}
 
 export const journeyStyles = [
   'Luxury',

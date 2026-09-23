@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { LinkButton } from '@/components/link-button'
 import { experiences } from '@/lib/site'
 
 export function Experiences() {
@@ -14,13 +15,13 @@ export function Experiences() {
             How We Travel
           </p>
           <h2 className="text-balance font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl">
-            Four ideas we build every journey around
+            The ideas behind every journey
           </h2>
         </Reveal>
       </div>
 
       <div className="mt-16 divide-y divide-border border-t border-border">
-        {experiences.map((e, i) => (
+        {experiences.slice(0, 4).map((e, i) => (
           <Reveal key={e.slug}>
             <Link
               href={`/experiences/${e.slug}`}
@@ -42,7 +43,7 @@ export function Experiences() {
                   {e.intro}
                 </p>
                 <span className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-primary transition-colors duration-300 group-hover:text-accent">
-                  See the journey
+                  Read the story
                   <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
               </div>
@@ -64,6 +65,12 @@ export function Experiences() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal className="mt-12 flex justify-center sm:mt-14">
+        <LinkButton href="/experiences" variant="outline">
+          See all six ideas
+        </LinkButton>
+      </Reveal>
     </section>
   )
 }
