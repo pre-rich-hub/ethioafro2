@@ -4,7 +4,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    // Serve resized AVIF/WebP instead of the ~2 MB source PNGs.
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 2678400,
   },
   async rewrites() {
     const apiBase = process.env.API_BASE_URL ?? 'http://localhost:5000'

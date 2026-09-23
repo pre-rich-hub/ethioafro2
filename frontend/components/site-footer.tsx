@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 import { contact, destinations, tours } from '@/lib/site'
@@ -55,9 +56,11 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-10">
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="Simien Ethiopia Tours Logo"
+                width={56}
+                height={56}
                 className="h-14 w-14 rounded-full object-cover border border-accent-light/20"
               />
               <div className="flex flex-col">

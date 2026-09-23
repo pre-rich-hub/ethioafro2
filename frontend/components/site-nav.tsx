@@ -39,9 +39,12 @@ function Wordmark({
       aria-label="Simien Ethiopia Tours — home"
       className="flex items-center"
     >
-      <img
+      <Image
         src="/images/logo.png"
         alt="Simien Ethiopia Tours Logo"
+        width={56}
+        height={56}
+        priority
         className="h-14 w-14 rounded-full object-cover border border-accent/25 shadow-md transition-transform duration-300 hover:scale-105"
       />
       <span className="ml-3 flex flex-col">
@@ -71,6 +74,10 @@ export function SiteNav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+  // Hover dropdowns are pure CSS, so after a click the pointer is still over
+  // the menu and it would stay open on the new page. Clicking any link inside
+  // marks that dropdown dismissed until the pointer leaves it.
+  const [dismissed, setDismissed] = useState<string | null>(null)
   const [lang, setLang] = useState(languages[0])
   const langRef = useRef<HTMLDivElement>(null)
 
@@ -85,6 +92,8 @@ export function SiteNav() {
     setOpen(false)
     setLangOpen(false)
   }, [pathname])
+
+  const dismiss = (label: string) => () => setDismissed(label)
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -143,9 +152,14 @@ export function SiteNav() {
               const active = isActive(link.href)
               const hasDropdown = link.label === 'Destinations' || link.label === 'Tours'
               return (
-                <li key={link.href} className="group py-5">
+                <li
+                  key={link.href}
+                  className="group py-5"
+                  onMouseLeave={() => setDismissed(null)}
+                >
                   <Link
                     href={link.href}
+                    onClick={dismiss(link.label)}
                     className={cn(
                       'relative py-2 text-[11px] font-semibold uppercase tracking-[0.16em] transition-colors duration-300 flex items-center gap-1',
                       tone === 'dark'
@@ -171,7 +185,10 @@ export function SiteNav() {
 
                   {/* Dropdowns */}
                   {link.label === 'Destinations' && (
-                    <div className="absolute left-0 top-full w-full border-b border-border/60 bg-background/98 opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 ease-out invisible -translate-y-3 pointer-events-none group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto z-45 text-foreground before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-accent/60 before:to-transparent">
+                    <div className={cn(
+                      "absolute left-0 top-full w-full border-b border-border/60 bg-background/98 opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 ease-out invisible -translate-y-3 pointer-events-none group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto z-45 text-foreground before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-accent/60 before:to-transparent",
+                      dismissed === 'Destinations' && '!invisible !pointer-events-none !opacity-0',
+                    )}>
                       <div className="shell grid grid-cols-[1fr_3.4fr] gap-16 py-12">
                         <div className="flex flex-col justify-between border-r border-border/60 pr-10">
                           <div>
@@ -191,6 +208,7 @@ export function SiteNav() {
                           </div>
                           <Link
                             href="/destinations"
+                            onClick={dismiss('Destinations')}
                             className="group/cta mt-8 inline-flex items-center gap-2.5 self-start border-b border-accent/40 pb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent transition-colors duration-300 hover:border-accent"
                           >
                             View All Destinations
@@ -203,6 +221,7 @@ export function SiteNav() {
                             <Link
                               key={d.slug}
                               href={`/destinations/${d.slug}`}
+                              onClick={dismiss('Destinations')}
                               className="group/item flex flex-col gap-4"
                             >
                               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-sm shadow-sm transition-shadow duration-300 group-hover/item:shadow-lg">
@@ -234,7 +253,10 @@ export function SiteNav() {
                   )}
 
                   {link.label === 'Tours' && (
-                    <div className="absolute left-0 top-full w-full border-b border-border/60 bg-background/98 opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 ease-out invisible -translate-y-3 pointer-events-none group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto z-45 text-foreground before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-accent/60 before:to-transparent">
+                    <div className={cn(
+                      "absolute left-0 top-full w-full border-b border-border/60 bg-background/98 opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 ease-out invisible -translate-y-3 pointer-events-none group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto z-45 text-foreground before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-accent/60 before:to-transparent",
+                      dismissed === 'Tours' && '!invisible !pointer-events-none !opacity-0',
+                    )}>
                       <div className="shell grid grid-cols-[1fr_3.4fr] gap-16 py-12">
                         <div className="flex flex-col justify-between border-r border-border/60 pr-10">
                           <div>
@@ -253,6 +275,7 @@ export function SiteNav() {
                           </div>
                           <Link
                             href="/tours"
+                            onClick={dismiss('Tours')}
                             className="group/cta mt-8 inline-flex items-center gap-2.5 self-start border-b border-accent/40 pb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent transition-colors duration-300 hover:border-accent"
                           >
                             Explore All Tours
@@ -265,6 +288,7 @@ export function SiteNav() {
                             <Link
                               key={t.slug}
                               href={`/tours/${t.slug}`}
+                              onClick={dismiss('Tours')}
                               className="group/item flex flex-col gap-4"
                             >
                               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm shadow-sm transition-shadow duration-300 group-hover/item:shadow-lg">
@@ -389,7 +413,7 @@ export function SiteNav() {
       {/* Mobile overlay menu */}
       <div
         className={cn(
-          'fixed inset-0 z-40 flex flex-col bg-background transition-all duration-500 lg:hidden',
+          'fixed inset-0 z-40 flex flex-col bg-background transition-all duration-300 lg:hidden',
           open
             ? 'pointer-events-auto opacity-100'
             : 'pointer-events-none opacity-0',
@@ -405,9 +429,9 @@ export function SiteNav() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    style={{ transitionDelay: open ? `${120 + i * 55}ms` : '0ms' }}
+                    style={{ transitionDelay: open ? `${60 + i * 35}ms` : '0ms' }}
                     className={cn(
-                      'flex items-center justify-between gap-4 py-5 transition-all duration-500',
+                      'flex items-center justify-between gap-4 py-5 transition-all duration-300',
                       open
                         ? 'translate-y-0 opacity-100'
                         : 'translate-y-3 opacity-0',

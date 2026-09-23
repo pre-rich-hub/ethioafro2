@@ -4,6 +4,7 @@ import { Fraunces, Inter } from 'next/font/google'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { FloatingSupport } from '@/components/floating-support'
+import { RouteProgress } from '@/components/route-progress'
 import './globals.css'
 
 const inter = Inter({
@@ -100,6 +101,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <RouteProgress />
         <SiteNav />
         <main id="main">{children}</main>
         <SiteFooter />
