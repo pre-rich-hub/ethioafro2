@@ -24,6 +24,7 @@ const columns = [
   {
     title: 'Explore',
     links: [
+      { label: 'Our Story', href: '/about' },
       { label: 'Signature Experiences', href: '/experiences' },
       { label: 'Outbound Tours', href: '/outbound' },
       { label: 'Travel Journal', href: '/blog' },
