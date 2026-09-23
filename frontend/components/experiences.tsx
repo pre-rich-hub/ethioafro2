@@ -21,21 +21,29 @@ export function Experiences() {
       </div>
 
       <div className="mt-16 divide-y divide-border border-t border-border">
-        {experiences.slice(0, 4).map((e, i) => (
+        {experiences.slice(0, 4).map((e, i) => {
+          // Rows mirror each other so the number always sits beside the
+          // picture: number · picture · text, then text · picture · number.
+          const flip = i % 2 === 0
+          return (
           <Reveal key={e.slug}>
             <Link
               href={`/experiences/${e.slug}`}
-              className="group grid gap-8 py-12 sm:py-16 lg:grid-cols-[80px_1fr_1fr] lg:items-center lg:gap-12"
+              className={`group grid gap-8 py-12 sm:py-16 lg:items-center lg:gap-12 ${
+                flip ? 'lg:grid-cols-[1fr_1fr_80px]' : 'lg:grid-cols-[80px_1fr_1fr]'
+              }`}
             >
               <span
-                className={`font-serif text-2xl text-accent lg:text-3xl ${
-                  i % 2 === 1 ? 'lg:order-1' : ''
+                className={`px-5 font-serif text-2xl text-accent sm:px-6 lg:px-0 lg:text-center lg:text-3xl ${
+                  flip ? 'lg:order-3' : 'lg:order-1'
                 }`}
               >
                 {e.number}
               </span>
 
-              <div className={`shell lg:px-0 ${i % 2 === 1 ? 'lg:order-3' : ''}`}>
+              <div
+                className={`shell lg:px-0 ${flip ? 'lg:order-1 lg:!pl-[calc(80px+3rem)]' : 'lg:order-3'}`}
+              >
                 <h3 className="font-serif text-2xl text-foreground sm:text-3xl">
                   {e.title}
                 </h3>
@@ -49,9 +57,7 @@ export function Experiences() {
               </div>
 
               <div
-                className={`shell relative h-[240px] overflow-hidden rounded-sm sm:h-[320px] lg:h-[280px] lg:px-0 ${
-                  i % 2 === 1 ? 'lg:order-2' : ''
-                }`}
+                className={`shell relative h-[240px] overflow-hidden rounded-sm sm:h-[320px] lg:order-2 lg:h-[280px] lg:px-0`}
               >
                 <Image
                   src={e.image}
@@ -63,7 +69,8 @@ export function Experiences() {
               </div>
             </Link>
           </Reveal>
-        ))}
+          )
+        })}
       </div>
 
       <Reveal className="mt-12 flex justify-center sm:mt-14">
