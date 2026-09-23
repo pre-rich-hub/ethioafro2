@@ -2,17 +2,17 @@
 
 import { useRef, useEffect } from 'react'
 import Image from 'next/image'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const stops = [
-  { src: '/images/lalibela.png', location: 'Lalibela' },
-  { src: '/images/hero-simien.png', location: 'Simien Mountains' },
-  { src: '/images/danakil.png', location: 'Danakil Depression' },
-  { src: '/images/luxury-lodge.png', location: 'Kenya Safari Extension' },
-  { src: '/images/omo-valley.png', location: 'Omo Valley' },
-  { src: '/images/gondar.png', location: 'Gondar' },
-  { src: '/images/bale-gelada.png', location: 'Bale Mountains' },
-  { src: '/images/lake-tana.png', location: 'Lake Tana' },
+  { src: '/images/lalibela.png', location: 'Lalibela', region: 'Northern Highlands', href: '/destinations/lalibela' },
+  { src: '/images/hero-simien.png', location: 'Simien Mountains', region: 'Northern Highlands', href: '/destinations/simien-mountains' },
+  { src: '/images/danakil.png', location: 'Danakil Depression', region: 'Afar Lowlands', href: '/destinations/danakil-depression' },
+  { src: '/images/omo-valley.png', location: 'Omo Valley', region: 'Southern Rift', href: '/destinations/omo-valley' },
+  { src: '/images/gondar.png', location: 'Gondar', region: 'Northern Highlands', href: '/destinations/gondar' },
+  { src: '/images/bale-gelada.png', location: 'Bale Mountains', region: 'Southern Highlands', href: '/destinations/bale-mountains' },
+  { src: '/images/lake-tana.png', location: 'Lake Tana', region: 'Amhara', href: '/destinations/lake-tana' },
 ]
 
 // Three copies of the set so there's always more track to scroll into in
@@ -31,6 +31,9 @@ export function WhereToNext() {
   const pointerId = useRef<number | null>(null)
   const normalizeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
   const isPaused = useRef(false)
+  // Arrow clicks start a smooth scroll that the auto-drift would cancel, so
+  // hold the drift off until the scroll has finished.
+  const holdUntil = useRef(0)
 
   // Start the visible viewport inside the middle copy, so there's a full
   // set's worth of track to scroll through before either edge is reached.
@@ -47,7 +50,12 @@ export function WhereToNext() {
     let frame: number
     const tick = () => {
       const track = trackRef.current
-      if (track && !isPaused.current && !isDragging.current) {
+      if (
+        track &&
+        !isPaused.current &&
+        !isDragging.current &&
+        performance.now() > holdUntil.current
+      ) {
         track.scrollLeft += AUTO_SCROLL_SPEED
         const singleWidth = track.scrollWidth / 3
         if (track.scrollLeft > singleWidth * 1.5) {
@@ -77,8 +85,14 @@ export function WhereToNext() {
     }, 120)
   }
 
+  // Step by one card (its width plus the gap), whatever the breakpoint.
   const scrollBy = (dir: 1 | -1) => {
-    trackRef.current?.scrollBy({ left: dir * 340, behavior: 'smooth' })
+    const track = trackRef.current
+    const card = track?.firstElementChild as HTMLElement | null
+    if (!track || !card) return
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0
+    holdUntil.current = performance.now() + 900
+    track.scrollBy({ left: dir * (card.offsetWidth + gap), behavior: 'smooth' })
     scheduleNormalize()
   }
 
@@ -113,12 +127,46 @@ export function WhereToNext() {
   }
 
   return (
-    <section className="relative bg-background py-16 sm:py-20 lg:py-24">
-      <h2 className="mb-10 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-foreground sm:mb-12">
-        Where to Next?
-      </h2>
+    <section className="relative overflow-hidden bg-background py-16 sm:py-24 lg:py-28">
+      <div className="shell mb-10 flex items-end justify-between gap-6 sm:mb-14">
+        <div>
+          <p className="eyebrow mb-4 text-accent">
+            <span className="rule" />
+            Keep Exploring
+          </p>
+          <h2 className="text-balance text-4xl leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
+            Where to next?
+          </h2>
+        </div>
+        <div className="hidden shrink-0 gap-3 sm:flex">
+          {([-1, 1] as const).map((dir) => (
+            <button
+              key={dir}
+              onClick={() => scrollBy(dir)}
+              aria-label={dir === -1 ? 'Scroll left' : 'Scroll right'}
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-foreground/15 text-foreground transition-all duration-300 hover:border-accent hover:bg-accent hover:text-accent-foreground"
+            >
+              {dir === -1 ? (
+                <ChevronLeft className="h-5 w-5" />
+              ) : (
+                <ChevronRight className="h-5 w-5" />
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
 
-      <div className="group/carousel relative">
+      <div className="relative">
+        {/* Soft fade at both edges so cards drift in and out of view */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-background to-transparent sm:w-20 lg:w-32"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-background to-transparent sm:w-20 lg:w-32"
+        />
+
         <div
           ref={trackRef}
           onPointerDown={onPointerDown}
@@ -126,49 +174,55 @@ export function WhereToNext() {
           onPointerUp={endDrag}
           onPointerLeave={endDrag}
           onScroll={scheduleNormalize}
+          onClickCapture={(e) => {
+            // A drag that ends over a card should not also open it.
+            if (dragMoved.current) {
+              e.preventDefault()
+              dragMoved.current = false
+            }
+          }}
           onMouseEnter={() => {
             isPaused.current = true
           }}
           onMouseLeave={() => {
             isPaused.current = false
           }}
-          className="flex cursor-grab gap-3 overflow-x-auto px-3 pb-2 active:cursor-grabbing [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden"
+          className="flex cursor-grab gap-4 overflow-x-auto px-4 pb-2 active:cursor-grabbing [scrollbar-width:none] sm:gap-5 sm:px-6 [&::-webkit-scrollbar]:hidden"
         >
           {loopStops.map((s, i) => (
-            <div
+            <Link
               key={`${s.location}-${i}`}
-              className="group relative h-[220px] w-[150px] shrink-0 select-none overflow-hidden rounded-sm sm:h-[320px] sm:w-[220px]"
+              href={s.href}
+              draggable={false}
+              className="group relative h-[340px] w-[240px] shrink-0 select-none overflow-hidden rounded-sm shadow-[0_20px_40px_-24px_rgba(26,26,26,0.5)] sm:h-[460px] sm:w-[320px] lg:h-[520px] lg:w-[360px]"
             >
               <Image
                 src={s.src}
                 alt={s.location}
                 fill
                 draggable={false}
-                sizes="220px"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 360px"
+                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
-              <p className="absolute bottom-3 left-3 right-3 text-xs font-medium text-background sm:text-sm">
-                {s.location}
-              </p>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent" />
+
+              <span className="absolute left-4 top-4 rounded-sm bg-background/90 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-foreground backdrop-blur-sm sm:left-5 sm:top-5 sm:text-[10px]">
+                {s.region}
+              </span>
+
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+                <h3 className="font-serif text-2xl leading-tight text-background sm:text-3xl">
+                  {s.location}
+                </h3>
+                <span className="mt-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-light sm:text-[11px]">
+                  <span className="h-px w-6 bg-accent-light transition-all duration-500 group-hover:w-10" />
+                  Explore
+                  <ArrowRight className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" />
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
-
-        <button
-          onClick={() => scrollBy(-1)}
-          aria-label="Scroll left"
-          className="absolute left-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground opacity-0 shadow-lg transition-opacity duration-300 group-hover/carousel:opacity-100 sm:flex"
-        >
-          <ChevronLeft className="h-4 w-4" />
-        </button>
-        <button
-          onClick={() => scrollBy(1)}
-          aria-label="Scroll right"
-          className="absolute right-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground opacity-0 shadow-lg transition-opacity duration-300 group-hover/carousel:opacity-100 sm:flex"
-        >
-          <ChevronRight className="h-4 w-4" />
-        </button>
       </div>
     </section>
   )

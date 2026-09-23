@@ -17,7 +17,7 @@ import { Reveal } from '@/components/reveal'
 import { TourCard } from '@/components/tour-card'
 import { EnquiryForm } from '@/components/enquiry-form'
 import { CtaBand } from '@/components/cta-band'
-import { getTour, tours } from '@/lib/site'
+import { getTour, isTailorMade, tours } from '@/lib/site'
 import { getTourData } from '@/lib/data'
 
 // Right padding that keeps section content clear of the pinned price card.
@@ -63,22 +63,39 @@ export default async function TourPage({
 
       {/* Inset hairline frame */}
       <div className="relative border border-accent/35 px-6 py-8 sm:px-8 sm:py-10">
-        <p className="eyebrow text-accent">
-          <span className="rule" />
-          Indicative price
-        </p>
-
-        <div className="mt-6 flex items-end gap-3">
-          <span className="pb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-background/55">
-            From
-          </span>
-          <p className="font-serif text-5xl leading-none text-background sm:text-6xl">
-            {t.from.split(' per')[0]}
-          </p>
-        </div>
-        <p className="mt-3 text-sm text-background/60">
-          per person, twin share
-        </p>
+        {isTailorMade(t) ? (
+          <>
+            <p className="eyebrow text-accent">
+              <span className="rule" />
+              Tailor-made journey
+            </p>
+            <p className="mt-6 font-serif text-4xl leading-[1.05] text-background sm:text-5xl">
+              Priced to your plans
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-background/60">
+              Quoted individually once we know your dates, lodges and group
+              size.
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="eyebrow text-accent">
+              <span className="rule" />
+              Indicative price
+            </p>
+            <div className="mt-6 flex items-end gap-3">
+              <span className="pb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-background/55">
+                From
+              </span>
+              <p className="font-serif text-5xl leading-none text-background sm:text-6xl">
+                {t.from.split(' per')[0]}
+              </p>
+            </div>
+            <p className="mt-3 text-sm text-background/60">
+              per person, twin share
+            </p>
+          </>
+        )}
 
         <dl className="mt-8 grid grid-cols-2 border-t border-background/15">
           {[
@@ -297,8 +314,14 @@ export default async function TourPage({
               were our own trip.
             </p>
             <p className="mt-8 border-l-2 border-accent-light pl-5 text-sm leading-relaxed text-background/70">
-              Runs {t.season} · {t.group} · from{' '}
-              <span className="text-background">{t.from}</span>
+              Runs {t.season} · {t.group} ·{' '}
+              {isTailorMade(t) ? (
+                <span className="text-background">priced to your plans</span>
+              ) : (
+                <>
+                  from <span className="text-background">{t.from}</span>
+                </>
+              )}
             </p>
           </Reveal>
           <Reveal delay={120}>

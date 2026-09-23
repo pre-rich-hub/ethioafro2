@@ -442,6 +442,14 @@ export type Tour = {
   featured?: boolean
 }
 
+// Tours without a price we can stand behind are quoted individually. Keep this
+// sentinel in `from`, and check it with isTailorMade() before showing a price.
+export const TAILOR_MADE = 'Tailor-made'
+
+export function isTailorMade(t: Pick<Tour, 'from'>) {
+  return t.from === TAILOR_MADE
+}
+
 export const tours: Tour[] = [
   {
     slug: 'the-historic-route',
@@ -451,7 +459,7 @@ export const tours: Tour[] = [
     nights: 10,
     style: 'Cultural · Private',
     season: 'Oct – Mar',
-    from: '$6,450 per person',
+    from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'Four UNESCO sites and three former capitals, linked by short domestic flights rather than long drives.',
@@ -628,7 +636,7 @@ export const tours: Tour[] = [
     nights: 9,
     style: 'Trekking · Expedition · Private',
     season: 'Oct – Feb',
-    from: '$3,480 per person',
+    from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'West to east across the whole Simien massif, to the roof of Ethiopia and out the far side.',
@@ -700,7 +708,7 @@ export const tours: Tour[] = [
     nights: 14,
     style: 'Cultural · Trekking · Private',
     season: 'Oct – Mar',
-    from: '$8,650 per person',
+    from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'Every great northern site, plus three days walking the Simien — driven overland where the road is worth it.',
@@ -782,7 +790,7 @@ export const tours: Tour[] = [
     nights: 5,
     style: 'Cultural · Hiking · Private',
     season: 'Oct – Mar',
-    from: '$3,240 per person',
+    from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
       'Cliffside churches reached on foot, then the granite stelae of Ethiopia\'s oldest empire.',
@@ -894,7 +902,7 @@ export const tours: Tour[] = [
     nights: 15,
     style: 'Festival · Cultural · Private',
     season: 'January only',
-    from: '$10,400 per person',
+    from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'Genna at the rock churches of Lalibela, Timkat at the royal bath in Gondar, and the quiet fortnight in between.',
@@ -1022,7 +1030,7 @@ export const tours: Tour[] = [
     nights: 7,
     style: 'Wildlife · Cultural · Private',
     season: 'Oct – May',
-    from: '$3,950 per person',
+    from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
       'Addis to Lalibela by road — Ethiopian wolves on the Guassa Plateau and a thirteenth-century lake monastery on the way.',
@@ -1088,7 +1096,7 @@ export const tours: Tour[] = [
     nights: 5,
     style: 'Slow Travel · Cultural · Private',
     season: 'Oct – May',
-    from: '$2,780 per person',
+    from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'Monasteries, coffee forest, a village of equals and a forgotten royal lakeshore — the long way from Bahir Dar to Gondar.',
@@ -1149,7 +1157,7 @@ export const tours: Tour[] = [
     nights: 4,
     style: 'Trekking · Small Group',
     season: 'Oct – Feb',
-    from: '$1,690 per person',
+    from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'Village to village onto the moorland that feeds the Blue Nile — the northern trek almost nobody has done.',
@@ -1206,7 +1214,7 @@ export const tours: Tour[] = [
     nights: 6,
     style: 'Wildlife · Birding · Private',
     season: 'Oct – Apr',
-    from: '$3,450 per person',
+    from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
       'The Simien\'s highland specialities — thick-billed raven, wattled ibis, lammergeier — with a specialist guide and no detours.',
@@ -1263,7 +1271,7 @@ export const tours: Tour[] = [
     nights: 8,
     style: 'Expedition · Private',
     season: 'Nov – Apr',
-    from: '$5,780 per person',
+    from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
       'The Simien escarpment and the Sanetti Plateau, Ethiopia\'s two great high-altitude wildernesses, in one trip.',
@@ -1320,7 +1328,7 @@ export const tours: Tour[] = [
     nights: 6,
     style: 'Slow Travel · Private',
     season: 'Year-round',
-    from: '$4,320 per person',
+    from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'Island monasteries by boat, then south into the forest understorey where wild Arabica coffee still grows.',
@@ -1372,7 +1380,7 @@ export const tours: Tour[] = [
     nights: 5,
     style: 'Expedition · Small Group',
     season: 'Nov – Feb',
-    from: '$5,150 per person',
+    from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
       'Sulphur springs, an open lava lake, and salt caravans crossing one of the lowest points on earth.',
@@ -1433,7 +1441,7 @@ export const tours: Tour[] = [
     nights: 9,
     style: 'Cultural · Private',
     season: 'Jun – Sep, Dec – Mar',
-    from: '$6,980 per person',
+    from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
       'Market days and standing invitations, in one of the most ethnically diverse valleys anywhere on earth.',
@@ -1489,7 +1497,7 @@ export const tours: Tour[] = [
     nights: 7,
     style: 'Festival · Private',
     season: 'January only',
-    from: '$5,940 per person',
+    from: TAILOR_MADE,
     group: '2 – 10 guests',
     teaser:
       'Ethiopian Epiphany — processions, an all-night vigil, and the royal bath flooded at dawn.',
@@ -1540,7 +1548,7 @@ export const tours: Tour[] = [
     nights: 8,
     style: 'Photography · Private',
     season: 'Oct – Mar',
-    from: '$6,120 per person',
+    from: TAILOR_MADE,
     group: '2 – 4 guests',
     teaser:
       'A route timed entirely around the light — golden hour at Lalibela, blue hour over the salt flats.',
@@ -1596,7 +1604,7 @@ export const tours: Tour[] = [
     nights: 7,
     style: 'Wildlife · Birding · Private',
     season: 'Year-round',
-    from: '$4,780 per person',
+    from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
       'From Afro-alpine endemics on the Sanetti Plateau to pelicans on Lake Tana, built for a serious list.',
@@ -1648,114 +1656,6 @@ export const tours: Tour[] = [
       },
     ],
     places: ['Rift Valley Lakes', 'Bale Mountains', 'Lake Tana', 'Debre Libanos'],
-  },
-]
-
-// Field names date back to when this catalog held layover packages; the
-// admin CRUD and API layer key off these exact names, so the shape is left
-// as-is even though it now holds outbound (regional add-on) tours. `hours`
-// carries a duration string like "3 Days" rather than an hour count.
-export type LayoverPackage = {
-  slug: string
-  hours: string
-  title: string
-  price: string
-  image: string
-  teaser: string
-  itinerary: string[]
-  includes: string[]
-  best: string
-}
-
-export const layoverPackages: LayoverPackage[] = [
-  {
-    slug: '6-hour',
-    hours: '3 Days',
-    title: 'Kenya Safari Extension',
-    price: 'from $1,450 per person',
-    image: '/images/luxury-lodge.png',
-    teaser:
-      'A short Maasai Mara add-on flown direct from Addis — enough time for real game drives without reworking your whole itinerary.',
-    itinerary: [
-      'Morning flight from Addis to the Mara, met on the airstrip',
-      'Afternoon and evening game drives out of a private tented camp',
-      'A full day following the plains at the pace the wildlife sets',
-      'A final dawn drive, then the flight back to Addis for your onward leg',
-    ],
-    includes: [
-      'Return flights Addis – Mara – Addis',
-      'Two nights at a private tented camp, full board',
-      'All game drives with a resident guide',
-      'Park and conservancy fees',
-    ],
-    best: 'Guests extending an Ethiopia trip who still want a classic safari',
-  },
-  {
-    slug: '12-hour',
-    hours: '4 Days',
-    title: 'Zanzibar Beach Escape',
-    price: 'from $1,780 per person',
-    image: '/images/lake-tana.png',
-    teaser:
-      'Stone Town for an afternoon, then several unhurried days on the coast — the natural close to a highland-and-history trip.',
-    itinerary: [
-      'Flight from Addis to Zanzibar, afternoon walk through Stone Town',
-      'Transfer to the north coast and nothing scheduled for the rest of the day',
-      'Two full days free — diving, a sailing dhow, or simply the beach',
-      'A last morning by the water before the flight home',
-    ],
-    includes: [
-      'Return flights Addis – Zanzibar – Addis',
-      'Three nights at a beachfront villa, breakfast included',
-      'A private guided walk through Stone Town',
-      'All transfers on the island',
-    ],
-    best: 'Ending a highland itinerary somewhere warm and slow',
-  },
-  {
-    slug: '24-hour',
-    hours: '5 Days',
-    title: 'Tanzania: Serengeti & Ngorongoro',
-    price: 'from $3,250 per person',
-    image: '/images/luxury-lodge.png',
-    teaser:
-      'The two reserves most guests ask for by name, linked in a single loop with a private guide throughout.',
-    itinerary: [
-      'Flight into Arusha, then the drive up to the Ngorongoro rim',
-      'A full day inside the crater floor — among the densest wildlife in Africa',
-      'Transfer north into the Serengeti for two nights',
-      'Game drives timed around the resident herds, not a fixed clock',
-      'Return flight to Addis on the final morning',
-    ],
-    includes: [
-      'Domestic flights and all park transfers',
-      'Four nights across crater-rim and Serengeti lodges',
-      'A private driver-guide for the full circuit',
-      'All park and conservation fees',
-    ],
-    best: 'A genuine second-country safari, not a side trip',
-  },
-  {
-    slug: '48-hour',
-    hours: '3 Days',
-    title: 'Rwanda Gorilla Trekking',
-    price: 'from $4,100 per person',
-    image: '/images/luxury-lodge.png',
-    teaser:
-      'One trekking permit, one encounter, built around it properly rather than rushed in and out on a long weekend.',
-    itinerary: [
-      'Flight to Kigali, afternoon transfer to Volcanoes National Park',
-      'Briefing at dawn, then the trek itself — typically two to four hours each way',
-      'An hour with a habituated gorilla family, at a respectful distance',
-      'A slower final day before the return flight to Addis',
-    ],
-    includes: [
-      'Return flights Addis – Kigali – Addis',
-      'The gorilla trekking permit, secured in advance',
-      'Two nights at a lodge bordering the park',
-      'A private guide and vehicle throughout',
-    ],
-    best: 'Guests who have wanted to do this for years and don\'t want to rush it',
   },
 ]
 
@@ -2081,7 +1981,6 @@ export const journeyStyles = [
   'Wildlife',
   'Trekking',
   'Festival',
-  'Outbound',
   'Family',
 ]
 

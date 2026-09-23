@@ -12,17 +12,15 @@
 // API but has no surface on the static Tour type, so it stays unused until a
 // rendering element needs it.
 
-import type { LayoverPackage, Tour } from '@/lib/site'
+import type { Tour } from '@/lib/site'
 import {
-  layoverPackages as staticLayoverPackages,
   tours as staticTours,
   getTour as getStaticTour,
+  isTailorMade,
 } from '@/lib/site'
 import {
-  getLayoverPackages,
   getTours,
   getTourBySlug,
-  type ApiLayoverPackage,
   type ApiTour,
 } from '@/lib/api'
 
@@ -37,7 +35,8 @@ function overlayLive(staticTour: Tour, live: ApiTour): Tour {
     ...staticTour,
     // Price/featured overlay only — everything else stays on the static
     // record so rendering is byte-identical with the frozen UI.
-    ...(price ? { from: price } : {}),
+    // Tailor-made tours stay unpriced even if the API still holds a figure.
+    ...(price && !isTailorMade(staticTour) ? { from: price } : {}),
     ...(typeof live.isFeatured === 'boolean' ? { featured: live.isFeatured } : {}),
   }
 }
@@ -73,29 +72,4 @@ export async function getTourData(slug: string): Promise<Tour | undefined> {
   }
 
   return staticTour
-}
-
-export async function getLayoverPackagesData(): Promise<LayoverPackage[]> {
-  let livePackages: ApiLayoverPackage[] = []
-  try {
-    livePackages = await getLayoverPackages()
-  } catch {
-    livePackages = []
-  }
-
-  if (livePackages.length === 0) return staticLayoverPackages
-
-  const bySlug = new Map(livePackages.map((p) => [p.slug, p]))
-
-  return staticLayoverPackages.map((p) => {
-    const live = bySlug.get(p.slug)
-    if (!live) return p
-    return {
-      ...live,
-      // Overlay the live image only when the backend serves it (/api/v1/media).
-      // Dev-local /assets paths are only served by the backend process, not
-      // the frontend — documented limitation, keep the static image instead.
-      image: live.image && live.image.startsWith('/api/v1/') ? live.image : p.image,
-    }
-  })
 }

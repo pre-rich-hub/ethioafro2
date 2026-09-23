@@ -15,7 +15,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { navLinks, contact, destinations, tours } from '@/lib/site'
+import { navLinks, contact, destinations, tours, isTailorMade } from '@/lib/site'
 
 const languages = [
   { code: 'EN', label: 'English' },
@@ -304,7 +304,7 @@ export function SiteNav() {
                                   {t.days}
                                 </span>
                                 <span className="absolute bottom-3 right-3 font-serif text-sm text-background">
-                                  {t.from.split(' per ')[0]}
+                                  {isTailorMade(t) ? 'Tailor-made' : t.from.split(' per ')[0]}
                                 </span>
                               </div>
                               <div>
