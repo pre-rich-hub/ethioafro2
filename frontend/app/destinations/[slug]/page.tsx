@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Check, Mountain } from 'lucide-react'
+import { ArrowRight, Mountain } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
 import { TourCard } from '@/components/tour-card'
@@ -80,39 +80,46 @@ export default async function DestinationPage({
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="border border-border bg-card p-7 sm:p-9">
-            <p className="eyebrow mb-6 text-primary">
+          <div className="relative overflow-hidden border border-secondary bg-secondary p-7 text-secondary-foreground shadow-[0_30px_60px_-30px_rgba(26,26,26,0.55)] outline outline-1 -outline-offset-[9px] outline-accent/35 sm:p-9">
+            {/* Soft gold glow in the corner */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
+            />
+
+            <p className="eyebrow relative mb-6 text-accent">
               <span className="rule" />
               Highlights
             </p>
-            <ul className="space-y-5">
-              {d.highlights.map((h) => (
+            <ul className="relative space-y-5">
+              {d.highlights.map((h, i) => (
                 <li key={h} className="flex items-start gap-3.5">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                    <Check className="h-3 w-3" />
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center font-serif text-base leading-none text-accent">
+                    {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-pretty text-sm leading-relaxed text-foreground sm:text-base">
+                  <span className="text-pretty text-sm leading-relaxed text-background/85 sm:text-base">
                     {h}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-8 flex items-start gap-3 border-t border-border pt-7">
-              <Mountain className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <p className="text-sm leading-relaxed text-muted-foreground">
+            <div className="relative mt-7 flex items-start gap-3 border-t border-background/15 pt-6">
+              <Mountain className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
+              <p className="text-sm leading-relaxed text-background/60">
                 Best combined with a stay of{' '}
-                <span className="text-foreground">{d.duration}</span>, travelling{' '}
-                <span className="text-foreground">{d.bestTime}</span>.
+                <span className="text-background">{d.duration}</span>, travelling{' '}
+                <span className="text-background">{d.bestTime}</span>.
               </p>
             </div>
 
             <Link
               href="/contact"
-              className="group mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
+              className="group relative mx-auto mt-5 flex w-fit items-center gap-2.5 whitespace-nowrap rounded-sm border border-accent/60 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-accent-foreground sm:text-xs"
             >
-              Enquire about {d.name}
-              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+              <span className="sm:hidden">Enquire now</span>
+              <span className="hidden sm:inline">Enquire about {d.name}</span>
+              <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
         </Reveal>
