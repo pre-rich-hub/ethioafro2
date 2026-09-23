@@ -824,7 +824,7 @@ export const tours: Tour[] = [
     image: '/images/hero-lalibela.png',
     days: '11 Days',
     nights: 10,
-    style: 'Cultural · Private',
+    style: 'Cultural · Luxury · Private',
     season: 'Oct – Mar',
     from: TAILOR_MADE,
     group: '2 – 8 guests',
@@ -1267,7 +1267,7 @@ export const tours: Tour[] = [
     image: '/images/addis-skyline.png',
     days: '2 Days',
     nights: 1,
-    style: 'Cultural · Private',
+    style: 'Cultural · Family · Private',
     season: 'Year-round',
     from: TAILOR_MADE,
     group: '2 – 8 guests',
@@ -2478,6 +2478,183 @@ export const tours: Tour[] = [
     places: ['Gurage Highlands', 'Lake Ziway', 'Abijata-Shalla', 'Lake Langano', 'Hawassa'],
   },
   {
+    slug: 'northern-ethiopia-for-families',
+    title: 'Northern Ethiopia for Families',
+    image: '/images/gondar.png',
+    days: '9 Days',
+    nights: 8,
+    style: 'Family · Cultural · Private',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: 'Families of 3 – 8',
+    teaser:
+      'Castles, boats, monkeys and churches with tunnels — the north at a pace that works for children.',
+    summary:
+      'The great northern sites, reshaped for families: domestic flights instead of long drives, lodges rather than tents, and days that mix one big sight with plenty of time to play. Children meet gelada monkeys a few metres away, explore a real castle, ride a boat to an island monastery and walk the tunnels between Lalibela\'s churches.',
+    includes: [
+      'All domestic flights, so no day has a long drive',
+      'A private vehicle and a family-experienced guide',
+      'Family rooms or connecting rooms at every lodge',
+      'A private boat on Lake Tana',
+      'An injera and coffee afternoon with a local family',
+      'Breakfast daily and most dinners',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Drinks, snacks and personal spending',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrive Addis Ababa',
+        text: 'Private transfer and an easy afternoon — then meet Lucy, the 3.2-million-year-old ancestor, at the National Museum.',
+      },
+      {
+        day: 'Days 2 – 3',
+        title: 'Bahir Dar & Lake Tana',
+        text: 'A short flight north, a private boat to an island monastery, and a walk to the Blue Nile Falls across an old stone bridge.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Gondar\'s castles',
+        text: 'Up to Gondar to explore the royal enclosure — six castles to run around, and Fasilides\' Bath.',
+      },
+      {
+        day: 'Days 5 – 6',
+        title: 'The Simien rim',
+        text: 'Two nights at an escarpment lodge, with short walks to watch gelada monkeys graze a few metres away and views over the edge of the world.',
+      },
+      {
+        day: 'Days 7 – 8',
+        title: 'Lalibela',
+        text: 'A flight to Lalibela, the rock-hewn churches and the trench passages that connect them, and an injera and coffee afternoon with a local family.',
+      },
+      {
+        day: 'Day 9',
+        title: 'Departure',
+        text: 'A flight back to Addis Ababa for your journey home.',
+      },
+    ],
+    places: ['Addis Ababa', 'Lake Tana', 'Gondar', 'Simien Mountains', 'Lalibela'],
+  },
+  {
+    slug: 'lakes-craters-and-wildlife-for-families',
+    title: 'Lakes, Craters & Wildlife for Families',
+    image: '/images/danakil.png',
+    days: '6 Days',
+    nights: 5,
+    style: 'Family · Wildlife · Private',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: 'Families of 3 – 8',
+    teaser:
+      'Crater lakes, oryx on the plains, a waterfall gorge and warm pools under the palms — all close to Addis.',
+    summary:
+      'A short, easy family journey that never strays far from the capital: volcanic crater lakes at Bishoftu, game drives and hot springs in Awash National Park, a cooking class, and a forest walk. Short drives, comfortable lodges, and something new every day.',
+    includes: [
+      'A private vehicle and a family-experienced guide',
+      'Family rooms at lodges in Bishoftu, Awash and Addis Ababa',
+      'Park fees and game drives in Awash',
+      'An injera cooking class with a local family',
+      'Breakfast daily and most meals on the road',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Drinks, snacks and personal spending',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Addis Ababa',
+        text: 'Arrival, the eucalyptus forest and view from Entoto, and Lucy at the National Museum.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Bishoftu\'s crater lakes',
+        text: 'An hour south-east to the crater lakes, with birds on the shore and a slow lakeside lunch.',
+      },
+      {
+        day: 'Days 3 – 4',
+        title: 'Awash National Park',
+        text: 'Game drives for oryx and gazelle, Awash Falls tumbling into its gorge, and an afternoon in the warm, palm-shaded pools of the Filwoha hot springs.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Back to Addis & a cooking class',
+        text: 'The drive back to the capital and an afternoon learning to pour injera with a local family.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Menagesha forest & departure',
+        text: 'A short walk under the giant junipers of Menagesha, protected for five centuries, before your evening flight.',
+      },
+    ],
+    places: ['Addis Ababa', 'Bishoftu', 'Awash National Park', 'Menagesha Suba Forest'],
+  },
+  {
+    slug: 'the-north-in-style',
+    title: 'The North in Style',
+    image: '/images/luxury-lodge.png',
+    days: '10 Days',
+    nights: 9,
+    style: 'Luxury · Cultural · Private',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 6 guests',
+    teaser:
+      'Lake Tana, Gondar, the Simien and Lalibela with private guides, the best lodges on each stop and nothing rushed.',
+    summary:
+      'Our most comfortable northern journey. Domestic flights between every region, the finest lodge we know at each stop, private guides and vehicles throughout, and days planned around the quiet hours — the churches at dawn, the lake before the day boats, the escarpment at sunset — with long, slow lunches in between.',
+    includes: [
+      'All domestic flights and private airport transfers',
+      'The best available lodge or boutique hotel at every stop',
+      'Private specialist guides and vehicles throughout',
+      'A private boat on Lake Tana and early access at the churches',
+      'All meals, with selected dinners arranged privately',
+      'A dedicated trip designer on call around the clock',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Premium drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Addis Ababa',
+        text: 'Met on arrival, a boutique hotel, and a private evening with dinner and live music.',
+      },
+      {
+        day: 'Days 2 – 3',
+        title: 'Lake Tana',
+        text: 'A private boat to the island monasteries before the day crowds, the Blue Nile Falls, and an unhurried lakeside lodge.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Gondar',
+        text: 'The royal enclosure and Debre Berhan Selassie with a historian, and a private dinner in the old city.',
+      },
+      {
+        day: 'Days 5 – 7',
+        title: 'The Simien rim',
+        text: 'Three nights at an escarpment lodge: gelada troops, Imet Gogo at sunrise, and walks as long or as short as you choose, with a vehicle always close by.',
+      },
+      {
+        day: 'Days 8 – 9',
+        title: 'Lalibela',
+        text: 'The churches at dawn with a senior guide, Asheton Maryam above the town, and the cave church of Yemrehanna Kristos.',
+      },
+      {
+        day: 'Day 10',
+        title: 'Departure',
+        text: 'A flight to Addis Ababa, a day room and a farewell lunch before your evening departure.',
+      },
+    ],
+    places: ['Addis Ababa', 'Lake Tana', 'Gondar', 'Simien Mountains', 'Lalibela'],
+  },
+  {
     slug: 'christmas-to-epiphany',
     title: 'Christmas to Epiphany',
     image: '/images/festival-timkat.png',
@@ -2677,7 +2854,7 @@ export const tours: Tour[] = [
     image: '/images/lake-tana.png',
     days: '6 Days',
     nights: 5,
-    style: 'Slow Travel · Cultural · Private',
+    style: 'Slow Travel · Cultural · Family · Private',
     season: 'Oct – May',
     from: TAILOR_MADE,
     group: '2 – 8 guests',
@@ -3358,6 +3535,123 @@ export const peaks: Peak[] = [
     note: 'A holy volcanic summit south-east of the capital, with a crater lake and monastery at the top.',
     tourSlug: 'crater-lakes-and-the-holy-mountain',
     destinationSlug: 'bishoftu-zuqualla',
+  },
+]
+
+// Festival calendar for /festivals. Ethiopian-calendar dates shift by a day
+// in some Gregorian years; moveable feasts are marked as such.
+export type Festival = {
+  slug: string
+  name: string
+  localName?: string
+  when: string
+  month: string
+  where: string
+  unesco?: string
+  image: string
+  text: string
+  tourSlugs: string[]
+  destinationSlugs: string[]
+}
+
+export const festivals: Festival[] = [
+  {
+    slug: 'genna',
+    name: 'Ethiopian Christmas',
+    localName: 'Genna',
+    when: 'January 7',
+    month: 'January',
+    where: 'Lalibela, and churches nationwide',
+    image: '/images/lalibela.png',
+    text: 'Thousands of pilgrims in white gather at Lalibela\'s rock-hewn churches for an all-night vigil, and at dawn the priests chant from the rock above them. The most atmospheric Christmas on the continent.',
+    tourSlugs: ['christmas-to-epiphany'],
+    destinationSlugs: ['lalibela'],
+  },
+  {
+    slug: 'timkat',
+    name: 'Epiphany',
+    localName: 'Timkat',
+    when: 'January 19',
+    month: 'January',
+    where: 'Gondar, Lalibela and Addis Ababa',
+    unesco: 'UNESCO Intangible Heritage, 2019',
+    image: '/images/festival-timkat.png',
+    text: 'On the eve, each church\'s tabot is carried in procession to water — in Gondar, to Fasilides\' Bath — and after an all-night vigil the water is blessed at dawn. Colour, chanting and crowds in white.',
+    tourSlugs: ['christmas-to-epiphany', 'timkat-festival-journey'],
+    destinationSlugs: ['gondar'],
+  },
+  {
+    slug: 'fichee-chambalaalla',
+    name: 'Sidama New Year',
+    localName: 'Fichee-Chambalaalla',
+    when: 'Moveable — recently in March',
+    month: 'Spring',
+    where: 'Hawassa and across Sidama',
+    unesco: 'UNESCO Intangible Heritage, 2015',
+    image: '/images/coffee-ceremony.png',
+    text: 'The Sidama New Year, its date set each year by Sidama astronomers who read the moon and stars. Families share buurisame — a dish of enset, milk and butter — and Hawassa fills with song and dance.',
+    tourSlugs: ['sidama-and-yirgacheffe-coffee'],
+    destinationSlugs: ['sidama-yirgacheffe'],
+  },
+  {
+    slug: 'ashendye',
+    name: 'Girls\' festival',
+    localName: 'Ashendye · Shadey · Solel',
+    when: 'Around August 22 – September 1',
+    month: 'August',
+    where: 'Lalibela and the northern highlands',
+    image: '/images/hero-lalibela.png',
+    text: 'At the end of the August fast, girls in their finest dresses and skirts of tall grass move from house to house singing and drumming — a celebration of girlhood known by different names across the north.',
+    tourSlugs: [],
+    destinationSlugs: ['lalibela'],
+  },
+  {
+    slug: 'enkutatash',
+    name: 'Ethiopian New Year',
+    localName: 'Enkutatash',
+    when: 'September 11',
+    month: 'September',
+    where: 'Nationwide',
+    image: '/images/addis-skyline.png',
+    text: 'The start of the Ethiopian year, as the long rains end and the highlands turn yellow with meskel daisies. Families gather, children sing door to door, and the country looks its greenest.',
+    tourSlugs: ['addis-ababa-in-depth'],
+    destinationSlugs: ['addis-ababa'],
+  },
+  {
+    slug: 'meskel',
+    name: 'Finding of the True Cross',
+    localName: 'Meskel',
+    when: 'September 27',
+    month: 'September',
+    where: 'Meskel Square, Addis Ababa, and nationwide',
+    unesco: 'UNESCO Intangible Heritage, 2013',
+    image: '/images/addis-skyline.png',
+    text: 'On the eve, a towering bonfire — the Demera — is lit before huge crowds in Meskel Square, decorated with the yellow daisies of the season. Towns across the country light their own.',
+    tourSlugs: ['addis-ababa-in-depth', 'addis-and-its-highlands'],
+    destinationSlugs: ['addis-ababa'],
+  },
+  {
+    slug: 'irreecha',
+    name: 'Oromo Thanksgiving',
+    localName: 'Irreecha',
+    when: 'The weekend after Meskel',
+    month: 'October',
+    where: 'Hora Arsadi, Bishoftu, and Addis Ababa',
+    image: '/images/lake-tana.png',
+    text: 'At the end of the rains, vast crowds in traditional dress gather at the lakeshore to give thanks, touching fresh grass and flowers to the water. One of the largest gatherings in Ethiopia.',
+    tourSlugs: ['crater-lakes-and-the-holy-mountain'],
+    destinationSlugs: ['bishoftu-zuqualla'],
+  },
+  {
+    slug: 'great-ethiopian-run',
+    name: 'Great Ethiopian Run',
+    when: 'Late November',
+    month: 'November',
+    where: 'Addis Ababa',
+    image: '/images/addis-skyline.png',
+    text: 'A 10-kilometre road race through the capital, founded in 2001 with Haile Gebrselassie, and now one of the largest road races in Africa — tens of thousands of runners, and a carnival atmosphere.',
+    tourSlugs: ['run-with-ethiopias-champions'],
+    destinationSlugs: ['addis-ababa'],
   },
 ]
 

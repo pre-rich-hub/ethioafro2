@@ -40,6 +40,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
     links: [
       { label: 'Our Story', href: '/about' },
       { label: 'Mountain Climbing', href: '/mountains' },
+      { label: 'Festival Calendar', href: '/festivals' },
       { label: 'How We Travel', href: '/how-we-travel' },
       { label: 'Travel Journal', href: '/blog' },
       { label: 'Responsible Tourism', href: '/blog/responsible-travel-in-the-omo' },

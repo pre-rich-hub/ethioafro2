@@ -3,6 +3,7 @@ import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
 import { ToursGrid } from '@/components/tours-grid'
+import { WaysToTravel } from '@/components/ways-to-travel'
 import { CtaBand } from '@/components/cta-band'
 import { promises } from '@/lib/site'
 import { getToursData } from '@/lib/data'
@@ -20,13 +21,23 @@ export default async function ToursPage() {
     <>
       <PageHero
         eyebrow="Tours & Journeys"
-        title="Eight starting points, not eight packages"
-        lede="Every route here has been run many times over and adjusted after each one. Treat them as a draft — the version you travel will be redrawn around you."
+        title="Starting points, not packages"
+        lede="Every route here is drawn from years on the ground across Ethiopia. Treat them as a draft — the version you travel will be redrawn around you."
         image="/images/luxury-lodge.png"
         imageAlt="A terrace at a highland lodge above the Ethiopian escarpment at dusk"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Tours' }]}
         compact
       />
+
+      {/* Ways to travel */}
+      <section className="shell pt-16 sm:pt-20 lg:pt-28">
+        <SectionHeading
+          eyebrow="Ways to Travel"
+          title="Choose how you'd like to travel"
+          aside="Every journey can be private. Pick a style to see the routes built for it."
+        />
+        <WaysToTravel tours={tours} onToursPage />
+      </section>
 
       {/* All journeys */}
       <section className="shell py-16 sm:py-20 lg:py-28">

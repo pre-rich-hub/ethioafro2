@@ -3,6 +3,8 @@ import { BrandIntro } from '@/components/brand-intro'
 import { Destinations } from '@/components/destinations'
 import { Journeys } from '@/components/journeys'
 import { Experiences } from '@/components/experiences'
+import { WaysToTravel } from '@/components/ways-to-travel'
+import { SectionHeading } from '@/components/section-heading'
 import { WhereToNext } from '@/components/where-to-next'
 import { Testimonial } from '@/components/testimonial'
 import { Gallery } from '@/components/gallery'
@@ -18,6 +20,14 @@ export default async function Page() {
       <BrandIntro />
       <Destinations />
       <Journeys tours={tours} />
+      <section className="shell pb-20 sm:pb-24 lg:pb-32">
+        <SectionHeading
+          eyebrow="Ways to Travel"
+          title="Private, family, luxury or expedition"
+          aside="However you like to travel, there's a route built for it — and every one can be reshaped around you."
+        />
+        <WaysToTravel tours={tours} />
+      </section>
       <Experiences />
       <WhereToNext />
       <Testimonial />

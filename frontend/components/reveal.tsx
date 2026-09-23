@@ -8,6 +8,7 @@ interface RevealProps {
   className?: string
   delay?: number
   as?: React.ElementType
+  id?: string
 }
 
 export function Reveal({
@@ -15,6 +16,7 @@ export function Reveal({
   className,
   delay = 0,
   as: Tag = 'div',
+  id,
 }: RevealProps) {
   const ref = useRef<HTMLElement | null>(null)
   const [visible, setVisible] = useState(false)
@@ -40,6 +42,7 @@ export function Reveal({
   return (
     <Tag
       ref={ref}
+      id={id}
       style={{ animationDelay: `${delay}ms` }}
       className={cn('reveal', visible && 'is-visible', className)}
     >
