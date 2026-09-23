@@ -157,16 +157,6 @@ export function WhereToNext() {
       </div>
 
       <div className="relative">
-        {/* Soft fade at both edges so cards drift in and out of view */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-background to-transparent sm:w-20 lg:w-32"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-background to-transparent sm:w-20 lg:w-32"
-        />
-
         <div
           ref={trackRef}
           onPointerDown={onPointerDown}
