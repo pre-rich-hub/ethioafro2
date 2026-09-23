@@ -3,6 +3,7 @@ export const navLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'Destinations', href: '/destinations' },
   { label: 'Tours', href: '/tours' },
+  { label: 'Experiences', href: '/experiences' },
   { label: 'Journal', href: '/blog' },
 ] as const
 
@@ -421,6 +422,372 @@ export const destinations: Destination[] = [
     ],
     span: 'lg:col-span-6',
   },
+  {
+    slug: 'addis-ababa',
+    name: 'Addis Ababa',
+    region: 'Central Ethiopia',
+    tag: 'Capital City',
+    image: '/images/addis-skyline.png',
+    teaser:
+      'Africa\'s diplomatic capital, and home to the most famous ancestor of us all.',
+    intro:
+      'Founded in the 1880s when Emperor Menelik II moved his court down from the Entoto hills, Addis Ababa — "new flower" — is now one of Africa\'s great capitals, and the place almost every journey in Ethiopia begins and ends.',
+    bestTime: 'Year-round',
+    duration: '1 – 3 days',
+    altitude: '2,300 – 3,000 m',
+    highlights: [
+      'Lucy — Dinknesh — the 3.2-million-year-old hominid at the National Museum',
+      'Mount Entoto, where the city began, with Menelik II\'s palace and the church of Entoto Maryam',
+      'Unity Park, opened inside Menelik\'s 36-hectare palace compound',
+      'Holy Trinity Cathedral, where Emperor Haile Selassie is buried',
+      'Merkato, the largest open-air market in Africa',
+    ],
+    paragraphs: [
+      'Most visitors treat Addis as an airport with a city attached. Give it a day or two and it rewards you: the National Museum, where the fossil known as Lucy lies alongside the story of the country\'s ancient kingdoms; the forested heights of Entoto, where the city was born and the air smells of eucalyptus; and the palace compound that is now Unity Park, the seat of Ethiopia\'s rulers for more than a century.',
+      'Then there is Merkato, the largest open-air market on the continent, a city within the city where every alley specialises — spices, baskets, recycled metal, coffee. We go with a guide who knows which lane leads where, and end the day as Addis does: a coffee ceremony, and an evening of traditional music and dance.',
+      'At around 2,300 metres the capital is also a gentle first step to altitude, which is why we often suggest a night here before flying north or driving into the highlands.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'debre-libanos',
+    name: 'Debre Libanos',
+    region: 'Central Ethiopia',
+    tag: 'Monastery & Gorge',
+    image: '/images/bale-gelada.png',
+    teaser:
+      'A monastery above a Blue Nile gorge, founded by one of Ethiopia\'s greatest saints.',
+    intro:
+      'About a hundred kilometres north of Addis Ababa, Debre Libanos was founded in 1284 by Saint Tekle Haymanot and became one of the most important monasteries in the country — its abbot once second only to the head of the Church.',
+    bestTime: 'October – May',
+    duration: '1 day, or an overnight',
+    altitude: '2,200 – 2,500 m',
+    highlights: [
+      'The monastery on its terrace between the cliffs and the gorge, still a major place of pilgrimage',
+      'The Jemma gorge viewpoints, dropping toward a tributary of the Blue Nile',
+      'Gelada monkeys grazing along the cliff edge',
+      'The old stone bridge, locally called "Portuguese" but built in the 1890s by Ras Darge',
+    ],
+    paragraphs: [
+      'Tekle Haymanot founded the monastery in 1284 under the name Debre Atsbo; it took the name Debre Libanos in the fifteenth century. For centuries its chief abbot, the Ichege, was the second most powerful figure in the Ethiopian Church, and it remains a major place of pilgrimage today.',
+      'The setting is half the reason to come. The monastery sits on a ledge between a cliff and a deep gorge, and short walks lead out to viewpoints over the Jemma valley, where gelada monkeys graze the grass along the rim.',
+      'On the way, an old stone bridge spans a side gorge. Locals call it the Portuguese bridge, but it was built in the 1890s by Ras Darge in the older Portuguese style — a small story we like to tell accurately.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'tiya-adadi-mariam',
+    name: 'Tiya & Adadi Mariam',
+    region: 'Central Ethiopia',
+    tag: 'UNESCO Heritage',
+    image: '/images/hero-lalibela.png',
+    teaser:
+      'Carved stelae, a rock-hewn church and a million years of human tools — all south of the capital.',
+    intro:
+      'A single road south-west of Addis Ababa links three very different chapters of the past: the prehistoric site of Melka Kunture, the rock-hewn church of Adadi Mariam, and the carved stelae of Tiya, a World Heritage Site since 1980.',
+    bestTime: 'October – May',
+    duration: '1 day',
+    altitude: '2,000 – 2,500 m',
+    highlights: [
+      'Tiya\'s stelae field — 36 monuments, 32 of them carved with swords and enigmatic symbols',
+      'Adadi Mariam, a rock-hewn church 73 km from Addis, attributed by tradition to King Lalibela\'s era',
+      'Melka Kunture, where obsidian tools more than 1.2 million years old have been found',
+      'The upper Awash valley and the highland farmland in between',
+    ],
+    paragraphs: [
+      'Melka Kunture, around fifty kilometres from the capital on the upper Awash River, is one of the most important prehistoric sites in East Africa, with a sequence of occupation stretching back more than a million years — including some of the earliest known use of obsidian for tools.',
+      'Further on, Adadi Mariam is one of the few rock-hewn churches in the south of the country. Local tradition credits it to the time of King Lalibela, and though it is far simpler than the churches that bear his name, it is still in use and rarely busy.',
+      'Tiya closes the day. Its field of standing stones, inscribed on the World Heritage List in 1980, marks a burial ground whose builders remain uncertain; many of the stelae are carved with swords and symbols that have never been fully explained.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'bishoftu-zuqualla',
+    name: 'Bishoftu & Mount Zuqualla',
+    region: 'Central Ethiopia',
+    tag: 'Crater Lakes',
+    image: '/images/lake-tana.png',
+    teaser:
+      'Volcanic crater lakes an hour from Addis, and a holy mountain with a lake in its summit.',
+    intro:
+      'Forty kilometres south-east of the capital, the town of Bishoftu is ringed by volcanic crater lakes — among them Lake Hora, where the Oromo gather each October for Irreecha. Above them rises Mount Zuqualla, whose crater holds a sacred lake and a monastery.',
+    bestTime: 'October – May',
+    duration: '1 day',
+    altitude: '1,920 – 3,010 m',
+    highlights: [
+      'The crater lakes of Bishoftu, including Hora and the deeper Babogaya',
+      'Irreecha, the Oromo thanksgiving festival held at Lake Hora each October',
+      'The walk up Mount Zuqualla to its crater lake, held holy by pilgrims',
+      'The monastery on Zuqualla, traditionally founded by the Egyptian saint Abbo',
+    ],
+    paragraphs: [
+      'Bishoftu — also known by its older name, Debre Zeit — sits at 1,920 metres among a cluster of crater lakes formed by volcanic activity. They make an easy escape from the city: birdlife along the shores, lakeside cafés, and water far calmer than the traffic you left behind.',
+      'Lake Hora is also the setting for Irreecha, the thanksgiving festival of the Oromo people, when crowds in traditional dress gather at the shore each October to give thanks, touching fresh grass and flowers to the water. It is a genuine community celebration, and one we visit respectfully and only with a local guide.',
+      'Across the plain, Mount Zuqualla rises to about 3,000 metres. At its summit is a crater lake considered holy, and a monastery that tradition says was founded by Abbo, an Egyptian saint. The walk to the rim is rewarded with wide views over the surrounding plains.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'menagesha-suba-forest',
+    name: 'Menagesha Suba Forest',
+    region: 'Central Ethiopia',
+    tag: 'Ancient Forest',
+    image: '/images/hero-simien.png',
+    teaser:
+      'A juniper forest protected by imperial decree since the fifteenth century, forty kilometres from Addis.',
+    intro:
+      'On the slopes of Mount Wechecha, west of the capital, Menagesha Suba is often called the oldest protected area in East Africa — replanted with juniper and set aside by Emperor Zara Yaqob in the fifteenth century.',
+    bestTime: 'October – May',
+    duration: 'Half a day – 1 day',
+    altitude: 'Up to 3,385 m',
+    highlights: [
+      'Walking trails under towering African juniper and other native trees',
+      'A climb toward the summit of Mount Wechecha at 3,385 metres',
+      'Forest birds and, with patience, colobus monkeys',
+      'The quiet — an hour from one of Africa\'s busiest capitals',
+    ],
+    paragraphs: [
+      'The forest\'s story begins with Emperor Zara Yaqob, who in the fifteenth century ordered the degraded slopes replanted with juniper and placed under protection. Whatever the exact claim to being the oldest protected area in East Africa, it has been cared for as a forest for more than five hundred years.',
+      'Today it is simply one of the best walks near Addis Ababa: trails under tall juniper, clearings with views back toward the city, and — for those who want more — the climb toward the 3,385-metre summit of Mount Wechecha.',
+      'We use Menagesha as a gentle first day for guests acclimatising before a trek, and as a half-day of fresh air for anyone with time to spare in the capital.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'wenchi-crater-lake',
+    name: 'Wenchi Crater Lake',
+    region: 'Oromia',
+    tag: 'Crater Lake',
+    image: '/images/lake-tana.png',
+    teaser:
+      'A lake inside an extinct volcano, with an island monastery, hot springs and waterfalls.',
+    intro:
+      'About 155 kilometres west of Addis Ababa by road, halfway between Ambo and Woliso, the Wenchi caldera cradles a lake at around 2,600 metres — reached on foot or on horseback, and crossed by boat to the island monastery of Cherkos.',
+    bestTime: 'October – May',
+    duration: '1 – 2 days',
+    altitude: '≈ 2,600 m (lake)',
+    highlights: [
+      'The descent into the crater on foot or on horseback with local guides',
+      'A boat to Cherkos, the island monastery traditionally founded by Tekle Haymanot',
+      'Hot springs and waterfalls in the valley below the lake',
+      'Farmland and forest on the crater walls, with views from the rim',
+    ],
+    paragraphs: [
+      'Wenchi is one of the most beautiful landscapes within reach of the capital: a green volcanic bowl with a lake at its heart, small islands, and valleys running down to hot springs and falls. Tradition holds that the monastery of Cherkos, on one of the islands, was founded in the thirteenth century by Saint Tekle Haymanot and rebuilt in the fifteenth under Emperor Zara Yaqob.',
+      'The way down is part of the visit. Local horsemen and guides lead the path from the rim to the shore, where small boats cross to the monastery. Beyond the lake, the walk continues down through the caldera to the hot springs — an easy day for most walkers, with horses for anyone who prefers to ride.',
+      'Wenchi works as a long day trip from Addis Ababa, but we prefer an overnight nearby so the crater can be seen in the morning light, before the day visitors arrive.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'awash-national-park',
+    name: 'Awash National Park',
+    region: 'Oromia',
+    tag: 'National Park',
+    image: '/images/danakil.png',
+    teaser:
+      'Ethiopia\'s oldest national park: a dormant volcano, a waterfall gorge and palm-fringed hot springs.',
+    intro:
+      'Established in 1966 about 225 kilometres east of Addis Ababa, Awash is Ethiopia\'s oldest national park — 827 square kilometres of acacia plain, lava fields and river gorge, watched over by the dormant Fantale volcano.',
+    bestTime: 'October – March',
+    duration: '2 – 3 days',
+    altitude: '700 – 2,007 m',
+    highlights: [
+      'Awash Falls, where the river drops into a gorge some 250 metres deep',
+      'Beisa oryx, Soemmerring\'s gazelle and Salt\'s dik-dik on the open plains',
+      'The Fantale volcano, with the dark scar of its last lava flow in 1820',
+      'The Filwoha hot springs — clear pools around 36°C, fringed by doum palms',
+    ],
+    paragraphs: [
+      'Awash was created to protect the dry-country wildlife of the Rift Valley floor — the beisa oryx above all, alongside Soemmerring\'s gazelle and the tiny Salt\'s dik-dik. Game drives run across open grassland and acacia scrub, with the river gorge along the park\'s southern edge.',
+      'Dominating the western side is Fantale, a dormant volcano whose summit crater is still grazed seasonally by the Kereyu people. On its southern flank, the black lava of its last eruption in 1820 is still clear to see from the road.',
+      'Elsewhere in the park, the Filwoha hot springs form a string of warm, blue pools shaded by doum palms — an oasis for wildlife and for anyone who has spent the morning on dusty tracks. The traditional lands of the Afar, Kereyu and Ittu peoples surround the park, and we visit with local guides from those communities.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'sof-omar-caves',
+    name: 'Sof Omar Caves',
+    region: 'Oromia',
+    tag: 'Cave System',
+    image: '/images/lalibela.png',
+    teaser:
+      'Fifteen kilometres of river-carved limestone passages, sacred to two faiths.',
+    intro:
+      'East of the Bale Mountains, the Weyib River has carved Ethiopia\'s longest cave — 15.1 kilometres of passages and chambers that were the longest known in Africa when they were surveyed in 1972.',
+    bestTime: 'October – March',
+    duration: '1 day',
+    altitude: '≈ 1,345 m (entrance)',
+    highlights: [
+      'The Chamber of Columns, a hall of limestone pillars shaped by the river',
+      'Walking through passages where the Weyib River still flows',
+      'A site held sacred by both Muslims and followers of traditional Oromo religion',
+      'The dry lowland landscape of East Bale around the cave entrance',
+    ],
+    paragraphs: [
+      'The Weyib River sinks into the rock at the Ayiew Maco entrance and reappears a kilometre away at the Holuca resurgence, and between the two it has hollowed out a labyrinth of more than fifteen kilometres. The most famous hall, the Chamber of Columns, is a forest of limestone pillars carved by water over a very long time.',
+      'Sof Omar has been a religious centre for centuries. Tradition says it is named after a Muslim holy man who lived here, and Ayiew after his daughter; the cave is sacred both to Islam and to the traditional religion of the Oromo, and pilgrims still come.',
+      'It lies about 110 kilometres east of Robe, in the lowlands below the Bale Mountains, which is why we usually pair it with a Bale journey — Ethiopian wolves on the Sanetti Plateau one day, an underground river the next. Visits are always made with a local guide.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'borana-yabelo',
+    name: 'Borana & Yabelo',
+    region: 'Oromia',
+    tag: 'Pastoral Culture',
+    image: '/images/omo-valley.png',
+    teaser:
+      'Singing wells, a salt lake inside a volcano, and a bird found nowhere else on earth.',
+    intro:
+      'In Ethiopia\'s far south, around the town of Yabelo, the Borana Oromo keep a pastoral way of life shaped by water: wells dug by hand deep into the ground, and a crater lake that has supplied salt for centuries.',
+    bestTime: 'October – March',
+    duration: '2 – 3 days',
+    altitude: '≈ 1,857 m (Yabelo)',
+    highlights: [
+      'A singing well, where herders pass water up a human chain from as deep as 30 metres, singing to keep the rhythm',
+      'El Sod, a 1.8-kilometre-wide volcanic crater with a salt lake at its floor',
+      'The Ethiopian bushcrow, found only in a small area around Yabelo',
+      'Borana villages and cattle country on the road south',
+    ],
+    paragraphs: [
+      'Where there is no surface water, the Borana dig for it. Their wells reach down as far as thirty metres, and to water the herds men and women form a chain inside the well, passing buckets up hand to hand and singing to keep the rhythm — the reason they are known as singing wells. The tradition stretches across the Borana lands into northern Kenya.',
+      'About ninety kilometres from Yabelo, the village of El Sod stands on the rim of an extinct volcano 1.8 kilometres across. On the crater floor lies a salt lake — its Amharic name means salt house — which the Borana have worked by hand for centuries, carrying the salt up the steep path to the rim.',
+      'Yabelo is also a quiet pilgrimage for birdwatchers: the Ethiopian bushcrow, or Stresemann\'s bushcrow, lives only within a small area around Yabelo and is protected in the Yabelo Wildlife Sanctuary and Borana National Park. Visits to wells and villages are arranged with local guides and always with the community\'s consent.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'jimma',
+    name: 'Jimma',
+    region: 'Oromia',
+    tag: 'Coffee Kingdom',
+    image: '/images/coffee-ceremony.png',
+    teaser:
+      'The palace of a coffee-rich Oromo king, in the heartland of wild Arabica.',
+    intro:
+      'In the green south-west, 353 kilometres from Addis Ababa, Jimma was once the capital of the strongest of the five Oromo Gibe kingdoms — and its king, Abba Jifar II, grew rich on the coffee that still grows all around the town.',
+    bestTime: 'October – May',
+    duration: '1 – 2 days',
+    altitude: '≈ 1,780 m',
+    highlights: [
+      'The palace of King Abba Jifar II on the hill at Jiren',
+      'The palace museum, with the king\'s furniture, manuscripts and household objects',
+      'Coffee farms and forest in the region where Arabica originates',
+      'Jimma\'s markets, busy with coffee and produce from the surrounding hills',
+    ],
+    paragraphs: [
+      'The Kingdom of Jimma was an Oromo Muslim kingdom that emerged in the eighteenth century, with its capital at Jiren, today part of Jimma town. Under Abba Jifar II it became the strongest of the Gibe kingdoms, and through careful diplomacy it kept a large measure of autonomy even after joining the Ethiopian empire.',
+      'His palace, built at the end of the nineteenth century, still stands on its hill above the town — a timber and stone complex with a mosque, reception halls and royal quarters. The museum inside keeps the king\'s beds, chairs, utensils and manuscripts, and tells the story of a court that grew wealthy on coffee.',
+      'Coffee is still the reason to come. Jimma lies in the heart of the country\'s wild Arabica region, and we spend time on local farms and in the forest with growers before a ceremony at home. For guests who want to go further, the forests of Kafa and Bonga lie beyond, to the south-west.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'harar',
+    name: 'Harar',
+    region: 'Eastern Ethiopia',
+    tag: 'UNESCO Heritage',
+    image: '/images/textile.png',
+    teaser:
+      'Ethiopia\'s only walled city — 82 mosques, lanes too narrow for cars, and hyenas fed by hand at dusk.',
+    intro:
+      'On a hilltop in the eastern highlands, Harar Jugol has been a centre of Islamic learning and trade for centuries. Its walled old city, listed by UNESCO in 2006, is a maze of lanes, painted houses and shrines entered through historic gates.',
+    bestTime: 'October – March',
+    duration: '2 – 3 days',
+    altitude: '1,885 m',
+    highlights: [
+      'The Jugol wall and its historic gates, including the Shoa Gate',
+      'An old city counted by UNESCO as holding 82 mosques and 102 shrines',
+      'The hyena feeding at dusk, a tradition kept by Harar\'s hyena men for generations',
+      'The Rimbaud House, with photographs of the city a century ago',
+      'Harar coffee, grown in the surrounding highlands and known for its fruity, wine-like character',
+    ],
+    paragraphs: [
+      'The wall around the old city is believed to have been built between the thirteenth and sixteenth centuries, and five historic gates once led into five different quarters. Inside, the lanes are too narrow for cars: a walk through Harar is a walk through markets, courtyards and the colourful traditional houses of the Harari people.',
+      'UNESCO describes Harar as considered the fourth holiest city of Islam, with 82 mosques — three said to date from the tenth century — and 102 shrines. It is also a city of trade, and its markets still gather goods from the surrounding countryside, including the coffee for which the eastern highlands are famous.',
+      'As night falls, the hyena men of Harar call wild spotted hyenas to the edge of the city and feed them by hand — a tradition that local history traces to a nineteenth-century famine. Harar lies a short drive from Dire Dawa, which has flights from Addis Ababa, so two or three days here fit easily into a wider journey.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'arba-minch-nechisar',
+    name: 'Arba Minch & Nechisar',
+    region: 'Southern Rift',
+    tag: 'Lakes & Wildlife',
+    image: '/images/lake-tana.png',
+    teaser:
+      'Forty springs, two Rift Valley lakes, and crocodiles basking on the shore of Lake Chamo.',
+    intro:
+      'Arba Minch — "forty springs" — sits above two great Rift Valley lakes, Abaya and Chamo, divided by a narrow isthmus known as the Bridge of God. Below it lies Nechisar National Park, and above it the cool Gamo Highlands of the Dorze weavers.',
+    bestTime: 'October – March',
+    duration: '2 – 3 days',
+    altitude: '1,285 – 2,732 m',
+    highlights: [
+      'A boat on Lake Chamo to the Crocodile Market, where hundreds of crocodiles sun themselves',
+      'The Bridge of God, the isthmus between Lakes Abaya and Chamo',
+      'The Nechisar plains — the park\'s name means "white grass"',
+      'The Dorze villages near Chencha, with woven bamboo houses up to 12 metres tall',
+    ],
+    paragraphs: [
+      'The town takes its name from the springs at the entrance to Nechisar National Park, and the park itself stretches across the ridge between Lakes Abaya and Chamo and the pale grass plains to the east — the white grass that gives Nechisar its name.',
+      'The classic outing is by boat across Lake Chamo to the stretch of shore known as the Crocodile Market, where large numbers of crocodiles gather in the sun. Birdlife along the lakes is rich, and the views back to the escarpment are some of the best in the southern Rift.',
+      'Up in the Gamo Highlands, around Chencha at 2,732 metres, the Dorze are known for their weaving and for their tall beehive-shaped houses woven from bamboo, which can reach twelve metres and last for decades. We visit with a Dorze guide, and Arba Minch has flights from Addis Ababa, making it the natural gateway to Konso and the Omo Valley.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'konso',
+    name: 'Konso',
+    region: 'Southern Rift',
+    tag: 'UNESCO Heritage',
+    image: '/images/omo-valley.png',
+    teaser:
+      'Stone-terraced hills and walled villages — a living landscape more than 400 years in the making.',
+    intro:
+      'In 2011 the Konso Cultural Landscape became the first place in Ethiopia listed by UNESCO as a cultural landscape: 55 square kilometres of dry-stone terraces and fortified hilltop villages, built and maintained by the Konso over some 21 generations.',
+    bestTime: 'October – March',
+    duration: '1 – 2 days',
+    altitude: '≈ 1,650 m',
+    highlights: [
+      'Terraces of dry-stone walls, in places up to five metres high',
+      'Walled villages such as Mecheke and Gamole, ringed by as many as six stone walls',
+      'The Konso Museum, with around 200 carved waka grave markers returned after looting',
+      'A landscape still farmed, lived in and governed by its own traditions',
+    ],
+    paragraphs: [
+      'Konso agriculture is a feat of engineering. Dry-stone walls, some five metres high, contour the hillsides into terraces that hold the soil, catch the rain and release the excess — the reason crops grow here at all in a dry, difficult environment. The tradition stretches back more than four hundred years.',
+      'The Konso live in fortified hilltop towns, each encircled by up to six concentric stone walls and entered through ceremonial gates. Of the two dozen or so traditional villages, Mecheke, Dokatu, Gamole and Buso are the most visited, and a local guide explains the meeting houses, generation poles and public spaces that organise village life.',
+      'Waka — carved wooden grave markers — honour important men and brave warriors. Many still stand in place, and the Konso Museum shows around two hundred that were recovered after being looted by collectors. Konso lies 87 kilometres from Arba Minch, on the road to the Omo Valley.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'sidama-yirgacheffe',
+    name: 'Sidama & Yirgacheffe',
+    region: 'Southern Rift',
+    tag: 'Coffee Country',
+    image: '/images/coffee-ceremony.png',
+    teaser:
+      'The hills behind the world\'s most famous coffees — and a UNESCO landscape where coffee grows under the trees.',
+    intro:
+      'South of Hawassa, the green slopes of Sidama and Gedeo produce the coffees known worldwide as Sidamo and Yirgacheffe. In 2023 UNESCO listed the Gedeo Cultural Landscape, where coffee is grown in layered forest gardens beneath shade trees and enset.',
+    bestTime: 'October – February',
+    duration: '2 – 4 days',
+    altitude: '1,570 – 1,920 m',
+    highlights: [
+      'Coffee farms and washing stations in Sidama, which grows around 30% of Ethiopia\'s coffee',
+      'The Gedeo agroforestry landscape, a World Heritage Site since 2023',
+      'The megalithic stelae of Tuto Fela near Dilla, dated in part to the 11th–13th centuries',
+      'A cupping with growers, and a coffee ceremony in a family home',
+    ],
+    paragraphs: [
+      'Sidama is the leading coffee-producing zone in the country, and Yirgacheffe, in neighbouring Gedeo, is perhaps the most celebrated coffee name in the world. Visiting during the harvest, roughly from October into the new year, means cherries on the trees and washing stations at work.',
+      'The Gedeo landscape is remarkable in its own right. Instead of open plantations, the Gedeo farm in layers: tall trees overhead, enset — the false banana that is their staple food — beneath, and coffee under that. UNESCO inscribed it in 2023 for this system and for the sacred forests and stone monuments woven through it.',
+      'Those monuments are among the most striking in Africa: the region holds a vast concentration of megaliths, and the site of Tuto Fela near Dilla preserves carved stelae partly dated to between the eleventh and thirteenth centuries. Hawassa, 273 kilometres south of Addis Ababa on its own lake, is the natural base.',
+    ],
+    span: 'lg:col-span-6',
+  },
 ]
 
 export type Tour = {
@@ -634,7 +1001,7 @@ export const tours: Tour[] = [
     image: '/images/hero-simien.png',
     days: '10 Days',
     nights: 9,
-    style: 'Trekking · Expedition · Private',
+    style: 'Climbing · Trekking · Expedition · Private',
     season: 'Oct – Feb',
     from: TAILOR_MADE,
     group: '2 – 8 guests',
@@ -893,6 +1260,1222 @@ export const tours: Tour[] = [
       },
     ],
     places: ['Lalibela', 'Asheton Maryam', 'Nakuto La\'ab', 'Yemrehanna Kristos'],
+  },
+  {
+    slug: 'addis-ababa-in-depth',
+    title: 'Addis Ababa in Depth',
+    image: '/images/addis-skyline.png',
+    days: '2 Days',
+    nights: 1,
+    style: 'Cultural · Private',
+    season: 'Year-round',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'Lucy, Entoto, the emperors\' palace and Africa\'s biggest market — the capital properly, in two unhurried days.',
+    summary:
+      'The capital most travellers only pass through, seen the way residents would show it: the hills where the city began, the museum that holds humanity\'s most famous ancestor, the market that never stops, and an evening of music and food to close. A natural start or finish to any journey in Ethiopia.',
+    includes: [
+      'A private vehicle and city guide for both days',
+      'One night at a boutique hotel in Addis Ababa',
+      'Entry to the National Museum, Entoto and Unity Park',
+      'A guided walk through Merkato',
+      'A coffee ceremony in a family home',
+      'Dinner with traditional music and dance',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Lunches, drinks and personal purchases',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1 · Morning',
+        title: 'Entoto, where the city began',
+        text: 'Up into the eucalyptus forest of Mount Entoto for the view over the city, Menelik II\'s palace, and the church of Entoto Maryam.',
+      },
+      {
+        day: 'Day 1 · Afternoon',
+        title: 'Lucy & the National Museum',
+        text: 'The 3.2-million-year-old fossil known as Lucy — Dinknesh — and the galleries of ancient Ethiopia, then Holy Trinity Cathedral, where Haile Selassie is buried.',
+      },
+      {
+        day: 'Day 1 · Evening',
+        title: 'Music & dinner',
+        text: 'A traditional dinner with live music and dance from across the country\'s regions.',
+      },
+      {
+        day: 'Day 2 · Morning',
+        title: 'Unity Park',
+        text: 'The palace compound of the emperors, opened to the public as Unity Park — throne rooms, banquet halls and gardens.',
+      },
+      {
+        day: 'Day 2 · Afternoon',
+        title: 'Merkato & a coffee ceremony',
+        text: 'Africa\'s largest open-air market with a guide who knows its lanes, then a full three-round coffee ceremony in a family home before your onward journey.',
+      },
+    ],
+    places: ['Addis Ababa', 'Entoto', 'Unity Park', 'Merkato'],
+  },
+  {
+    slug: 'southern-heritage-road',
+    title: 'The Southern Heritage Road',
+    image: '/images/hero-lalibela.png',
+    days: '1 Day',
+    nights: 0,
+    style: 'Cultural · Private',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'A million years of human history in a single day south of Addis — early tools, a rock-hewn church, and the carved stelae of Tiya.',
+    summary:
+      'One road, three chapters of the past. The prehistoric site of Melka Kunture, the rock-hewn church of Adadi Mariam, and the World Heritage stelae field at Tiya, with the farmland of the upper Awash valley in between. An easy, rewarding day from the capital.',
+    includes: [
+      'A private vehicle and guide for the day',
+      'Entry to Melka Kunture, Adadi Mariam and Tiya',
+      'A packed or local lunch',
+      'Hotel pick-up and drop-off in Addis Ababa',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Church donations and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Morning',
+        title: 'Melka Kunture',
+        text: 'About fifty kilometres out of the city, the prehistoric site on the upper Awash River, where obsidian tools more than 1.2 million years old have been found.',
+      },
+      {
+        day: 'Midday',
+        title: 'Adadi Mariam',
+        text: 'The rock-hewn church 73 kilometres from Addis, attributed by tradition to King Lalibela\'s era — simpler than Lalibela, still in use, and rarely busy.',
+      },
+      {
+        day: 'Afternoon',
+        title: 'The stelae of Tiya',
+        text: 'The World Heritage stelae field: 36 monuments, 32 of them carved with swords and symbols never fully explained. Back in Addis by early evening.',
+      },
+    ],
+    places: ['Melka Kunture', 'Adadi Mariam', 'Tiya & Adadi Mariam'],
+  },
+  {
+    slug: 'debre-libanos-and-the-jemma-gorge',
+    title: 'Debre Libanos & the Jemma Gorge',
+    image: '/images/bale-gelada.png',
+    days: '1 Day',
+    nights: 0,
+    style: 'Cultural · Wildlife · Private',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'A thirteenth-century monastery on a cliff ledge, gorge views, and gelada monkeys on the rim — a day north of Addis.',
+    summary:
+      'A hundred kilometres north of the capital, the great monastery founded by Saint Tekle Haymanot sits between a cliff and the gorge of a Blue Nile tributary. We pair it with short walks to the gorge viewpoints and the old stone bridge. It can also run as an overnight at a lodge on the rim.',
+    includes: [
+      'A private vehicle and guide for the day',
+      'Monastery and museum entry',
+      'A local guide for the gorge walks',
+      'Lunch on the gorge rim',
+      'Hotel pick-up and drop-off in Addis Ababa',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'An optional overnight at the rim (on request)',
+      'Church donations and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Morning',
+        title: 'North across the plateau',
+        text: 'Out of Addis and north across the farmland of the Shewa plateau, arriving at Debre Libanos by mid-morning.',
+      },
+      {
+        day: 'Midday',
+        title: 'The monastery',
+        text: 'The monastery founded in 1284 by Tekle Haymanot, its church, its museum, and the terrace between the cliffs and the gorge — still a place of pilgrimage.',
+      },
+      {
+        day: 'Afternoon',
+        title: 'The Jemma gorge & the bridge',
+        text: 'Short walks to the gorge viewpoints and the stone bridge built in the 1890s by Ras Darge, with gelada monkeys grazing along the rim. Back in Addis by evening.',
+      },
+    ],
+    places: ['Debre Libanos', 'Jemma Gorge'],
+  },
+  {
+    slug: 'crater-lakes-and-the-holy-mountain',
+    title: 'Crater Lakes & the Holy Mountain',
+    image: '/images/lake-tana.png',
+    days: '1 Day',
+    nights: 0,
+    style: 'Hiking · Cultural · Private',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'Bishoftu\'s volcanic crater lakes in the morning, then a walk to the sacred lake on the summit of Mount Zuqualla.',
+    summary:
+      'An hour south-east of Addis, a string of crater lakes surrounds the town of Bishoftu. After a slow morning on their shores, we drive to the foot of Mount Zuqualla and walk up to its crater lake and monastery, at around 3,000 metres. In early October we can time it to the Irreecha festival at Lake Hora.',
+    includes: [
+      'A private vehicle and guide for the day',
+      'A local guide for the Zuqualla walk',
+      'Monastery entry and a lakeside lunch',
+      'Hotel pick-up and drop-off in Addis Ababa',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Donations and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Morning',
+        title: 'The crater lakes of Bishoftu',
+        text: 'South-east to Bishoftu and its lakes — Hora, where the Oromo gather for Irreecha each October, and the deeper Babogaya — with birdlife along the shores.',
+      },
+      {
+        day: 'Midday',
+        title: 'Lunch by the water',
+        text: 'A slow lunch at a lakeside restaurant before the afternoon climb.',
+      },
+      {
+        day: 'Afternoon',
+        title: 'Mount Zuqualla',
+        text: 'The walk up to the holy crater lake and the monastery traditionally founded by the Egyptian saint Abbo, with wide views from the rim. Back in Addis by evening.',
+      },
+    ],
+    places: ['Bishoftu', 'Mount Zuqualla'],
+  },
+  {
+    slug: 'addis-and-its-highlands',
+    title: 'Addis & Its Highlands',
+    image: '/images/addis-skyline.png',
+    days: '5 Days',
+    nights: 4,
+    style: 'Cultural · Hiking · Private',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'The capital and everything within a day of it — stelae, a cliffside monastery, crater lakes and a five-hundred-year-old forest.',
+    summary:
+      'Five days based in one comfortable hotel, with a different direction each morning: south to the stelae of Tiya, north to Debre Libanos, south-east to the crater lakes, and west into the ancient forest of Menagesha. Ideal for a first visit, a long stopover, or gentle acclimatisation before the north.',
+    includes: [
+      'A private vehicle and senior guide throughout',
+      'Four nights at a boutique hotel in Addis Ababa',
+      'All site, museum, monastery and park entry fees',
+      'Local guides for the gorge, mountain and forest walks',
+      'Breakfast daily and lunch on every excursion',
+      'A coffee ceremony and a farewell dinner with music',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Dinners not listed, drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Addis Ababa',
+        text: 'Mount Entoto and Menelik\'s palace in the morning, then Lucy at the National Museum and Holy Trinity Cathedral.',
+      },
+      {
+        day: 'Day 2',
+        title: 'The Southern Heritage Road',
+        text: 'Melka Kunture\'s prehistoric site, the rock-hewn church of Adadi Mariam, and the World Heritage stelae of Tiya.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Debre Libanos & the Jemma Gorge',
+        text: 'North to the monastery founded in 1284 by Tekle Haymanot, the gorge viewpoints, and gelada monkeys along the rim.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Crater Lakes & Mount Zuqualla',
+        text: 'The lakes of Bishoftu in the morning, then the walk to the holy crater lake and monastery on Zuqualla.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Menagesha forest & farewell',
+        text: 'A morning walk in the juniper forest protected since the fifteenth century, then Merkato, a coffee ceremony, and a farewell dinner with music.',
+      },
+    ],
+    places: ['Addis Ababa', 'Tiya & Adadi Mariam', 'Debre Libanos', 'Bishoftu', 'Menagesha Suba Forest'],
+  },
+  {
+    slug: 'wenchi-crater-lake-escape',
+    title: 'Wenchi Crater Lake Escape',
+    image: '/images/lake-tana.png',
+    days: '2 Days',
+    nights: 1,
+    style: 'Hiking · Cultural · Private',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'Into a volcanic crater on foot or horseback, by boat to an island monastery, and down to the hot springs.',
+    summary:
+      'Wenchi is easy to rush as a long day trip. We give it a night instead, so you see the crater in the quiet of the morning and walk it at your own pace — down to the lake with local horsemen, across to the monastery of Cherkos, and on to the hot springs and falls.',
+    includes: [
+      'A private vehicle and guide from Addis Ababa',
+      'Local guides and horses at Wenchi, as you prefer',
+      'The boat crossing to Cherkos monastery',
+      'One night in Ambo or Woliso',
+      'Lunch both days and dinner on the first night',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Church donations and gratuities for horsemen',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'West to the crater',
+        text: 'About 155 kilometres west of Addis through farmland and eucalyptus, arriving at the rim of the caldera for a first look down at the lake. An easy afternoon walk along the rim, and the night in Ambo or Woliso.',
+      },
+      {
+        day: 'Day 2 · Morning',
+        title: 'Down to the lake & Cherkos',
+        text: 'The descent on foot or on horseback with local guides, then a small boat to the island monastery of Cherkos, traditionally founded by Tekle Haymanot.',
+      },
+      {
+        day: 'Day 2 · Afternoon',
+        title: 'Hot springs & the road home',
+        text: 'The walk on through the caldera to the hot springs and falls, lunch by the water, and the drive back to Addis Ababa by evening.',
+      },
+    ],
+    places: ['Wenchi Crater Lake', 'Cherkos', 'Ambo'],
+  },
+  {
+    slug: 'awash-and-the-fantale-volcano',
+    title: 'Awash & the Fantale Volcano',
+    image: '/images/danakil.png',
+    days: '3 Days',
+    nights: 2,
+    style: 'Wildlife · Private',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 6 guests',
+    teaser:
+      'Oryx on the plains, a waterfall gorge, the lava of an 1820 eruption, and warm pools under the palms.',
+    summary:
+      'Ethiopia\'s oldest national park is only a few hours east of the capital, yet few visitors reach it. Three days are enough for dawn and dusk game drives, the Awash Falls and gorge, the lava fields of Fantale, and a slow afternoon at the Filwoha hot springs.',
+    includes: [
+      'A private 4x4 and driver-guide from Addis Ababa',
+      'All park fees and an armed park scout',
+      'Two nights at a lodge above Awash Falls',
+      'Full board in the park',
+      'Game drives at dawn and in the late afternoon',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'East to Awash Falls',
+        text: 'About 225 kilometres east from Addis Ababa, down into the Rift Valley, arriving at Awash Falls where the river drops into its gorge. A late-afternoon drive on the plains for the first oryx.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Oryx, Fantale & Filwoha',
+        text: 'A dawn game drive for beisa oryx, Soemmerring\'s gazelle and Salt\'s dik-dik, then the lava field of Fantale\'s 1820 eruption. The afternoon at the palm-fringed Filwoha hot springs, and dusk back at the falls.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Back to Addis Ababa',
+        text: 'A last early drive along the gorge, then the road west to the capital by mid-afternoon.',
+      },
+    ],
+    places: ['Awash National Park', 'Fantale', 'Filwoha'],
+  },
+  {
+    slug: 'bale-mountains-and-sof-omar',
+    title: 'Bale Mountains & Sof Omar',
+    image: '/images/bale-gelada.png',
+    days: '6 Days',
+    nights: 5,
+    style: 'Wildlife · Hiking · Private',
+    season: 'Nov – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 6 guests',
+    teaser:
+      'Ethiopian wolves on the roof of Africa, a cloud forest below it, then an underground river in the lowlands.',
+    summary:
+      'The Bale Mountains in full — the moorland of Dinsho, the Sanetti Plateau where Ethiopian wolves hunt at dawn, and the Harenna forest on the southern slopes — then east to the lowlands and the river-carved passages of Sof Omar, Ethiopia\'s longest cave.',
+    includes: [
+      'A private 4x4 and a naturalist guide throughout',
+      'All national park fees, scouts and cave guides',
+      'Lodge accommodation in Bale and near Robe',
+      'Full board throughout',
+      'Road transfers from Addis Ababa, with a return flight from Robe where available',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'South to Dinsho',
+        text: 'The long drive south-east from Addis Ababa to the park headquarters at Dinsho, with mountain nyala grazing the moorland edges at dusk.',
+      },
+      {
+        day: 'Day 2',
+        title: 'The Sanetti Plateau',
+        text: 'Up onto the Sanetti Plateau above 4,000 metres at dawn, when the Ethiopian wolves are most active, among giant lobelia and Afro-alpine lakes.',
+      },
+      {
+        day: 'Day 3',
+        title: 'The Harenna forest',
+        text: 'Down the southern escarpment into the Harenna cloud forest, where wild coffee grows in the understorey and colobus monkeys move through the canopy.',
+      },
+      {
+        day: 'Day 4',
+        title: 'East to the lowlands',
+        text: 'Across to Robe and on east into the dry lowlands, arriving near Sof Omar in the afternoon.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Sof Omar Caves',
+        text: 'A guided walk through the passages of the Weyib River to the Chamber of Columns, in a cave held sacred by both Muslims and followers of traditional Oromo religion.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Back to Addis Ababa',
+        text: 'A flight from Robe where schedules allow, or the drive back north to the capital.',
+      },
+    ],
+    places: ['Bale Mountains', 'Sanetti Plateau', 'Harenna Forest', 'Sof Omar Caves'],
+  },
+  {
+    slug: 'borana-wells-salt-and-bushcrows',
+    title: 'Borana: Wells, Salt & Bushcrows',
+    image: '/images/omo-valley.png',
+    days: '5 Days',
+    nights: 4,
+    style: 'Cultural · Wildlife · Private',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 6 guests',
+    teaser:
+      'Deep into the far south for the singing wells, the salt crater of El Sod, and a bird that lives nowhere else.',
+    summary:
+      'A journey to Borana country around Yabelo, some 566 kilometres south of Addis Ababa. We break the drive in the Rift Valley, then spend two full days with the Borana — at a working singing well, on the rim and floor of the El Sod salt crater — and among the acacia where the Ethiopian bushcrow lives.',
+    includes: [
+      'A private 4x4 and senior driver-guide throughout',
+      'A local Borana guide around Yabelo',
+      'Community fees for well and village visits',
+      'Four nights at the best lodges available en route',
+      'Full board in Borana',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Down the Rift Valley',
+        text: 'South from Addis Ababa past the Rift Valley lakes, breaking the long drive with a night on the way.',
+      },
+      {
+        day: 'Day 2',
+        title: 'On to Yabelo',
+        text: 'Further south into Borana cattle country, arriving in Yabelo in the afternoon and meeting our local guide.',
+      },
+      {
+        day: 'Day 3',
+        title: 'A singing well & El Sod',
+        text: 'A working well where herders pass water up a human chain, singing as they go, then El Sod — the salt lake on the floor of a volcanic crater 1.8 kilometres across.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Bushcrows & the road north',
+        text: 'An early search in the acacia around Yabelo for the Ethiopian bushcrow, then north again to break the journey.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Back to Addis Ababa',
+        text: 'The drive back up the Rift Valley to the capital by evening.',
+      },
+    ],
+    places: ['Borana & Yabelo', 'El Sod', 'Yabelo Wildlife Sanctuary'],
+  },
+  {
+    slug: 'jimma-the-coffee-kingdom',
+    title: 'Jimma, the Coffee Kingdom',
+    image: '/images/coffee-ceremony.png',
+    days: '3 Days',
+    nights: 2,
+    style: 'Cultural · Slow Travel · Private',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'The palace of King Abba Jifar II, and the coffee country that made his kingdom rich.',
+    summary:
+      'South-west into the green heart of coffee country. Jimma was the capital of the strongest Oromo Gibe kingdom, and its king\'s palace still stands above the town. We pair it with time on local coffee farms and in the forest, and a ceremony in a family home.',
+    includes: [
+      'A private vehicle and guide from Addis Ababa',
+      'Palace and museum entry in Jimma',
+      'Visits to local coffee farms with growers',
+      'Two nights in Jimma',
+      'Lunch daily and a coffee ceremony in a family home',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Coffee purchases, drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'South-west to Jimma',
+        text: 'The drive of about 353 kilometres from Addis Ababa into the green hills of the south-west, arriving in Jimma for the evening.',
+      },
+      {
+        day: 'Day 2',
+        title: 'The palace & the coffee farms',
+        text: 'The palace of Abba Jifar II on the hill at Jiren and its museum in the morning, then an afternoon with coffee growers in the surrounding hills, ending with a three-round ceremony in a family home.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Market & the road home',
+        text: 'Jimma\'s market in the morning, then the drive back to Addis Ababa — or on to the forests of Kafa and Bonga as an extension.',
+      },
+    ],
+    places: ['Jimma', 'Jiren'],
+  },
+  {
+    slug: 'harar-and-the-walled-city',
+    title: 'Harar & the Walled City',
+    image: '/images/textile.png',
+    days: '4 Days',
+    nights: 3,
+    style: 'Cultural · Private',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'The gates and lanes of Ethiopia\'s only walled city, hyenas at dusk, and the coffee of the eastern highlands.',
+    summary:
+      'A short flight east to Dire Dawa, and three nights in and around Harar — long enough to walk the old city slowly with a Harari guide, to see the hyena feeding more than once if you wish, and to visit the coffee country in the hills beyond the walls.',
+    includes: [
+      'Return flights Addis Ababa – Dire Dawa',
+      'A private vehicle and a Harari guide throughout',
+      'Three nights at a traditional Harari guesthouse or hotel',
+      'Entry to the Rimbaud House and old-city sites',
+      'The hyena feeding at dusk',
+      'Breakfast daily and a traditional Harari dinner',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Other meals, drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Fly east to Harar',
+        text: 'A morning flight to Dire Dawa and the drive up into the highlands to Harar. A first walk to the Jugol wall and its gates, and the hyena feeding at dusk.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Inside the walls',
+        text: 'A full day in the old city with a Harari guide — the lanes and markets, a traditional Harari house, the mosques and shrines seen from the street, and the Rimbaud House with its photographs of Harar a century ago.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Coffee country & Dire Dawa',
+        text: 'Out into the eastern highlands to meet coffee growers, then down to Dire Dawa, the railway town that grew up on the line to Djibouti.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Back to Addis Ababa',
+        text: 'A morning in Dire Dawa\'s markets and a flight back to the capital.',
+      },
+    ],
+    places: ['Harar', 'Dire Dawa'],
+  },
+  {
+    slug: 'southern-rift-and-konso',
+    title: 'Southern Rift & Konso',
+    image: '/images/omo-valley.png',
+    days: '6 Days',
+    nights: 5,
+    style: 'Cultural · Wildlife · Private',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'Crocodiles on Lake Chamo, the Dorze weavers of the Gamo Highlands, and the UNESCO terraces of Konso.',
+    summary:
+      'Fly south to Arba Minch and spend six days in the southern Rift: a boat across Lake Chamo, the plains of Nechisar, the woven bamboo villages of the Dorze, and two days in the terraced, walled world of Konso. It connects naturally to our Omo Valley journey.',
+    includes: [
+      'Return flights Addis Ababa – Arba Minch',
+      'A private 4x4 and senior driver-guide throughout',
+      'Local Dorze and Konso guides and all community fees',
+      'Boat trip on Lake Chamo and Nechisar park fees',
+      'Five nights at lodges above the lakes and in Konso',
+      'Full board throughout',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Drinks, gratuities and personal purchases',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Fly to Arba Minch',
+        text: 'A morning flight south, the forty springs that give the town its name, and sunset over Lakes Abaya and Chamo from the ridge.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Lake Chamo & Nechisar',
+        text: 'A boat across Lake Chamo to the Crocodile Market, then the white-grass plains of Nechisar and the Bridge of God between the two lakes.',
+      },
+      {
+        day: 'Day 3',
+        title: 'The Dorze & the Gamo Highlands',
+        text: 'Up to the cool highlands around Chencha to visit Dorze weavers and their tall woven bamboo houses, with lunch in a Dorze home.',
+      },
+      {
+        day: 'Day 4',
+        title: 'South to Konso',
+        text: 'Down the Rift to Konso, 87 kilometres from Arba Minch, and an afternoon among the stone terraces.',
+      },
+      {
+        day: 'Day 5',
+        title: 'The walled villages',
+        text: 'A walled Konso village with a local guide — its gates, meeting houses and generation poles — then the waka grave markers at the Konso Museum.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Back to Addis Ababa',
+        text: 'The drive back to Arba Minch and a flight to the capital — or onward into the Omo Valley.',
+      },
+    ],
+    places: ['Arba Minch & Nechisar', 'Chencha', 'Konso'],
+  },
+  {
+    slug: 'sidama-and-yirgacheffe-coffee',
+    title: 'Sidama & Yirgacheffe Coffee',
+    image: '/images/coffee-ceremony.png',
+    days: '5 Days',
+    nights: 4,
+    style: 'Cultural · Slow Travel · Private',
+    season: 'Oct – Feb',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'From cherry to cup in the hills behind two of the world\'s most famous coffees.',
+    summary:
+      'Five days in the coffee country south of Hawassa: farms and washing stations in Sidama, the UNESCO-listed forest gardens of Gedeo, the ancient stelae of Tuto Fela, and a cupping with growers in Yirgacheffe. Best during the harvest, from October into the new year.',
+    includes: [
+      'A private vehicle and a coffee-specialist guide',
+      'Farm and washing-station visits with growers',
+      'A cupping session and a coffee ceremony in a family home',
+      'Four nights in Hawassa and the coffee country',
+      'Breakfast and dinner daily, lunch on farm days',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Coffee purchases and shipping',
+      'Drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'South to Hawassa',
+        text: 'The 273-kilometre drive south through the Rift Valley to Hawassa, with an evening on the lakeshore.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Sidama farms & washing stations',
+        text: 'Into the Sidama hills to walk a smallholder farm and see a washing station at work — pulping, fermenting and drying on raised beds.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Gedeo & Tuto Fela',
+        text: 'South to Dilla and the Gedeo landscape, where coffee grows beneath enset and shade trees, and the carved stelae of Tuto Fela.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Yirgacheffe',
+        text: 'A day with growers around Yirgacheffe, a cupping of the season\'s coffees, and a three-round ceremony in a family home.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Back to Addis Ababa',
+        text: 'The drive north to the capital, with coffee bought directly from the farms we visited.',
+      },
+    ],
+    places: ['Hawassa', 'Sidama & Yirgacheffe', 'Dilla', 'Yirgacheffe'],
+  },
+  {
+    slug: 'the-coffee-road',
+    title: 'The Coffee Road',
+    image: '/images/coffee-ceremony.png',
+    days: '13 Days',
+    nights: 12,
+    style: 'Cultural · Slow Travel · Private',
+    season: 'Oct – Feb',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'Every great coffee region in one journey — wild forest, royal Jimma, Sidama and Yirgacheffe, and Harar in the east.',
+    summary:
+      'For coffee lovers and professionals: a complete journey through the country where Arabica began. The wild coffee forests of Kafa, the old coffee kingdom of Jimma, the washing stations of Sidama and the gardens of Yirgacheffe, then a flight east to Harar. Ceremonies, cuppings and farm visits all the way.',
+    includes: [
+      'Domestic flights to Dire Dawa and back',
+      'A private vehicle and a coffee-specialist guide throughout',
+      'Farm, forest and washing-station visits with growers',
+      'Cupping sessions and coffee ceremonies in family homes',
+      'Twelve nights at the best available lodges and hotels',
+      'Breakfast and dinner daily, lunch on farm days',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Coffee purchases, shipping and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Addis Ababa',
+        text: 'Arrival, a cupping in the capital\'s roastery district, and a first ceremony to set the palate.',
+      },
+      {
+        day: 'Days 2 – 3',
+        title: 'Jimma, the coffee kingdom',
+        text: 'South-west to Jimma and the palace of King Abba Jifar II, whose kingdom grew rich on coffee, then farms in the surrounding hills.',
+      },
+      {
+        day: 'Days 4 – 5',
+        title: 'Kafa & the Bonga forest',
+        text: 'Into the Kafa Biosphere Reserve, the home of wild Arabica, to walk the forest where coffee still grows without cultivation.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Back to Addis Ababa',
+        text: 'The long drive back to the capital, with a rest evening.',
+      },
+      {
+        day: 'Days 7 – 8',
+        title: 'Sidama',
+        text: 'South to Hawassa, then smallholder farms and washing stations in the Sidama hills.',
+      },
+      {
+        day: 'Days 9 – 10',
+        title: 'Gedeo & Yirgacheffe',
+        text: 'The UNESCO forest gardens of Gedeo, the stelae of Tuto Fela, and a cupping with growers in Yirgacheffe.',
+      },
+      {
+        day: 'Day 11',
+        title: 'North & east',
+        text: 'The drive back to Addis Ababa and an evening flight to Dire Dawa.',
+      },
+      {
+        day: 'Day 12',
+        title: 'Harar',
+        text: 'The walled city, its coffee merchants, and the eastern highland farms known for fruity, natural-process coffee — with the hyena feeding at dusk.',
+      },
+      {
+        day: 'Day 13',
+        title: 'Departure',
+        text: 'A flight back to Addis Ababa for your onward journey.',
+      },
+    ],
+    places: ['Jimma', 'Kafa', 'Sidama & Yirgacheffe', 'Harar'],
+  },
+  {
+    slug: 'ras-dashen-summit-climb',
+    title: 'Ras Dashen Summit Climb',
+    image: '/images/hero-simien.png',
+    days: '7 Days',
+    nights: 6,
+    style: 'Climbing · Trekking · Small Group',
+    season: 'Oct – Feb',
+    from: TAILOR_MADE,
+    group: '2 – 10 guests',
+    teaser:
+      'The fastest sensible route to the roof of Ethiopia: over the Bwahit pass, down to Ambiko, and up at dawn to 4,550 metres.',
+    summary:
+      'A focused ascent of Ras Dashen for walkers who want the summit without the full ten-day traverse. We drive into the park as far as Chenek, acclimatise there, then cross the Bwahit pass to the base camp at Ambiko with a rest day before the summit. Run as small-group departures, or privately on the dates you choose.',
+    includes: [
+      'Nights in Gondar at each end of the climb',
+      'Road transfers Gondar – Chenek – Gondar',
+      'All park fees, an armed park scout and summit permits',
+      'Mules, muleteers, a camp cook and full board on the mountain',
+      'Four-season tents, mats and a heated mess tent',
+      'A senior mountain guide with altitude first-aid training, and daily pulse oximeter checks',
+    ],
+    excludes: [
+      'Flights to and from Gondar',
+      'Sleeping bag (hire available in Gondar)',
+      'Travel insurance with evacuation cover (required)',
+      'Gratuities for scouts, muleteers and cook',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrive Gondar',
+        text: 'Kit check, route briefing and an early night in Gondar.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Into the park to Chenek',
+        text: 'North to Debark for permits and the scout, then the drive along the escarpment to Chenek at about 3,600 metres. An afternoon acclimatisation walk to watch for walia ibex on the cliffs.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Over the Bwahit pass to Ambiko',
+        text: 'A tough climb to the Bwahit pass at 4,200 metres and the first view of Ras Dashen, then the long descent into the Mesheha valley and the climb out to camp at Ambiko.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Rest & acclimatise',
+        text: 'A deliberate rest day at Ambiko, with a short walk above camp and an early night — the single biggest factor in reaching the summit.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Summit day · 4,550 m',
+        text: 'A pre-dawn start by headlamp, the final scramble up the summit tower, and the view across the whole Simien massif. Back at Ambiko by early afternoon.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Back over the pass',
+        text: 'The return across the Mesheha valley and the Bwahit pass to Chenek.',
+      },
+      {
+        day: 'Day 7',
+        title: 'Chenek to Gondar',
+        text: 'A last morning on the escarpment, then the drive back to Gondar for a hot shower and a celebration dinner.',
+      },
+    ],
+    places: ['Gondar', 'Chenek', 'Ambiko', 'Ras Dashen'],
+  },
+  {
+    slug: 'simien-summits-in-comfort',
+    title: 'Simien Summits in Comfort',
+    image: '/images/luxury-lodge.png',
+    days: '5 Days',
+    nights: 4,
+    style: 'Climbing · Luxury · Private',
+    season: 'Oct – Feb',
+    from: TAILOR_MADE,
+    group: '2 – 6 guests',
+    teaser:
+      'High Simien summits by day, a lodge on the escarpment by night — no tents at all.',
+    summary:
+      'For climbers who want the altitude without the camping. We base ourselves at a lodge on the Simien rim and use a private vehicle to reach each trailhead, climbing progressively higher — Imet Gogo, the Inatye ridge, and finally the summit of Bwahit at about 4,430 metres — and returning each evening to a fire, a hot shower and a proper bed.',
+    includes: [
+      'Three nights at an escarpment lodge, one in Gondar',
+      'A private 4x4 on standby for every trailhead',
+      'A senior mountain guide and an armed park scout',
+      'All park fees',
+      'Picnic lunches on the mountain, and all meals at the lodge',
+      'Daily pulse oximeter checks and a flexible, weather-led plan',
+    ],
+    excludes: [
+      'Flights to and from Gondar',
+      'Travel insurance with evacuation cover (required)',
+      'Drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Gondar',
+        text: 'Arrival and an easy afternoon among the castles, with a briefing on the climbs ahead.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Up to the rim · Imet Gogo',
+        text: 'The drive to the escarpment lodge, then a first walk out to Imet Gogo at 3,926 metres for the view across three ridgelines.',
+      },
+      {
+        day: 'Day 3',
+        title: 'The Inatye ridge · 4,070 m',
+        text: 'A longer day along the ridge to Inatye, among giant lobelia, with the vehicle meeting you at the far end.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Bwahit summit · ≈ 4,430 m',
+        text: 'From Chenek, a full day up past the 4,200-metre pass to the summit of Bwahit, with the first view of Ras Dashen and a good chance of walia ibex.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Back to Gondar',
+        text: 'A slow breakfast on the rim, then the drive down to Gondar for your onward flight.',
+      },
+    ],
+    places: ['Gondar', 'Simien Mountains', 'Imet Gogo', 'Bwahit'],
+  },
+  {
+    slug: 'bale-summits-batu-and-tullu-dimtu',
+    title: 'Bale Summits: Batu & Tullu Dimtu',
+    image: '/images/bale-gelada.png',
+    days: '7 Days',
+    nights: 6,
+    style: 'Climbing · Trekking · Private',
+    season: 'Nov – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'Two 4,300-metre summits in Ethiopian wolf country, trekked across the Bale moorland from Dinsho.',
+    summary:
+      'A classic Bale trek with two summits: up the Web and Wasema valleys to Mount Batu, across the Sanetti Plateau past the glacial lake of Garba Guracha, and to the top of Tullu Dimtu, the plateau\'s highest point. Nights in tents with a full camp crew, and some of the best Ethiopian wolf country anywhere.',
+    includes: [
+      'Road transfers from Addis Ababa, with a return flight from Robe where available',
+      'All park fees, scouts and a Bale mountain guide',
+      'Horses or mules, handlers and a camp cook',
+      'Tents, mats and full board on the trek',
+      'A lodge night at Dinsho before the trek',
+      'Daily pulse oximeter checks above 3,500 metres',
+    ],
+    excludes: [
+      'Sleeping bag (hire available)',
+      'Travel insurance with evacuation cover (required)',
+      'Gratuities for guides, handlers and cook',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Addis Ababa to Dinsho',
+        text: 'About 400 kilometres south-east to the park headquarters at Dinsho, with mountain nyala on the moorland edge at dusk.',
+      },
+      {
+        day: 'Day 2',
+        title: 'The Web valley',
+        text: 'Onto the trail through the Web valley to the Finch Abera falls, where the Web and Wolla rivers meet, and on to camp at Mararo.',
+      },
+      {
+        day: 'Day 3',
+        title: 'The Wasema valley',
+        text: 'Up the Wasema river past a mineral spring to a high camp beneath Mount Batu.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Batu summit · 4,307 m',
+        text: 'The climb to the summit of Batu, then over onto the Sanetti Plateau and down to camp by the glacial lake of Garba Guracha.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Tullu Dimtu summit · 4,377 m',
+        text: 'Across the open plateau at dawn, when Ethiopian wolves are most active, to the top of Tullu Dimtu — then down off the plateau to a lodge.',
+      },
+      {
+        day: 'Day 6',
+        title: 'The Harenna forest',
+        text: 'A rest day on foot and by vehicle in the Harenna cloud forest on the southern slopes.',
+      },
+      {
+        day: 'Day 7',
+        title: 'Back to Addis Ababa',
+        text: 'A flight from Robe where schedules allow, or the drive north to the capital.',
+      },
+    ],
+    places: ['Bale Mountains', 'Dinsho', 'Mount Batu', 'Tullu Dimtu'],
+  },
+  {
+    slug: 'abune-yosef-ascent',
+    title: 'Abune Yosef Ascent',
+    image: '/images/hero-lalibela.png',
+    days: '4 Days',
+    nights: 3,
+    style: 'Climbing · Trekking · Small Group',
+    season: 'Oct – Mar',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'A 4,260-metre summit above Lalibela, with community lodges, geladas and wolf country on the way.',
+    summary:
+      'Most visitors see Lalibela\'s churches and leave. This short climb heads into the Abune Yosef massif about forty kilometres away — among the highest ground in northern Ethiopia — staying in community lodges and reaching the summit on the third day. A natural addition to any Lalibela visit.',
+    includes: [
+      'A senior guide and local community guides',
+      'Two nights in a community lodge, one in Lalibela',
+      'Pack animals for luggage',
+      'Full board on the mountain',
+      'Community and conservation fees',
+      'Transfers from and to Lalibela',
+    ],
+    excludes: [
+      'Flights to and from Lalibela',
+      'Sleeping bag (hire available)',
+      'Travel insurance with evacuation cover (required)',
+      'Gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Lalibela',
+        text: 'Arrival, the churches in the late afternoon light, and a briefing for the climb.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Into the massif',
+        text: 'The drive toward Abune Yosef and a walk up through farmland to the community lodge above 3,200 metres.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Summit · 4,260 m',
+        text: 'The climb to the top of Abune Yosef, among gelada troops and giant lobelia, with a chance of Ethiopian wolves on the high ground. Back to the lodge for the night.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Down to Lalibela',
+        text: 'The walk back down and the drive to Lalibela for an afternoon flight.',
+      },
+    ],
+    places: ['Lalibela', 'Abune Yosef'],
+  },
+  {
+    slug: 'mount-guna-ascent',
+    title: 'Mount Guna Ascent',
+    image: '/images/hero-simien.png',
+    days: '3 Days',
+    nights: 2,
+    style: 'Climbing · Hiking · Private',
+    season: 'Oct – Feb',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'A 4,120-metre summit between Lake Tana and Lalibela that few visitors ever climb.',
+    summary:
+      'Guna rises above the town of Debre Tabor, the highest point of South Gondar and one of the least-visited high summits in the country. From a ridge at around 3,700 metres, a full day\'s walk leads past two false summits to its rocky top. It fits neatly between Bahir Dar and Lalibela on an overland route.',
+    includes: [
+      'A private vehicle and senior guide',
+      'A local guide for the ascent',
+      'Two nights in Debre Tabor',
+      'Packed lunch on summit day, and breakfast and dinner daily',
+    ],
+    excludes: [
+      'Travel insurance with evacuation cover (required)',
+      'Drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Bahir Dar to Debre Tabor',
+        text: 'East from Bahir Dar across the plains of Fogera and up to Debre Tabor, an old royal town, with an evening walk to adjust to the altitude.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Guna summit · 4,120 m',
+        text: 'An early drive to the trailhead on a broad ridge near 3,700 metres, then the walk across the Afro-alpine slopes, past two false summits, to the distinct rocky top. Back to Debre Tabor for the night.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Onward',
+        text: 'Back to Bahir Dar, or continue east over the highlands toward Lalibela.',
+      },
+    ],
+    places: ['Bahir Dar', 'Debre Tabor', 'Mount Guna'],
+  },
+  {
+    slug: 'ethiopias-three-high-peaks',
+    title: 'Ethiopia\'s Three High Peaks',
+    image: '/images/hero-simien.png',
+    days: '18 Days',
+    nights: 17,
+    style: 'Climbing · Expedition · Private',
+    season: 'Nov – Feb',
+    from: TAILOR_MADE,
+    group: '2 – 8 guests',
+    teaser:
+      'Ras Dashen in the Simien, Abune Yosef above Lalibela, and Tullu Dimtu in Bale — with the rock churches in between.',
+    summary:
+      'Three great massifs, three summits, and the country between them. We climb Ras Dashen first, rest among the churches of Lalibela, climb Abune Yosef, then fly south to the Bale Mountains for Tullu Dimtu on the Sanetti Plateau. Each climb builds on the last, so the altitude arrives gradually. Available with lodge nights between climbs for a more comfortable version.',
+    includes: [
+      'All domestic flights',
+      'A senior mountain guide for the whole expedition',
+      'All park fees, scouts, permits and community fees',
+      'Full camp crews, mules and cooks on every climb',
+      'Hotels and lodges between climbs',
+      'Daily pulse oximeter checks above 3,500 metres',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Sleeping bag (hire available)',
+      'Travel insurance with evacuation cover (required)',
+      'Gratuities for crews',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Addis Ababa',
+        text: 'Arrival, kit check, and a short acclimatisation walk on Entoto.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Fly to Gondar',
+        text: 'A morning flight north and an afternoon among the castles.',
+      },
+      {
+        day: 'Days 3 – 8',
+        title: 'Ras Dashen · 4,550 m',
+        text: 'Into the Simien to Chenek, over the Bwahit pass to Ambiko, a rest day, then the dawn summit of Ethiopia\'s highest peak and the return to Chenek.',
+      },
+      {
+        day: 'Day 9',
+        title: 'Gondar to Lalibela',
+        text: 'Down to Gondar and a flight to Lalibela.',
+      },
+      {
+        day: 'Day 10',
+        title: 'Lalibela',
+        text: 'A rest day among the rock-hewn churches.',
+      },
+      {
+        day: 'Days 11 – 13',
+        title: 'Abune Yosef · 4,260 m',
+        text: 'Into the massif, community lodge nights, and the summit among geladas and giant lobelia.',
+      },
+      {
+        day: 'Day 14',
+        title: 'Fly south',
+        text: 'A flight from Lalibela back to Addis Ababa.',
+      },
+      {
+        day: 'Day 15',
+        title: 'Addis Ababa to Dinsho',
+        text: 'The drive south-east into the Bale Mountains.',
+      },
+      {
+        day: 'Day 16',
+        title: 'Tullu Dimtu · 4,377 m',
+        text: 'Onto the Sanetti Plateau at dawn for Ethiopian wolves, then the walk to the top of Tullu Dimtu.',
+      },
+      {
+        day: 'Day 17',
+        title: 'The Harenna forest',
+        text: 'A gentle last day in the cloud forest on Bale\'s southern slopes.',
+      },
+      {
+        day: 'Day 18',
+        title: 'Departure',
+        text: 'A flight from Robe where schedules allow, or the drive to Addis Ababa for your departure.',
+      },
+    ],
+    places: ['Ras Dashen', 'Lalibela', 'Abune Yosef', 'Bale Mountains', 'Tullu Dimtu'],
+  },
+  {
+    slug: 'run-with-ethiopias-champions',
+    title: 'Run with Ethiopia\'s Champions',
+    image: '/images/addis-skyline.png',
+    days: '6 Days',
+    nights: 5,
+    style: 'Running · Active · Small Group',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 10 runners',
+    teaser:
+      'Altitude trails on Entoto, and the highland town of Bekoji that has produced a string of Olympic champions.',
+    summary:
+      'A running holiday built around the two places that explain Ethiopia\'s dominance of distance running: the forest trails of Entoto above Addis Ababa, around 3,000 metres up, and Bekoji, the small farming town at about 2,800 metres that is the birthplace of Derartu Tulu, Kenenisa Bekele and the Dibaba sisters. In late November it can be timed to the Great Ethiopian Run.',
+    includes: [
+      'A local running guide throughout, with sessions paced to each runner',
+      'A private vehicle between Addis Ababa and Bekoji',
+      'Five nights of accommodation',
+      'Breakfast daily and post-run meals',
+      'An optional race entry for the Great Ethiopian Run, when dates align',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Running kit and personal equipment',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrive Addis Ababa',
+        text: 'Arrival and an easy shake-out walk — at 2,300 metres the first days are for adjusting, not training hard.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Entoto',
+        text: 'A dawn run on the eucalyptus trails of Entoto among the city\'s runners, at a pace that suits you, then breakfast and an afternoon at rest.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Longer on the high trails',
+        text: 'A longer session on Entoto\'s dirt roads with your running guide, and a talk on how Ethiopian runners train.',
+      },
+      {
+        day: 'Day 4',
+        title: 'South to Bekoji',
+        text: 'About 212 kilometres south through Asella to Bekoji, at around 2,800 metres, with an easy evening run through the farmland.',
+      },
+      {
+        day: 'Day 5',
+        title: 'The town of runners',
+        text: 'A morning run on the routes around Bekoji, time in the town that has produced so many champions, and the afternoon free.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Back to Addis Ababa',
+        text: 'A last easy run, the drive north, and an evening departure — or stay on for race day in late November.',
+      },
+    ],
+    places: ['Addis Ababa', 'Entoto', 'Bekoji'],
+  },
+  {
+    slug: 'rift-valley-by-bike',
+    title: 'Rift Valley by Bike',
+    image: '/images/lake-tana.png',
+    days: '5 Days',
+    nights: 4,
+    style: 'Cycling · Active · Small Group',
+    season: 'Oct – May',
+    from: TAILOR_MADE,
+    group: '2 – 10 riders',
+    teaser:
+      'A long descent from the highlands into the Great Rift Valley, then lake to lake on quiet roads.',
+    summary:
+      'Four days of riding with a support vehicle behind you: down from the Gurage highlands into the Rift Valley — a descent of well over a thousand metres — then between Lakes Ziway, Abijata-Shalla and Langano, ending on the lakeshore at Hawassa. E-bikes are available for anyone who wants the views with less effort.',
+    includes: [
+      'Quality bikes or e-bikes, helmets and repair kits',
+      'A cycling guide and a support vehicle throughout',
+      'Four nights at lakeside lodges',
+      'A boat trip on Lake Ziway',
+      'Full board on riding days',
+    ],
+    excludes: [
+      'Travel insurance (required)',
+      'Drinks and gratuities',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Into the Gurage highlands',
+        text: 'The drive south-west from Addis Ababa to the Gurage highlands, a bike fitting, and a short ride to loosen the legs.',
+      },
+      {
+        day: 'Day 2',
+        title: 'The big descent',
+        text: 'From one of the highest ridges in Gurage, a fast descent from about 3,350 to 2,050 metres into the Rift Valley, then on toward Lake Ziway and a boat on the lake.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Abijata-Shalla',
+        text: 'Into Abijata-Shalla National Park, watching for flamingos — present from October to February — warthogs and ostriches, and the hot springs by Lake Shalla.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Lake Langano',
+        text: 'An easier day around Lake Langano, one of the few Rift Valley lakes suitable for swimming, with the afternoon on the shore.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Hawassa & home',
+        text: 'A transfer south to Hawassa for a final ride along its lakeshore, then the drive back to Addis Ababa.',
+      },
+    ],
+    places: ['Gurage Highlands', 'Lake Ziway', 'Abijata-Shalla', 'Lake Langano', 'Hawassa'],
   },
   {
     slug: 'christmas-to-epiphany',
@@ -1487,7 +3070,7 @@ export const tours: Tour[] = [
         text: 'A flight north, a farewell lunch, and an evening departure.',
       },
     ],
-    places: ['Dorze', 'Turmi', 'Dimeka', 'Mursi Highlands', 'Karo'],
+    places: ['Omo Valley', 'Dorze', 'Turmi', 'Dimeka', 'Mursi Highlands', 'Karo'],
   },
   {
     slug: 'timkat-festival-journey',
@@ -1656,6 +3239,125 @@ export const tours: Tour[] = [
       },
     ],
     places: ['Rift Valley Lakes', 'Bale Mountains', 'Lake Tana', 'Debre Libanos'],
+  },
+]
+
+// Ethiopia's climbable summits, for the Mountains guide. Heights follow the
+// commonly cited figures; where sources differ we round down. Ranking beyond
+// Ras Dashen is deliberately left out — published lists disagree.
+export type Peak = {
+  name: string
+  height: number
+  // Shown instead of the number where sources disagree on the exact height.
+  heightLabel?: string
+  range: string
+  difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Strenuous'
+  days: string
+  season: string
+  note: string
+  tourSlug?: string
+  destinationSlug?: string
+}
+
+export const peaks: Peak[] = [
+  {
+    name: 'Ras Dashen',
+    height: 4550,
+    range: 'Simien Mountains',
+    difficulty: 'Strenuous',
+    days: '7 – 10 days',
+    season: 'Oct – Feb',
+    note: 'Ethiopia\'s highest summit, reached from the base camp at Ambiko after crossing the Mesheha valley. A scramble to the top, not a technical climb.',
+    tourSlug: 'ras-dashen-summit-climb',
+    destinationSlug: 'ras-dashen',
+  },
+  {
+    name: 'Bwahit',
+    height: 4430,
+    range: 'Simien Mountains',
+    difficulty: 'Challenging',
+    days: '1 day from Chenek',
+    season: 'Oct – Feb',
+    note: 'A full day up from Chenek past the 4,200-metre Bwahit pass, with the first view of Ras Dashen and a good chance of walia ibex.',
+    tourSlug: 'simien-summits-in-comfort',
+    destinationSlug: 'simien-mountains',
+  },
+  {
+    name: 'Tullu Dimtu',
+    height: 4377,
+    range: 'Bale Mountains',
+    difficulty: 'Moderate',
+    days: '1 day on the Sanetti Plateau',
+    season: 'Nov – Mar',
+    note: 'The high point of the Sanetti Plateau, walked across open moorland — a rough road also climbs close to the top, so it suits mixed-ability groups.',
+    tourSlug: 'bale-summits-batu-and-tullu-dimtu',
+    destinationSlug: 'bale-mountains',
+  },
+  {
+    name: 'Batu',
+    height: 4307,
+    range: 'Bale Mountains',
+    difficulty: 'Challenging',
+    days: '5 – 7 days',
+    season: 'Nov – Mar',
+    note: 'Reached on foot from Dinsho through the Web and Wasema valleys. Of its two peaks, "Little Batu" is actually the higher.',
+    tourSlug: 'bale-summits-batu-and-tullu-dimtu',
+    destinationSlug: 'bale-mountains',
+  },
+  {
+    name: 'Abune Yosef',
+    height: 4260,
+    range: 'Lasta Highlands',
+    difficulty: 'Challenging',
+    days: '3 – 4 days',
+    season: 'Oct – Mar',
+    note: 'A remote massif about 40 kilometres from Lalibela, with community lodges, gelada monkeys and a chance of Ethiopian wolves.',
+    tourSlug: 'abune-yosef-ascent',
+    destinationSlug: 'lalibela',
+  },
+  {
+    name: 'Guna',
+    height: 4120,
+    range: 'South Gondar',
+    difficulty: 'Moderate',
+    days: '1 day from Debre Tabor',
+    season: 'Oct – Feb',
+    note: 'A broad Afro-alpine summit reached from a ridge at around 3,700 metres, past two false summits to a distinct rocky top.',
+    tourSlug: 'mount-guna-ascent',
+  },
+  {
+    name: 'Choke',
+    height: 4000,
+    heightLabel: '4,000 m+',
+    range: 'Gojjam',
+    difficulty: 'Moderate',
+    days: '3 – 5 days',
+    season: 'Oct – Feb',
+    note: 'The moorland source of dozens of Blue Nile tributaries, walked village to village with a community ecovillage. Summits rise above 4,000 metres.',
+    tourSlug: 'choke-mountains-trek',
+    destinationSlug: 'choke-mountains',
+  },
+  {
+    name: 'Wechecha',
+    height: 3385,
+    range: 'Near Addis Ababa',
+    difficulty: 'Easy',
+    days: 'Half a day',
+    season: 'Oct – May',
+    note: 'A warm-up summit above the ancient Menagesha forest, an hour from the capital — ideal for acclimatising before a bigger climb.',
+    tourSlug: 'addis-and-its-highlands',
+    destinationSlug: 'menagesha-suba-forest',
+  },
+  {
+    name: 'Zuqualla',
+    height: 3010,
+    range: 'Near Addis Ababa',
+    difficulty: 'Easy',
+    days: 'Half a day',
+    season: 'Oct – May',
+    note: 'A holy volcanic summit south-east of the capital, with a crater lake and monastery at the top.',
+    tourSlug: 'crater-lakes-and-the-holy-mountain',
+    destinationSlug: 'bishoftu-zuqualla',
   },
 ]
 
@@ -2043,8 +3745,302 @@ export function getExperience(slug: string) {
   return experiences.find((e) => e.slug === slug)
 }
 
+// Short, bookable add-ons that slot into any journey — shown at /experiences.
+// (The six guiding ideas that used to live there are now `experiences`
+// above, served at /how-we-travel.)
+export type ActivityCategory =
+  | 'Food & Drink'
+  | 'Coffee'
+  | 'Active'
+  | 'Farm & Community'
+  | 'Give Back'
+
+export type Activity = {
+  slug: string
+  title: string
+  // Short label for enquiry-form chips.
+  short: string
+  category: ActivityCategory
+  duration: string
+  where: string
+  season: string
+  image: string
+  teaser: string
+  intro: string
+  paragraphs: string[]
+  includes: string[]
+  goodToKnow?: string
+  destinationSlugs: string[]
+  tourSlugs: string[]
+}
+
+export const activityCategories: ActivityCategory[] = [
+  'Food & Drink',
+  'Coffee',
+  'Active',
+  'Farm & Community',
+  'Give Back',
+]
+
+export const activities: Activity[] = [
+  {
+    slug: 'injera-and-ethiopian-cooking',
+    title: 'Injera & an Ethiopian kitchen',
+    short: 'Cooking class',
+    category: 'Food & Drink',
+    duration: 'Half a day',
+    where: 'Addis Ababa',
+    season: 'Year-round',
+    image: '/images/coffee-ceremony.png',
+    teaser:
+      'Pour injera on the mitad, cook the stews that go with it, and eat together the Ethiopian way.',
+    intro:
+      'Injera is the heart of every Ethiopian meal — a soft, tangy flatbread made from teff, the tiny grain native to the Ethiopian highlands. In a family kitchen in Addis Ababa, you learn to make it, and everything served on top of it.',
+    paragraphs: [
+      'Teff is the smallest grain in the world, and injera is slow food: the batter ferments for days before it is ready, which is where its sour tang comes from. Then it is poured in a spiral onto a wide clay griddle, the mitad, and covered until the surface sets into its familiar pattern of tiny holes. Getting the pour right takes practice — and a few failed attempts are part of the fun.',
+      'While the injera cooks, you make the dishes that go with it: a simmering wat, shiro from ground chickpeas, and vegetable dishes that many Ethiopians eat on fasting days. Your host explains the spices, the butter and the order things are cooked in.',
+      'Then everyone sits down together around one shared platter. Eating with the right hand, tearing injera to scoop the stews, is the whole etiquette — and being offered a mouthful by your host is a gesture of friendship.',
+    ],
+    includes: [
+      'A hosted class in a family kitchen',
+      'All ingredients and equipment',
+      'The shared meal you cooked',
+      'A coffee ceremony to finish',
+      'Hotel pick-up and drop-off in Addis Ababa',
+    ],
+    goodToKnow: 'Vegetarian and vegan menus are easy — many Ethiopian dishes are naturally plant-based.',
+    destinationSlugs: ['addis-ababa'],
+    tourSlugs: ['addis-ababa-in-depth', 'addis-and-its-highlands'],
+  },
+  {
+    slug: 'tej-tella-and-areki',
+    title: 'Tej, tella & areki',
+    short: 'Traditional drinks',
+    category: 'Food & Drink',
+    duration: 'An evening',
+    where: 'Addis Ababa',
+    season: 'Year-round',
+    image: '/images/luxury-lodge.png',
+    teaser:
+      'Honey wine, home-brewed beer and a clear highland spirit — with azmari musicians improvising as you drink.',
+    intro:
+      'Ethiopia has brewed its own drinks for a very long time. On this evening you taste the three traditional ones — tej, tella and areki — and learn how each is made, ending in a traditional house where azmari musicians play.',
+    paragraphs: [
+      'Tej is Ethiopia\'s honey wine: honey and water fermented with gesho, a native buckthorn whose bitter leaves balance the sweetness, much as hops do in beer. It usually ferments for a couple of weeks and is served in a round-bottomed flask called a berele, typically at 7 to 11 per cent alcohol.',
+      'Tella is the everyday home brew — a cloudy beer made from grain such as barley and the same gesho, fermented for a few days. Areki is its strong cousin: a clear spirit distilled from a fermented grain mash, often between 30 and 50 per cent alcohol, and best treated with respect.',
+      'The evening ends in a tej house with azmari — poet-musicians who improvise verses on the one-stringed masenqo, often teasing the audience in rhyme. It is one of the liveliest nights out in the capital.',
+    ],
+    includes: [
+      'A guided tasting of tej, tella and areki',
+      'Traditional snacks with each drink',
+      'An evening of live azmari music',
+      'A private guide and return transport',
+    ],
+    goodToKnow: 'For guests aged 18 and over. Non-alcoholic tastings — including fresh fruit juices and spiced tea — are always available.',
+    destinationSlugs: ['addis-ababa'],
+    tourSlugs: ['addis-ababa-in-depth', 'addis-and-its-highlands'],
+  },
+  {
+    slug: 'coffee-cupping-and-ceremony',
+    title: 'Coffee cupping & ceremony',
+    short: 'Coffee tasting',
+    category: 'Coffee',
+    duration: '2 – 3 hours',
+    where: 'Addis Ababa, or any coffee region',
+    season: 'Year-round',
+    image: '/images/coffee-ceremony.png',
+    teaser:
+      'Taste coffees from Sidama, Yirgacheffe, Jimma and Harar side by side, then share a ceremony in a family home.',
+    intro:
+      'Ethiopia is where Arabica coffee comes from, and its regions taste strikingly different. This tasting sets them side by side the way professionals do, then shows how Ethiopians themselves drink coffee — slowly, together, in three rounds.',
+    paragraphs: [
+      'A cupping is the coffee trade\'s tasting method: freshly ground coffee steeped in open cups, the crust broken, and each one slurped from a spoon. Side by side, the differences are clear — the bright, floral cups of Yirgacheffe, the fuller coffees of Sidama and Jimma, the fruity, wine-like naturals of Harar.',
+      'Then the ceremony. Green beans are roasted over coals in front of you, ground by hand, and brewed in a clay jebena, with incense burning and popcorn passed around. There are three rounds — abol, tona and baraka, the last meaning blessing — and staying for all three is part of the courtesy.',
+      'The tasting can run in Addis Ababa on any day, or on the farms themselves during one of our coffee journeys.',
+    ],
+    includes: [
+      'A guided cupping of coffees from several regions',
+      'A full three-round coffee ceremony in a family home',
+      'Tasting notes to take home',
+      'Hotel pick-up and drop-off',
+    ],
+    destinationSlugs: ['addis-ababa', 'sidama-yirgacheffe', 'jimma', 'harar'],
+    tourSlugs: ['the-coffee-road', 'sidama-and-yirgacheffe-coffee', 'jimma-the-coffee-kingdom'],
+  },
+  {
+    slug: 'run-where-champions-train',
+    title: 'Run where champions train',
+    short: 'Running',
+    category: 'Active',
+    duration: 'An early morning',
+    where: 'Entoto, Addis Ababa',
+    season: 'Year-round (best Oct – May)',
+    image: '/images/addis-skyline.png',
+    teaser:
+      'A dawn run on the forest trails of Entoto, around 3,000 metres up, where Ethiopia\'s great distance runners train.',
+    intro:
+      'Above Addis Ababa, the eucalyptus forest of Mount Entoto is where generations of Ethiopian runners have built their endurance — Haile Gebrselassie trained there at least three times a week. Join the early-morning crowd on its dirt trails.',
+    paragraphs: [
+      'At around 3,000 metres, Entoto is higher than the city below, and its soft forest trails and rolling dirt roads are ideal for building fitness without pounding the legs. At dawn they fill with runners, from elite groups to people training for their first race.',
+      'A local running guide sets a pace that suits you — this is about the experience, not a time — and explains how Ethiopian runners train: easy days truly easy, lots of running off-road, and plenty of it in groups. Breakfast afterwards is the reward.',
+      'Serious runners can go further: the town of Bekoji, birthplace of Derartu Tulu, Kenenisa Bekele and the Dibaba sisters, and the Great Ethiopian Run in late November — a 10-kilometre race through the capital with tens of thousands of runners.',
+    ],
+    includes: [
+      'A local running guide',
+      'Transport to and from the Entoto trails',
+      'Water and a post-run breakfast',
+      'Routes and pace adjusted to your level',
+    ],
+    goodToKnow: 'At this altitude, everyone runs slower and breathes harder — we suggest at least two days in Addis before running hard.',
+    destinationSlugs: ['addis-ababa'],
+    tourSlugs: ['run-with-ethiopias-champions'],
+  },
+  {
+    slug: 'rift-valley-cycling-day',
+    title: 'A day on two wheels in the Rift',
+    short: 'Cycling',
+    category: 'Active',
+    duration: 'A full day',
+    where: 'Central Rift Valley',
+    season: 'Oct – May',
+    image: '/images/lake-tana.png',
+    teaser:
+      'Quiet roads between the Rift Valley lakes, villages along the way, and a support vehicle never far behind.',
+    intro:
+      'The central Rift Valley is some of the most rewarding cycling in Ethiopia — flat to gently rolling, lined with lakes, and full of village life. A day ride takes you along its quiet roads with a guide and a vehicle for support.',
+    paragraphs: [
+      'Rides usually run between the lakes south of Addis Ababa — Ziway, Abijata-Shalla and Langano — on a mix of quiet tarmac and dirt tracks through farmland and acacia country, with stops wherever something catches your eye.',
+      'A support vehicle carries water, snacks and spare parts, and can take anyone who has had enough. E-bikes are available for riders who want the scenery with less effort.',
+      'For a longer adventure, our Rift Valley by bike journey links several days of riding, including a long descent from the highlands into the valley itself.',
+    ],
+    includes: [
+      'A quality bike or e-bike, helmet and repair kit',
+      'A cycling guide and support vehicle',
+      'Water, snacks and a lakeside lunch',
+      'Transfers to and from the start',
+    ],
+    destinationSlugs: [],
+    tourSlugs: ['rift-valley-by-bike'],
+  },
+  {
+    slug: 'teff-farm-day',
+    title: 'A day on a teff farm',
+    short: 'Farm day',
+    category: 'Farm & Community',
+    duration: 'A full day',
+    where: 'Highland villages',
+    season: 'Harvest: Nov – Jan',
+    image: '/images/hero-lalibela.png',
+    teaser:
+      'Plough with oxen, cut and thresh the teff that becomes injera, and share lunch with the family that grows it.',
+    intro:
+      'Most Ethiopians still farm, and teff — the grain behind injera — is the crop of the highlands. Spend a day with a farming family, working alongside them at whatever the season demands.',
+    paragraphs: [
+      'Teff is sown with the long rains around July and harvested from November to January. Fields are still ploughed with a pair of oxen and a wooden plough, the grain is cut by hand, and threshing is done the old way: oxen or donkeys walking in a circle over the harvest to separate the seed from the straw.',
+      'Depending on the time of year you might plough, weed, cut or help at the threshing floor — then carry the grain home, see it ground, and eat injera made from it at the family\'s table.',
+      'We arrange farm days with families we know in highland villages along our routes, from the Menz highlands to the countryside around Lalibela, and the day is always paid for directly to the household.',
+    ],
+    includes: [
+      'A day with a farming family, arranged in advance',
+      'A local guide and translator',
+      'Lunch with the family',
+      'A payment made directly to the household',
+    ],
+    goodToKnow: 'The work changes with the season; the harvest and threshing, November to January, are the most striking time to come.',
+    destinationSlugs: ['lalibela', 'guassa-plateau'],
+    tourSlugs: ['lalibela-highlands-community-trek', 'the-road-north'],
+  },
+  {
+    slug: 'herding-with-the-borana',
+    title: 'Cattle, wells & the Borana',
+    short: 'Cattle & herding',
+    category: 'Farm & Community',
+    duration: 'Half a day or more',
+    where: 'Borana, around Yabelo',
+    season: 'Oct – Mar',
+    image: '/images/omo-valley.png',
+    teaser:
+      'Spend time with Borana herders — at the singing wells, and out with the cattle their way of life revolves around.',
+    intro:
+      'For the Borana of Ethiopia\'s far south, cattle are wealth, food and culture. With a local guide, you spend time with a herding family and see how water and livestock shape every day.',
+    paragraphs: [
+      'The centre of Borana life is the well. Hand-dug as deep as thirty metres, the wells are worked by human chains that pass water up bucket by bucket, singing to keep the rhythm — the singing wells, where herds come to drink.',
+      'Away from the wells, you walk out with the herders and their cattle, hear how grazing is shared across the dry country, and share milk and tea in a family compound.',
+      'Visits are always arranged through a local Borana guide and with the community\'s consent, and fees go to the families and community you visit.',
+    ],
+    includes: [
+      'A local Borana guide',
+      'A visit to a working well, where permitted',
+      'Time with a herding family',
+      'Community fees',
+    ],
+    destinationSlugs: ['borana-yabelo'],
+    tourSlugs: ['borana-wells-salt-and-bushcrows'],
+  },
+  {
+    slug: 'village-homestay',
+    title: 'Stay with a village family',
+    short: 'Homestay',
+    category: 'Farm & Community',
+    duration: '1 – 3 nights',
+    where: 'Lalibela highlands, Choke, Awra Amba, Gamo Highlands',
+    season: 'Oct – May',
+    image: '/images/textile.png',
+    teaser:
+      'Sleep in a community-run lodge or guesthouse and share daily life — meals, markets, work and evenings by the fire.',
+    intro:
+      'The quickest way to understand a place is to stay in it. Across the north and south, communities run their own simple lodges and guesthouses, and a night or two there adds a depth that no hotel can.',
+    paragraphs: [
+      'On the Meket escarpment near Lalibela, villages host walkers in thatched tukul camps they built and run themselves. In the Choke Mountains, an ecovillage welcomes trekkers with an evening celebration. At Awra Amba, the weaving cooperative keeps a guesthouse for visitors who want to stay beyond the day tour.',
+      'Days follow the household: fetching water, the market, the fields, the coffee ceremony in the afternoon. Evenings are for food, conversation through your guide, and very early nights.',
+      'Rooms are simple and clean, and the money goes directly to the communities who host you — which is exactly the point.',
+    ],
+    includes: [
+      'Nights in community-run lodges or guesthouses',
+      'All meals with your hosts',
+      'A guide and translator',
+      'Community fees paid directly',
+    ],
+    destinationSlugs: ['lalibela', 'choke-mountains', 'awra-amba', 'arba-minch-nechisar'],
+    tourSlugs: ['lalibela-highlands-community-trek', 'choke-mountains-trek', 'around-lake-tana'],
+  },
+  {
+    slug: 'leave-it-better',
+    title: 'Leave it better: a clean-up day',
+    short: 'Clean-up day',
+    category: 'Give Back',
+    duration: 'Half a day',
+    where: 'Entoto, the Simien trails, Lake Tana shores',
+    season: 'Year-round',
+    image: '/images/hero-simien.png',
+    teaser:
+      'Give a morning back to the places you visit — a guided clean-up alongside local people who look after them.',
+    intro:
+      'Popular places carry the marks of visitors. A clean-up morning is a small, practical way to give something back — working alongside local people on a trail, a viewpoint or a shoreline.',
+    paragraphs: [
+      'A half-day clean-up fits easily into a journey: a stretch of forest trail on Entoto above Addis Ababa, a busy section of the Simien escarpment path, or a Lake Tana shore near Bahir Dar. You work in a small group, with gloves, bags and a guide, and the waste is sorted and taken away properly.',
+      'We only run clean-ups together with a local park office or community group, so the work is wanted, organised and useful. We confirm the partner and the site with you before your journey — never as a staged photo opportunity.',
+      'Every journey we run follows the same principle quietly: pack out what we pack in, and leave camps and trails as we found them.',
+    ],
+    includes: [
+      'Gloves, bags and equipment',
+      'A guide and local coordination',
+      'Proper disposal of what is collected',
+      'Refreshments afterwards',
+    ],
+    goodToKnow: 'Arranged on request with a local park or community partner, confirmed before your journey.',
+    destinationSlugs: ['addis-ababa', 'simien-mountains', 'lake-tana'],
+    tourSlugs: ['the-historic-route', 'simien-escarpment-trek'],
+  },
+]
+
+export function getActivity(slug: string) {
+  return activities.find((a) => a.slug === slug)
+}
+
 export const journeyStyles = [
   'Luxury',
+  'Climbing',
   'Photography',
   'Cultural',
   'Wildlife',

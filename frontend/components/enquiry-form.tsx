@@ -2,23 +2,30 @@
 
 import { useState } from 'react'
 import { Check, ArrowRight } from 'lucide-react'
-import { journeyStyles } from '@/lib/site'
+import { activities, journeyStyles } from '@/lib/site'
 import { submitContact } from '@/lib/api'
 
 export function EnquiryForm({
   defaultStyles = ['Luxury'],
+  defaultActivities = [],
   subject,
 }: {
   defaultStyles?: string[]
+  defaultActivities?: string[]
   subject?: string
 }) {
   const [selected, setSelected] = useState<string[]>(defaultStyles)
+  const [extras, setExtras] = useState<string[]>(defaultActivities)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const toggle = (style: string) =>
     setSelected((prev) =>
       prev.includes(style) ? prev.filter((s) => s !== style) : [...prev, style],
+    )
+  const toggleExtra = (name: string) =>
+    setExtras((prev) =>
+      prev.includes(name) ? prev.filter((s) => s !== name) : [...prev, name],
     )
 
   if (submitted) {
@@ -57,6 +64,7 @@ export function EnquiryForm({
           if (when) lines.push(`Preferred dates: ${when}`)
           if (travellers) lines.push(`Travellers: ${travellers}`)
           if (selected.length) lines.push(`Journey styles: ${selected.join(', ')}`)
+          if (extras.length) lines.push(`Experiences to add: ${extras.join(', ')}`)
           if (dream) lines.push('')
           lines.push(dream)
 
@@ -123,6 +131,33 @@ export function EnquiryForm({
                   }`}
                 >
                   {style}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        <div>
+          <span className="mb-3 block text-sm font-medium text-foreground">
+            Add any experiences?{' '}
+            <span className="font-normal text-muted-foreground">(optional)</span>
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {activities.map((a) => {
+              const active = extras.includes(a.short)
+              return (
+                <button
+                  type="button"
+                  key={a.slug}
+                  aria-pressed={active}
+                  onClick={() => toggleExtra(a.short)}
+                  className={`border px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] transition-colors duration-200 ${
+                    active
+                      ? 'border-accent bg-accent text-accent-foreground'
+                      : 'border-border bg-background text-muted-foreground hover:border-accent hover:text-foreground'
+                  }`}
+                >
+                  {a.short}
                 </button>
               )
             })}

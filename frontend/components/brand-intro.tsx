@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 
 const principles = [
@@ -34,6 +36,13 @@ export function BrandIntro() {
             private itinerary possible, in ten languages and counting.
           </p>
         </div>
+        <Link
+          href="/how-we-travel"
+          className="group mt-8 inline-flex items-center gap-2 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
+        >
+          How we travel
+          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+        </Link>
       </Reveal>
 
       <Reveal delay={100} className="mx-auto mt-16 max-w-[1280px] px-6 lg:px-10">

@@ -1,17 +1,16 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowRight, CalendarDays, Clock3, Info, MapPin } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { Reveal } from '@/components/reveal'
-import { CtaBand } from '@/components/cta-band'
 import { DestinationCard } from '@/components/destination-card'
 import { TourCard } from '@/components/tour-card'
-import { experiences, getDestination, getExperience, getTour } from '@/lib/site'
+import { EnquiryForm } from '@/components/enquiry-form'
+import { activities, getActivity, getDestination, getTour } from '@/lib/site'
 
 export function generateStaticParams() {
-  return experiences.map((e) => ({ slug: e.slug }))
+  return activities.map((a) => ({ slug: a.slug }))
 }
 
 export async function generateMetadata({
@@ -20,88 +19,67 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const e = getExperience(slug)
-  if (!e) return {}
+  const a = getActivity(slug)
+  if (!a) return {}
   return {
-    title: e.title,
-    description: e.intro,
-    openGraph: { title: e.title, description: e.intro, images: [e.image] },
+    title: a.title,
+    description: a.teaser,
+    openGraph: { title: a.title, description: a.teaser, images: [a.image] },
   }
 }
 
-export default async function ExperiencePage({
+export default async function ActivityPage({
   params,
 }: {
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const e = getExperience(slug)
-  if (!e) notFound()
+  const a = getActivity(slug)
+  if (!a) notFound()
 
-  const index = experiences.findIndex((x) => x.slug === e.slug)
-  const prev = experiences[(index - 1 + experiences.length) % experiences.length]
-  const next = experiences[(index + 1) % experiences.length]
-  const places = e.destinationSlugs
+  const places = a.destinationSlugs
     .map((s) => getDestination(s))
     .filter((d) => d !== undefined)
-  const journeys = e.tourSlugs
+  const journeys = a.tourSlugs
     .map((s) => getTour(s))
     .filter((t) => t !== undefined)
-  const [lead, ...rest] = e.gallery
+  const more = activities.filter((x) => x.slug !== a.slug && x.category === a.category).slice(0, 2)
+  const others = more.length
+    ? more
+    : activities.filter((x) => x.slug !== a.slug).slice(0, 2)
 
   return (
     <>
       <PageHero
-        eyebrow={`How We Travel · ${e.number} of ${String(experiences.length).padStart(2, '0')}`}
-        title={e.title}
-        lede={e.tagline}
-        image={e.image}
-        imageAlt={e.title}
+        eyebrow={`Experiences · ${a.category}`}
+        title={a.title}
+        lede={a.teaser}
+        image={a.image}
+        imageAlt={a.title}
         crumbs={[
           { label: 'Home', href: '/' },
-          { label: 'How We Travel', href: '/experiences' },
-          { label: e.title },
+          { label: 'Experiences', href: '/experiences' },
+          { label: a.title },
         ]}
+        compact
       />
 
-      {/* Story + highlights */}
-      <section className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.35fr_1fr] lg:gap-20 lg:py-28">
+      {/* Story + details */}
+      <section className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.35fr_1fr] lg:gap-20 lg:py-24">
         <Reveal>
           <p className="text-pretty font-serif text-2xl leading-snug text-foreground sm:text-[1.75rem]">
-            {e.intro}
+            {a.intro}
           </p>
           <div className="mt-8 space-y-6 text-pretty leading-relaxed text-muted-foreground sm:text-lg">
-            {e.paragraphs.map((p) => (
+            {a.paragraphs.map((p) => (
               <p key={p.slice(0, 32)}>{p}</p>
             ))}
           </div>
-
-          {lead && (
-            <div className="mt-12 grid gap-4 sm:grid-cols-2">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-sm sm:col-span-2">
-                <Image
-                  src={lead}
-                  alt={e.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 55vw"
-                  className="object-cover"
-                />
-              </div>
-              {rest.map((src) => (
-                <div
-                  key={src}
-                  className={`relative aspect-[4/3] overflow-hidden rounded-sm ${rest.length === 1 ? 'sm:col-span-2 sm:aspect-[16/9]' : ''}`}
-                >
-                  <Image
-                    src={src}
-                    alt={e.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 28vw"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+          {a.goodToKnow && (
+            <p className="mt-8 flex gap-3 border-l-2 border-accent bg-muted/60 px-5 py-4 text-sm leading-relaxed text-foreground">
+              <Info className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
+              {a.goodToKnow}
+            </p>
           )}
         </Reveal>
 
@@ -114,65 +92,64 @@ export default async function ExperiencePage({
             <div className="relative border border-accent/35 px-6 py-8 sm:px-8 sm:py-10">
               <p className="eyebrow text-accent">
                 <span className="rule" />
-                What this looks like
+                The details
               </p>
-              <ol className="mt-6 space-y-4">
-                {e.highlights.map((h, i) => (
-                  <li key={h} className="flex items-baseline gap-4">
-                    <span className="w-6 shrink-0 font-serif text-base text-accent">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-pretty text-sm leading-relaxed text-background/85 sm:text-[15px]">
-                      {h}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-
-              <dl className="mt-8 grid grid-cols-2 border-t border-background/15">
-                {e.facts.map((f, i) => (
-                  <div
-                    key={f.label}
-                    className={`border-b border-background/15 py-4 ${i % 2 === 0 ? 'pr-4' : 'border-l pl-4'}`}
-                  >
-                    <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-background/50">
-                      {f.label}
-                    </dt>
-                    <dd className="mt-1.5 font-serif text-lg leading-snug text-background">
-                      {f.value}
-                    </dd>
+              <dl className="mt-6 space-y-4">
+                {[
+                  { k: 'Time needed', v: a.duration, Icon: Clock3 },
+                  { k: 'Where', v: a.where, Icon: MapPin },
+                  { k: 'When', v: a.season, Icon: CalendarDays },
+                ].map(({ k, v, Icon }) => (
+                  <div key={k} className="flex items-start gap-3">
+                    <Icon className="mt-1 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
+                    <div>
+                      <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-background/50">{k}</dt>
+                      <dd className="mt-0.5 font-serif text-lg leading-snug text-background">{v}</dd>
+                    </div>
                   </div>
                 ))}
               </dl>
 
-              <Link
-                href="/contact"
+              <p className="mt-8 border-t border-background/15 pt-6 text-[10px] font-semibold uppercase tracking-[0.16em] text-background/50">
+                What&apos;s included
+              </p>
+              <ul className="mt-4 space-y-3">
+                {a.includes.map((inc) => (
+                  <li key={inc} className="flex gap-3 text-sm leading-relaxed text-background/85">
+                    <span aria-hidden className="mt-2.5 h-px w-4 shrink-0 bg-accent" />
+                    {inc}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="#add"
                 className="group mx-auto mt-8 flex w-fit items-center gap-2.5 whitespace-nowrap rounded-sm bg-accent px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-background sm:text-xs"
               >
-                Enquire now
+                Add to my journey
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+              </a>
             </div>
           </div>
         </Reveal>
       </section>
 
-      {/* Where it happens */}
+      {/* Where */}
       {places.length > 0 && (
         <section className="border-t border-border bg-muted/40">
-          <div className="shell py-16 sm:py-20 lg:py-24">
-            <Reveal className="mb-10 max-w-2xl sm:mb-12">
+          <div className="shell py-16 sm:py-20">
+            <Reveal className="mb-10 max-w-2xl">
               <p className="eyebrow mb-4 text-accent">
                 <span className="rule" />
                 Where It Happens
               </p>
               <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-                The places behind this idea
+                Places you can do this
               </h2>
             </Reveal>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {places.map((d, i) => (
-                <Reveal key={d.slug} delay={i * 90} className="h-full">
+                <Reveal key={d.slug} delay={i * 80} className="h-full">
                   <DestinationCard destination={d} className="h-full" />
                 </Reveal>
               ))}
@@ -183,24 +160,15 @@ export default async function ExperiencePage({
 
       {/* Journeys */}
       {journeys.length > 0 && (
-        <section className="shell py-16 sm:py-20 lg:py-24">
-          <Reveal className="mb-10 flex flex-col justify-between gap-6 sm:mb-12 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <p className="eyebrow mb-4 text-accent">
-                <span className="rule" />
-                Journeys That Include It
-              </p>
-              <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-                Travel it for yourself
-              </h2>
-            </div>
-            <Link
-              href="/tours"
-              className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
-            >
-              All tours
-              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+        <section className="shell py-16 sm:py-20">
+          <Reveal className="mb-10 max-w-2xl">
+            <p className="eyebrow mb-4 text-accent">
+              <span className="rule" />
+              Fits Well With
+            </p>
+            <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
+              Journeys this slots into
+            </h2>
           </Reveal>
           <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {journeys.map((t, i) => (
@@ -212,44 +180,47 @@ export default async function ExperiencePage({
         </section>
       )}
 
-      {/* Previous / next */}
-      <nav
-        aria-label="More ways we travel"
-        className="border-t border-border"
-      >
-        <div className="shell grid sm:grid-cols-2">
-          {[
-            { e: prev, dir: 'Previous', Icon: ArrowLeft },
-            { e: next, dir: 'Next', Icon: ArrowRight },
-          ].map(({ e: x, dir, Icon }, i) => (
-            <Link
-              key={dir}
-              href={`/experiences/${x.slug}`}
-              className={`group flex flex-col gap-2 py-10 transition-colors sm:py-12 ${
-                i === 1
-                  ? 'border-t border-border sm:items-end sm:border-l sm:border-t-0 sm:pl-10 sm:text-right'
-                  : 'sm:pr-10'
-              }`}
-            >
-              <span className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-[11px]">
-                {i === 0 && <Icon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-x-1" />}
-                {dir} · {x.number}
-                {i === 1 && <Icon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />}
-              </span>
-              <span className="font-serif text-2xl text-foreground transition-colors group-hover:text-accent sm:text-3xl">
-                {x.title}
-              </span>
-            </Link>
-          ))}
+      {/* Enquiry */}
+      <section id="add" className="scroll-mt-20 border-t border-border bg-secondary text-secondary-foreground">
+        <div className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[1fr_1.15fr] lg:gap-20 lg:py-24">
+          <Reveal>
+            <p className="eyebrow mb-5 text-accent-light">
+              <span className="rule" />
+              Add It
+            </p>
+            <h2 className="max-w-[20ch] text-balance text-3xl leading-[1.08] text-background sm:text-4xl lg:text-5xl">
+              Add {a.title.toLowerCase()} to your journey
+            </h2>
+            <p className="mt-6 max-w-md text-pretty leading-relaxed text-background/70 sm:text-lg">
+              Tell us roughly when you&apos;re travelling and what else is on
+              your list. We&apos;ll fit this in where it works best.
+            </p>
+            {others.length > 0 && (
+              <div className="mt-10 border-t border-background/15 pt-6">
+                <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-background/50 sm:text-[11px]">
+                  You might also like
+                </p>
+                <ul className="space-y-2">
+                  {others.map((o) => (
+                    <li key={o.slug}>
+                      <Link
+                        href={`/experiences/${o.slug}`}
+                        className="group inline-flex items-center gap-2 py-1 font-serif text-xl text-background transition-colors hover:text-accent"
+                      >
+                        {o.title}
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </Reveal>
+          <Reveal delay={120}>
+            <EnquiryForm subject={a.title} defaultStyles={[]} defaultActivities={[a.short]} />
+          </Reveal>
         </div>
-      </nav>
-
-      <CtaBand
-        title="Build this into your journey"
-        text="Tell us roughly when you'd travel and what drew you to this idea. A designer will suggest the route that carries it best."
-        secondary={{ label: 'How We Travel', href: '/experiences' }}
-        image={e.image}
-      />
+      </section>
     </>
   )
 }

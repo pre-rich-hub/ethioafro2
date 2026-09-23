@@ -38,7 +38,15 @@ export default async function DestinationPage({
   const d = getDestination(slug)
   if (!d) notFound()
 
-  const related = tours.filter((t) => t.places.some((p) => p.includes(d.name.split(' ')[0]))).slice(0, 3)
+  // Tours naming this destination exactly come first — by its full name or
+  // the part before "&" (e.g. "Lake Tana" for "Lake Tana & Blue Nile"). A
+  // looser first-word match (e.g. "Simien") fills any remaining slots.
+  const names = [d.name, d.name.split(' & ')[0]]
+  const exact = tours.filter((t) => t.places.some((p) => names.includes(p)))
+  const loose = tours.filter(
+    (t) => !exact.includes(t) && t.places.some((p) => p.includes(d.name.split(' ')[0])),
+  )
+  const related = [...exact, ...loose].slice(0, 3)
   const fallback = related.length ? related : tours.slice(0, 3)
   const others = destinations.filter((o) => o.slug !== d.slug).slice(0, 4)
 

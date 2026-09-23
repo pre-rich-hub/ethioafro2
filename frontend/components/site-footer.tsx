@@ -39,7 +39,8 @@ const columns: { title: string; links: FooterLink[] }[] = [
     title: 'Explore',
     links: [
       { label: 'Our Story', href: '/about' },
-      { label: 'How We Travel', href: '/experiences' },
+      { label: 'Mountain Climbing', href: '/mountains' },
+      { label: 'How We Travel', href: '/how-we-travel' },
       { label: 'Travel Journal', href: '/blog' },
       { label: 'Responsible Tourism', href: '/blog/responsible-travel-in-the-omo' },
       { label: 'When to Visit', href: '/blog/when-to-visit-ethiopia' },

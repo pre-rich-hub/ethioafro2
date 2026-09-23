@@ -52,6 +52,7 @@ export default async function TourPage({
   if (!t) notFound()
 
   const others = tours.filter((o) => o.slug !== t.slug).slice(0, 3)
+  const nightsLabel = `${t.nights} ${t.nights === 1 ? 'night' : 'nights'}`
 
   const priceCard = (
     <div className="relative overflow-hidden bg-secondary p-2 text-secondary-foreground shadow-[0_30px_60px_-30px_rgba(26,26,26,0.55)]">
@@ -99,7 +100,7 @@ export default async function TourPage({
 
         <dl className="mt-8 grid grid-cols-2 border-t border-background/15">
           {[
-            { k: 'Duration', v: `${t.days} · ${t.nights} nights`, Icon: Clock },
+            { k: 'Duration', v: t.nights ? `${t.days} · ${nightsLabel}` : t.days, Icon: Clock },
             { k: 'Best season', v: t.season, Icon: CalendarDays },
             { k: 'Group size', v: t.group, Icon: Users },
             { k: 'Style', v: t.style, Icon: Compass },
@@ -163,7 +164,7 @@ export default async function TourPage({
                 The Journey
               </p>
               <h2 className="max-w-[22ch] text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-                {t.nights} nights, designed around the hours that matter
+                {t.nights ? `${nightsLabel}, designed` : 'A single day, designed'} around the hours that matter
               </h2>
               <p className="mt-7 text-pretty leading-relaxed text-muted-foreground sm:text-lg">
                 {t.summary}
