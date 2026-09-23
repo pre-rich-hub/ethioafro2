@@ -1,16 +1,28 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 import { contact, destinations, tours } from '@/lib/site'
 import { NewsletterForm } from '@/components/newsletter-form'
 
-const socials = ['Facebook', 'Instagram', 'YouTube', 'TripAdvisor']
+// Add each profile URL to show its button; entries left blank stay hidden
+// so the footer never links to a dead "#".
+const socials = [
+  { name: 'Facebook', href: '' },
+  { name: 'Instagram', href: '' },
+  { name: 'YouTube', href: '' },
+  { name: 'TripAdvisor', href: '' },
+].filter((s) => s.href)
 
-const columns = [
+type FooterLink = { label: string; href: string; more?: boolean }
+
+const columns: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Destinations',
-    links: destinations
-      .slice(0, 5)
-      .map((d) => ({ label: d.name, href: `/destinations/${d.slug}` })),
+    links: [
+      ...destinations
+        .slice(0, 5)
+        .map((d) => ({ label: d.name, href: `/destinations/${d.slug}` })),
+      { label: 'All destinations', href: '/destinations', more: true },
+    ],
   },
   {
     title: 'Tours',
@@ -19,6 +31,7 @@ const columns = [
         .slice(0, 4)
         .map((t) => ({ label: t.title, href: `/tours/${t.slug}` })),
       { label: 'Custom Itineraries', href: '/contact' },
+      { label: 'All tours', href: '/tours', more: true },
     ],
   },
   {
@@ -39,8 +52,8 @@ export function SiteFooter() {
   return (
     <footer className="bg-charcoal text-background">
       <div className="shell py-16 sm:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-10">
-          <div>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-10">
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <div className="flex items-center gap-3">
               <img
                 src="/images/logo.png"
@@ -60,7 +73,7 @@ export function SiteFooter() {
               quiet luxury.
             </p>
 
-            <ul className="mt-7 space-y-3 text-sm text-background/70">
+            <ul className="mt-7 space-y-2 text-sm text-background/70">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-light" />
                 <span>{contact.address}</span>
@@ -68,7 +81,7 @@ export function SiteFooter() {
               <li>
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
-                  className="flex items-center gap-3 transition-colors hover:text-background"
+                  className="flex items-center gap-3 py-1 transition-colors hover:text-background"
                 >
                   <Phone className="h-4 w-4 shrink-0 text-accent-light" />
                   {contact.phone}
@@ -77,7 +90,7 @@ export function SiteFooter() {
               <li>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="flex items-center gap-3 transition-colors hover:text-background"
+                  className="flex items-center gap-3 py-1 transition-colors hover:text-background"
                 >
                   <Mail className="h-4 w-4 shrink-0 text-accent-light" />
                   {contact.email}
@@ -85,32 +98,43 @@ export function SiteFooter() {
               </li>
             </ul>
 
+            {socials.length > 0 && (
             <div className="mt-7 flex flex-wrap gap-2.5">
-              {socials.map((name) => (
+              {socials.map(({ name, href }) => (
                 <a
                   key={name}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-full border border-background/20 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-background/70 transition-colors duration-300 hover:border-accent-light hover:text-accent-light"
                 >
                   {name}
                 </a>
               ))}
             </div>
+            )}
           </div>
 
           {columns.map((col) => (
             <nav key={col.title} aria-label={col.title}>
-              <h3 className="mb-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-accent-light">
+              <h3 className="mb-4 font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-accent-light sm:text-[11px]">
                 {col.title}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-1">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-background/65 transition-colors duration-300 hover:text-background"
+                      className={
+                        link.more
+                          ? 'group inline-flex items-center gap-1.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-light transition-colors duration-300 hover:text-background'
+                          : 'inline-block py-1.5 text-sm text-background/65 transition-colors duration-300 hover:text-background'
+                      }
                     >
                       {link.label}
+                      {link.more && (
+                        <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      )}
                     </Link>
                   </li>
                 ))}
@@ -139,15 +163,12 @@ export function SiteFooter() {
             &copy; {new Date().getFullYear()} Simien Ethiopia Tours. All rights
             reserved.
           </p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <Link href="/contact" className="hover:text-background/80">
-              Privacy
+          <div className="flex flex-wrap gap-x-6 gap-y-1">
+            <Link href="/privacy" className="py-1 transition-colors hover:text-background/80">
+              Privacy Policy
             </Link>
-            <Link href="/contact" className="hover:text-background/80">
-              Terms
-            </Link>
-            <Link href="/blog/responsible-travel-in-the-omo" className="hover:text-background/80">
-              Responsible Tourism
+            <Link href="/terms" className="py-1 transition-colors hover:text-background/80">
+              Terms &amp; Conditions
             </Link>
           </div>
         </div>

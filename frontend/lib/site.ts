@@ -77,6 +77,8 @@ export const destinations: Destination[] = [
       'Fasilides\' Bath, drained and refilled each January for the Timkat festival',
       'Kuskuam, the hilltop palace built for Empress Mentewab, at the last light of the day',
       'Wolleka, the village of Gondar\'s Beta Israel community, and the potters who still work there',
+      'Kosoye viewpoint, thirty kilometres north, where Queen Elizabeth II\'s party is said to have camped in 1965',
+      'Guzara Castle near Enfraz, built by Emperor Sarsa Dengel in the late 1500s — older than anything in Gondar itself',
     ],
     paragraphs: [
       'Six emperors added to this compound over roughly two hundred years, each building against — rather than replacing — what came before, so the walls read almost like tree rings of a single dynasty\'s ambitions.',
@@ -128,6 +130,8 @@ export const destinations: Destination[] = [
       'Illuminated manuscripts shown by the monks who still keep them',
       'Tis Issat, the Blue Nile Falls, running fullest just after the rains',
       'A tankwa reed-boat launch at first light, before the wind picks up',
+      'The Zege Peninsula\'s coffee forest, walked on shaded trails between its monasteries',
+      'The seventeenth-century Portuguese bridge below the falls, the first stone bridge of its kind in Ethiopia',
     ],
     paragraphs: [
       'The monastery paintings here follow a visual grammar centuries old — saints and demons rendered in the same flattened, wide-eyed style regardless of when a particular building was finished, so a fifteenth-century wall can sit beside a nineteenth-century one almost without a seam.',
@@ -212,6 +216,136 @@ export const destinations: Destination[] = [
     span: 'lg:col-span-6',
   },
   {
+    slug: 'gorgora',
+    name: 'Gorgora',
+    region: 'Amhara',
+    tag: 'Lakeshore History',
+    image: '/images/lake-tana.png',
+    teaser:
+      'A quiet north-shore village where Gondar\'s imperial story began, before there was a Gondar.',
+    intro:
+      'Sixty-five kilometres south of Gondar on the northern shore of Lake Tana, Gorgora was a royal seat under Emperor Susenyos and home to the Jesuit mission in the early seventeenth century. Its ruined Maryam Gimb is the most remote part of the Fasil Ghebbi World Heritage Site.',
+    bestTime: 'October – May',
+    duration: '1 – 2 days',
+    altitude: '1,790 m',
+    highlights: [
+      'Debre Sina Maryam, a fourteenth-century monastery whose church paintings, from the early 1600s, are among the oldest surviving in northern Ethiopia',
+      'The ruins of Maryam Gimb, the Jesuit-era castle and church listed with Gondar\'s royal enclosure',
+      'A private boat along the quiet northern shore of Lake Tana, far from the Bahir Dar crossings',
+      'An easy half-day from Gondar, or an unhurried overnight between Gondar and Bahir Dar',
+    ],
+    paragraphs: [
+      'Before Fasilides founded Gondar, the court moved between camps and lakeside residences — and Gorgora was one of the most important. Emperor Susenyos granted the Jesuits land here in 1607; the Spanish missionary Pedro Páez designed a stone church that was finished in 1621, and a second complex of residences, cisterns and a small castle followed at the site now called Maryam Gimb.',
+      'It did not last. When Fasilides restored the Orthodox Church he expelled the Jesuits and ordered their buildings and images destroyed, and an earthquake in the 1950s brought down much of what remained. What survives is atmospheric rather than grand: roofless walls above the water, and a short walk away, the painted interior of Debre Sina Maryam, still in use.',
+      'We treat Gorgora as a slow add-on to Gondar — a morning at the ruins and the church, lunch by the lake, and the afternoon on the water — for guests who have already seen the castles and want the chapter that came before them.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'guassa-plateau',
+    name: 'Guassa Plateau',
+    region: 'Northern Highlands',
+    tag: 'Community Conservation',
+    image: '/images/bale-gelada.png',
+    teaser:
+      'Ethiopian wolves and geladas on highland moor a community has protected for four hundred years.',
+    intro:
+      'A hundred square kilometres of Afro-alpine grassland in Menz, north-east of Addis Ababa, managed for more than four centuries under the Qero — an indigenous system of grazing and grass-cutting rules that ranks among the oldest community conservation arrangements in Africa.',
+    bestTime: 'October – May',
+    duration: '2 – 3 days',
+    altitude: '3,200 – 3,700 m',
+    highlights: [
+      'Ethiopian wolves hunting rodents across the open grassland — six packs hold territory on the plateau',
+      'Gelada troops grazing the moor and sleeping on the cliffs at its edge',
+      'Giant lobelia up to twelve metres tall, erica heath, and the tussock guassa grass the area is named for',
+      'Twelve endemic bird species, including the Ankober serin, blue-winged goose and wattled ibis',
+    ],
+    paragraphs: [
+      'Under the Qero, two elected chiefs decided when the plateau could be grazed and when its grass could be cut for thatch and rope. The system held from the seventeenth century until the 1974 revolution nationalised the land; the communities of Menz have since rebuilt it, and in 2004 their work was recognised with the UN Development Programme\'s Equator Prize.',
+      'The result is a landscape that looks much as the highlands must have before farming reached them — and one of the most reliable places in the north to see the Ethiopian wolf, a species with fewer than five hundred animals left in the wild. With no national park infrastructure, sightings come on foot, walking the grassland at dawn with a community scout.',
+      'Guassa is genuinely remote. The community lodge near Mehal Meda is simple, with no mains electricity, and dry-season nights can fall to ten below freezing. We bring a cook and supplies, and pair it with the drive north toward Lalibela for guests who want wildlife without the long detour south to Bale.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'awra-amba',
+    name: 'Awra Amba',
+    region: 'Amhara',
+    tag: 'Community Visit',
+    image: '/images/textile.png',
+    teaser:
+      'A weaving village founded on one idea: that men and women should share every kind of work.',
+    intro:
+      'Founded in 1980 by Zumra Nuru and some twenty others, this cooperative of around 450 people, 73 kilometres east of Bahir Dar, has become one of Ethiopia\'s most studied social experiments — women plough, men weave, and the community governs itself through its own committees.',
+    bestTime: 'Year-round',
+    duration: 'Half a day – 1 day',
+    altitude: '1,920 m',
+    highlights: [
+      'The weaving workshop, where men and women work the same looms and sell scarves, blankets and cloth by the metre',
+      'The community\'s own school, library and care for its elderly members, each run by an elected committee',
+      'An open conversation with residents about how the village makes decisions and settles disputes',
+      'A night in the community guesthouse, for those who want to stay after the day visitors leave',
+    ],
+    paragraphs: [
+      'Awra Amba — "top of the hill" in Amharic — was built on principles that set it apart from its neighbours: no division of labour by sex, no institutional religion, a minimum marriage age of eighteen for women and twenty-two for men, and formal committees to look after children, the sick and the elderly.',
+      'Those choices came at a cost. Denied farmland by surrounding communities, the village turned to weaving and grain milling, and the looms that now fill its workshop are the reason it is self-sufficient today. Its library, preschool and adult literacy work have made it the subject of international research, including World Bank case studies.',
+      'Visitors pay the same entry fee whatever their nationality, and a local guide can walk you through the village. It sits just off the road east from Bahir Dar toward Lalibela, which makes it an easy and rewarding morning on a northern circuit — and a natural fit for anyone interested in who does the work, and who shares in it.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'choke-mountains',
+    name: 'Choke Mountains',
+    region: 'Northern Highlands',
+    tag: 'Community Trek',
+    image: '/images/hero-simien.png',
+    teaser:
+      'The water tower of the Blue Nile, walked village to village with the families who live there.',
+    intro:
+      'A broad massif in the heart of Gojjam, rising from a 2,800-metre plateau to summits above 4,000 metres, whose moorland feeds more than fifty rivers flowing into the Blue Nile. Its community ecovillage was named one of UN Tourism\'s Best Tourism Villages in 2022.',
+    bestTime: 'October – February',
+    duration: '3 – 5 days',
+    altitude: '2,800 – 4,000+ m',
+    highlights: [
+      'Afro-alpine moorland of giant lobelia, lady\'s mantle and tussock grass, almost untouched by other trekkers',
+      'Camps in high farming villages, and an evening welcome from the families hosting you',
+      'The headwaters of dozens of Blue Nile tributaries, springing from the moor itself',
+      'Endemic and threatened birds, including the Abyssinian longclaw',
+    ],
+    paragraphs: [
+      'Choke sits roughly between Bahir Dar and Debre Markos, about three hundred kilometres north-west of Addis Ababa, and it matters far beyond its size: researchers call it the water tower of the upper Blue Nile, with more than fifty major rivers and hundreds of smaller streams rising from its slopes.',
+      'Tourism here is run by the community rather than for it, on a fair-trade ecovillage model built around conserving both the mountain and the culture of the farming villages on its slopes. Walkers camp in the high villages, and the evening welcome is a genuine one — closer to a stay than a sightseeing route. Allow at least three days to reach the high moor and come back down unhurried.',
+      'It is the least developed trek we offer, with simple community campsites and very few other visitors. We pair it with Bahir Dar and Lake Tana for guests who have already walked the Simien and want somewhere no one else they know has been.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
+    slug: 'lake-hayk',
+    name: 'Hayk & Istifanos',
+    region: 'Amhara',
+    tag: 'Monastery Lake',
+    image: '/images/lake-tana.png',
+    teaser:
+      'A highland lake on the road to Lalibela, and the monastery where one of Ethiopia\'s great saints was taught.',
+    intro:
+      'At 2,030 metres, just north of Dessie, Lake Hayk is six kilometres across and eighty-eight metres deep. On its peninsula stands Istifanos, a monastery founded in the mid-thirteenth century by Iyasus Mo\'a, teacher of Saint Tekle Haymanot.',
+    bestTime: 'October – May',
+    duration: 'Half a day – 1 day',
+    altitude: '2,030 m',
+    highlights: [
+      'The monastery museum\'s gospel book, made for Istifanos in 1280–81 — among the oldest Ethiopian manuscripts to record its own date',
+      'Iyasus Mo\'a\'s stone cross, and manuscripts and treasures donated by successive emperors',
+      'A walk along the lakeshore, where Europe\'s first recorded visitor noted hippos in 1520',
+      'The nunnery of Margebeta Giorgis nearby, open to women visitors',
+    ],
+    paragraphs: [
+      'Between the thirteenth and fifteenth centuries Istifanos was one of the most influential monasteries in the country. Its most famous pupil, Tekle Haymanot, went on to found Debre Libanos and carry the Church south into Shewa. In 1531 the church was burned during the wars of Imam Ahmad ibn Ibrahim, and ruins from that period still stand beside the later buildings.',
+      'Please note that the monastery itself admits men only. Women are welcome at the nearby nunnery of Margebeta Giorgis, and the lakeshore and its views are open to everyone — we explain this before any itinerary includes Hayk, so no one is caught out on the day.',
+      'Hayk lies directly on the road between Addis Ababa and Lalibela via Dessie, so it slots into an overland northern route as a lunch stop or a quiet night by the water rather than a detour.',
+    ],
+    span: 'lg:col-span-6',
+  },
+  {
     slug: 'axum',
     name: 'Axum',
     region: 'Tigray',
@@ -229,6 +363,7 @@ export const destinations: Destination[] = [
       'The Chapel of the Tablet, said by tradition to guard the Ark of the Covenant',
       'The ruins attributed to the Queen of Sheba\'s palace, Dungur',
       'A drive south into Tigray\'s cliffside churches, several reached only on foot',
+      'The temple at Yeha, raised around 700 BCE and the oldest standing building in Ethiopia',
     ],
     paragraphs: [
       'The stelae are less monuments than engineering arguments: single pieces of granite carved to mimic multi-storey buildings, complete with false doors and window frames, quarried and raised without any of the machinery that would later be considered necessary for the job.',
@@ -750,6 +885,375 @@ export const tours: Tour[] = [
       },
     ],
     places: ['Lalibela', 'Asheton Maryam', 'Nakuto La\'ab', 'Yemrehanna Kristos'],
+  },
+  {
+    slug: 'christmas-to-epiphany',
+    title: 'Christmas to Epiphany',
+    image: '/images/festival-timkat.png',
+    days: '16 Days',
+    nights: 15,
+    style: 'Festival · Cultural · Private',
+    season: 'January only',
+    from: '$10,400 per person',
+    group: '2 – 8 guests',
+    teaser:
+      'Genna at the rock churches of Lalibela, Timkat at the royal bath in Gondar, and the quiet fortnight in between.',
+    summary:
+      'The north\'s two great festivals in a single journey. Christmas night among the pilgrims at Lalibela, slow days on Lake Tana and the Simien rim, then Epiphany in Gondar. Both dates follow the Ethiopian calendar and move by a day in some years, so we confirm each January\'s dates when you book — and hold rooms a full year ahead.',
+    includes: [
+      'All domestic flights and a private vehicle with senior driver-guide',
+      'An Orthodox Christian scholar as festival guide at Lalibela and Gondar',
+      'Reserved vantage points for the Genna vigil and at Fasilides\' Bath',
+      'Accommodation held twelve months in advance at every stop',
+      'A private boat on Lake Tana and an escarpment lodge in the Simien',
+      'Breakfast daily, festival-day catering, and most dinners',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Gratuities and church donations',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1 · Jan 5',
+        title: 'Arrive Addis Ababa',
+        text: 'Private transfer, rest, and a briefing on the Ethiopian liturgical calendar over dinner.',
+      },
+      {
+        day: 'Days 2 – 3 · Jan 6 – 7',
+        title: 'Genna in Lalibela',
+        text: 'A morning flight north, then the Christmas Eve vigil among thousands of pilgrims in white. At dawn, priests chant from the rock above the churches — the reason we come.',
+      },
+      {
+        day: 'Days 4 – 5 · Jan 8 – 9',
+        title: 'Asheton Maryam & Yemrehanna Kristos',
+        text: 'Once the pilgrims disperse, the climb to the cliff monastery above town, and the cave church of Yemrehanna Kristos in the hills.',
+      },
+      {
+        day: 'Days 6 – 8 · Jan 10 – 12',
+        title: 'Bahir Dar & Lake Tana',
+        text: 'A flight west, the island monasteries by private boat, the Zege coffee forest on foot, and the Blue Nile Falls.',
+      },
+      {
+        day: 'Days 9 – 10 · Jan 13 – 14',
+        title: 'Gorgora',
+        text: 'North along the lake to Debre Sina Maryam and the Jesuit ruins at Maryam Gimb, with two unhurried nights on the water.',
+      },
+      {
+        day: 'Days 11 – 13 · Jan 15 – 17',
+        title: 'The Simien rim',
+        text: 'Up to an escarpment lodge for gelada troops above Sankaber, Jinbar Falls, and sunrise at Imet Gogo — the quietest days of the trip.',
+      },
+      {
+        day: 'Days 14 – 15 · Jan 18 – 19',
+        title: 'Timkat in Gondar',
+        text: 'The Ketera eve procession as the tabots are carried to Fasilides\' Bath, an all-night vigil, and the blessing of the water at dawn.',
+      },
+      {
+        day: 'Day 16 · Jan 20',
+        title: 'Departure',
+        text: 'A flight back to Addis Ababa and an evening departure.',
+      },
+    ],
+    places: ['Lalibela', 'Lake Tana', 'Gorgora', 'Simien Mountains', 'Gondar'],
+  },
+  {
+    slug: 'lalibela-highlands-community-trek',
+    title: 'Lalibela Highlands Community Trek',
+    image: '/images/hero-lalibela.png',
+    days: '5 Days',
+    nights: 4,
+    style: 'Trekking · Cultural · Small Group',
+    season: 'Oct – Mar',
+    from: '$1,480 per person',
+    group: '2 – 8 guests',
+    teaser:
+      'Village-owned tukul camps on the rim of the Meket escarpment, then wolf country at Abune Yosef.',
+    summary:
+      'Gentle walking along a highland escarpment at 2,800 to 3,100 metres, sleeping in thatched tukuls that the villages themselves built and run through the TESFA community trekking programme. Most of the walking is flat or gently graded, horses can be hired for any stretch, and every night\'s fee goes to the community hosting you.',
+    includes: [
+      'Community camp fees paid directly to the host villages',
+      'Local village guides, plus a senior guide from Lalibela throughout',
+      'Four nights in community tukul camps and lodges, full board',
+      'Pack animals for luggage, and horses on request',
+      'All transfers between Lalibela, the trailheads and the airport',
+      'A morning at the Lalibela churches before the trek',
+    ],
+    excludes: [
+      'Flights to and from Lalibela',
+      'Sleeping bag (hire available in Lalibela)',
+      'Travel insurance (required)',
+      'Gratuities for village guides and cooks',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Lalibela',
+        text: 'Arrival, the northern church cluster in the afternoon, and a briefing on the trek over dinner.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Onto the Meket escarpment',
+        text: 'A short drive to the trailhead and a walk out to Mequat Mariam — the first TESFA camp to host guests, in 2003 — set on a promontory with the drop on three sides.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Along the rim',
+        text: 'A full day on the plateau edge, past farmsteads and threshing floors, to the next community camp. Tea in the dining tukul, and a sunset with no other lights in view.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Abune Yosef',
+        text: 'Back via Lalibela and north into the Abune Yosef massif, some forty kilometres from town, climbing to a community lodge above 3,200 metres.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Wolves at dawn & departure',
+        text: 'An early walk onto the high plateau for gelada troops and a chance of Ethiopian wolves, then down to Lalibela for an afternoon flight.',
+      },
+    ],
+    places: ['Lalibela', 'Meket Escarpment', 'Mequat Mariam', 'Abune Yosef'],
+  },
+  {
+    slug: 'the-road-north',
+    title: 'The Road North',
+    image: '/images/bale-gelada.png',
+    days: '8 Days',
+    nights: 7,
+    style: 'Wildlife · Cultural · Private',
+    season: 'Oct – May',
+    from: '$3,950 per person',
+    group: '2 – 6 guests',
+    teaser:
+      'Addis to Lalibela by road — Ethiopian wolves on the Guassa Plateau and a thirteenth-century lake monastery on the way.',
+    summary:
+      'Most guests fly straight to Lalibela and miss everything in between. This route drives it: up onto the community-protected Guassa Plateau for wolves and geladas, down to Lake Hayk and the monastery of Istifanos, then over the highlands to the rock churches. Please note Istifanos admits men only; women are welcome at the nearby nunnery.',
+    includes: [
+      'Private 4x4 and senior driver-guide from Addis Ababa to Lalibela',
+      'Guassa community conservation fees and a local community scout',
+      'Two nights at the Guassa community lodge, with our own cook',
+      'Lakeside accommodation at Hayk and a lodge in Lalibela',
+      'The return flight from Lalibela to Addis Ababa',
+      'Full board on the plateau, breakfast and dinner elsewhere',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Gratuities and church donations',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrive Addis Ababa',
+        text: 'Private transfer and a route briefing over dinner — including warm layers, since Guassa nights fall well below freezing.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Up to the Guassa Plateau',
+        text: 'North-east through Debre Birhan and onto the Menz highlands, arriving at the community lodge near Mehal Meda for an evening walk among giant lobelia.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Wolves & geladas',
+        text: 'Out at dawn with a community scout, when the Ethiopian wolves hunt across the open grassland, then gelada troops on the plateau edge and the town of Mehal Meda in the afternoon.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Down to Lake Hayk',
+        text: 'Off the plateau and north along the highland road past Kombolcha and Dessie, to a lakeside night at 2,030 metres.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Istifanos to Lalibela',
+        text: 'The monastery and its museum in the morning — among its treasures a gospel book made here in 1280–81 — then over the mountains to Lalibela.',
+      },
+      {
+        day: 'Days 6 – 7',
+        title: 'Lalibela',
+        text: 'Both church clusters at their best hours, the climb to Asheton Maryam, and the cave church of Yemrehanna Kristos.',
+      },
+      {
+        day: 'Day 8',
+        title: 'Addis & Departure',
+        text: 'A morning flight back to Addis Ababa and a day room before your evening departure.',
+      },
+    ],
+    places: ['Addis Ababa', 'Guassa Plateau', 'Lake Hayk', 'Lalibela'],
+  },
+  {
+    slug: 'around-lake-tana',
+    title: 'Around Lake Tana',
+    image: '/images/lake-tana.png',
+    days: '6 Days',
+    nights: 5,
+    style: 'Slow Travel · Cultural · Private',
+    season: 'Oct – May',
+    from: '$2,780 per person',
+    group: '2 – 8 guests',
+    teaser:
+      'Monasteries, coffee forest, a village of equals and a forgotten royal lakeshore — the long way from Bahir Dar to Gondar.',
+    summary:
+      'The classic circuit crosses from Bahir Dar to Gondar in a few hours. This one takes six days over it, circling the lake through the places most itineraries drive past: the Zege coffee forest, the Portuguese bridge below the falls, the weaving cooperative of Awra Amba and the Jesuit ruins at Gorgora.',
+    includes: [
+      'Private vehicle and senior driver-guide throughout',
+      'A private boat for the Zege Peninsula and on the north shore',
+      'A night in the Awra Amba community guesthouse',
+      'Lakeside lodges at Bahir Dar and Gorgora, a hotel in Gondar',
+      'Church, monastery and community entry fees',
+      'Breakfast and dinner daily',
+    ],
+    excludes: [
+      'Flights to Bahir Dar and from Gondar',
+      'Travel insurance (required)',
+      'Gratuities and personal purchases',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrive Bahir Dar',
+        text: 'Met at the airport, the lakefront at sunset, and dinner by the water.',
+      },
+      {
+        day: 'Day 2',
+        title: 'The Zege Peninsula',
+        text: 'A private boat to Ura Kidane Mehret, then the shaded trails through Zege\'s coffee forest linking its monasteries, and back across the lake in the afternoon.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Blue Nile Falls & Awra Amba',
+        text: 'The falls in the morning and the seventeenth-century Portuguese bridge below them, then east to Awra Amba for the afternoon and a night in the community guesthouse.',
+      },
+      {
+        day: 'Day 4',
+        title: 'North to Gorgora',
+        text: 'Morning at the Awra Amba looms, then the road north along the lake to Gorgora and the painted church of Debre Sina Maryam.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Maryam Gimb & Gondar',
+        text: 'The Jesuit ruins at Maryam Gimb and a last boat on the north shore, then the short drive up to Gondar.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Gondar & departure',
+        text: 'The royal enclosure at opening hour and Debre Berhan Selassie, before an afternoon flight.',
+      },
+    ],
+    places: ['Bahir Dar', 'Lake Tana', 'Zege Peninsula', 'Awra Amba', 'Gorgora', 'Gondar'],
+  },
+  {
+    slug: 'choke-mountains-trek',
+    title: 'Choke Mountains Trek',
+    image: '/images/hero-simien.png',
+    days: '5 Days',
+    nights: 4,
+    style: 'Trekking · Small Group',
+    season: 'Oct – Feb',
+    from: '$1,690 per person',
+    group: '2 – 8 guests',
+    teaser:
+      'Village to village onto the moorland that feeds the Blue Nile — the northern trek almost nobody has done.',
+    summary:
+      'A community-run trek on the Choke massif in Gojjam, recognised by UN Tourism as one of the Best Tourism Villages of 2022. Three days on foot from the farming villages up onto the high moor and back, camping as guests of the ecovillage — simple, uncrowded, and best for walkers who have already done the Simien.',
+    includes: [
+      'Community ecovillage fees and local guides',
+      'A senior trekking guide from our own team throughout',
+      'Three nights camping in the high villages, one in Bahir Dar',
+      'Tents, mats and full board on the trek',
+      'Road transfer from Bahir Dar and on to Addis Ababa',
+      'A cook travelling with the group',
+    ],
+    excludes: [
+      'Flight to Bahir Dar',
+      'Sleeping bag (hire available in Bahir Dar)',
+      'Travel insurance (required)',
+      'Gratuities for guides and cook',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrive Bahir Dar',
+        text: 'Met at the airport, a kit check and route briefing, and a night by the lake.',
+      },
+      {
+        day: 'Day 2',
+        title: 'To the ecovillage',
+        text: 'South into Gojjam and up to the foothills of Choke, where the villagers who host the trek hold a welcome for arriving walkers.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Onto the moor',
+        text: 'Up through terraced farmland onto the Afro-alpine moor of giant lobelia and tussock grass, where dozens of Blue Nile tributaries begin, to camp in a high village.',
+      },
+      {
+        day: 'Day 4',
+        title: 'The high massif',
+        text: 'A full day on the upper moor toward the summit ridge above 4,000 metres, watching for the endemic Abyssinian longclaw, then back down to camp.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Down to Addis Ababa',
+        text: 'A morning descent to the road, then south through Debre Markos and across the Blue Nile gorge to Addis Ababa by evening.',
+      },
+    ],
+    places: ['Bahir Dar', 'Choke Mountains', 'Debre Markos', 'Addis Ababa'],
+  },
+  {
+    slug: 'northern-endemics-birding',
+    title: 'Northern Endemics Birding',
+    image: '/images/hero-simien.png',
+    days: '7 Days',
+    nights: 6,
+    style: 'Wildlife · Birding · Private',
+    season: 'Oct – Apr',
+    from: '$3,450 per person',
+    group: '2 – 6 guests',
+    teaser:
+      'The Simien\'s highland specialities — thick-billed raven, wattled ibis, lammergeier — with a specialist guide and no detours.',
+    summary:
+      'Our Rift Valley trip covers the south. This one is built for the northern highlands, where the Simien alone holds around two hundred species, including five Ethiopian endemics and a dozen near-endemics. An ornithologist travels with you from Gondar, and the days are shaped around birds rather than sightseeing.',
+    includes: [
+      'A specialist bird guide throughout',
+      'Return flights Addis Ababa – Gondar',
+      'Private 4x4 transfers and all Simien park fees and scouts',
+      'Three nights at an escarpment lodge inside the park area',
+      'Full board in the mountains, breakfast in Gondar and Addis',
+      'A species checklist and daily sightings log',
+    ],
+    excludes: [
+      'International flights and Ethiopian visa fees',
+      'Travel insurance (required)',
+      'Personal optics and field guides',
+      'The optional Guassa extension',
+    ],
+    itinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrive Addis Ababa',
+        text: 'Private transfer and a briefing with your bird guide on the northern target list.',
+      },
+      {
+        day: 'Day 2',
+        title: 'Gondar',
+        text: 'A morning flight north, then an afternoon on the wooded edges of the castle grounds and the town\'s church compounds.',
+      },
+      {
+        day: 'Days 3 – 5',
+        title: 'Simien Mountains',
+        text: 'Three full days from Sankaber to Geech and Chenek: thick-billed raven, wattled ibis, spot-breasted plover and white-collared pigeon on the grassland, and lammergeier riding the escarpment updrafts.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Back to Addis Ababa',
+        text: 'A final dawn session on the rim, the drive down to Gondar, and an afternoon flight south.',
+      },
+      {
+        day: 'Day 7',
+        title: 'Departure',
+        text: 'A checklist review over breakfast before your departure — or two more days on the Guassa Plateau for the Ankober serin and blue-winged goose.',
+      },
+    ],
+    places: ['Gondar', 'Simien Mountains', 'Sankaber', 'Chenek'],
   },
   {
     slug: 'highlands-and-wildlife',
