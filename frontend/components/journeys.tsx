@@ -6,7 +6,9 @@ import { tours as staticTours } from '@/lib/site'
 import type { Tour } from '@/lib/site'
 
 export function Journeys({ tours = staticTours }: { tours?: Tour[] }) {
-  const featured = tours.filter((t) => t.featured)
+  // Capped so the homepage grid stays at two rows, even if more tours are
+  // flagged as featured in the admin.
+  const featured = tours.filter((t) => t.featured).slice(0, 6)
 
   return (
     <section id="tours" className="shell py-20 sm:py-24 lg:py-32">

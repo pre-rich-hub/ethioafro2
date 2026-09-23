@@ -1424,7 +1424,6 @@ export const tours: Tour[] = [
       },
     ],
     places: ['Mekele', 'Dallol', 'Lake Assale', 'Erta Ale'],
-    featured: true,
   },
   {
     slug: 'omo-valley-immersion',
@@ -1481,7 +1480,6 @@ export const tours: Tour[] = [
       },
     ],
     places: ['Dorze', 'Turmi', 'Dimeka', 'Mursi Highlands', 'Karo'],
-    featured: true,
   },
   {
     slug: 'timkat-festival-journey',
@@ -1533,7 +1531,6 @@ export const tours: Tour[] = [
       },
     ],
     places: ['Addis Ababa', 'Gondar', 'Lalibela'],
-    featured: true,
   },
   {
     slug: 'ethiopia-through-the-lens',

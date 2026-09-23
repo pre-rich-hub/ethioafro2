@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import type { Tour } from '@/lib/site'
 
 export function TourCard({
@@ -41,11 +42,9 @@ export function TourCard({
         </p>
 
         {/* See the Journey link */}
-        <div className="mt-4 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-accent-light/90 group-hover:text-accent-light transition-colors duration-300">
+        <div className="mt-5 inline-flex items-center gap-2.5 rounded-sm border border-accent-light/70 bg-charcoal/30 px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.16em] text-accent-light backdrop-blur-sm transition-all duration-300 group-hover:border-accent-light group-hover:bg-accent-light group-hover:text-charcoal sm:text-[11px]">
           <span>See the Journey</span>
-          <span className="transition-transform duration-300 group-hover:translate-x-1">
-            &rarr;
-          </span>
+          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </div>
       </div>
     </Link>
