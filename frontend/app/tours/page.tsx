@@ -1,13 +1,10 @@
 import type { Metadata } from 'next'
-import { PageHero } from '@/components/page-hero'
-import { Reveal } from '@/components/reveal'
-import { SectionHeading } from '@/components/section-heading'
-import { ToursGrid } from '@/components/tours-grid'
-import { WaysToTravel } from '@/components/ways-to-travel'
-import { CtaBand } from '@/components/cta-band'
-import { promises } from '@/lib/site'
-import { getToursData } from '@/lib/data'
-
+import { PageHero } from '@/components/common/PageHero'
+import { CtaBand } from '@/features/enquiries'
+import { getToursData } from '@/features/tours/api/tour-data.api'
+import { TourTravelStyles } from '@/features/tours/components/TourTravelStyles'
+import { TourCollection } from '@/features/tours/components/TourCollection'
+import { TourPromises } from '@/features/tours/components/TourPromises'
 export const metadata: Metadata = {
   title: 'Tours & Journeys',
   description:
@@ -30,51 +27,13 @@ export default async function ToursPage() {
       />
 
       {/* Ways to travel */}
-      <section className="shell pt-16 sm:pt-20 lg:pt-28">
-        <SectionHeading
-          eyebrow="Ways to Travel"
-          title="Choose how you'd like to travel"
-          aside="Every journey can be private. Pick a style to see the routes built for it."
-        />
-        <WaysToTravel tours={tours} onToursPage />
-      </section>
+      <TourTravelStyles tours={tours} />
 
       {/* All journeys */}
-      <section className="shell py-16 sm:py-20 lg:py-28">
-        <SectionHeading
-          eyebrow="The Collection"
-          title="The full route list"
-          aside="Sort by the kind of travel you're after — any route here can be stretched, shortened or joined with another."
-        />
-        <ToursGrid tours={tours} />
-      </section>
+      <TourCollection tours={tours} />
 
       {/* Promises */}
-      <section className="border-y border-border bg-secondary text-secondary-foreground">
-        <div className="shell py-16 sm:py-20 lg:py-28">
-          <SectionHeading
-            eyebrow="How We Work"
-            title="Constant across every route here"
-            tone="dark"
-          />
-          <div className="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-            {promises.map((p, i) => (
-              <Reveal
-                key={p.title}
-                delay={i * 90}
-                className="border-t border-background/20 pt-6"
-              >
-                <p className="mb-3 font-serif text-xl text-background sm:text-2xl">
-                  {p.title}
-                </p>
-                <p className="text-pretty text-sm leading-relaxed text-background/70">
-                  {p.text}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TourPromises />
 
       <CtaBand
         title="None of these quite fit? Start blank"

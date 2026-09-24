@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AdminBlog } from './blog-client'
+import { AdminBlog } from '@/features/admin/components/blog/BlogClient'
 
 export const metadata: Metadata = {
   title: 'Blog',

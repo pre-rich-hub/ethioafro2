@@ -1,12 +1,8 @@
 import type { Metadata } from 'next'
-import { PageHero } from '@/components/page-hero'
-import { Reveal } from '@/components/reveal'
-import { PostsGrid } from '@/components/posts-grid'
-import { SectionHeading } from '@/components/section-heading'
-import { NewsletterForm } from '@/components/newsletter-form'
-import { CtaBand } from '@/components/cta-band'
-import { posts } from '@/lib/site'
-
+import { PageHero } from '@/components/common/PageHero'
+import { CtaBand } from '@/features/enquiries'
+import { BlogArchive } from '@/features/blog/components/BlogArchive'
+import { JournalNewsletter } from '@/features/blog/components/JournalNewsletter'
 export const metadata: Metadata = {
   title: 'The Journal',
   description:
@@ -27,38 +23,10 @@ export default function BlogPage() {
       />
 
       {/* All posts */}
-      <section>
-        <div className="shell py-16 sm:py-20 lg:py-28">
-          <SectionHeading
-            eyebrow="Archive"
-            title="Everything we've written"
-            aside="Six pieces so far, each one written to actually answer something."
-          />
-          <PostsGrid posts={posts} />
-        </div>
-      </section>
+      <BlogArchive />
 
       {/* Newsletter */}
-      <section className="bg-secondary text-secondary-foreground">
-        <div className="shell grid gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-24">
-          <Reveal>
-            <p className="eyebrow mb-5 text-accent-light">
-              <span className="rule" />
-              The Letter
-            </p>
-            <h2 className="max-w-[22ch] text-balance text-3xl leading-[1.1] text-background sm:text-4xl">
-              Four letters a year, nothing in between
-            </h2>
-            <p className="mt-5 max-w-md text-pretty leading-relaxed text-background/70">
-              Upcoming festival dates, lodges we've genuinely stayed at, and
-              occasionally a direct answer on where to skip this season.
-            </p>
-          </Reveal>
-          <Reveal delay={120} className="lg:justify-self-end">
-            <NewsletterForm />
-          </Reveal>
-        </div>
-      </section>
+      <JournalNewsletter />
 
       <CtaBand
         title="Have a question these didn't answer?"

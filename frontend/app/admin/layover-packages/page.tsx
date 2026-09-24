@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AdminLayoverPackages } from './layover-packages-client'
+import { AdminLayoverPackages } from '@/features/admin/components/layover-packages/LayoverPackagesClient'
 
 export const metadata: Metadata = {
   title: 'Layover Packages',

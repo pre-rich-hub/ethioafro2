@@ -1,10 +1,10 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
-import { SiteNav } from '@/components/site-nav'
-import { SiteFooter } from '@/components/site-footer'
-import { FloatingSupport } from '@/components/floating-support'
-import { RouteProgress } from '@/components/route-progress'
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+import { FloatingSupport } from '@/features/support'
+import { RouteProgress } from '@/components/layout/RouteProgress'
 import './globals.css'
 
 const inter = Inter({
@@ -102,9 +102,9 @@ export default function RootLayout({
           Skip to content
         </a>
         <RouteProgress />
-        <SiteNav />
+        <Navbar />
         <main id="main">{children}</main>
-        <SiteFooter />
+        <Footer />
         <FloatingSupport />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

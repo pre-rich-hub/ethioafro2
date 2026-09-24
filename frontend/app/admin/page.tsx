@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AdminDashboard } from './admin-dashboard'
+import { AdminDashboard } from '@/features/admin/components/dashboard/AdminDashboard'
 
 export const metadata: Metadata = {
   title: 'Dashboard',

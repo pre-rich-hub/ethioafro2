@@ -1,0 +1,6 @@
+export { BrandIntro } from './components/BrandIntro'
+export { Gallery } from './components/Gallery'
+export { Hero } from './components/Hero'
+export { Testimonial } from './components/Testimonial'
+export { WhereToNext } from './components/WhereToNext'
+export { WhyEthiopia } from './components/WhyEthiopia'

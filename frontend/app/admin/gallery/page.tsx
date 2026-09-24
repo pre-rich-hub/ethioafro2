@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AdminGallery } from './gallery-client'
+import { AdminGallery } from '@/features/admin/components/gallery/GalleryClient'
 
 export const metadata: Metadata = {
   title: 'Gallery',

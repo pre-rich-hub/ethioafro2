@@ -1,0 +1,6 @@
+export { TravelChapter } from './components/TravelChapter'
+export { TravelIntroduction } from './components/TravelIntroduction'
+export { TravelJourneys } from './components/TravelJourneys'
+export { TravelNavigation } from './components/TravelNavigation'
+export { TravelPlaces } from './components/TravelPlaces'
+export { TravelStory } from './components/TravelStory'

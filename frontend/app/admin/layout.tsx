@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { AdminSidebar } from '@/components/admin/sidebar'
-import { getAdminApiBaseUrl } from '@/lib/admin/server'
+import { AdminSidebar } from '@/features/admin/components/Sidebar'
+import { getAdminApiBaseUrl } from '@/lib/config/env'
 
 export const metadata: Metadata = {
   title: {

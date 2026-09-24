@@ -1,0 +1,5 @@
+export { CompanyTimeline } from './components/CompanyTimeline'
+export { FamilyTeam } from './components/FamilyTeam'
+export { FounderLetter } from './components/FounderLetter'
+export { InternationalPerspective } from './components/InternationalPerspective'
+export { ResponsibleEmployment } from './components/ResponsibleEmployment'

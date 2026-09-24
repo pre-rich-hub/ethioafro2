@@ -1,0 +1,5 @@
+export { TourCard } from './components/TourCard'
+export { ToursGrid } from './components/TourGrid'
+export { TourFilters } from './components/TourFilters'
+export { Journeys } from './components/Journeys'
+export { WaysToTravel } from './components/WaysToTravel'
