@@ -61,9 +61,9 @@ const envSchema = z.object({
   GROQ_BASE_URL: z.string().default("https://api.groq.com/openai/v1"),
   // Grounded in the catalog, so the work is instruction following rather than
   // knowledge, and this holds those rules while streaming fast.
-  ASSISTANT_MODEL: z.string().default("llama-3.3-70b-versatile"),
+  ASSISTANT_MODEL: z.string().default("openai/gpt-oss-120b"),
   // Same provider as the primary, so it reuses the one configured key.
-  ASSISTANT_FALLBACK_MODEL: z.string().optional().default("llama-3.1-8b-instant"),
+  ASSISTANT_FALLBACK_MODEL: z.string().optional().default("openai/gpt-oss-20b"),
   ASSISTANT_MAX_ATTEMPTS: z.coerce.number().int().min(1).max(6).default(3),
   ASSISTANT_RETRY_BASE_MS: z.coerce.number().int().positive().default(500),
   ASSISTANT_MAX_MESSAGES: z.coerce.number().int().positive().default(30),

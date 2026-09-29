@@ -52,7 +52,7 @@ function hashIp(ip: string): string {
  * and request ids. Visitors get a sentence they can act on; the detail stays in
  * the log where it can be matched against the requestId the client already has.
  */
-function publicErrorMessage(error: unknown): string {
+export function publicErrorMessage(error: unknown): string {
   if (error instanceof ProviderError) {
     logger.error(
       { status: error.status, retryable: error.retryable, detail: error.detail },
@@ -64,6 +64,16 @@ function publicErrorMessage(error: unknown): string {
     }
     if (error.status === 408) {
       return "The assistant took too long to answer. Please try again.";
+    }
+    // A wrong model name is an operator error that retrying can never fix, and it
+    // is the most likely cause of an assistant that is up but never answers.
+    // "Try again shortly" sent someone hunting for a network fault for a while
+    // before the real cause, a 404 on the configured model, turned up in the log.
+    if (error.status === 404) {
+      return `The assistant is misconfigured: the model ${env.ASSISTANT_MODEL} is not available on this account. Set ASSISTANT_MODEL to a model the provider serves.`;
+    }
+    if (error.status === 401 || error.status === 403) {
+      return "The assistant is misconfigured: the provider rejected the API key. Check the key in .env.";
     }
     return "The assistant is temporarily unavailable. Please try again shortly.";
   }

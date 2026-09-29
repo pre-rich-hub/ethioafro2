@@ -160,29 +160,40 @@ To use it:
 ASSISTANT_ENABLED=true
 ASSISTANT_PROVIDER=groq
 GROQ_API_KEY=gsk_...
-ASSISTANT_MODEL=llama-3.3-70b-versatile
+ASSISTANT_MODEL=openai/gpt-oss-120b
 ```
 
-Groq's production models are `llama-3.3-70b-versatile` (best at following the
-grounding rules, 280 tps), `llama-3.1-8b-instant` (560 tps),
-`openai/gpt-oss-120b` and `openai/gpt-oss-20b` (1000 tps, cheapest). Confirm what
-your account can reach with `GET $GROQ_BASE_URL/models`, since the lineup rotates
-and preview models get withdrawn without notice.
+**Do not pick a model from the provider's published lineup.** Both failures in
+this project were a model the docs advertised and the account could not call.
+Gemini returned 404 for the numbered 2.x models on a recent key, and Groq
+returned 404 for `llama-3.3-70b-versatile` and `llama-3.1-8b-instant`, the
+exact models its own docs label as production. Groq gates access per account,
+so the docs table is global and your subset is not.
 
-Worth weighing for this workload: every response is grounded in the catalog, so
-the job is instruction following rather than knowledge, and a 70B model at 280 tps
-is a better fit than a small fast one. It also removes the latency problem
-noted below, since Groq streams at a few hundred tokens a second against the
-7.8s to 36s the Gemini key was returning.
+Run `pnpm assistant:check` instead. It lists the models your key can reach,
+sends one streaming request to each, and reports first-token and total latency
+alongside the configured ones. Exit code is non-zero if a configured model is
+not callable, so it works as a deploy gate.
+
+Defaults are `openai/gpt-oss-120b` primary and `openai/gpt-oss-20b` fallback,
+both open-weight and the cheapest tier. Same provider means one key covers
+both.
+
+Two things to know about `openai/gpt-oss-*`. They are reasoning models, so
+part of `ASSISTANT_MAX_OUTPUT_TOKENS` is spent on hidden reasoning before any
+visible text; at 60 tokens total a request returns an empty reply that looks
+like a dead model. The 600 default is comfortable, but lowering it too far
+silently truncates answers to nothing. They also emit `delta.reasoning` in the
+stream alongside `delta.content`, which the parser discards.
 
 `GROQ_BASE_URL` is overridable, which is how the request shape is tested without a
 live key.
 
 ### When the provider misbehaves
 
-Gemini overloads individual models without taking the account down, and a bare
-`generateContentStream` call surfaces a `503 high demand` on the first request
-after a spike. The provider layer handles this:
+Groq overloads individual models without taking the account down, and a bare
+chat completion call surfaces a `503` on the first request after a spike. The
+provider layer handles this:
 
 - `ASSISTANT_MAX_ATTEMPTS` attempts on the primary model, with exponential
   backoff and jitter so a crowd of clients does not return in lockstep.
