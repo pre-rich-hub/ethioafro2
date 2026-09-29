@@ -1,7 +1,8 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import helmet from "helmet";
+import helmetModule from "helmet";
+import type { RequestHandler } from "express";
 import path from "node:path";
 
 import { env } from "./config/env.js";
@@ -16,6 +17,13 @@ export const app = express();
 // Rate limiters key on req.ip. Without this the whole deployment shares one
 // bucket, because every request appears to come from the same proxy hop.
 app.set("trust proxy", 1);
+
+// helmet 8 is a dual ESM/CJS package. Depending on which declaration file the
+// compiler picks, the default import can arrive typed as the module namespace
+// instead of the function, which is not callable. Unwrap it either way so the
+// build does not depend on that choice.
+const helmet = ((helmetModule as { default?: unknown }).default ??
+  helmetModule) as () => RequestHandler;
 
 app.use(helmet());
 app.use(
