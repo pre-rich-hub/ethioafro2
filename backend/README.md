@@ -43,9 +43,16 @@ Two connection strings, and the split matters:
 | `DIRECT_URL` | `prisma/schema.prisma` as Prisma's `directUrl`, so migrations, `db push` and studio never go through the pooler. |
 | `DATABASE_URL` | Every runtime query. Use the Neon pooled endpoint here. |
 
-Set the pooled endpoint on 6543 and the direct one on 5432. Pointing
-`DATABASE_URL` at the pooler is what keeps a serverless cold start from opening
-a new Postgres connection per request.
+Set the pooled endpoint on 6543 and the direct one on 5432 if your Neon project
+has transaction pooling enabled. Session pooling on 5432 is fine too, and is what
+this project currently uses. Pointing `DATABASE_URL` at the pooler is what keeps a
+serverless cold start from opening a new Postgres connection per request.
+
+`connect_timeout=30` is not optional on a scale-to-zero database. Neon suspends the
+compute after a few idle minutes, and the first query after a wake fails with
+`Can't reach database server` while the compute is still starting. Measured here,
+a cold start took 3.1s and the default timeout lost the race. Without it, the
+first visitor to an idle site gets a 500.
 
 ## Configuration
 
