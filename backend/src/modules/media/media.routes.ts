@@ -1,10 +1,11 @@
 import { Router } from "express";
+import type { Router as RouterType } from "express";
 import { z } from "zod";
 import { prisma } from "../../config/database.js";
 import { asyncHandler } from "../../utils/async-handler.js";
 import { HttpError } from "../../middleware/error.middleware.js";
 
-export const mediaRouter = Router();
+export const mediaRouter: RouterType = Router();
 
 mediaRouter.get(
   "/:id",

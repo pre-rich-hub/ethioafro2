@@ -2,7 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import helmetModule from "helmet";
-import type { RequestHandler } from "express";
+import type { RequestHandler, Express } from "express";
 import path from "node:path";
 
 import { env } from "./config/env.js";
@@ -12,7 +12,7 @@ import { requestId, logRequest } from "./middleware/logging.middleware.js";
 import { healthRouter } from "./modules/health/health.routes.js";
 import { registerRoutes } from "./routes.js";
 
-export const app = express();
+export const app: Express = express();
 
 // Rate limiters key on req.ip. Without this the whole deployment shares one
 // bucket, because every request appears to come from the same proxy hop.

@@ -1,6 +1,6 @@
 import { createHmac } from "node:crypto";
 import { Router } from "express";
-import type { Request, Response } from "express";
+import type { Request, Response, Router as RouterType } from "express";
 import { rateLimit } from "express-rate-limit";
 import { env } from "../../config/env.js";
 import { logger } from "../../config/pino.js";
@@ -10,7 +10,7 @@ import { assistantSchema } from "./assistant.validation.js";
 import { ProviderError } from "./provider.client.js";
 import { loadUsage, runChat } from "./assistant.service.js";
 
-export const assistantRouter = Router();
+export const assistantRouter: RouterType = Router();
 
 // ---------------------------------------------------------------------------
 // Rate limiter — 20 requests per 10 minutes per IP

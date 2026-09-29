@@ -1,4 +1,5 @@
 import { Router } from "express";
+import type { Router as RouterType } from "express";
 import bcrypt from "bcryptjs";
 import { prisma } from "../../config/database.js";
 import { env } from "../../config/env.js";
@@ -20,7 +21,7 @@ import { uploadFor, urlForFile } from "../../middleware/upload.middleware.js";
 import { loginLimiter } from "../../middleware/rate-limit.middleware.js";
 import { sendPasswordChangedEmail } from "../../services/email.service.js";
 
-export const authRouter = Router();
+export const authRouter: RouterType = Router();
 
 const profileUpload = uploadFor("admin");
 

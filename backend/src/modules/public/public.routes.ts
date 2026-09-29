@@ -1,4 +1,5 @@
 import { Router } from "express";
+import type { Router as RouterType } from "express";
 import { prisma } from "../../config/database.js";
 import { asyncHandler } from "../../utils/async-handler.js";
 import { ok } from "../../utils/api-response.js";
@@ -15,7 +16,7 @@ import {
 } from "./public.validation.js";
 import { findTourBySlug, listTours } from "./public.service.js";
 
-export const publicRouter = Router();
+export const publicRouter: RouterType = Router();
 
 // ---------------------------------------------------------------------------
 // Tours
