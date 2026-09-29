@@ -23,11 +23,16 @@ function WhatsAppIcon({ className = 'h-5 w-5' }: { className?: string }) {
 
 type Message = StreamMessage
 
+// Kept to what the assistant can answer without seeded catalog rows. The
+// original four were all catalog lookups, so on an unseeded database every chip
+// produced the same "nothing in my catalog, use the contact form" deflection,
+// which read as a broken assistant rather than an empty one. Swap in
+// catalog-specific questions once tours are seeded.
 const QUICK_QUESTIONS = [
-    'What makes Lalibela worth a special trip?',
-    'Tell me about the Omo Valley tours',
-    'When should I actually travel to Ethiopia?',
-    'How does the booking process work?',
+    'How does booking work?',
+    'When is the best time to visit Ethiopia?',
+    'What are your cancellation terms?',
+    'How do I reach you?',
 ]
 
 export function FloatingSupport() {
