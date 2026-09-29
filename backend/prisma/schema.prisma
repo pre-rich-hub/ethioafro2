@@ -1,5 +1,9 @@
 generator client {
   provider = "prisma-client-js"
+  // "native" resolves on whichever machine runs the install, which is not
+  // necessarily the one that serves traffic. Naming the deploy target too means
+  // Vercel does not depend on that coincidence.
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {
