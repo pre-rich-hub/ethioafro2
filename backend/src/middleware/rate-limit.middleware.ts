@@ -5,7 +5,10 @@ export const globalLimiter = rateLimit({
   limit: 300,
   standardHeaders: true,
   legacyHeaders: false,
-  skip: (req) => req.path === "/health" || req.path === "/ready",
+  // The health router is mounted at /health, so by the time this runs
+  // req.path is still the full path. Matching "/ready" here would never fire
+  // and a load balancer polling /health/ready would spend the bucket.
+  skip: (req) => req.path === "/health" || req.path === "/health/ready",
 });
 
 export const publicFormLimiter = rateLimit({
