@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from 'react'
 import { MessageSquare, X, Send } from 'lucide-react'
 import { contact } from '@/lib/constants/contact'
 import { streamAssistantChat } from '@/features/support/api/assistant.api'
+import { appendDelta } from '@/features/support/lib/assistant-stream'
+import type { StreamMessage } from '@/features/support/lib/assistant-stream'
 
 // Custom WhatsApp SVG Icon to look consistent and sharp
 function WhatsAppIcon({ className = 'h-5 w-5' }: { className?: string }) {
@@ -19,12 +21,7 @@ function WhatsAppIcon({ className = 'h-5 w-5' }: { className?: string }) {
     )
 }
 
-type Message = {
-    id: string
-    sender: 'user' | 'bot'
-    text: string
-    timestamp: Date
-}
+type Message = StreamMessage
 
 const QUICK_QUESTIONS = [
     'What makes Lalibela worth a special trip?',
@@ -96,23 +93,13 @@ export function FloatingSupport() {
                 sessionIdRef.current = sessionId
             },
             onDelta: (delta) => {
-                if (activeBotMessageIdRef.current === null) {
-                    const id = crypto.randomUUID()
-                    activeBotMessageIdRef.current = id
-                    setIsTyping(false)
-                    setMessages((prev) => [...prev, {
-                        id,
-                        sender: 'bot',
-                        text: delta,
-                        timestamp: new Date(),
-                    }])
-                } else {
-                    setMessages((prev) => prev.map((message) =>
-                        message.id === activeBotMessageIdRef.current
-                            ? { ...message, text: message.text + delta }
-                            : message
-                    ))
-                }
+                // The first token of a reply replaces the typing indicator.
+                if (activeBotMessageIdRef.current === null) setIsTyping(false)
+                const result = appendDelta(activeBotMessageIdRef.current, delta, () =>
+                    crypto.randomUUID(),
+                )
+                activeBotMessageIdRef.current = result.nextActiveId
+                setMessages((prev) => result.update(prev))
             },
             onDone: (done) => {
                 if (done.handoff.type !== 'none') {
