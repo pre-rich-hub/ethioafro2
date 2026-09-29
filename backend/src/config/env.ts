@@ -53,9 +53,12 @@ const envSchema = z.object({
 
   // AI assistant
   ASSISTANT_ENABLED: z.preprocess(envBoolean, z.boolean()).default(false),
-  ASSISTANT_PROVIDER: z.enum(["openai", "gemini"]).default("gemini"),
+  ASSISTANT_PROVIDER: z.enum(["openai", "gemini", "groq"]).default("gemini"),
   OPENAI_API_KEY: z.string().optional().default(""),
   GEMINI_API_KEY: z.string().optional().default(""),
+  GROQ_API_KEY: z.string().optional().default(""),
+  // Overridable so the provider can be pointed at a mock in tests.
+  GROQ_BASE_URL: z.string().default("https://api.groq.com/openai/v1"),
   ASSISTANT_MODEL: z.string().default("gemini-flash-latest"),
   // Tried when the primary model keeps failing. Gemini's alias tracks whatever
   // the account is actually entitled to, which makes it the safest fallback.
@@ -108,6 +111,9 @@ if (parsed.ASSISTANT_ENABLED) {
   }
   if (parsed.ASSISTANT_PROVIDER === "gemini" && !parsed.GEMINI_API_KEY) {
     throw new Error("ASSISTANT_ENABLED is true but GEMINI_API_KEY is not configured.");
+  }
+  if (parsed.ASSISTANT_PROVIDER === "groq" && !parsed.GROQ_API_KEY) {
+    throw new Error("ASSISTANT_ENABLED is true but GROQ_API_KEY is not configured.");
   }
 }
 

@@ -141,8 +141,42 @@ vector store.
 
 It ships disabled. `ASSISTANT_ENABLED=false` makes the route return 503 before
 validation, so a disabled assistant never reaches a provider. To turn it on you
-need `ASSISTANT_ENABLED=true` plus the key for `ASSISTANT_PROVIDER`
-(`OPENAI_API_KEY` or `GEMINI_API_KEY`).
+need `ASSISTANT_ENABLED=true` plus the key for `ASSISTANT_PROVIDER`.
+
+### Providers
+
+`ASSISTANT_PROVIDER` takes `openai`, `gemini` or `groq`. The boot check refuses to
+start if the selected provider has no key, so a typo fails immediately instead of
+on the first visitor's request.
+
+Groq serves the OpenAI chat completions shape, so it reuses the same client with a
+different `baseURL`. The one difference that matters: OpenAI's newer models want
+`max_completion_tokens` and Groq documents `max_tokens`, so the parameter name is
+per provider rather than shared. Sending the wrong one is a 400.
+
+To use it:
+
+```bash
+ASSISTANT_ENABLED=true
+ASSISTANT_PROVIDER=groq
+GROQ_API_KEY=gsk_...
+ASSISTANT_MODEL=llama-3.3-70b-versatile
+```
+
+Groq's production models are `llama-3.3-70b-versatile` (best at following the
+grounding rules, 280 tps), `llama-3.1-8b-instant` (560 tps),
+`openai/gpt-oss-120b` and `openai/gpt-oss-20b` (1000 tps, cheapest). Confirm what
+your account can reach with `GET $GROQ_BASE_URL/models`, since the lineup rotates
+and preview models get withdrawn without notice.
+
+Worth weighing for this workload: every response is grounded in the catalog, so
+the job is instruction following rather than knowledge, and a 70B model at 280 tps
+is a better fit than a small fast one. It also removes the latency problem
+noted below, since Groq streams at a few hundred tokens a second against the
+7.8s to 36s the Gemini key was returning.
+
+`GROQ_BASE_URL` is overridable, which is how the request shape is tested without a
+live key.
 
 ### When the provider misbehaves
 

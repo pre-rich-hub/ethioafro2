@@ -249,19 +249,40 @@ function withFallback(
 }
 
 // ---------------------------------------------------------------------------
-// OpenAI
+// OpenAI-compatible providers
 // ---------------------------------------------------------------------------
 
-export class OpenAIProvider implements ChatProvider {
+/**
+ * Groq serves the OpenAI chat completions shape, so both providers share this.
+ * The two differ in one way that matters: OpenAI's newer models require
+ * `max_completion_tokens`, while Groq documents `max_tokens`. Sending the wrong
+ * one is a 400, so the name is a per-provider setting rather than a constant.
+ */
+class OpenAICompatibleProvider implements ChatProvider {
   private client: OpenAI | undefined;
   private readonly model: string;
+  private readonly tokenParam: "max_completion_tokens" | "max_tokens";
 
-  constructor(model: string = env.ASSISTANT_MODEL) {
+  constructor(
+    model: string,
+    apiKey: string,
+    private readonly baseURL: string | undefined,
+    tokenParam: "max_completion_tokens" | "max_tokens",
+  ) {
     this.model = model;
+    this.tokenParam = tokenParam;
+    this.apiKey = apiKey;
   }
 
+  private readonly apiKey: string;
+
   private getClient(): OpenAI {
-    if (!this.client) this.client = new OpenAI({ apiKey: env.OPENAI_API_KEY });
+    if (!this.client) {
+      this.client = new OpenAI({
+        apiKey: this.apiKey,
+        ...(this.baseURL ? { baseURL: this.baseURL } : {}),
+      });
+    }
     return this.client;
   }
 
@@ -270,15 +291,27 @@ export class OpenAIProvider implements ChatProvider {
       {
         model: this.model,
         messages: [{ role: "system", content: req.system }, ...req.messages],
-        max_completion_tokens: req.maxOutputTokens,
+        [this.tokenParam]: req.maxOutputTokens,
         stream: true,
-      },
+      } as OpenAI.Chat.ChatCompletionCreateParamsStreaming,
       { signal: req.signal },
     );
     for await (const chunk of stream) {
       const text = chunk.choices?.[0]?.delta?.content;
       if (text) yield { text };
     }
+  }
+}
+
+export class OpenAIProvider extends OpenAICompatibleProvider {
+  constructor(model: string = env.ASSISTANT_MODEL) {
+    super(model, env.OPENAI_API_KEY, undefined, "max_completion_tokens");
+  }
+}
+
+export class GroqProvider extends OpenAICompatibleProvider {
+  constructor(model: string = env.ASSISTANT_MODEL) {
+    super(model, env.GROQ_API_KEY, env.GROQ_BASE_URL, "max_tokens");
   }
 }
 
@@ -326,10 +359,16 @@ export class GeminiProvider implements ChatProvider {
 export function createProvider(
   log: (info: { message: string; data: Record<string, unknown> }) => void = () => undefined,
 ): ChatProvider {
-  const build = (model: string): ChatProvider =>
-    env.ASSISTANT_PROVIDER === "openai"
-      ? new OpenAIProvider(model)
-      : new GeminiProvider(model);
+  const build = (model: string): ChatProvider => {
+    switch (env.ASSISTANT_PROVIDER) {
+      case "openai":
+        return new OpenAIProvider(model);
+      case "groq":
+        return new GroqProvider(model);
+      default:
+        return new GeminiProvider(model);
+    }
+  };
 
   const fallbackModel = env.ASSISTANT_FALLBACK_MODEL.trim();
   const primary = build(env.ASSISTANT_MODEL);
