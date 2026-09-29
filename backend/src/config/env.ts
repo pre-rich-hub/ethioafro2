@@ -56,7 +56,12 @@ const envSchema = z.object({
   ASSISTANT_PROVIDER: z.enum(["openai", "gemini"]).default("gemini"),
   OPENAI_API_KEY: z.string().optional().default(""),
   GEMINI_API_KEY: z.string().optional().default(""),
-  ASSISTANT_MODEL: z.string().default("gemini-2.0-flash"),
+  ASSISTANT_MODEL: z.string().default("gemini-flash-latest"),
+  // Tried when the primary model keeps failing. Gemini's alias tracks whatever
+  // the account is actually entitled to, which makes it the safest fallback.
+  ASSISTANT_FALLBACK_MODEL: z.string().optional().default(""),
+  ASSISTANT_MAX_ATTEMPTS: z.coerce.number().int().min(1).max(6).default(3),
+  ASSISTANT_RETRY_BASE_MS: z.coerce.number().int().positive().default(500),
   ASSISTANT_MAX_MESSAGES: z.coerce.number().int().positive().default(30),
   ASSISTANT_MAX_SESSION_TOKENS: z.coerce.number().int().positive().default(50000),
   ASSISTANT_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(600),

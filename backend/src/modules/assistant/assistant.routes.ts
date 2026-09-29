@@ -2,10 +2,12 @@ import { createHmac } from "node:crypto";
 import { Router } from "express";
 import type { Request, Response } from "express";
 import { rateLimit } from "express-rate-limit";
-import { env, isProduction } from "../../config/env.js";
+import { env } from "../../config/env.js";
+import { logger } from "../../config/pino.js";
 import { HttpError } from "../../middleware/error.middleware.js";
 import { fail, ok } from "../../utils/api-response.js";
 import { assistantSchema } from "./assistant.validation.js";
+import { ProviderError } from "./provider.client.js";
 import { loadUsage, runChat } from "./assistant.service.js";
 
 export const assistantRouter = Router();
@@ -43,6 +45,33 @@ function hashIp(ip: string): string {
   return createHmac("sha256", env.ASSISTANT_IP_HASH_SALT)
     .update(ip)
     .digest("hex");
+}
+
+/**
+ * Provider errors carry the upstream body, which leaks model names, quota state
+ * and request ids. Visitors get a sentence they can act on; the detail stays in
+ * the log where it can be matched against the requestId the client already has.
+ */
+function publicErrorMessage(error: unknown): string {
+  if (error instanceof ProviderError) {
+    logger.error(
+      { status: error.status, retryable: error.retryable, detail: error.detail },
+      "assistant provider failure",
+    );
+
+    if (error.status === 429) {
+      return "The assistant has reached its usage limit for now. Please try again later.";
+    }
+    if (error.status === 408) {
+      return "The assistant took too long to answer. Please try again.";
+    }
+    return "The assistant is temporarily unavailable. Please try again shortly.";
+  }
+
+  if (error instanceof HttpError) return error.message;
+
+  logger.error({ detail: error instanceof Error ? error.message : String(error) }, "assistant failure");
+  return "The assistant is temporarily unavailable. Please try again shortly.";
 }
 
 // ---------------------------------------------------------------------------
@@ -150,7 +179,7 @@ async function handleChatRequest(req: Request, res: Response): Promise<void> {
     } catch (error) {
       sseWrite(res, "error", {
         success: false,
-        message: error instanceof Error ? error.message : "Assistant reply failed",
+        message: publicErrorMessage(error),
         errors: [],
       });
       res.end();
@@ -167,18 +196,13 @@ async function handleChatRequest(req: Request, res: Response): Promise<void> {
     res.end();
   } catch (error) {
     const status = error instanceof HttpError ? error.status : 500;
-    const message =
-      error instanceof Error ? error.message : "Assistant request failed";
+    const message = publicErrorMessage(error);
 
     if (res.headersSent) {
-      sseWrite(res, "error", {
-        success: false,
-        message: isProduction ? "Assistant reply failed" : message,
-        errors: [],
-      });
+      sseWrite(res, "error", { success: false, message, errors: [] });
       res.end();
     } else {
-      fail(res, isProduction ? "Internal server error" : message, [], status);
+      fail(res, message, [], status);
     }
   }
 }

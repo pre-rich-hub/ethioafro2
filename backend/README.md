@@ -142,8 +142,39 @@ vector store.
 It ships disabled. `ASSISTANT_ENABLED=false` makes the route return 503 before
 validation, so a disabled assistant never reaches a provider. To turn it on you
 need `ASSISTANT_ENABLED=true` plus the key for `ASSISTANT_PROVIDER`
-(`OPENAI_API_KEY` or `GEMINI_API_KEY`). No key is provisioned, so provider
-streaming is untested here.
+(`OPENAI_API_KEY` or `GEMINI_API_KEY`).
+
+### When the provider misbehaves
+
+Gemini overloads individual models without taking the account down, and a bare
+`generateContentStream` call surfaces a `503 high demand` on the first request
+after a spike. The provider layer handles this:
+
+- `ASSISTANT_MAX_ATTEMPTS` attempts on the primary model, with exponential
+  backoff and jitter so a crowd of clients does not return in lockstep.
+- `ASSISTANT_FALLBACK_MODEL` if the primary is exhausted.
+- A free-tier quota error is treated as a hard stop rather than a spike, and a
+  second model is not tried, since the limit is per account and would fail
+  identically.
+- Upstream bodies never reach the browser. The visitor gets a sentence they can
+  act on, and the raw detail goes to the log, where it can be matched against
+  the `requestId` the client already has.
+
+Retrying requires priming the stream, because an async generator does no work
+until it is pulled. The first chunk is buffered, then emitted once.
+
+Budgets, with the reason they are not smaller: `ASSISTANT_STREAM_TIMEOUT_MS` is
+120s and the frontend aborts at 150s. Measured against a live key, a healthy
+reply took 7.8s and a loaded one took 36s, so a 45s server cutoff was cutting off
+answers that were still coming. The server is deliberately below the client so
+it can send a clean error frame instead of leaving the browser to time out.
+
+`ASSISTANT_MODEL` defaults to `gemini-flash-latest` rather than a numbered
+release. Google gates the numbered models by account, and a key created recently
+gets `404 no longer available` for `gemini-2.5-flash` and `gemini-2.0-flash`. The
+alias tracks whatever the account is actually entitled to, which makes it the
+safer default. Verify your own key with a single `generateContent` call before
+relying on a pinned name.
 
 Usage is gated by a per-IP limiter, a per-session in-flight guard, per-session
 message and token caps, and a daily token cap enforced with a single atomic

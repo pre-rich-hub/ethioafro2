@@ -4,9 +4,16 @@ import type { AssistantDone } from '@/features/support/types/assistant.types'
 
 // Streaming chat client for the AI assistant. Deliberately NOT the request()
 // helper above: a real provider stream can take tens of seconds on the
-// serverless lambda, so this uses its own AbortController with a 55s budget
-// instead of the 5s JSON timeout.
-const ASSISTANT_TIMEOUT_MS = 55_000
+// serverless lambda, so this uses its own AbortController instead of the 5s
+// JSON timeout.
+//
+// The budget is generous on purpose. Measured against a live Gemini key, a
+// healthy reply took 7.8s, but a loaded one took 36s, and the backend retries a
+// failed open up to three times before giving up. Cutting off a slow answer at
+// 55s turned a working model into a visible error. The server gives up first at
+// ASSISTANT_STREAM_TIMEOUT_MS and sends a clean error frame, so a message from
+// it is more useful than a client-side abort.
+const ASSISTANT_TIMEOUT_MS = 150_000
 
 export async function streamAssistantChat(
   message: string,

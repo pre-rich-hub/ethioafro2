@@ -1,5 +1,6 @@
 import { HttpError } from "../../middleware/error.middleware.js";
 import { env } from "../../config/env.js";
+import { logger } from "../../config/pino.js";
 import type { CatalogContext } from "./context-builder.js";
 import { CatalogContextBuilder, getCatalogContext } from "./context-builder.js";
 import { estimateTokens, type HandoffType } from "./gating.js";
@@ -171,7 +172,9 @@ export async function runChat(input: RunChatInput): Promise<ChatResult> {
       { role: "user", content: `<user>\n${input.message}\n</user>` },
     ];
 
-    const provider = createProvider();
+    const provider = createProvider((info) => {
+      logger.warn({ ...info.data }, info.message);
+    });
     const controller = new AbortController();
     const abortTimer = setTimeout(
       () => controller.abort(),
