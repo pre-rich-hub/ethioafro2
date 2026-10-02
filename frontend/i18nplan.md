@@ -16,16 +16,18 @@ Priority after this plan: product polish / citation follow-ups as needed.
 ### Done
 - Locale routing via `next-intl` + `proxy.ts` (`localePrefix: 'as-needed'`, `localeDetection: false`)
 - Guest pages under `app/[locale]/`; admin/login outside locales
-- `<html lang={locale}>` via `DocumentShell`
-- LanguagePicker / mobile language list switch locale while preserving path
-- Message catalogs for Nav / Footer / Common / Cta / NotFound; chrome flips with locale
-- SEO (Step 5): `generateMetadata` on all public pages with locale; hreflang + same-locale canonical; sitemap × 5 locales; JSON-LD `inLanguage`; crawlable language links
-- GEO: English FAQs, facts, direct answers
+- `<html lang={locale}>` via `DocumentShell` + Noto Sans SC CJK fallback for `zh`
+- LanguagePicker / mobile language list — crawlable locale links
+- Message catalogs for UI chrome + marketing page shells (Steps 2–3)
+- Catalogue card/meta overlays for tours, destinations, experiences, journal (Step 4)
+- SEO locales: hreflang, sitemap × 5, JSON-LD `inLanguage`, localized metadata (Step 5)
+- QA signed off in [`i18n-qa.md`](i18n-qa.md) (Step 6)
+- GEO: English FAQs, facts, direct answers (destination FAQs still EN)
 
-### Missing
-- Marketing page shells still English (heroes, section labels)
-- Catalogue data (tours, destinations, journal) is English-only TypeScript
-- Admin stays English-only (out of scope for guest i18n)
+### Missing / Pass-2
+- Deep catalogue bodies (itineraries, destination paragraphs, journal essays, founder letter) — see Pass-2 in Step 4 + [`i18n-qa.md`](i18n-qa.md)
+- Admin stays English-only (out of scope)
+- Amharic / CMS / human-reviewed itinerary MT — later
 
 ---
 
@@ -148,10 +150,10 @@ Priority after this plan: product polish / citation follow-ups as needed.
 ## Step 6 — QA checklist + handoff
 
 ### Tasks
-- [ ] Manual pass: each locale × Home, Tours, one tour, one destination, Contact
-- [ ] RTL: not required (no Arabic locale in v1)
-- [ ] Fonts: confirm Fraunces/Inter cover Latin + check Chinese fallback (add Noto Sans SC or similar for `zh` if glyphs missing)
-- [ ] Note open backlog (full essay translation, Amharic later, CMS)
+- [x] Manual pass: each locale × Home, Tours, one tour, one destination, Contact — **25/25 Pass** (2026-10-02); details in [`i18n-qa.md`](i18n-qa.md)
+- [x] RTL: not required (no Arabic locale in v1)
+- [x] Fonts: Fraunces/Inter for Latin; added **Noto Sans SC** CJK fallback for `zh` (`DocumentShell` + `globals.css`)
+- [x] Note open backlog (Pass-2 bodies, Amharic later, CMS) — [`i18n-qa.md`](i18n-qa.md)
 
 **Done when:** Checklist signed off; i18nplan Step boxes ticked.
 
