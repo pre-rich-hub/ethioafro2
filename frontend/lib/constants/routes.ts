@@ -1,7 +1,11 @@
 export const navLinks = [
-  { label: 'Destinations', href: '/destinations' },
-  { label: 'Tours', href: '/tours' },
-  { label: 'Experiences', href: '/experiences' },
-  { label: 'Journal', href: '/blog' },
-  { label: 'About Us', href: '/about' },
+  { key: 'destinations', href: '/destinations' },
+  { key: 'tours', href: '/tours' },
+  { key: 'experiences', href: '/experiences' },
+  { key: 'journal', href: '/blog' },
+  { key: 'about', href: '/about' },
 ] as const
+
+export type NavLinkKey = (typeof navLinks)[number]['key']
+
+export const navDropdownKeys = ['destinations', 'tours', 'experiences'] as const satisfies readonly NavLinkKey[]

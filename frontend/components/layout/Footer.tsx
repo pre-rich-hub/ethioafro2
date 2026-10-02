@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { Link } from '@/i18n/navigation'
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import { contact } from '@/lib/constants/contact'
 import { company } from '@/lib/seo/entities'
 import { destinations } from '@/features/destinations/data/destination.data'
@@ -16,42 +17,42 @@ const socials = [
   { name: 'TripAdvisor', href: '' },
 ].filter((s) => s.href)
 
-type FooterLink = { label: string; href: string; more?: boolean }
+export async function Footer() {
+  const t = await getTranslations('Footer')
 
-const columns: { title: string; links: FooterLink[] }[] = [
-  {
-    title: 'Destinations',
-    links: [
-      ...destinations
-        .slice(0, 5)
-        .map((d) => ({ label: d.name, href: `/destinations/${d.slug}` })),
-      { label: 'All destinations', href: '/destinations', more: true },
-    ],
-  },
-  {
-    title: 'Tours',
-    links: [
-      ...tours
-        .slice(0, 4)
-        .map((t) => ({ label: t.title, href: `/tours/${t.slug}` })),
-      { label: 'Custom Itineraries', href: '/contact' },
-      { label: 'All tours', href: '/tours', more: true },
-    ],
-  },
-  {
-    title: 'Explore',
-    links: [
-      { label: 'Our Story', href: '/about' },
-      { label: 'Travel Journal', href: '/blog' },
-      { label: 'Experiences', href: '/experiences' },
-      { label: 'Responsible Tourism', href: '/blog/responsible-travel-in-the-omo' },
-      { label: 'When to Visit', href: '/blog/when-to-visit-ethiopia' },
-      { label: 'Contact Us', href: '/contact' },
-    ],
-  },
-]
+  const columns = [
+    {
+      title: t('destinations'),
+      links: [
+        ...destinations
+          .slice(0, 5)
+          .map((d) => ({ label: d.name, href: `/destinations/${d.slug}` })),
+        { label: t('allDestinations'), href: '/destinations', more: true },
+      ],
+    },
+    {
+      title: t('tours'),
+      links: [
+        ...tours
+          .slice(0, 4)
+          .map((tour) => ({ label: tour.title, href: `/tours/${tour.slug}` })),
+        { label: t('customItineraries'), href: '/contact' },
+        { label: t('allTours'), href: '/tours', more: true },
+      ],
+    },
+    {
+      title: t('explore'),
+      links: [
+        { label: t('ourStory'), href: '/about' },
+        { label: t('travelJournal'), href: '/blog' },
+        { label: t('experiences'), href: '/experiences' },
+        { label: t('responsibleTourism'), href: '/blog/responsible-travel-in-the-omo' },
+        { label: t('whenToVisit'), href: '/blog/when-to-visit-ethiopia' },
+        { label: t('contactUs'), href: '/contact' },
+      ],
+    },
+  ]
 
-export function Footer() {
   return (
     <footer className="bg-charcoal text-background">
       <div className="shell py-16 sm:py-20">
@@ -60,7 +61,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src="/images/logo.png"
-                alt={`${company.name} logo`}
+                alt={t('logoAlt', { name: company.name })}
                 width={56}
                 height={56}
                 className="h-14 w-14 rounded-full object-cover border border-accent-light/20"
@@ -73,9 +74,7 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-5 max-w-xs text-pretty text-sm leading-relaxed text-background/60">
-              Introducing travellers to the Land of Origins — one of
-              humanity&apos;s oldest civilisations — with care, knowledge, and
-              quiet luxury.
+              {t('tagline')}
             </p>
 
             <ul className="mt-7 space-y-2 text-sm text-background/70">
@@ -152,11 +151,10 @@ export function Footer() {
           <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
             <div className="max-w-md">
               <p className="font-serif text-xl text-background sm:text-2xl">
-                Continue exploring Ethiopia
+                {t('newsletterTitle')}
               </p>
               <p className="mt-1.5 text-sm text-background/60">
-                Curated travel stories and seasonal inspiration from our
-                designers. Four letters a year, never more.
+                {t('newsletterBlurb')}
               </p>
             </div>
             <NewsletterForm />
@@ -165,15 +163,14 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-background/15 pt-8 text-xs text-background/50 md:flex-row md:items-center md:justify-between">
           <p>
-            &copy; {new Date().getFullYear()} {company.name}. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {company.name}. {t('rightsReserved')}
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-1">
             <Link href="/privacy" className="py-1 transition-colors hover:text-background/80">
-              Privacy Policy
+              {t('privacy')}
             </Link>
             <Link href="/terms" className="py-1 transition-colors hover:text-background/80">
-              Terms &amp; Conditions
+              {t('terms')}
             </Link>
           </div>
         </div>

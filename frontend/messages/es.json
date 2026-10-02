@@ -1,6 +1,71 @@
 {
-  "LanguagePicker": {
-    "label": "Language",
-    "changeLanguage": "Change language"
+  "Nav": {
+    "destinations": "Destinos",
+    "tours": "Tours",
+    "experiences": "Experiencias",
+    "journal": "Diario",
+    "about": "Nosotros",
+    "startPlanning": "Empezar a planear",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma",
+    "changeLanguage": "Cambiar idioma",
+    "destinationsEyebrow": "Etiopía",
+    "destinationsTitle": "Nuestros destinos",
+    "destinationsBlurb": "Desde iglesias monolíticas talladas en roca viva hasta paisajes tectónicos al borde del mundo — la antigua cuna de la civilización, explorada con calma.",
+    "destinationsCta": "Ver todos los destinos",
+    "toursEyebrow": "Viajes seleccionados",
+    "toursTitle": "Itinerarios emblemáticos",
+    "toursBlurb": "Expediciones privadas basadas en guías expertos, lodges boutique y accesos que no se reservan en línea.",
+    "toursCta": "Explorar todos los tours",
+    "experiencesEyebrow": "Añadir a cualquier viaje",
+    "experiencesTitle": "Experiencias",
+    "experiencesBlurb": "Cocinas, casas de café, granjas y rutas de running — experiencias breves que encajamos en tu itinerario donde tengan sentido.",
+    "experiencesCta": "Ver todas las experiencias"
+  },
+  "Footer": {
+    "tagline": "Presentamos a los viajeros la Tierra de los Orígenes — una de las civilizaciones más antiguas de la humanidad — con cuidado, conocimiento y lujo discreto.",
+    "destinations": "Destinos",
+    "tours": "Tours",
+    "explore": "Explorar",
+    "allDestinations": "Todos los destinos",
+    "allTours": "Todos los tours",
+    "customItineraries": "Itinerarios a medida",
+    "ourStory": "Nuestra historia",
+    "travelJournal": "Diario de viaje",
+    "experiences": "Experiencias",
+    "responsibleTourism": "Turismo responsable",
+    "whenToVisit": "Cuándo visitar",
+    "contactUs": "Contacto",
+    "newsletterTitle": "Sigue explorando Etiopía",
+    "newsletterBlurb": "Historias de viaje e inspiración de temporada de nuestros diseñadores. Cuatro cartas al año, nunca más.",
+    "rightsReserved": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "logoAlt": "Logo de {name}",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Tu correo",
+    "subscribe": "Suscribirse",
+    "subscribeSuccess": "Gracias — la próxima carta te encontrará.",
+    "subscribeError": "Algo salió mal — inténtalo de nuevo."
+  },
+  "Common": {
+    "skipToContent": "Saltar al contenido",
+    "homeAria": "{name} — inicio"
+  },
+  "Cta": {
+    "startPlanning": "Empezar a planear"
+  },
+  "NotFound": {
+    "eyebrow": "Error 404",
+    "title": "Este camino no aparece en nuestro mapa",
+    "body": "La página que buscabas se ha movido o nunca existió. El país, felizmente, sigue donde lo dejamos.",
+    "backHome": "Volver al inicio",
+    "seeDestinations": "Ver destinos",
+    "orPrefix": "O",
+    "writeToDesigner": "escribe a un diseñador",
+    "orSuffix": "en su lugar.",
+    "metaTitle": "Página no encontrada",
+    "metaDescription": "Esta página no existe o se ha movido."
   }
 }

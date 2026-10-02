@@ -1,6 +1,71 @@
 {
-  "LanguagePicker": {
-    "label": "Language",
-    "changeLanguage": "Change language"
+  "Nav": {
+    "destinations": "目的地",
+    "tours": "行程",
+    "experiences": "体验",
+    "journal": "旅行日志",
+    "about": "关于我们",
+    "startPlanning": "开始规划",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "language": "语言",
+    "changeLanguage": "切换语言",
+    "destinationsEyebrow": "埃塞俄比亚",
+    "destinationsTitle": "我们的目的地",
+    "destinationsBlurb": "从整石雕凿的教堂，到世界边缘的构造地貌——人类文明的古老摇篮，以从容的方式缓缓探索。",
+    "destinationsCta": "查看全部目的地",
+    "toursEyebrow": "精选旅程",
+    "toursTitle": "招牌行程",
+    "toursBlurb": "围绕专家向导、精品营地与线上无法预订的通行权限打造的私人远征。",
+    "toursCta": "探索全部行程",
+    "experiencesEyebrow": "可加入任何旅程",
+    "experiencesTitle": "体验",
+    "experiencesBlurb": "厨房、咖啡屋、农场与跑步小径——我们会把这些短体验恰到好处地嵌入您的路线。",
+    "experiencesCta": "查看全部体验"
+  },
+  "Footer": {
+    "tagline": "以细致、专业与静奢的方式，带旅行者走进起源之地——人类最古老的文明之一。",
+    "destinations": "目的地",
+    "tours": "行程",
+    "explore": "探索",
+    "allDestinations": "全部目的地",
+    "allTours": "全部行程",
+    "customItineraries": "定制行程",
+    "ourStory": "我们的故事",
+    "travelJournal": "旅行日志",
+    "experiences": "体验",
+    "responsibleTourism": "负责任的旅游",
+    "whenToVisit": "最佳出行季节",
+    "contactUs": "联系我们",
+    "newsletterTitle": "继续探索埃塞俄比亚",
+    "newsletterBlurb": "来自我们行程设计师的精选旅行故事与季节灵感。一年四封，绝不滥发。",
+    "rightsReserved": "保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "条款与条件",
+    "logoAlt": "{name} 标志",
+    "emailLabel": "电子邮箱",
+    "emailPlaceholder": "您的邮箱",
+    "subscribe": "订阅",
+    "subscribeSuccess": "谢谢——下一封信会找到您。",
+    "subscribeError": "出了点问题——请再试一次。"
+  },
+  "Common": {
+    "skipToContent": "跳到主要内容",
+    "homeAria": "{name} — 首页"
+  },
+  "Cta": {
+    "startPlanning": "开始规划"
+  },
+  "NotFound": {
+    "eyebrow": "错误 404",
+    "title": "这条路不在我们的地图上",
+    "body": "您要找的页面已搬家，或从未存在。国家仍在原地，幸好如此。",
+    "backHome": "回到起点",
+    "seeDestinations": "查看目的地",
+    "orPrefix": "或者",
+    "writeToDesigner": "写信给行程设计师",
+    "orSuffix": "。",
+    "metaTitle": "页面未找到",
+    "metaDescription": "此页面不存在或已移动。"
   }
 }

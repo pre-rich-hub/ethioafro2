@@ -5,39 +5,40 @@ import { isTailorMade } from '@/features/tours/utils/tour.utils'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import type { NavigationState } from './useNavigation'
 
 type Props = Pick<NavigationState, 'dismissed' | 'dismiss'>
 
 export function ToursDropdown({ dismissed, dismiss }: Props) {
+  const tNav = useTranslations('Nav')
+
   return (
     <div className={cn(
       "absolute left-0 top-full w-full border-b border-border/60 bg-background/98 opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 ease-out invisible -translate-y-3 pointer-events-none group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto z-45 text-foreground before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-accent/60 before:to-transparent",
-      dismissed === 'Tours' && '!invisible !pointer-events-none !opacity-0',
+      dismissed === 'tours' && '!invisible !pointer-events-none !opacity-0',
     )}>
       <div className="shell grid grid-cols-[1fr_3.4fr] gap-16 py-12">
         <div className="flex flex-col justify-between border-r border-border/60 pr-10">
           <div>
             <p className="mb-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-accent">
               <span className="h-px w-8 bg-accent" />
-              Curated Journeys
+              {tNav('toursEyebrow')}
             </p>
             <h3 className="font-serif text-[2rem] leading-[1.1] text-foreground mb-5">
-              Signature Itineraries
+              {tNav('toursTitle')}
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Private expeditions built around expert
-              guiding, boutique lodges and access that cannot
-              be booked online.
+              {tNav('toursBlurb')}
             </p>
           </div>
           <Link
             href="/tours"
-            onClick={dismiss('Tours')}
+            onClick={dismiss('tours')}
             className="group/cta mt-8 inline-flex items-center gap-2.5 self-start border-b border-accent/40 pb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent transition-colors duration-300 hover:border-accent"
           >
-            Explore All Tours
+            {tNav('toursCta')}
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" />
           </Link>
         </div>
@@ -47,7 +48,7 @@ export function ToursDropdown({ dismissed, dismiss }: Props) {
             <Link
               key={t.slug}
               href={`/tours/${t.slug}`}
-              onClick={dismiss('Tours')}
+              onClick={dismiss('tours')}
               className="group/item flex flex-col gap-4"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm shadow-sm transition-shadow duration-300 group-hover/item:shadow-lg">

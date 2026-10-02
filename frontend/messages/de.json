@@ -1,6 +1,71 @@
 {
-  "LanguagePicker": {
-    "label": "Language",
-    "changeLanguage": "Change language"
+  "Nav": {
+    "destinations": "Reiseziele",
+    "tours": "Touren",
+    "experiences": "Erlebnisse",
+    "journal": "Journal",
+    "about": "Über uns",
+    "startPlanning": "Reise planen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache",
+    "changeLanguage": "Sprache ändern",
+    "destinationsEyebrow": "Äthiopien",
+    "destinationsTitle": "Unsere Reiseziele",
+    "destinationsBlurb": "Von monolithischen Kirchen aus dem Fels bis zu tektonischen Landschaften am Rand der Welt — die alte Wiege der Zivilisation, langsam erkundet.",
+    "destinationsCta": "Alle Reiseziele ansehen",
+    "toursEyebrow": "Kuratierte Reisen",
+    "toursTitle": "Signature-Routen",
+    "toursBlurb": "Private Expeditionen mit Expertenführung, Boutique-Lodges und Zugängen, die online nicht buchbar sind.",
+    "toursCta": "Alle Touren entdecken",
+    "experiencesEyebrow": "Zu jeder Reise hinzufügen",
+    "experiencesTitle": "Erlebnisse",
+    "experiencesBlurb": "Küchen, Kaffeehäuser, Farmen und Laufstrecken — kurze Erlebnisse, die wir dort in Ihre Route einbauen, wo sie Sinn ergeben.",
+    "experiencesCta": "Alle Erlebnisse ansehen"
+  },
+  "Footer": {
+    "tagline": "Reisende mit dem Land der Ursprünge bekannt machen — einer der ältesten Zivilisationen der Menschheit — mit Sorgfalt, Wissen und stillem Luxus.",
+    "destinations": "Reiseziele",
+    "tours": "Touren",
+    "explore": "Entdecken",
+    "allDestinations": "Alle Reiseziele",
+    "allTours": "Alle Touren",
+    "customItineraries": "Individuelle Routen",
+    "ourStory": "Unsere Geschichte",
+    "travelJournal": "Reisejournal",
+    "experiences": "Erlebnisse",
+    "responsibleTourism": "Verantwortungsvoller Tourismus",
+    "whenToVisit": "Beste Reisezeit",
+    "contactUs": "Kontakt",
+    "newsletterTitle": "Äthiopien weiter entdecken",
+    "newsletterBlurb": "Kuratierte Reisegeschichten und saisonale Inspiration unserer Designer. Vier Briefe im Jahr, nie mehr.",
+    "rightsReserved": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "logoAlt": "{name} Logo",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "Ihre E-Mail",
+    "subscribe": "Abonnieren",
+    "subscribeSuccess": "Danke — der nächste Brief findet Sie.",
+    "subscribeError": "Etwas ist schiefgelaufen — bitte erneut versuchen."
+  },
+  "Common": {
+    "skipToContent": "Zum Inhalt springen",
+    "homeAria": "{name} — Startseite"
+  },
+  "Cta": {
+    "startPlanning": "Reise planen"
+  },
+  "NotFound": {
+    "eyebrow": "Fehler 404",
+    "title": "Dieser Weg steht nicht auf unserer Karte",
+    "body": "Die gesuchte Seite wurde verschoben oder hat nie existiert. Das Land, glücklicherweise, ist noch dort, wo wir es gelassen haben.",
+    "backHome": "Zurück zum Anfang",
+    "seeDestinations": "Reiseziele ansehen",
+    "orPrefix": "Oder",
+    "writeToDesigner": "schreiben Sie einem Designer",
+    "orSuffix": "stattdessen.",
+    "metaTitle": "Seite nicht gefunden",
+    "metaDescription": "Diese Seite existiert nicht oder wurde verschoben."
   }
 }

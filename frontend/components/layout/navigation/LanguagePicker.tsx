@@ -2,16 +2,19 @@
 
 import { cn } from '@/lib/utils/cn'
 import { Check, ChevronDown, Globe } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { languages } from './navigation.data'
 import type { NavigationState } from './useNavigation'
 
 type Props = Pick<NavigationState, 'tone' | 'langRef' | 'langOpen' | 'setLangOpen' | 'lang' | 'setLang'>
 
 export function LanguagePicker({ tone, langRef, langOpen, setLangOpen, lang, setLang }: Props) {
+  const t = useTranslations('Nav')
+
   return (
     <div ref={langRef} className="relative hidden sm:block">
       <button
-        aria-label="Change language"
+        aria-label={t('changeLanguage')}
         aria-haspopup="listbox"
         aria-expanded={langOpen}
         onClick={() => setLangOpen((v) => !v)}
@@ -36,7 +39,7 @@ export function LanguagePicker({ tone, langRef, langOpen, setLangOpen, lang, set
 
       <ul
         role="listbox"
-        aria-label="Language"
+        aria-label={t('language')}
         className={cn(
           'absolute right-0 top-12 w-44 overflow-hidden rounded-sm border border-border bg-popover shadow-xl transition-all duration-200',
           langOpen

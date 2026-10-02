@@ -1,6 +1,71 @@
 {
-  "LanguagePicker": {
-    "label": "Language",
-    "changeLanguage": "Change language"
+  "Nav": {
+    "destinations": "Destinations",
+    "tours": "Circuits",
+    "experiences": "Expériences",
+    "journal": "Journal",
+    "about": "À propos",
+    "startPlanning": "Commencer à planifier",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "changeLanguage": "Changer de langue",
+    "destinationsEyebrow": "Éthiopie",
+    "destinationsTitle": "Nos destinations",
+    "destinationsBlurb": "Des églises monolithiques taillées dans la roche aux paysages tectoniques au bout du monde — le berceau antique de la civilisation, exploré sans hâte.",
+    "destinationsCta": "Voir toutes les destinations",
+    "toursEyebrow": "Voyages sélectionnés",
+    "toursTitle": "Itinéraires signature",
+    "toursBlurb": "Des expéditions privées construites autour de guides experts, de lodges boutique et d'accès introuvables en ligne.",
+    "toursCta": "Explorer tous les circuits",
+    "experiencesEyebrow": "Ajouter à tout voyage",
+    "experiencesTitle": "Expériences",
+    "experiencesBlurb": "Cuisines, maisons de café, fermes et sentiers de course — de courtes expériences que nous intégrons à votre itinéraire là où elles ont du sens.",
+    "experiencesCta": "Voir toutes les expériences"
+  },
+  "Footer": {
+    "tagline": "Faire découvrir aux voyageurs la Terre des Origines — l'une des plus anciennes civilisations de l'humanité — avec soin, savoir et luxe discret.",
+    "destinations": "Destinations",
+    "tours": "Circuits",
+    "explore": "Explorer",
+    "allDestinations": "Toutes les destinations",
+    "allTours": "Tous les circuits",
+    "customItineraries": "Itinéraires sur mesure",
+    "ourStory": "Notre histoire",
+    "travelJournal": "Journal de voyage",
+    "experiences": "Expériences",
+    "responsibleTourism": "Tourisme responsable",
+    "whenToVisit": "Quand partir",
+    "contactUs": "Nous contacter",
+    "newsletterTitle": "Continuez d'explorer l'Éthiopie",
+    "newsletterBlurb": "Récits de voyage et inspiration saisonnière de nos designers. Quatre lettres par an, jamais plus.",
+    "rightsReserved": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "logoAlt": "Logo {name}",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "Votre e-mail",
+    "subscribe": "S'abonner",
+    "subscribeSuccess": "Merci — la prochaine lettre vous trouvera.",
+    "subscribeError": "Une erreur s'est produite — veuillez réessayer."
+  },
+  "Common": {
+    "skipToContent": "Aller au contenu",
+    "homeAria": "{name} — accueil"
+  },
+  "Cta": {
+    "startPlanning": "Commencer à planifier"
+  },
+  "NotFound": {
+    "eyebrow": "Erreur 404",
+    "title": "Cette route n'apparaît pas sur notre carte",
+    "body": "La page que vous cherchiez a déménagé ou n'a jamais existé. Le pays, heureusement, est toujours là où nous l'avons laissé.",
+    "backHome": "Retour au début",
+    "seeDestinations": "Voir les destinations",
+    "orPrefix": "Ou",
+    "writeToDesigner": "écrivez à un designer",
+    "orSuffix": "à la place.",
+    "metaTitle": "Page introuvable",
+    "metaDescription": "Cette page n'existe pas ou a été déplacée."
   }
 }

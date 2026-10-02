@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, setRequestLocale } from 'next-intl/server'
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { hasLocale } from 'next-intl'
 import { Navbar } from '@/components/layout/Navbar'
@@ -26,6 +26,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale)
   const messages = await getMessages()
+  const t = await getTranslations('Common')
 
   return (
     <DocumentShell lang={locale}>
@@ -34,7 +35,7 @@ export default async function LocaleLayout({
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-primary focus:px-5 focus:py-3 focus:text-xs focus:font-semibold focus:uppercase focus:tracking-[0.14em] focus:text-primary-foreground"
         >
-          Skip to content
+          {t('skipToContent')}
         </a>
         <RouteProgress />
         <Navbar />

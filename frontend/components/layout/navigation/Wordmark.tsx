@@ -1,6 +1,9 @@
+'use client'
+
 import { cn } from '@/lib/utils/cn'
 import { company } from '@/lib/seo/entities'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 
 export function Wordmark({
@@ -10,11 +13,13 @@ export function Wordmark({
   tone: 'light' | 'dark'
   onClick?: () => void
 }) {
+  const t = useTranslations('Common')
+
   return (
     <Link
       href="/"
       onClick={onClick}
-      aria-label={`${company.name} — home`}
+      aria-label={t('homeAria', { name: company.name })}
       className="flex items-center"
     >
       <Image

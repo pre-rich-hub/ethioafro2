@@ -18,11 +18,12 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - Guest pages under `app/[locale]/`; admin/login outside locales
 - `<html lang={locale}>` via `DocumentShell`
 - LanguagePicker / mobile language list switch locale while preserving path
+- Message catalogs for Nav / Footer / Common / Cta / NotFound; chrome flips with locale
 - SEO: sitemap, metadata helper, JSON-LD (English-only today)
 - GEO: English FAQs, facts, direct answers
 
 ### Missing
-- Message catalogs not yet wired into Navbar/Footer/chrome (`t()`)
+- Marketing page shells still English (heroes, section labels)
 - No hreflang / localized `alternates`
 - Catalogue data (tours, destinations, journal) is English-only TypeScript
 - Admin stays English-only (out of scope for guest i18n)
@@ -61,10 +62,10 @@ Priority after this plan: product polish / citation follow-ups as needed.
 **Goal:** Nav, footer, common buttons, and shared components use translations.
 
 ### Tasks
-- [ ] Add `frontend/messages/{en,es,fr,de,zh}.json` (or `.ts`) with namespaces: `Nav`, `Footer`, `Common`, `Cta`, `NotFound`
-- [ ] Replace hardcoded strings in Navbar, Footer, Wordmark aria, LinkButton defaults, 404
-- [ ] Localize `routes.ts` **labels** (hrefs stay path-based; locale handled by next-intl `Link`)
-- [ ] Keep contact phone/email/address as shared constants (not translated numbers)
+- [x] Add `frontend/messages/{en,es,fr,de,zh}.json` (or `.ts`) with namespaces: `Nav`, `Footer`, `Common`, `Cta`, `NotFound`
+- [x] Replace hardcoded strings in Navbar, Footer, Wordmark aria, LinkButton defaults, 404
+- [x] Localize `routes.ts` **labels** (hrefs stay path-based; locale handled by next-intl `Link`)
+- [x] Keep contact phone/email/address as shared constants (not translated numbers)
 
 **Done when:** Switching locale updates nav/footer/CTA chrome without breaking layout.
 

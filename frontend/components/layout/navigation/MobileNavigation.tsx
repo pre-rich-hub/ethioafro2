@@ -4,6 +4,7 @@ import { contact } from '@/lib/constants/contact'
 import { navLinks } from '@/lib/constants/routes'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight, Globe, Mail, Phone } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { languages } from './navigation.data'
 import type { NavigationState } from './useNavigation'
@@ -11,6 +12,9 @@ import type { NavigationState } from './useNavigation'
 type Props = Pick<NavigationState, 'open' | 'setOpen' | 'isActive' | 'lang' | 'setLang'>
 
 export function MobileNavigation({ open, setOpen, isActive, lang, setLang }: Props) {
+  const t = useTranslations('Nav')
+  const tCta = useTranslations('Cta')
+
   return (
     <div
       className={cn(
@@ -48,7 +52,7 @@ export function MobileNavigation({ open, setOpen, isActive, lang, setLang }: Pro
                         active ? 'text-primary' : 'text-foreground',
                       )}
                     >
-                      {link.label}
+                      {t(link.key)}
                     </span>
                   </span>
                   <ArrowRight
@@ -66,7 +70,7 @@ export function MobileNavigation({ open, setOpen, isActive, lang, setLang }: Pro
         <div className="mt-8">
           <span className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
             <Globe className="h-3.5 w-3.5" />
-            Language
+            {t('language')}
           </span>
           <div className="flex flex-wrap gap-2">
             {languages.map((l) => (
@@ -110,7 +114,7 @@ export function MobileNavigation({ open, setOpen, isActive, lang, setLang }: Pro
           onClick={() => setOpen(false)}
           className="flex w-full items-center justify-center gap-2 rounded-sm bg-pop px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-pop-foreground"
         >
-          Start Planning
+          {tCta('startPlanning')}
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>

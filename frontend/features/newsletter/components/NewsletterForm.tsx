@@ -2,9 +2,11 @@
 
 import { useState } from 'react'
 import { Check } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { subscribe } from '@/features/newsletter/api/newsletter.api'
 
 export function NewsletterForm() {
+  const t = useTranslations('Footer')
   const [done, setDone] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -12,7 +14,7 @@ export function NewsletterForm() {
     return (
       <p className="flex w-full max-w-sm items-center gap-3 border border-accent-light/40 px-5 py-4 text-sm text-background/80">
         <Check className="h-4 w-4 shrink-0 text-accent-light" />
-        Thank you — the next letter will find you.
+        {t('subscribeSuccess')}
       </p>
     )
   }
@@ -28,28 +30,28 @@ export function NewsletterForm() {
           setDone(true)
         } catch (err) {
           setError(
-            err instanceof Error ? err.message : 'Something went wrong — please try again.',
+            err instanceof Error ? err.message : t('subscribeError'),
           )
         }
       }}
       className="flex w-full max-w-sm flex-col gap-2 sm:flex-row"
     >
       <label htmlFor="newsletter-email" className="sr-only">
-        Email address
+        {t('emailLabel')}
       </label>
       <input
         id="newsletter-email"
         name="email"
         type="email"
         required
-        placeholder="Your email"
+        placeholder={t('emailPlaceholder')}
         className="w-full rounded-full border border-background/25 bg-transparent px-5 py-3.5 text-sm text-background placeholder:text-background/45 focus:border-accent-light focus:outline-none"
       />
       <button
         type="submit"
         className="whitespace-nowrap rounded-full bg-accent px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-colors duration-300 hover:bg-accent/90"
       >
-        Subscribe
+        {t('subscribe')}
       </button>
       {error ? (
         <p className="text-xs text-red-600" role="alert">

@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils/cn'
 import { Menu, X } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { DesktopNavigation } from './navigation/DesktopNavigation'
 import { LanguagePicker } from './navigation/LanguagePicker'
@@ -10,6 +11,8 @@ import { useNavigation } from './navigation/useNavigation'
 import { Wordmark } from './navigation/Wordmark'
 
 export function Navbar() {
+  const t = useTranslations('Nav')
+  const tCta = useTranslations('Cta')
   const {
     scrolled,
     open,
@@ -67,11 +70,11 @@ export function Navbar() {
                 href="/contact"
                 className="hidden whitespace-nowrap rounded-sm bg-pop px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-pop-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-pop/90 lg:ml-1 lg:inline-block xl:ml-10 xl:px-6"
               >
-                Start Planning
+                {tCta('startPlanning')}
               </Link>
 
               <button
-                aria-label={open ? 'Close menu' : 'Open menu'}
+                aria-label={open ? t('closeMenu') : t('openMenu')}
                 aria-expanded={open}
                 onClick={() => setOpen((v) => !v)}
                 className={cn(
@@ -90,7 +93,6 @@ export function Navbar() {
         </nav>
       </header>
 
-      {/* Mobile overlay menu */}
       <MobileNavigation open={open} setOpen={setOpen} isActive={isActive} lang={lang} setLang={setLang} />
     </>
   )

@@ -1,6 +1,71 @@
 {
-  "LanguagePicker": {
-    "label": "Language",
-    "changeLanguage": "Change language"
+  "Nav": {
+    "destinations": "Destinations",
+    "tours": "Tours",
+    "experiences": "Experiences",
+    "journal": "Journal",
+    "about": "About Us",
+    "startPlanning": "Start Planning",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "changeLanguage": "Change language",
+    "destinationsEyebrow": "Ethiopia",
+    "destinationsTitle": "Our Destinations",
+    "destinationsBlurb": "From monolithic churches carved from solid rock to tectonic landscapes at the edge of the world — the ancient cradle of civilization, explored slowly.",
+    "destinationsCta": "View All Destinations",
+    "toursEyebrow": "Curated Journeys",
+    "toursTitle": "Signature Itineraries",
+    "toursBlurb": "Private expeditions built around expert guiding, boutique lodges and access that cannot be booked online.",
+    "toursCta": "Explore All Tours",
+    "experiencesEyebrow": "Add to Any Journey",
+    "experiencesTitle": "Experiences",
+    "experiencesBlurb": "Kitchens, coffee houses, farms and running trails — short experiences we fit into your route wherever they make sense.",
+    "experiencesCta": "View All Experiences"
+  },
+  "Footer": {
+    "tagline": "Introducing travellers to the Land of Origins — one of humanity's oldest civilisations — with care, knowledge, and quiet luxury.",
+    "destinations": "Destinations",
+    "tours": "Tours",
+    "explore": "Explore",
+    "allDestinations": "All destinations",
+    "allTours": "All tours",
+    "customItineraries": "Custom Itineraries",
+    "ourStory": "Our Story",
+    "travelJournal": "Travel Journal",
+    "experiences": "Experiences",
+    "responsibleTourism": "Responsible Tourism",
+    "whenToVisit": "When to Visit",
+    "contactUs": "Contact Us",
+    "newsletterTitle": "Continue exploring Ethiopia",
+    "newsletterBlurb": "Curated travel stories and seasonal inspiration from our designers. Four letters a year, never more.",
+    "rightsReserved": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "logoAlt": "{name} logo",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "subscribeSuccess": "Thank you — the next letter will find you.",
+    "subscribeError": "Something went wrong — please try again."
+  },
+  "Common": {
+    "skipToContent": "Skip to content",
+    "homeAria": "{name} — home"
+  },
+  "Cta": {
+    "startPlanning": "Start Planning"
+  },
+  "NotFound": {
+    "eyebrow": "Error 404",
+    "title": "This road does not appear on our map",
+    "body": "The page you were looking for has moved or never existed. The country, happily, is still where we left it.",
+    "backHome": "Back to the beginning",
+    "seeDestinations": "See destinations",
+    "orPrefix": "Or",
+    "writeToDesigner": "write to a designer",
+    "orSuffix": "instead.",
+    "metaTitle": "Page not found",
+    "metaDescription": "This page does not exist or has moved."
   }
 }
