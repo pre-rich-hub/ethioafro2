@@ -160,7 +160,8 @@
     "experiencesCard4Eyebrow": "烹饪与美食",
     "experiencesCard4Title": "在家庭厨房里亲手摊英杰拉",
     "experiencesCard4Text": "学习在米塔德烤盘上摊英杰拉，烹制与之搭配的炖菜，并按埃塞俄比亚的方式共享一大盘——随后在阿兹玛里乐手的演奏之夜品尝蜂蜜酒tej、tella啤酒和areki烈酒。",
-    "experiencesCard4Link": "英杰拉与埃塞俄比亚厨房"
+    "experiencesCard4Link": "英杰拉与埃塞俄比亚厨房",
+    "destPrivate": "私人定制"
   },
   "Contact": {
     "heroEyebrow": "与行程设计师对话",
@@ -307,7 +308,31 @@
     "audienceLuxuryFor": "希望私人向导与精选营地，行程围绕光线与舒适而非里程的旅人。",
     "audienceLuxuryNot": "预算背包客，或想要以最低价参加大型固定发团的客人。",
     "audienceDefaultFor": "希望以私人 {days} 行程穿越 {places}，并按自己的节奏重塑线路的旅人。",
-    "audienceDefaultNot": "期待预订后无法更改的大型固定团套餐的人。"
+    "audienceDefaultNot": "期待预订后无法更改的大型固定团套餐的人。",
+    "stylePrivate": "私人定制",
+    "styleFamily": "亲子家庭",
+    "styleLuxury": "奢华",
+    "styleSmallGroup": "小团",
+    "styleExpedition": "探险",
+    "styleCultural": "文化",
+    "styleTrekking": "徒步穿越",
+    "styleHiking": "徒步",
+    "styleClimbing": "攀登",
+    "styleWildlife": "野生动物",
+    "styleBirding": "观鸟",
+    "stylePhotography": "摄影",
+    "styleFestival": "节日",
+    "styleActive": "运动",
+    "styleCycling": "骑行",
+    "styleRunning": "跑步",
+    "styleSlowTravel": "慢旅行",
+    "waysPrivateText": "专属向导、车辆与行程日期，每一天都按你来设计。",
+    "waysFamilyText": "短途车程、家庭房，以及一天一处重点与玩耍时间的搭配。",
+    "waysLuxuryText": "每一站精选最佳 lodge、私人向导，从不赶场。",
+    "waysSmallGroupText": "固定出发日与其他旅客同行——共用团队，同一批资深向导。",
+    "waysExpeditionText": "漫长而严苛的旅程：高峰、荒漠与国境深处。",
+    "waysJourneyCount": "{count, plural, other {# 条行程}}",
+    "waysAlt": "埃塞俄比亚{style}旅行"
   },
   "Destinations": {
     "heroEyebrow": "我们前往的地方",
@@ -525,8 +550,8 @@
     "stylePhotography": "摄影",
     "styleCultural": "文化",
     "styleWildlife": "野生动物",
-    "styleTrekking": "徒步",
+    "styleTrekking": "徒步穿越",
     "styleFestival": "节日",
-    "styleFamily": "家庭"
+    "styleFamily": "亲子家庭"
   }
 }

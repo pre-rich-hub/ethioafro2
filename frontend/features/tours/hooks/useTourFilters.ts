@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import type { Tour } from '../types/tour.types'
 import { styleTokens } from '../utils/tour.utils'
+import { localizeStyleToken } from '../utils/style-labels'
 
 export const ALL_JOURNEYS = '__all__'
 
@@ -42,7 +43,8 @@ export function useTourFilters(tours: Tour[]) {
       ? tours
       : tours.filter((tour) => styleTokens(tour).includes(active))
 
-  const labelFor = (f: string) => (f === ALL_JOURNEYS ? t('allJourneys') : f)
+  const labelFor = (f: string) =>
+    f === ALL_JOURNEYS ? t('allJourneys') : localizeStyleToken(f, t)
 
   return { filters, active, groupRef, choose, visible, labelFor, emptyLabel: t('emptyStyle') }
 }

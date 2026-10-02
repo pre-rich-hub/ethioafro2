@@ -160,7 +160,8 @@
     "experiencesCard4Eyebrow": "Kochen & Kulinarik",
     "experiencesCard4Title": "Backen Sie Injera in einer Familienküche",
     "experiencesCard4Text": "Lernen Sie, Injera auf der Mitad zu backen, die dazu gehörigen Eintöpfe zu kochen und eine gemeinsame Platte auf äthiopische Art zu teilen – danach probieren Sie Tej, Tella und Areki an einem Abend mit Azmari-Musikern.",
-    "experiencesCard4Link": "Injera und eine äthiopische Küche"
+    "experiencesCard4Link": "Injera und eine äthiopische Küche",
+    "destPrivate": "Privat"
   },
   "Contact": {
     "heroEyebrow": "Mit einem Designer sprechen",
@@ -307,7 +308,31 @@
     "audienceLuxuryFor": "Reisende, die private Führung und sorgfältig gewählte Lodges wollen, mit Tagen um Licht und Komfort statt Kilometer.",
     "audienceLuxuryNot": "Budget-Backpacker oder Gäste, die eine große feste Gruppenabreise zum niedrigstmöglichen Preis wollen.",
     "audienceDefaultFor": "Reisende, die eine private {days}-Reise durch {places} wollen, um ihr Tempo neu gezeichnet.",
-    "audienceDefaultNot": "Wer ein starres Großgruppenpaket erwartet, das nach der Buchung nicht geändert werden kann."
+    "audienceDefaultNot": "Wer ein starres Großgruppenpaket erwartet, das nach der Buchung nicht geändert werden kann.",
+    "stylePrivate": "Privat",
+    "styleFamily": "Familie",
+    "styleLuxury": "Luxus",
+    "styleSmallGroup": "Kleine Gruppe",
+    "styleExpedition": "Expedition",
+    "styleCultural": "Kultur",
+    "styleTrekking": "Trekking",
+    "styleHiking": "Wandern",
+    "styleClimbing": "Klettern",
+    "styleWildlife": "Wildlife",
+    "styleBirding": "Vogelbeobachtung",
+    "stylePhotography": "Fotografie",
+    "styleFestival": "Festival",
+    "styleActive": "Aktiv",
+    "styleCycling": "Radfahren",
+    "styleRunning": "Laufen",
+    "styleSlowTravel": "Slow Travel",
+    "waysPrivateText": "Ihr eigener Guide, Fahrzeug und Termine — jeder Tag um Sie herum gestaltet.",
+    "waysFamilyText": "Kurze Fahrten, Familienzimmer und Tage, die eine große Sehenswürdigkeit mit Spielzeit verbinden.",
+    "waysLuxuryText": "Die feinste Lodge an jeder Station, private Guides und nichts Gehetztes.",
+    "waysSmallGroupText": "Feste Abfahrten mit anderen Reisenden — gemeinsame Crews, dieselben Senior-Guides.",
+    "waysExpeditionText": "Lange, anspruchsvolle Reisen: Gipfel, Wüsten und die entlegensten Ecken des Landes.",
+    "waysJourneyCount": "{count, plural, one {# Reise} other {# Reisen}}",
+    "waysAlt": "{style}-Reise in Äthiopien"
   },
   "Destinations": {
     "heroEyebrow": "Wo Wir Reisen",

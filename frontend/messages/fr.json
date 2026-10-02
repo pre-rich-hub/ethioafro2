@@ -160,7 +160,8 @@
     "experiencesCard4Eyebrow": "Cuisine et gastronomie",
     "experiencesCard4Title": "Préparez l'injera dans une cuisine familiale",
     "experiencesCard4Text": "Apprenez à verser l'injera sur la mitad, cuisinez les ragoûts qui l'accompagnent et partagez un même plateau à l'éthiopienne — puis goûtez le tej, le tella et l'areki lors d'une soirée avec des musiciens azmari.",
-    "experiencesCard4Link": "Injera et cuisine éthiopienne"
+    "experiencesCard4Link": "Injera et cuisine éthiopienne",
+    "destPrivate": "Privé"
   },
   "Contact": {
     "heroEyebrow": "Parler à un Designer",
@@ -307,7 +308,31 @@
     "audienceLuxuryFor": "Voyageurs qui veulent un guide privé et des lodges choisis avec soin, des journées pensées autour de la lumière et du confort plutôt que du kilométrage.",
     "audienceLuxuryNot": "Backpackers à petit budget ou hôtes qui veulent un départ en grand groupe fixe au prix le plus bas possible.",
     "audienceDefaultFor": "Voyageurs qui veulent un voyage privé de {days} à travers {places}, redessiné autour de leur rythme.",
-    "audienceDefaultNot": "Ceux qui attendent un forfait rigide de grand groupe impossible à modifier une fois réservé."
+    "audienceDefaultNot": "Ceux qui attendent un forfait rigide de grand groupe impossible à modifier une fois réservé.",
+    "stylePrivate": "Privé",
+    "styleFamily": "Famille",
+    "styleLuxury": "Luxe",
+    "styleSmallGroup": "Petit groupe",
+    "styleExpedition": "Expédition",
+    "styleCultural": "Culturel",
+    "styleTrekking": "Trekking",
+    "styleHiking": "Randonnée",
+    "styleClimbing": "Escalade",
+    "styleWildlife": "Faune",
+    "styleBirding": "Observation d’oiseaux",
+    "stylePhotography": "Photographie",
+    "styleFestival": "Festival",
+    "styleActive": "Actif",
+    "styleCycling": "Vélo",
+    "styleRunning": "Course",
+    "styleSlowTravel": "Voyage lent",
+    "waysPrivateText": "Votre guide, véhicule et dates — chaque journée façonnée autour de vous.",
+    "waysFamilyText": "Trajets courts, chambres familiales et journées qui mêlent un grand site et du temps pour jouer.",
+    "waysLuxuryText": "La meilleure lodge à chaque étape, guides privés, et rien de précipité.",
+    "waysSmallGroupText": "Départs fixés avec d’autres voyageurs — équipes partagées, mêmes guides seniors.",
+    "waysExpeditionText": "Longs voyages exigeants : sommets, déserts et confins du pays.",
+    "waysJourneyCount": "{count, plural, one {# voyage} other {# voyages}}",
+    "waysAlt": "Voyage {style} en Éthiopie"
   },
   "Destinations": {
     "heroEyebrow": "Où Nous Voyageons",
@@ -525,7 +550,7 @@
     "stylePhotography": "Photographie",
     "styleCultural": "Culturel",
     "styleWildlife": "Faune",
-    "styleTrekking": "Trek",
+    "styleTrekking": "Trekking",
     "styleFestival": "Festival",
     "styleFamily": "Famille"
   }

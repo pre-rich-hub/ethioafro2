@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { ArrowRight } from 'lucide-react'
 import { type Tour } from '@/features/tours/types/tour.types'
+import { localizeStyleString } from '@/features/tours/utils/style-labels'
 
 export function TourCard({
   tour: t,
@@ -32,7 +33,7 @@ export function TourCard({
       <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-6 text-center sm:p-7 lg:p-8 z-20">
         {/* Metadata tag line */}
         <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-light">
-          {t.days} · {t.group} · {t.style}
+          {t.days} · {t.group} · {localizeStyleString(t.style, tt)}
         </p>
 
         {/* Title */}

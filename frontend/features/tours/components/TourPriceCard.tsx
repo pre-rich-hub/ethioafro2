@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import { ArrowRight, CalendarDays, Clock, Compass, ShieldCheck, Users } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 import { getPriceAmount, isTailorMade } from '@/features/tours/utils/tour.utils'
+import { localizeStyleString } from '@/features/tours/utils/style-labels'
 import type { Tour } from '@/features/tours/types/tour.types'
 
 type Props = {
@@ -62,7 +63,7 @@ export function TourPriceCard({ t, nightsLabel }: Props) {
             { k: tt('detailDuration'), v: t.nights ? `${t.days} · ${nightsLabel}` : t.days, Icon: Clock },
             { k: tt('detailBestSeason'), v: t.season, Icon: CalendarDays },
             { k: tt('detailGroupSize'), v: t.group, Icon: Users },
-            { k: tt('detailStyle'), v: t.style, Icon: Compass },
+            { k: tt('detailStyle'), v: localizeStyleString(t.style, tt), Icon: Compass },
           ].map(({ k, v, Icon }, i) => (
             <div
               key={k}

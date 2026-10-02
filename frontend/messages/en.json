@@ -160,7 +160,8 @@
     "experiencesCard4Eyebrow": "Cooking & Food",
     "experiencesCard4Title": "Pour injera in a family kitchen",
     "experiencesCard4Text": "Learn to pour injera on the mitad, cook the stews that go with it, and share one platter the Ethiopian way — then taste tej, tella and areki on an evening with azmari musicians.",
-    "experiencesCard4Link": "Injera & an Ethiopian kitchen"
+    "experiencesCard4Link": "Injera & an Ethiopian kitchen",
+    "destPrivate": "Private"
   },
   "Contact": {
     "heroEyebrow": "Speak With a Designer",
@@ -307,7 +308,31 @@
     "audienceLuxuryFor": "Travellers who want private guiding and carefully chosen lodges, with days shaped around light and comfort rather than mileage.",
     "audienceLuxuryNot": "Budget backpackers or guests who want a large fixed group departure at the lowest possible price.",
     "audienceDefaultFor": "Travellers who want a private {days} journey through {places}, reshaped around their pace.",
-    "audienceDefaultNot": "Anyone expecting a rigid large-group package that cannot change once booked."
+    "audienceDefaultNot": "Anyone expecting a rigid large-group package that cannot change once booked.",
+    "stylePrivate": "Private",
+    "styleFamily": "Family",
+    "styleLuxury": "Luxury",
+    "styleSmallGroup": "Small Group",
+    "styleExpedition": "Expedition",
+    "styleCultural": "Cultural",
+    "styleTrekking": "Trekking",
+    "styleHiking": "Hiking",
+    "styleClimbing": "Climbing",
+    "styleWildlife": "Wildlife",
+    "styleBirding": "Birding",
+    "stylePhotography": "Photography",
+    "styleFestival": "Festival",
+    "styleActive": "Active",
+    "styleCycling": "Cycling",
+    "styleRunning": "Running",
+    "styleSlowTravel": "Slow Travel",
+    "waysPrivateText": "Your own guide, vehicle and dates, with every day shaped around you.",
+    "waysFamilyText": "Short drives, family rooms and days that mix one big sight with time to play.",
+    "waysLuxuryText": "The finest lodge at every stop, private guides, and nothing rushed.",
+    "waysSmallGroupText": "Set departures with other travellers — shared crews, same senior guides.",
+    "waysExpeditionText": "Long, demanding journeys: summits, deserts and the far corners of the country.",
+    "waysJourneyCount": "{count, plural, one {# journey} other {# journeys}}",
+    "waysAlt": "{style} travel in Ethiopia"
   },
   "Destinations": {
     "heroEyebrow": "Where We Travel",

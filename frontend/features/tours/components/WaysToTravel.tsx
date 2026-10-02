@@ -1,42 +1,47 @@
+'use client'
+
 import Image from 'next/image'
-import Link from 'next/link'
 import { ArrowRight, Compass, Gem, KeyRound, Users, UsersRound } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
+import { localizeStyleToken } from '@/features/tours/utils/style-labels'
 import { type Tour } from '@/features/tours/types/tour.types'
 
 const cld = (slug: string) =>
   `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
 
+/** English tokens stay in URLs / filters; labels + copy come from messages. */
 const styles = [
   {
     style: 'Private',
     Icon: KeyRound,
     image: cld('gondar'),
-    text: 'Your own guide, vehicle and dates, with every day shaped around you.',
+    textKey: 'waysPrivateText' as const,
   },
   {
     style: 'Family',
     Icon: Users,
     image: cld('lake-tana'),
-    text: 'Short drives, family rooms and days that mix one big sight with time to play.',
+    textKey: 'waysFamilyText' as const,
   },
   {
     style: 'Luxury',
     Icon: Gem,
     image: cld('lalibela'),
-    text: 'The finest lodge at every stop, private guides, and nothing rushed.',
+    textKey: 'waysLuxuryText' as const,
   },
   {
     style: 'Small Group',
     Icon: UsersRound,
     image: cld('simien-mountains'),
-    text: 'Set departures with other travellers — shared crews, same senior guides.',
+    textKey: 'waysSmallGroupText' as const,
   },
   {
     style: 'Expedition',
     Icon: Compass,
     image: cld('danakil-depression'),
-    text: 'Long, demanding journeys: summits, deserts and the far corners of the country.',
+    textKey: 'waysExpeditionText' as const,
   },
 ]
 
@@ -53,11 +58,14 @@ export function WaysToTravel({
   tours: Tour[]
   onToursPage?: boolean
 }) {
+  const t = useTranslations('Tours')
+
   return (
     // Three cards on the first desktop row, two wider ones on the second.
     <div className="grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-6">
-      {styles.map(({ style, Icon, text, image }, i) => {
+      {styles.map(({ style, Icon, textKey, image }, i) => {
         const n = count(tours, style)
+        const label = localizeStyleToken(style, t)
         const href = `/tours?style=${encodeURIComponent(style)}`
         const className =
           'group flex h-full flex-col bg-background transition-colors duration-300 hover:bg-card'
@@ -66,7 +74,7 @@ export function WaysToTravel({
             <span className="relative block aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-[340px]">
               <Image
                 src={image}
-                alt={`${style} travel in Ethiopia`}
+                alt={t('waysAlt', { style: label })}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                 className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
@@ -76,15 +84,15 @@ export function WaysToTravel({
                 <Icon className="h-5 w-5" strokeWidth={1.5} />
               </span>
               <span className="absolute inset-x-0 bottom-0 p-6 font-serif text-3xl text-background sm:p-7 sm:text-4xl">
-                {style}
+                {label}
               </span>
             </span>
             <span className="flex flex-1 flex-col p-6 sm:p-7">
               <span className="flex-1 text-pretty text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-                {text}
+                {t(textKey)}
               </span>
               <span className="mt-5 flex items-center justify-between border-t border-border pt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors group-hover:text-accent">
-                {n} {n === 1 ? 'journey' : 'journeys'}
+                {t('waysJourneyCount', { count: n })}
                 <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </span>

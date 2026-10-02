@@ -20,6 +20,7 @@ import { EnquiryForm } from '@/features/enquiries'
 import { CtaBand } from '@/features/enquiries'
 import { getLocalizedTours, getTour } from '@/features/tours/utils/tour-catalog.utils'
 import { isTailorMade } from '@/features/tours/utils/tour.utils'
+import { localizeStyleString } from '@/features/tours/utils/style-labels'
 import { tours } from '@/features/tours/data/tour.data'
 import { getTourData } from '@/features/tours/api/tour-data.api'
 import { railPad } from '@/features/tours/constants/tour-layout'
@@ -103,7 +104,7 @@ export default async function TourPage({
         )}
       />
       <PageHero
-        eyebrow={t.style}
+        eyebrow={localizeStyleString(t.style, tt)}
         title={t.title}
         lede={t.teaser}
         image={t.image}

@@ -2,6 +2,7 @@
 
 import { getLocalizedTours } from '@/features/tours/utils/tour-catalog.utils'
 import { getPriceAmount, isTailorMade } from '@/features/tours/utils/tour.utils'
+import { localizeStyleString } from '@/features/tours/utils/style-labels'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
@@ -75,7 +76,7 @@ export function ToursDropdown({ dismissed, dismiss }: Props) {
                   {t.title}
                 </h4>
                 <p className="mt-1 block text-[10px] font-medium uppercase tracking-[0.08em] text-muted-foreground">
-                  {t.style}
+                  {localizeStyleString(t.style, tTours)}
                 </p>
               </div>
             </Link>

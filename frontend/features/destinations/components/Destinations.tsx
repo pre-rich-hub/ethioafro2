@@ -76,7 +76,7 @@ export function Destinations() {
                   {d.name}
                 </h3>
                 <p className="mt-1.5 text-[11px] uppercase tracking-[0.14em] text-background/70">
-                  {d.duration} · Private
+                  {d.duration} · {t('destPrivate')}
                 </p>
                 <span className="mt-4 inline-flex items-center border border-background/40 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-background transition-colors duration-300 group-hover:border-accent-light group-hover:text-accent-light">
                   {t('destViewCta')}
