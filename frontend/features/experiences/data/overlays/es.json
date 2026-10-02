@@ -6,7 +6,21 @@
     "short": "Clase de cocina",
     "category": "Gastronomía y bebida",
     "duration": "Media jornada",
-    "where": "Adís Abeba"
+    "where": "Adís Abeba",
+    "season": "Todo el año",
+    "paragraphs": [
+      "El teff es el grano más pequeño del mundo, y la injera es comida lenta: la masa fermenta durante días antes de estar lista, y de ahí viene su acidez. Después se vierte en espiral sobre una amplia plancha de barro, el mitad, y se tapa hasta que la superficie cuaja en su conocido patrón de pequeños agujeros. Acertar con el vertido requiere práctica, y unos cuantos intentos fallidos forman parte de la diversión.",
+      "Mientras se cocina la injera, usted prepara los platos que la acompañan: un wat a fuego lento, shiro de garbanzos molidos y platos de verduras que muchos etíopes comen en los días de ayuno. Su anfitrión le explica las especias, la mantequilla y el orden en que se cocina cada cosa.",
+      "Después todos se sientan juntos en torno a una única fuente compartida. Comer con la mano derecha, rasgando la injera para recoger los guisos, es toda la etiqueta; y que su anfitrión le ofrezca un bocado es un gesto de amistad."
+    ],
+    "includes": [
+      "Una clase con anfitrión en una cocina familiar",
+      "Todos los ingredientes y el equipo",
+      "La comida compartida que usted mismo ha cocinado",
+      "Una ceremonia del café para terminar",
+      "Recogida y regreso al hotel en Adís Abeba"
+    ],
+    "goodToKnow": "Los menús vegetarianos y veganos son fáciles: muchos platos etíopes son vegetales por naturaleza."
   },
   "tej-tella-and-areki": {
     "title": "Tej, tella y areki",
@@ -15,7 +29,20 @@
     "short": "Bebidas tradicionales",
     "category": "Gastronomía y bebida",
     "duration": "Una velada",
-    "where": "Adís Abeba"
+    "where": "Adís Abeba",
+    "season": "Todo el año",
+    "paragraphs": [
+      "El tej es el vino de miel de Etiopía: miel y agua fermentadas con gesho, un espino cerval autóctono cuyas hojas amargas equilibran el dulzor, como hace el lúpulo en la cerveza. Suele fermentar un par de semanas y se sirve en un frasco de fondo redondo llamado berele, normalmente con entre un 7 y un 11 % de alcohol.",
+      "La tella es la cerveza casera de todos los días: una cerveza turbia hecha con cereal, como la cebada, y el mismo gesho, fermentada durante unos días. El areki es su primo fuerte: un destilado transparente obtenido de una mezcla de cereal fermentado, a menudo de entre 30 y 50 % de alcohol, que conviene tratar con respeto.",
+      "La velada termina en una casa de tej con azmari: poetas-músicos que improvisan versos con el masenqo, de una sola cuerda, y que con frecuencia bromean con el público en rima. Es una de las noches más animadas de la capital."
+    ],
+    "includes": [
+      "Una cata guiada de tej, tella y areki",
+      "Aperitivos tradicionales con cada bebida",
+      "Una velada de música azmari en directo",
+      "Un guía privado y transporte de regreso"
+    ],
+    "goodToKnow": "Para huéspedes de 18 años o más. Siempre hay catas sin alcohol, con zumos de fruta naturales y té especiado."
   },
   "coffee-cupping-and-ceremony": {
     "title": "Cata y ceremonia del café",
@@ -24,7 +51,19 @@
     "short": "Cata de café",
     "category": "Café",
     "duration": "2 – 3 horas",
-    "where": "Adís Abeba o cualquier región cafetera"
+    "where": "Adís Abeba o cualquier región cafetera",
+    "season": "Todo el año",
+    "paragraphs": [
+      "Una cata, o «cupping», es el método de degustación del comercio del café: café recién molido infusionado en tazas abiertas, la costra rota y cada taza sorbida con una cuchara. Lado a lado, las diferencias son claras: las tazas brillantes y florales de Yirgacheffe, los cafés más plenos de Sidama y Jimma, los naturales afrutados, parecidos al vino, de Harar.",
+      "Después, la ceremonia. Los granos verdes se tuestan sobre brasas ante usted, se muelen a mano y se preparan en una jebena de barro, con incienso ardiendo y palomitas de maíz que se van pasando. Hay tres rondas —abol, tona y baraka, esta última significa bendición— y quedarse a las tres forma parte de la cortesía.",
+      "La cata puede hacerse en Adís Abeba cualquier día, o en las propias fincas durante uno de nuestros viajes del café."
+    ],
+    "includes": [
+      "Una cata guiada de cafés de varias regiones",
+      "Una ceremonia del café completa de tres rondas en un hogar familiar",
+      "Notas de cata para llevarse a casa",
+      "Recogida y regreso al hotel"
+    ]
   },
   "run-where-champions-train": {
     "title": "Corra donde entrenan los campeones",
@@ -33,7 +72,20 @@
     "short": "Running",
     "category": "Actividad",
     "duration": "Una mañana temprano",
-    "where": "Entoto, Adís Abeba"
+    "where": "Entoto, Adís Abeba",
+    "season": "Todo el año (mejor de octubre a mayo)",
+    "paragraphs": [
+      "A unos 3.000 metros, Entoto está más alto que la ciudad que queda abajo, y sus suaves senderos de bosque y pistas de tierra ondulantes son ideales para ganar forma sin castigar las piernas. Al amanecer se llenan de corredores, desde grupos de élite hasta personas que entrenan para su primera carrera.",
+      "Un guía de running local marca un ritmo adecuado para usted —se trata de la experiencia, no de una marca— y le explica cómo entrenan los corredores etíopes: los días suaves son realmente suaves, mucha carrera fuera del asfalto y mucha en grupo. El desayuno posterior es la recompensa.",
+      "Los corredores más serios pueden ir más lejos: la ciudad de Bekoji, cuna de Derartu Tulu, Kenenisa Bekele y las hermanas Dibaba, y la Gran Carrera Etíope de finales de noviembre, una carrera de 10 kilómetros por la capital con decenas de miles de corredores."
+    ],
+    "includes": [
+      "Un guía de running local",
+      "Transporte de ida y vuelta a los senderos de Entoto",
+      "Agua y un desayuno tras la carrera",
+      "Rutas y ritmo adaptados a su nivel"
+    ],
+    "goodToKnow": "A esta altitud todos corren más despacio y respiran con más esfuerzo; sugerimos al menos dos días en Adís Abeba antes de correr con intensidad."
   },
   "rift-valley-cycling-day": {
     "title": "Un día sobre dos ruedas en el Rift",
@@ -42,7 +94,19 @@
     "short": "Ciclismo",
     "category": "Actividad",
     "duration": "Un día completo",
-    "where": "Valle del Rift central"
+    "where": "Valle del Rift central",
+    "season": "Oct – mayo",
+    "paragraphs": [
+      "Los recorridos suelen discurrir entre los lagos al sur de Adís Abeba —Ziway, Abijata-Shalla y Langano— por una mezcla de asfalto tranquilo y pistas de tierra entre campos de cultivo y zonas de acacias, con paradas donde algo llame su atención.",
+      "Un vehículo de apoyo lleva agua, tentempiés y recambios, y puede recoger a quien ya haya tenido bastante. Hay bicicletas eléctricas para quienes quieren el paisaje con menos esfuerzo.",
+      "Para una aventura más larga, nuestro viaje por el valle del Rift en bici enlaza varios días de pedaleo, con un largo descenso desde las tierras altas hasta el propio valle."
+    ],
+    "includes": [
+      "Una bicicleta de calidad o eléctrica, casco y kit de reparación",
+      "Un guía ciclista y vehículo de apoyo",
+      "Agua, tentempiés y un almuerzo junto al lago",
+      "Traslados de ida y vuelta al punto de partida"
+    ]
   },
   "teff-farm-day": {
     "title": "Un día en una granja de teff",
@@ -51,7 +115,20 @@
     "short": "Día de granja",
     "category": "Granja y comunidad",
     "duration": "Un día completo",
-    "where": "Aldeas de las tierras altas"
+    "where": "Aldeas de las tierras altas",
+    "season": "Cosecha: nov – ene",
+    "paragraphs": [
+      "El teff se siembra con las lluvias largas, hacia julio, y se cosecha de noviembre a enero. Los campos todavía se aran con una pareja de bueyes y un arado de madera, el grano se corta a mano y la trilla se hace a la antigua: bueyes o burros caminando en círculo sobre la cosecha para separar la semilla de la paja.",
+      "Según la época del año, puede arar, escardar, cortar o ayudar en la era de trilla; luego llevar el grano a casa, verlo moler y comer injera hecha con él en la mesa de la familia.",
+      "Organizamos las jornadas de granja con familias que conocemos en aldeas de las tierras altas a lo largo de nuestras rutas, desde las tierras altas de Menz hasta los campos alrededor de Lalibela, y el pago se hace siempre directamente al hogar."
+    ],
+    "includes": [
+      "Un día con una familia de agricultores, organizado con antelación",
+      "Un guía local y traductor",
+      "Almuerzo con la familia",
+      "Un pago realizado directamente al hogar"
+    ],
+    "goodToKnow": "El trabajo cambia con la estación; la cosecha y la trilla, de noviembre a enero, son la época más llamativa para venir."
   },
   "herding-with-the-borana": {
     "title": "Ganado, pozos y los borana",
@@ -60,7 +137,19 @@
     "short": "Ganado y pastoreo",
     "category": "Granja y comunidad",
     "duration": "Media jornada o más",
-    "where": "Borana, en torno a Yabelo"
+    "where": "Borana, en torno a Yabelo",
+    "season": "Oct – mar",
+    "paragraphs": [
+      "El centro de la vida borana es el pozo. Excavados a mano hasta treinta metros de profundidad, los pozos se trabajan con cadenas humanas que pasan el agua cubo a cubo, cantando para mantener el ritmo: los pozos cantores, adonde acuden a beber los rebaños.",
+      "Lejos de los pozos, usted camina con los pastores y su ganado, escucha cómo se comparte el pastoreo por la tierra seca y comparte leche y té en el recinto de una familia.",
+      "Las visitas se organizan siempre a través de un guía borana local y con el consentimiento de la comunidad, y los pagos van a las familias y a la comunidad que usted visita."
+    ],
+    "includes": [
+      "Un guía borana local",
+      "Una visita a un pozo en funcionamiento, donde esté permitido",
+      "Tiempo con una familia de pastores",
+      "Tasas comunitarias"
+    ]
   },
   "village-homestay": {
     "title": "Alójese con una familia de la aldea",
@@ -69,7 +158,19 @@
     "short": "Estancia en familia",
     "category": "Granja y comunidad",
     "duration": "1 – 3 noches",
-    "where": "Tierras altas de Lalibela, Choke, Awra Amba, tierras altas de Gamo"
+    "where": "Tierras altas de Lalibela, Choke, Awra Amba, tierras altas de Gamo",
+    "season": "Oct – mayo",
+    "paragraphs": [
+      "En el escarpe de Meket, cerca de Lalibela, las aldeas acogen a los caminantes en campamentos de tukul con techo de paja que ellas mismas construyeron y gestionan. En las montañas de Choke, una ecoaldea recibe a los senderistas con una celebración por la tarde. En Awra Amba, la cooperativa de tejedores mantiene una casa de huéspedes para los visitantes que quieren quedarse más allá de la excursión de un día.",
+      "Los días siguen el ritmo del hogar: ir a por agua, el mercado, los campos, la ceremonia del café por la tarde. Las noches son para la comida, la conversación a través de su guía y acostarse muy temprano.",
+      "Las habitaciones son sencillas y limpias, y el dinero va directamente a las comunidades que le acogen, que es exactamente el sentido de todo esto."
+    ],
+    "includes": [
+      "Noches en albergues o casas de huéspedes gestionados por la comunidad",
+      "Todas las comidas con sus anfitriones",
+      "Un guía y traductor",
+      "Tasas comunitarias pagadas directamente"
+    ]
   },
   "leave-it-better": {
     "title": "Déjelo mejor: una jornada de limpieza",
@@ -78,6 +179,19 @@
     "short": "Jornada de limpieza",
     "category": "Devolver algo",
     "duration": "Media jornada",
-    "where": "Entoto, los senderos de Simien, las orillas del lago Tana"
+    "where": "Entoto, los senderos de Simien, las orillas del lago Tana",
+    "season": "Todo el año",
+    "paragraphs": [
+      "Una jornada de limpieza de medio día encaja fácilmente en un viaje: un tramo de sendero de bosque en Entoto, sobre Adís Abeba, un tramo muy transitado del camino del escarpe de los Simien o una orilla del lago Tana cerca de Bahir Dar. Trabaja en un grupo pequeño, con guantes, bolsas y un guía, y los residuos se clasifican y se retiran como corresponde.",
+      "Solo organizamos limpiezas junto con una oficina local del parque o un grupo comunitario, de modo que el trabajo sea deseado, organizado y útil. Confirmamos con usted el socio y el lugar antes del viaje, nunca como una oportunidad fotográfica escenificada.",
+      "Todos los viajes que organizamos siguen discretamente el mismo principio: llevarse lo que se trae, y dejar campamentos y senderos como los encontramos."
+    ],
+    "includes": [
+      "Guantes, bolsas y equipo",
+      "Un guía y la coordinación local",
+      "Eliminación adecuada de lo recogido",
+      "Un refrigerio al terminar"
+    ],
+    "goodToKnow": "Se organiza bajo petición con un socio local del parque o de la comunidad, confirmado antes de su viaje."
   }
 }

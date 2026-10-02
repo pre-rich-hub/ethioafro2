@@ -1,0 +1,52 @@
+{
+  "ui": {
+    "title": "Planificar {name}",
+    "intro": "Temporada, altitud y cuánto tiempo quedarse: respondido con claridad.",
+    "lalibelaLink": "Leer: Lalibela al amanecer",
+    "defaultLink": "Cuándo visitar Etiopía"
+  },
+  "lalibela": [
+    {
+      "question": "¿Cuál es la mejor época para visitar Lalibela?",
+      "answer": "De octubre a marzo es la ventana más fiable para senderos secos y luz clara. La Navidad etíope (principios de enero) y Timkat llenan las iglesias de peregrinos: algo potente si busca la liturgia, y más tranquilo si viene entre semana fuera de las fiestas. Consulte nuestro artículo del diario sobre las visitas al amanecer para obtener consejos de horarios."
+    },
+    {
+      "question": "¿Cuántos días debería dedicar?",
+      "answer": "Dos o tres días completos bastan para ambos grupos de iglesias, una visita al amanecer y un monasterio periférico como Asheton Maryam o Yemrehanna Kristos. Un solo día apresurado solo cubre lo más destacado en horario turístico."
+    },
+    {
+      "question": "¿Es difícil caminar por Lalibela?",
+      "answer": "La ciudad está a unos 2.500 metros. Los caminos entre iglesias usan zanjas, escalones y roca irregular: es manejable para la mayoría de los visitantes que van despacio, pero duro para las rodillas y el equilibrio. Podemos planificar paradas de descanso y traslados en vehículo donde convenga."
+    },
+    {
+      "question": "¿Debería ver las iglesias al amanecer?",
+      "answer": "Sí, si puede. La luz temprana y la oración matutina muestran Lalibela como una iglesia viva y no como un monumento de mediodía. Coordinamos los permisos y un guía local para que llegue antes de los grupos principales."
+    },
+    {
+      "question": "¿Qué viajes incluyen Lalibela?",
+      "answer": "Lalibela es el eje de la Ruta Histórica y de varios itinerarios más cortos por las tierras altas. Díganos sus fechas y le propondremos un circuito privado que dé a las iglesias el tiempo que merecen, en lugar de una parada para marcar en la lista."
+    }
+  ],
+  "simien-mountains": [
+    {
+      "question": "¿Cuál es la mejor época para los montes Simien?",
+      "answer": "De octubre a abril es la temporada principal de trekking: vistas más despejadas y senderos más estables tras las lluvias. De julio a septiembre es más húmedo, con caminos más embarrados y una logística más alterada; en esas fechas solemos aconsejar otras regiones."
+    },
+    {
+      "question": "¿Qué altitud tiene y será un problema?",
+      "answer": "Los campamentos del sendero están aproximadamente entre 3.000 y 4.200 metros, con el Ras Dashen a 4.550 metros. La mayoría de los huéspedes se adaptan bien con ascensos graduales, descanso e hidratación; nunca apresuramos la primera noche. Cuéntenos con franqueza si tiene problemas cardíacos o pulmonares."
+    },
+    {
+      "question": "¿Necesito acampar?",
+      "answer": "No. Puede recorrer el escarpe clásico y dormir en albergues en el borde, o ir de campamento en campamento con mulos, guardabosques y cocinero. Adaptamos el estilo a su comodidad en lugar de imponer un único producto."
+    },
+    {
+      "question": "¿Cuántos días necesitan los Simien?",
+      "answer": "De tres a cinco días cubren bien la ruta clásica Sankaber–Geech–Chenek. Los viajes más largos añaden el Ras Dashen o se combinan con Gondar y Lalibela. Menos de dos días completos en el escarpe suele resultar apresurado."
+    },
+    {
+      "question": "¿Veré geladas e íbices walia?",
+      "answer": "Las manadas de geladas se ven con frecuencia a lo largo de los senderos del escarpe norte. Los íbices walia son más esquivos y es más probable verlos cerca de Chenek y en los acantilados más altos: nunca está garantizado, pero programamos las caminatas en las mejores horas."
+    }
+  ]
+}

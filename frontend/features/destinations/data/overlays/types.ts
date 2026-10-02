@@ -1,9 +1,18 @@
 import type { Destination } from '@/features/destinations/types/destination.types'
 
-/** Card + meta fields for Step 4. paragraphs/highlights stay English until pass 2. */
+/** Card + Pass-2 detail fields. */
 export type DestinationCardCopy = Pick<
   Destination,
-  'name' | 'teaser' | 'intro' | 'tag' | 'region'
+  | 'name'
+  | 'teaser'
+  | 'intro'
+  | 'tag'
+  | 'region'
+  | 'bestTime'
+  | 'duration'
+  | 'altitude'
+  | 'highlights'
+  | 'paragraphs'
 >
 
 export type DestinationOverlayMap = Record<string, Partial<DestinationCardCopy>>

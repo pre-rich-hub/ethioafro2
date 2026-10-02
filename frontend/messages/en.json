@@ -318,7 +318,13 @@
     "ctaSecondaryCta": "Browse Tours",
     "founderEyebrow": "From the Founder",
     "founderQuote": "Travel is both my profession and my passion.",
-    "founderRole": "Founder · {company}"
+    "founderRole": "Founder · {company}",
+    "founderP1": "I was born and raised in Bahir Dar, and my life in tourism began there while I was still at school.",
+    "founderP2": "Between classes I worked with visitors in Bahir Dar and up in the Simien Mountains. What started as work alongside my studies became the thing I wanted to do with my life: sharing the cultures, the history, the landscapes and the hospitality of the country I love with people seeing it for the first time.",
+    "founderP3": "After high school I moved to Addis Ababa to study Tourism and Tour Operations at the Tourism Training Institute, then spent years working for other tour companies — guiding, planning itineraries, looking after guests and managing destinations. Those years taught me every side of the work.",
+    "founderP4": "{company} grew out of that. It is a licensed Ethiopian company built for private, tailor-made journeys, and it is run today by my three brothers, our wider family, our team — and me.",
+    "founderImageAlt": "The Simien Mountains escarpment at first light",
+    "founderImageCaption": "The Simien — where it all started"
   },
   "Legal": {
     "privacyEyebrow": "Legal",

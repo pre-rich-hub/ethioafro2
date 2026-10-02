@@ -5,7 +5,8 @@ export type LocalizedOverlay<T extends object> = Partial<T>
 
 /**
  * Merge an English base record with a locale overlay.
- * Missing overlay keys fall back to English (Step 4 partial translation).
+ * Missing overlay keys fall back to English. Arrays (itinerary, paragraphs,
+ * etc.) replace wholly when provided — no per-item merge.
  */
 export function applyOverlay<T extends object>(
   base: T,
@@ -14,9 +15,9 @@ export function applyOverlay<T extends object>(
   if (!overlay) return base
   const next = { ...base }
   for (const [key, value] of Object.entries(overlay) as [keyof T, T[keyof T]][]) {
-    if (value !== undefined && value !== null && value !== '') {
-      next[key] = value
-    }
+    if (value === undefined || value === null) continue
+    if (typeof value === 'string' && value === '') continue
+    next[key] = value
   }
   return next
 }

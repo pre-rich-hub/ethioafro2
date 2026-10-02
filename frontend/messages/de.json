@@ -318,7 +318,13 @@
     "ctaSecondaryCta": "Touren ansehen",
     "founderEyebrow": "Vom Gründer",
     "founderQuote": "Reisen ist beides: mein Beruf und meine Leidenschaft.",
-    "founderRole": "Gründer · {company}"
+    "founderRole": "Gründer · {company}",
+    "founderP1": "Ich wurde in Bahir Dar geboren und bin dort aufgewachsen, und mein Leben im Tourismus begann dort, als ich noch zur Schule ging.",
+    "founderP2": "Zwischen den Unterrichtsstunden arbeitete ich mit Besuchern in Bahir Dar und oben im Simien-Gebirge. Was als Arbeit neben dem Studium begann, wurde zu dem, was ich mit meinem Leben tun wollte: die Kulturen, die Geschichte, die Landschaften und die Gastfreundschaft des Landes, das ich liebe, mit Menschen zu teilen, die es zum ersten Mal sehen.",
+    "founderP3": "Nach dem Schulabschluss zog ich nach Addis Abeba, um am Tourismusausbildungsinstitut Tourismus und Tourbetrieb zu studieren, und arbeitete dann jahrelang für andere Reiseveranstalter – als Guide, bei der Planung von Reiserouten, bei der Betreuung von Gästen und bei der Verwaltung von Destinationen. Diese Jahre haben mir jede Seite der Arbeit beigebracht.",
+    "founderP4": "{company} ist daraus entstanden. Es ist ein lizenziertes äthiopisches Unternehmen für private, maßgeschneiderte Reisen und wird heute von meinen drei Brüdern, unserer weiteren Familie, unserem Team – und mir geführt.",
+    "founderImageAlt": "Das Simien-Escarpment im ersten Licht des Tages",
+    "founderImageCaption": "Die Simien – wo alles begann"
   },
   "Legal": {
     "privacyEyebrow": "Rechtliches",

@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { Check, ArrowRight } from 'lucide-react'
-import { activities } from '@/features/experiences/data/experience.data'
+import { useLocale } from 'next-intl'
+import { getLocalizedActivities } from '@/features/experiences/utils/experience.utils'
 import { journeyStyles } from '@/features/enquiries/data/journey-styles'
 import { submitContact } from '@/features/enquiries/api/enquiries.api'
 
@@ -15,6 +16,8 @@ export function EnquiryForm({
   defaultActivities?: string[]
   subject?: string
 }) {
+  const locale = useLocale()
+  const activities = getLocalizedActivities(locale)
   const [selected, setSelected] = useState<string[]>(defaultStyles)
   const [extras, setExtras] = useState<string[]>(defaultActivities)
   const [submitted, setSubmitted] = useState(false)

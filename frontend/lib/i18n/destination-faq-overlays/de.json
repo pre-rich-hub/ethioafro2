@@ -1,0 +1,52 @@
+{
+  "ui": {
+    "title": "{name} planen",
+    "intro": "Jahreszeit, Höhe und Aufenthaltsdauer – klar beantwortet.",
+    "lalibelaLink": "Lesen: Lalibela im Morgengrauen",
+    "defaultLink": "Wann man Äthiopien besuchen sollte"
+  },
+  "lalibela": [
+    {
+      "question": "Wann ist die beste Reisezeit für Lalibela?",
+      "answer": "Oktober bis März ist das verlässlichste Zeitfenster für trockene Wege und klares Licht. Das äthiopische Weihnachtsfest (Anfang Januar) und Timkat füllen die Kirchen mit Pilgern – eindrucksvoll, wenn Sie die Liturgie erleben möchten, ruhiger, wenn Sie unter der Woche außerhalb der Feste kommen. Tipps zum richtigen Zeitpunkt finden Sie in unserem Journalbeitrag zu Besuchen im Morgengrauen."
+    },
+    {
+      "question": "Wie viele Tage sollte ich einplanen?",
+      "answer": "Zwei bis drei volle Tage genügen für beide Kirchengruppen, einen Besuch im Morgengrauen und ein abgelegenes Kloster wie Asheton Maryam oder Yemrehanna Kristos. Ein einziger gehetzter Tag deckt nur die Höhepunkte zu Touristenzeiten ab."
+    },
+    {
+      "question": "Ist Lalibela anstrengend zu Fuß?",
+      "answer": "Die Stadt liegt auf rund 2.500 Metern. Die Wege zwischen den Kirchen führen durch Gräben, über Stufen und unebenen Fels – für die meisten Besucher, die es langsam angehen, machbar, aber hart für Knie und Gleichgewicht. Wir können Ruhepausen und Fahrzeugtransfers einplanen, wo es sinnvoll ist."
+    },
+    {
+      "question": "Sollte ich die Kirchen im Morgengrauen besuchen?",
+      "answer": "Ja, wenn es möglich ist. Das frühe Licht und das Morgengebet zeigen Lalibela als lebendige Kirche und nicht als Mittagsdenkmal. Wir stimmen Genehmigungen und einen einheimischen Guide so ab, dass Sie vor den großen Reisegruppen ankommen."
+    },
+    {
+      "question": "Welche Reisen schließen Lalibela ein?",
+      "answer": "Lalibela ist der Dreh- und Angelpunkt der Historischen Route und mehrerer kürzerer Hochland-Reiserouten. Nennen Sie uns Ihre Termine, und wir stellen eine private Rundreise zusammen, die den Kirchen die gebührende Zeit gibt, statt nur eine Station zum Abhaken zu sein."
+    }
+  ],
+  "simien-mountains": [
+    {
+      "question": "Wann ist die beste Reisezeit für das Simien-Gebirge?",
+      "answer": "Oktober bis April ist die Haupt-Trekkingsaison: klarere Sicht und stabilere Wege nach der Regenzeit. Juli bis September ist nasser, mit schlammigeren Pfaden und gestörterer Logistik – wir raten in dieser Zeit meist zu anderen Regionen."
+    },
+    {
+      "question": "Wie hoch ist es, und wird die Höhe ein Problem sein?",
+      "answer": "Die Trail-Camps liegen ungefähr zwischen 3.000 und 4.200 Metern, der Ras Dashen auf 4.550 Metern. Die meisten Gäste kommen mit allmählichem Aufstieg, Ruhe und ausreichend Flüssigkeit gut zurecht; die erste Nacht überstürzen wir nie. Sagen Sie uns ehrlich, wenn Sie Herz- oder Lungenerkrankungen haben."
+    },
+    {
+      "question": "Muss ich zelten?",
+      "answer": "Nein. Sie können das klassische Escarpment erwandern und in Lodges am Rand übernachten oder von Camp zu Camp mit Maultieren, Ranger und Koch ziehen. Wir stimmen den Stil auf Ihren Komfort ab, statt ein einziges Produkt aufzuzwingen."
+    },
+    {
+      "question": "Wie viele Tage brauchen die Simien?",
+      "answer": "Drei bis fünf Tage decken die klassische Strecke Sankaber–Geech–Chenek gut ab. Längere Reisen ergänzen den Ras Dashen oder verbinden sich mit Gondar und Lalibela. Weniger als zwei volle Tage auf dem Escarpment fühlen sich meist gehetzt an."
+    },
+    {
+      "question": "Werde ich Dscheladas und Walia-Steinböcke sehen?",
+      "answer": "Dschelada-Herden sind entlang der Pfade des nördlichen Escarpments häufig zu sehen. Walia-Steinböcke sind scheuer und eher um Chenek und an höheren Klippen zu finden – nie garantiert, aber wir legen die Wanderungen in die besseren Stunden."
+    }
+  ]
+}

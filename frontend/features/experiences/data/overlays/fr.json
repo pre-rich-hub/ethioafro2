@@ -6,7 +6,21 @@
     "short": "Cours de cuisine",
     "category": "Gastronomie et boissons",
     "duration": "Une demi-journée",
-    "where": "Addis-Abeba"
+    "where": "Addis-Abeba",
+    "season": "Toute l'année",
+    "paragraphs": [
+      "Le teff est la plus petite céréale du monde, et l'injera est une cuisine lente : la pâte fermente pendant plusieurs jours avant d'être prête, ce qui lui donne son acidité. Elle est ensuite versée en spirale sur une large plaque d'argile, le mitad, et couverte jusqu'à ce que la surface prenne son motif familier de petits trous. Réussir le versement demande de la pratique — et quelques essais ratés font partie du plaisir.",
+      "Pendant que l'injera cuit, vous préparez les plats qui l'accompagnent : un wat mijoté, du shiro à base de pois chiches moulus et des plats de légumes que beaucoup d'Éthiopiens mangent les jours de jeûne. Votre hôte vous explique les épices, le beurre et l'ordre dans lequel on cuisine.",
+      "Puis tout le monde s'assoit ensemble autour d'un grand plat partagé. Manger de la main droite, en déchirant l'injera pour prendre les ragoûts, voilà toute l'étiquette — et recevoir une bouchée de la main de votre hôte est un geste d'amitié."
+    ],
+    "includes": [
+      "Un cours animé par un hôte dans une cuisine familiale",
+      "Tous les ingrédients et le matériel",
+      "Le repas partagé que vous avez cuisiné",
+      "Une cérémonie du café pour terminer",
+      "Prise en charge et retour à l'hôtel à Addis-Abeba"
+    ],
+    "goodToKnow": "Les menus végétariens et végans sont faciles : beaucoup de plats éthiopiens sont naturellement végétaux."
   },
   "tej-tella-and-areki": {
     "title": "Tej, tella et areki",
@@ -15,7 +29,20 @@
     "short": "Boissons traditionnelles",
     "category": "Gastronomie et boissons",
     "duration": "Une soirée",
-    "where": "Addis-Abeba"
+    "where": "Addis-Abeba",
+    "season": "Toute l'année",
+    "paragraphs": [
+      "Le tej est le vin de miel de l'Éthiopie : du miel et de l'eau fermentés avec du gesho, un nerprun indigène dont les feuilles amères équilibrent la douceur, un peu comme le houblon dans la bière. Il fermente généralement une quinzaine de jours et se sert dans une fiole à fond rond appelée berele, en général entre 7 et 11 % d'alcool.",
+      "La tella est la bière artisanale de tous les jours — une bière trouble faite de céréales telles que l'orge et du même gesho, fermentée quelques jours. L'areki en est le cousin fort : un alcool clair distillé à partir d'un moût de céréales fermenté, souvent entre 30 et 50 % d'alcool, à traiter avec respect.",
+      "La soirée se termine dans une maison de tej avec des azmari — des poètes-musiciens qui improvisent des vers sur le masenqo à une corde, taquinant souvent le public en rimes. C'est l'une des soirées les plus animées de la capitale."
+    ],
+    "includes": [
+      "Une dégustation guidée de tej, de tella et d'areki",
+      "Des amuse-bouches traditionnels avec chaque boisson",
+      "Une soirée de musique azmari en direct",
+      "Un guide privé et le transport retour"
+    ],
+    "goodToKnow": "Réservé aux personnes de 18 ans et plus. Des dégustations sans alcool — jus de fruits frais et thé épicé — sont toujours proposées."
   },
   "coffee-cupping-and-ceremony": {
     "title": "Dégustation et cérémonie du café",
@@ -24,7 +51,19 @@
     "short": "Dégustation de café",
     "category": "Café",
     "duration": "2 à 3 heures",
-    "where": "Addis-Abeba, ou n'importe quelle région caféière"
+    "where": "Addis-Abeba, ou n'importe quelle région caféière",
+    "season": "Toute l'année",
+    "paragraphs": [
+      "Une dégustation, ou « cupping », est la méthode de dégustation du négoce du café : du café fraîchement moulu infusé dans des tasses ouvertes, la croûte brisée, puis chaque tasse aspirée à la cuillère. Côte à côte, les différences sont nettes — les tasses vives et florales du Yirgacheffe, les cafés plus pleins du Sidama et du Jimma, les naturels fruités, proches du vin, de Harar.",
+      "Vient ensuite la cérémonie. Les grains verts sont torréfiés sur les braises devant vous, moulus à la main et infusés dans une jebena en argile, avec de l'encens qui brûle et du pop-corn que l'on fait circuler. Il y a trois tournées — abol, tona et baraka, ce dernier mot signifiant bénédiction — et rester pour les trois fait partie de la courtoisie.",
+      "La dégustation peut se tenir à Addis-Abeba n'importe quel jour, ou dans les fermes elles-mêmes lors de l'un de nos voyages du café."
+    ],
+    "includes": [
+      "Une dégustation guidée de cafés de plusieurs régions",
+      "Une cérémonie du café complète en trois tournées dans une maison familiale",
+      "Des notes de dégustation à emporter",
+      "Prise en charge et retour à l'hôtel"
+    ]
   },
   "run-where-champions-train": {
     "title": "Courir là où s'entraînent les champions",
@@ -33,7 +72,20 @@
     "short": "Course à pied",
     "category": "Actif",
     "duration": "Un petit matin",
-    "where": "Entoto, Addis-Abeba"
+    "where": "Entoto, Addis-Abeba",
+    "season": "Toute l'année (idéal d'octobre à mai)",
+    "paragraphs": [
+      "À environ 3 000 mètres, Entoto domine la ville en contrebas, et ses doux sentiers forestiers et ses pistes de terre vallonnées sont idéaux pour développer sa forme sans marteler les jambes. À l'aube, ils se remplissent de coureurs, des groupes d'élite aux personnes qui préparent leur première course.",
+      "Un guide de course local adopte une allure qui vous convient — il s'agit de l'expérience, pas d'un chrono — et explique comment s'entraînent les coureurs éthiopiens : des jours faciles vraiment faciles, beaucoup de course hors route et beaucoup en groupe. Le petit-déjeuner qui suit est la récompense.",
+      "Les coureurs sérieux peuvent aller plus loin : la ville de Bekoji, berceau de Derartu Tulu, de Kenenisa Bekele et des sœurs Dibaba, et la Great Ethiopian Run de fin novembre — une course de 10 kilomètres à travers la capitale avec des dizaines de milliers de coureurs."
+    ],
+    "includes": [
+      "Un guide de course local",
+      "Le transport aller-retour vers les sentiers d'Entoto",
+      "De l'eau et un petit-déjeuner après la course",
+      "Parcours et allure adaptés à votre niveau"
+    ],
+    "goodToKnow": "À cette altitude, tout le monde court plus lentement et respire plus fort — nous conseillons au moins deux jours à Addis-Abeba avant de courir intensément."
   },
   "rift-valley-cycling-day": {
     "title": "Une journée à vélo dans le Rift",
@@ -42,7 +94,19 @@
     "short": "Vélo",
     "category": "Actif",
     "duration": "Une journée entière",
-    "where": "Vallée centrale du Rift"
+    "where": "Vallée centrale du Rift",
+    "season": "Oct – mai",
+    "paragraphs": [
+      "Les sorties se déroulent généralement entre les lacs au sud d'Addis-Abeba — Ziway, Abijata-Shalla et Langano — sur un mélange de routes goudronnées tranquilles et de pistes de terre à travers champs et terres d'acacias, avec des arrêts partout où quelque chose retient votre regard.",
+      "Un véhicule d'assistance transporte l'eau, les en-cas et les pièces détachées, et peut prendre en charge toute personne qui en a assez. Des vélos électriques sont disponibles pour les cyclistes qui veulent le paysage avec moins d'effort.",
+      "Pour une aventure plus longue, notre voyage à vélo dans la vallée du Rift enchaîne plusieurs jours de pédalage, dont une longue descente des hauts plateaux jusque dans la vallée elle-même."
+    ],
+    "includes": [
+      "Un vélo ou vélo électrique de qualité, un casque et un kit de réparation",
+      "Un guide cycliste et un véhicule d'assistance",
+      "De l'eau, des en-cas et un déjeuner au bord d'un lac",
+      "Les transferts aller-retour depuis le point de départ"
+    ]
   },
   "teff-farm-day": {
     "title": "Une journée dans une ferme de teff",
@@ -51,7 +115,20 @@
     "short": "Journée à la ferme",
     "category": "Ferme et communauté",
     "duration": "Une journée entière",
-    "where": "Villages des hauts plateaux"
+    "where": "Villages des hauts plateaux",
+    "season": "Récolte : nov. – janv.",
+    "paragraphs": [
+      "Le teff est semé avec les grandes pluies, vers juillet, et récolté de novembre à janvier. Les champs sont encore labourés avec une paire de bœufs et une charrue en bois, le grain est coupé à la main et le battage se fait à l'ancienne : des bœufs ou des ânes tournant en cercle sur la récolte pour séparer la graine de la paille.",
+      "Selon la période de l'année, vous pouvez labourer, désherber, couper ou aider sur l'aire de battage — puis rapporter le grain à la maison, le voir moudre et manger de l'injera qui en est faite à la table de la famille.",
+      "Nous organisons les journées à la ferme avec des familles que nous connaissons dans des villages d'altitude le long de nos itinéraires, des hauts plateaux de Menz à la campagne autour de Lalibela, et la journée est toujours payée directement au foyer."
+    ],
+    "includes": [
+      "Une journée avec une famille d'agriculteurs, organisée à l'avance",
+      "Un guide local et interprète",
+      "Un déjeuner avec la famille",
+      "Un paiement versé directement au foyer"
+    ],
+    "goodToKnow": "Le travail change avec la saison ; la récolte et le battage, de novembre à janvier, sont la période la plus marquante pour venir."
   },
   "herding-with-the-borana": {
     "title": "Bétail, puits et Borana",
@@ -60,7 +137,19 @@
     "short": "Bétail et élevage",
     "category": "Ferme et communauté",
     "duration": "Une demi-journée ou plus",
-    "where": "Borana, autour de Yabelo"
+    "where": "Borana, autour de Yabelo",
+    "season": "Oct – mars",
+    "paragraphs": [
+      "Le centre de la vie borana, c'est le puits. Creusés à la main jusqu'à trente mètres de profondeur, les puits sont exploités par des chaînes humaines qui font monter l'eau seau après seau en chantant pour garder le rythme — les puits chantants, où viennent boire les troupeaux.",
+      "Loin des puits, vous partez avec les éleveurs et leur bétail, apprenez comment le pâturage est partagé à travers le pays sec et partagez le lait et le thé dans l'enclos d'une famille.",
+      "Les visites sont toujours organisées par l'intermédiaire d'un guide borana local et avec le consentement de la communauté, et les redevances reviennent aux familles et à la communauté que vous visitez."
+    ],
+    "includes": [
+      "Un guide borana local",
+      "La visite d'un puits en activité, lorsque c'est autorisé",
+      "Du temps avec une famille d'éleveurs",
+      "Les droits communautaires"
+    ]
   },
   "village-homestay": {
     "title": "Séjourner chez une famille de village",
@@ -69,7 +158,19 @@
     "short": "Chez l'habitant",
     "category": "Ferme et communauté",
     "duration": "1 à 3 nuits",
-    "where": "Hauts plateaux de Lalibela, Choke, Awra Amba, hauts plateaux du Gamo"
+    "where": "Hauts plateaux de Lalibela, Choke, Awra Amba, hauts plateaux du Gamo",
+    "season": "Oct – mai",
+    "paragraphs": [
+      "Sur l'escarpement de Meket, près de Lalibela, des villages accueillent les marcheurs dans des camps de tukuls au toit de chaume qu'ils ont construits et qu'ils gèrent eux-mêmes. Dans les monts Choke, un écovillage accueille les randonneurs avec une célébration le soir. À Awra Amba, la coopérative de tisserands tient une maison d'hôtes pour les visiteurs qui souhaitent rester au-delà de la visite d'une journée.",
+      "Les journées suivent le rythme du foyer : aller chercher l'eau, le marché, les champs, la cérémonie du café l'après-midi. Les soirées sont consacrées au repas, à la conversation par l'intermédiaire de votre guide et à de très tôt couchers.",
+      "Les chambres sont simples et propres, et l'argent va directement aux communautés qui vous accueillent — ce qui est exactement le but."
+    ],
+    "includes": [
+      "Des nuits dans des lodges ou maisons d'hôtes gérés par la communauté",
+      "Tous les repas avec vos hôtes",
+      "Un guide et interprète",
+      "Les droits communautaires versés directement"
+    ]
   },
   "leave-it-better": {
     "title": "Laisser mieux qu'on ne l'a trouvé : une journée de nettoyage",
@@ -78,6 +179,19 @@
     "short": "Journée de nettoyage",
     "category": "Redonner",
     "duration": "Une demi-journée",
-    "where": "Entoto, les sentiers du Simien, les rives du lac Tana"
+    "where": "Entoto, les sentiers du Simien, les rives du lac Tana",
+    "season": "Toute l'année",
+    "paragraphs": [
+      "Une demi-journée de nettoyage s'intègre facilement à un voyage : un tronçon de sentier forestier à Entoto, au-dessus d'Addis-Abeba, un passage fréquenté du sentier de l'escarpement du Simien, ou une rive du lac Tana près de Bahir Dar. Vous travaillez en petit groupe, avec gants, sacs et un guide, et les déchets sont triés et évacués correctement.",
+      "Nous n'organisons des nettoyages qu'avec un bureau local du parc ou un groupe communautaire, afin que le travail soit souhaité, organisé et utile. Nous confirmons avec vous le partenaire et le site avant votre voyage — jamais comme une occasion de photo mise en scène.",
+      "Chaque voyage que nous organisons suit discrètement le même principe : remporter ce que nous apportons, et laisser les camps et les sentiers comme nous les avons trouvés."
+    ],
+    "includes": [
+      "Gants, sacs et équipement",
+      "Un guide et la coordination locale",
+      "L'élimination correcte de ce qui est collecté",
+      "Des rafraîchissements ensuite"
+    ],
+    "goodToKnow": "Organisé sur demande avec un partenaire local du parc ou de la communauté, confirmé avant votre voyage."
   }
 }

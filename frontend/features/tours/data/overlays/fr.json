@@ -2,226 +2,2720 @@
   "the-historic-route": {
     "title": "La Route historique",
     "teaser": "Quatre sites UNESCO et trois anciennes capitales, reliés par de courts vols intérieurs plutôt que par de longs trajets routiers.",
-    "summary": "Le grand circuit classique du nord, réorganisé autour de la lumière et de la liturgie plutôt que de la distance routière. Visites des églises tôt le matin et en fin de journée, quand la foule est la plus clairsemée, hébergements de charme sur le parcours et aucune journée plus longue que nécessaire."
+    "summary": "Le grand circuit classique du nord, réorganisé autour de la lumière et de la liturgie plutôt que de la distance routière. Visites des églises tôt le matin et en fin de journée, quand la foule est la plus clairsemée, hébergements de charme sur le parcours et aucune journée plus longue que nécessaire.",
+    "days": "11 jours",
+    "style": "Culturel · Luxe · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Tous les vols intérieurs en Éthiopie",
+      "Véhicule privé avec un chauffeur-guide expérimenté pendant tout le voyage",
+      "Guides locaux spécialisés à Lalibela, Axoum et Gondar",
+      "Lodges de charme sélectionnés à chaque étape",
+      "Petit-déjeuner quotidien, la plupart des déjeuners et des dîners",
+      "Un coordinateur de voyage dédié, joignable à toute heure"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et dépenses personnelles"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Transfert privé depuis l'aéroport et dîner de bienvenue avec tibs et tej en compagnie de votre coordinateur de voyage, qui vous présente les jours à venir."
+      },
+      {
+        "day": "Jours 2 – 3",
+        "title": "Bahir Dar et le lac Tana",
+        "text": "Un vol matinal vers le nord, puis un bateau privé jusqu'aux monastères des îles avant l'afflux de la journée, et les chutes de Tis Issat dans la lumière de l'après-midi."
+      },
+      {
+        "day": "Jours 4 – 5",
+        "title": "Gondar",
+        "text": "L'enceinte royale à l'ouverture, le plafond peint de Debre Berhan Selassie, puis le palais de Kuskuam lorsque la lumière devient dorée."
+      },
+      {
+        "day": "Jours 6 – 7",
+        "title": "Monts Simien",
+        "text": "Deux marches sur l'escarpement parmi des troupes de géladas habituées à l'homme, avec retour chaque soir au feu du lodge sur le rebord."
+      },
+      {
+        "day": "Jours 8 – 9",
+        "title": "Lalibela",
+        "text": "Le groupe d'églises du nord à l'aube, la tranchée qui mène à Bete Golgotha et une montée à Asheton Maryam pour la vue sur la vallée."
+      },
+      {
+        "day": "Jour 10",
+        "title": "Axoum",
+        "text": "Le champ de stèles, la chapelle de la Tablette depuis le seuil autorisé et les ruines du palais attribuées à la reine de Saba."
+      },
+      {
+        "day": "Jour 11",
+        "title": "Addis et départ",
+        "text": "Une dernière cérémonie du café, une chambre de jour pour vous reposer avant votre vol et un départ en soirée."
+      }
+    ],
+    "places": [
+      "Lac Tana",
+      "Gondar",
+      "Monts Simien",
+      "Lalibela",
+      "Axoum"
+    ]
   },
   "simien-escarpment-trek": {
     "title": "Trek sur l'escarpement du Simien",
     "teaser": "De camp en camp le long du rebord nord — Sankaber, Geech, Chenek — avec le vide jamais à plus de quelques pas.",
-    "summary": "La ligne classique du Simien, parcourue à pied depuis Gondar et retour en cinq jours. Des mules portent les charges, un garde du parc et un cuisinier de camp vous accompagnent, et chaque jour s'achève un peu plus haut que le précédent : l'altitude arrive ainsi progressivement, et non d'un seul coup."
+    "summary": "La ligne classique du Simien, parcourue à pied depuis Gondar et retour en cinq jours. Des mules portent les charges, un garde du parc et un cuisinier de camp vous accompagnent, et chaque jour s'achève un peu plus haut que le précédent : l'altitude arrive ainsi progressivement, et non d'un seul coup.",
+    "days": "5 jours",
+    "style": "Trekking · Petit groupe",
+    "season": "oct. – avr.",
+    "group": "2 – 10 voyageurs",
+    "from": "$1,890 par personne",
+    "includes": [
+      "Une nuit à Gondar avant le trek, avec les châteaux l'après-midi de l'arrivée",
+      "Transferts aller-retour Gondar – Debark – Gondar",
+      "Tous les droits d'entrée du parc national, un garde armé du parc et les permis",
+      "Mules et muletiers, un cuisinier de camp et pension complète sur le sentier",
+      "Tentes, tapis de sol et tente-réfectoire chauffée à chaque camp",
+      "Un guide de montagne expérimenté parlant anglais pendant tout le voyage"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Gondar",
+      "Sac de couchage (location possible à Gondar)",
+      "Assurance voyage (obligatoire)",
+      "Pourboires pour les éclaireurs, muletiers et le cuisinier"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Gondar",
+        "text": "L'enceinte royale dans la lumière de l'après-midi, puis, pendant le dîner, vérification du matériel et présentation de l'itinéraire avec votre guide de montagne."
+      },
+      {
+        "day": "Jour 2",
+        "title": "De Debark à Sankaber · 3 250 m",
+        "text": "Deux heures vers le nord jusqu'au bureau du parc à Debark pour retrouver votre garde, puis une première marche tranquille le long du rebord depuis Buyit Ras, où les troupes de géladas broutent jusque sur le sentier."
+      },
+      {
+        "day": "Jour 3",
+        "title": "De Sankaber à Geech · 3 600 m",
+        "text": "Environ six heures et treize kilomètres le long de l'escarpement jusqu'aux chutes de Jinbar, puis montée à travers des terrasses d'orge jusqu'au camp. Pour ceux qui ont encore des jambes, une marche au coucher du soleil jusqu'à Kedadit."
+      },
+      {
+        "day": "Jour 4",
+        "title": "D'Imet Gogo et Inatye à Chenek · 3 620 m",
+        "text": "La plus longue et la plus belle journée : Imet Gogo à 3 926 mètres, la crête au-dessus d'Inatye à 4 070 et une longue descente parmi les lobélias géantes jusqu'aux falaises de Chenek."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Bwahit et retour à Gondar",
+        "text": "Une marche à l'aube vers le col de Bwahit, le meilleur terrain du parc pour le bouquetin walia, avant le retour en voiture à Gondar en fin d'après-midi."
+      }
+    ],
+    "places": [
+      "Gondar",
+      "Debark",
+      "Sankaber",
+      "Geech",
+      "Imet Gogo",
+      "Chenek",
+      "Monts Simien"
+    ]
   },
   "gondar-and-the-simien-rim": {
     "title": "Gondar et le rebord du Simien",
-    "teaser": "Les châteaux de Gondar, puis trois nuits au bord de l'escarpement : toutes les marches, sans tente.",
-    "summary": "Pour ceux qui veulent découvrir le Simien sans camper. Une journée entière dans la cité impériale, puis un lodge sur le rebord comme point de départ, avec un véhicule à disposition pour que chaque randonnée soit aussi longue ou aussi courte que la journée le permet."
+    "teaser": "Les châteaux de Gondar, puis trois nuits au bord de l'escarpement : toutes les marches, sans tente.",
+    "summary": "Pour ceux qui veulent découvrir le Simien sans camper. Une journée entière dans la cité impériale, puis un lodge sur le rebord comme point de départ, avec un véhicule à disposition pour que chaque randonnée soit aussi longue ou aussi courte que la journée le permet.",
+    "days": "4 jours",
+    "style": "Culturel · Randonnée · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "$1,760 par personne",
+    "includes": [
+      "Un guide historien spécialisé pour la journée à Gondar",
+      "Deux nuits dans un lodge sur l'escarpement, une à Gondar",
+      "4x4 privé avec chauffeur pour tout l'itinéraire",
+      "Tous les droits d'entrée du parc national et un garde du parc",
+      "Petit-déjeuner quotidien, déjeuners et dîners en montagne",
+      "Marches adaptées chaque matin à la météo et à la forme du moment"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Gondar",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et boissons"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Gondar",
+        "text": "Fasil Ghebbi à l'ouverture, le plafond aux chérubins de Debre Berhan Selassie, les potiers du village de Wolleka et le palais de Kuskuam au déclin du jour."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Jusqu'au rebord de l'escarpement",
+        "text": "La route vers le nord jusqu'à Debark, puis une marche l'après-midi de Buyit Ras à Sankaber parmi les troupes de géladas, avec un feu de lodge qui vous attend à l'arrivée."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Chutes de Jinbar et Imet Gogo",
+        "text": "Une marche d'une demi-journée jusqu'aux gorges de Jinbar, déjeuner sur l'escarpement, puis la route jusqu'à Imet Gogo pour la vue, au crépuscule, sur trois lignes de crêtes."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Chenek et retour",
+        "text": "Une course matinale jusqu'à Chenek tant que les bouquetins walias sont encore sur les falaises, puis retour à Gondar à temps pour un vol en soirée."
+      }
+    ],
+    "places": [
+      "Gondar",
+      "Wolleka",
+      "Monts Simien",
+      "Imet Gogo",
+      "Chenek"
+    ]
   },
   "ras-dashen-traverse": {
     "title": "Traversée du Ras Dashen",
     "teaser": "D'ouest en est à travers tout le massif du Simien, jusqu'au toit de l'Éthiopie et au-delà, par l'autre versant.",
-    "summary": "Une vraie traversée plutôt qu'un aller-retour : d'abord le rebord occidental, pour s'acclimater et profiter des vues classiques, puis la descente par la vallée de Mesheha jusqu'à Ambiko, l'ascension du Ras Dashen avant l'aube et la sortie par des vallées fluviales jusqu'à Adi Arkay. Presque toute la semaine se déroule au-dessus de 3 500 mètres : la condition physique et la patience comptent davantage que la technique."
+    "summary": "Une vraie traversée plutôt qu'un aller-retour : d'abord le rebord occidental, pour s'acclimater et profiter des vues classiques, puis la descente par la vallée de Mesheha jusqu'à Ambiko, l'ascension du Ras Dashen avant l'aube et la sortie par des vallées fluviales jusqu'à Adi Arkay. Presque toute la semaine se déroule au-dessus de 3 500 mètres : la condition physique et la patience comptent davantage que la technique.",
+    "days": "10 jours",
+    "style": "Ascension · Trekking · Expédition · Privé",
+    "season": "oct. – févr.",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Transferts aller-retour depuis Gondar, avec une nuit sur place au début et à la fin",
+      "Tous les droits d'entrée du parc national, un garde armé et les permis de sommet",
+      "Mules, muletiers, un cuisinier de camp et pension complète sur le sentier",
+      "Tentes quatre saisons, tapis de sol et tente-réfectoire chauffée",
+      "Un guide de montagne expérimenté, formé aux premiers secours en altitude",
+      "Contrôle à l'oxymètre de pouls chaque matin au-dessus de 3 500 mètres"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Gondar",
+      "Sac de couchage (location possible à Gondar)",
+      "Assurance voyage avec couverture d'évacuation",
+      "Pourboires pour les éclaireurs, muletiers et le cuisinier"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Gondar",
+        "text": "Présentation de l'itinéraire, vérification du matériel et un après-midi tranquille autour des châteaux avant une nuit précoce."
+      },
+      {
+        "day": "Jours 2 – 3",
+        "title": "Sankaber et Geech",
+        "text": "Le rebord ouest à un rythme tranquille : géladas au-dessus de Sankaber, puis la longue marche sur l'escarpement, devant les chutes de Jinbar, jusqu'au camp de Geech."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Imet Gogo et Saha",
+        "text": "Un jour d'acclimatation sans changer de camp — Imet Gogo au lever du soleil, les gorges de Saha l'après-midi, et retour à Geech pour la nuit."
+      },
+      {
+        "day": "Jour 5",
+        "title": "D'Inatye à Chenek",
+        "text": "Par la crête de 4 070 mètres à Inatye et à travers les lobélias jusqu'à Chenek, où les bouquetins walias descendent vers les falaises au crépuscule."
+      },
+      {
+        "day": "Jour 6",
+        "title": "De Bwahit à Ambiko",
+        "text": "Par le col de Bwahit à 4 200 mètres, jusque dans la vallée de la rivière Mesheha, puis une longue montée jusqu'au camp de base d'Ambiko."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Sommet du Ras Dashen · 4 550 m",
+        "text": "Départ à 3 h du matin, lampes frontales dans les éboulis, et la tour sommitale au moment où le soleil franchit les crêtes de l'est. Retour à Ambiko en début d'après-midi."
+      },
+      {
+        "day": "Jours 8 – 9",
+        "title": "Berochwuha et les vallées fluviales",
+        "text": "Un second sommet facultatif sur le Berochwuha, puis la descente par Sona et la vallée de Mekarebya jusqu'au village de Mulet, avec une baignade dans le bassin de Derkwenth en chemin."
+      },
+      {
+        "day": "Jour 10",
+        "title": "Adi Arkay et Gondar",
+        "text": "Une dernière marche matinale jusqu'à la route d'Adi Arkay, puis le retour en voiture à Gondar pour une douche chaude et un vrai dîner."
+      }
+    ],
+    "places": [
+      "Gondar",
+      "Monts Simien",
+      "Chenek",
+      "Ambiko",
+      "Ras Dashen",
+      "Adi Arkay"
+    ]
   },
   "the-complete-north": {
     "title": "Le Grand Nord complet",
     "teaser": "Tous les grands sites du nord, plus trois jours de marche dans le Simien — en voiture là où la route en vaut la peine.",
-    "summary": "La Route historique, sans les raccourcis. Au lieu de prendre l'avion entre chaque étape, nous roulons sur les tronçons qui le méritent — la route de Limalimo en descendant du Simien, les hauts plateaux du Tigré jusqu'à Axoum — et ajoutons trois nuits de camp sur l'escarpement ainsi que les églises-falaises du Gheralta."
+    "summary": "La Route historique, sans les raccourcis. Au lieu de prendre l'avion entre chaque étape, nous roulons sur les tronçons qui le méritent — la route de Limalimo en descendant du Simien, les hauts plateaux du Tigré jusqu'à Axoum — et ajoutons trois nuits de camp sur l'escarpement ainsi que les églises-falaises du Gheralta.",
+    "days": "15 jours",
+    "style": "Culturel · Trekking · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Tous les vols intérieurs et un véhicule privé avec chauffeur-guide expérimenté",
+      "Guides locaux spécialisés au lac Tana, à Gondar, Axoum, Gheralta et Lalibela",
+      "Un trek de trois jours dans le Simien avec assistance complète : garde, mules et cuisinier",
+      "Lodges de charme tout au long du voyage et une maison d'hôtes communautaire au Gheralta",
+      "Petit-déjeuner quotidien, pension complète pendant le trek et au Gheralta",
+      "Un coordinateur de voyage dédié, joignable à toute heure"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et dépenses personnelles"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Transfert privé, un après-midi de repos et un dîner de bienvenue avec votre coordinateur de voyage."
+      },
+      {
+        "day": "Jours 2 – 3",
+        "title": "Bahir Dar et le lac Tana",
+        "text": "Les monastères des îles en bateau privé, les manuscrits de la péninsule de Zege et le marché aux poissons à l'aube."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Des chutes du Nil Bleu à Gondar",
+        "text": "Une marche du village de Tis Abay jusqu'aux chutes, puis sur le pont portugais du XVIIe siècle, avant la route vers le nord jusqu'à Gondar."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Gondar",
+        "text": "L'enceinte royale, Debre Berhan Selassie, le village beta israël de Wolleka et Kuskuam au coucher du soleil."
+      },
+      {
+        "day": "Jours 6 – 8",
+        "title": "Trek dans le Simien",
+        "text": "De camp en camp, de Sankaber à Geech puis à Chenek, avec Imet Gogo au lever du soleil et les bouquetins walias le dernier matin."
+      },
+      {
+        "day": "Jour 9",
+        "title": "La route de Limalimo vers Axoum",
+        "text": "La descente des lacets de l'escarpement du Simien, la traversée des gorges du Tekeze et la montée vers le Tigré — l'un des plus beaux trajets d'Afrique."
+      },
+      {
+        "day": "Jour 10",
+        "title": "Axoum",
+        "text": "Le champ de stèles, la chapelle de la Tablette depuis le seuil autorisé et le temple du VIIIe siècle av. J.-C. de Yeha, sur la route de l'est."
+      },
+      {
+        "day": "Jours 11 – 12",
+        "title": "Gheralta",
+        "text": "Abuna Yemata Guh pour les grimpeurs, Maryam Korkor pour tous, et une nuit dans une maison d'hôtes de village au pied des falaises."
+      },
+      {
+        "day": "Jours 13 – 14",
+        "title": "Lalibela",
+        "text": "Les églises à l'aube, Asheton Maryam au-dessus de la ville et l'église troglodytique de Yemrehanna Kristos dans les collines."
+      },
+      {
+        "day": "Jour 15",
+        "title": "Addis et départ",
+        "text": "Un vol matinal vers le sud, une chambre de jour et une dernière cérémonie du café avant votre départ en soirée."
+      }
+    ],
+    "places": [
+      "Lac Tana",
+      "Gondar",
+      "Monts Simien",
+      "Axoum",
+      "Gheralta",
+      "Lalibela"
+    ]
   },
   "gheralta-and-axum": {
     "title": "Gheralta et Axoum",
     "teaser": "Des églises accrochées aux falaises, atteintes à pied, puis les stèles de granit du plus ancien empire d'Éthiopie.",
-    "summary": "Le Tigré à pas de marcheur. Trois jours parmi les tours de grès du Gheralta, avec nuits dans le village à leur pied, puis Axoum et ses stèles. Ce circuit n'a lieu que lorsque la situation régionale le permet : nous confirmons l'accès avec nos partenaires sur place avant chaque départ."
+    "summary": "Le Tigré à pas de marcheur. Trois jours parmi les tours de grès du Gheralta, avec nuits dans le village à leur pied, puis Axoum et ses stèles. Ce circuit n'a lieu que lorsque la situation régionale le permet : nous confirmons l'accès avec nos partenaires sur place avant chaque départ.",
+    "days": "6 jours",
+    "style": "Culturel · Randonnée · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Vols aller-retour Addis – Mekele et Axoum – Addis",
+      "Un véhicule privé et un guide tigréen originaire du Gheralta",
+      "Guides d'escalade et droits d'entrée aux églises sur chaque site",
+      "Trois nuits en maisons d'hôtes communautaires au Gheralta, deux nuits en lodge à Axoum",
+      "Pension complète au Gheralta, petit-déjeuner à Axoum",
+      "Une bénédiction du prêtre organisée à Abuna Yemata Guh, lorsque c'est possible"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et dons aux églises"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "D'Addis au Gheralta",
+        "text": "Un vol matinal pour Mekele et la route vers le nord jusqu'au massif du Gheralta, pour arriver au coucher du soleil sur le grès."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Abuna Yemata Guh et Debre Tsion",
+        "text": "La montée pieds nus et la marche sur la corniche jusqu'à Abuna Yemata Guh pour ceux qui le souhaitent, une église au fond de la vallée pour les autres, puis les fresques d'Abune Abraham l'après-midi."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Maryam et Daniel Korkor",
+        "text": "Une montée régulière jusqu'au plateau sommital pour voir les deux églises de Korkor et la vue sur le massif, puis descente au village de Korkor pour la nuit."
+      },
+      {
+        "day": "Jour 4",
+        "title": "De Yeha à Axoum",
+        "text": "La route vers l'ouest en passant par Yeha, un temple plus ancien qu'Axoum elle-même, pour arriver à Axoum en milieu d'après-midi."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Axoum",
+        "text": "Le champ de stèles du nord, la chapelle de la Tablette, l'inscription d'Ezana et les ruines du palais de Dungur."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Départ",
+        "text": "Un vol matinal de retour à Addis-Abeba pour votre correspondance."
+      }
+    ],
+    "places": [
+      "Mekele",
+      "Gheralta",
+      "Korkor",
+      "Yeha",
+      "Axoum"
+    ]
   },
   "lalibela-beyond-the-churches": {
     "title": "Lalibela, au-delà des églises",
     "teaser": "Les onze églises à leurs meilleures heures, puis les collines, à la rencontre de celles que la plupart des visiteurs manquent.",
-    "summary": "La plupart des voyages accordent à Lalibela un jour et demi. Nous offrons à la ville ses aubes et ses crépuscules, puis nous marchons et roulons jusqu'à Asheton Maryam, Nakuto La'ab et l'église troglodytique de Yemrehanna Kristos — plus ancienne que Lalibela elle-même, et presque jamais visitée."
+    "summary": "La plupart des voyages accordent à Lalibela un jour et demi. Nous offrons à la ville ses aubes et ses crépuscules, puis nous marchons et roulons jusqu'à Asheton Maryam, Nakuto La'ab et l'église troglodytique de Yemrehanna Kristos — plus ancienne que Lalibela elle-même, et presque jamais visitée.",
+    "days": "4 jours",
+    "style": "Culturel · Randonnée · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "$1,980 par personne",
+    "includes": [
+      "Un guide résident de Lalibela en bons termes avec le clergé",
+      "Tous les droits d'entrée aux églises et un gardien des sites",
+      "Une mule pour la montée à Asheton Maryam, si souhaité",
+      "Trois nuits dans un lodge à distance de marche des églises",
+      "Petit-déjeuner et dîner quotidiens",
+      "Transferts aéroport à l'arrivée et au départ"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Lalibela",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et dons aux églises"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Lalibela",
+        "text": "Directement à Bete Giyorgis pour la lumière de fin de journée sur son toit en forme de croix, puis dîner au-dessus de la ville."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Les deux groupes d'églises",
+        "text": "Le groupe nord à l'aube avec l'office du matin, puis, une fois la foule partie, les passages de la tranchée jusqu'à Bete Golgotha et le groupe est."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Asheton Maryam et Nakuto La'ab",
+        "text": "Une montée matinale, à pied ou à dos de mule, jusqu'au monastère de falaise d'Asheton Maryam, et l'église troglodytique de Nakuto La'ab l'après-midi."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Yemrehanna Kristos et départ",
+        "text": "La route jusqu'à une église de bois et de pierre construite dans une grotte, plus ancienne d'un siècle que celles de Lalibela, avant un vol en fin d'après-midi."
+      }
+    ],
+    "places": [
+      "Lalibela",
+      "Asheton Maryam",
+      "Nakuto La'ab",
+      "Yemrehanna Kristos"
+    ]
   },
   "addis-ababa-in-depth": {
     "title": "Addis-Abeba en profondeur",
     "teaser": "Lucy, Entoto, le palais des empereurs et le plus grand marché d'Afrique — la capitale comme il se doit, en deux jours sans précipitation.",
-    "summary": "La capitale que la plupart des voyageurs ne font que traverser, vue comme ses habitants la feraient découvrir : les collines où la ville est née, le musée qui abrite l'ancêtre le plus célèbre de l'humanité, le marché qui ne s'arrête jamais et une soirée de musique et de cuisine pour conclure. Un début ou une fin naturels pour tout voyage en Éthiopie."
+    "summary": "La capitale que la plupart des voyageurs ne font que traverser, vue comme ses habitants la feraient découvrir : les collines où la ville est née, le musée qui abrite l'ancêtre le plus célèbre de l'humanité, le marché qui ne s'arrête jamais et une soirée de musique et de cuisine pour conclure. Un début ou une fin naturels pour tout voyage en Éthiopie.",
+    "days": "2 jours",
+    "style": "Culturel · Famille · Privé",
+    "season": "Toute l'année",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide de la ville pour les deux jours",
+      "Une nuit dans un hôtel de charme à Addis-Abeba",
+      "Entrée au Musée national, à Entoto et au Parc de l'Unité",
+      "Une promenade guidée dans le Merkato",
+      "Une cérémonie du café dans une maison familiale",
+      "Dîner avec musique et danses traditionnelles"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Déjeuners, boissons et achats personnels"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1 · Matin",
+        "title": "Entoto, là où la ville est née",
+        "text": "Montée dans la forêt d'eucalyptus du mont Entoto pour la vue sur la ville, le palais de Ménélik II et l'église d'Entoto Maryam."
+      },
+      {
+        "day": "Jour 1 · Après-midi",
+        "title": "Lucy et le Musée national",
+        "text": "Le fossile de 3,2 millions d'années connu sous le nom de Lucy — Dinknesh — et les salles de l'Éthiopie ancienne, puis la cathédrale de la Sainte-Trinité, où repose Haïlé Sélassié."
+      },
+      {
+        "day": "Jour 1 · Soir",
+        "title": "Musique et dîner",
+        "text": "Un dîner traditionnel avec musique et danses en direct venues des différentes régions du pays."
+      },
+      {
+        "day": "Jour 2 · Matin",
+        "title": "Parc de l'Unité",
+        "text": "L'enceinte du palais des empereurs, ouverte au public sous le nom de Parc de l'Unité — salles du trône, salles de banquet et jardins."
+      },
+      {
+        "day": "Jour 2 · Après-midi",
+        "title": "Merkato et une cérémonie du café",
+        "text": "Le plus grand marché en plein air d'Afrique avec un guide qui en connaît les ruelles, puis une cérémonie du café complète en trois tours dans une maison familiale avant la suite de votre voyage."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Entoto",
+      "Parc de l'Unité",
+      "Merkato"
+    ]
   },
   "southern-heritage-road": {
     "title": "La Route du patrimoine du Sud",
     "teaser": "Un million d'années d'histoire humaine en une seule journée au sud d'Addis — premiers outils, église monolithe et stèles sculptées de Tiya.",
-    "summary": "Une route, trois chapitres du passé. Le site préhistorique de Melka Kunture, l'église monolithe d'Adadi Mariam et le champ de stèles de Tiya, classé au patrimoine mondial, avec les terres agricoles de la haute vallée de l'Awash entre les deux. Une journée facile et gratifiante depuis la capitale."
+    "summary": "Une route, trois chapitres du passé. Le site préhistorique de Melka Kunture, l'église monolithe d'Adadi Mariam et le champ de stèles de Tiya, classé au patrimoine mondial, avec les terres agricoles de la haute vallée de l'Awash entre les deux. Une journée facile et gratifiante depuis la capitale.",
+    "days": "1 jour",
+    "style": "Culturel · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide pour la journée",
+      "Entrée à Melka Kunture, Adadi Mariam et Tiya",
+      "Un déjeuner pique-nique ou local",
+      "Prise en charge et retour à l'hôtel à Addis-Abeba"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Dons aux églises et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Matin",
+        "title": "Melka Kunture",
+        "text": "À une cinquantaine de kilomètres de la ville, le site préhistorique de la haute vallée de l'Awash, où l'on a trouvé des outils en obsidienne vieux de plus de 1,2 million d'années."
+      },
+      {
+        "day": "Midi",
+        "title": "Adadi Mariam",
+        "text": "L'église monolithe à 73 kilomètres d'Addis, attribuée par la tradition à l'époque du roi Lalibela — plus simple que Lalibela, toujours en usage et rarement fréquentée."
+      },
+      {
+        "day": "Après-midi",
+        "title": "Les stèles de Tiya",
+        "text": "Le champ de stèles inscrit au patrimoine mondial : 36 monuments, dont 32 sculptés d'épées et de symboles jamais entièrement expliqués. Retour à Addis en début de soirée."
+      }
+    ],
+    "places": [
+      "Melka Kunture",
+      "Adadi Mariam",
+      "Tiya et Adadi Mariam"
+    ]
   },
   "debre-libanos-and-the-jemma-gorge": {
     "title": "Debre Libanos et les gorges du Jemma",
     "teaser": "Un monastère du XIIIᵉ siècle sur un replat de falaise, des vues sur les gorges et des singes géladas sur le rebord — une journée au nord d'Addis.",
-    "summary": "À cent kilomètres au nord de la capitale, le grand monastère fondé par saint Tekle Haymanot se dresse entre une falaise et les gorges d'un affluent du Nil Bleu. Nous y associons de courtes marches jusqu'aux belvédères sur les gorges et au vieux pont de pierre. Il peut aussi se faire avec une nuit dans un lodge sur le rebord."
+    "summary": "À cent kilomètres au nord de la capitale, le grand monastère fondé par saint Tekle Haymanot se dresse entre une falaise et les gorges d'un affluent du Nil Bleu. Nous y associons de courtes marches jusqu'aux belvédères sur les gorges et au vieux pont de pierre. Il peut aussi se faire avec une nuit dans un lodge sur le rebord.",
+    "days": "1 jour",
+    "style": "Culturel · Faune · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide pour la journée",
+      "Entrée au monastère et au musée",
+      "Un guide local pour les marches dans les gorges",
+      "Déjeuner au bord des gorges",
+      "Prise en charge et retour à l'hôtel à Addis-Abeba"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Une nuit facultative sur le rebord de l'escarpement (sur demande)",
+      "Dons aux églises et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Matin",
+        "title": "Cap au nord à travers le plateau",
+        "text": "Hors d'Addis et vers le nord à travers les terres agricoles du plateau du Shewa, pour arriver à Debre Libanos en milieu de matinée."
+      },
+      {
+        "day": "Midi",
+        "title": "Le monastère",
+        "text": "Le monastère fondé en 1284 par Tekle Haymanot, son église, son musée et la terrasse entre les falaises et les gorges — toujours un lieu de pèlerinage."
+      },
+      {
+        "day": "Après-midi",
+        "title": "Les gorges du Jemma et le pont",
+        "text": "De courtes marches jusqu'aux points de vue sur les gorges et le pont de pierre construit dans les années 1890 par Ras Darge, avec des géladas qui broutent le long du rebord. Retour à Addis en soirée."
+      }
+    ],
+    "places": [
+      "Debre Libanos",
+      "Gorges du Jemma"
+    ]
   },
   "crater-lakes-and-the-holy-mountain": {
     "title": "Lacs de cratère et montagne sacrée",
     "teaser": "Les lacs de cratère volcaniques de Bishoftu le matin, puis une marche jusqu'au lac sacré au sommet du mont Zuqualla.",
-    "summary": "À une heure au sud-est d'Addis, une série de lacs de cratère entoure la ville de Bishoftu. Après une matinée paisible sur leurs rives, nous roulons jusqu'au pied du mont Zuqualla et montons à pied jusqu'à son lac de cratère et son monastère, vers 3 000 mètres. Début octobre, nous pouvons faire coïncider le voyage avec la fête d'Irreecha au lac Hora."
+    "summary": "À une heure au sud-est d'Addis, une série de lacs de cratère entoure la ville de Bishoftu. Après une matinée paisible sur leurs rives, nous roulons jusqu'au pied du mont Zuqualla et montons à pied jusqu'à son lac de cratère et son monastère, vers 3 000 mètres. Début octobre, nous pouvons faire coïncider le voyage avec la fête d'Irreecha au lac Hora.",
+    "days": "1 jour",
+    "style": "Randonnée · Culturel · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide pour la journée",
+      "Un guide local pour la marche au Zuqualla",
+      "Entrée au monastère et déjeuner au bord du lac",
+      "Prise en charge et retour à l'hôtel à Addis-Abeba"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Dons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Matin",
+        "title": "Les lacs de cratère de Bishoftu",
+        "text": "Au sud-est jusqu'à Bishoftu et ses lacs — Hora, où les Oromo se rassemblent chaque octobre pour l'Irreecha, et le plus profond Babogaya — avec des oiseaux le long des rives."
+      },
+      {
+        "day": "Midi",
+        "title": "Déjeuner au bord de l'eau",
+        "text": "Un déjeuner tranquille dans un restaurant au bord du lac avant la montée de l'après-midi."
+      },
+      {
+        "day": "Après-midi",
+        "title": "Mont Zuqualla",
+        "text": "La marche jusqu'au lac de cratère sacré et au monastère fondé, selon la tradition, par le saint égyptien Abbo, avec de vastes panoramas depuis le rebord. Retour à Addis en soirée."
+      }
+    ],
+    "places": [
+      "Bishoftu",
+      "Mont Zuqualla"
+    ]
   },
   "addis-and-its-highlands": {
     "title": "Addis et ses hauts plateaux",
     "teaser": "La capitale et tout ce qui se trouve à une journée de route — stèles, monastère accroché à la falaise, lacs de cratère et forêt cinq fois centenaire.",
-    "summary": "Cinq jours depuis un seul hôtel confortable, avec chaque matin une direction différente : au sud, les stèles de Tiya ; au nord, Debre Libanos ; au sud-est, les lacs de cratère ; à l'ouest, l'ancienne forêt de Menagesha. Idéal pour une première visite, une longue escale ou une acclimatation en douceur avant le nord."
+    "summary": "Cinq jours depuis un seul hôtel confortable, avec chaque matin une direction différente : au sud, les stèles de Tiya ; au nord, Debre Libanos ; au sud-est, les lacs de cratère ; à l'ouest, l'ancienne forêt de Menagesha. Idéal pour une première visite, une longue escale ou une acclimatation en douceur avant le nord.",
+    "days": "5 jours",
+    "style": "Culturel · Randonnée · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide expérimenté pendant tout le voyage",
+      "Quatre nuits dans un hôtel de charme à Addis-Abeba",
+      "Tous les droits d'entrée aux sites, musées, monastères et parcs",
+      "Guides locaux pour les marches dans les gorges, en montagne et en forêt",
+      "Petit-déjeuner quotidien et déjeuner à chaque excursion",
+      "Une cérémonie du café et un dîner d'adieu avec musique"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Dîners non mentionnés, boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Addis-Abeba",
+        "text": "Le mont Entoto et le palais de Ménélik le matin, puis Lucy au Musée national et la cathédrale de la Sainte-Trinité."
+      },
+      {
+        "day": "Jour 2",
+        "title": "La Route du patrimoine du Sud",
+        "text": "Le site préhistorique de Melka Kunture, l'église monolithe d'Adadi Mariam et les stèles de Tiya, inscrites au patrimoine mondial."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Debre Libanos et les gorges du Jemma",
+        "text": "Vers le nord jusqu'au monastère fondé en 1284 par Tekle Haymanot, les points de vue sur les gorges et les géladas le long du rebord."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Lacs de cratère et mont Zuqualla",
+        "text": "Les lacs de Bishoftu le matin, puis la marche jusqu'au lac de cratère sacré et au monastère du Zuqualla."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Forêt de Menagesha et adieux",
+        "text": "Une marche matinale dans la forêt de genévriers protégée depuis le XVe siècle, puis le Merkato, une cérémonie du café et un dîner d'adieu avec musique."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Tiya et Adadi Mariam",
+      "Debre Libanos",
+      "Bishoftu",
+      "Forêt de Menagesha Suba"
+    ]
   },
   "wenchi-crater-lake-escape": {
     "title": "Escapade au lac de cratère de Wenchi",
     "teaser": "Dans un cratère volcanique à pied ou à cheval, en bateau jusqu'à un monastère insulaire, puis descente vers les sources chaudes.",
-    "summary": "Wenchi se visite trop facilement en une longue excursion à la journée. Nous lui offrons une nuit, pour que vous voyiez le cratère dans le calme du matin et le parcouriez à votre rythme — descente jusqu'au lac avec des cavaliers locaux, traversée jusqu'au monastère de Cherkos, puis sources chaudes et chutes d'eau."
+    "summary": "Wenchi se visite trop facilement en une longue excursion à la journée. Nous lui offrons une nuit, pour que vous voyiez le cratère dans le calme du matin et le parcouriez à votre rythme — descente jusqu'au lac avec des cavaliers locaux, traversée jusqu'au monastère de Cherkos, puis sources chaudes et chutes d'eau.",
+    "days": "2 jours",
+    "style": "Randonnée · Culturel · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide depuis Addis-Abeba",
+      "Guides locaux et chevaux à Wenchi, selon vos préférences",
+      "La traversée en bateau jusqu'au monastère de Cherkos",
+      "Une nuit à Ambo ou Woliso",
+      "Déjeuner les deux jours et dîner la première nuit"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Dons aux églises et pourboires pour les cavaliers"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "À l'ouest, vers le cratère",
+        "text": "À environ 155 kilomètres à l'ouest d'Addis, à travers champs et eucalyptus, pour arriver au rebord de la caldeira et jeter un premier regard sur le lac. Une marche facile l'après-midi le long du rebord, et la nuit à Ambo ou Woliso."
+      },
+      {
+        "day": "Jour 2 · Matin",
+        "title": "Descente vers le lac et Cherkos",
+        "text": "La descente à pied ou à cheval avec des guides locaux, puis un petit bateau jusqu'au monastère insulaire de Cherkos, fondé selon la tradition par Tekle Haymanot."
+      },
+      {
+        "day": "Jour 2 · Après-midi",
+        "title": "Sources chaudes et route du retour",
+        "text": "La marche à travers la caldeira jusqu'aux sources chaudes et aux chutes, déjeuner au bord de l'eau et retour en voiture à Addis-Abeba en soirée."
+      }
+    ],
+    "places": [
+      "Lac de cratère de Wenchi",
+      "Cherkos",
+      "Ambo"
+    ]
   },
   "awash-and-the-fantale-volcano": {
     "title": "Awash et le volcan Fantale",
     "teaser": "Des oryx dans les plaines, des gorges avec cascade, la lave d'une éruption de 1820 et des bassins tièdes sous les palmiers.",
-    "summary": "Le plus ancien parc national d'Éthiopie n'est qu'à quelques heures à l'est de la capitale, et pourtant peu de visiteurs s'y rendent. Trois jours suffisent pour des safaris à l'aube et au crépuscule, les chutes et les gorges de l'Awash, les champs de lave du Fantale et un après-midi tranquille aux sources chaudes de Filwoha."
+    "summary": "Le plus ancien parc national d'Éthiopie n'est qu'à quelques heures à l'est de la capitale, et pourtant peu de visiteurs s'y rendent. Trois jours suffisent pour des safaris à l'aube et au crépuscule, les chutes et les gorges de l'Awash, les champs de lave du Fantale et un après-midi tranquille aux sources chaudes de Filwoha.",
+    "days": "3 jours",
+    "style": "Faune · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un 4x4 privé et un chauffeur-guide depuis Addis-Abeba",
+      "Tous les droits d'entrée du parc et un garde armé du parc",
+      "Deux nuits dans un lodge au-dessus des chutes de l'Awash",
+      "Pension complète dans le parc",
+      "Safaris en véhicule à l'aube et en fin d'après-midi"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "À l'est, vers les chutes de l'Awash",
+        "text": "À environ 225 kilomètres à l'est d'Addis-Abeba, en descendant dans la vallée du Rift, jusqu'aux chutes de l'Awash où la rivière se jette dans ses gorges. Une sortie en voiture en fin d'après-midi dans les plaines pour les premiers oryx."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Oryx, Fantale et Filwoha",
+        "text": "Un safari à l'aube pour les oryx beisa, les gazelles de Soemmerring et les dik-diks de Salt, puis le champ de lave de l'éruption de 1820 du Fantale. L'après-midi aux sources chaudes de Filwoha bordées de palmiers, et retour aux chutes au crépuscule."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Retour à Addis-Abeba",
+        "text": "Une dernière sortie matinale le long des gorges, puis la route vers l'ouest jusqu'à la capitale en milieu d'après-midi."
+      }
+    ],
+    "places": [
+      "Parc national de l'Awash",
+      "Fantale",
+      "Filwoha"
+    ]
   },
   "bale-mountains-and-sof-omar": {
     "title": "Monts Bale et Sof Omar",
     "teaser": "Des loups d'Éthiopie sur le toit de l'Afrique, une forêt de nuages en contrebas, puis une rivière souterraine dans les basses terres.",
-    "summary": "Les monts Bale dans toute leur diversité — la lande de Dinsho, le plateau de Sanetti où les loups d'Éthiopie chassent à l'aube et la forêt de Harenna sur les pentes sud — puis cap à l'est vers les basses terres et les galeries creusées par la rivière à Sof Omar, la plus longue grotte d'Éthiopie."
+    "summary": "Les monts Bale dans toute leur diversité — la lande de Dinsho, le plateau de Sanetti où les loups d'Éthiopie chassent à l'aube et la forêt de Harenna sur les pentes sud — puis cap à l'est vers les basses terres et les galeries creusées par la rivière à Sof Omar, la plus longue grotte d'Éthiopie.",
+    "days": "6 jours",
+    "style": "Faune · Randonnée · Privé",
+    "season": "nov. – mars",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un 4x4 privé et un guide naturaliste pendant tout le voyage",
+      "Tous les droits d'entrée du parc national, gardes et guides des grottes",
+      "Hébergement en lodge dans le Bale et près de Robe",
+      "Pension complète pendant tout le voyage",
+      "Transferts routiers depuis Addis-Abeba, avec vol retour depuis Robe lorsque c'est possible"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Au sud, vers Dinsho",
+        "text": "La longue route vers le sud-est depuis Addis-Abeba jusqu'au siège du parc à Dinsho, avec des nyalas de montagne qui broutent en lisière de lande au crépuscule."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Le plateau de Sanetti",
+        "text": "Montée au plateau de Sanetti, au-dessus de 4 000 mètres, à l'aube, lorsque les loups d'Éthiopie sont les plus actifs, parmi les lobélias géantes et les lacs afro-alpins."
+      },
+      {
+        "day": "Jour 3",
+        "title": "La forêt de Harenna",
+        "text": "Descente de l'escarpement sud jusque dans la forêt de nuages de Harenna, où le café sauvage pousse en sous-bois et où les colobes se déplacent dans la canopée."
+      },
+      {
+        "day": "Jour 4",
+        "title": "À l'est, vers les basses terres",
+        "text": "Traversée jusqu'à Robe, puis vers l'est dans les basses terres arides, pour arriver près de Sof Omar dans l'après-midi."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Grottes de Sof Omar",
+        "text": "Une marche guidée dans les passages de la rivière Weyib jusqu'à la Chambre des Colonnes, dans une grotte sacrée à la fois pour les musulmans et pour les adeptes de la religion traditionnelle oromo."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Retour à Addis-Abeba",
+        "text": "Un vol depuis Robe si les horaires le permettent, ou le retour en voiture vers le nord jusqu'à la capitale."
+      }
+    ],
+    "places": [
+      "Monts Bale",
+      "Plateau de Sanetti",
+      "Forêt de Harenna",
+      "Grottes de Sof Omar"
+    ]
   },
   "borana-wells-salt-and-bushcrows": {
-    "title": "Borana : puits, sel et corbeaux buissonniers",
+    "title": "Borana : puits, sel et corbeaux buissonniers",
     "teaser": "Tout au sud, pour les puits chantants, le cratère de sel d'El Sod et un oiseau qui ne vit nulle part ailleurs.",
-    "summary": "Un voyage au pays borana, autour de Yabelo, à quelque 566 kilomètres au sud d'Addis-Abeba. Nous coupons la route dans la vallée du Rift, puis passons deux jours pleins avec les Borana — à un puits chantant en activité, sur le rebord et au fond du cratère de sel d'El Sod — et parmi les acacias où vit le corbeau buissonnier d'Éthiopie."
+    "summary": "Un voyage au pays borana, autour de Yabelo, à quelque 566 kilomètres au sud d'Addis-Abeba. Nous coupons la route dans la vallée du Rift, puis passons deux jours pleins avec les Borana — à un puits chantant en activité, sur le rebord et au fond du cratère de sel d'El Sod — et parmi les acacias où vit le corbeau buissonnier d'Éthiopie.",
+    "days": "5 jours",
+    "style": "Culturel · Faune · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un 4x4 privé et un chauffeur-guide expérimenté pendant tout le voyage",
+      "Un guide borana local autour de Yabelo",
+      "Droits communautaires pour les visites de puits et de villages",
+      "Quatre nuits dans les meilleurs hébergements disponibles en chemin",
+      "Pension complète chez les Borana"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Descente de la vallée du Rift",
+        "text": "Vers le sud depuis Addis-Abeba, le long des lacs de la vallée du Rift, en coupant le long trajet par une nuit en chemin."
+      },
+      {
+        "day": "Jour 2",
+        "title": "En route vers Yabelo",
+        "text": "Plus au sud, dans le pays d'élevage des Borana, pour arriver à Yabelo dans l'après-midi et rencontrer notre guide local."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Un puits qui chante et El Sod",
+        "text": "Un puits en activité où les bergers se passent l'eau en chaîne humaine en chantant, puis El Sod — le lac salé au fond d'un cratère volcanique de 1,8 kilomètre de large."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Corbeaux buissonniers et route vers le nord",
+        "text": "Une recherche matinale dans les acacias autour de Yabelo pour le corbeau buissonnier d'Éthiopie, puis de nouveau vers le nord pour couper le trajet."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Retour à Addis-Abeba",
+        "text": "Le retour en voiture par la vallée du Rift jusqu'à la capitale en soirée."
+      }
+    ],
+    "places": [
+      "Borana et Yabelo",
+      "El Sod",
+      "Sanctuaire de faune de Yabelo"
+    ]
   },
   "jimma-the-coffee-kingdom": {
     "title": "Jimma, le royaume du café",
     "teaser": "Le palais du roi Abba Jifar II et le pays du café qui fit la richesse de son royaume.",
-    "summary": "Cap au sud-ouest, au cœur vert du pays du café. Jimma fut la capitale du plus puissant des royaumes oromo du Gibe, et le palais de son roi domine encore la ville. Nous y associons du temps dans des plantations de café locales et en forêt, ainsi qu'une cérémonie dans un foyer familial."
+    "summary": "Cap au sud-ouest, au cœur vert du pays du café. Jimma fut la capitale du plus puissant des royaumes oromo du Gibe, et le palais de son roi domine encore la ville. Nous y associons du temps dans des plantations de café locales et en forêt, ainsi qu'une cérémonie dans un foyer familial.",
+    "days": "3 jours",
+    "style": "Culturel · Voyage lent · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide depuis Addis-Abeba",
+      "Entrée au palais et au musée de Jimma",
+      "Visites de plantations de café locales avec les producteurs",
+      "Deux nuits à Jimma",
+      "Déjeuner quotidien et une cérémonie du café dans une maison familiale"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Achats de café, boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Au sud-ouest, vers Jimma",
+        "text": "La route d'environ 353 kilomètres d'Addis-Abeba jusqu'aux collines vertes du sud-ouest, pour arriver à Jimma en soirée."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Le palais et les plantations de café",
+        "text": "Le matin, le palais d'Abba Jifar II sur la colline de Jiren et son musée, puis un après-midi avec des producteurs de café dans les collines alentour, qui s'achève par une cérémonie en trois tours dans une maison familiale."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Marché et route du retour",
+        "text": "Le marché de Jimma le matin, puis le retour à Addis-Abeba — ou, en extension, vers les forêts de Kafa et de Bonga."
+      }
+    ],
+    "places": [
+      "Jimma",
+      "Jiren"
+    ]
   },
   "harar-and-the-walled-city": {
     "title": "Harar et la ville fortifiée",
     "teaser": "Les portes et les ruelles de la seule ville fortifiée d'Éthiopie, les hyènes au crépuscule et le café des hauts plateaux de l'est.",
-    "summary": "Un court vol vers l'est, jusqu'à Dire Dawa, puis trois nuits à Harar et dans ses environs — assez pour parcourir lentement la vieille ville avec un guide harari, assister plus d'une fois au nourrissage des hyènes si vous le souhaitez et visiter le pays du café dans les collines au-delà des remparts."
+    "summary": "Un court vol vers l'est, jusqu'à Dire Dawa, puis trois nuits à Harar et dans ses environs — assez pour parcourir lentement la vieille ville avec un guide harari, assister plus d'une fois au nourrissage des hyènes si vous le souhaitez et visiter le pays du café dans les collines au-delà des remparts.",
+    "days": "4 jours",
+    "style": "Culturel · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Vols aller-retour Addis-Abeba – Dire Dawa",
+      "Un véhicule privé et un guide harari pendant tout le voyage",
+      "Trois nuits dans une maison d'hôtes ou un hôtel traditionnel harari",
+      "Entrée à la Maison de Rimbaud et aux sites de la vieille ville",
+      "Le nourrissage des hyènes au crépuscule",
+      "Petit-déjeuner quotidien et un dîner traditionnel harari"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Autres repas, boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Vol vers Harar, à l'est",
+        "text": "Un vol matinal pour Dire Dawa et la route jusqu'aux hauts plateaux de Harar. Une première marche jusqu'au rempart de Jugol et à ses portes, et le nourrissage des hyènes au crépuscule."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Dans les remparts",
+        "text": "Une journée entière dans la vieille ville avec un guide harari — les ruelles et les marchés, une maison harari traditionnelle, les mosquées et les sanctuaires vus depuis la rue, et la Maison de Rimbaud avec ses photographies de Harar d'il y a un siècle."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Pays du café et Dire Dawa",
+        "text": "Vers les hauts plateaux de l'est à la rencontre des producteurs de café, puis descente à Dire Dawa, la ville du rail née sur la ligne de Djibouti."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Retour à Addis-Abeba",
+        "text": "Une matinée dans les marchés de Dire Dawa et un vol de retour vers la capitale."
+      }
+    ],
+    "places": [
+      "Harar",
+      "Dire Dawa"
+    ]
   },
   "southern-rift-and-konso": {
     "title": "Rift sud et Konso",
     "teaser": "Des crocodiles sur le lac Chamo, les tisserands dorzé des hauts plateaux du Gamo et les terrasses de Konso, classées à l'UNESCO.",
-    "summary": "Envol vers le sud, jusqu'à Arba Minch, puis six jours dans le Rift méridional : traversée du lac Chamo en bateau, plaines de Nechisar, villages de bambou tressé des Dorzé et deux jours dans le monde de terrasses et de murs de Konso. Ce circuit se combine naturellement avec notre voyage dans la vallée de l'Omo."
+    "summary": "Envol vers le sud, jusqu'à Arba Minch, puis six jours dans le Rift méridional : traversée du lac Chamo en bateau, plaines de Nechisar, villages de bambou tressé des Dorzé et deux jours dans le monde de terrasses et de murs de Konso. Ce circuit se combine naturellement avec notre voyage dans la vallée de l'Omo.",
+    "days": "6 jours",
+    "style": "Culturel · Faune · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Vols aller-retour Addis-Abeba – Arba Minch",
+      "Un 4x4 privé et un chauffeur-guide expérimenté pendant tout le voyage",
+      "Guides locaux dorze et konso et tous les droits communautaires",
+      "Excursion en bateau sur le lac Chamo et droits d'entrée du parc de Nechisar",
+      "Cinq nuits dans des lodges au-dessus des lacs et à Konso",
+      "Pension complète pendant tout le voyage"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Boissons, pourboires et achats personnels"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Vol vers Arba Minch",
+        "text": "Un vol matinal vers le sud, les quarante sources qui ont donné son nom à la ville et le coucher de soleil sur les lacs Abaya et Chamo depuis la crête."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Lac Chamo et Nechisar",
+        "text": "Une traversée en bateau du lac Chamo jusqu'au Marché aux crocodiles, puis les plaines d'herbe blanche de Nechisar et le Pont de Dieu entre les deux lacs."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Les Dorze et les hauts plateaux du Gamo",
+        "text": "Montée dans les hauts plateaux frais autour de Chencha pour rendre visite aux tisserands dorze et à leurs hautes maisons de bambou tressé, avec déjeuner dans une maison dorze."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Au sud, vers Konso",
+        "text": "Descente du Rift jusqu'à Konso, à 87 kilomètres d'Arba Minch, et un après-midi parmi les terrasses de pierre."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Les villages fortifiés",
+        "text": "Un village konso fortifié avec un guide local — ses portes, ses maisons communes et ses poteaux de génération — puis les stèles funéraires waka du Musée de Konso."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Retour à Addis-Abeba",
+        "text": "Le retour en voiture à Arba Minch et un vol pour la capitale — ou la poursuite vers la vallée de l'Omo."
+      }
+    ],
+    "places": [
+      "Arba Minch et Nechisar",
+      "Chencha",
+      "Konso"
+    ]
   },
   "sidama-and-yirgacheffe-coffee": {
     "title": "Café du Sidama et du Yirgacheffe",
     "teaser": "De la cerise à la tasse, dans les collines qui donnent deux des cafés les plus célèbres au monde.",
-    "summary": "Cinq jours dans le pays du café au sud de Hawassa : plantations et stations de lavage au Sidama, jardins forestiers du Gedeo inscrits à l'UNESCO, anciennes stèles de Tuto Fela et dégustation avec des producteurs à Yirgacheffe. À faire de préférence pendant la récolte, d'octobre jusqu'au début de l'année."
+    "summary": "Cinq jours dans le pays du café au sud de Hawassa : plantations et stations de lavage au Sidama, jardins forestiers du Gedeo inscrits à l'UNESCO, anciennes stèles de Tuto Fela et dégustation avec des producteurs à Yirgacheffe. À faire de préférence pendant la récolte, d'octobre jusqu'au début de l'année.",
+    "days": "5 jours",
+    "style": "Culturel · Voyage lent · Privé",
+    "season": "oct. – févr.",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide spécialiste du café",
+      "Visites de fermes et de stations de lavage avec les producteurs",
+      "Une séance de dégustation et une cérémonie du café dans une maison familiale",
+      "Quatre nuits à Hawassa et dans le pays du café",
+      "Petit-déjeuner et dîner quotidiens, déjeuner les jours de visite de fermes"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Achats de café et expédition",
+      "Boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Au sud, vers Hawassa",
+        "text": "La route de 273 kilomètres vers le sud à travers la vallée du Rift jusqu'à Hawassa, avec une soirée au bord du lac."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Fermes et stations de lavage du Sidama",
+        "text": "Dans les collines du Sidama pour parcourir une petite exploitation et voir une station de lavage en action — dépulpage, fermentation et séchage sur lits surélevés."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Gedeo et Tuto Fela",
+        "text": "Vers le sud jusqu'à Dilla et le paysage du Gedeo, où le café pousse sous les ensètes et les arbres d'ombrage, et les stèles sculptées de Tuto Fela."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Yirgacheffe",
+        "text": "Une journée avec les producteurs autour de Yirgacheffe, une dégustation des cafés de la saison et une cérémonie en trois tours dans une maison familiale."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Retour à Addis-Abeba",
+        "text": "La route vers le nord jusqu'à la capitale, avec du café acheté directement dans les fermes visitées."
+      }
+    ],
+    "places": [
+      "Hawassa",
+      "Sidama et Yirgacheffe",
+      "Dilla",
+      "Yirgacheffe"
+    ]
   },
   "the-coffee-road": {
     "title": "La Route du café",
     "teaser": "Forêt sauvage, Jimma la royale, Sidama et Yirgacheffe, puis Harar à l'est — l'histoire du café d'Éthiopie en un seul voyage.",
-    "summary": "Pour les amateurs et les professionnels du café : un voyage à travers les paysages où est né l'arabica. Les forêts de café sauvage du Kafa, l'ancien royaume du café de Jimma, les stations de lavage du Sidama et les jardins de Yirgacheffe, puis un vol vers l'est jusqu'à Harar. Cérémonies, dégustations et visites de plantations tout au long du voyage — un rythme pensé pour déguster, pas seulement pour cocher des régions."
+    "summary": "Pour les amateurs et les professionnels du café : un voyage à travers les paysages où est né l'arabica. Les forêts de café sauvage du Kafa, l'ancien royaume du café de Jimma, les stations de lavage du Sidama et les jardins de Yirgacheffe, puis un vol vers l'est jusqu'à Harar. Cérémonies, dégustations et visites de plantations tout au long du voyage — un rythme pensé pour déguster, pas seulement pour cocher des régions.",
+    "days": "13 jours",
+    "style": "Culturel · Voyage lent · Privé",
+    "season": "oct. – févr.",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Vols intérieurs aller-retour pour Dire Dawa",
+      "Un véhicule privé et un guide spécialiste du café pendant tout le voyage",
+      "Visites de fermes, de forêts et de stations de lavage avec les producteurs",
+      "Séances de dégustation et cérémonies du café dans des maisons familiales",
+      "Douze nuits dans les meilleurs lodges et hôtels disponibles",
+      "Petit-déjeuner et dîner quotidiens, déjeuner les jours de visite de fermes"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Achats de café, expédition et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Addis-Abeba",
+        "text": "Arrivée, dégustation dans le quartier des torréfacteurs de la capitale et une première cérémonie pour éveiller le palais."
+      },
+      {
+        "day": "Jours 2 – 3",
+        "title": "Jimma, le royaume du café",
+        "text": "Au sud-ouest jusqu'à Jimma et au palais du roi Abba Jifar II, dont le royaume s'enrichit grâce au café, puis des fermes dans les collines alentour."
+      },
+      {
+        "day": "Jours 4 – 5",
+        "title": "Kafa et la forêt de Bonga",
+        "text": "Dans la réserve de biosphère de Kafa, patrie de l'arabica sauvage, pour marcher dans la forêt où le café pousse encore sans culture."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Retour à Addis-Abeba",
+        "text": "La longue route de retour vers la capitale, avec une soirée de repos."
+      },
+      {
+        "day": "Jours 7 – 8",
+        "title": "Sidama",
+        "text": "Vers le sud jusqu'à Hawassa, puis petites exploitations et stations de lavage dans les collines du Sidama."
+      },
+      {
+        "day": "Jours 9 – 10",
+        "title": "Gedeo et Yirgacheffe",
+        "text": "Les jardins forestiers du Gedeo, classés par l'UNESCO, les stèles de Tuto Fela et une dégustation avec les producteurs à Yirgacheffe."
+      },
+      {
+        "day": "Jour 11",
+        "title": "Nord et est",
+        "text": "Le retour à Addis-Abeba et un vol en soirée pour Dire Dawa."
+      },
+      {
+        "day": "Jour 12",
+        "title": "Harar",
+        "text": "La ville fortifiée, ses marchands de café et les fermes des hauts plateaux de l'est réputées pour leurs cafés naturels et fruités — avec le nourrissage des hyènes au crépuscule."
+      },
+      {
+        "day": "Jour 13",
+        "title": "Départ",
+        "text": "Un vol de retour à Addis-Abeba pour la suite de votre voyage."
+      }
+    ],
+    "places": [
+      "Jimma",
+      "Kafa",
+      "Sidama et Yirgacheffe",
+      "Harar"
+    ]
   },
   "ras-dashen-summit-climb": {
     "title": "Ascension du sommet du Ras Dashen",
-    "teaser": "La voie raisonnable la plus rapide vers le toit de l'Éthiopie : le col de Bwahit, la descente vers Ambiko et la montée à l'aube jusqu'à 4 550 mètres.",
-    "summary": "Une ascension ciblée du Ras Dashen pour les marcheurs qui veulent le sommet sans la traversée complète de dix jours. Nous roulons dans le parc jusqu'à Chenek, nous y acclimatons, puis franchissons le col de Bwahit jusqu'au camp de base d'Ambiko, avec un jour de repos avant le sommet. En petits groupes à dates fixes, ou en privé aux dates de votre choix."
+    "teaser": "La voie raisonnable la plus rapide vers le toit de l'Éthiopie : le col de Bwahit, la descente vers Ambiko et la montée à l'aube jusqu'à 4 550 mètres.",
+    "summary": "Une ascension ciblée du Ras Dashen pour les marcheurs qui veulent le sommet sans la traversée complète de dix jours. Nous roulons dans le parc jusqu'à Chenek, nous y acclimatons, puis franchissons le col de Bwahit jusqu'au camp de base d'Ambiko, avec un jour de repos avant le sommet. En petits groupes à dates fixes, ou en privé aux dates de votre choix.",
+    "days": "7 jours",
+    "style": "Ascension · Trekking · Petit groupe",
+    "season": "oct. – févr.",
+    "group": "2 – 10 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Nuits à Gondar au début et à la fin de l'ascension",
+      "Transferts routiers Gondar – Chenek – Gondar",
+      "Tous les droits d'entrée du parc, un garde armé du parc et les permis de sommet",
+      "Mules, muletiers, un cuisinier de camp et pension complète en montagne",
+      "Tentes quatre saisons, tapis de sol et tente-réfectoire chauffée",
+      "Un guide de montagne expérimenté, formé aux premiers secours en altitude, et contrôles quotidiens à l'oxymètre de pouls"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Gondar",
+      "Sac de couchage (location possible à Gondar)",
+      "Assurance voyage avec couverture d'évacuation (obligatoire)",
+      "Pourboires pour les éclaireurs, muletiers et le cuisinier"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Gondar",
+        "text": "Vérification du matériel, présentation de l'itinéraire et nuit précoce à Gondar."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Dans le parc jusqu'à Chenek",
+        "text": "Vers le nord jusqu'à Debark pour les permis et le garde, puis la route le long de l'escarpement jusqu'à Chenek, à environ 3 600 mètres. Une marche d'acclimatation l'après-midi pour guetter les bouquetins walias sur les falaises."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Par le col de Bwahit jusqu'à Ambiko",
+        "text": "Une rude montée jusqu'au col de Bwahit à 4 200 mètres et la première vue du Ras Dashen, puis la longue descente dans la vallée de la Mesheha et la montée jusqu'au camp d'Ambiko."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Repos et acclimatation",
+        "text": "Un jour de repos volontaire à Ambiko, avec une courte marche au-dessus du camp et une nuit précoce — le facteur le plus déterminant pour atteindre le sommet."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Jour du sommet · 4 550 m",
+        "text": "Un départ avant l'aube à la lampe frontale, la dernière escalade de la tour sommitale et la vue sur tout le massif du Simien. Retour à Ambiko en début d'après-midi."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Retour par le col",
+        "text": "Le retour à travers la vallée de la Mesheha et le col de Bwahit jusqu'à Chenek."
+      },
+      {
+        "day": "Jour 7",
+        "title": "De Chenek à Gondar",
+        "text": "Une dernière matinée sur l'escarpement, puis le retour en voiture à Gondar pour une douche chaude et un dîner de célébration."
+      }
+    ],
+    "places": [
+      "Gondar",
+      "Chenek",
+      "Ambiko",
+      "Ras Dashen"
+    ]
   },
   "simien-summits-in-comfort": {
     "title": "Sommets du Simien tout confort",
     "teaser": "Les hauts sommets du Simien le jour, un lodge sur l'escarpement la nuit — aucune tente.",
-    "summary": "Pour les alpinistes qui veulent l'altitude sans camper. Nous séjournons dans un lodge sur le rebord du Simien et utilisons un véhicule privé pour atteindre chaque départ de sentier, en montant toujours plus haut — Imet Gogo, la crête d'Inatye, puis enfin le sommet du Bwahit, à environ 4 430 mètres — et en retrouvant chaque soir un feu, une douche chaude et un vrai lit."
+    "summary": "Pour les alpinistes qui veulent l'altitude sans camper. Nous séjournons dans un lodge sur le rebord du Simien et utilisons un véhicule privé pour atteindre chaque départ de sentier, en montant toujours plus haut — Imet Gogo, la crête d'Inatye, puis enfin le sommet du Bwahit, à environ 4 430 mètres — et en retrouvant chaque soir un feu, une douche chaude et un vrai lit.",
+    "days": "5 jours",
+    "style": "Ascension · Luxe · Privé",
+    "season": "oct. – févr.",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Trois nuits dans un lodge sur l'escarpement, une à Gondar",
+      "Un 4x4 privé en attente à chaque départ de sentier",
+      "Un guide de montagne expérimenté et un garde armé du parc",
+      "Tous les droits d'entrée du parc",
+      "Déjeuners pique-nique en montagne et tous les repas au lodge",
+      "Contrôles quotidiens à l'oxymètre de pouls et un programme flexible selon la météo"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Gondar",
+      "Assurance voyage avec couverture d'évacuation (obligatoire)",
+      "Boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Gondar",
+        "text": "Arrivée et un après-midi tranquille parmi les châteaux, avec une présentation des ascensions à venir."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Jusqu'au rebord · Imet Gogo",
+        "text": "La route jusqu'au lodge de l'escarpement, puis une première marche jusqu'à Imet Gogo, à 3 926 mètres, pour la vue sur trois lignes de crêtes."
+      },
+      {
+        "day": "Jour 3",
+        "title": "La crête d'Inatye · 4 070 m",
+        "text": "Une journée plus longue le long de la crête jusqu'à Inatye, parmi les lobélias géantes, avec le véhicule qui vous attend à l'autre bout."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Sommet du Bwahit · ≈ 4 430 m",
+        "text": "Depuis Chenek, une journée entière en montée, au-delà du col à 4 200 mètres, jusqu'au sommet du Bwahit, avec la première vue du Ras Dashen et de bonnes chances de voir des bouquetins walias."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Retour à Gondar",
+        "text": "Un petit-déjeuner tranquille sur le rebord, puis la descente en voiture à Gondar pour votre vol de correspondance."
+      }
+    ],
+    "places": [
+      "Gondar",
+      "Monts Simien",
+      "Imet Gogo",
+      "Bwahit"
+    ]
   },
   "bale-summits-batu-and-tullu-dimtu": {
-    "title": "Sommets du Bale : Batu et Tullu Dimtu",
-    "teaser": "Deux sommets à 4 300 mètres en terre de loup d'Éthiopie, parcourus à pied à travers la lande du Bale depuis Dinsho.",
-    "summary": "Un trek classique du Bale avec deux sommets : par les vallées de Web et de Wasema jusqu'au mont Batu, à travers le plateau de Sanetti en passant par le lac glaciaire de Garba Guracha, puis jusqu'au sommet du Tullu Dimtu, point culminant du plateau. Nuits sous tente avec une équipe de camp complète, dans certains des meilleurs territoires du loup d'Éthiopie."
+    "title": "Sommets du Bale : Batu et Tullu Dimtu",
+    "teaser": "Deux sommets à 4 300 mètres en terre de loup d'Éthiopie, parcourus à pied à travers la lande du Bale depuis Dinsho.",
+    "summary": "Un trek classique du Bale avec deux sommets : par les vallées de Web et de Wasema jusqu'au mont Batu, à travers le plateau de Sanetti en passant par le lac glaciaire de Garba Guracha, puis jusqu'au sommet du Tullu Dimtu, point culminant du plateau. Nuits sous tente avec une équipe de camp complète, dans certains des meilleurs territoires du loup d'Éthiopie.",
+    "days": "7 jours",
+    "style": "Ascension · Trekking · Privé",
+    "season": "nov. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Transferts routiers depuis Addis-Abeba, avec vol retour depuis Robe lorsque c'est possible",
+      "Tous les droits d'entrée du parc, gardes et un guide de montagne du Bale",
+      "Chevaux ou mules, convoyeurs et un cuisinier de camp",
+      "Tentes, tapis de sol et pension complète pendant le trek",
+      "Une nuit en lodge à Dinsho avant le trek",
+      "Contrôles quotidiens à l'oxymètre de pouls au-dessus de 3 500 mètres"
+    ],
+    "excludes": [
+      "Sac de couchage (location possible)",
+      "Assurance voyage avec couverture d'évacuation (obligatoire)",
+      "Pourboires pour les guides, les muletiers et le cuisinier"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "D'Addis-Abeba à Dinsho",
+        "text": "Environ 400 kilomètres vers le sud-est jusqu'au siège du parc à Dinsho, avec des nyalas de montagne en lisière de lande au crépuscule."
+      },
+      {
+        "day": "Jour 2",
+        "title": "La vallée du Web",
+        "text": "Sur le sentier à travers la vallée du Web jusqu'aux chutes de Finch Abera, où se rejoignent les rivières Web et Wolla, puis jusqu'au camp de Mararo."
+      },
+      {
+        "day": "Jour 3",
+        "title": "La vallée du Wasema",
+        "text": "Le long de la rivière Wasema, en passant devant une source minérale, jusqu'à un camp d'altitude sous le mont Batu."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Sommet du Batu · 4 307 m",
+        "text": "La montée au sommet du Batu, puis sur le plateau de Sanetti et descente jusqu'au camp près du lac glaciaire de Garba Guracha."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Sommet du Tullu Dimtu · 4 377 m",
+        "text": "À travers le plateau ouvert à l'aube, lorsque les loups d'Éthiopie sont les plus actifs, jusqu'au sommet du Tullu Dimtu — puis descente du plateau jusqu'à un lodge."
+      },
+      {
+        "day": "Jour 6",
+        "title": "La forêt de Harenna",
+        "text": "Un jour de repos à pied et en véhicule dans la forêt de nuages de Harenna, sur les pentes sud."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Retour à Addis-Abeba",
+        "text": "Un vol depuis Robe si les horaires le permettent, ou la route vers le nord jusqu'à la capitale."
+      }
+    ],
+    "places": [
+      "Monts Bale",
+      "Dinsho",
+      "Mont Batu",
+      "Tullu Dimtu"
+    ]
   },
   "abune-yosef-ascent": {
     "title": "Ascension de l'Abune Yosef",
-    "teaser": "Un sommet à 4 260 mètres au-dessus de Lalibela, avec lodges communautaires, géladas et terre de loup en chemin.",
-    "summary": "La plupart des visiteurs voient les églises de Lalibela, puis repartent. Cette courte ascension pénètre dans le massif de l'Abune Yosef, à une quarantaine de kilomètres — parmi les terres les plus hautes du nord de l'Éthiopie — avec des nuits en lodges communautaires et le sommet atteint le troisième jour. Un complément naturel à toute visite de Lalibela."
+    "teaser": "Un sommet à 4 260 mètres au-dessus de Lalibela, avec lodges communautaires, géladas et terre de loup en chemin.",
+    "summary": "La plupart des visiteurs voient les églises de Lalibela, puis repartent. Cette courte ascension pénètre dans le massif de l'Abune Yosef, à une quarantaine de kilomètres — parmi les terres les plus hautes du nord de l'Éthiopie — avec des nuits en lodges communautaires et le sommet atteint le troisième jour. Un complément naturel à toute visite de Lalibela.",
+    "days": "4 jours",
+    "style": "Ascension · Trekking · Petit groupe",
+    "season": "oct. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un guide expérimenté et des guides des communautés locales",
+      "Deux nuits dans un lodge communautaire, une à Lalibela",
+      "Animaux de bât pour les bagages",
+      "Pension complète en montagne",
+      "Droits communautaires et de conservation",
+      "Transferts depuis et vers Lalibela"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Lalibela",
+      "Sac de couchage (location possible)",
+      "Assurance voyage avec couverture d'évacuation (obligatoire)",
+      "Pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Lalibela",
+        "text": "Arrivée, les églises dans la lumière de fin d'après-midi et présentation de l'ascension."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Au cœur du massif",
+        "text": "La route vers Abune Yosef et une marche à travers les terres cultivées jusqu'au lodge communautaire, à plus de 3 200 mètres."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Sommet · 4 260 m",
+        "text": "La montée au sommet de l'Abune Yosef, parmi des troupes de géladas et des lobélias géantes, avec une chance d'apercevoir des loups d'Éthiopie sur les hauteurs. Retour au lodge pour la nuit."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Descente vers Lalibela",
+        "text": "La descente à pied et la route jusqu'à Lalibela pour un vol en fin d'après-midi."
+      }
+    ],
+    "places": [
+      "Lalibela",
+      "Abune Yosef"
+    ]
   },
   "mount-guna-ascent": {
     "title": "Ascension du mont Guna",
-    "teaser": "Un sommet à 4 120 mètres entre le lac Tana et Lalibela, que peu de visiteurs gravissent.",
-    "summary": "Le Guna s'élève au-dessus de la ville de Debre Tabor, point culminant du Gondar Sud et l'un des hauts sommets les moins fréquentés du pays. Depuis une crête à environ 3 700 mètres, une journée entière de marche mène, après deux faux sommets, à son sommet rocheux. Il s'insère parfaitement entre Bahir Dar et Lalibela sur un itinéraire routier."
+    "teaser": "Un sommet à 4 120 mètres entre le lac Tana et Lalibela, que peu de visiteurs gravissent.",
+    "summary": "Le Guna s'élève au-dessus de la ville de Debre Tabor, point culminant du Gondar Sud et l'un des hauts sommets les moins fréquentés du pays. Depuis une crête à environ 3 700 mètres, une journée entière de marche mène, après deux faux sommets, à son sommet rocheux. Il s'insère parfaitement entre Bahir Dar et Lalibela sur un itinéraire routier.",
+    "days": "3 jours",
+    "style": "Ascension · Randonnée · Privé",
+    "season": "oct. – févr.",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide expérimenté",
+      "Un guide local pour l'ascension",
+      "Deux nuits à Debre Tabor",
+      "Déjeuner pique-nique le jour du sommet, petit-déjeuner et dîner quotidiens"
+    ],
+    "excludes": [
+      "Assurance voyage avec couverture d'évacuation (obligatoire)",
+      "Boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "De Bahir Dar à Debre Tabor",
+        "text": "À l'est de Bahir Dar à travers les plaines de Fogera et jusqu'à Debre Tabor, ancienne ville royale, avec une marche en soirée pour s'habituer à l'altitude."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Sommet du Guna · 4 120 m",
+        "text": "Une route matinale jusqu'au départ du sentier, sur une large crête vers 3 700 mètres, puis la marche sur les pentes afro-alpines, au-delà de deux faux sommets, jusqu'au sommet rocheux bien distinct. Retour à Debre Tabor pour la nuit."
+      },
+      {
+        "day": "Jour 3",
+        "title": "On poursuit",
+        "text": "Retour à Bahir Dar, ou poursuite vers l'est à travers les hauts plateaux en direction de Lalibela."
+      }
+    ],
+    "places": [
+      "Bahir Dar",
+      "Debre Tabor",
+      "Mont Guna"
+    ]
   },
   "ethiopias-three-high-peaks": {
     "title": "Les trois grands sommets d'Éthiopie",
     "teaser": "Le Ras Dashen dans le Simien, l'Abune Yosef au-dessus de Lalibela et le Tullu Dimtu dans le Bale — avec les églises rupestres entre les deux.",
-    "summary": "Trois grands massifs, trois sommets et le pays qui les sépare. Nous gravissons d'abord le Ras Dashen, nous reposons parmi les églises de Lalibela, montons l'Abune Yosef, puis volons vers le sud, dans les monts Bale, pour le Tullu Dimtu sur le plateau de Sanetti. Chaque ascension prépare la suivante, si bien que l'altitude arrive progressivement. Disponible avec des nuits en lodge entre les ascensions pour une version plus confortable."
+    "summary": "Trois grands massifs, trois sommets et le pays qui les sépare. Nous gravissons d'abord le Ras Dashen, nous reposons parmi les églises de Lalibela, montons l'Abune Yosef, puis volons vers le sud, dans les monts Bale, pour le Tullu Dimtu sur le plateau de Sanetti. Chaque ascension prépare la suivante, si bien que l'altitude arrive progressivement. Disponible avec des nuits en lodge entre les ascensions pour une version plus confortable.",
+    "days": "18 jours",
+    "style": "Ascension · Expédition · Privé",
+    "season": "nov. – févr.",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Tous les vols intérieurs",
+      "Un guide de montagne expérimenté pour toute l'expédition",
+      "Tous les droits d'entrée du parc, gardes, permis et droits communautaires",
+      "Équipes de camp complètes, mules et cuisiniers pour chaque ascension",
+      "Hôtels et lodges entre les ascensions",
+      "Contrôles quotidiens à l'oxymètre de pouls au-dessus de 3 500 mètres"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Sac de couchage (location possible)",
+      "Assurance voyage avec couverture d'évacuation (obligatoire)",
+      "Pourboires pour les équipes"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Addis-Abeba",
+        "text": "Arrivée, vérification du matériel et courte marche d'acclimatation à Entoto."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Vol vers Gondar",
+        "text": "Un vol matinal vers le nord et un après-midi parmi les châteaux."
+      },
+      {
+        "day": "Jours 3 – 8",
+        "title": "Ras Dashen · ≈ 4 550 m",
+        "text": "Jour 3 jusqu'à Chenek ; jour 4 par le Bwahit jusqu'à Ambiko ; jour 5 repos et acclimatation ; jour 6 sommet avant l'aube ; jours 7–8 retour par le col jusqu'à Chenek et Gondar."
+      },
+      {
+        "day": "Jour 9",
+        "title": "De Gondar à Lalibela",
+        "text": "Descente à Gondar et vol pour Lalibela."
+      },
+      {
+        "day": "Jour 10",
+        "title": "Lalibela",
+        "text": "Un jour de repos parmi les églises monolithes."
+      },
+      {
+        "day": "Jours 11 – 13",
+        "title": "Abune Yosef · 4 260 m",
+        "text": "Au cœur du massif, nuits en lodges communautaires et sommet parmi les géladas et les lobélias géantes."
+      },
+      {
+        "day": "Jour 14",
+        "title": "Vol vers le sud",
+        "text": "Un vol de Lalibela de retour à Addis-Abeba."
+      },
+      {
+        "day": "Jour 15",
+        "title": "D'Addis-Abeba à Dinsho",
+        "text": "La route vers le sud-est jusqu'aux monts Bale."
+      },
+      {
+        "day": "Jour 16",
+        "title": "Tullu Dimtu · 4 377 m",
+        "text": "Sur le plateau de Sanetti à l'aube pour les loups d'Éthiopie, puis la marche jusqu'au sommet du Tullu Dimtu."
+      },
+      {
+        "day": "Jour 17",
+        "title": "La forêt de Harenna",
+        "text": "Une dernière journée tranquille dans la forêt de nuages sur les pentes sud du Bale."
+      },
+      {
+        "day": "Jour 18",
+        "title": "Départ",
+        "text": "Un vol depuis Robe si les horaires le permettent, ou la route jusqu'à Addis-Abeba pour votre départ."
+      }
+    ],
+    "places": [
+      "Ras Dashen",
+      "Lalibela",
+      "Abune Yosef",
+      "Monts Bale",
+      "Tullu Dimtu"
+    ]
   },
   "run-with-ethiopias-champions": {
     "title": "Courir avec les champions d'Éthiopie",
     "teaser": "Les sentiers d'altitude d'Entoto et la ville de montagne de Bekoji, qui a donné toute une lignée de champions olympiques.",
-    "summary": "Un séjour running construit autour des deux lieux qui expliquent la domination éthiopienne en course de fond : les sentiers forestiers d'Entoto, au-dessus d'Addis-Abeba, vers 3 000 mètres, et Bekoji, petite ville agricole à environ 2 800 mètres, berceau de Derartu Tulu, de Kenenisa Bekele et des sœurs Dibaba. Fin novembre, il peut coïncider avec la Great Ethiopian Run."
+    "summary": "Un séjour running construit autour des deux lieux qui expliquent la domination éthiopienne en course de fond : les sentiers forestiers d'Entoto, au-dessus d'Addis-Abeba, vers 3 000 mètres, et Bekoji, petite ville agricole à environ 2 800 mètres, berceau de Derartu Tulu, de Kenenisa Bekele et des sœurs Dibaba. Fin novembre, il peut coïncider avec la Great Ethiopian Run.",
+    "days": "6 jours",
+    "style": "Course à pied · Actif · Petit groupe",
+    "season": "oct. – mai",
+    "group": "2 – 10 coureurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un guide de course local pendant tout le voyage, avec des séances adaptées à l'allure de chaque coureur",
+      "Un véhicule privé entre Addis-Abeba et Bekoji",
+      "Cinq nuits d'hébergement",
+      "Petit-déjeuner quotidien et repas après chaque sortie de course",
+      "Une inscription facultative à la Great Ethiopian Run, si les dates coïncident"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Tenue de course et équipement personnel"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Arrivée et une marche facile pour se dégourdir les jambes — à 2 300 mètres, les premiers jours servent à s'adapter, pas à s'entraîner dur."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Entoto",
+        "text": "Une course à l'aube sur les sentiers d'eucalyptus d'Entoto parmi les coureurs de la ville, à une allure qui vous convient, puis petit-déjeuner et après-midi de repos."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Plus longtemps sur les sentiers d'altitude",
+        "text": "Une séance plus longue sur les pistes de terre d'Entoto avec votre guide de course, et un exposé sur la façon dont s'entraînent les coureurs éthiopiens."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Au sud, vers Bekoji",
+        "text": "Environ 212 kilomètres vers le sud en passant par Asella jusqu'à Bekoji, à environ 2 800 mètres, avec une course facile en soirée à travers les terres agricoles."
+      },
+      {
+        "day": "Jour 5",
+        "title": "La ville des coureurs",
+        "text": "Une course matinale sur les parcours autour de Bekoji, du temps dans la ville qui a produit tant de champions et l'après-midi libre."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Retour à Addis-Abeba",
+        "text": "Une dernière course facile, la route vers le nord et un départ en soirée — ou restez pour le jour de la course, fin novembre."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Entoto",
+      "Bekoji"
+    ]
   },
   "rift-valley-by-bike": {
     "title": "La vallée du Rift à vélo",
     "teaser": "Une longue descente des hauts plateaux vers la Grande Vallée du Rift, puis de lac en lac sur des routes tranquilles.",
-    "summary": "Quatre jours de vélo, véhicule d'assistance derrière vous : descente des hauts plateaux gurage vers la vallée du Rift — plus de mille mètres de dénivelé — puis entre les lacs Ziway, Abijata-Shalla et Langano, pour finir sur les rives du lac de Hawassa. Des vélos électriques sont disponibles pour profiter des paysages avec moins d'efforts."
+    "summary": "Quatre jours de vélo, véhicule d'assistance derrière vous : descente des hauts plateaux gurage vers la vallée du Rift — plus de mille mètres de dénivelé — puis entre les lacs Ziway, Abijata-Shalla et Langano, pour finir sur les rives du lac de Hawassa. Des vélos électriques sont disponibles pour profiter des paysages avec moins d'efforts.",
+    "days": "5 jours",
+    "style": "Cyclisme · Actif · Petit groupe",
+    "season": "oct. – mai",
+    "group": "2 – 10 cyclistes",
+    "from": "Sur mesure",
+    "includes": [
+      "Vélos ou vélos électriques de qualité, casques et kits de réparation",
+      "Un guide cycliste et un véhicule d'assistance pendant tout le voyage",
+      "Quatre nuits dans des lodges au bord des lacs",
+      "Une excursion en bateau sur le lac Ziway",
+      "Pension complète les jours de vélo"
+    ],
+    "excludes": [
+      "Assurance voyage (obligatoire)",
+      "Boissons et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Vers les hauts plateaux du Gurage",
+        "text": "La route vers le sud-ouest depuis Addis-Abeba jusqu'aux hauts plateaux du Gurage, un réglage du vélo et une courte sortie pour délier les jambes."
+      },
+      {
+        "day": "Jour 2",
+        "title": "La grande descente",
+        "text": "Depuis l'une des plus hautes crêtes du Gurage, une descente rapide d'environ 3 350 à 2 050 mètres jusque dans la vallée du Rift, puis vers le lac Ziway et une sortie en bateau sur le lac."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Abijata-Shalla",
+        "text": "Dans le parc national d'Abijata-Shalla, en guettant les flamants — présents d'octobre à février —, les phacochères et les autruches, et les sources chaudes près du lac Shalla."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Lac Langano",
+        "text": "Une journée plus facile autour du lac Langano, l'un des rares lacs du Rift où l'on peut se baigner, avec l'après-midi au bord de l'eau."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Hawassa et retour",
+        "text": "Un transfert vers le sud jusqu'à Hawassa pour une dernière sortie le long de sa rive, puis la route de retour vers Addis-Abeba."
+      }
+    ],
+    "places": [
+      "Hauts plateaux du Gurage",
+      "Lac Ziway",
+      "Abijata-Shalla",
+      "Lac Langano",
+      "Hawassa"
+    ]
   },
   "northern-ethiopia-for-families": {
     "title": "Le nord de l'Éthiopie en famille",
     "teaser": "Châteaux, bateaux, singes et églises à tunnels — le nord à un rythme qui convient aux enfants.",
-    "summary": "Les grands sites du nord, repensés pour les familles : vols intérieurs plutôt que longs trajets, lodges plutôt que tentes, et des journées qui mêlent une grande visite à beaucoup de temps pour jouer. Les enfants approchent des singes géladas à quelques mètres, explorent un vrai château, voguent jusqu'à un monastère insulaire et arpentent les tunnels entre les églises de Lalibela."
+    "summary": "Les grands sites du nord, repensés pour les familles : vols intérieurs plutôt que longs trajets, lodges plutôt que tentes, et des journées qui mêlent une grande visite à beaucoup de temps pour jouer. Les enfants approchent des singes géladas à quelques mètres, explorent un vrai château, voguent jusqu'à un monastère insulaire et arpentent les tunnels entre les églises de Lalibela.",
+    "days": "9 jours",
+    "style": "Famille · Culturel · Privé",
+    "season": "oct. – mars",
+    "group": "Familles de 3 – 8 personnes",
+    "from": "Sur mesure",
+    "includes": [
+      "Tous les vols intérieurs, pour qu'aucune journée ne comporte un long trajet en voiture",
+      "Un véhicule privé et un guide habitué aux familles",
+      "Chambres familiales ou communicantes dans chaque lodge",
+      "Un bateau privé sur le lac Tana",
+      "Un après-midi injera et café avec une famille locale",
+      "Petit-déjeuner quotidien et la plupart des dîners"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Boissons, en-cas et dépenses personnelles"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Transfert privé et un après-midi tranquille — puis rencontre avec Lucy, l'ancêtre de 3,2 millions d'années, au Musée national."
+      },
+      {
+        "day": "Jours 2 – 3",
+        "title": "Bahir Dar et le lac Tana",
+        "text": "Un court vol vers le nord, un bateau privé jusqu'à un monastère insulaire et une marche jusqu'aux chutes du Nil Bleu en franchissant un vieux pont de pierre."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Les châteaux de Gondar",
+        "text": "Montée à Gondar pour explorer l'enceinte royale — six châteaux où courir — et le Bain de Fasilides."
+      },
+      {
+        "day": "Jours 5 – 6",
+        "title": "Le rebord du Simien",
+        "text": "Deux nuits dans un lodge sur l'escarpement, avec de courtes marches pour regarder les géladas brouter à quelques mètres et des vues sur le bord du monde."
+      },
+      {
+        "day": "Jours 7 – 8",
+        "title": "Lalibela",
+        "text": "Un vol pour Lalibela, les églises monolithes et les passages de tranchée qui les relient, et un après-midi injera et café avec une famille locale."
+      },
+      {
+        "day": "Jour 9",
+        "title": "Départ",
+        "text": "Un vol de retour à Addis-Abeba pour votre voyage de retour."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Lac Tana",
+      "Gondar",
+      "Monts Simien",
+      "Lalibela"
+    ]
   },
   "lakes-craters-and-wildlife-for-families": {
     "title": "Lacs, cratères et faune en famille",
     "teaser": "Lacs de cratère, oryx dans les plaines, gorges avec cascade et bassins tièdes sous les palmiers — tout près d'Addis.",
-    "summary": "Un voyage en famille court et facile, jamais très loin de la capitale : lacs de cratère volcaniques à Bishoftu, safaris et sources chaudes dans le parc national d'Awash, un cours de cuisine et une promenade en forêt. Trajets courts, lodges confortables et du nouveau chaque jour."
+    "summary": "Un voyage en famille court et facile, jamais très loin de la capitale : lacs de cratère volcaniques à Bishoftu, safaris et sources chaudes dans le parc national d'Awash, un cours de cuisine et une promenade en forêt. Trajets courts, lodges confortables et du nouveau chaque jour.",
+    "days": "6 jours",
+    "style": "Famille · Faune · Privé",
+    "season": "oct. – mars",
+    "group": "Familles de 3 – 8 personnes",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un guide habitué aux familles",
+      "Chambres familiales dans des lodges à Bishoftu, à l'Awash et à Addis-Abeba",
+      "Droits d'entrée du parc et safaris en véhicule dans l'Awash",
+      "Un cours de cuisine de l'injera avec une famille locale",
+      "Petit-déjeuner quotidien et la plupart des repas en chemin"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Boissons, en-cas et dépenses personnelles"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Addis-Abeba",
+        "text": "Arrivée, la forêt d'eucalyptus et la vue depuis Entoto, et Lucy au Musée national."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Les lacs de cratère de Bishoftu",
+        "text": "Une heure vers le sud-est jusqu'aux lacs de cratère, avec des oiseaux sur la rive et un déjeuner tranquille au bord du lac."
+      },
+      {
+        "day": "Jours 3 – 4",
+        "title": "Parc national de l'Awash",
+        "text": "Safaris en véhicule pour les oryx et les gazelles, les chutes de l'Awash se jetant dans leurs gorges et un après-midi dans les bassins chauds et ombragés de palmiers des sources de Filwoha."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Retour à Addis et cours de cuisine",
+        "text": "La route de retour vers la capitale et un après-midi à apprendre à servir l'injera avec une famille locale."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Forêt de Menagesha et départ",
+        "text": "Une courte marche sous les genévriers géants de Menagesha, protégés depuis cinq siècles, avant votre vol en soirée."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Bishoftu",
+      "Parc national de l'Awash",
+      "Forêt de Menagesha Suba"
+    ]
   },
   "the-north-in-style": {
     "title": "Le Nord avec élégance",
     "teaser": "Lac Tana, Gondar, le Simien et Lalibela avec des guides privés, les meilleurs lodges à chaque étape et sans précipitation.",
-    "summary": "Notre voyage le plus confortable dans le nord. Vols intérieurs entre chaque région, le plus bel hébergement que nous connaissions à chaque étape, guides et véhicules privés tout du long, et des journées organisées autour des heures calmes — les églises à l'aube, le lac avant les bateaux de la journée, l'escarpement au coucher du soleil — avec de longs déjeuners sans hâte entre les deux."
+    "summary": "Notre voyage le plus confortable dans le nord. Vols intérieurs entre chaque région, le plus bel hébergement que nous connaissions à chaque étape, guides et véhicules privés tout du long, et des journées organisées autour des heures calmes — les églises à l'aube, le lac avant les bateaux de la journée, l'escarpement au coucher du soleil — avec de longs déjeuners sans hâte entre les deux.",
+    "days": "10 jours",
+    "style": "Luxe · Culturel · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Tous les vols intérieurs et transferts privés à l'aéroport",
+      "Le meilleur lodge ou hôtel de charme disponible à chaque étape",
+      "Guides spécialisés et véhicules privés pendant tout le voyage",
+      "Un bateau privé sur le lac Tana et un accès anticipé aux églises",
+      "Tous les repas, avec des dîners choisis organisés en privé",
+      "Un concepteur de voyage dédié, joignable à toute heure"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Boissons haut de gamme et pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Addis-Abeba",
+        "text": "Accueil à l'arrivée, un hôtel de charme et une soirée privée avec dîner et musique en direct."
+      },
+      {
+        "day": "Jours 2 – 3",
+        "title": "Lac Tana",
+        "text": "Un bateau privé jusqu'aux monastères des îles avant l'afflux de la journée, les chutes du Nil Bleu et un lodge paisible au bord du lac."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Gondar",
+        "text": "L'enceinte royale et Debre Berhan Selassie avec un historien, et un dîner privé dans la vieille ville."
+      },
+      {
+        "day": "Jours 5 – 7",
+        "title": "Le rebord du Simien",
+        "text": "Trois nuits dans un lodge sur l'escarpement : troupes de géladas, Imet Gogo au lever du soleil et marches aussi longues ou aussi courtes que vous le souhaitez, avec un véhicule toujours à proximité."
+      },
+      {
+        "day": "Jours 8 – 9",
+        "title": "Lalibela",
+        "text": "Les églises à l'aube avec un guide expérimenté, Asheton Maryam au-dessus de la ville et l'église troglodytique de Yemrehanna Kristos."
+      },
+      {
+        "day": "Jour 10",
+        "title": "Départ",
+        "text": "Un vol pour Addis-Abeba, une chambre de jour et un déjeuner d'adieu avant votre départ en soirée."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Lac Tana",
+      "Gondar",
+      "Monts Simien",
+      "Lalibela"
+    ]
   },
   "christmas-to-epiphany": {
     "title": "De Noël à l'Épiphanie",
     "teaser": "Genna aux églises rupestres de Lalibela, Timkat au bain royal de Gondar et la paisible quinzaine entre les deux.",
-    "summary": "Les deux grandes fêtes du nord en un seul voyage. La nuit de Noël parmi les pèlerins de Lalibela, des journées tranquilles sur le lac Tana et le rebord du Simien, puis l'Épiphanie à Gondar. Les deux dates suivent le calendrier éthiopien et se décalent d'un jour certaines années : nous confirmons donc les dates de chaque mois de janvier à la réservation et gardons les chambres un an complet à l'avance."
+    "summary": "Les deux grandes fêtes du nord en un seul voyage. La nuit de Noël parmi les pèlerins de Lalibela, des journées tranquilles sur le lac Tana et le rebord du Simien, puis l'Épiphanie à Gondar. Les deux dates suivent le calendrier éthiopien et se décalent d'un jour certaines années : nous confirmons donc les dates de chaque mois de janvier à la réservation et gardons les chambres un an complet à l'avance.",
+    "days": "16 jours",
+    "style": "Festival · Culturel · Privé",
+    "season": "Janvier uniquement",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Tous les vols intérieurs et un véhicule privé avec chauffeur-guide expérimenté",
+      "Un érudit chrétien orthodoxe comme guide des fêtes à Lalibela et Gondar",
+      "Emplacements réservés pour la veillée de Genna et au Bain de Fasilides",
+      "Hébergement réservé douze mois à l'avance à chaque étape",
+      "Un bateau privé sur le lac Tana et un lodge sur l'escarpement du Simien",
+      "Petit-déjeuner quotidien, restauration les jours de fête et la plupart des dîners"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et dons aux églises"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1 · 5 janv.",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Transfert privé, repos et, pendant le dîner, une présentation du calendrier liturgique éthiopien."
+      },
+      {
+        "day": "Jours 2 – 3 · 6 – 7 janv.",
+        "title": "Genna à Lalibela",
+        "text": "Un vol matinal vers le nord, puis la veillée de la veille de Noël parmi des milliers de pèlerins vêtus de blanc. À l'aube, les prêtres chantent depuis le rocher au-dessus des églises — la raison pour laquelle nous venons."
+      },
+      {
+        "day": "Jours 4 – 5 · 8 – 9 janv.",
+        "title": "Asheton Maryam et Yemrehanna Kristos",
+        "text": "Une fois les pèlerins dispersés, la montée au monastère de falaise au-dessus de la ville et l'église troglodytique de Yemrehanna Kristos dans les collines."
+      },
+      {
+        "day": "Jours 6 – 8 · 10 – 12 janv.",
+        "title": "Bahir Dar et le lac Tana",
+        "text": "Un vol vers l'ouest, les monastères des îles en bateau privé, la forêt de café de Zege à pied et les chutes du Nil Bleu."
+      },
+      {
+        "day": "Jours 9 – 10 · 13 – 14 janv.",
+        "title": "Gorgora",
+        "text": "Vers le nord le long du lac jusqu'à Debre Sina Maryam et aux ruines jésuites de Maryam Gimb, avec deux nuits paisibles au bord de l'eau."
+      },
+      {
+        "day": "Jours 11 – 13 · 15 – 17 janv.",
+        "title": "Le rebord du Simien",
+        "text": "Montée à un lodge sur l'escarpement pour les troupes de géladas au-dessus de Sankaber, les chutes de Jinbar et le lever du soleil à Imet Gogo — les jours les plus calmes du voyage."
+      },
+      {
+        "day": "Jours 14 – 15 · 18 – 19 janv.",
+        "title": "Timkat à Gondar",
+        "text": "La procession de la veille de Ketera, lorsque les tabots sont portés au Bain de Fasilides, une veillée de toute la nuit et la bénédiction de l'eau à l'aube."
+      },
+      {
+        "day": "Jour 16 · 20 janv.",
+        "title": "Départ",
+        "text": "Un vol de retour à Addis-Abeba et un départ en soirée."
+      }
+    ],
+    "places": [
+      "Lalibela",
+      "Lac Tana",
+      "Gorgora",
+      "Monts Simien",
+      "Gondar"
+    ]
   },
   "lalibela-highlands-community-trek": {
     "title": "Trek communautaire dans les hauts plateaux de Lalibela",
     "teaser": "Des campements de tukuls appartenant aux villages, sur le rebord de l'escarpement de Meket, puis le territoire du loup à Abune Yosef.",
-    "summary": "Une marche tranquille le long d'un escarpement de montagne, entre 2 800 et 3 100 mètres, avec des nuits dans des tukuls de chaume que les villages ont eux-mêmes construits et gèrent dans le cadre du programme de trekking communautaire TESFA. La majeure partie du parcours est plate ou en pente douce, des chevaux peuvent être loués pour n'importe quel tronçon, et le prix de chaque nuit revient à la communauté qui vous accueille."
+    "summary": "Une marche tranquille le long d'un escarpement de montagne, entre 2 800 et 3 100 mètres, avec des nuits dans des tukuls de chaume que les villages ont eux-mêmes construits et gèrent dans le cadre du programme de trekking communautaire TESFA. La majeure partie du parcours est plate ou en pente douce, des chevaux peuvent être loués pour n'importe quel tronçon, et le prix de chaque nuit revient à la communauté qui vous accueille.",
+    "days": "5 jours",
+    "style": "Trekking · Culturel · Petit groupe",
+    "season": "oct. – mars",
+    "group": "2 – 8 voyageurs",
+    "from": "$1,480 par personne",
+    "includes": [
+      "Droits des camps communautaires versés directement aux villages hôtes",
+      "Guides de village locaux, plus un guide expérimenté de Lalibela pendant tout le voyage",
+      "Quatre nuits dans des camps communautaires en tukuls et des lodges, en pension complète",
+      "Animaux de bât pour les bagages, et chevaux sur demande",
+      "Tous les transferts entre Lalibela, les départs de sentiers et l'aéroport",
+      "Une matinée aux églises de Lalibela avant le trek"
+    ],
+    "excludes": [
+      "Vols aller-retour pour Lalibela",
+      "Sac de couchage (location possible à Lalibela)",
+      "Assurance voyage (obligatoire)",
+      "Pourboires pour les guides de village et les cuisiniers"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Lalibela",
+        "text": "Arrivée, le groupe d'églises du nord l'après-midi et, pendant le dîner, une présentation du trek."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Vers l'escarpement de Meket",
+        "text": "Une courte route jusqu'au départ du sentier et une marche jusqu'à Mequat Mariam — le premier camp TESFA à avoir accueilli des hôtes, en 2003 — installé sur un promontoire à pic de trois côtés."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Le long du rebord",
+        "text": "Une journée entière au bord du plateau, devant des fermes et des aires de battage, jusqu'au camp communautaire suivant. Du thé dans le tukul-salle à manger, et un coucher de soleil sans aucune autre lumière en vue."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Abune Yosef",
+        "text": "Retour par Lalibela puis vers le nord dans le massif de l'Abune Yosef, à une quarantaine de kilomètres de la ville, en montant jusqu'à un lodge communautaire à plus de 3 200 mètres."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Loups à l'aube et départ",
+        "text": "Une marche matinale sur le haut plateau pour les troupes de géladas et une chance d'apercevoir des loups d'Éthiopie, puis descente à Lalibela pour un vol en fin d'après-midi."
+      }
+    ],
+    "places": [
+      "Lalibela",
+      "Escarpement de Meket",
+      "Mequat Mariam",
+      "Abune Yosef"
+    ]
   },
   "the-road-north": {
     "title": "La Route du Nord",
     "teaser": "D'Addis à Lalibela par la route — loups d'Éthiopie sur le plateau de Guassa et monastère lacustre du XIIIᵉ siècle en chemin.",
-    "summary": "La plupart des voyageurs s'envolent directement pour Lalibela et manquent tout ce qui se trouve entre les deux. Cet itinéraire le parcourt en voiture : montée sur le plateau de Guassa, protégé par la communauté, pour les loups et les géladas ; descente vers le lac Hayk et le monastère d'Istifanos ; puis traversée des hauts plateaux jusqu'aux églises rupestres. À noter : Istifanos n'admet que les hommes ; les femmes sont les bienvenues au couvent voisin."
+    "summary": "La plupart des voyageurs s'envolent directement pour Lalibela et manquent tout ce qui se trouve entre les deux. Cet itinéraire le parcourt en voiture : montée sur le plateau de Guassa, protégé par la communauté, pour les loups et les géladas ; descente vers le lac Hayk et le monastère d'Istifanos ; puis traversée des hauts plateaux jusqu'aux églises rupestres. À noter : Istifanos n'admet que les hommes ; les femmes sont les bienvenues au couvent voisin.",
+    "days": "8 jours",
+    "style": "Faune · Culturel · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "4x4 privé et chauffeur-guide expérimenté d'Addis-Abeba à Lalibela",
+      "Droits de conservation communautaires de Guassa et un garde de la communauté locale",
+      "Deux nuits au lodge communautaire de Guassa, avec notre propre cuisinier",
+      "Hébergement au bord du lac à Hayk et un lodge à Lalibela",
+      "Le vol retour de Lalibela à Addis-Abeba",
+      "Pension complète sur le plateau, petit-déjeuner et dîner ailleurs"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et dons aux églises"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Transfert privé et présentation de l'itinéraire pendant le dîner — y compris les couches chaudes, car les nuits de Guassa descendent bien en dessous de zéro."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Jusqu'au plateau de Guassa",
+        "text": "Au nord-est par Debre Birhan et sur les hauts plateaux du Menz, pour arriver au lodge communautaire près de Mehal Meda et faire une marche en soirée parmi les lobélias géantes."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Loups et géladas",
+        "text": "Départ à l'aube avec un garde de la communauté, lorsque les loups d'Éthiopie chassent dans la prairie ouverte, puis les troupes de géladas au bord du plateau et la ville de Mehal Meda l'après-midi."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Descente vers le lac Hayk",
+        "text": "Descente du plateau puis route vers le nord sur la route des hauts plateaux, en passant par Kombolcha et Dessie, jusqu'à une nuit au bord d'un lac à 2 030 mètres."
+      },
+      {
+        "day": "Jour 5",
+        "title": "D'Istifanos à Lalibela",
+        "text": "Le matin, le monastère et son musée — parmi ses trésors, un évangéliaire réalisé ici en 1280-1281 — puis la route par les montagnes jusqu'à Lalibela."
+      },
+      {
+        "day": "Jours 6 – 7",
+        "title": "Lalibela",
+        "text": "Les deux groupes d'églises aux meilleures heures, la montée à Asheton Maryam et l'église troglodytique de Yemrehanna Kristos."
+      },
+      {
+        "day": "Jour 8",
+        "title": "Addis et départ",
+        "text": "Un vol matinal de retour à Addis-Abeba et une chambre de jour avant votre départ en soirée."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Plateau de Guassa",
+      "Lac Hayk",
+      "Lalibela"
+    ]
   },
   "around-lake-tana": {
     "title": "Autour du lac Tana",
     "teaser": "Monastères, forêt de café, un village d'égaux et une rive royale oubliée — le chemin des écoliers de Bahir Dar à Gondar.",
-    "summary": "Le circuit classique relie Bahir Dar à Gondar en quelques heures. Celui-ci y consacre six jours, en contournant le lac par les lieux que la plupart des itinéraires dépassent sans s'arrêter : la forêt de café de Zege, le pont portugais au pied des chutes, la coopérative de tissage d'Awra Amba et les ruines jésuites de Gorgora."
+    "summary": "Le circuit classique relie Bahir Dar à Gondar en quelques heures. Celui-ci y consacre six jours, en contournant le lac par les lieux que la plupart des itinéraires dépassent sans s'arrêter : la forêt de café de Zege, le pont portugais au pied des chutes, la coopérative de tissage d'Awra Amba et les ruines jésuites de Gorgora.",
+    "days": "6 jours",
+    "style": "Voyage lent · Culturel · Famille · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un chauffeur-guide expérimenté pendant tout le voyage",
+      "Un bateau privé pour la péninsule de Zege et sur la rive nord",
+      "Une nuit dans la maison d'hôtes de la communauté d'Awra Amba",
+      "Lodges au bord du lac à Bahir Dar et Gorgora, un hôtel à Gondar",
+      "Droits d'entrée aux églises, monastères et communautés",
+      "Petit-déjeuner et dîner quotidiens"
+    ],
+    "excludes": [
+      "Vols pour Bahir Dar et depuis Gondar",
+      "Assurance voyage (obligatoire)",
+      "Pourboires et achats personnels"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Bahir Dar",
+        "text": "Accueil à l'aéroport, le front de lac au coucher du soleil et dîner au bord de l'eau."
+      },
+      {
+        "day": "Jour 2",
+        "title": "La péninsule de Zege",
+        "text": "Un bateau privé jusqu'à Ura Kidane Mehret, puis les sentiers ombragés de la forêt de café de Zege qui relient ses monastères, et retour à travers le lac l'après-midi."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Chutes du Nil Bleu et Awra Amba",
+        "text": "Les chutes le matin et le pont portugais du XVIIe siècle en contrebas, puis vers l'est jusqu'à Awra Amba pour l'après-midi et une nuit dans la maison d'hôtes de la communauté."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Au nord, vers Gorgora",
+        "text": "Matinée aux métiers à tisser d'Awra Amba, puis la route vers le nord le long du lac jusqu'à Gorgora et l'église peinte de Debre Sina Maryam."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Maryam Gimb et Gondar",
+        "text": "Les ruines jésuites de Maryam Gimb et une dernière sortie en bateau sur la rive nord, puis la courte route jusqu'à Gondar."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Gondar et départ",
+        "text": "L'enceinte royale à l'ouverture et Debre Berhan Selassie, avant un vol en après-midi."
+      }
+    ],
+    "places": [
+      "Bahir Dar",
+      "Lac Tana",
+      "Péninsule de Zege",
+      "Awra Amba",
+      "Gorgora",
+      "Gondar"
+    ]
   },
   "choke-mountains-trek": {
     "title": "Trek dans les monts Choke",
     "teaser": "De village en village jusqu'à la lande qui alimente le Nil Bleu — le trek du nord que presque personne n'a fait.",
-    "summary": "Un trek géré par la communauté dans le massif du Choke, au Gojjam, reconnu par ONU Tourisme comme l'un des Meilleurs Villages touristiques de 2022. Trois jours à pied, des villages agricoles jusqu'à la haute lande et retour, avec campement en invités de l'écovillage — simple, sans foule, et idéal pour les marcheurs qui connaissent déjà le Simien."
+    "summary": "Un trek géré par la communauté dans le massif du Choke, au Gojjam, reconnu par ONU Tourisme comme l'un des Meilleurs Villages touristiques de 2022. Trois jours à pied, des villages agricoles jusqu'à la haute lande et retour, avec campement en invités de l'écovillage — simple, sans foule, et idéal pour les marcheurs qui connaissent déjà le Simien.",
+    "days": "5 jours",
+    "style": "Trekking · Petit groupe",
+    "season": "oct. – févr.",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Droits de l'écovillage communautaire et guides locaux",
+      "Un guide de trek expérimenté de notre propre équipe pendant tout le voyage",
+      "Trois nuits en camping dans les villages d'altitude, une à Bahir Dar",
+      "Tentes, tapis de sol et pension complète pendant le trek",
+      "Transfert routier depuis Bahir Dar puis jusqu'à Addis-Abeba",
+      "Un cuisinier qui voyage avec le groupe"
+    ],
+    "excludes": [
+      "Vol pour Bahir Dar",
+      "Sac de couchage (location possible à Bahir Dar)",
+      "Assurance voyage (obligatoire)",
+      "Pourboires pour les guides et le cuisinier"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Bahir Dar",
+        "text": "Accueil à l'aéroport, vérification du matériel et présentation de l'itinéraire, et une nuit au bord du lac."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Vers l'écovillage",
+        "text": "Vers le sud dans le Gojjam et jusqu'aux contreforts du Choke, où les villageois qui accueillent le trek souhaitent la bienvenue aux marcheurs qui arrivent."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Sur la lande",
+        "text": "À travers des terres cultivées en terrasses jusqu'à la lande afro-alpine de lobélias géantes et de touffes d'herbe, où naissent des dizaines d'affluents du Nil Bleu, pour camper dans un village d'altitude."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Le haut massif",
+        "text": "Une journée entière sur la haute lande vers la crête sommitale au-dessus de 4 000 mètres, à l'affût du pipit à gorge jaune endémique d'Abyssinie, puis retour au camp."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Descente vers Addis-Abeba",
+        "text": "Une descente matinale jusqu'à la route, puis vers le sud en passant par Debre Markos et à travers les gorges du Nil Bleu jusqu'à Addis-Abeba en soirée."
+      }
+    ],
+    "places": [
+      "Bahir Dar",
+      "Monts Choke",
+      "Debre Markos",
+      "Addis-Abeba"
+    ]
   },
   "northern-endemics-birding": {
     "title": "Oiseaux endémiques du Nord",
     "teaser": "Les spécialités des hauts plateaux du Simien — corbeau à gros bec, ibis caronculé, gypaète barbu — avec un guide spécialiste et sans détour.",
-    "summary": "Notre voyage dans la vallée du Rift couvre le sud. Celui-ci est conçu pour les hauts plateaux du nord, où le Simien seul abrite environ deux cents espèces, dont cinq endémiques éthiopiennes et une douzaine de quasi-endémiques. Un ornithologue vous accompagne depuis Gondar, et les journées sont organisées autour des oiseaux plutôt que du tourisme."
+    "summary": "Notre voyage dans la vallée du Rift couvre le sud. Celui-ci est conçu pour les hauts plateaux du nord, où le Simien seul abrite environ deux cents espèces, dont cinq endémiques éthiopiennes et une douzaine de quasi-endémiques. Un ornithologue vous accompagne depuis Gondar, et les journées sont organisées autour des oiseaux plutôt que du tourisme.",
+    "days": "7 jours",
+    "style": "Faune · Ornithologie · Privé",
+    "season": "oct. – avr.",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un guide ornithologue spécialisé pendant tout le voyage",
+      "Vols aller-retour Addis-Abeba – Gondar",
+      "Transferts privés en 4x4 et tous les droits d'entrée et gardes du parc du Simien",
+      "Six nuits au total : Addis à l'arrivée, Gondar, trois sur le rebord du Simien, et Addis de nouveau avant le départ",
+      "Pension complète en montagne, petit-déjeuner à Gondar et à Addis",
+      "Une liste d'espèces et un carnet quotidien d'observations"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Optique personnelle et guides de terrain",
+      "L'extension facultative à Guassa"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Transfert privé et présentation avec votre guide ornithologue de la liste des espèces cibles du nord — grand corbeau à bec épais, ibis caronculé, vanneau à poitrine tachetée, pigeon à collier blanc et gypaète barbu parmi les priorités."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Gondar",
+        "text": "Un vol matinal vers le nord, puis un après-midi dans les lisières boisées du domaine des châteaux et les enclos des églises de la ville pour les espèces urbaines des hauts plateaux avant le parc."
+      },
+      {
+        "day": "Jour 3",
+        "title": "De Debark à Sankaber",
+        "text": "Formalités du parc à Debark, puis la première marche sur l'escarpement vers Sankaber : géladas sur les falaises, corbeaux à bec épais au-dessus de vous et ibis caronculés dans la prairie."
+      },
+      {
+        "day": "Jour 4",
+        "title": "De Sankaber à Geech",
+        "text": "Une journée entière le long du rebord, par les chutes de Jinbar jusqu'au territoire de Geech — vanneaux à poitrine tachetée et pigeons à collier blanc dans la prairie d'altitude, gypaètes barbus dans les courants ascendants."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Imet Gogo et Chenek",
+        "text": "Les points de vue autour d'Imet Gogo, puis jusqu'à Chenek pour les rapaces des falaises et les spécialités des hauts plateaux qui manqueraient encore à la liste."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Retour à Addis-Abeba",
+        "text": "Une dernière session à l'aube sur le rebord, la descente en voiture à Gondar et un vol en après-midi vers le sud."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Départ",
+        "text": "Un point sur la liste d'espèces au petit-déjeuner avant votre départ — ou une extension de deux jours sur le plateau de Guassa pour le serin d'Ankober et l'oie à ailes bleues."
+      }
+    ],
+    "places": [
+      "Gondar",
+      "Monts Simien",
+      "Sankaber",
+      "Chenek"
+    ]
   },
   "highlands-and-wildlife": {
     "title": "Hauts plateaux et faune",
     "teaser": "L'escarpement du Simien et le plateau de Sanetti, les deux grands espaces sauvages d'altitude d'Éthiopie, en un seul voyage.",
-    "summary": "Un naturaliste vous accompagne tout au long du voyage, des troupes de géladas au bord d'un à-pic de deux mille mètres au pistage des loups au-dessus des nuages. Exigeant là où vous le choisissez, confortable partout ailleurs."
+    "summary": "Un naturaliste vous accompagne tout au long du voyage, des troupes de géladas au bord d'un à-pic de deux mille mètres au pistage des loups au-dessus des nuages. Exigeant là où vous le choisissez, confortable partout ailleurs.",
+    "days": "9 jours",
+    "style": "Expédition · Privé",
+    "season": "nov. – avr.",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Vols intérieurs et transferts privés en 4x4 pendant tout le voyage",
+      "Un spécialiste de la faune dédié pour tout l'itinéraire",
+      "Tous les droits d'entrée du parc national, gardes et permis",
+      "Hébergement en lodge sur le rebord du Simien et l'escarpement du Bale",
+      "Pension complète chaque jour de trek",
+      "Bâtons de marche et sacs à dos de jour fournis"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "L'extension facultative jusqu'au sommet du Ras Dashen"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Un dîner de présentation avec votre spécialiste de la faune, vérification du matériel et une nuit précoce avant le vol vers le nord."
+      },
+      {
+        "day": "Jour 2",
+        "title": "De Gondar à Sankaber",
+        "text": "Vol pour Gondar, route jusqu'à Debark pour les formalités du parc, puis une première marche tranquille sur le rebord vers Sankaber parmi des troupes de géladas."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Imet Gogo et l'escarpement",
+        "text": "Une journée plus longue jusqu'au point de vue d'Imet Gogo et le long des falaises — géladas à courte distance, gypaètes barbus dans les courants ascendants et retour au lodge ou au camp en soirée."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Chenek et les falaises des walias",
+        "text": "Cap sur Chenek, habitat du bouquetin walia, et un dernier lever de soleil sur le Simien, puis descente à Gondar pour la nuit."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Vers le sud par le Rift",
+        "text": "Vol pour Addis, puis la route de la vallée du Rift avec un arrêt ornithologique et lacustre à Ziway avant de continuer vers le Bale."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Dinsho et le nyala de montagne",
+        "text": "Siège du parc à Dinsho, une marche l'après-midi pour le nyala de montagne et le guib de Ménélik, et une nuit sur la lisière nord du Bale."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Les loups du plateau de Sanetti",
+        "text": "Avant l'aube sur le Sanetti pour suivre les loups d'Éthiopie quand leur activité de chasse est à son maximum, avec des oiseaux afro-alpins entre les observations."
+      },
+      {
+        "day": "Jour 8",
+        "title": "La forêt de nuages de Harenna",
+        "text": "Descente dans le Harenna pour les colobes, les oiseaux de forêt et le sous-bois de café sauvage — un contraste plus humide avec le plateau."
+      },
+      {
+        "day": "Jour 9",
+        "title": "Addis et départ",
+        "text": "Retour à Addis, une visite facultative du Musée national avec le contexte apporté par votre spécialiste et un départ en soirée."
+      }
+    ],
+    "places": [
+      "Monts Simien",
+      "Lacs de la vallée du Rift",
+      "Monts Bale"
+    ]
   },
   "sacred-waters-and-coffee": {
     "title": "Eaux sacrées et café",
     "teaser": "Monastères insulaires en bateau, puis cap au sud dans le sous-bois où pousse encore le café arabica sauvage.",
-    "summary": "Le moins exigeant de nos itinéraires, conçu pour ceux qui préfèrent la profondeur à la distance. De l'eau, de la forêt, des cérémonies et très peu de temps passé sur la route. À éviter pendant les plus fortes pluies des hauts plateaux, en juillet et en août."
+    "summary": "Le moins exigeant de nos itinéraires, conçu pour ceux qui préfèrent la profondeur à la distance. De l'eau, de la forêt, des cérémonies et très peu de temps passé sur la route. À éviter pendant les plus fortes pluies des hauts plateaux, en juillet et en août.",
+    "days": "7 jours",
+    "style": "Voyage lent · Privé",
+    "season": "oct. – mai",
+    "group": "2 – 8 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Vols intérieurs et tous les transferts privés",
+      "Un bateau privé affrété sur le lac Tana",
+      "Une immersion du grain à la tasse dans les forêts de Kafa",
+      "Deux nuits au bord du lac Tana, trois dans un écolodge en forêt, une à Addis",
+      "Petit-déjeuner et dîner quotidiens",
+      "Une séance de dégustation guidée à Addis-Abeba"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Achats de café et expédition à domicile"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Une dégustation dans le quartier des torréfacteurs pour préparer le palais avant le début du voyage, puis une nuit précoce avant le vol vers le nord."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Bahir Dar et Zege",
+        "text": "Un vol matinal pour Bahir Dar, puis un bateau privé à travers le lac Tana jusqu'à la péninsule de Zege — sentiers de forêt de café entre les monastères et l'intérieur peint d'Ura Kidane Mehret à une heure calme."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Monastères des îles et Tis Issat",
+        "text": "Manuscrits présentés par les moines résidents lors de la visite d'une seconde île, puis les chutes du Nil Bleu dans la lumière de l'après-midi avant une soirée au bord du lac."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Au sud, vers Kafa",
+        "text": "Retour à Addis et route vers l'ouest jusqu'à la réserve de biosphère de Kafa, pour arriver à un lodge en forêt au moment où la canopée se rafraîchit."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Le sous-bois de café sauvage",
+        "text": "Marcher dans la forêt où le Coffea arabica pousse encore sans culture, récolter et torréfier avec une famille d'agriculteurs, et une cérémonie qui part de la cerise plutôt que du sachet."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Bonga et les villages de la forêt",
+        "text": "Une seconde journée parmi les jardins des petits producteurs autour de Bonga, avec dégustation côte à côte d'échantillons verts et torréfiés, et la nuit de nouveau sous les arbres."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Addis et départ",
+        "text": "Le retour en voiture ou en avion à Addis, une promenade dans le Merkato avec un chef local si le temps le permet, et un départ en soirée."
+      }
+    ],
+    "places": [
+      "Lac Tana",
+      "Kafa",
+      "Forêt de Bonga",
+      "Addis-Abeba"
+    ]
   },
   "danakil-expedition": {
     "title": "Expédition dans le Danakil",
     "teaser": "Terrasses de soufre, caravanes de sel et une nuit sur l'Erta Ale — l'un des bassins les plus bas et les plus chauds de la planète.",
-    "summary": "Notre parcours le plus exigeant physiquement, mené avec un guide formé aux premiers secours en milieu isolé, des véhicules renforcés et un agent de liaison de la communauté afar. Le lac de lave de l'Erta Ale est souvent actif, sans garantie ; dans tous les cas, nous montons pour la caldeira et le ciel nocturne. Des nuits sous des cieux sans pollution lumineuse sur des centaines de kilomètres."
+    "summary": "Notre parcours le plus exigeant physiquement, mené avec un guide formé aux premiers secours en milieu isolé, des véhicules renforcés et un agent de liaison de la communauté afar. Le lac de lave de l'Erta Ale est souvent actif, sans garantie ; dans tous les cas, nous montons pour la caldeira et le ciel nocturne. Des nuits sous des cieux sans pollution lumineuse sur des centaines de kilomètres.",
+    "days": "6 jours",
+    "style": "Expédition · Petit groupe",
+    "season": "nov. – févr.",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Vols intérieurs Addis-Abeba – Mekele – Addis-Abeba",
+      "Permis régionaux de l'Afar et un agent de liaison local dédié",
+      "Véhicules d'expédition renforcés avec un camion d'assistance",
+      "Un guide formé comme secouriste de terrain et une communication par satellite",
+      "Lits de camp, literie et restauration complète pendant tout le voyage",
+      "Une ascension nocturne de l'Erta Ale avec porteurs",
+      "Eau fraîche à volonté pendant toute la durée"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage avec couverture d'évacuation médicale",
+      "Location de sac de couchage"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Une présentation de l'expédition, remise du matériel et un dîner précoce avant le vol vers le nord."
+      },
+      {
+        "day": "Jour 2",
+        "title": "De Mekele à Hamed Ela",
+        "text": "Un vol matinal, puis la descente dans la dépression du Danakil tandis que la température grimpe régulièrement dans l'après-midi jusqu'au camp de Hamed Ela."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Dallol et le lac Karum (Assale)",
+        "text": "Les terrasses de soufre et de sel de Dallol aux premières lueurs, les caravanes de chameaux afars découpant des plaques de sel sur le lac Karum — aussi appelé Assale — dans la chaleur de l'après-midi, et camp en pleine plaine."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Erta Ale",
+        "text": "Une ascension nocturne jusqu'au rebord de la caldeira. Quand le lac de lave est actif, on regarde la roche en fusion ; quand il est calme, la récompense est le fond du cratère et le ciel nocturne du désert. On dort sur le volcan lui-même."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Retour à Mekele",
+        "text": "Une longue route pour sortir de la dépression, suivie d'une vraie douche, d'une boisson fraîche et d'un vrai lit."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Addis et départ",
+        "text": "Un vol matinal vers le sud et une chambre de jour avant votre départ en soirée."
+      }
+    ],
+    "places": [
+      "Dépression du Danakil",
+      "Mekele",
+      "Dallol",
+      "Lac Karum (Assale)",
+      "Erta Ale"
+    ]
   },
   "omo-valley-immersion": {
     "title": "Immersion dans la vallée de l'Omo",
     "teaser": "Jours de marché et invitations ouvertes, dans l'une des vallées les plus diverses ethniquement au monde.",
-    "summary": "Conçu autour des calendriers de marché et des invitations plutôt qu'une liste fixe de villages, avec un médiateur culturel qui voyage aux côtés de votre guide du début à la fin. Aucun paiement à la photo ; les contributions à la communauté sont versées de façon transparente à l'échelle du village."
+    "summary": "Conçu autour des calendriers de marché et des invitations plutôt qu'une liste fixe de villages, avec un médiateur culturel qui voyage aux côtés de votre guide du début à la fin. Aucun paiement à la photo ; les contributions à la communauté sont versées de façon transparente à l'échelle du village.",
+    "days": "10 jours",
+    "style": "Culturel · Privé",
+    "season": "juin – sept., déc. – mars",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un véhicule privé et un chauffeur-guide expérimenté",
+      "Un médiateur culturel et traducteur résident pendant tout le voyage",
+      "Droits communautaires versés de façon transparente à l'échelle des villages",
+      "Camps de tentes au bord de la rivière et les meilleurs lodges de la région",
+      "Pension complète pour tout le tronçon sud",
+      "Conseils pour une photographie éthique et fondée sur le consentement"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Cadeaux et achats personnels"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Une présentation en soirée sur les communautés que vous rencontrerez, le consentement pour la photographie et la façon dont les calendriers des marchés rythment la semaine."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Au sud, vers le Rift",
+        "text": "Route dans la vallée du Rift avec un arrêt au bord d'un lac, nuit près d'Arba Minch avant les villages des hauts plateaux."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Les hauts plateaux des Dorze",
+        "text": "Une matinée avec une famille de tisserands dans les villages dorze des collines du Guge — maisons de bambou, jardins d'ensètes — puis poursuite vers le bas Omo."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Key Afer et Turmi",
+        "text": "Le marché du samedi à Key Afer lorsque le calendrier coïncide, puis installation près de Turmi — la base habituelle pour le pays hamar."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Invitations chez les Hamar",
+        "text": "Visites de villages organisées par l'intermédiaire des anciens ; si une cérémonie du saut du taureau est proposée cette semaine-là, nous l'acceptons et laissons la journée flexible autour de celle-ci."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Marché de Dimeka et camps au bord de la rivière",
+        "text": "Jour de marché à Dimeka lorsqu'il tombe, puis un camp au bord de l'Omo plutôt qu'un enclos clôturé."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Les berges des Karo",
+        "text": "Du temps avec les communautés karo le long de l'escarpement de la rivière — peinture corporelle et vie du village à leurs conditions, avec le médiateur présent tout du long."
+      },
+      {
+        "day": "Jour 8",
+        "title": "Les hauts plateaux des Mursi",
+        "text": "Vers les abords du Mago pour une visite des hauts plateaux des Mursi, à un rythme lent et uniquement sur arrangement préalable — sans marchandage au bord de la route."
+      },
+      {
+        "day": "Jour 9",
+        "title": "Retour vers le nord",
+        "text": "Début du trajet de retour vers Arba Minch ou Jinka pour la correspondance aérienne, avec une marge de temps si une invitation de dernière minute se présente."
+      },
+      {
+        "day": "Jour 10",
+        "title": "Addis et départ",
+        "text": "Vol pour Addis-Abeba, déjeuner d'adieu et départ en soirée."
+      }
+    ],
+    "places": [
+      "Vallée de l'Omo",
+      "Dorze",
+      "Turmi",
+      "Dimeka",
+      "Hauts plateaux des Mursi",
+      "Karo"
+    ]
   },
   "timkat-festival-journey": {
     "title": "Voyage au festival de Timkat",
     "teaser": "L'Épiphanie éthiopienne — processions, veillée nocturne et bain royal inondé à l'aube.",
-    "summary": "Une seule période fixe chaque mois de janvier (Timkat tombe vers le 19 janvier du calendrier grégorien), planifiée un an à l'avance car les chambres et les meilleurs points d'observation des processions à Gondar se réservent tôt."
+    "summary": "Une seule période fixe chaque mois de janvier (Timkat tombe vers le 19 janvier du calendrier grégorien), planifiée un an à l'avance car les chambres et les meilleurs points d'observation des processions à Gondar se réservent tôt.",
+    "days": "8 jours",
+    "style": "Festival · Privé",
+    "season": "Janvier uniquement",
+    "group": "2 – 10 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Emplacements d'observation réservés au Bain de Fasilides",
+      "Vols intérieurs et tous les transferts privés",
+      "Hébergement réservé douze mois à l'avance",
+      "Un érudit chrétien orthodoxe comme guide de la fête",
+      "Petit-déjeuner quotidien et restauration les jours de fête",
+      "Conseils pour photographier les processions avec respect"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Pourboires"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Arrivée et soirée tranquille — l'énergie de la fête commence à Gondar, pas dans la capitale."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Addis et la Sainte-Trinité",
+        "text": "La cathédrale de la Sainte-Trinité et une présentation du calendrier liturgique qui sous-tend Timkat : la veille de Ketera, la veillée et l'immersion baptismale à l'aube."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Vol vers Gondar",
+        "text": "Vol matinal vers le nord, installation dans des chambres réservées pour la semaine de la fête et première marche dans l'enceinte royale sans la foule."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Ketera — veille de Timkat",
+        "text": "Les tabots quittent leurs églises en procession vers le Bain de Fasilides ; nous tenons des emplacements réservés le long du parcours et restons pour l'atmosphère de la soirée."
+      },
+      {
+        "day": "Jour 5",
+        "title": "L'aube de Timkat",
+        "text": "Des options de veillée de toute la nuit pour ceux qui le souhaitent, puis le remplissage du Bain de Fasilides à l'aube et la joie de l'immersion — le cœur du voyage."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Vol vers Lalibela",
+        "text": "Une journée de voyage tranquille vers le sud-est jusqu'à Lalibela pendant que Gondar se vide ; lumière du soir sur Bete Giyorgis si l'énergie le permet."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Les églises de Lalibela",
+        "text": "Les groupes nord et est à des heures plus calmes après la fête, avec votre guide érudit sur la liturgie qui remplit encore ces tranchées toute l'année."
+      },
+      {
+        "day": "Jour 8",
+        "title": "Départ",
+        "text": "Vol de retour à Addis-Abeba et départ en soirée."
+      }
+    ],
+    "places": [
+      "Addis-Abeba",
+      "Gondar",
+      "Lalibela"
+    ]
   },
   "ethiopia-through-the-lens": {
     "title": "L'Éthiopie à travers l'objectif",
     "teaser": "Un itinéraire guidé par la lumière à travers Lalibela, le rebord du Simien et le Rift méridional — volontairement restreint.",
-    "summary": "Neuf jours ne permettent pas de couvrir honnêtement Lalibela, tout le Danakil et l'Omo sans se presser. Cet itinéraire reste dans les hauts plateaux et le Rift : églises rupestres à l'heure dorée, lumière de l'escarpement du Simien et portraits réalisés avec consentement autour d'Arba Minch et des abords de l'Omo. Le Danakil reste disponible en expédition séparée."
+    "summary": "Neuf jours ne permettent pas de couvrir honnêtement Lalibela, tout le Danakil et l'Omo sans se presser. Cet itinéraire reste dans les hauts plateaux et le Rift : églises rupestres à l'heure dorée, lumière de l'escarpement du Simien et portraits réalisés avec consentement autour d'Arba Minch et des abords de l'Omo. Le Danakil reste disponible en expédition séparée.",
+    "days": "9 jours",
+    "style": "Photographie · Privé",
+    "season": "oct. – mars",
+    "group": "2 – 4 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un guide photographe avec repérage préalable des lieux",
+      "Accès à l'heure dorée et à l'heure bleue sur chaque grand site",
+      "Vols intérieurs et un véhicule privé aménagé pour la photographie",
+      "Séances de portraits avec consentement et un médiateur culturel dans le sud",
+      "Lodges choisis pour la qualité de leur lumière, pas seulement pour leur confort",
+      "Sauvegarde des fichiers RAW et aide au stockage sur le terrain"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Location d'appareil photo et équipement personnel",
+      "Extension facultative au Danakil (devis séparé)"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Vérification du matériel, procédure de sauvegarde et dîner de travail sur la lumière, la logistique et le protocole de consentement pour les portraits."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Vol vers Lalibela",
+        "text": "Repérage l'après-midi des tranchées, puis heure bleue sur Bete Giyorgis une fois les visiteurs d'un jour partis."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Lalibela — aube et crépuscule",
+        "text": "Le groupe nord à l'office du lever du soleil, une longue pause de retouche à midi, le groupe est et la lumière d'Asheton Maryam en soirée."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Les châteaux de Gondar",
+        "text": "Vol ou route jusqu'à Gondar ; Fasil Ghebbi et le plafond de Debre Berhan Selassie dans la lumière douce de l'après-midi."
+      },
+      {
+        "day": "Jour 5",
+        "title": "Le rebord du Simien",
+        "text": "Dans le parc pour les géladas et les panoramas de l'escarpement — points de vue d'Imet Gogo ou de Chenek choisis pour la lumière tardive, lodge sur le rebord."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Aube sur le Simien, vol vers le sud",
+        "text": "Avant l'aube sur les falaises, retour à Gondar, vol pour Addis et correspondance vers Arba Minch."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Arba Minch et les Dorze",
+        "text": "Lumière de bateau sur le lac Chamo le matin ; portraits des hauts plateaux dorze et maisons de bambou l'après-midi, avec un médiateur présent."
+      },
+      {
+        "day": "Jour 8",
+        "title": "Konso ou un lieu plus proche de l'Omo",
+        "text": "Les terrasses de Konso, classées par l'UNESCO, ou une seule visite à une communauté plus proche organisée à l'avance — jamais un « circuit des tribus » en plusieurs étapes en une journée."
+      },
+      {
+        "day": "Jour 9",
+        "title": "Addis et départ",
+        "text": "Retour à Addis, une première passe de retouche autour d'un café et un départ en soirée."
+      }
+    ],
+    "places": [
+      "Lalibela",
+      "Gondar",
+      "Monts Simien",
+      "Arba Minch",
+      "Dorze",
+      "Konso"
+    ]
   },
   "rift-valley-birding-trail": {
     "title": "Circuit ornithologique de la vallée du Rift",
     "teaser": "Des endémiques afro-alpines du plateau de Sanetti aux oiseaux d'eau du Rift — une liste ciblée sur le sud et les rives des lacs.",
-    "summary": "L'Éthiopie compte près de deux douzaines d'espèces d'oiseaux endémiques dans des habitats très contrastés. Cet itinéraire reste dans les systèmes du Rift et du Bale (avec une conclusion à Debre Libanos pour les rapaces des gorges) et est calé sur les mois plus clairs et plus frais, quand les endémiques d'altitude sont les plus fiables."
+    "summary": "L'Éthiopie compte près de deux douzaines d'espèces d'oiseaux endémiques dans des habitats très contrastés. Cet itinéraire reste dans les systèmes du Rift et du Bale (avec une conclusion à Debre Libanos pour les rapaces des gorges) et est calé sur les mois plus clairs et plus frais, quand les endémiques d'altitude sont les plus fiables.",
+    "days": "8 jours",
+    "style": "Faune · Ornithologie · Privé",
+    "season": "oct. – avr.",
+    "group": "2 – 6 voyageurs",
+    "from": "Sur mesure",
+    "includes": [
+      "Un ornithologue résident et spécialiste des endémiques pendant tout le voyage",
+      "Vols intérieurs lorsque c'est utile et transferts privés en 4x4",
+      "Sorties privées en bateau sur les lacs de la vallée du Rift",
+      "Tous les droits d'entrée du parc national, gardes et permis",
+      "Pension complète dans des lodges choisis pour leur proximité avec les habitats",
+      "Une liste d'espèces et un carnet quotidien d'observations"
+    ],
+    "excludes": [
+      "Vols internationaux et frais de visa éthiopien",
+      "Assurance voyage (obligatoire)",
+      "Optique personnelle et guides de terrain"
+    ],
+    "itinerary": [
+      {
+        "day": "Jour 1",
+        "title": "Arrivée à Addis-Abeba",
+        "text": "Une présentation avec votre ornithologue et un après-midi sur le terrain de la Société éthiopienne de la faune et de l'histoire naturelle pour une première liste d'oiseaux urbains des hauts plateaux."
+      },
+      {
+        "day": "Jour 2",
+        "title": "Ziway et Langano",
+        "text": "Vers le sud dans le Rift : le lac Ziway pour les pélicans, les cigognes et les hérons, puis la brousse des rives du Langano pour les espèces de milieux secs au crépuscule."
+      },
+      {
+        "day": "Jour 3",
+        "title": "Abijata-Shalla et cap sur Bale",
+        "text": "Flamants et limicoles autour d'Abijata-Shalla le matin, puis la montée vers Dinsho et la lisière nord de la forêt du Bale."
+      },
+      {
+        "day": "Jour 4",
+        "title": "Le plateau de Sanetti",
+        "text": "Une journée entière au-dessus de 4 000 mètres pour les endémiques afro-alpins — râle de Rouget, vanneau à poitrine tachetée et oiseaux spécialistes des prairies du plateau — avec le loup d'Éthiopie en bonus non aviaire."
+      },
+      {
+        "day": "Jour 5",
+        "title": "La forêt de Harenna",
+        "text": "Descente dans la forêt de nuages du versant sud du Bale pour les espèces de forêt d'altitude, puis début du retour vers le Rift."
+      },
+      {
+        "day": "Jour 6",
+        "title": "Les rives du lac Hawassa",
+        "text": "Une matinée en bateau et le long des rives du lac Hawassa pour le pygargue vocifère, les tisserins et les oiseaux spécialistes des zones humides, avec un après-midi tranquille pour mettre la liste à jour."
+      },
+      {
+        "day": "Jour 7",
+        "title": "Debre Libanos et les gorges du Jemma",
+        "text": "Au nord d'Addis pour l'escarpement des gorges : rapaces sur les thermiques et géladas sur les falaises en contrebas — une fin de voyage dans un habitat différent."
+      },
+      {
+        "day": "Jour 8",
+        "title": "Addis et départ",
+        "text": "Un dernier point sur la liste d'espèces au petit-déjeuner, puis départ en soirée."
+      }
+    ],
+    "places": [
+      "Lacs de la vallée du Rift",
+      "Monts Bale",
+      "Lac Hawassa",
+      "Debre Libanos"
+    ]
   }
 }

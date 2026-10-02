@@ -4,202 +4,622 @@
     "teaser": "Un escarpement afro-alpin où le sol s'arrête net, deux mille mètres plus bas.",
     "intro": "Un massif classé à l'UNESCO, fait de pics déchiquetés et de falaises de basalte à pic, qui abrite plus de singes géladas que n'importe où ailleurs sur la planète, ainsi que le bouquetin walia, endémique et présent nulle part ailleurs.",
     "tag": "Parc national",
-    "region": "Hauts plateaux du Nord"
+    "region": "Hauts plateaux du Nord",
+    "bestTime": "Octobre – avril",
+    "duration": "3 à 10 jours",
+    "altitude": "3 000 – 4 550 m",
+    "highlights": [
+      "Des troupeaux de géladas broutant à quelques mètres du sentier de l'escarpement, au-dessus de Sankaber",
+      "Les chutes de Jinbar plongeant dans la gorge sous Geech, tandis que les gypaètes barbus planent dans les courants ascendants",
+      "Le lever du soleil à Imet Gogo, avec trois lignes de crêtes distinctes visibles sous les nuages",
+      "Les bouquetins walia sur les falaises de Chenek, et le col de Bwahit au-dessus, à 4 200 mètres",
+      "L'approche de plusieurs jours vers le Ras Dashen, plus haut sommet d'Éthiopie à 4 550 mètres"
+    ],
+    "paragraphs": [
+      "Le massif s'est formé il y a quelque trente millions d'années, quand le plateau volcanique s'est érodé en tours, gorges et à-pics presque verticaux — une géologie qui, vue depuis le sentier de la crête, ressemble moins à une chaîne de montagnes qu'au bord brisé d'un continent.",
+      "L'itinéraire classique va de camp en camp le long de l'escarpement nord — Sankaber, Geech, Chenek — si bien que l'exposition et les panoramas sont constants, au lieu d'être gagnés au bout d'une longue montée. Des mules portent les charges, un garde du parc marche avec chaque groupe et un cuisinier de camp garantit un dîner chaud bien avant que le froid ne tombe.",
+      "Plus à l'est, le caractère change : le sentier descend dans la vallée de la rivière Mesheha, remonte jusqu'au camp de base d'Ambiko et atteint le Ras Dashen avant l'aube. Ou bien on reste entièrement sur la crête et on dort en lodge — la difficulté est toujours une question de choix, jamais de nécessité."
+    ]
   },
   "gondar": {
     "name": "Gondar",
     "teaser": "Une capitale royale du XVIIᵉ siècle, ville de châteaux et porte d'entrée des monts Simien.",
     "intro": "Fondée par l'empereur Fasilides en 1636 comme première capitale permanente de l'Éthiopie, son enceinte de châteaux de pierre mêle styles aksoumite, nubien et jésuite-portugais sous six règnes royaux.",
     "tag": "Cité impériale",
-    "region": "Hauts plateaux du Nord"
+    "region": "Hauts plateaux du Nord",
+    "bestTime": "Octobre – mars",
+    "duration": "2 à 3 jours",
+    "altitude": "2 133 m",
+    "highlights": [
+      "L'enceinte de Fasil Ghebbi, qui abrite six châteaux bâtis sous six règnes",
+      "Le plafond peint de Debre Berhan Selassie, couvert des visages de quatre-vingts chérubins ailés",
+      "Le bain de Fasilides, vidé puis rempli chaque janvier pour la fête de Timkat",
+      "Kuskuam, le palais perché sur la colline construit pour l'impératrice Mentewab, aux dernières lueurs du jour",
+      "Wolleka, le village de la communauté Beta Israël de Gondar, et les potiers qui y travaillent encore",
+      "Le point de vue de Kosoye, à trente kilomètres au nord, où la suite de la reine Élisabeth II aurait campé en 1965",
+      "Le château de Guzara, près d'Enfraz, bâti par l'empereur Sarsa Dengel à la fin des années 1500 — plus ancien que tout ce que compte Gondar elle-même"
+    ],
+    "paragraphs": [
+      "Six empereurs ont agrandi cette enceinte en deux cents ans environ, chacun bâtissant à côté de — et non à la place de — ce qui existait déjà, si bien que les murs se lisent presque comme les cernes d'un arbre, ceux des ambitions d'une même dynastie.",
+      "La plupart des circuits font de Gondar une étape charnière d'une seule nuit, et passent à côté de l'essentiel. La ville se trouve à cent kilomètres du départ des sentiers du Simien, à Debark, ce qui en fait la base naturelle pour les montagnes : nous lui consacrons une journée entière sans hâte avant un trek et une soirée plus lente après, quand une douche chaude et une assiette de tibs sur l'ancienne place paraissent bien méritées.",
+      "Gardez aussi du temps pour les abords de la ville — le village Beta Israël de Wolleka, le marché du samedi en contrebas de l'ancienne place, et une cérémonie du café dans la cour d'une famille plutôt que dans le hall d'un hôtel."
+    ]
   },
   "lalibela": {
     "name": "Lalibela",
     "teaser": "Des églises du XIIIᵉ siècle taillées d'un seul bloc dans la roche volcanique, et jamais abandonnées.",
     "intro": "On raconte que le roi Lalibela rêva d'une Nouvelle Jérusalem et la fit creuser dans la montagne plutôt que bâtir dessus — un chantier qui occupa une population d'ouvriers pendant presque un siècle. Onze églises monolithes sont encore aujourd'hui en usage liturgique actif.",
     "tag": "Patrimoine UNESCO",
-    "region": "Hauts plateaux du Nord"
+    "region": "Hauts plateaux du Nord",
+    "bestTime": "Octobre – mars",
+    "duration": "2 à 3 jours",
+    "altitude": "2 500 m",
+    "highlights": [
+      "Bete Giyorgis, taillée en forme de croix grecque et dont le toit affleure le niveau du sol",
+      "Les passages en tranchée reliant les groupes d'églises du nord et de l'est",
+      "La prière du matin sous le plafond orné de fresques de Bete Maryam",
+      "Une marche jusqu'à Asheton Maryam, le monastère perché sur la falaise au-dessus de la ville",
+      "Yemrehanna Kristos, une église dans une grotte plus ancienne que Lalibela elle-même, à une heure de route dans les collines"
+    ],
+    "paragraphs": [
+      "Douze cents maçons, dit la tradition, ont passé des décennies à faire descendre ces églises hors de la roche plutôt qu'à les élever du sol — chacune commencée comme une tranchée creusée autour d'un bloc unique de tuf, puis évidée de haut en bas jusqu'à ce que fenêtres, portes et colonnes émergent de ce qui n'était que pierre pleine.",
+      "Rien n'est ici isolé derrière des cordons. Les prêtres y tiennent encore le calendrier liturgique, l'encens circule toujours dans les mêmes couloirs que les pèlerins empruntent depuis huit cents ans, et une visite calée sur l'office du petit matin vous place dans ce rythme plutôt qu'à côté.",
+      "La plupart des visiteurs ne voient que les deux groupes d'églises de la ville. Un second jour ouvre les collines : Asheton Maryam sur la crête, Nakuto La'ab dans son sanctuaire troglodytique, et Yemrehanna Kristos — une église bâtie à l'intérieur d'une grotte naturelle, plus ancienne que les célèbres excavations de la ville et presque déserte à midi. Noël (Genna) et Timkat transforment les tranchées en couloirs de fête ; réservez vos chambres des mois à l'avance si vous visez ces dates."
+    ]
   },
   "lake-tana": {
     "name": "Lac Tana et Nil Bleu",
     "teaser": "Des monastères insulaires qui gardent des manuscrits séculaires, à la véritable source du fleuve.",
     "intro": "Le plus grand lac d'Éthiopie alimente le Nil Bleu et abrite une vingtaine de communautés monastiques sur ses îles et ses péninsules, plusieurs conservant des évangiles enluminés sur peau de chèvre vieux de plusieurs siècles. Bahir Dar en est la porte d'entrée ; les meilleures heures sont sur l'eau, avant l'arrivée des bateaux de la journée.",
     "tag": "Voyage lent",
-    "region": "Amhara"
+    "region": "Amhara",
+    "bestTime": "Septembre – mars",
+    "duration": "1 à 2 jours",
+    "altitude": "1 788 m",
+    "highlights": [
+      "Un bateau privé jusqu'à Ura Kidane Mehret, dont l'intérieur est peint du sol au plafond",
+      "Des manuscrits enluminés présentés par les moines qui les conservent encore",
+      "Tis Issat, les chutes du Nil Bleu, à leur débit maximal juste après les pluies",
+      "Un départ en tankwa, la barque de roseaux, à la première lueur, avant que le vent ne se lève",
+      "La forêt de caféiers de la péninsule de Zege, parcourue par des sentiers ombragés entre ses monastères",
+      "Le pont portugais du XVIIe siècle sous les chutes, premier pont de pierre de ce type en Éthiopie"
+    ],
+    "paragraphs": [
+      "Les peintures des monastères suivent ici une grammaire visuelle vieille de plusieurs siècles — saints et démons rendus dans le même style aplati aux grands yeux, quelle que soit la date d'achèvement de tel ou tel édifice, si bien qu'un mur du XVe siècle peut côtoyer un mur du XIXe presque sans transition.",
+      "Nous privilégions un bateau privé et un départ matinal, avant les traversées des excursionnistes de Bahir Dar, suivi d'un petit-déjeuner sans hâte sur l'eau une fois la brume du matin dissipée.",
+      "Tis Issat — les chutes du Nil Bleu — se trouve à courte distance en voiture au sud de Bahir Dar. Après les pluies, le rideau d'eau est large et bruyant ; en saison sèche il se resserre, mais le pont portugais et la marche dans la gorge valent toujours la matinée. Associez le lac à Gondar ou au Simien pour un circuit du Nord qui ne paraît jamais précipité, ou faites de Bahir Dar un atterrissage en douceur après Addis-Abeba avant le début des montagnes."
+    ]
   },
   "danakil-depression": {
     "name": "Dépression du Danakil",
     "teaser": "L'un des points les plus bas et les plus chauds du continent, et l'un des plus actifs géologiquement.",
     "intro": "Une jonction triple tectonique où les plaques africaine et arabique s'écartent — champs de soufre de Dallol, salines du lac Karum (Assale) encore taillées à la main, et l'Erta Ale, dont le lac de lave est souvent actif mais jamais garanti.",
     "tag": "Expédition",
-    "region": "Basses terres de l'Afar"
+    "region": "Basses terres de l'Afar",
+    "bestTime": "Novembre – février",
+    "duration": "3 à 4 jours",
+    "altitude": "-125 m",
+    "highlights": [
+      "Les terrasses minérales de Dallol au lever du soleil, avant que la chaleur ne s'installe",
+      "Une ascension nocturne jusqu'au bord de l'Erta Ale — lac de lave quand il est actif, caldeira et ciel du désert quand il est calme",
+      "Des caravanes de chameaux afar découpant des plaques de sel au lac Karum (Assale) pour le commerce des hauts plateaux",
+      "Un ciel sans lumière artificielle sur des centaines de kilomètres dans toutes les directions",
+      "La descente de Mekele vers Hamed Ela tandis que la température grimpe au fil de l'après-midi"
+    ],
+    "paragraphs": [
+      "Ce bassin se trouve bien en dessous du niveau de la mer, à une jonction triple de rifts — la raison pour laquelle la croûte y est assez mince pour abriter des champs hydrothermaux colorés et des lacs de lave périodiques. Les terrasses de Dallol changent de couleur avec les minéraux et la lumière ; la plaine de sel autour du Karum reste un paysage de travail, non un musée.",
+      "L'Erta Ale est en activité quasi continue depuis plus d'un siècle, mais le lac de lave à ciel ouvert va et vient. Nous montons vers le bord de la caldeira dans tous les cas : quand le lac est en fusion, c'est inoubliable ; quand il est calme, le ciel nocturne et le fond du cratère justifient tout de même la marche.",
+      "Nous traitons le Danakil comme une expédition et non comme une journée de visite : véhicules renforcés, guide formé à la médecine de terrain, liaison avec la communauté afar, eau fraîche sans rationnement, et un rythme qui respecte la chaleur, la distance et un paysage où il n'y a aucune marge pour l'improvisation. Ne voyagez que pendant les mois plus frais, de novembre à février."
+    ]
   },
   "gheralta": {
     "name": "Gheralta",
     "teaser": "Des églises creusées dans des tours de grès, certaines accessibles seulement par des prises de main et pieds nus.",
     "intro": "Une chaîne de massifs de grès rouge dans l'est du Tigré, qui cache plus de trente églises monolithes — plusieurs creusées très haut dans les falaises entre le Vᵉ et le XVᵉ siècle, et toujours desservies par leurs prêtres chaque dimanche.",
     "tag": "Églises-falaises",
-    "region": "Tigré"
+    "region": "Tigré",
+    "bestTime": "Octobre – mars",
+    "duration": "2 à 4 jours",
+    "altitude": "2 000 – 2 700 m",
+    "highlights": [
+      "Abuna Yemata Guh, atteinte par une escalade libre et un passage sur corniche, dont la coupole est peinte des Neuf Saints",
+      "Maryam Korkor et sa chapelle sœur Daniel Korkor, sur le même plateau sommital",
+      "Abune Abraham à Debre Tsion, dont les fresques ne sont éclairées que par l'encadrement de la porte",
+      "Des nuits dans une maison d'hôtes communautaire tenue par le village au pied des falaises"
+    ],
+    "paragraphs": [
+      "Lalibela est la célèbre, mais le Gheralta est plus ancien et plus étrange : au lieu d'être creusées vers le bas dans le sol, ces églises ont été évidées dans les flancs de tours rocheuses, certaines si exposées que l'approche finale est une escalade pieds nus, un prêtre indiquant d'en haut où poser les pieds.",
+      "L'effort est le but. À l'intérieur, les peintures ont survécu dans une quasi-obscurité pendant des siècles, sans retouches et presque sans visiteurs, et il est rare de croiser quelqu'un d'autre sur le sentier. Nous parcourons le massif avec un guide tigréen local et n'envoyons les grimpeurs que jusqu'où ils se sentent à l'aise — les églises du fond de la vallée sont tout aussi peintes et ne demandent qu'une marche d'une matinée.",
+      "Nous organisons le Gheralta quand les conditions régionales le permettent et confirmons l'accès avec nos partenaires sur place dans les semaines précédant chaque départ, sans jamais le tenir pour acquis."
+    ]
   },
   "ras-dashen": {
     "name": "Ras Dashen",
     "teaser": "Le plus haut sommet d'Éthiopie, atteint par la face du Simien que peu de randonneurs voient jamais.",
     "intro": "Avec environ 4 550 mètres, le Ras Dashen (Ras Dejen) couronne l'est du Simien — généralement à une semaine de marche du rebord occidental desservi par la route, à travers la vallée de la Mesheha, des villages agricoles et le camp de base afro-alpin d'Ambiko. Les altitudes publiées du sommet varient légèrement selon les relevés ; ce qui compte sur le terrain, c'est l'altitude soutenue, pas un seul mètre.",
     "tag": "Trek jusqu'au sommet",
-    "region": "Hauts plateaux du Nord"
+    "region": "Hauts plateaux du Nord",
+    "bestTime": "Octobre – février",
+    "duration": "6 à 10 jours",
+    "altitude": "2 900 – 4 550 m",
+    "highlights": [
+      "L'ascension finale avant l'aube depuis Ambiko, pour atteindre le sommet quand le soleil franchit les crêtes orientales",
+      "Le col de Bwahit, à environ 4 200 mètres, terrain de choix pour le bouquetin walia et le loup d'Éthiopie",
+      "La descente dans la vallée de la rivière Mesheha et la remontée à travers des champs d'orge en terrasses",
+      "Un second sommet facultatif, le mont Berochwuha, à environ 4 272 mètres, au retour",
+      "Des nuits d'acclimatation à Chenek avant de s'engager vers le col et Ambiko"
+    ],
+    "paragraphs": [
+      "Le sommet lui-même est une escalade facile sur une tour rocheuse plutôt qu'une ascension technique — ce qui rend le Ras Dashen sérieux, c'est l'altitude et la distance, non les cordes ou la glace. L'essentiel de la semaine se déroule au-dessus de 3 500 mètres, et la veille du sommet on descend d'environ mille mètres dans une vallée fluviale pour tout remonter jusqu'à Ambiko.",
+      "La récompense est une facette du Simien que les foules d'une journée n'atteignent jamais : des villages où le sentier longe les aires de battage, des enfants gardant leurs chèvres le long de la crête, et des camps où l'on ne voit rien d'autre que davantage de montagne. Géladas, bouquetins walia et, à l'occasion, loup d'Éthiopie se montrent sur les approches occidentales ; les vallées orientales paraissent plus calmes encore.",
+      "Nous prévoyons d'abord une journée d'acclimatation sur la crête ouest, emportons un oxymètre de pouls au-dessus de 3 500 mètres et faisons demi-tour sans hésiter si l'altitude l'exige. Les programmes plus courts de sept jours roulent jusqu'à Chenek ; la traversée complète depuis Sankaber reste le classique pour les marcheurs qui veulent parcourir tout le massif."
+    ]
   },
   "gorgora": {
     "name": "Gorgora",
     "teaser": "Un village calme de la rive nord où l'histoire impériale de Gondar a commencé, avant qu'il y ait une Gondar.",
     "intro": "À soixante-cinq kilomètres au sud de Gondar, sur la rive nord du lac Tana, Gorgora fut une résidence royale sous l'empereur Susenyos et le siège de la mission jésuite au début du XVIIᵉ siècle. Son Maryam Gimb en ruine est la partie la plus isolée du site classé au patrimoine mondial de Fasil Ghebbi.",
     "tag": "Histoire au bord du lac",
-    "region": "Amhara"
+    "region": "Amhara",
+    "bestTime": "Octobre – mai",
+    "duration": "1 à 2 jours",
+    "altitude": "1 790 m",
+    "highlights": [
+      "Debre Sina Maryam, monastère du XIVe siècle dont les peintures de l'église, du début des années 1600, comptent parmi les plus anciennes conservées du nord de l'Éthiopie",
+      "Les ruines de Maryam Gimb, le château et l'église de l'époque jésuite répertoriés avec l'enceinte royale de Gondar",
+      "Un bateau privé le long de la rive nord paisible du lac Tana, loin des traversées de Bahir Dar",
+      "Une demi-journée facile depuis Gondar, ou une nuit sans hâte entre Gondar et Bahir Dar"
+    ],
+    "paragraphs": [
+      "Avant que Fasilides ne fonde Gondar, la cour se déplaçait entre camps et résidences au bord du lac — et Gorgora en était l'une des plus importantes. L'empereur Susenyos accorda des terres aux jésuites ici en 1607 ; le missionnaire espagnol Pedro Páez dessina une église de pierre achevée en 1621, et un second ensemble de résidences, de citernes et d'un petit château suivit sur le site aujourd'hui appelé Maryam Gimb.",
+      "Cela ne dura pas. Lorsque Fasilides rétablit l'Église orthodoxe, il expulsa les jésuites et ordonna la destruction de leurs bâtiments et de leurs images, et un tremblement de terre dans les années 1950 fit tomber une grande partie de ce qui restait. Ce qui subsiste est plus évocateur que grandiose : des murs sans toit au-dessus de l'eau et, à courte distance à pied, l'intérieur peint de Debre Sina Maryam, toujours en usage.",
+      "Nous traitons Gorgora comme un prolongement lent de Gondar — une matinée aux ruines et à l'église, un déjeuner au bord du lac et l'après-midi sur l'eau — pour les voyageurs qui ont déjà vu les châteaux et veulent le chapitre qui les a précédés."
+    ]
   },
   "guassa-plateau": {
     "name": "Plateau de Guassa",
     "teaser": "Loups d'Éthiopie et géladas sur une lande d'altitude qu'une communauté protège depuis quatre cents ans.",
     "intro": "Une centaine de kilomètres carrés de prairie afro-alpine dans le Menz, au nord-est d'Addis-Abeba, gérés depuis plus de quatre siècles selon le Qero — un système autochtone de règles de pâturage et de coupe de l'herbe, l'un des plus anciens dispositifs de conservation communautaire d'Afrique.",
     "tag": "Conservation communautaire",
-    "region": "Hauts plateaux du Nord"
+    "region": "Hauts plateaux du Nord",
+    "bestTime": "Octobre – mai",
+    "duration": "2 à 3 jours",
+    "altitude": "3 200 – 3 700 m",
+    "highlights": [
+      "Des loups d'Éthiopie chassant les rongeurs à travers les prairies ouvertes — six meutes tiennent un territoire sur le plateau",
+      "Des troupeaux de géladas broutant la lande et dormant sur les falaises de sa bordure",
+      "Des lobélies géantes atteignant douze mètres, de la bruyère arborescente et l'herbe en touffes guassa qui donne son nom au lieu",
+      "Douze espèces d'oiseaux endémiques, dont le serin d'Ankober, l'oie à ailes bleues et l'ibis caronculé"
+    ],
+    "paragraphs": [
+      "Sous le système Qero, deux chefs élus décidaient quand le plateau pouvait être pâturé et quand son herbe pouvait être coupée pour le chaume et les cordes. Le système a tenu du XVIIe siècle jusqu'à ce que la révolution de 1974 nationalise les terres ; les communautés de Menz l'ont depuis reconstruit, et en 2004 leur travail a été reconnu par le Prix Équateur du Programme des Nations unies pour le développement.",
+      "Le résultat est un paysage qui ressemble sans doute beaucoup à ce qu'étaient les hauts plateaux avant l'arrivée de l'agriculture — et l'un des endroits les plus fiables du nord pour voir le loup d'Éthiopie, une espèce dont il reste moins de cinq cents individus à l'état sauvage. Sans infrastructure de parc national, les observations se font à pied, en parcourant la prairie à l'aube avec un guide de la communauté.",
+      "Guassa est véritablement isolé. Le lodge communautaire près de Mehal Meda est simple, sans électricité du réseau, et les nuits de saison sèche peuvent descendre à dix degrés sous zéro. Nous amenons un cuisinier et des provisions, et l'associons à la route vers le nord en direction de Lalibela pour les voyageurs qui veulent de la faune sans le long détour vers le sud jusqu'à Bale."
+    ]
   },
   "awra-amba": {
     "name": "Awra Amba",
     "teaser": "Un village de tisserands fondé sur une idée : hommes et femmes doivent partager tous les types de travail.",
     "intro": "Fondée en 1980 par Zumra Nuru et une vingtaine d'autres personnes, cette coopérative d'environ 450 habitants, à 73 kilomètres à l'est de Bahir Dar, est devenue l'une des expériences sociales les plus étudiées d'Éthiopie — les femmes labourent, les hommes tissent, et la communauté se gouverne elle-même par ses propres comités.",
     "tag": "Visite communautaire",
-    "region": "Amhara"
+    "region": "Amhara",
+    "bestTime": "Toute l'année",
+    "duration": "Une demi-journée à 1 jour",
+    "altitude": "1 920 m",
+    "highlights": [
+      "L'atelier de tissage, où hommes et femmes travaillent aux mêmes métiers et vendent écharpes, couvertures et tissu au mètre",
+      "L'école, la bibliothèque et la prise en charge des aînés propres à la communauté, chacune gérée par un comité élu",
+      "Une conversation ouverte avec les habitants sur la manière dont le village prend ses décisions et règle ses différends",
+      "Une nuit à la maison d'hôtes de la communauté, pour ceux qui souhaitent rester après le départ des visiteurs de la journée"
+    ],
+    "paragraphs": [
+      "Awra Amba — « le haut de la colline » en amharique — a été fondé sur des principes qui le distinguent de ses voisins : aucune division du travail selon le sexe, aucune religion institutionnelle, un âge minimum de mariage de dix-huit ans pour les femmes et de vingt-deux ans pour les hommes, et des comités formels pour s'occuper des enfants, des malades et des personnes âgées.",
+      "Ces choix ont eu un coût. Privé de terres agricoles par les communautés environnantes, le village s'est tourné vers le tissage et la mouture des grains, et les métiers qui remplissent aujourd'hui son atelier expliquent son autosuffisance actuelle. Sa bibliothèque, son école maternelle et son travail d'alphabétisation des adultes en ont fait un sujet de recherche internationale, notamment d'études de cas de la Banque mondiale.",
+      "Les visiteurs paient le même droit d'entrée quelle que soit leur nationalité, et un guide local peut vous faire découvrir le village. Il se trouve juste en retrait de la route qui va vers l'est de Bahir Dar à Lalibela, ce qui en fait une matinée facile et enrichissante sur un circuit du Nord — et une étape naturelle pour quiconque s'intéresse à qui fait le travail, et à qui en partage les fruits."
+    ]
   },
   "choke-mountains": {
     "name": "Monts Choke",
     "teaser": "Le château d'eau du Nil Bleu, parcouru de village en village avec les familles qui y vivent.",
     "intro": "Un vaste massif au cœur du Gojjam, qui s'élève d'un plateau à 2 800 mètres jusqu'à des sommets de plus de 4 000 mètres, et dont la lande alimente plus de cinquante rivières se jetant dans le Nil Bleu. Son écovillage communautaire a été désigné en 2022 parmi les Meilleurs Villages touristiques d'ONU Tourisme.",
     "tag": "Trek communautaire",
-    "region": "Hauts plateaux du Nord"
+    "region": "Hauts plateaux du Nord",
+    "bestTime": "Octobre – février",
+    "duration": "3 à 5 jours",
+    "altitude": "2 800 – 4 000+ m",
+    "highlights": [
+      "Des landes afro-alpines de lobélies géantes, d'alchémille et d'herbe en touffes, presque intactes de tout autre randonneur",
+      "Des camps dans des villages d'altitude et un accueil, le soir, par les familles qui vous reçoivent",
+      "Les sources de dizaines d'affluents du Nil Bleu, jaillissant de la lande elle-même",
+      "Des oiseaux endémiques et menacés, dont Macronyx flavicollis (Abyssinian longclaw)"
+    ],
+    "paragraphs": [
+      "Le Choke se situe à peu près entre Bahir Dar et Debre Markos, à environ trois cents kilomètres au nord-ouest d'Addis-Abeba, et il compte bien au-delà de sa taille : les chercheurs l'appellent le château d'eau du haut Nil Bleu, avec plus de cinquante grands cours d'eau et des centaines de ruisseaux qui naissent sur ses pentes.",
+      "Le tourisme y est géré par la communauté plutôt que pour elle, selon un modèle d'écovillage équitable centré sur la préservation à la fois de la montagne et de la culture des villages agricoles de ses pentes. Les marcheurs campent dans les villages d'altitude, et l'accueil du soir est sincère — plus proche d'un séjour que d'un circuit touristique. Prévoyez au moins trois jours pour rejoindre la haute lande et redescendre sans hâte.",
+      "C'est le trek le moins aménagé que nous proposions, avec de simples campements communautaires et très peu d'autres visiteurs. Nous l'associons à Bahir Dar et au lac Tana pour les voyageurs qui ont déjà marché dans le Simien et cherchent un lieu où personne de leur entourage n'est allé."
+    ]
   },
   "lake-hayk": {
     "name": "Hayk et Istifanos",
     "teaser": "Un lac d'altitude sur la route de Lalibela, et le monastère où fut instruit l'un des grands saints d'Éthiopie.",
     "intro": "À 2 030 mètres, juste au nord de Dessie, le lac Hayk mesure six kilomètres de large et quatre-vingt-huit mètres de profondeur. Sur sa péninsule se dresse Istifanos, un monastère fondé au milieu du XIIIᵉ siècle par Iyasus Mo'a, maître de saint Tekle Haymanot.",
     "tag": "Lac et monastère",
-    "region": "Amhara"
+    "region": "Amhara",
+    "bestTime": "Octobre – mai",
+    "duration": "Une demi-journée à 1 jour",
+    "altitude": "2 030 m",
+    "highlights": [
+      "L'évangéliaire du musée du monastère, réalisé pour Istifanos en 1280-1281 — l'un des plus anciens manuscrits éthiopiens à porter sa propre date",
+      "La croix de pierre d'Iyasus Mo'a, ainsi que des manuscrits et trésors offerts par des empereurs successifs",
+      "Une promenade le long de la rive du lac, où le premier visiteur européen connu a noté des hippopotames en 1520",
+      "Le couvent de Margebeta Giorgis, tout proche et ouvert aux visiteuses"
+    ],
+    "paragraphs": [
+      "Du XIIIe au XVe siècle, Istifanos fut l'un des monastères les plus influents du pays. Son élève le plus célèbre, Tekle Haymanot, fonda ensuite Debre Libanos et porta l'Église vers le sud, dans le Shewa. En 1531, l'église fut incendiée pendant les guerres de l'imam Ahmad ibn Ibrahim, et des ruines de cette époque se dressent encore à côté des bâtiments plus tardifs.",
+      "Notez que le monastère lui-même n'admet que les hommes. Les femmes sont les bienvenues au couvent voisin de Margebeta Giorgis, et la rive du lac et ses vues sont ouvertes à tous — nous l'expliquons avant d'inclure Hayk dans un itinéraire, afin que personne ne soit pris au dépourvu le jour même.",
+      "Hayk se trouve directement sur la route entre Addis-Abeba et Lalibela via Dessie, si bien qu'il s'intègre à un parcours routier vers le nord comme halte déjeuner ou nuit paisible au bord de l'eau, sans constituer un détour."
+    ]
   },
   "axum": {
     "name": "Axoum",
     "teaser": "Capitale d'un ancien empire commerçant et centre spirituel de l'orthodoxie éthiopienne.",
     "intro": "Entre le Iᵉʳ et le Xᵉ siècle environ de notre ère, le royaume d'Aksoum frappa sa propre monnaie et commerça par la mer Rouge jusqu'en Inde — une richesse encore visible dans les stèles de granit sculptées de sa nécropole et dans les églises qui font de la ville la capitale spirituelle de l'orthodoxie.",
     "tag": "Capitale antique",
-    "region": "Tigré"
+    "region": "Tigré",
+    "bestTime": "Octobre – mars",
+    "duration": "1 à 2 jours",
+    "altitude": "2 131 m",
+    "highlights": [
+      "Le champ de stèles du nord, avec la Grande Stèle tombée — jadis l'un des plus grands blocs de pierre monolithes jamais dressés",
+      "La chapelle de la Tablette, qui garderait selon la tradition l'Arche d'alliance — vue depuis le seuil autorisé",
+      "Les ruines de Dungur, populairement associées à la reine de Saba",
+      "La pierre d'Ezana, inscription trilingue qui a aidé à situer Aksoum dans l'Antiquité tardive",
+      "Le temple de Yeha, élevé vers 700 av. J.-C. et l'un des plus anciens édifices encore debout d'Éthiopie"
+    ],
+    "paragraphs": [
+      "Les stèles sont moins des monuments que des démonstrations d'ingénierie : des blocs uniques de granit sculptés pour imiter des édifices de plusieurs étages, avec fausses portes et encadrements de fenêtres, extraits et dressés sans les machines que les époques ultérieures jugeraient nécessaires. La Grande Stèle tombée domine encore le champ ; les fûts sculptés restés debout montrent ce que les bâtisseurs avaient en tête.",
+      "La tradition veut que l'Arche d'alliance repose dans la chapelle de la Tablette d'Axoum. Les visiteurs n'y entrent pas ; la visite du seuil et le complexe voisin de Sainte-Marie-de-Sion sont la face publique d'une affirmation qui façonne l'identité orthodoxe éthiopienne. Nous réservons les matins aux stèles et aux inscriptions, et les après-midi à l'enceinte de la chapelle, quand la lumière est plus douce.",
+      "Yeha, à courte distance en voiture vers Adwa, est antérieur à l'apogée impériale d'Aksoum — un temple de grès de la période préaksoumite qui récompense quiconque est curieux de ce qui a précédé les stèles. Associez Axoum au Gheralta lorsque l'accès régional le permet : des églises rupestres à quelques heures au sud, ornées de fresques et toujours desservies par leurs prêtres."
+    ]
   },
   "omo-valley": {
     "name": "Vallée de l'Omo",
     "teaser": "Une terre qui abrite plus de groupes ethniques distincts que presque n'importe où ailleurs sur le continent.",
     "intro": "Le long du cours inférieur de l'Omo, une quinzaine de communautés — Hamar, Mursi, Karo, Dassanech, Nyangatom et d'autres — conservent des langues, des vêtements et des cérémonies distincts, à quelques heures de route les unes des autres. La vallée n'est pas un parc à thème ; le rythme et l'accès dépendent des invitations et des calendriers de marché.",
     "tag": "Immersion culturelle",
-    "region": "Rift méridional"
+    "region": "Rift méridional",
+    "bestTime": "Juin – septembre, décembre – mars",
+    "duration": "5 à 8 jours",
+    "altitude": "500 – 1 400 m",
+    "highlights": [
+      "Le marché du samedi à Key Afer, où plusieurs communautés commercent au même endroit",
+      "Une cérémonie de passage à l'âge adulte hamar, avec saut du taureau, sur invitation uniquement et selon la saison",
+      "Une visite d'un village mursi avec un médiateur culturel qui travaille régulièrement dans les hauts plateaux",
+      "Des camps au bord de l'Omo plutôt que dans une enceinte clôturée",
+      "Des villages de tisserands dorze dans les collines du Guge, sur la route vers le sud depuis Arba Minch"
+    ],
+    "paragraphs": [
+      "Le rythme est ici dicté par l'invitation, non par nous. Nous travaillons grâce à des relations entretenues pendant des années avec les anciens, ce qui signifie que l'accès est organisé à l'avance et non négocié au bord de la route — jamais d'argent échangé contre une photographie. Les jours de marché à Key Afer, Dimeka et Turmi rythment la semaine plus honnêtement qu'une liste fixe de villages.",
+      "Un médiateur culturel accompagne chaque visite, non seulement pour traduire mais pour préciser qui demande à entrer dans l'espace d'une communauté, et pour qu'un véritable « non » soit facile à donner. Le saut du taureau et les autres cérémonies ont lieu quand les familles les organisent, pas quand arrive un autocar ; nous prévoyons des jours de marge pour qu'une vraie invitation puisse être acceptée.",
+      "De juin à septembre convient au sud quand les hauts plateaux du nord sont humides ; de décembre à mars est l'autre fenêtre fiable. Entre Arba Minch et le bas Omo, les Dorze et les Konso offrent artisanat des hauts plateaux et terrasses classées par l'UNESCO sans foncer directement vers le fleuve. Nous ne vendons jamais la « photographie tribale » comme un produit — seulement des voyages que les communautés ont accepté d'accueillir."
+    ]
   },
   "bale-mountains": {
     "name": "Monts Bale",
     "teaser": "Le meilleur endroit au monde pour voir un loup d'Éthiopie à l'état sauvage.",
     "intro": "Le plateau de Sanetti, au-dessus de 4 000 mètres, est la plus vaste étendue continue d'habitat afro-alpin encore existante en Afrique — et abrite environ la moitié des moins de cinq cents loups d'Éthiopie que l'on croit survivants. En dessous, la forêt de Harenna abrite du Coffea arabica sauvage et une écologie différente, plus humide.",
     "tag": "Faune",
-    "region": "Hauts plateaux du Sud"
+    "region": "Hauts plateaux du Sud",
+    "bestTime": "Novembre – avril",
+    "duration": "3 à 4 jours",
+    "altitude": "2 500 – 4 377 m",
+    "highlights": [
+      "Le pistage des loups à l'aube sur le plateau ouvert, quand l'activité de chasse est à son maximum",
+      "La forêt de Harenna, l'un des derniers bastions du Coffea arabica sauvage",
+      "Une liste matinale pouvant atteindre une douzaine d'espèces d'oiseaux propres à l'Éthiopie",
+      "Les nyalas de montagne broutant les lisières de la lande près de Dinsho au crépuscule",
+      "Tullu Dimtu, à environ 4 377 mètres — le point culminant du plateau, que l'on gagne à pied plutôt qu'en grimpant"
+    ],
+    "paragraphs": [
+      "Le café arabica sauvage pousse encore dans le sous-bois de la forêt de Harenna, sous le plateau — l'un des lieux que les botanistes désignent quand ils remontent la plante à son origine, avant qu'elle n'arrive dans une tasse. Des singes colobes se déplacent dans la même canopée ; la route qui franchit Sanetti est l'une des plus hautes d'Afrique praticables en toutes saisons.",
+      "Nous répartissons la plupart des itinéraires sur les deux versants du massif : le plateau exposé et froid pour les loups et les oiseaux endémiques à l'aube, puis une nuit dans la forêt de nuages de Harenna, pour un silence plus humide. Dinsho, sur le versant nord, est la porte d'entrée habituelle du parc et le meilleur terrain pour le nyala de montagne vers le crépuscule.",
+      "De novembre à avril est la fenêtre la plus claire et la plus froide sur le plateau ; les nuits gèlent régulièrement. Un guide animalier dédié et un garde du parc sont indispensables pour l'observation des loups — les animaux sont habitués aux véhicules à Sanetti mais restent sauvages, et l'éthique de la distance compte. Associez Bale aux lacs du Rift sur la route vers le sud depuis Addis-Abeba, ou à Sof Omar pour un contraste entre grottes et hauts plateaux."
+    ]
   },
   "addis-ababa": {
     "name": "Addis-Abeba",
     "teaser": "La capitale diplomatique de l'Afrique, et patrie du plus célèbre ancêtre de nous tous.",
     "intro": "Fondée dans les années 1880, lorsque l'empereur Ménélik II descendit sa cour des collines d'Entoto, Addis-Abeba — « nouvelle fleur » — est aujourd'hui l'une des grandes capitales d'Afrique et le lieu où presque tout voyage en Éthiopie commence et s'achève.",
     "tag": "Capitale",
-    "region": "Éthiopie centrale"
+    "region": "Éthiopie centrale",
+    "bestTime": "Toute l'année",
+    "duration": "1 à 3 jours",
+    "altitude": "2 300 – 3 000 m",
+    "highlights": [
+      "Lucy — Dinknesh — l'hominidé vieux de 3,2 millions d'années du Musée national",
+      "Le mont Entoto, où la ville est née, avec le palais de Ménélik II et l'église d'Entoto Maryam",
+      "Le parc de l'Unité, ouvert dans l'enceinte du palais de Ménélik, de 36 hectares",
+      "La cathédrale de la Sainte-Trinité, où est enterré l'empereur Haïlé Sélassié",
+      "Merkato, le plus grand marché en plein air d'Afrique"
+    ],
+    "paragraphs": [
+      "La plupart des visiteurs traitent Addis comme un aéroport auquel serait attachée une ville. Donnez-lui un jour ou deux et elle vous récompense : le Musée national, où le fossile connu sous le nom de Lucy voisine avec l'histoire des anciens royaumes du pays ; les hauteurs boisées d'Entoto, où la ville est née et où l'air sent l'eucalyptus ; et l'enceinte du palais qui est devenue le parc de l'Unité, siège des dirigeants de l'Éthiopie pendant plus d'un siècle.",
+      "Il y a ensuite Merkato, le plus grand marché en plein air du continent, une ville dans la ville où chaque ruelle a sa spécialité — épices, paniers, métal recyclé, café. Nous y allons avec un guide qui sait quelle ruelle mène où, et terminons la journée comme Addis : une cérémonie du café, puis une soirée de musique et de danses traditionnelles.",
+      "À environ 2 300 mètres, la capitale est aussi une première marche douce vers l'altitude, c'est pourquoi nous suggérons souvent d'y passer une nuit avant de s'envoler vers le nord ou de gagner les hauts plateaux par la route."
+    ]
   },
   "debre-libanos": {
     "name": "Debre Libanos",
     "teaser": "Un monastère au-dessus d'une gorge du Nil Bleu, fondé par l'un des grands saints d'Éthiopie.",
     "intro": "À une centaine de kilomètres au nord d'Addis-Abeba, Debre Libanos fut fondé en 1284 par saint Tekle Haymanot et devint l'un des monastères les plus importants du pays — son abbé fut autrefois le deuxième personnage de l'Église, juste après son chef.",
     "tag": "Monastère et gorge",
-    "region": "Éthiopie centrale"
+    "region": "Éthiopie centrale",
+    "bestTime": "Octobre – mai",
+    "duration": "1 jour, ou une nuit",
+    "altitude": "2 200 – 2 500 m",
+    "highlights": [
+      "Le monastère sur sa terrasse entre les falaises et la gorge, toujours un grand lieu de pèlerinage",
+      "Les points de vue sur la gorge de Jemma, qui plonge vers un affluent du Nil Bleu",
+      "Les singes géladas broutant le long du bord de la falaise",
+      "L'ancien pont de pierre, appelé localement « portugais » mais bâti dans les années 1890 par le ras Darge"
+    ],
+    "paragraphs": [
+      "Tekle Haymanot fonda le monastère en 1284 sous le nom de Debre Atsbo ; il prit le nom de Debre Libanos au XVe siècle. Pendant des siècles, son abbé principal, l'Ichege, fut le deuxième personnage le plus puissant de l'Église éthiopienne, et le lieu reste aujourd'hui un grand centre de pèlerinage.",
+      "Le cadre est la moitié de la raison de venir. Le monastère est posé sur un replat entre une falaise et une gorge profonde, et de courtes marches mènent à des points de vue sur la vallée de la Jemma, où les singes géladas paissent l'herbe le long du bord.",
+      "En chemin, un vieux pont de pierre enjambe une gorge latérale. Les habitants l'appellent le pont portugais, mais il a été bâti dans les années 1890 par le ras Darge dans l'ancien style portugais — une petite histoire que nous aimons raconter avec exactitude."
+    ]
   },
   "tiya-adadi-mariam": {
     "name": "Tiya et Adadi Mariam",
     "teaser": "Des stèles sculptées, une église monolithe et un million d'années d'outils humains — le tout au sud de la capitale.",
     "intro": "Une seule route au sud-ouest d'Addis-Abeba relie trois chapitres très différents du passé : le site préhistorique de Melka Kunture, l'église monolithe d'Adadi Mariam et les stèles sculptées de Tiya, site du patrimoine mondial depuis 1980.",
     "tag": "Patrimoine UNESCO",
-    "region": "Éthiopie centrale"
+    "region": "Éthiopie centrale",
+    "bestTime": "Octobre – mai",
+    "duration": "1 jour",
+    "altitude": "2 000 – 2 500 m",
+    "highlights": [
+      "Le champ de stèles de Tiya — 36 monuments, dont 32 sont gravés d'épées et de symboles énigmatiques",
+      "Adadi Mariam, église rupestre à 73 km d'Addis-Abeba, attribuée par la tradition à l'époque du roi Lalibela",
+      "Melka Kunture, où l'on a trouvé des outils en obsidienne vieux de plus de 1,2 million d'années",
+      "La haute vallée de l'Awash et les terres agricoles d'altitude entre les deux"
+    ],
+    "paragraphs": [
+      "Melka Kunture, à une cinquantaine de kilomètres de la capitale, sur le cours supérieur de l'Awash, est l'un des sites préhistoriques les plus importants d'Afrique de l'Est, avec une séquence d'occupation remontant à plus d'un million d'années — notamment l'un des plus anciens usages connus de l'obsidienne pour fabriquer des outils.",
+      "Plus loin, Adadi Mariam est l'une des rares églises rupestres du sud du pays. La tradition locale l'attribue à l'époque du roi Lalibela et, bien qu'elle soit beaucoup plus simple que les églises qui portent son nom, elle est toujours en usage et rarement fréquentée.",
+      "Tiya clôt la journée. Son champ de pierres dressées, inscrit sur la Liste du patrimoine mondial en 1980, marque un cimetière dont les bâtisseurs restent incertains ; beaucoup de stèles sont gravées d'épées et de symboles qui n'ont jamais été entièrement expliqués."
+    ]
   },
   "bishoftu-zuqualla": {
     "name": "Bishoftu et mont Zuqualla",
     "teaser": "Des lacs de cratère volcaniques à une heure d'Addis, et une montagne sacrée avec un lac à son sommet.",
     "intro": "À quarante kilomètres au sud-est de la capitale, la ville de Bishoftu est ceinte de lacs de cratère volcaniques — dont le lac Hora, où les Oromo se rassemblent chaque octobre pour Irreecha. Au-dessus s'élève le mont Zuqualla, dont le cratère abrite un lac sacré et un monastère.",
     "tag": "Lacs de cratère",
-    "region": "Éthiopie centrale"
+    "region": "Éthiopie centrale",
+    "bestTime": "Octobre – mai",
+    "duration": "1 jour",
+    "altitude": "1 920 – 3 010 m",
+    "highlights": [
+      "Les lacs de cratère de Bishoftu, dont Hora et le plus profond Babogaya",
+      "Irreecha, la fête d'action de grâce oromo qui se tient chaque octobre au lac Hora",
+      "La montée du mont Zuqualla jusqu'à son lac de cratère, tenu pour sacré par les pèlerins",
+      "Le monastère du Zuqualla, traditionnellement fondé par le saint égyptien Abbo"
+    ],
+    "paragraphs": [
+      "Bishoftu — connue aussi sous son ancien nom de Debre Zeit — se trouve à 1 920 mètres au milieu d'un groupe de lacs de cratère formés par l'activité volcanique. Ils offrent une échappée facile hors de la ville : oiseaux le long des rives, cafés au bord de l'eau et une eau bien plus calme que la circulation que vous avez quittée.",
+      "Le lac Hora est aussi le cadre d'Irreecha, la fête d'action de grâce du peuple oromo, où des foules en tenue traditionnelle se rassemblent au bord de l'eau chaque octobre pour rendre grâce, en touchant l'eau avec de l'herbe fraîche et des fleurs. C'est une véritable célébration communautaire, que nous visitons avec respect et uniquement avec un guide local.",
+      "De l'autre côté de la plaine, le mont Zuqualla s'élève à environ 3 000 mètres. À son sommet se trouvent un lac de cratère tenu pour sacré et un monastère que la tradition dit fondé par Abbo, un saint égyptien. La marche jusqu'au bord est récompensée par de larges vues sur les plaines alentour."
+    ]
   },
   "menagesha-suba-forest": {
     "name": "Forêt de Menagesha Suba",
     "teaser": "Une forêt de genévriers protégée par décret impérial depuis le XVᵉ siècle, à quarante kilomètres d'Addis.",
     "intro": "Sur les pentes du mont Wechecha, à l'ouest de la capitale, Menagesha Suba est souvent présentée comme la plus ancienne aire protégée d'Afrique de l'Est — replantée de genévriers et mise en réserve par l'empereur Zara Yaqob au XVᵉ siècle.",
     "tag": "Forêt ancienne",
-    "region": "Éthiopie centrale"
+    "region": "Éthiopie centrale",
+    "bestTime": "Octobre – mai",
+    "duration": "Une demi-journée à 1 jour",
+    "altitude": "Jusqu'à 3 385 m",
+    "highlights": [
+      "Des sentiers sous de hauts genévriers d'Afrique et d'autres arbres indigènes",
+      "Une montée vers le sommet du mont Wechecha, à 3 385 mètres",
+      "Des oiseaux forestiers et, avec de la patience, des singes colobes",
+      "Le calme — à une heure de l'une des capitales les plus animées d'Afrique"
+    ],
+    "paragraphs": [
+      "L'histoire de la forêt commence avec l'empereur Zara Yaqob qui, au XVe siècle, fit replanter de genévriers les pentes dégradées et les plaça sous protection. Quelle que soit la validité exacte de son titre de plus ancienne aire protégée d'Afrique de l'Est, elle est entretenue comme forêt depuis plus de cinq cents ans.",
+      "Aujourd'hui, c'est simplement l'une des plus belles promenades près d'Addis-Abeba : des sentiers sous de grands genévriers, des clairières avec vue sur la ville et — pour ceux qui en veulent davantage — la montée vers le sommet du mont Wechecha, à 3 385 mètres.",
+      "Nous utilisons Menagesha comme une première journée en douceur pour les voyageurs qui s'acclimatent avant un trek, et comme une demi-journée de grand air pour quiconque a du temps à revendre dans la capitale."
+    ]
   },
   "wenchi-crater-lake": {
     "name": "Lac de cratère de Wenchi",
     "teaser": "Un lac au cœur d'un volcan éteint, avec un monastère insulaire, des sources chaudes et des cascades.",
     "intro": "À environ 155 kilomètres à l'ouest d'Addis-Abeba par la route, à mi-chemin entre Ambo et Woliso, la caldeira de Wenchi abrite un lac à environ 2 600 mètres — que l'on atteint à pied ou à cheval, et que l'on traverse en bateau jusqu'au monastère insulaire de Cherkos.",
     "tag": "Lac de cratère",
-    "region": "Oromia"
+    "region": "Oromia",
+    "bestTime": "Octobre – mai",
+    "duration": "1 à 2 jours",
+    "altitude": "≈ 2 600 m (lac)",
+    "highlights": [
+      "La descente dans le cratère à pied ou à cheval avec des guides locaux",
+      "Un bateau jusqu'à Cherkos, le monastère de l'île traditionnellement fondé par Tekle Haymanot",
+      "Sources chaudes et cascades dans la vallée en contrebas du lac",
+      "Terres agricoles et forêt sur les parois du cratère, avec des vues depuis le bord"
+    ],
+    "paragraphs": [
+      "Wenchi est l'un des plus beaux paysages à portée de la capitale : une cuvette volcanique verte avec un lac en son cœur, de petites îles et des vallées qui descendent vers des sources chaudes et des chutes. La tradition veut que le monastère de Cherkos, sur l'une des îles, ait été fondé au XIIIe siècle par saint Tekle Haymanot et reconstruit au XVe sous l'empereur Zara Yaqob.",
+      "La descente fait partie de la visite. Cavaliers et guides locaux ouvrent le chemin du bord jusqu'au rivage, où de petits bateaux traversent vers le monastère. Au-delà du lac, la marche se poursuit à travers la caldeira jusqu'aux sources chaudes — une journée facile pour la plupart des marcheurs, avec des chevaux pour qui préfère monter.",
+      "Wenchi fonctionne comme une longue excursion à la journée depuis Addis-Abeba, mais nous préférons une nuit à proximité afin de voir le cratère à la lumière du matin, avant l'arrivée des visiteurs de la journée."
+    ]
   },
   "awash-national-park": {
     "name": "Parc national d'Awash",
     "teaser": "Le plus ancien parc national d'Éthiopie : un volcan endormi, des gorges avec cascade et des sources chaudes bordées de palmiers.",
     "intro": "Créé en 1966 à environ 225 kilomètres à l'est d'Addis-Abeba, Awash est le plus ancien parc national d'Éthiopie — 827 kilomètres carrés de plaine d'acacias, de champs de lave et de gorges fluviales, dominés par le volcan endormi Fantale.",
     "tag": "Parc national",
-    "region": "Oromia"
+    "region": "Oromia",
+    "bestTime": "Octobre – mars",
+    "duration": "2 à 3 jours",
+    "altitude": "700 – 2 007 m",
+    "highlights": [
+      "Les chutes de l'Awash, où le fleuve plonge dans une gorge d'environ 250 mètres de profondeur",
+      "Oryx beisa, gazelle de Soemmerring et dik-dik de Salt sur les plaines ouvertes",
+      "Le volcan Fantale, avec la cicatrice sombre de sa dernière coulée de lave en 1820",
+      "Les sources chaudes de Filwoha — des bassins limpides à environ 36 °C, bordés de palmiers doum"
+    ],
+    "paragraphs": [
+      "Awash a été créé pour protéger la faune des terres sèches du fond de la vallée du Rift — l'oryx beisa avant tout, aux côtés de la gazelle de Soemmerring et du minuscule dik-dik de Salt. Les safaris traversent prairies ouvertes et fourrés d'acacias, avec la gorge de la rivière en bordure sud du parc.",
+      "Le côté ouest est dominé par le Fantale, volcan endormi dont le cratère sommital est encore pâturé de façon saisonnière par le peuple kereyu. Sur son flanc sud, la lave noire de sa dernière éruption, en 1820, se distingue encore nettement depuis la route.",
+      "Ailleurs dans le parc, les sources chaudes de Filwoha forment un chapelet de bassins tièdes et bleus ombragés par des palmiers doum — une oasis pour la faune et pour quiconque a passé la matinée sur des pistes poussiéreuses. Les terres traditionnelles des peuples afar, kereyu et ittu entourent le parc, et nous le visitons avec des guides locaux issus de ces communautés."
+    ]
   },
   "sof-omar-caves": {
     "name": "Grottes de Sof Omar",
     "teaser": "Quinze kilomètres de galeries calcaires creusées par la rivière, sacrées pour deux religions.",
     "intro": "À l'est des monts Bale, la rivière Weyib a creusé la plus longue grotte d'Éthiopie — 15,1 kilomètres de galeries et de salles qui étaient les plus longues connues d'Afrique lors de leur relevé en 1972.",
     "tag": "Réseau de grottes",
-    "region": "Oromia"
+    "region": "Oromia",
+    "bestTime": "Octobre – mars",
+    "duration": "1 jour",
+    "altitude": "≈ 1 345 m (entrée)",
+    "highlights": [
+      "La Chambre des Colonnes, une salle de piliers calcaires façonnés par la rivière",
+      "Une marche dans des passages où la rivière Weyib coule encore",
+      "Un site tenu pour sacré à la fois par les musulmans et par les adeptes de la religion traditionnelle oromo",
+      "Le paysage aride de basses terres du Bale oriental autour de l'entrée de la grotte"
+    ],
+    "paragraphs": [
+      "La rivière Weyib s'enfonce dans la roche à l'entrée d'Ayiew Maco et réapparaît un kilomètre plus loin à la résurgence de Holuca, et entre les deux elle a creusé un labyrinthe de plus de quinze kilomètres. La salle la plus célèbre, la Chambre des Colonnes, est une forêt de piliers calcaires sculptés par l'eau pendant très longtemps.",
+      "Sof Omar est un centre religieux depuis des siècles. La tradition dit qu'il porte le nom d'un saint musulman qui vécut ici, et Ayiew celui de sa fille ; la grotte est sacrée à la fois pour l'islam et pour la religion traditionnelle des Oromo, et des pèlerins y viennent encore.",
+      "Elle se trouve à environ 110 kilomètres à l'est de Robe, dans les basses terres au pied des monts Bale, ce qui explique que nous l'associons habituellement à un voyage dans le Bale — loups d'Éthiopie sur le plateau de Sanetti un jour, rivière souterraine le lendemain. Les visites se font toujours avec un guide local."
+    ]
   },
   "borana-yabelo": {
     "name": "Borana et Yabelo",
     "teaser": "Des puits chantants, un lac salé dans un volcan et un oiseau que l'on ne trouve nulle part ailleurs sur terre.",
     "intro": "Dans l'extrême sud de l'Éthiopie, autour de la ville de Yabelo, les Oromo Borana perpétuent un mode de vie pastoral façonné par l'eau : des puits creusés à la main très profondément dans le sol et un lac de cratère qui fournit du sel depuis des siècles.",
     "tag": "Culture pastorale",
-    "region": "Oromia"
+    "region": "Oromia",
+    "bestTime": "Octobre – mars",
+    "duration": "2 à 3 jours",
+    "altitude": "≈ 1 857 m (Yabelo)",
+    "highlights": [
+      "Un puits chantant, où les éleveurs font monter l'eau par une chaîne humaine depuis jusqu'à 30 mètres de profondeur, en chantant pour garder le rythme",
+      "El Sod, un cratère volcanique de 1,8 kilomètre de large avec un lac salé au fond",
+      "Le corbeau de Stresemann (Zavattariornis stresemanni), que l'on ne trouve que dans une petite zone autour de Yabelo",
+      "Des villages borana et une région d'élevage sur la route du sud"
+    ],
+    "paragraphs": [
+      "Là où il n'y a pas d'eau en surface, les Borana la creusent. Leurs puits descendent jusqu'à trente mètres et, pour abreuver les troupeaux, hommes et femmes forment une chaîne à l'intérieur du puits, se passant les seaux de main en main et chantant pour garder le rythme — d'où leur nom de puits chantants. La tradition s'étend sur les terres borana jusqu'au nord du Kenya.",
+      "À environ quatre-vingt-dix kilomètres de Yabelo, le village d'El Sod se dresse sur le bord d'un volcan éteint large de 1,8 kilomètre. Au fond du cratère se trouve un lac salé — son nom amharique signifie « maison de sel » — que les Borana exploitent à la main depuis des siècles, remontant le sel par le sentier raide jusqu'au bord.",
+      "Yabelo est aussi un pèlerinage tranquille pour les ornithologues : le corbeau de Stresemann (Zavattariornis stresemanni), ou corbeau d'Éthiopie, ne vit que dans une petite zone autour de Yabelo et est protégé dans le sanctuaire de faune de Yabelo et le parc national de Borana. Les visites des puits et des villages se font avec des guides locaux et toujours avec le consentement de la communauté."
+    ]
   },
   "jimma": {
     "name": "Jimma",
     "teaser": "Le palais d'un roi oromo enrichi par le café, au cœur de l'arabica sauvage.",
     "intro": "Dans le sud-ouest verdoyant, à 353 kilomètres d'Addis-Abeba, Jimma fut la capitale du plus puissant des cinq royaumes oromo du Gibe — et son roi, Abba Jifar II, s'enrichit grâce au café qui pousse encore tout autour de la ville.",
     "tag": "Royaume du café",
-    "region": "Oromia"
+    "region": "Oromia",
+    "bestTime": "Octobre – mai",
+    "duration": "1 à 2 jours",
+    "altitude": "≈ 1 780 m",
+    "highlights": [
+      "Le palais du roi Abba Jifar II sur la colline de Jiren",
+      "Le musée du palais, avec le mobilier, les manuscrits et les objets domestiques du roi",
+      "Fermes de café et forêt dans la région d'origine de l'arabica",
+      "Les marchés de Jimma, animés par le café et les produits des collines environnantes"
+    ],
+    "paragraphs": [
+      "Le royaume de Jimma était un royaume musulman oromo apparu au XVIIIe siècle, avec pour capitale Jiren, aujourd'hui intégrée à la ville de Jimma. Sous Abba Jifar II, il devint le plus puissant des royaumes du Gibe et, grâce à une diplomatie avisée, conserva une large autonomie même après son entrée dans l'empire éthiopien.",
+      "Son palais, bâti à la fin du XIXe siècle, se dresse toujours sur sa colline au-dessus de la ville — un ensemble de bois et de pierre avec une mosquée, des salles de réception et des appartements royaux. Le musée qu'il abrite conserve les lits, chaises, ustensiles et manuscrits du roi, et raconte l'histoire d'une cour enrichie par le café.",
+      "Le café reste la raison de venir. Jimma se trouve au cœur de la région de l'arabica sauvage du pays, et nous passons du temps dans des fermes locales et en forêt avec les producteurs avant une cérémonie à domicile. Pour ceux qui veulent aller plus loin, les forêts de Kafa et de Bonga s'étendent au sud-ouest."
+    ]
   },
   "harar": {
     "name": "Harar",
     "teaser": "La seule ville fortifiée d'Éthiopie — 82 mosquées, ruelles trop étroites pour les voitures et hyènes nourries à la main au crépuscule.",
     "intro": "Sur une colline des hauts plateaux de l'est, Harar Jugol est depuis des siècles un centre du savoir islamique et du commerce. Sa vieille ville fortifiée, inscrite à l'UNESCO en 2006, est un dédale de ruelles, de maisons peintes et de sanctuaires auquel on accède par des portes historiques.",
     "tag": "Patrimoine UNESCO",
-    "region": "Éthiopie orientale"
+    "region": "Éthiopie orientale",
+    "bestTime": "Octobre – mars",
+    "duration": "2 à 3 jours",
+    "altitude": "1 885 m",
+    "highlights": [
+      "Le mur de Jugol et ses portes historiques, dont la porte du Shoa",
+      "Une vieille ville que l'UNESCO recense avec 82 mosquées et 102 sanctuaires",
+      "Le nourrissage des hyènes au crépuscule, une tradition perpétuée par les hommes-hyènes de Harar depuis des générations",
+      "La maison de Rimbaud, avec des photographies de la ville d'il y a un siècle",
+      "Le café de Harar, cultivé dans les hauts plateaux environnants et réputé pour son caractère fruité, proche du vin"
+    ],
+    "paragraphs": [
+      "On pense que le mur qui entoure la vieille ville a été bâti entre le XIIIe et le XVIe siècle, et cinq portes historiques menaient jadis à cinq quartiers différents. À l'intérieur, les ruelles sont trop étroites pour les voitures : se promener à Harar, c'est traverser des marchés, des cours et les maisons traditionnelles colorées du peuple harari.",
+      "L'UNESCO décrit Harar comme une ville considérée comme la quatrième plus sainte de l'islam, avec 82 mosquées — dont trois dateraient du Xe siècle — et 102 sanctuaires. C'est aussi une ville de commerce, et ses marchés rassemblent toujours les produits de la campagne environnante, dont le café qui fait la renommée des hauts plateaux de l'Est.",
+      "À la tombée de la nuit, les hommes-hyènes de Harar appellent les hyènes tachetées sauvages à la lisière de la ville et les nourrissent à la main — une tradition que l'histoire locale fait remonter à une famine du XIXe siècle. Harar se trouve à courte distance en voiture de Dire Dawa, desservie par des vols depuis Addis-Abeba, si bien que deux ou trois jours ici s'intègrent facilement dans un voyage plus vaste."
+    ]
   },
   "arba-minch-nechisar": {
     "name": "Arba Minch et Nechisar",
     "teaser": "Quarante sources, deux lacs du Rift et des crocodiles se prélassant sur la rive du lac Chamo.",
     "intro": "Arba Minch — « quarante sources » — domine deux grands lacs du Rift, l'Abaya et le Chamo, séparés par un étroit isthme appelé le Pont de Dieu. En contrebas s'étend le parc national de Nechisar, et au-dessus les hauts plateaux frais du Gamo, pays des tisserands dorzé.",
     "tag": "Lacs et faune",
-    "region": "Rift méridional"
+    "region": "Rift méridional",
+    "bestTime": "Octobre – mars",
+    "duration": "2 à 3 jours",
+    "altitude": "1 285 – 2 732 m",
+    "highlights": [
+      "Un bateau sur le lac Chamo jusqu'au Marché aux crocodiles, où des centaines de crocodiles se prélassent au soleil",
+      "Le Pont de Dieu, l'isthme entre les lacs Abaya et Chamo",
+      "Les plaines de Nechisar — le nom du parc signifie « herbe blanche »",
+      "Les villages dorze près de Chencha, avec des maisons de bambou tressé hautes jusqu'à 12 mètres"
+    ],
+    "paragraphs": [
+      "La ville tient son nom des sources à l'entrée du parc national de Nechisar, et le parc lui-même s'étend sur la crête entre les lacs Abaya et Chamo et sur les plaines d'herbe pâle à l'est — l'herbe blanche qui donne son nom à Nechisar.",
+      "L'excursion classique se fait en bateau sur le lac Chamo jusqu'au tronçon de rive connu sous le nom de Marché aux crocodiles, où de grands nombres de crocodiles se rassemblent au soleil. La vie aviaire le long des lacs est riche, et les vues en retour vers l'escarpement comptent parmi les plus belles du sud du Rift.",
+      "Dans les hauts plateaux du Gamo, autour de Chencha, à 2 732 mètres, les Dorze sont connus pour leur tissage et pour leurs hautes maisons en forme de ruche tressées en bambou, qui peuvent atteindre douze mètres et durer des décennies. Nous visitons avec un guide dorze, et Arba Minch est desservie par des vols depuis Addis-Abeba, ce qui en fait la porte d'entrée naturelle vers Konso et la vallée de l'Omo."
+    ]
   },
   "konso": {
     "name": "Konso",
     "teaser": "Des collines en terrasses de pierre et des villages fortifiés — un paysage vivant façonné depuis plus de 400 ans.",
     "intro": "En 2011, le paysage culturel de Konso est devenu le premier site d'Éthiopie inscrit par l'UNESCO comme paysage culturel : 55 kilomètres carrés de terrasses en pierres sèches et de villages fortifiés au sommet des collines, construits et entretenus par les Konso sur quelque 21 générations.",
     "tag": "Patrimoine UNESCO",
-    "region": "Rift méridional"
+    "region": "Rift méridional",
+    "bestTime": "Octobre – mars",
+    "duration": "1 à 2 jours",
+    "altitude": "≈ 1 650 m",
+    "highlights": [
+      "Des terrasses de murs en pierre sèche, atteignant par endroits cinq mètres de haut",
+      "Des villages fortifiés tels que Mecheke et Gamole, ceints de jusqu'à six murs de pierre",
+      "Le musée de Konso, avec environ 200 poteaux funéraires waka sculptés, restitués après avoir été pillés",
+      "Un paysage toujours cultivé, habité et régi par ses propres traditions"
+    ],
+    "paragraphs": [
+      "L'agriculture konso est un exploit d'ingénierie. Des murs en pierre sèche, certains hauts de cinq mètres, dessinent les courbes de niveau des collines en terrasses qui retiennent le sol, captent la pluie et évacuent l'excès — la raison pour laquelle des cultures poussent ici dans un environnement sec et difficile. La tradition remonte à plus de quatre cents ans.",
+      "Les Konso vivent dans des bourgs fortifiés au sommet des collines, chacun entouré de jusqu'à six murs de pierre concentriques et accessible par des portes cérémonielles. Sur la vingtaine de villages traditionnels, Mecheke, Dokatu, Gamole et Buso sont les plus visités, et un guide local explique les maisons de réunion, les poteaux de génération et les espaces publics qui organisent la vie du village.",
+      "Les waka — poteaux funéraires en bois sculpté — honorent les hommes importants et les guerriers courageux. Beaucoup sont encore en place, et le musée de Konso en présente environ deux cents qui ont été récupérés après avoir été pillés par des collectionneurs. Konso se trouve à 87 kilomètres d'Arba Minch, sur la route de la vallée de l'Omo."
+    ]
   },
   "sidama-yirgacheffe": {
     "name": "Sidama et Yirgacheffe",
     "teaser": "Les collines derrière les cafés les plus célèbres du monde — et un paysage UNESCO où le café pousse sous les arbres.",
     "intro": "Au sud de Hawassa, les pentes verdoyantes du Sidama et du Gedeo produisent les cafés connus dans le monde entier sous les noms de Sidamo et de Yirgacheffe. En 2023, l'UNESCO a inscrit le paysage culturel du Gedeo, où le café est cultivé dans des jardins forestiers étagés, à l'ombre des arbres et des ensètes.",
     "tag": "Pays du café",
-    "region": "Rift méridional"
+    "region": "Rift méridional",
+    "bestTime": "Octobre – février",
+    "duration": "2 à 4 jours",
+    "altitude": "1 570 – 1 920 m",
+    "highlights": [
+      "Fermes de café et stations de lavage au Sidama, qui produit environ 30 % du café éthiopien",
+      "Le paysage agroforestier du Gedeo, site du patrimoine mondial depuis 2023",
+      "Les stèles mégalithiques de Tuto Fela près de Dilla, datées en partie des XIe-XIIIe siècles",
+      "Une dégustation avec les producteurs et une cérémonie du café dans une maison familiale"
+    ],
+    "paragraphs": [
+      "Le Sidama est la première zone productrice de café du pays, et Yirgacheffe, dans le Gedeo voisin, est peut-être le nom de café le plus célèbre au monde. Visiter pendant la récolte, grosso modo d'octobre jusqu'au Nouvel An, c'est voir les cerises sur les arbres et les stations de lavage en pleine activité.",
+      "Le paysage du Gedeo est remarquable en soi. Au lieu de plantations ouvertes, les Gedeo cultivent en strates : de grands arbres au-dessus, l'ensète — le faux bananier qui est leur aliment de base — en dessous, et le café plus bas encore. L'UNESCO l'a inscrit en 2023 pour ce système et pour les forêts sacrées et les monuments de pierre qui s'y mêlent.",
+      "Ces monuments comptent parmi les plus frappants d'Afrique : la région abrite une vaste concentration de mégalithes, et le site de Tuto Fela près de Dilla conserve des stèles sculptées datées en partie entre le XIe et le XIIIe siècle. Hawassa, à 273 kilomètres au sud d'Addis-Abeba, sur son propre lac, en est la base naturelle."
+    ]
   }
 }

@@ -1,6 +1,20 @@
 import type { Tour } from '@/features/tours/types/tour.types'
 
-/** Card + meta fields translated in Step 4. Itinerary stays English until pass 2. */
-export type TourCardCopy = Pick<Tour, 'title' | 'teaser' | 'summary'>
+/** Card + Pass-2 itinerary / logistics fields. */
+export type TourCardCopy = Pick<
+  Tour,
+  | 'title'
+  | 'teaser'
+  | 'summary'
+  | 'days'
+  | 'style'
+  | 'season'
+  | 'group'
+  | 'from'
+  | 'includes'
+  | 'excludes'
+  | 'itinerary'
+  | 'places'
+>
 
 export type TourOverlayMap = Record<string, Partial<TourCardCopy>>

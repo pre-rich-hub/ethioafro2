@@ -318,7 +318,13 @@
     "ctaSecondaryCta": "Voir les circuits",
     "founderEyebrow": "Du fondateur",
     "founderQuote": "Voyager est à la fois mon métier et ma passion.",
-    "founderRole": "Fondateur · {company}"
+    "founderRole": "Fondateur · {company}",
+    "founderP1": "Je suis née et j'ai grandi à Bahir Dar, et ma vie dans le tourisme y a commencé alors que j'étais encore à l'école.",
+    "founderP2": "Entre deux cours, je travaillais avec des visiteurs à Bahir Dar et dans les monts Simien. Ce qui n'était au départ qu'un travail à côté de mes études est devenu ce que je voulais faire de ma vie : partager les cultures, l'histoire, les paysages et l'hospitalité du pays que j'aime avec des gens qui le découvrent pour la première fois.",
+    "founderP3": "Après le lycée, je suis partie à Addis-Abeba étudier le Tourisme et les Opérations touristiques à l'Institut de formation au tourisme, puis j'ai passé des années à travailler pour d'autres agences — à guider, planifier des itinéraires, m'occuper des voyageurs et gérer des destinations. Ces années m'ont appris toutes les facettes du métier.",
+    "founderP4": "{company} est né de tout cela. C'est une entreprise éthiopienne agréée, conçue pour des voyages privés et sur mesure, et elle est dirigée aujourd'hui par mes trois frères, notre famille élargie, notre équipe — et moi.",
+    "founderImageAlt": "L'escarpement des monts Simien aux premières lueurs du jour",
+    "founderImageCaption": "Le Simien — là où tout a commencé"
   },
   "Legal": {
     "privacyEyebrow": "Mentions légales",

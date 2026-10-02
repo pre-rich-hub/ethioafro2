@@ -318,7 +318,13 @@
     "ctaSecondaryCta": "Ver tours",
     "founderEyebrow": "Del fundador",
     "founderQuote": "Viajar es a la vez mi profesión y mi pasión.",
-    "founderRole": "Fundador · {company}"
+    "founderRole": "Fundador · {company}",
+    "founderP1": "Nací y crecí en Bahir Dar, y mi vida en el turismo comenzó allí, cuando todavía estaba en la escuela.",
+    "founderP2": "Entre clases trabajaba con visitantes en Bahir Dar y en los montes Simien. Lo que empezó como un trabajo junto a mis estudios se convirtió en lo que quería hacer con mi vida: compartir las culturas, la historia, los paisajes y la hospitalidad del país que amo con personas que lo ven por primera vez.",
+    "founderP3": "Después del bachillerato me mudé a Adís Abeba para estudiar Turismo y Operaciones de Turismo en el Instituto de Formación en Turismo, y luego pasé años trabajando para otras empresas de turismo: guiando, planificando itinerarios, atendiendo a los huéspedes y gestionando destinos. Esos años me enseñaron todas las facetas del oficio.",
+    "founderP4": "{company} nació de todo eso. Es una empresa etíope con licencia, creada para viajes privados y a medida, y hoy la dirigen mis tres hermanos, el resto de nuestra familia, nuestro equipo… y yo.",
+    "founderImageAlt": "El escarpe de los montes Simien con la primera luz del día",
+    "founderImageCaption": "Los Simien: donde todo empezó"
   },
   "Legal": {
     "privacyEyebrow": "Legal",

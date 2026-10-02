@@ -6,7 +6,21 @@
     "short": "Kochkurs",
     "category": "Essen und Trinken",
     "duration": "Ein halber Tag",
-    "where": "Addis Abeba"
+    "where": "Addis Abeba",
+    "season": "Ganzjährig",
+    "paragraphs": [
+      "Teff ist das kleinste Getreide der Welt, und Injera ist Slow Food: Der Teig gärt tagelang, bevor er fertig ist, und daher rührt seine säuerliche Note. Dann wird er spiralförmig auf eine breite Tonplatte, den Mitad, gegossen und abgedeckt, bis die Oberfläche in ihrem vertrauten Muster aus winzigen Löchern fest wird. Das richtige Gießen braucht Übung – und ein paar misslungene Versuche gehören zum Spaß.",
+      "Während das Injera backt, bereiten Sie die Gerichte zu, die dazugehören: ein köchelndes Wat, Shiro aus gemahlenen Kichererbsen und Gemüsegerichte, die viele Äthiopier an Fastentagen essen. Ihr Gastgeber erklärt die Gewürze, die Butter und die Reihenfolge, in der gekocht wird.",
+      "Dann setzen sich alle gemeinsam um eine geteilte Platte. Mit der rechten Hand zu essen und das Injera zu zerreißen, um die Eintöpfe aufzunehmen, ist die ganze Etikette – und einen Bissen von Ihrem Gastgeber gereicht zu bekommen, ist eine Geste der Freundschaft."
+    ],
+    "includes": [
+      "Ein Kurs mit Gastgeber in einer Familienküche",
+      "Alle Zutaten und Geräte",
+      "Das gemeinsame Essen, das Sie selbst gekocht haben",
+      "Eine Kaffeezeremonie zum Abschluss",
+      "Hotelabholung und Rückfahrt in Addis Abeba"
+    ],
+    "goodToKnow": "Vegetarische und vegane Menüs sind leicht möglich – viele äthiopische Gerichte sind von Natur aus pflanzlich."
   },
   "tej-tella-and-areki": {
     "title": "Tej, Tella und Areki",
@@ -15,7 +29,20 @@
     "short": "Traditionelle Getränke",
     "category": "Essen und Trinken",
     "duration": "Ein Abend",
-    "where": "Addis Abeba"
+    "where": "Addis Abeba",
+    "season": "Ganzjährig",
+    "paragraphs": [
+      "Tej ist Äthiopiens Honigwein: Honig und Wasser, vergoren mit Gesho, einem einheimischen Kreuzdorn, dessen bittere Blätter die Süße ausgleichen, ähnlich wie Hopfen im Bier. Er gärt meist ein paar Wochen und wird in einem rundbodigen Fläschchen namens Berele serviert, in der Regel mit 7 bis 11 Prozent Alkohol.",
+      "Tella ist das alltägliche Hausgebräu – ein trübes Bier aus Getreide wie Gerste und demselben Gesho, einige Tage vergoren. Areki ist sein starker Cousin: ein klarer Branntwein, destilliert aus vergorener Getreidemaische, oft mit 30 bis 50 Prozent Alkohol und mit Respekt zu behandeln.",
+      "Der Abend endet in einem Tej-Haus mit Azmari – Dichter-Musikern, die auf der einsaitigen Masenqo Verse improvisieren und das Publikum oft in Reimen necken. Es ist einer der lebhaftesten Abende der Hauptstadt."
+    ],
+    "includes": [
+      "Eine geführte Verkostung von Tej, Tella und Areki",
+      "Traditionelle Snacks zu jedem Getränk",
+      "Ein Abend mit Live-Azmari-Musik",
+      "Ein privater Guide und Rücktransport"
+    ],
+    "goodToKnow": "Für Gäste ab 18 Jahren. Alkoholfreie Verkostungen – mit frisch gepressten Fruchtsäften und gewürztem Tee – sind jederzeit möglich."
   },
   "coffee-cupping-and-ceremony": {
     "title": "Kaffeeverkostung und Zeremonie",
@@ -24,7 +51,19 @@
     "short": "Kaffeeverkostung",
     "category": "Kaffee",
     "duration": "2 – 3 Stunden",
-    "where": "Addis Abeba oder jede Kaffeeregion"
+    "where": "Addis Abeba oder jede Kaffeeregion",
+    "season": "Ganzjährig",
+    "paragraphs": [
+      "Ein Cupping ist die Verkostungsmethode des Kaffeehandels: frisch gemahlener Kaffee, in offenen Tassen aufgegossen, die Kruste aufgebrochen und jede Tasse vom Löffel geschlürft. Nebeneinander werden die Unterschiede deutlich – die hellen, blumigen Tassen aus Yirgacheffe, die vollmundigeren Kaffees aus Sidama und Jimma, die fruchtigen, weinartigen Naturals aus Harar.",
+      "Dann die Zeremonie. Grüne Bohnen werden vor Ihren Augen über Kohle geröstet, von Hand gemahlen und in einer Tonkanne, der Jebena, aufgebrüht, während Weihrauch brennt und Popcorn herumgereicht wird. Es gibt drei Runden – Abol, Tona und Baraka, Letzteres bedeutet Segen – und für alle drei zu bleiben gehört zur Höflichkeit.",
+      "Die Verkostung kann an jedem Tag in Addis Abeba stattfinden oder auf den Farmen selbst während einer unserer Kaffeereisen."
+    ],
+    "includes": [
+      "Ein geführtes Cupping von Kaffees aus mehreren Regionen",
+      "Eine vollständige Kaffeezeremonie mit drei Runden in einem Privathaus",
+      "Verkostungsnotizen zum Mitnehmen",
+      "Hotelabholung und Rückfahrt"
+    ]
   },
   "run-where-champions-train": {
     "title": "Laufen, wo Champions trainieren",
@@ -33,7 +72,20 @@
     "short": "Laufen",
     "category": "Aktiv",
     "duration": "Ein früher Morgen",
-    "where": "Entoto, Addis Abeba"
+    "where": "Entoto, Addis Abeba",
+    "season": "Ganzjährig (am besten Okt – Mai)",
+    "paragraphs": [
+      "Auf rund 3.000 Metern liegt der Entoto höher als die Stadt darunter, und seine weichen Waldpfade und welligen Erdstraßen sind ideal, um Fitness aufzubauen, ohne die Beine zu belasten. Im Morgengrauen füllen sie sich mit Läufern, von Eliteteams bis zu Menschen, die für ihr erstes Rennen trainieren.",
+      "Ein einheimischer Lauf-Guide wählt ein Tempo, das zu Ihnen passt – es geht um das Erlebnis, nicht um eine Zeit – und erklärt, wie äthiopische Läufer trainieren: leichte Tage sind wirklich leicht, viel Laufen abseits der Straße und vieles davon in Gruppen. Das Frühstück danach ist die Belohnung.",
+      "Ambitionierte Läufer können weiter gehen: die Stadt Bekoji, Geburtsort von Derartu Tulu, Kenenisa Bekele und den Dibaba-Schwestern, und der Great Ethiopian Run Ende November – ein 10-Kilometer-Lauf durch die Hauptstadt mit Zehntausenden Läufern."
+    ],
+    "includes": [
+      "Ein einheimischer Lauf-Guide",
+      "Transport zu den Entoto-Pfaden und zurück",
+      "Wasser und ein Frühstück nach dem Lauf",
+      "Strecken und Tempo auf Ihr Niveau abgestimmt"
+    ],
+    "goodToKnow": "In dieser Höhe läuft jeder langsamer und atmet schwerer – wir empfehlen mindestens zwei Tage in Addis Abeba, bevor Sie intensiv laufen."
   },
   "rift-valley-cycling-day": {
     "title": "Ein Tag auf zwei Rädern im Rift",
@@ -42,7 +94,19 @@
     "short": "Radfahren",
     "category": "Aktiv",
     "duration": "Ein ganzer Tag",
-    "where": "Zentrales Rift Valley"
+    "where": "Zentrales Rift Valley",
+    "season": "Okt – Mai",
+    "paragraphs": [
+      "Die Touren führen meist zwischen den Seen südlich von Addis Abeba – Ziway, Abijata-Shalla und Langano – über eine Mischung aus ruhigem Asphalt und Erdpisten durch Ackerland und Akazienlandschaft, mit Stopps überall dort, wo etwas Ihren Blick fängt.",
+      "Ein Begleitfahrzeug transportiert Wasser, Snacks und Ersatzteile und kann jeden aufnehmen, dem es reicht. E-Bikes stehen für Fahrer bereit, die die Landschaft mit weniger Anstrengung genießen möchten.",
+      "Für ein längeres Abenteuer verbindet unsere Reise „Rift Valley by Bike“ mehrere Tage Radfahren, darunter eine lange Abfahrt aus dem Hochland in das Tal selbst."
+    ],
+    "includes": [
+      "Ein hochwertiges Fahrrad oder E-Bike, Helm und Reparaturset",
+      "Ein Radguide und Begleitfahrzeug",
+      "Wasser, Snacks und ein Mittagessen am See",
+      "Transfers zum Start und zurück"
+    ]
   },
   "teff-farm-day": {
     "title": "Ein Tag auf einer Teff-Farm",
@@ -51,7 +115,20 @@
     "short": "Farmtag",
     "category": "Landwirtschaft und Gemeinschaft",
     "duration": "Ein ganzer Tag",
-    "where": "Hochlanddörfer"
+    "where": "Hochlanddörfer",
+    "season": "Ernte: Nov – Jan",
+    "paragraphs": [
+      "Teff wird mit dem langen Regen um den Juli gesät und von November bis Januar geerntet. Die Felder werden noch immer mit einem Ochsengespann und einem Holzpflug gepflügt, das Korn wird von Hand geschnitten, und gedroschen wird auf die alte Art: Ochsen oder Esel laufen im Kreis über die Ernte, um das Saatgut vom Stroh zu trennen.",
+      "Je nach Jahreszeit pflügen, jäten, schneiden oder helfen Sie auf dem Dreschplatz – dann tragen Sie das Korn nach Hause, sehen, wie es gemahlen wird, und essen daraus gebackenes Injera am Tisch der Familie.",
+      "Wir organisieren Hoftage mit Familien, die wir in Hochlanddörfern entlang unserer Routen kennen, von den Menz-Bergen bis zum Umland von Lalibela, und der Tag wird stets direkt an den Haushalt bezahlt."
+    ],
+    "includes": [
+      "Ein Tag mit einer Bauernfamilie, im Voraus arrangiert",
+      "Ein einheimischer Guide und Übersetzer",
+      "Mittagessen mit der Familie",
+      "Eine Zahlung, die direkt an den Haushalt geht"
+    ],
+    "goodToKnow": "Die Arbeit ändert sich mit der Jahreszeit; Ernte und Dreschen, von November bis Januar, sind die eindrucksvollste Zeit zu kommen."
   },
   "herding-with-the-borana": {
     "title": "Rinder, Brunnen und die Borana",
@@ -60,7 +137,19 @@
     "short": "Rinder und Hirtentum",
     "category": "Landwirtschaft und Gemeinschaft",
     "duration": "Ein halber Tag oder mehr",
-    "where": "Borana, rund um Yabelo"
+    "where": "Borana, rund um Yabelo",
+    "season": "Okt – Mär",
+    "paragraphs": [
+      "Der Mittelpunkt des Borana-Lebens ist der Brunnen. Von Hand bis zu dreißig Meter tief gegraben, werden die Brunnen von Menschenketten bedient, die das Wasser Eimer für Eimer nach oben reichen und singen, um den Rhythmus zu halten – die singenden Brunnen, zu denen die Herden zum Trinken kommen.",
+      "Abseits der Brunnen gehen Sie mit den Hirten und ihrem Vieh hinaus, hören, wie die Weide im trockenen Land geteilt wird, und teilen Milch und Tee im Gehöft einer Familie.",
+      "Besuche werden stets über einen einheimischen Borana-Guide und mit Zustimmung der Gemeinschaft organisiert, und die Gebühren gehen an die Familien und die Gemeinschaft, die Sie besuchen."
+    ],
+    "includes": [
+      "Ein einheimischer Borana-Guide",
+      "Der Besuch eines in Betrieb befindlichen Brunnens, wo erlaubt",
+      "Zeit mit einer Hirtenfamilie",
+      "Gemeinschaftsgebühren"
+    ]
   },
   "village-homestay": {
     "title": "Bei einer Dorffamilie übernachten",
@@ -69,7 +158,19 @@
     "short": "Homestay",
     "category": "Landwirtschaft und Gemeinschaft",
     "duration": "1 – 3 Nächte",
-    "where": "Lalibela-Hochland, Choke, Awra Amba, Gamo-Hochland"
+    "where": "Lalibela-Hochland, Choke, Awra Amba, Gamo-Hochland",
+    "season": "Okt – Mai",
+    "paragraphs": [
+      "Am Meket-Steilabbruch bei Lalibela beherbergen Dörfer Wanderer in strohgedeckten Tukul-Camps, die sie selbst gebaut haben und betreiben. In den Choke-Bergen empfängt ein Ökodorf Trekker mit einer abendlichen Feier. In Awra Amba unterhält die Weberkooperative ein Gästehaus für Besucher, die über die Tagestour hinaus bleiben möchten.",
+      "Die Tage folgen dem Haushalt: Wasser holen, der Markt, die Felder, am Nachmittag die Kaffeezeremonie. Die Abende gehören dem Essen, dem Gespräch über Ihren Guide und sehr frühem Zubettgehen.",
+      "Die Zimmer sind einfach und sauber, und das Geld geht direkt an die Gemeinschaften, die Sie beherbergen – und genau darum geht es."
+    ],
+    "includes": [
+      "Übernachtungen in gemeinschaftlich geführten Lodges oder Gästehäusern",
+      "Alle Mahlzeiten mit Ihren Gastgebern",
+      "Ein Guide und Übersetzer",
+      "Direkt gezahlte Gemeinschaftsgebühren"
+    ]
   },
   "leave-it-better": {
     "title": "Besser hinterlassen: ein Aufräumtag",
@@ -78,6 +179,19 @@
     "short": "Aufräumtag",
     "category": "Etwas zurückgeben",
     "duration": "Ein halber Tag",
-    "where": "Entoto, die Simien-Pfade, die Ufer des Tanasees"
+    "where": "Entoto, die Simien-Pfade, die Ufer des Tanasees",
+    "season": "Ganzjährig",
+    "paragraphs": [
+      "Ein halbtägiger Aufräumeinsatz passt leicht in eine Reise: ein Abschnitt Waldweg auf dem Entoto oberhalb von Addis Abeba, ein stark begangenes Stück des Simien-Escarpment-Pfads oder ein Ufer des Tanasees bei Bahir Dar. Sie arbeiten in einer kleinen Gruppe mit Handschuhen, Säcken und einem Guide, und der Abfall wird sortiert und ordnungsgemäß abtransportiert.",
+      "Wir führen Aufräumeinsätze nur gemeinsam mit einem örtlichen Parkbüro oder einer Gemeinschaftsgruppe durch, damit die Arbeit gewünscht, organisiert und nützlich ist. Wir bestätigen Partner und Ort vor Ihrer Reise mit Ihnen – nie als inszenierte Fotogelegenheit.",
+      "Jede Reise, die wir durchführen, folgt still demselben Prinzip: mitnehmen, was wir mitgebracht haben, und Camps und Wege so hinterlassen, wie wir sie vorgefunden haben."
+    ],
+    "includes": [
+      "Handschuhe, Säcke und Ausrüstung",
+      "Ein Guide und lokale Koordination",
+      "Fachgerechte Entsorgung des Gesammelten",
+      "Erfrischungen im Anschluss"
+    ],
+    "goodToKnow": "Auf Anfrage mit einem örtlichen Park- oder Gemeinschaftspartner arrangiert und vor Ihrer Reise bestätigt."
   }
 }

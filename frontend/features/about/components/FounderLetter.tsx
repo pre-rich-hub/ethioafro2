@@ -40,38 +40,21 @@ export async function FounderLetter() {
 
       <Reveal delay={120} className="space-y-6 text-pretty text-lg leading-relaxed text-muted-foreground">
         <p className="font-serif text-2xl leading-snug text-foreground sm:text-[1.75rem]">
-          I was born and raised in Bahir Dar, and my life in tourism began
-          there while I was still at school.
+          {t('founderP1')}
         </p>
-        <p>
-          Between classes I worked with visitors in Bahir Dar and up in the
-          Simien Mountains. What started as work alongside my studies became
-          the thing I wanted to do with my life: sharing the cultures,
-          the history, the landscapes and the hospitality of the country I
-          love with people seeing it for the first time.
-        </p>
-        <p>
-          After high school I moved to Addis Ababa to study Tourism and Tour
-          Operations at the Tourism Training Institute, then spent years
-          working for other tour companies — guiding, planning itineraries,
-          looking after guests and managing destinations. Those years taught
-          me every side of the work.
-        </p>
-        <p>
-          {company.name} grew out of that. It is a licensed Ethiopian
-          company built for private, tailor-made journeys, and it is run
-          today by my three brothers, our wider family, our team — and me.
-        </p>
+        <p>{t('founderP2')}</p>
+        <p>{t('founderP3')}</p>
+        <p>{t('founderP4', { company: company.name })}</p>
         <div className="relative mt-10 aspect-[16/10] overflow-hidden">
           <Image
             src={cloudinaryImage('simien-mountains')}
-            alt="The Simien Mountains escarpment at first light"
+            alt={t('founderImageAlt')}
             fill
             sizes="(max-width: 1024px) 100vw, 55vw"
             className="object-cover"
           />
           <p className="absolute bottom-0 left-0 bg-background/95 px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-foreground sm:text-[11px]">
-            The Simien — where it all started
+            {t('founderImageCaption')}
           </p>
         </div>
       </Reveal>

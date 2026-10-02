@@ -22,12 +22,11 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - Catalogue card/meta overlays for tours, destinations, experiences, journal (Step 4)
 - SEO locales: hreflang, sitemap × 5, JSON-LD `inLanguage`, localized metadata (Step 5)
 - QA signed off in [`i18n-qa.md`](i18n-qa.md) (Step 6)
-- GEO: English FAQs, facts, direct answers (destination FAQs still EN)
+- GEO: English FAQs, facts, direct answers; Lalibela + Simien destination FAQs localized (Pass-2)
 
-### Missing / Pass-2
-- Deep catalogue bodies (itineraries, destination paragraphs, journal essays, founder letter) — see Pass-2 in Step 4 + [`i18n-qa.md`](i18n-qa.md)
+### Missing / Pass-2 leftovers
+- Minor chrome labels + journal date filter; native review of Pass-2 MT; Amharic/CMS later — see Step 4 Pass-2 status + [`i18n-qa.md`](i18n-qa.md)
 - Admin stays English-only (out of scope)
-- Amharic / CMS / human-reviewed itinerary MT — later
 
 ---
 
@@ -111,23 +110,30 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - [x] Document pass-2 backlog (below)
 
 ### Implementation notes
-- Overlays live in `features/{tours,destinations,experiences,blog}/data/overlays/{es,fr,de,zh}.json`, keyed by slug; `applyOverlay` falls back to English per field.
+- Overlays live in `features/{tours,destinations,experiences,blog}/data/overlays/{es,fr,de,zh}.json`, keyed by slug; `applyOverlay` falls back to English per field (arrays such as `paragraphs`/`highlights`/`body` replace wholly).
 - RSC pages/components use `getLocale()` from `next-intl/server`; client components (nav dropdowns, `useDestinations`) use `useLocale()` and call the sync `getLocalized*` utils (JSON + data only, safe in client bundles).
 - Experience categories: grouping and `#anchor` ids stay keyed on the **English** category (`slugify`); only the visible label is localized (`getActivityCategoryLabels`).
 - Merge order for tours: English static → locale overlay → live API `from` / `featured`.
 - Metadata `title`/`description` on detail pages use localized fields; list pages now use `generateMetadata` (title from `Crumbs`, description from hero keys; Blog index description still English).
 
-### Pass-2 backlog (not translated yet — still English)
-- **Tour itineraries:** day titles/descriptions, includes/excludes, `style`, `season`, `group`, `days`, `places` labels, price copy ("per person", "Tailor-made")
-- **Destination detail:** `paragraphs`, `highlights`, `bestTime`, `altitude`, `duration`, destination FAQ answers
-- **Experience detail:** `paragraphs`, `includes`, `goodToKnow`, `season`
-- **Journal:** article bodies (`BlogBody`), `date`, `readTime`, `author` role copy, filter label "All Writing"
-- **About:** founder essay / letter body
-- **Hard-coded detail-page chrome** (e.g. "Explore", "Related Journeys", CtaBand copy, breadcrumb "Home"/"Tours") → move into message files
-- **Home `Experiences` feature cards** and other inline English blocks outside the catalogue overlays
-- **Enquiry form** activity chips (`activities[].short`) still read from English data
+### Pass-2 status
+**Done (es, fr, de, zh — deep-merged into Step 4 overlays; card fields kept):**
+- [x] **Destination detail (29):** `bestTime`, `duration`, `altitude`, `highlights[]`, `paragraphs[]`
+- [x] **Destination FAQs:** Lalibela + Simien (`lib/i18n/destination-faq-overlays/`)
+- [x] **Experience detail (9):** `season`, `paragraphs[]`, `includes[]`, `goodToKnow`
+- [x] **Journal (6):** `readTime`, `authorRole`, `body[]`
+- [x] **About founder essay:** `founderP1–P4` + image alt/caption in `messages/*.json`
+- [x] **Tour itineraries (45):** `days`, `style`, `season`, `group`, `from` wording, `includes[]`, `excludes[]`, `itinerary[]`, `places[]`
+- [x] **Enquiry chips:** `EnquiryForm` uses `getLocalizedActivities(locale)` for `short` labels
 
-**Done when:** Listing cards and meta titles/descriptions are localized for all five languages; detail pages at least show localized title + summary.
+**Still English / minor leftovers:**
+- Journal `date` formatting; filter label "All Writing"
+- Some detail-page chrome labels ("At a Glance", "Related Journeys", breadcrumbs) still hard-coded English in places
+- Home `Experiences` feature-card blurbs outside catalogue overlays
+- Native-speaker review of Pass-2 MT drafts before production marketing claims
+- Amharic / CMS — later
+
+**Done when (Pass-2 catalogue goal):** Detail pages show localized deep copy for destinations, tours, experiences, journal, and founder essay.
 
 ---
 

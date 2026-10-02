@@ -13,7 +13,7 @@ import { DestinationOverview } from '@/features/destinations/components/Destinat
 import { DestinationJourneys } from '@/features/destinations/components/DestinationJourneys'
 import { DestinationEnquiry } from '@/features/destinations/components/DestinationEnquiry'
 import { CtaBand } from '@/features/enquiries'
-import { destinationFaqsBySlug } from '@/lib/seo/faq-data'
+import { getDestinationFaqs, getDestinationFaqUi } from '@/lib/i18n/destination-faq-helpers'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 import {
   breadcrumbJsonLd,
@@ -61,7 +61,8 @@ export default async function DestinationPage({
 
   const fallback = getRelatedToursForDestination(d, getLocalizedTours(locale), 3)
   const others = getLocalizedDestinations(locale).filter((o) => o.slug !== d.slug).slice(0, 4)
-  const faqs = destinationFaqsBySlug[d.slug] ?? []
+  const faqs = getDestinationFaqs(d.slug, locale)
+  const faqUi = getDestinationFaqUi(locale)
 
   return (
     <>
@@ -99,13 +100,19 @@ export default async function DestinationPage({
 
       {faqs.length > 0 && (
         <FaqSection
-          title={`Planning ${d.name}`}
-          intro="Season, altitude and how long to stay — answered plainly."
+          title={faqUi ? faqUi.title.replace('{name}', d.name) : `Planning ${d.name}`}
+          intro={faqUi?.intro ?? 'Season, altitude and how long to stay — answered plainly.'}
           items={faqs}
           footerLink={
             d.slug === 'lalibela'
-              ? { label: 'Read: Lalibela at dawn', href: '/blog/lalibela-at-dawn' }
-              : { label: 'When to visit Ethiopia', href: '/blog/when-to-visit-ethiopia' }
+              ? {
+                  label: faqUi?.lalibelaLink ?? 'Read: Lalibela at dawn',
+                  href: '/blog/lalibela-at-dawn',
+                }
+              : {
+                  label: faqUi?.defaultLink ?? 'When to visit Ethiopia',
+                  href: '/blog/when-to-visit-ethiopia',
+                }
           }
         />
       )}

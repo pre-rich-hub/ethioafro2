@@ -49,15 +49,19 @@ Not required for v1 (no Arabic / Hebrew locale).
 
 ## Open backlog (post–v1)
 
-### Pass-2 catalogue bodies (still English)
+### Pass-2 catalogue bodies
 
-See Step 4 in [`i18nplan.md`](i18nplan.md). Priority suggestion:
+**Done (es / fr / de / zh):** destination detail + Lalibela/Simien FAQs, experience detail, journal bodies, About founder essay, **tour itineraries (45)**, enquiry activity chips. See Pass-2 status in [`i18nplan.md`](i18nplan.md).
 
-1. Destination `paragraphs` / highlights / FAQs (high SEO)
-2. About founder essay
-3. Experience detail paragraphs
-4. Tour day itineraries (largest volume — 45 × 4 locales)
-5. Journal article bodies
+Spot-checked locally: `/es/destinations/lalibela`, `/es/tours/the-historic-route`, `/de/about`, `/es/blog/when-to-visit-ethiopia` show translated deep copy.
+
+Translations are **machine-assisted drafts** — schedule native-speaker review before treating them as final marketing copy.
+
+**Remaining (minor):**
+
+1. Detail-page UI chrome still hard-coded English in places (labels, some CtaBand/breadcrumb strings)
+2. Journal date formatting + “All Writing” filter label
+3. Home Experiences feature-card blurbs outside catalogue overlays
 
 ### Product / platform later
 
@@ -65,13 +69,11 @@ See Step 4 in [`i18nplan.md`](i18nplan.md). Priority suggestion:
 - CMS for catalogue copy instead of JSON overlays
 - Admin UI translation (out of scope)
 - Currency / price localization (USD display stays)
-- Human review of machine-assisted itinerary translations before publish
 
 ### Minor chrome leftovers
 
-- Some detail-page labels still English (see Pass-2 list)
 - Blog index meta description still English shell
-- Enquiry form activity chips may still show English `short` depending on form wiring
+- A few hard-coded detail chrome strings (see remaining list above)
 
 ---
 
