@@ -13,6 +13,17 @@ import { BlogHeader } from '@/features/blog/components/BlogHeader'
 import { RelatedPosts } from '@/features/blog/components/RelatedPosts'
 import { BlogLeadImage } from '@/features/blog/components/BlogLeadImage'
 import { BlogBody } from '@/features/blog/components/BlogBody'
+import { BlogRelatedCatalogue } from '@/features/blog/components/BlogRelatedCatalogue'
+import { getRelatedCatalogueForPost } from '@/features/blog/utils/blog-related.utils'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+import { JsonLd } from '@/components/seo/JsonLd'
+import {
+  articleJsonLd,
+  breadcrumbJsonLd,
+  graphJsonLd,
+  organizationJsonLd,
+} from '@/lib/seo/json-ld'
+
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }))
 }
@@ -24,17 +35,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const p = getPost(slug)
-  if (!p) return { title: 'Article not found' }
+  if (!p) {
+    return { title: 'Article not found', robots: { index: false, follow: false } }
+  }
   return {
-    title: p.title,
-    description: p.excerpt,
-    authors: [{ name: p.author }],
-    openGraph: {
+    ...buildPageMetadata({
       title: p.title,
       description: p.excerpt,
+      path: `/blog/${slug}`,
+      image: p.image,
+      imageAlt: p.title,
       type: 'article',
-      images: [p.image],
-    },
+    }),
+    authors: [{ name: p.author }],
   }
 }
 
@@ -50,9 +63,21 @@ export default async function ArticlePage({
   const index = posts.findIndex((p) => p.slug === post.slug)
   const next = posts[(index + 1) % posts.length]
   const more = posts.filter((p) => p.slug !== post.slug).slice(0, 3)
+  const related = getRelatedCatalogueForPost(post.slug)
 
   return (
     <article>
+      <JsonLd
+        data={graphJsonLd(
+          organizationJsonLd(),
+          articleJsonLd(post),
+          breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: 'Journal', path: '/blog' },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        )}
+      />
       {/* Header */}
       <BlogHeader post={post} />
 
@@ -61,6 +86,8 @@ export default async function ArticlePage({
 
       {/* Body */}
       <BlogBody post={post} next={next} />
+
+      <BlogRelatedCatalogue destinations={related.destinations} tours={related.tours} />
 
       {/* More reading */}
       <RelatedPosts more={more} />

@@ -37,6 +37,12 @@ export function Hero() {
           >
             Explore Ethiopia
           </Link>
+          <Link
+            href="/destinations"
+            className="group inline-flex items-center justify-center gap-2.5 rounded-sm border border-background/40 bg-background/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-background backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-background/70 hover:bg-background/20 sm:text-xs"
+          >
+            See destinations
+          </Link>
         </div>
       </div>
     </section>

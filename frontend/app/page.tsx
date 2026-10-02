@@ -10,12 +10,19 @@ import { Testimonial } from '@/features/home/components/Testimonial'
 import { Gallery } from '@/features/home/components/Gallery'
 import { PlanJourney } from '@/features/enquiries'
 import { getToursData } from '@/features/tours/api/tour-data.api'
+import { JsonLd } from '@/components/seo/JsonLd'
+import {
+  graphJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from '@/lib/seo/json-ld'
 
 export default async function Page() {
   const tours = await getToursData()
 
   return (
     <>
+      <JsonLd data={graphJsonLd(organizationJsonLd(), websiteJsonLd())} />
       <Hero />
       <BrandIntro />
       <Destinations />
@@ -36,4 +43,3 @@ export default async function Page() {
     </>
   )
 }
-

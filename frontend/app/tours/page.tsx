@@ -1,15 +1,20 @@
-import type { Metadata } from 'next'
 import { PageHero } from '@/components/common/PageHero'
 import { CtaBand } from '@/features/enquiries'
 import { getToursData } from '@/features/tours/api/tour-data.api'
 import { TourTravelStyles } from '@/features/tours/components/TourTravelStyles'
 import { TourCollection } from '@/features/tours/components/TourCollection'
 import { TourPromises } from '@/features/tours/components/TourPromises'
-export const metadata: Metadata = {
+import { cloudinaryImage } from '@/lib/cloudinary'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+
+export const metadata = buildPageMetadata({
   title: 'Tours & Journeys',
   description:
     'Private, tailor-made Ethiopian itineraries — historic route, highland wildlife, Danakil expedition, Omo immersion, festival, photography and birding journeys. Every route drawn from scratch.',
-}
+  path: '/tours',
+  image: cloudinaryImage('simien-mountains', 1200),
+  imageAlt: 'Simien Mountains escarpment in northern Ethiopia',
+})
 
 export default async function ToursPage() {
   const tours = await getToursData()

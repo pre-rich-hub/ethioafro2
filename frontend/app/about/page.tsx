@@ -2,13 +2,16 @@ import { PageHero } from '@/components/common/PageHero'
 import { CompanyTimeline, FamilyTeam, FounderLetter, InternationalPerspective, ResponsibleEmployment } from '@/features/about'
 import { CtaBand } from '@/features/enquiries'
 import { cloudinaryImage } from '@/lib/cloudinary'
-import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: 'Our Story',
   description:
     'Simien Ethiopia Tours is a licensed, family-run Ethiopian tour company founded by Mihiret Getenat — born in Bahir Dar, trained in Addis Ababa, and guiding travellers since school days.',
-}
+  path: '/about',
+  image: cloudinaryImage('lake-tana', 1200),
+  imageAlt: 'Lake Tana near Bahir Dar, Ethiopia',
+})
 
 export default function AboutPage() {
   return (

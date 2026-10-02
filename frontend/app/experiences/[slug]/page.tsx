@@ -16,6 +16,15 @@ import { ExperienceStory } from '@/features/experiences/components/ExperienceSto
 import { ExperiencePlaces } from '@/features/experiences/components/ExperiencePlaces'
 import { ExperienceJourneys } from '@/features/experiences/components/ExperienceJourneys'
 import { ExperienceEnquiry } from '@/features/experiences/components/ExperienceEnquiry'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+import { JsonLd } from '@/components/seo/JsonLd'
+import {
+  breadcrumbJsonLd,
+  experienceJsonLd,
+  graphJsonLd,
+  organizationJsonLd,
+} from '@/lib/seo/json-ld'
+
 export function generateStaticParams() {
   return activities.map((a) => ({ slug: a.slug }))
 }
@@ -27,12 +36,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const a = getActivity(slug)
-  if (!a) return {}
-  return {
+  if (!a) {
+    return { title: 'Experience not found', robots: { index: false, follow: false } }
+  }
+  return buildPageMetadata({
     title: a.title,
     description: a.teaser,
-    openGraph: { title: a.title, description: a.teaser, images: [a.image] },
-  }
+    path: `/experiences/${slug}`,
+    image: a.image,
+    imageAlt: a.title,
+  })
 }
 
 export default async function ActivityPage({
@@ -57,6 +70,17 @@ export default async function ActivityPage({
 
   return (
     <>
+      <JsonLd
+        data={graphJsonLd(
+          organizationJsonLd(),
+          experienceJsonLd(a),
+          breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: 'Experiences', path: '/experiences' },
+            { name: a.title, path: `/experiences/${a.slug}` },
+          ]),
+        )}
+      />
       <PageHero
         eyebrow={`Experiences · ${a.category}`}
         title={a.title}

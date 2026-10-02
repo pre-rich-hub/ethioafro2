@@ -2,13 +2,16 @@ import { PageHero } from '@/components/common/PageHero'
 import { LegalContactCard, LegalContents, LegalSections } from '@/features/legal'
 import { termsSections } from '@/features/legal/data/terms.data'
 import { cloudinaryImage } from '@/lib/cloudinary'
-import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: 'Terms & Conditions',
   description:
     'Booking, payment, cancellation, liability, insurance and guest responsibilities for private journeys with Simien Ethiopia Tours.',
-}
+  path: '/terms',
+  image: cloudinaryImage('simien-mountains', 1200),
+  imageAlt: 'The Simien Mountains escarpment at first light',
+})
 
 export default function TermsPage() {
   return (

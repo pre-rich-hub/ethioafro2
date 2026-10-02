@@ -1,13 +1,16 @@
 import { DestinationGrid, DestinationHero } from '@/features/destinations'
-import type { Metadata } from 'next'
 import { CtaBand } from '@/features/enquiries'
 import { cloudinaryImage } from '@/lib/cloudinary'
+import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: 'Destinations',
   description:
     'Rock-hewn churches, Afro-alpine plateaus, sulphur springs below sea level and the most culturally dense valley on earth — the eight regions of Ethiopia we know best.',
-}
+  path: '/destinations',
+  image: cloudinaryImage('lalibela', 1200),
+  imageAlt: 'Rock-hewn churches of Lalibela, Ethiopia',
+})
 
 export default function DestinationsPage() {
   return (

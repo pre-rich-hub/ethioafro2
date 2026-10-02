@@ -28,6 +28,16 @@ import { TourInclusions } from '@/features/tours/components/TourInclusions'
 import { TourEnquiry } from '@/features/tours/components/TourEnquiry'
 import { RelatedTours } from '@/features/tours/components/RelatedTours'
 import { TourPriceCard } from '@/features/tours/components/TourPriceCard'
+import { TourRelatedExperiences } from '@/features/tours/components/TourRelatedExperiences'
+import { getRelatedExperiencesForTour } from '@/features/tours/utils/tour-experiences.utils'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+import { JsonLd } from '@/components/seo/JsonLd'
+import {
+  breadcrumbJsonLd,
+  graphJsonLd,
+  organizationJsonLd,
+  tourJsonLd,
+} from '@/lib/seo/json-ld'
 export function generateStaticParams() {
   return tours.map((t) => ({ slug: t.slug }))
 }
@@ -39,12 +49,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const t = getTour(slug)
-  if (!t) return { title: 'Journey not found' }
-  return {
+  if (!t) {
+    return { title: 'Journey not found', robots: { index: false, follow: false } }
+  }
+  return buildPageMetadata({
     title: t.title,
     description: t.summary,
-    openGraph: { title: t.title, description: t.summary, images: [t.image] },
-  }
+    path: `/tours/${slug}`,
+    image: t.image,
+    imageAlt: t.title,
+  })
 }
 
 export default async function TourPage({
@@ -58,6 +72,7 @@ export default async function TourPage({
 
   const others = tours.filter((o) => o.slug !== t.slug).slice(0, 3)
   const nightsLabel = `${t.nights} ${t.nights === 1 ? 'night' : 'nights'}`
+  const relatedExperiences = getRelatedExperiencesForTour(t.slug)
 
   const priceCard = (
     <TourPriceCard t={t} nightsLabel={nightsLabel} />
@@ -65,6 +80,17 @@ export default async function TourPage({
 
   return (
     <>
+      <JsonLd
+        data={graphJsonLd(
+          organizationJsonLd(),
+          tourJsonLd(t),
+          breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: 'Tours', path: '/tours' },
+            { name: t.title, path: `/tours/${t.slug}` },
+          ]),
+        )}
+      />
       <PageHero
         eyebrow={t.style}
         title={t.title}
@@ -102,6 +128,8 @@ export default async function TourPage({
 
       {/* Enquire */}
       <TourEnquiry t={t} />
+
+      <TourRelatedExperiences experiences={relatedExperiences} />
 
       {/* Other journeys */}
       <RelatedTours others={others} />

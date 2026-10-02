@@ -5,11 +5,17 @@ import { activities, activityCategories } from '@/features/experiences/data/expe
 import { ExperienceIntroduction } from '@/features/experiences/components/ExperienceIntroduction'
 import { ExperienceCategory } from '@/features/experiences/components/ExperienceCategory'
 import { LongerAdventures } from '@/features/experiences/components/LongerAdventures'
-export const metadata: Metadata = {
+import { cloudinaryImage } from '@/lib/cloudinary'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+
+export const metadata: Metadata = buildPageMetadata({
   title: 'Experiences',
   description:
     'Add-on experiences for any Ethiopia journey — injera and cooking classes, tej and coffee tastings, running at altitude, Rift Valley cycling, farm days, village stays and clean-up days.',
-}
+  path: '/experiences',
+  image: cloudinaryImage('coffee-cupping-and-ceremony', 1200),
+  imageAlt: 'Ethiopian coffee ceremony',
+})
 
 export default function ExperiencesPage() {
   return (

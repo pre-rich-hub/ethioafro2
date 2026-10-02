@@ -2,13 +2,16 @@ import { PageHero } from '@/components/common/PageHero'
 import { LegalContactCard, LegalContents, LegalSections } from '@/features/legal'
 import { privacySections } from '@/features/legal/data/privacy.data'
 import { cloudinaryImage } from '@/lib/cloudinary'
-import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: 'Privacy Policy',
   description:
     'How Simien Ethiopia Tours collects, uses, shares and protects the information you give us when planning a journey.',
-}
+  path: '/privacy',
+  image: cloudinaryImage('simien-mountains', 1200),
+  imageAlt: 'The Simien Mountains escarpment at first light',
+})
 
 export default function PrivacyPage() {
   return (

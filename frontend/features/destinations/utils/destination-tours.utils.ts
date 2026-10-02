@@ -88,3 +88,12 @@ export function getRelatedToursForDestination(
 
   return [...matched, ...fillers].slice(0, limit)
 }
+
+/** Resolve a tour `places` label to a destination slug via the alias map. */
+export function getDestinationSlugForPlace(place: string): string | undefined {
+  const p = normalize(place)
+  for (const [slug, aliases] of Object.entries(destinationPlaceAliases)) {
+    if (aliases.some((alias) => normalize(alias) === p)) return slug
+  }
+  return undefined
+}

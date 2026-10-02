@@ -17,7 +17,7 @@ export function TourCard({
     >
       <Image
         src={t.image || '/placeholder.svg'}
-        alt={t.title}
+        alt={`${t.title} — Ethiopia journey`}
         fill
         sizes={sizes}
         className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"

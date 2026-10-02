@@ -1,13 +1,18 @@
-import type { Metadata } from 'next'
 import { PageHero } from '@/components/common/PageHero'
 import { CtaBand } from '@/features/enquiries'
 import { BlogArchive } from '@/features/blog/components/BlogArchive'
 import { JournalNewsletter } from '@/features/blog/components/JournalNewsletter'
-export const metadata: Metadata = {
+import { cloudinaryImage } from '@/lib/cloudinary'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+
+export const metadata = buildPageMetadata({
   title: 'The Journal',
   description:
     'Planning guidance, destination essays and dispatches from the designers and guides who run our Ethiopian journeys.',
-}
+  path: '/blog',
+  image: cloudinaryImage('coffee-cupping-and-ceremony', 1200),
+  imageAlt: 'Ethiopian coffee ceremony',
+})
 
 export default function BlogPage() {
   return (

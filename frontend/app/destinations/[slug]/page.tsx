@@ -10,6 +10,15 @@ import { DestinationOverview } from '@/features/destinations/components/Destinat
 import { DestinationJourneys } from '@/features/destinations/components/DestinationJourneys'
 import { DestinationEnquiry } from '@/features/destinations/components/DestinationEnquiry'
 import { CtaBand } from '@/features/enquiries'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+import { JsonLd } from '@/components/seo/JsonLd'
+import {
+  breadcrumbJsonLd,
+  destinationJsonLd,
+  graphJsonLd,
+  organizationJsonLd,
+} from '@/lib/seo/json-ld'
+
 export function generateStaticParams() {
   return destinations.map((d) => ({ slug: d.slug }))
 }
@@ -21,12 +30,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const d = getDestination(slug)
-  if (!d) return { title: 'Destination not found' }
-  return {
+  if (!d) {
+    return { title: 'Destination not found', robots: { index: false, follow: false } }
+  }
+  return buildPageMetadata({
     title: d.name,
     description: d.intro,
-    openGraph: { title: d.name, description: d.intro, images: [d.image] },
-  }
+    path: `/destinations/${slug}`,
+    image: d.image,
+    imageAlt: d.name,
+  })
 }
 
 export default async function DestinationPage({
@@ -43,6 +56,17 @@ export default async function DestinationPage({
 
   return (
     <>
+      <JsonLd
+        data={graphJsonLd(
+          organizationJsonLd(),
+          destinationJsonLd(d),
+          breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: 'Destinations', path: '/destinations' },
+            { name: d.name, path: `/destinations/${d.slug}` },
+          ]),
+        )}
+      />
       <PageHero
         eyebrow={`${d.tag} · ${d.region}`}
         title={d.name}

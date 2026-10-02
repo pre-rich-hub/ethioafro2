@@ -1,13 +1,16 @@
 import { PageHero } from '@/components/common/PageHero'
 import { ContactEnquiry, ContactProcess, ContactPromises } from '@/features/contact'
 import { cloudinaryImage } from '@/lib/cloudinary'
-import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: 'Contact Us',
   description:
     'Speak directly with an Addis-based travel designer about your Ethiopian journey. We are available Monday to Saturday, 8:00 AM - 5:30 PM.',
-}
+  path: '/contact',
+  image: cloudinaryImage('simien-mountains', 1200),
+  imageAlt: 'Simien Mountains escarpment in northern Ethiopia',
+})
 
 export default function ContactPage() {
   return (

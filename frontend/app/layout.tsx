@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer'
 import { Analytics } from '@/components/common/Analytics'
 import { FloatingSupport } from '@/features/support'
 import { RouteProgress } from '@/components/layout/RouteProgress'
+import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/seo/metadata'
 import './globals.css'
 
 const inter = Inter({
@@ -21,15 +22,17 @@ const cormorant = Fraunces({
   display: 'swap',
 })
 
+const defaultTitle = 'Simien Ethiopia Tours — Journeys Through the Land of Origins'
+const defaultDescription =
+  'Private, tailor-made journeys through Ethiopia with a licensed Addis Ababa-based operator. Walk through kingdoms carved from stone, wake above the clouds in the Simien Mountains, and share coffee with families who have welcomed travellers for generations.'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://simienethiopiatours.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Simien Ethiopia Tours — Journeys Through the Land of Origins',
+    default: defaultTitle,
     template: '%s · Simien Ethiopia Tours',
   },
-  description:
-    'Private, tailor-made journeys through Ethiopia with a licensed Addis Ababa-based operator. Walk through kingdoms carved from stone, wake above the clouds in the Simien Mountains, and share coffee with families who have welcomed travellers for generations.',
-  generator: 'v0.app',
+  description: defaultDescription,
   keywords: [
     'Simien Ethiopia Tours',
     'Ethiopia tour operator',
@@ -42,19 +45,29 @@ export const metadata: Metadata = {
     'South Omo tribes',
     'Ethiopia travel',
   ],
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
-    title: 'Simien Ethiopia Tours — Journeys Through the Land of Origins',
+    title: defaultTitle,
     description:
       'Private, tailor-made journeys through Ethiopia, designed around you by a licensed local operator.',
+    url: SITE_URL,
     type: 'website',
     images: [
       {
-        url: '/images/logo.png',
-        width: 1254,
-        height: 1254,
-        alt: 'Simien Ethiopia Tours',
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        alt: 'Rock-hewn churches of Lalibela, Ethiopia',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: defaultTitle,
+    description:
+      'Private, tailor-made journeys through Ethiopia, designed around you by a licensed local operator.',
+    images: [DEFAULT_OG_IMAGE],
   },
   icons: {
     icon: [
