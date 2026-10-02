@@ -1,0 +1,83 @@
+{
+  "injera-and-ethiopian-cooking": {
+    "title": "Injera et cuisine éthiopienne",
+    "teaser": "Versez l'injera sur le mitad, préparez les ragoûts qui l'accompagnent et mangez ensemble à l'éthiopienne.",
+    "intro": "L'injera est au cœur de tout repas éthiopien — une galette souple et légèrement acidulée faite de teff, la minuscule céréale originaire des hauts plateaux d'Éthiopie. Dans une cuisine familiale d'Addis-Abeba, vous apprenez à la préparer, ainsi que tout ce que l'on sert dessus.",
+    "short": "Cours de cuisine",
+    "category": "Gastronomie et boissons",
+    "duration": "Une demi-journée",
+    "where": "Addis-Abeba"
+  },
+  "tej-tella-and-areki": {
+    "title": "Tej, tella et areki",
+    "teaser": "Vin de miel, bière maison et alcool clair des hauts plateaux — avec des musiciens azmari qui improvisent pendant que vous dégustez.",
+    "intro": "L'Éthiopie brasse ses propres boissons depuis très longtemps. Lors de cette soirée, vous goûtez les trois boissons traditionnelles — tej, tella et areki — et apprenez comment chacune est fabriquée, pour finir dans une maison traditionnelle où jouent des musiciens azmari.",
+    "short": "Boissons traditionnelles",
+    "category": "Gastronomie et boissons",
+    "duration": "Une soirée",
+    "where": "Addis-Abeba"
+  },
+  "coffee-cupping-and-ceremony": {
+    "title": "Dégustation et cérémonie du café",
+    "teaser": "Goûtez côte à côte des cafés du Sidama, de Yirgacheffe, de Jimma et de Harar, puis partagez une cérémonie dans un foyer familial.",
+    "intro": "L'Éthiopie est le berceau du café arabica, et ses régions ont des saveurs étonnamment différentes. Cette dégustation les met côte à côte comme le font les professionnels, puis montre comment les Éthiopiens eux-mêmes boivent le café — lentement, ensemble, en trois tournées.",
+    "short": "Dégustation de café",
+    "category": "Café",
+    "duration": "2 à 3 heures",
+    "where": "Addis-Abeba, ou n'importe quelle région caféière"
+  },
+  "run-where-champions-train": {
+    "title": "Courir là où s'entraînent les champions",
+    "teaser": "Une course à l'aube sur les sentiers forestiers d'Entoto, vers 3 000 mètres, là où s'entraînent les grands coureurs de fond éthiopiens.",
+    "intro": "Au-dessus d'Addis-Abeba, la forêt d'eucalyptus du mont Entoto est l'endroit où des générations de coureurs éthiopiens ont forgé leur endurance — Haile Gebrselassie s'y entraînait au moins trois fois par semaine. Rejoignez la foule matinale sur ses sentiers de terre.",
+    "short": "Course à pied",
+    "category": "Actif",
+    "duration": "Un petit matin",
+    "where": "Entoto, Addis-Abeba"
+  },
+  "rift-valley-cycling-day": {
+    "title": "Une journée à vélo dans le Rift",
+    "teaser": "Des routes tranquilles entre les lacs de la vallée du Rift, des villages sur le chemin et un véhicule d'assistance jamais loin derrière.",
+    "intro": "La vallée du Rift centrale offre l'un des plus beaux terrains de cyclisme d'Éthiopie — plat à légèrement vallonné, bordé de lacs et riche en vie villageoise. Une sortie à la journée vous mène sur ses routes tranquilles avec un guide et un véhicule d'assistance.",
+    "short": "Vélo",
+    "category": "Actif",
+    "duration": "Une journée entière",
+    "where": "Vallée centrale du Rift"
+  },
+  "teff-farm-day": {
+    "title": "Une journée dans une ferme de teff",
+    "teaser": "Labourez avec des bœufs, coupez et battez le teff qui devient injera, et partagez le déjeuner avec la famille qui le cultive.",
+    "intro": "La plupart des Éthiopiens sont encore agriculteurs, et le teff — la céréale de l'injera — est la culture des hauts plateaux. Passez une journée avec une famille d'agriculteurs, à travailler à ses côtés selon ce que la saison exige.",
+    "short": "Journée à la ferme",
+    "category": "Ferme et communauté",
+    "duration": "Une journée entière",
+    "where": "Villages des hauts plateaux"
+  },
+  "herding-with-the-borana": {
+    "title": "Bétail, puits et Borana",
+    "teaser": "Passez du temps avec les éleveurs borana — aux puits chantants et avec le bétail autour duquel tourne leur mode de vie.",
+    "intro": "Pour les Borana de l'extrême sud de l'Éthiopie, le bétail est richesse, nourriture et culture. Avec un guide local, vous passez du temps avec une famille d'éleveurs et voyez comment l'eau et le bétail rythment chaque jour.",
+    "short": "Bétail et élevage",
+    "category": "Ferme et communauté",
+    "duration": "Une demi-journée ou plus",
+    "where": "Borana, autour de Yabelo"
+  },
+  "village-homestay": {
+    "title": "Séjourner chez une famille de village",
+    "teaser": "Dormez dans un lodge ou une maison d'hôtes communautaire et partagez la vie quotidienne — repas, marchés, travail et soirées au coin du feu.",
+    "intro": "La façon la plus rapide de comprendre un lieu est d'y séjourner. Dans le nord comme dans le sud, des communautés gèrent leurs propres lodges et maisons d'hôtes simples, et une nuit ou deux sur place apportent une profondeur qu'aucun hôtel ne peut offrir.",
+    "short": "Chez l'habitant",
+    "category": "Ferme et communauté",
+    "duration": "1 à 3 nuits",
+    "where": "Hauts plateaux de Lalibela, Choke, Awra Amba, hauts plateaux du Gamo"
+  },
+  "leave-it-better": {
+    "title": "Laisser mieux qu'on ne l'a trouvé : une journée de nettoyage",
+    "teaser": "Offrez une matinée aux lieux que vous visitez — un nettoyage guidé aux côtés des habitants qui en prennent soin.",
+    "intro": "Les lieux populaires portent les traces des visiteurs. Une matinée de nettoyage est une manière simple et concrète de rendre quelque chose, en travaillant aux côtés des habitants sur un sentier, un belvédère ou une rive.",
+    "short": "Journée de nettoyage",
+    "category": "Redonner",
+    "duration": "Une demi-journée",
+    "where": "Entoto, les sentiers du Simien, les rives du lac Tana"
+  }
+}

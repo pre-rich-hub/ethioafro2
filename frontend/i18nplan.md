@@ -102,12 +102,29 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - Where a locale string is missing, show English and mark `inLanguage` accurately in metadata when partially translated
 
 ### Tasks
-- [ ] Define `Localized<T>` overlay types + loaders (`getTour(slug, locale)`, etc.)
-- [ ] Translate destination names/teasers/intros (29) — highest SEO value
-- [ ] Translate tour titles/teasers/summaries (45) — card + meta level
-- [ ] Translate experience + journal card fields
-- [ ] Wire detail pages to localized fields; leave deep itinerary English until pass 2
-- [ ] Document pass-2 backlog: full itineraries, journal bodies, About founder letter
+- [x] Define `Localized<T>` overlay types + loaders (`getTour(slug, locale)`, `getLocalizedTours`, `getDestination` / `getLocalizedDestinations`, `getActivity` / `getLocalizedActivities`, `getPost` / `getLocalizedPosts`, `getToursData(locale)`, `getTourData(slug, locale)`) — `lib/i18n/localized.ts` + `features/*/data/overlays/`
+- [x] Translate destination names/teasers/intros/tag/region (29) — es, fr, de, zh
+- [x] Translate tour titles/teasers/summaries (45) — es, fr, de, zh
+- [x] Translate experience (9: title, teaser, intro, short, category, duration, where) + journal (6: title, excerpt, category, directAnswer) card fields — es, fr, de, zh
+- [x] Wire detail pages to localized fields; leave deep itinerary English until pass 2 (home, tours, destinations, experiences, blog pages + `DestinationGrid`, `Destinations` carousel, `BlogArchive`/`JournalTeaser`, Footer, Destinations/Tours/Experiences nav dropdowns)
+- [x] Document pass-2 backlog (below)
+
+### Implementation notes
+- Overlays live in `features/{tours,destinations,experiences,blog}/data/overlays/{es,fr,de,zh}.json`, keyed by slug; `applyOverlay` falls back to English per field.
+- RSC pages/components use `getLocale()` from `next-intl/server`; client components (nav dropdowns, `useDestinations`) use `useLocale()` and call the sync `getLocalized*` utils (JSON + data only, safe in client bundles).
+- Experience categories: grouping and `#anchor` ids stay keyed on the **English** category (`slugify`); only the visible label is localized (`getActivityCategoryLabels`).
+- Merge order for tours: English static → locale overlay → live API `from` / `featured`.
+- Metadata `title`/`description` on detail pages use localized fields; list-page static `metadata` objects (tours, destinations, experiences, blog index) remain English until Step 5 (`generateMetadata` + hreflang).
+
+### Pass-2 backlog (not translated yet — still English)
+- **Tour itineraries:** day titles/descriptions, includes/excludes, `style`, `season`, `group`, `days`, `places` labels, price copy ("per person", "Tailor-made")
+- **Destination detail:** `paragraphs`, `highlights`, `bestTime`, `altitude`, `duration`, destination FAQ answers
+- **Experience detail:** `paragraphs`, `includes`, `goodToKnow`, `season`
+- **Journal:** article bodies (`BlogBody`), `date`, `readTime`, `author` role copy, filter label "All Writing"
+- **About:** founder essay / letter body
+- **Hard-coded detail-page chrome** (e.g. "Explore", "Related Journeys", CtaBand copy, breadcrumb "Home"/"Tours") → move into message files
+- **Home `Experiences` feature cards** and other inline English blocks outside the catalogue overlays
+- **Enquiry form** activity chips (`activities[].short`) still read from English data
 
 **Done when:** Listing cards and meta titles/descriptions are localized for all five languages; detail pages at least show localized title + summary.
 

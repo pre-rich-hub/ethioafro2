@@ -1,10 +1,15 @@
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { Reveal } from '@/components/common/Reveal'
 import { activityCategories } from '@/features/experiences/data/experience.data'
-import { slugify } from '@/features/experiences/utils/experience.utils'
+import {
+  getActivityCategoryLabels,
+  slugify,
+} from '@/features/experiences/utils/experience.utils'
 
 export async function ExperienceIntroduction() {
   const t = await getTranslations('Experiences')
+  const locale = await getLocale()
+  const categoryLabels = getActivityCategoryLabels(locale)
 
   return (
     <section className="shell grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-20 lg:py-24">
@@ -31,7 +36,7 @@ export async function ExperienceIntroduction() {
                 href={`#${slugify(c)}`}
                 className="inline-block border border-border bg-card px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:border-accent hover:text-foreground sm:text-[11px]"
               >
-                {c}
+                {categoryLabels[c] ?? c}
               </a>
             </li>
           ))}

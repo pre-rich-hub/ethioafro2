@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { Hero } from '@/features/home/components/Hero'
 import { BrandIntro } from '@/features/home/components/BrandIntro'
 import { WhyEthiopia } from '@/features/home/components/WhyEthiopia'
@@ -20,7 +20,8 @@ import {
 } from '@/lib/seo/json-ld'
 
 export default async function Page() {
-  const tours = await getToursData()
+  const locale = await getLocale()
+  const tours = await getToursData(locale)
   const t = await getTranslations('Home')
 
   return (

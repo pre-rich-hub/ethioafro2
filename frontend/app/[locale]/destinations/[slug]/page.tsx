@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getLocale } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { FaqSection } from '@/components/seo/FaqSection'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { destinations } from '@/features/destinations/data/destination.data'
-import { getDestination } from '@/features/destinations/utils/destination.utils'
+import { getDestination, getLocalizedDestinations } from '@/features/destinations/utils/destination.utils'
 import { getRelatedToursForDestination } from '@/features/destinations/utils/destination-tours.utils'
-import { tours } from '@/features/tours/data/tour.data'
+import { getLocalizedTours } from '@/features/tours/utils/tour-catalog.utils'
 
 import { DestinationOverview } from '@/features/destinations/components/DestinationOverview'
 import { DestinationJourneys } from '@/features/destinations/components/DestinationJourneys'
@@ -32,7 +33,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const d = getDestination(slug)
+  const locale = await getLocale()
+  const d = getDestination(slug, locale)
   if (!d) {
     return { title: 'Destination not found', robots: { index: false, follow: false } }
   }
@@ -51,11 +53,12 @@ export default async function DestinationPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const d = getDestination(slug)
+  const locale = await getLocale()
+  const d = getDestination(slug, locale)
   if (!d) notFound()
 
-  const fallback = getRelatedToursForDestination(d, tours, 3)
-  const others = destinations.filter((o) => o.slug !== d.slug).slice(0, 4)
+  const fallback = getRelatedToursForDestination(d, getLocalizedTours(locale), 3)
+  const others = getLocalizedDestinations(locale).filter((o) => o.slug !== d.slug).slice(0, 4)
   const faqs = destinationFaqsBySlug[d.slug] ?? []
 
   return (

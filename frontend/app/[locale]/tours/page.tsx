@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { FaqSection } from '@/components/seo/FaqSection'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -23,7 +23,8 @@ export const metadata = buildPageMetadata({
 })
 
 export default async function ToursPage() {
-  const tours = await getToursData()
+  const locale = await getLocale()
+  const tours = await getToursData(locale)
   const t = await getTranslations('Tours')
   const tc = await getTranslations('Crumbs')
   const ts = await getTranslations('Shared')

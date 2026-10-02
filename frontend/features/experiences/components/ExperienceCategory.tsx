@@ -6,11 +6,13 @@ import { slugify } from '@/features/experiences/utils/experience.utils'
 
 type Props = {
   c: ActivityCategory
+  /** Localized display label; `c` stays the English key for anchors. */
+  label?: string
   ci: number
   items: Activity[]
 }
 
-export function ExperienceCategory({ c, ci, items }: Props) {
+export function ExperienceCategory({ c, label, ci, items }: Props) {
   return (
     <section
             key={c}
@@ -22,7 +24,7 @@ export function ExperienceCategory({ c, ci, items }: Props) {
                 <span className="font-serif text-lg text-accent">
                   {String(ci + 1).padStart(2, '0')}
                 </span>
-                <h2 className="text-3xl leading-tight text-foreground sm:text-4xl">{c}</h2>
+                <h2 className="text-3xl leading-tight text-foreground sm:text-4xl">{label ?? c}</h2>
               </Reveal>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {items.map((a, i) => (

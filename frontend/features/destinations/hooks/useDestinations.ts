@@ -1,10 +1,12 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import { destinations } from '../data/destination.data'
+import { useMemo, useRef, useState } from 'react'
+import { useLocale } from 'next-intl'
+import { getLocalizedDestinations } from '../utils/destination.utils'
 
 export function useDestinations() {
-  const featured = destinations.slice(0, 6)
+  const locale = useLocale()
+  const featured = useMemo(() => getLocalizedDestinations(locale).slice(0, 6), [locale])
   const trackRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useState(0)
 

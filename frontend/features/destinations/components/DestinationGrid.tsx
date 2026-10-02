@@ -1,14 +1,14 @@
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { Reveal } from '@/components/common/Reveal'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { DestinationCard } from './DestinationCard'
-import { destinations } from '../data/destination.data'
-import { getDestinationRegions } from '../utils/destination.utils'
-
-const regions = getDestinationRegions(destinations)
+import { getDestinationRegions, getLocalizedDestinations } from '../utils/destination.utils'
 
 export async function DestinationGrid() {
   const t = await getTranslations('Destinations')
+  const locale = await getLocale()
+  const destinations = getLocalizedDestinations(locale)
+  const regions = getDestinationRegions(destinations)
 
   return (
     <section className="shell py-16 sm:py-20 lg:py-28">

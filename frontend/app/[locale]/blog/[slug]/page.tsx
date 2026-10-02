@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getLocale } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/common/Reveal'
 import { PostCard } from '@/features/blog/components/BlogCard'
 import { CtaBand } from '@/features/enquiries'
-import { getPost } from '@/features/blog/utils/blog.utils'
+import { getLocalizedPosts, getPost } from '@/features/blog/utils/blog.utils'
 import { posts } from '@/features/blog/data/blog.data'
 
 import { BlogHeader } from '@/features/blog/components/BlogHeader'
@@ -34,7 +35,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const p = getPost(slug)
+  const locale = await getLocale()
+  const p = getPost(slug, locale)
   if (!p) {
     return { title: 'Article not found', robots: { index: false, follow: false } }
   }
@@ -57,13 +59,15 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const post = getPost(slug)
+  const locale = await getLocale()
+  const post = getPost(slug, locale)
   if (!post) notFound()
 
-  const index = posts.findIndex((p) => p.slug === post.slug)
-  const next = posts[(index + 1) % posts.length]
-  const more = posts.filter((p) => p.slug !== post.slug).slice(0, 3)
-  const related = getRelatedCatalogueForPost(post.slug)
+  const localizedPosts = getLocalizedPosts(locale)
+  const index = localizedPosts.findIndex((p) => p.slug === post.slug)
+  const next = localizedPosts[(index + 1) % localizedPosts.length]
+  const more = localizedPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
+  const related = getRelatedCatalogueForPost(post.slug, locale)
 
   return (
     <article>

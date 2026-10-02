@@ -1,9 +1,12 @@
+import { getLocale } from 'next-intl/server'
 import { BlogList } from '@/features/blog/components/BlogList'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { posts } from '@/features/blog/data/blog.data'
+import { getLocalizedPosts } from '@/features/blog/utils/blog.utils'
 
+export async function BlogArchive() {
+  const locale = await getLocale()
+  const posts = getLocalizedPosts(locale)
 
-export function BlogArchive() {
   return (
     <section>
         <div className="shell py-16 sm:py-20 lg:py-28">

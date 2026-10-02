@@ -1,0 +1,205 @@
+{
+  "simien-mountains": {
+    "name": "Simien-Gebirge",
+    "teaser": "Ein afroalpiner Steilabbruch, an dem der Boden einfach aufhört – zweitausend Meter tiefer.",
+    "intro": "Ein UNESCO-geschütztes Massiv aus zerklüfteten Gipfeln und senkrechten Basaltwänden, Heimat von mehr Dschelada-Affen als jeder andere Ort auf dem Planeten und des endemischen Walia-Steinbocks, der sonst nirgends vorkommt.",
+    "tag": "Nationalpark",
+    "region": "Nördliches Hochland"
+  },
+  "gondar": {
+    "name": "Gondar",
+    "teaser": "Eine königliche Hauptstadt des 17. Jahrhunderts mit Schlössern – und das Tor zum Simien-Gebirge.",
+    "intro": "1636 von Kaiser Fasilides als Äthiopiens erste dauerhafte Hauptstadt gegründet, verbindet ihr ummauerter Bezirk aus Steinschlössern aksumitische, nubische und portugiesisch-jesuitische Baustile aus sechs königlichen Regierungszeiten.",
+    "tag": "Kaiserstadt",
+    "region": "Nördliches Hochland"
+  },
+  "lalibela": {
+    "name": "Lalibela",
+    "teaser": "Kirchen aus dem 13. Jahrhundert, aus einzelnen Blöcken vulkanischen Gesteins gehauen – und nie aufgegeben.",
+    "intro": "König Lalibela soll von einem Neuen Jerusalem geträumt und es aus dem Berg herausschlagen lassen haben, statt es darauf zu bauen – ein Vorhaben, das eine Arbeiterschaft den Großteil eines Jahrhunderts beschäftigte. Elf Felsenkirchen werden bis heute aktiv liturgisch genutzt.",
+    "tag": "UNESCO-Welterbe",
+    "region": "Nördliches Hochland"
+  },
+  "lake-tana": {
+    "name": "Tanasee und Blauer Nil",
+    "teaser": "Inselklöster, die jahrhundertealte Handschriften hüten, an der wahren Quelle des Flusses.",
+    "intro": "Äthiopiens größter See speist den Blauen Nil und beherbergt auf seinen Inseln und Halbinseln etwa zwanzig Klostergemeinschaften, von denen mehrere mehrere hundert Jahre alte illuminierte Evangelien auf Ziegenleder besitzen. Bahir Dar ist das Tor; die besten Stunden liegen auf dem Wasser, bevor die Tagesboote eintreffen.",
+    "tag": "Slow Travel",
+    "region": "Amhara"
+  },
+  "danakil-depression": {
+    "name": "Danakil-Senke",
+    "teaser": "Einer der tiefsten und heißesten Punkte des Kontinents und einer der geologisch aktivsten.",
+    "intro": "Ein tektonischer Tripelpunkt, an dem die Afrikanische und die Arabische Platte auseinanderdriften – Schwefelfelder bei Dallol, Salzebenen am Karum-See (Assale), die noch von Hand abgebaut werden, und der Erta Ale, dessen Lavasee oft aktiv, aber nie garantiert ist.",
+    "tag": "Expedition",
+    "region": "Afar-Tiefland"
+  },
+  "gheralta": {
+    "name": "Gheralta",
+    "teaser": "Kirchen, in Sandsteintürme gehauen, manche nur mit Handgriffen und barfuß erreichbar.",
+    "intro": "Eine Kette roter Sandsteinmassive im östlichen Tigray, die über dreißig Felsenkirchen verbirgt – mehrere hoch in die Felswände gehauen, zwischen dem 5. und 15. Jahrhundert, und noch heute jeden Sonntag von ihren Priestern betreut.",
+    "tag": "Klippenkirchen",
+    "region": "Tigray"
+  },
+  "ras-dashen": {
+    "name": "Ras Dashen",
+    "teaser": "Äthiopiens höchster Gipfel, erreicht über die Seite des Simien, die nur wenige Trekker je sehen.",
+    "intro": "Mit etwa 4.550 Metern krönt der Ras Dashen (Ras Dejen) den östlichen Simien – in der Regel eine Wanderwoche von der straßenerschlossenen Westkante entfernt, durch das Mesheha-Flusstal, Bauerndörfer und das afroalpine Basislager in Ambiko. Veröffentlichte Gipfelhöhen variieren je nach Vermessung leicht; vor Ort zählt die anhaltende Höhe, nicht ein einzelner Meter.",
+    "tag": "Gipfeltrek",
+    "region": "Nördliches Hochland"
+  },
+  "gorgora": {
+    "name": "Gorgora",
+    "teaser": "Ein ruhiges Dorf am Nordufer, wo Gondars Kaisergeschichte begann, noch bevor es Gondar gab.",
+    "intro": "Fünfundsechzig Kilometer südlich von Gondar am Nordufer des Tanasees war Gorgora unter Kaiser Susenyos königlicher Sitz und Heimat der Jesuitenmission im frühen 17. Jahrhundert. Das verfallene Maryam Gimb ist der abgelegenste Teil der Welterbestätte Fasil Ghebbi.",
+    "tag": "Geschichte am Seeufer",
+    "region": "Amhara"
+  },
+  "guassa-plateau": {
+    "name": "Guassa-Plateau",
+    "teaser": "Äthiopische Wölfe und Dscheladas auf Hochlandmoor, das eine Gemeinde seit vierhundert Jahren schützt.",
+    "intro": "Hundert Quadratkilometer afroalpines Grasland in Menz, nordöstlich von Addis Abeba, über mehr als vier Jahrhunderte nach dem Qero verwaltet – einem indigenen System von Weide- und Grasschnittregeln, das zu den ältesten gemeinschaftlichen Schutzregelungen Afrikas zählt.",
+    "tag": "Gemeinschaftlicher Naturschutz",
+    "region": "Nördliches Hochland"
+  },
+  "awra-amba": {
+    "name": "Awra Amba",
+    "teaser": "Ein Weberdorf, gegründet auf einer Idee: dass Männer und Frauen jede Art von Arbeit teilen sollten.",
+    "intro": "1980 von Zumra Nuru und etwa zwanzig weiteren gegründet, ist diese Kooperative mit rund 450 Menschen, 73 Kilometer östlich von Bahir Dar, eines der am meisten untersuchten sozialen Experimente Äthiopiens geworden – Frauen pflügen, Männer weben, und die Gemeinschaft verwaltet sich über eigene Komitees selbst.",
+    "tag": "Gemeinschaftsbesuch",
+    "region": "Amhara"
+  },
+  "choke-mountains": {
+    "name": "Choke-Berge",
+    "teaser": "Der Wasserturm des Blauen Nils, von Dorf zu Dorf mit den dort lebenden Familien durchwandert.",
+    "intro": "Ein weites Massiv im Herzen von Gojjam, das sich von einem 2.800 Meter hohen Plateau zu Gipfeln über 4.000 Metern erhebt und dessen Moorland mehr als fünfzig Flüsse speist, die in den Blauen Nil münden. Sein gemeinschaftliches Ökodorf wurde 2022 zu einem der Best Tourism Villages von UN Tourism gekürt.",
+    "tag": "Gemeinschafts-Trek",
+    "region": "Nördliches Hochland"
+  },
+  "lake-hayk": {
+    "name": "Hayk und Istifanos",
+    "teaser": "Ein Hochlandsee an der Straße nach Lalibela und das Kloster, in dem einer der großen Heiligen Äthiopiens unterrichtet wurde.",
+    "intro": "Auf 2.030 Metern, knapp nördlich von Dessie, ist der Hayk-See sechs Kilometer breit und achtundachtzig Meter tief. Auf seiner Halbinsel steht Istifanos, ein Mitte des 13. Jahrhunderts von Iyasus Mo'a, dem Lehrer des heiligen Tekle Haymanot, gegründetes Kloster.",
+    "tag": "Klostersee",
+    "region": "Amhara"
+  },
+  "axum": {
+    "name": "Axum",
+    "teaser": "Hauptstadt eines antiken Handelsreiches und geistiges Zentrum der äthiopischen Orthodoxie.",
+    "intro": "Zwischen etwa dem 1. und 10. Jahrhundert n. Chr. prägte das Königreich Aksum eigene Münzen und handelte über das Rote Meer bis nach Indien – ein Reichtum, der noch heute in den behauenen Granitstelen seiner Nekropole und in den Kirchen sichtbar ist, die die Stadt zur geistigen Hauptstadt der Orthodoxie machen.",
+    "tag": "Antike Hauptstadt",
+    "region": "Tigray"
+  },
+  "omo-valley": {
+    "name": "Omo-Tal",
+    "teaser": "Heimat von mehr eigenständigen Volksgruppen als fast jeder andere Ort auf dem Kontinent.",
+    "intro": "Entlang des unteren Omo leben rund sechzehn Gemeinschaften – Hamar, Mursi, Karo, Dassanech, Nyangatom und andere – mit eigenen Sprachen, Trachten und Zeremonien, nur wenige Autostunden voneinander entfernt. Das Tal ist kein Themenpark; Tempo und Zugang bestimmen Einladungen und Marktkalender.",
+    "tag": "Kulturbegegnung",
+    "region": "Südlicher Rift"
+  },
+  "bale-mountains": {
+    "name": "Bale-Berge",
+    "teaser": "Der beste Ort der Welt, um einen wilden Äthiopischen Wolf zu sehen.",
+    "intro": "Das Sanetti-Plateau über 4.000 Metern ist die größte zusammenhängende afroalpine Lebensraumfläche, die in Afrika noch existiert – und Heimat von etwa der Hälfte der weniger als fünfhundert Äthiopischen Wölfe, die vermutlich überleben. Darunter birgt der Harenna-Wald wilden Coffea arabica und eine andere, feuchtere Ökologie.",
+    "tag": "Tierwelt",
+    "region": "Südliches Hochland"
+  },
+  "addis-ababa": {
+    "name": "Addis Abeba",
+    "teaser": "Afrikas diplomatische Hauptstadt und Heimat des berühmtesten Vorfahren von uns allen.",
+    "intro": "In den 1880er-Jahren gegründet, als Kaiser Menelik II. seinen Hof von den Entoto-Hügeln herunterverlegte, ist Addis Abeba – „neue Blume“ – heute eine der großen Hauptstädte Afrikas und der Ort, an dem fast jede Äthiopienreise beginnt und endet.",
+    "tag": "Hauptstadt",
+    "region": "Zentraläthiopien"
+  },
+  "debre-libanos": {
+    "name": "Debre Libanos",
+    "teaser": "Ein Kloster über einer Blauer-Nil-Schlucht, gegründet von einem der größten Heiligen Äthiopiens.",
+    "intro": "Rund hundert Kilometer nördlich von Addis Abeba wurde Debre Libanos 1284 vom heiligen Tekle Haymanot gegründet und entwickelte sich zu einem der bedeutendsten Klöster des Landes – sein Abt stand einst im Rang unmittelbar hinter dem Oberhaupt der Kirche.",
+    "tag": "Kloster und Schlucht",
+    "region": "Zentraläthiopien"
+  },
+  "tiya-adadi-mariam": {
+    "name": "Tiya und Adadi Mariam",
+    "teaser": "Behauene Stelen, eine Felsenkirche und eine Million Jahre menschlicher Werkzeuge – alles südlich der Hauptstadt.",
+    "intro": "Eine einzige Straße südwestlich von Addis Abeba verbindet drei sehr verschiedene Kapitel der Vergangenheit: die prähistorische Fundstätte Melka Kunture, die Felsenkirche Adadi Mariam und die behauenen Stelen von Tiya, seit 1980 Welterbestätte.",
+    "tag": "UNESCO-Welterbe",
+    "region": "Zentraläthiopien"
+  },
+  "bishoftu-zuqualla": {
+    "name": "Bishoftu und Mount Zuqualla",
+    "teaser": "Vulkanische Kraterseen eine Stunde von Addis und ein heiliger Berg mit einem See im Gipfel.",
+    "intro": "Vierzig Kilometer südöstlich der Hauptstadt ist die Stadt Bishoftu von vulkanischen Kraterseen umgeben – darunter der Hora-See, an dem sich die Oromo jeden Oktober zu Irreecha versammeln. Darüber erhebt sich der Mount Zuqualla, dessen Krater einen heiligen See und ein Kloster birgt.",
+    "tag": "Kraterseen",
+    "region": "Zentraläthiopien"
+  },
+  "menagesha-suba-forest": {
+    "name": "Menagesha-Suba-Wald",
+    "teaser": "Ein Wacholderwald, seit dem 15. Jahrhundert per kaiserlichem Erlass geschützt, vierzig Kilometer von Addis entfernt.",
+    "intro": "An den Hängen des Mount Wechecha westlich der Hauptstadt gilt Menagesha Suba oft als ältestes Schutzgebiet Ostafrikas – mit Wacholder wiederaufgeforstet und im 15. Jahrhundert von Kaiser Zara Yaqob unter Schutz gestellt.",
+    "tag": "Urwald",
+    "region": "Zentraläthiopien"
+  },
+  "wenchi-crater-lake": {
+    "name": "Wenchi-Kratersee",
+    "teaser": "Ein See in einem erloschenen Vulkan, mit Inselkloster, heißen Quellen und Wasserfällen.",
+    "intro": "Etwa 155 Kilometer westlich von Addis Abeba über die Straße, auf halbem Weg zwischen Ambo und Woliso, birgt die Wenchi-Caldera einen See auf rund 2.600 Metern – zu Fuß oder zu Pferd erreichbar und per Boot zum Inselkloster Cherkos überquert.",
+    "tag": "Kratersee",
+    "region": "Oromia"
+  },
+  "awash-national-park": {
+    "name": "Awash-Nationalpark",
+    "teaser": "Äthiopiens ältester Nationalpark: ein ruhender Vulkan, eine Wasserfallschlucht und palmengesäumte heiße Quellen.",
+    "intro": "1966 etwa 225 Kilometer östlich von Addis Abeba gegründet, ist Awash Äthiopiens ältester Nationalpark – 827 Quadratkilometer Akazienebene, Lavafelder und Flussschlucht, bewacht vom ruhenden Vulkan Fantale.",
+    "tag": "Nationalpark",
+    "region": "Oromia"
+  },
+  "sof-omar-caves": {
+    "name": "Sof-Omar-Höhlen",
+    "teaser": "Fünfzehn Kilometer flussgeformte Kalksteingänge, heilig für zwei Religionen.",
+    "intro": "Östlich der Bale-Berge hat der Weyib die längste Höhle Äthiopiens gegraben – 15,1 Kilometer Gänge und Kammern, die bei ihrer Vermessung 1972 die längsten bekannten Afrikas waren.",
+    "tag": "Höhlensystem",
+    "region": "Oromia"
+  },
+  "borana-yabelo": {
+    "name": "Borana und Yabelo",
+    "teaser": "Singende Brunnen, ein Salzsee in einem Vulkan und ein Vogel, den es nirgendwo sonst auf der Erde gibt.",
+    "intro": "Im äußersten Süden Äthiopiens, rund um die Stadt Yabelo, pflegen die Borana-Oromo eine vom Wasser geprägte pastorale Lebensweise: von Hand tief in die Erde gegrabene Brunnen und ein Kratersee, der seit Jahrhunderten Salz liefert.",
+    "tag": "Hirtenkultur",
+    "region": "Oromia"
+  },
+  "jimma": {
+    "name": "Jimma",
+    "teaser": "Der Palast eines durch Kaffee reich gewordenen Oromo-Königs im Kernland des wilden Arabica.",
+    "intro": "Im grünen Südwesten, 353 Kilometer von Addis Abeba entfernt, war Jimma einst die Hauptstadt des mächtigsten der fünf oromischen Gibe-Königreiche – und sein König Abba Jifar II. wurde reich mit dem Kaffee, der noch immer rund um die Stadt wächst.",
+    "tag": "Kaffeekönigreich",
+    "region": "Oromia"
+  },
+  "harar": {
+    "name": "Harar",
+    "teaser": "Äthiopiens einzige ummauerte Stadt – 82 Moscheen, Gassen zu eng für Autos und Hyänen, die in der Dämmerung von Hand gefüttert werden.",
+    "intro": "Auf einem Hügel im östlichen Hochland ist Harar Jugol seit Jahrhunderten ein Zentrum islamischer Gelehrsamkeit und des Handels. Seine ummauerte Altstadt, 2006 von der UNESCO gelistet, ist ein Labyrinth aus Gassen, bemalten Häusern und Schreinen, das man durch historische Tore betritt.",
+    "tag": "UNESCO-Welterbe",
+    "region": "Ostäthiopien"
+  },
+  "arba-minch-nechisar": {
+    "name": "Arba Minch und Nechisar",
+    "teaser": "Vierzig Quellen, zwei Rift-Valley-Seen und Krokodile, die am Ufer des Chamo-Sees in der Sonne liegen.",
+    "intro": "Arba Minch – „vierzig Quellen“ – liegt über zwei großen Rift-Valley-Seen, Abaya und Chamo, getrennt durch eine schmale Landenge, die als Brücke Gottes bekannt ist. Darunter liegt der Nechisar-Nationalpark, darüber das kühle Gamo-Hochland der Dorze-Weber.",
+    "tag": "Seen und Tierwelt",
+    "region": "Südlicher Rift"
+  },
+  "konso": {
+    "name": "Konso",
+    "teaser": "Steinterrassierte Hügel und ummauerte Dörfer – eine lebendige Landschaft, über 400 Jahre gewachsen.",
+    "intro": "2011 wurde die Kulturlandschaft Konso als erster Ort Äthiopiens von der UNESCO als Kulturlandschaft gelistet: 55 Quadratkilometer Trockenmauerterrassen und befestigte Hügeldörfer, von den Konso über rund 21 Generationen gebaut und gepflegt.",
+    "tag": "UNESCO-Welterbe",
+    "region": "Südlicher Rift"
+  },
+  "sidama-yirgacheffe": {
+    "name": "Sidama und Yirgacheffe",
+    "teaser": "Die Hügel hinter den berühmtesten Kaffees der Welt – und eine UNESCO-Landschaft, in der Kaffee unter Bäumen wächst.",
+    "intro": "Südlich von Hawassa bringen die grünen Hänge von Sidama und Gedeo die weltweit als Sidamo und Yirgacheffe bekannten Kaffees hervor. 2023 nahm die UNESCO die Kulturlandschaft Gedeo auf, in der Kaffee in geschichteten Waldgärten unter Schattenbäumen und Ensete angebaut wird.",
+    "tag": "Kaffeeland",
+    "region": "Südlicher Rift"
+  }
+}

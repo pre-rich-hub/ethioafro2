@@ -1,11 +1,11 @@
 'use client'
 
-import { tours } from '@/features/tours/data/tour.data'
+import { getLocalizedTours } from '@/features/tours/utils/tour-catalog.utils'
 import { isTailorMade } from '@/features/tours/utils/tour.utils'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import type { NavigationState } from './useNavigation'
 
@@ -13,6 +13,8 @@ type Props = Pick<NavigationState, 'dismissed' | 'dismiss'>
 
 export function ToursDropdown({ dismissed, dismiss }: Props) {
   const tNav = useTranslations('Nav')
+  const locale = useLocale()
+  const tours = getLocalizedTours(locale)
 
   return (
     <div className={cn(

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getLocale } from 'next-intl/server'
 import { ArrowRight, CalendarDays, Clock3, Info, MapPin } from 'lucide-react'
 import { PageHero } from '@/components/common/PageHero'
 import { Reveal } from '@/components/common/Reveal'
@@ -8,7 +9,7 @@ import { DestinationCard } from '@/features/destinations'
 import { TourCard } from '@/features/tours'
 import { EnquiryForm } from '@/features/enquiries'
 import { activities } from '@/features/experiences/data/experience.data'
-import { getActivity } from '@/features/experiences/utils/experience.utils'
+import { getActivity, getLocalizedActivities } from '@/features/experiences/utils/experience.utils'
 import { getDestination } from '@/features/destinations/utils/destination.utils'
 import { getTour } from '@/features/tours/utils/tour-catalog.utils'
 
@@ -35,7 +36,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const a = getActivity(slug)
+  const locale = await getLocale()
+  const a = getActivity(slug, locale)
   if (!a) {
     return { title: 'Experience not found', robots: { index: false, follow: false } }
   }
@@ -54,19 +56,24 @@ export default async function ActivityPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const a = getActivity(slug)
+  const locale = await getLocale()
+  const a = getActivity(slug, locale)
   if (!a) notFound()
 
+  const localizedActivities = getLocalizedActivities(locale)
+
   const places = a.destinationSlugs
-    .map((s) => getDestination(s))
+    .map((s) => getDestination(s, locale))
     .filter((d) => d !== undefined)
   const journeys = a.tourSlugs
-    .map((s) => getTour(s))
+    .map((s) => getTour(s, locale))
     .filter((t) => t !== undefined)
-  const more = activities.filter((x) => x.slug !== a.slug && x.category === a.category).slice(0, 2)
+  const more = localizedActivities
+    .filter((x) => x.slug !== a.slug && x.category === a.category)
+    .slice(0, 2)
   const others = more.length
     ? more
-    : activities.filter((x) => x.slug !== a.slug).slice(0, 2)
+    : localizedActivities.filter((x) => x.slug !== a.slug).slice(0, 2)
 
   return (
     <>

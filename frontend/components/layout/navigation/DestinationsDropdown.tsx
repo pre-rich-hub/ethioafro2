@@ -1,10 +1,10 @@
 'use client'
 
-import { destinations } from '@/features/destinations/data/destination.data'
+import { getLocalizedDestinations } from '@/features/destinations/utils/destination.utils'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import type { NavigationState } from './useNavigation'
 
@@ -12,6 +12,8 @@ type Props = Pick<NavigationState, 'dismissed' | 'dismiss'>
 
 export function DestinationsDropdown({ dismissed, dismiss }: Props) {
   const t = useTranslations('Nav')
+  const locale = useLocale()
+  const destinations = getLocalizedDestinations(locale)
 
   return (
     <div className={cn(

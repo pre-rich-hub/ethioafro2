@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getLocale } from 'next-intl/server'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -17,7 +18,7 @@ import { Reveal } from '@/components/common/Reveal'
 import { TourCard } from '@/features/tours/components/TourCard'
 import { EnquiryForm } from '@/features/enquiries'
 import { CtaBand } from '@/features/enquiries'
-import { getTour } from '@/features/tours/utils/tour-catalog.utils'
+import { getLocalizedTours, getTour } from '@/features/tours/utils/tour-catalog.utils'
 import { isTailorMade } from '@/features/tours/utils/tour.utils'
 import { tours } from '@/features/tours/data/tour.data'
 import { getTourData } from '@/features/tours/api/tour-data.api'
@@ -48,7 +49,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const t = getTour(slug)
+  const locale = await getLocale()
+  const t = getTour(slug, locale)
   if (!t) {
     return { title: 'Journey not found', robots: { index: false, follow: false } }
   }
@@ -67,12 +69,15 @@ export default async function TourPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const t = await getTourData(slug)
+  const locale = await getLocale()
+  const t = await getTourData(slug, locale)
   if (!t) notFound()
 
-  const others = tours.filter((o) => o.slug !== t.slug).slice(0, 3)
+  const others = getLocalizedTours(locale)
+    .filter((o) => o.slug !== t.slug)
+    .slice(0, 3)
   const nightsLabel = `${t.nights} ${t.nights === 1 ? 'night' : 'nights'}`
-  const relatedExperiences = getRelatedExperiencesForTour(t.slug)
+  const relatedExperiences = getRelatedExperiencesForTour(t.slug, 3, locale)
 
   const priceCard = (
     <TourPriceCard t={t} nightsLabel={nightsLabel} />

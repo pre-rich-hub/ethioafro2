@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { contact } from '@/lib/constants/contact'
 import { company } from '@/lib/seo/entities'
-import { destinations } from '@/features/destinations/data/destination.data'
-import { tours } from '@/features/tours/data/tour.data'
+import { getLocalizedDestinations } from '@/features/destinations/utils/destination.utils'
+import { getLocalizedTours } from '@/features/tours/utils/tour-catalog.utils'
 import { NewsletterForm } from '@/features/newsletter'
 
 // Add each profile URL to show its button; entries left blank stay hidden
@@ -19,6 +19,9 @@ const socials = [
 
 export async function Footer() {
   const t = await getTranslations('Footer')
+  const locale = await getLocale()
+  const destinations = getLocalizedDestinations(locale)
+  const tours = getLocalizedTours(locale)
 
   const columns = [
     {

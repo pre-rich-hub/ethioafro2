@@ -1,0 +1,83 @@
+{
+  "injera-and-ethiopian-cooking": {
+    "title": "Injera y una cocina etíope",
+    "teaser": "Vierta la injera sobre el mitad, cocine los guisos que la acompañan y coma todos juntos a la manera etíope.",
+    "intro": "La injera es el corazón de toda comida etíope: un pan plano, suave y ligeramente ácido hecho con teff, el diminuto grano originario de las tierras altas de Etiopía. En una cocina familiar de Adís Abeba aprende a prepararla, y todo lo que se sirve encima.",
+    "short": "Clase de cocina",
+    "category": "Gastronomía y bebida",
+    "duration": "Media jornada",
+    "where": "Adís Abeba"
+  },
+  "tej-tella-and-areki": {
+    "title": "Tej, tella y areki",
+    "teaser": "Vino de miel, cerveza casera y un licor claro de las tierras altas, con músicos azmari improvisando mientras bebe.",
+    "intro": "Etiopía elabora sus propias bebidas desde hace muchísimo tiempo. En esta velada prueba las tres tradicionales —tej, tella y areki— y aprende cómo se hace cada una, para terminar en una casa tradicional donde tocan músicos azmari.",
+    "short": "Bebidas tradicionales",
+    "category": "Gastronomía y bebida",
+    "duration": "Una velada",
+    "where": "Adís Abeba"
+  },
+  "coffee-cupping-and-ceremony": {
+    "title": "Cata y ceremonia del café",
+    "teaser": "Pruebe cafés de Sidama, Yirgacheffe, Jimma y Harar lado a lado y comparta después una ceremonia en un hogar familiar.",
+    "intro": "Etiopía es la cuna del café arábica, y sus regiones tienen sabores sorprendentemente distintos. Esta cata los pone uno junto a otro como lo hacen los profesionales y muestra después cómo beben café los propios etíopes: despacio, juntos y en tres rondas.",
+    "short": "Cata de café",
+    "category": "Café",
+    "duration": "2 – 3 horas",
+    "where": "Adís Abeba o cualquier región cafetera"
+  },
+  "run-where-champions-train": {
+    "title": "Corra donde entrenan los campeones",
+    "teaser": "Una carrera al amanecer por los senderos del bosque de Entoto, a unos 3.000 metros, donde entrenan los grandes fondistas de Etiopía.",
+    "intro": "Sobre Adís Abeba, el bosque de eucaliptos del monte Entoto es donde generaciones de corredores etíopes han forjado su resistencia: Haile Gebrselassie entrenaba allí al menos tres veces por semana. Únase a la multitud madrugadora en sus senderos de tierra.",
+    "short": "Running",
+    "category": "Actividad",
+    "duration": "Una mañana temprano",
+    "where": "Entoto, Adís Abeba"
+  },
+  "rift-valley-cycling-day": {
+    "title": "Un día sobre dos ruedas en el Rift",
+    "teaser": "Carreteras tranquilas entre los lagos del Valle del Rift, aldeas en el camino y un vehículo de apoyo siempre cerca.",
+    "intro": "El Valle del Rift central ofrece algunos de los mejores recorridos en bicicleta de Etiopía: llano o ligeramente ondulado, salpicado de lagos y lleno de vida de aldea. Una jornada de pedaleo le lleva por sus carreteras tranquilas con un guía y un vehículo de apoyo.",
+    "short": "Ciclismo",
+    "category": "Actividad",
+    "duration": "Un día completo",
+    "where": "Valle del Rift central"
+  },
+  "teff-farm-day": {
+    "title": "Un día en una granja de teff",
+    "teaser": "Are con bueyes, siegue y trille el teff que se convierte en injera y comparta el almuerzo con la familia que lo cultiva.",
+    "intro": "La mayoría de los etíopes siguen dedicándose a la agricultura, y el teff, el grano de la injera, es el cultivo de las tierras altas. Pase un día con una familia de agricultores, trabajando a su lado en lo que exija la estación.",
+    "short": "Día de granja",
+    "category": "Granja y comunidad",
+    "duration": "Un día completo",
+    "where": "Aldeas de las tierras altas"
+  },
+  "herding-with-the-borana": {
+    "title": "Ganado, pozos y los borana",
+    "teaser": "Pase tiempo con pastores borana, en los pozos cantores y con el ganado en torno al cual gira su forma de vida.",
+    "intro": "Para los borana del extremo sur de Etiopía, el ganado es riqueza, alimento y cultura. Con un guía local, pasa tiempo con una familia de pastores y ve cómo el agua y el ganado marcan cada día.",
+    "short": "Ganado y pastoreo",
+    "category": "Granja y comunidad",
+    "duration": "Media jornada o más",
+    "where": "Borana, en torno a Yabelo"
+  },
+  "village-homestay": {
+    "title": "Alójese con una familia de la aldea",
+    "teaser": "Duerma en un alojamiento comunitario o casa de huéspedes y comparta la vida diaria: comidas, mercados, trabajo y veladas junto al fuego.",
+    "intro": "La forma más rápida de entender un lugar es alojarse en él. En el norte y el sur, las comunidades gestionan sus propios alojamientos y casas de huéspedes sencillos, y una o dos noches allí aportan una profundidad que ningún hotel puede dar.",
+    "short": "Estancia en familia",
+    "category": "Granja y comunidad",
+    "duration": "1 – 3 noches",
+    "where": "Tierras altas de Lalibela, Choke, Awra Amba, tierras altas de Gamo"
+  },
+  "leave-it-better": {
+    "title": "Déjelo mejor: una jornada de limpieza",
+    "teaser": "Dedique una mañana a devolver algo a los lugares que visita: una limpieza guiada junto a la gente local que los cuida.",
+    "intro": "Los lugares populares llevan las marcas de los visitantes. Una mañana de limpieza es una forma pequeña y práctica de devolver algo, trabajando junto a la población local en un sendero, un mirador o una orilla.",
+    "short": "Jornada de limpieza",
+    "category": "Devolver algo",
+    "duration": "Media jornada",
+    "where": "Entoto, los senderos de Simien, las orillas del lago Tana"
+  }
+}

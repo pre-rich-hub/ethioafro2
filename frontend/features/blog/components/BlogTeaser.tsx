@@ -1,10 +1,12 @@
 import { Reveal } from '@/components/common/Reveal'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { PostCard } from '@/features/blog/components/BlogCard'
-import { posts } from '@/features/blog/data/blog.data'
+import { getLocale } from 'next-intl/server'
+import { getLocalizedPosts } from '@/features/blog/utils/blog.utils'
 
-export function JournalTeaser() {
-  const latest = posts.slice(0, 3)
+export async function JournalTeaser() {
+  const locale = await getLocale()
+  const latest = getLocalizedPosts(locale).slice(0, 3)
 
   return (
     <section className="shell py-20 lg:py-32">

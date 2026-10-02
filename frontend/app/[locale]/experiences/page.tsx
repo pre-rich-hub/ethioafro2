@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { CtaBand } from '@/features/enquiries'
-import { activities, activityCategories } from '@/features/experiences/data/experience.data'
+import { activityCategories } from '@/features/experiences/data/experience.data'
+import {
+  getActivityCategoryLabels,
+  getLocalizedActivities,
+} from '@/features/experiences/utils/experience.utils'
 import { ExperienceIntroduction } from '@/features/experiences/components/ExperienceIntroduction'
 import { ExperienceCategory } from '@/features/experiences/components/ExperienceCategory'
 import { LongerAdventures } from '@/features/experiences/components/LongerAdventures'
@@ -22,6 +26,11 @@ export default async function ExperiencesPage() {
   const t = await getTranslations('Experiences')
   const tc = await getTranslations('Crumbs')
   const ts = await getTranslations('Shared')
+  const locale = await getLocale()
+  // Group on the English category key; display the localized label.
+  const activities = getLocalizedActivities(locale)
+  const categoryLabels = getActivityCategoryLabels(locale)
+  const baseCategory = new Map(getLocalizedActivities('en').map((a) => [a.slug, a.category]))
 
   return (
     <>
@@ -40,10 +49,16 @@ export default async function ExperiencesPage() {
 
       {/* Categories */}
       {activityCategories.map((c, ci) => {
-        const items = activities.filter((a) => a.category === c)
+        const items = activities.filter((a) => baseCategory.get(a.slug) === c)
         if (!items.length) return null
         return (
-          <ExperienceCategory key={c} c={c} ci={ci} items={items} />
+          <ExperienceCategory
+            key={c}
+            c={c}
+            label={categoryLabels[c] ?? c}
+            ci={ci}
+            items={items}
+          />
         )
       })}
 

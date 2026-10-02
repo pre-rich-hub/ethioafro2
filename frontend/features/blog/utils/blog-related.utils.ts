@@ -30,7 +30,10 @@ const relatedBySlug: Record<string, { destinations: string[]; tours: string[] }>
   },
 }
 
-export function getRelatedCatalogueForPost(slug: string): {
+export function getRelatedCatalogueForPost(
+  slug: string,
+  locale: string = 'en',
+): {
   destinations: Destination[]
   tours: Tour[]
 } {
@@ -39,8 +42,8 @@ export function getRelatedCatalogueForPost(slug: string): {
 
   return {
     destinations: mapping.destinations
-      .map((s) => getDestination(s))
+      .map((s) => getDestination(s, locale))
       .filter((d): d is Destination => Boolean(d)),
-    tours: mapping.tours.map((s) => getTour(s)).filter((t): t is Tour => Boolean(t)),
+    tours: mapping.tours.map((s) => getTour(s, locale)).filter((t): t is Tour => Boolean(t)),
   }
 }

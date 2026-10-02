@@ -3,15 +3,17 @@
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { navExperiences } from './navigation.data'
+import { getNavExperiences } from './navigation.data'
 import type { NavigationState } from './useNavigation'
 
 type Props = Pick<NavigationState, 'dismissed' | 'dismiss'>
 
 export function ExperiencesDropdown({ dismissed, dismiss }: Props) {
   const t = useTranslations('Nav')
+  const locale = useLocale()
+  const navExperiences = getNavExperiences(locale)
 
   return (
     <div className={cn(

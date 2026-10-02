@@ -1,20 +1,13 @@
 // Tour data with static overlay.
 //
 // Phase 1 strategy: the API is authoritative for the fields it can supply
-// (prices, featured flags), while the static catalog in lib/site.ts stays the
-// source for display copy (days/nights, style, season, group, teaser,
-// summary, includes/excludes, itinerary, places, images). Live tours are
-// merged onto their static record by slug — when a tour is not live yet (API
-// down, catalog beyond page limits) the static record is returned unchanged.
+// (prices, featured flags), while the static catalog stays the source for
+// display copy. Locale card overlays apply before the live price overlay.
 //
-// The Tour type in lib/site.ts is the contract: no field additions. From the
-// live payload we overlay `from` (price) and `featured`; rating exists in the
-// API but has no surface on the static Tour type, so it stays unused until a
-// rendering element needs it.
+// Merge order: English static → locale card overlay → API from/featured.
 
 import { type Tour } from '@/features/tours/types/tour.types'
-import { tours as staticTours } from '@/features/tours/data/tour.data'
-import { getTour as getStaticTour } from '@/features/tours/utils/tour-catalog.utils'
+import { getLocalizedTours, getTour as getStaticTour } from '@/features/tours/utils/tour-catalog.utils'
 import { isTailorMade } from '@/features/tours/utils/tour.utils'
 import { getTours, getTourBySlug } from '@/features/tours/api/tours.api'
 import { type ApiTour } from '@/features/tours/types/tour-api.types'
@@ -28,15 +21,12 @@ function overlayLive(staticTour: Tour, live: ApiTour): Tour {
   const price = formatPrice(live.adultPrice)
   return {
     ...staticTour,
-    // Price/featured overlay only — everything else stays on the static
-    // record so rendering is byte-identical with the frozen UI.
-    // Tailor-made tours stay unpriced even if the API still holds a figure.
     ...(price && !isTailorMade(staticTour) ? { from: price } : {}),
     ...(typeof live.isFeatured === 'boolean' ? { featured: live.isFeatured } : {}),
   }
 }
 
-export async function getToursData(): Promise<Tour[]> {
+export async function getToursData(locale: string = 'en'): Promise<Tour[]> {
   let liveTours: ApiTour[] = []
   try {
     const page = await getTours({ limit: 100 })
@@ -46,15 +36,19 @@ export async function getToursData(): Promise<Tour[]> {
   }
 
   const bySlug = new Map(liveTours.map((t) => [t.canonical?.slug, t]))
+  const localized = getLocalizedTours(locale)
 
-  return staticTours.map((t) => {
+  return localized.map((t) => {
     const live = bySlug.get(t.slug)
     return live ? overlayLive(t, live) : t
   })
 }
 
-export async function getTourData(slug: string): Promise<Tour | undefined> {
-  const staticTour = getStaticTour(slug)
+export async function getTourData(
+  slug: string,
+  locale: string = 'en',
+): Promise<Tour | undefined> {
+  const staticTour = getStaticTour(slug, locale)
   if (!staticTour) return undefined
 
   try {

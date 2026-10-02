@@ -1,0 +1,205 @@
+{
+  "simien-mountains": {
+    "name": "Montes Simien",
+    "teaser": "Un escarpe afroalpino donde el suelo simplemente se acaba, dos mil metros más abajo.",
+    "intro": "Un macizo declarado Patrimonio de la UNESCO, de picos escarpados y acantilados de basalto verticales, hogar de más monos gelada que ningún otro lugar del planeta y del íbice walia, endémico y presente solo aquí.",
+    "tag": "Parque Nacional",
+    "region": "Tierras altas del norte"
+  },
+  "gondar": {
+    "name": "Gondar",
+    "teaser": "Una capital real del siglo XVII de castillos y puerta de entrada a los montes Simien.",
+    "intro": "Fundada por el emperador Fasilides en 1636 como la primera capital permanente de Etiopía, su recinto amurallado de castillos de piedra combina estilos constructivos aksumitas, nubios y jesuitas portugueses a lo largo de seis reinados.",
+    "tag": "Ciudad imperial",
+    "region": "Tierras altas del norte"
+  },
+  "lalibela": {
+    "name": "Lalibela",
+    "teaser": "Iglesias del siglo XIII talladas enteras en bloques de roca volcánica y nunca abandonadas.",
+    "intro": "Se dice que el rey Lalibela soñó con una Nueva Jerusalén y la hizo excavar en la montaña en lugar de construirla sobre ella, un proyecto que ocupó a una población de trabajadores durante la mayor parte de un siglo. Once iglesias excavadas en la roca siguen hoy en uso litúrgico activo.",
+    "tag": "Patrimonio de la UNESCO",
+    "region": "Tierras altas del norte"
+  },
+  "lake-tana": {
+    "name": "Lago Tana y Nilo Azul",
+    "teaser": "Monasterios en islas que custodian manuscritos centenarios, en la verdadera fuente del río.",
+    "intro": "El mayor lago de Etiopía alimenta el Nilo Azul y alberga unas veinte comunidades monásticas en sus islas y penínsulas, varias con evangelios iluminados en piel de cabra de varios siglos de antigüedad. Bahir Dar es la puerta de entrada; las mejores horas son sobre el agua, antes de que lleguen las barcas del día.",
+    "tag": "Viaje lento",
+    "region": "Amhara"
+  },
+  "danakil-depression": {
+    "name": "Depresión de Danakil",
+    "teaser": "Uno de los puntos más bajos y calurosos del continente y uno de los geológicamente más activos.",
+    "intro": "Una unión triple tectónica donde las placas africana y arábiga se separan: campos de azufre en Dallol, salinas en el lago Karum (Assale) aún cortadas a mano y el Erta Ale, cuyo lago de lava suele estar activo, pero nunca está garantizado.",
+    "tag": "Expedición",
+    "region": "Tierras bajas de Afar"
+  },
+  "gheralta": {
+    "name": "Gheralta",
+    "teaser": "Iglesias talladas en torres de arenisca, algunas a las que solo se llega con asideros y descalzo.",
+    "intro": "Una cordillera de macizos de arenisca roja en el este de Tigray que esconde más de treinta iglesias excavadas en la roca, varias talladas a gran altura en los acantilados entre los siglos V y XV y atendidas aún cada domingo por sus sacerdotes.",
+    "tag": "Iglesias en acantilados",
+    "region": "Tigray"
+  },
+  "ras-dashen": {
+    "name": "Ras Dashen",
+    "teaser": "El pico más alto de Etiopía, al que se llega por la cara de Simien que pocos senderistas llegan a ver.",
+    "intro": "Con unos 4.550 metros, el Ras Dashen (Ras Dejen) corona el este de Simien, normalmente a una semana de camino del borde occidental con acceso por carretera, a través del valle del río Mesheha, aldeas agrícolas y el campamento base afroalpino de Ambiko. Las alturas publicadas de la cumbre varían ligeramente según el estudio; lo que importa sobre el terreno es la altitud sostenida, no un solo metro.",
+    "tag": "Trekking a la cumbre",
+    "region": "Tierras altas del norte"
+  },
+  "gorgora": {
+    "name": "Gorgora",
+    "teaser": "Un tranquilo pueblo de la orilla norte donde empezó la historia imperial de Gondar, antes de que existiera Gondar.",
+    "intro": "A sesenta y cinco kilómetros al sur de Gondar, en la orilla norte del lago Tana, Gorgora fue sede real bajo el emperador Susenyos y sede de la misión jesuita a principios del siglo XVII. Su ruinoso Maryam Gimb es la parte más remota del sitio Patrimonio Mundial de Fasil Ghebbi.",
+    "tag": "Historia a orillas del lago",
+    "region": "Amhara"
+  },
+  "guassa-plateau": {
+    "name": "Meseta de Guassa",
+    "teaser": "Lobos etíopes y geladas en un páramo de montaña que una comunidad protege desde hace cuatrocientos años.",
+    "intro": "Cien kilómetros cuadrados de pastizal afroalpino en Menz, al noreste de Adís Abeba, gestionados durante más de cuatro siglos bajo el Qero, un sistema indígena de normas de pastoreo y corte de hierba que figura entre los acuerdos comunitarios de conservación más antiguos de África.",
+    "tag": "Conservación comunitaria",
+    "region": "Tierras altas del norte"
+  },
+  "awra-amba": {
+    "name": "Awra Amba",
+    "teaser": "Una aldea de tejedores fundada sobre una sola idea: que hombres y mujeres deben compartir todo tipo de trabajo.",
+    "intro": "Fundada en 1980 por Zumra Nuru y una veintena de personas más, esta cooperativa de unas 450 personas, a 73 kilómetros al este de Bahir Dar, se ha convertido en uno de los experimentos sociales más estudiados de Etiopía: las mujeres aran, los hombres tejen y la comunidad se gobierna a sí misma a través de sus propios comités.",
+    "tag": "Visita comunitaria",
+    "region": "Amhara"
+  },
+  "choke-mountains": {
+    "name": "Montes Choke",
+    "teaser": "El depósito de agua del Nilo Azul, recorrido de aldea en aldea con las familias que viven allí.",
+    "intro": "Un amplio macizo en el corazón de Gojjam, que se eleva desde una meseta de 2.800 metros hasta cumbres de más de 4.000, cuyo páramo alimenta más de cincuenta ríos que desembocan en el Nilo Azul. Su ecoaldea comunitaria fue nombrada en 2022 una de los Mejores Pueblos Turísticos de ONU Turismo.",
+    "tag": "Trekking comunitario",
+    "region": "Tierras altas del norte"
+  },
+  "lake-hayk": {
+    "name": "Hayk e Istifanos",
+    "teaser": "Un lago de montaña en el camino a Lalibela y el monasterio donde estudió uno de los grandes santos de Etiopía.",
+    "intro": "A 2.030 metros, justo al norte de Dessie, el lago Hayk mide seis kilómetros de ancho y ochenta y ocho metros de profundidad. En su península se alza Istifanos, un monasterio fundado a mediados del siglo XIII por Iyasus Mo'a, maestro de san Tekle Haymanot.",
+    "tag": "Lago con monasterio",
+    "region": "Amhara"
+  },
+  "axum": {
+    "name": "Axum",
+    "teaser": "Capital de un antiguo imperio comercial y centro espiritual de la ortodoxia etíope.",
+    "intro": "Entre aproximadamente los siglos I y X d. C., el Reino de Aksum acuñó su propia moneda y comerció a través del mar Rojo hasta la India, una riqueza aún visible en las estelas de granito talladas de su necrópolis y en las iglesias que hacen de la ciudad la capital espiritual de la ortodoxia.",
+    "tag": "Capital antigua",
+    "region": "Tigray"
+  },
+  "omo-valley": {
+    "name": "Valle del Omo",
+    "teaser": "Hogar de más grupos étnicos diferenciados que casi cualquier otro lugar del continente.",
+    "intro": "A lo largo del curso bajo del río Omo, unas dieciséis comunidades —hamar, mursi, karo, dassanech, nyangatom y otras— mantienen lenguas, vestimentas y ceremonias propias a pocas horas de coche unas de otras. El valle no es un parque temático; el ritmo y el acceso los marcan las invitaciones y los calendarios de los mercados.",
+    "tag": "Inmersión cultural",
+    "region": "Rift meridional"
+  },
+  "bale-mountains": {
+    "name": "Montes Bale",
+    "teaser": "El mejor lugar del mundo para ver un lobo etíope en libertad.",
+    "intro": "La meseta de Sanetti, por encima de los 4.000 metros, es la mayor extensión continua de hábitat afroalpino que queda en África y alberga a aproximadamente la mitad de los menos de quinientos lobos etíopes que se cree que sobreviven. Bajo ella, el bosque de Harenna acoge café arábica silvestre y una ecología distinta y más húmeda.",
+    "tag": "Fauna",
+    "region": "Tierras altas del sur"
+  },
+  "addis-ababa": {
+    "name": "Adís Abeba",
+    "teaser": "La capital diplomática de África y hogar del antepasado más famoso de todos nosotros.",
+    "intro": "Fundada en la década de 1880, cuando el emperador Menelik II trasladó su corte desde las colinas de Entoto, Adís Abeba —«flor nueva»— es hoy una de las grandes capitales de África y el lugar donde casi todo viaje por Etiopía empieza y termina.",
+    "tag": "Capital",
+    "region": "Etiopía central"
+  },
+  "debre-libanos": {
+    "name": "Debre Libanos",
+    "teaser": "Un monasterio sobre una garganta del Nilo Azul, fundado por uno de los grandes santos de Etiopía.",
+    "intro": "A unos cien kilómetros al norte de Adís Abeba, Debre Libanos fue fundado en 1284 por san Tekle Haymanot y llegó a ser uno de los monasterios más importantes del país; su abad fue en su día la segunda autoridad tras el jefe de la Iglesia.",
+    "tag": "Monasterio y garganta",
+    "region": "Etiopía central"
+  },
+  "tiya-adadi-mariam": {
+    "name": "Tiya y Adadi Mariam",
+    "teaser": "Estelas talladas, una iglesia excavada en la roca y un millón de años de herramientas humanas, todo al sur de la capital.",
+    "intro": "Un solo camino al suroeste de Adís Abeba une tres capítulos muy distintos del pasado: el yacimiento prehistórico de Melka Kunture, la iglesia excavada en la roca de Adadi Mariam y las estelas talladas de Tiya, Patrimonio Mundial desde 1980.",
+    "tag": "Patrimonio de la UNESCO",
+    "region": "Etiopía central"
+  },
+  "bishoftu-zuqualla": {
+    "name": "Bishoftu y monte Zuqualla",
+    "teaser": "Lagos volcánicos de cráter a una hora de Adís Abeba y una montaña sagrada con un lago en su cima.",
+    "intro": "A cuarenta kilómetros al sureste de la capital, la ciudad de Bishoftu está rodeada de lagos volcánicos de cráter, entre ellos el lago Hora, donde los oromo se reúnen cada octubre para Irreecha. Sobre ellos se alza el monte Zuqualla, cuyo cráter alberga un lago sagrado y un monasterio.",
+    "tag": "Lagos de cráter",
+    "region": "Etiopía central"
+  },
+  "menagesha-suba-forest": {
+    "name": "Bosque de Menagesha Suba",
+    "teaser": "Un bosque de enebros protegido por decreto imperial desde el siglo XV, a cuarenta kilómetros de Adís Abeba.",
+    "intro": "En las laderas del monte Wechecha, al oeste de la capital, Menagesha Suba suele considerarse la zona protegida más antigua de África Oriental: repoblada con enebros y reservada por el emperador Zara Yaqob en el siglo XV.",
+    "tag": "Bosque ancestral",
+    "region": "Etiopía central"
+  },
+  "wenchi-crater-lake": {
+    "name": "Lago de cráter de Wenchi",
+    "teaser": "Un lago dentro de un volcán extinto, con un monasterio en una isla, aguas termales y cascadas.",
+    "intro": "A unos 155 kilómetros al oeste de Adís Abeba por carretera, a medio camino entre Ambo y Woliso, la caldera de Wenchi abraza un lago a unos 2.600 metros, al que se llega a pie o a caballo y que se cruza en barca hasta el monasterio insular de Cherkos.",
+    "tag": "Lago de cráter",
+    "region": "Oromía"
+  },
+  "awash-national-park": {
+    "name": "Parque Nacional de Awash",
+    "teaser": "El parque nacional más antiguo de Etiopía: un volcán dormido, una garganta con cascada y aguas termales bordeadas de palmeras.",
+    "intro": "Establecido en 1966 a unos 225 kilómetros al este de Adís Abeba, Awash es el parque nacional más antiguo de Etiopía: 827 kilómetros cuadrados de llanura de acacias, campos de lava y garganta fluvial, vigilados por el volcán dormido Fantale.",
+    "tag": "Parque Nacional",
+    "region": "Oromía"
+  },
+  "sof-omar-caves": {
+    "name": "Cuevas de Sof Omar",
+    "teaser": "Quince kilómetros de pasadizos de piedra caliza excavados por el río, sagrados para dos religiones.",
+    "intro": "Al este de los montes Bale, el río Weyib ha excavado la cueva más larga de Etiopía: 15,1 kilómetros de pasadizos y cámaras que eran los más largos conocidos de África cuando se exploraron en 1972.",
+    "tag": "Sistema de cuevas",
+    "region": "Oromía"
+  },
+  "borana-yabelo": {
+    "name": "Borana y Yabelo",
+    "teaser": "Pozos cantores, un lago salado dentro de un volcán y un ave que no se encuentra en ningún otro lugar de la Tierra.",
+    "intro": "En el extremo sur de Etiopía, en torno a la ciudad de Yabelo, los oromo borana mantienen un modo de vida pastoril moldeado por el agua: pozos excavados a mano a gran profundidad y un lago de cráter que lleva siglos proporcionando sal.",
+    "tag": "Cultura pastoril",
+    "region": "Oromía"
+  },
+  "jimma": {
+    "name": "Jimma",
+    "teaser": "El palacio de un rey oromo enriquecido por el café, en el corazón del arábica silvestre.",
+    "intro": "En el verde suroeste, a 353 kilómetros de Adís Abeba, Jimma fue la capital del más poderoso de los cinco reinos oromo del Gibe, y su rey, Abba Jifar II, se enriqueció con el café que aún crece por toda la ciudad.",
+    "tag": "Reino del café",
+    "region": "Oromía"
+  },
+  "harar": {
+    "name": "Harar",
+    "teaser": "La única ciudad amurallada de Etiopía: 82 mezquitas, callejuelas demasiado estrechas para los coches e hienas alimentadas a mano al anochecer.",
+    "intro": "Sobre una colina de las tierras altas orientales, Harar Jugol ha sido durante siglos un centro de saber islámico y de comercio. Su ciudad vieja amurallada, inscrita por la UNESCO en 2006, es un laberinto de callejuelas, casas pintadas y santuarios al que se accede por puertas históricas.",
+    "tag": "Patrimonio de la UNESCO",
+    "region": "Etiopía oriental"
+  },
+  "arba-minch-nechisar": {
+    "name": "Arba Minch y Nechisar",
+    "teaser": "Cuarenta manantiales, dos lagos del Rift y cocodrilos tomando el sol en la orilla del lago Chamo.",
+    "intro": "Arba Minch —«cuarenta manantiales»— se alza sobre dos grandes lagos del Rift, Abaya y Chamo, separados por un estrecho istmo conocido como el Puente de Dios. Por debajo se extiende el Parque Nacional de Nechisar y, por encima, las frescas tierras altas de Gamo, hogar de los tejedores dorze.",
+    "tag": "Lagos y fauna",
+    "region": "Rift meridional"
+  },
+  "konso": {
+    "name": "Konso",
+    "teaser": "Colinas con terrazas de piedra y aldeas amuralladas: un paisaje vivo con más de 400 años de historia.",
+    "intro": "En 2011, el Paisaje Cultural de Konso se convirtió en el primer lugar de Etiopía inscrito por la UNESCO como paisaje cultural: 55 kilómetros cuadrados de terrazas de piedra seca y aldeas fortificadas en las cimas, construidas y mantenidas por los konso a lo largo de unas 21 generaciones.",
+    "tag": "Patrimonio de la UNESCO",
+    "region": "Rift meridional"
+  },
+  "sidama-yirgacheffe": {
+    "name": "Sidama y Yirgacheffe",
+    "teaser": "Las colinas tras los cafés más famosos del mundo y un paisaje de la UNESCO donde el café crece bajo los árboles.",
+    "intro": "Al sur de Hawassa, las verdes laderas de Sidama y Gedeo producen los cafés conocidos en todo el mundo como Sidamo y Yirgacheffe. En 2023 la UNESCO inscribió el Paisaje Cultural de Gedeo, donde el café se cultiva en jardines forestales estratificados bajo árboles de sombra y enset.",
+    "tag": "País del café",
+    "region": "Rift meridional"
+  }
+}
