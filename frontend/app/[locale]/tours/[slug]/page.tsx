@@ -73,12 +73,13 @@ export default async function TourPage({
   const locale = await getLocale()
   const t = await getTourData(slug, locale)
   const tc = await getTranslations({ locale, namespace: 'Crumbs' })
+  const tt = await getTranslations({ locale, namespace: 'Tours' })
   if (!t) notFound()
 
   const others = getLocalizedTours(locale)
     .filter((o) => o.slug !== t.slug)
     .slice(0, 3)
-  const nightsLabel = `${t.nights} ${t.nights === 1 ? 'night' : 'nights'}`
+  const nightsLabel = tt('nights', { count: t.nights })
   const relatedExperiences = getRelatedExperiencesForTour(t.slug, 3, locale)
 
   const priceCard = (
@@ -108,8 +109,8 @@ export default async function TourPage({
         image={t.image}
         imageAlt={t.title}
         crumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Tours', href: '/tours' },
+          { label: tc('home'), href: '/' },
+          { label: tc('tours'), href: '/tours' },
           { label: t.title },
         ]}
       />
@@ -145,8 +146,8 @@ export default async function TourPage({
       <RelatedTours others={others} />
 
       <CtaBand
-        title="Questions before you enquire?"
-        text="Altitude, road time, how hard the walking really is, whether the children will cope. Ask us anything — a designer will answer honestly."
+        title={tt('detailCtaTitle')}
+        text={tt('detailCtaText')}
         image={t.image}
       />
     </>

@@ -1,5 +1,6 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { MapPin } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import type { Tour } from '@/features/tours/types/tour.types'
 import { getDestinationSlugForPlace } from '@/features/destinations/utils/destination-tours.utils'
@@ -14,7 +15,8 @@ type Props = {
 }
 
 export function TourOverview({ t, nightsLabel, priceCard }: Props) {
-  const audience = getTourAudience(t)
+  const tt = useTranslations('Tours')
+  const audience = getTourAudience(t, tt)
 
   return (
     <section className="shell py-16 sm:py-20 lg:py-28">
@@ -22,11 +24,10 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
         <Reveal>
           <p className="eyebrow mb-5 text-accent">
             <span className="rule" />
-            The Journey
+            {tt('detailJourney')}
           </p>
           <h2 className="max-w-[22ch] text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-            {t.nights ? `${nightsLabel}, designed` : 'A single day, designed'} around the hours that
-            matter
+            {t.nights ? tt('detailTitleNights', { nights: nightsLabel }) : tt('detailTitleDay')}
           </h2>
           <p className="mt-7 text-pretty leading-relaxed text-muted-foreground sm:text-lg">
             {t.summary}
@@ -35,7 +36,7 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
           <div className="mt-10 grid gap-6 border border-border bg-card p-6 sm:grid-cols-2 sm:p-7">
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">
-                Who this is for
+                {tt('detailWhoFor')}
               </p>
               <p className="mt-3 text-pretty text-sm leading-relaxed text-foreground sm:text-[15px]">
                 {audience.forWhom}
@@ -43,7 +44,7 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
             </div>
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">
-                What this is not
+                {tt('detailWhatNot')}
               </p>
               <p className="mt-3 text-pretty text-sm leading-relaxed text-foreground sm:text-[15px]">
                 {audience.notFor}
@@ -54,7 +55,7 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
           <div className="mt-10">
             <p className="eyebrow mb-5 text-primary">
               <span className="rule" />
-              Places
+              {tt('detailPlaces')}
             </p>
             <ul className="flex flex-wrap gap-2">
               {t.places.map((place) => {

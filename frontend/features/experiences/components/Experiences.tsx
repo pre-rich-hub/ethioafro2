@@ -1,48 +1,33 @@
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/common/Reveal'
 import { LinkButton } from '@/components/common/LinkButton'
 
+// Copy (eyebrow/title/text/link) lives in the `Home` messages as experiencesCard{n}*.
 const featured = [
   {
     number: '01',
-    eyebrow: 'Mountain Climbing',
-    title: 'Stand on the roof of Ethiopia',
-    text: 'Guided ascents of Ras Dashen at 4,550 metres, Bwahit, Tullu Dimtu and Abune Yosef — walking summits with no ropes, just altitude, weather and some of the finest views in Africa.',
     href: '/tours/ras-dashen-summit-climb',
-    link: 'Ras Dashen Summit Climb',
     image: 'https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/ras-dashen.png',
   },
   {
     number: '02',
-    eyebrow: 'Photography',
-    title: 'Travel with the light, not the clock',
-    text: 'A photographer-guide times every stop to its best hour — Imet Gogo at sunrise, the Lalibela trenches at first light, the salt flats as the heat goes — with portraits only ever taken with consent.',
     href: '/tours/ethiopia-through-the-lens',
-    link: 'Ethiopia Through the Lens',
     image: 'https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/lalibela.png',
   },
   {
     number: '03',
-    eyebrow: 'Running',
-    title: 'Run where champions train',
-    text: 'Dawn on the forest trails of Entoto, around 3,000 metres up, then the highland town of Bekoji — birthplace of Derartu Tulu, Kenenisa Bekele and the Dibaba sisters. Time it to the Great Ethiopian Run in late November.',
     href: '/tours/run-with-ethiopias-champions',
-    link: "Run with Ethiopia's Champions",
     image: 'https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/run-where-champions-train.png',
   },
   {
     number: '04',
-    eyebrow: 'Cooking & Food',
-    title: 'Pour injera in a family kitchen',
-    text: 'Learn to pour injera on the mitad, cook the stews that go with it, and share one platter the Ethiopian way — then taste tej, tella and areki on an evening with azmari musicians.',
     href: '/experiences/injera-and-ethiopian-cooking',
-    link: 'Injera & an Ethiopian kitchen',
     image: 'https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/injera-and-ethiopian-cooking.png',
   },
-]
+] as const
 
 export async function Experiences() {
   const t = await getTranslations('Home')
@@ -63,6 +48,11 @@ export async function Experiences() {
 
       <div className="mt-16 divide-y divide-border border-t border-border">
         {featured.map((e, i) => {
+          const n = i + 1
+          const eyebrow = t(`experiencesCard${n}Eyebrow`)
+          const title = t(`experiencesCard${n}Title`)
+          const text = t(`experiencesCard${n}Text`)
+          const link = t(`experiencesCard${n}Link`)
           // Rows mirror each other so the number always sits beside the
           // picture: text · picture · number, then number · picture · text.
           const flip = i % 2 === 0
@@ -86,16 +76,16 @@ export async function Experiences() {
                   className={`shell lg:px-0 ${flip ? 'lg:order-1 lg:!pl-[calc(80px+3rem)]' : 'lg:order-3'}`}
                 >
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-[11px]">
-                    {e.eyebrow}
+                    {eyebrow}
                   </p>
                   <h3 className="mt-2 font-serif text-2xl text-foreground sm:text-3xl">
-                    {e.title}
+                    {title}
                   </h3>
                   <p className="mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
-                    {e.text}
+                    {text}
                   </p>
                   <span className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-primary transition-colors duration-300 group-hover:text-accent">
-                    {e.link}
+                    {link}
                     <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </span>
                 </div>
@@ -103,7 +93,7 @@ export async function Experiences() {
                 <div className="shell relative h-[240px] overflow-hidden rounded-sm sm:h-[320px] lg:order-2 lg:h-[280px] lg:px-0">
                   <Image
                     src={e.image}
-                    alt={e.title}
+                    alt={title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"

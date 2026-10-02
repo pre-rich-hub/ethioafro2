@@ -1,5 +1,6 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import { PostCard } from '@/features/blog/components/BlogCard'
 import type { Post } from '@/features/blog/types/blog.types'
@@ -10,6 +11,8 @@ type Props = {
 }
 
 export function RelatedPosts({ more }: Props) {
+  const t = useTranslations('Blog')
+
   return (
     <section className="border-t border-border bg-muted/40">
         <div className="shell py-16 sm:py-20 lg:py-24">
@@ -17,17 +20,17 @@ export function RelatedPosts({ more }: Props) {
             <div>
               <p className="eyebrow mb-4 text-accent sm:mb-5">
                 <span className="rule" />
-                More From The Journal
+                {t('moreEyebrow')}
               </p>
               <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-                Also worth your time
+                {t('moreTitle')}
               </h2>
             </div>
             <Link
               href="/blog"
               className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
             >
-              All writing
+              {t('moreAll')}
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Reveal>

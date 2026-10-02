@@ -94,14 +94,14 @@ export default async function ActivityPage({
         )}
       />
       <PageHero
-        eyebrow={`Experiences · ${a.category}`}
+        eyebrow={`${tc('experiences')} · ${a.category}`}
         title={a.title}
         lede={a.teaser}
         image={a.image}
         imageAlt={a.title}
         crumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Experiences', href: '/experiences' },
+          { label: tc('home'), href: '/' },
+          { label: tc('experiences'), href: '/experiences' },
           { label: a.title },
         ]}
         compact

@@ -1,17 +1,22 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import type { Tour } from '../types/tour.types'
 import { styleTokens } from '../utils/tour.utils'
 
+export const ALL_JOURNEYS = '__all__'
+
 export function useTourFilters(tours: Tour[]) {
+  const t = useTranslations('Tours')
+
   const filters = useMemo(() => {
     const set = new Set<string>()
-    tours.forEach((t) => styleTokens(t).forEach((s) => set.add(s)))
-    return ['All Journeys', ...Array.from(set).sort()]
+    tours.forEach((tour) => styleTokens(tour).forEach((s) => set.add(s)))
+    return [ALL_JOURNEYS, ...Array.from(set).sort()]
   }, [tours])
 
-  const [active, setActive] = useState('All Journeys')
+  const [active, setActive] = useState(ALL_JOURNEYS)
   const groupRef = useRef<HTMLDivElement>(null)
 
   // Links like /tours?style=Wildlife open the grid pre-filtered. Read in an
@@ -27,16 +32,17 @@ export function useTourFilters(tours: Tour[]) {
   const choose = (f: string) => {
     setActive(f)
     const url = new URL(window.location.href)
-    if (f === 'All Journeys') url.searchParams.delete('style')
+    if (f === ALL_JOURNEYS) url.searchParams.delete('style')
     else url.searchParams.set('style', f)
     window.history.replaceState(null, '', url)
   }
 
   const visible =
-    active === 'All Journeys'
+    active === ALL_JOURNEYS
       ? tours
-      : tours.filter((t) => styleTokens(t).includes(active))
+      : tours.filter((tour) => styleTokens(tour).includes(active))
 
+  const labelFor = (f: string) => (f === ALL_JOURNEYS ? t('allJourneys') : f)
 
-  return { filters, active, groupRef, choose, visible }
+  return { filters, active, groupRef, choose, visible, labelFor, emptyLabel: t('emptyStyle') }
 }

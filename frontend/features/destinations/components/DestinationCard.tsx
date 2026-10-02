@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { MapPin, Mountain, CalendarDays, Clock3, ArrowRight } from 'lucide-react'
 import { type Destination } from '@/features/destinations/types/destination.types'
 import { cn } from '@/lib/utils/cn'
@@ -14,6 +15,9 @@ export function DestinationCard({
   height?: 'md' | 'lg'
   sizes?: string
 }) {
+  const t = useTranslations('Destinations')
+  const tc = useTranslations('Cta')
+
   return (
     <Link
       href={`/destinations/${d.slug}`}
@@ -25,7 +29,7 @@ export function DestinationCard({
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
           src={d.image || '/placeholder.svg'}
-          alt={`${d.name}, Ethiopia`}
+          alt={t('cardAlt', { name: d.name })}
           fill
           sizes={sizes}
           className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -69,7 +73,7 @@ export function DestinationCard({
         </div>
 
         <div className="mt-5 flex items-center justify-center gap-2 border-t border-border pt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors duration-300 group-hover:text-accent">
-          Explore
+          {tc('explore')}
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </div>
       </div>

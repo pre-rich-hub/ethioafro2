@@ -3,6 +3,7 @@ import type { Destination } from '@/features/destinations/types/destination.type
 import type { Activity } from '@/features/experiences/types/experience.types'
 import type { Tour } from '@/features/tours/types/tour.types'
 import { isTailorMade } from '@/features/tours/utils/tour.utils'
+import { parseDisplayDate } from '@/lib/i18n/format-date'
 import { company } from '@/lib/seo/entities'
 import type { FaqItem } from '@/lib/seo/faq.types'
 import {
@@ -24,9 +25,7 @@ function absoluteUrl(path: string, locale = 'en') {
 
 /** Parse display dates like "June 18, 2026" into ISO YYYY-MM-DD when possible. */
 export function toIsoDate(displayDate: string): string | undefined {
-  const parsed = Date.parse(displayDate)
-  if (Number.isNaN(parsed)) return undefined
-  return new Date(parsed).toISOString().slice(0, 10)
+  return parseDisplayDate(displayDate)?.toISOString().slice(0, 10)
 }
 
 /** Parse "11 Days" / "1 Day" into ISO-8601 duration. */

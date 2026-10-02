@@ -65,6 +65,7 @@ export default async function ArticlePage({
   if (!post) notFound()
   const tc = await getTranslations({ locale, namespace: 'Crumbs' })
   const tn = await getTranslations({ locale, namespace: 'Nav' })
+  const tb = await getTranslations({ locale, namespace: 'Blog' })
 
   const localizedPosts = getLocalizedPosts(locale)
   const index = localizedPosts.findIndex((p) => p.slug === post.slug)
@@ -103,9 +104,9 @@ export default async function ArticlePage({
       <RelatedPosts more={more} />
 
       <CtaBand
-        title="Ready to see it for yourself?"
-        text="Every essay here comes out of a journey we designed for someone. Tell us what you want yours to feel like."
-        secondary={{ label: 'See Destinations', href: '/destinations' }}
+        title={tb('articleCtaTitle')}
+        text={tb('articleCtaText')}
+        secondary={{ label: tb('articleCtaSecondary'), href: '/destinations' }}
         image={post.image}
       />
     </article>

@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import type { FaqItem } from '@/lib/seo/faq.types'
 
@@ -11,12 +12,14 @@ type Props = {
 }
 
 export function FaqSection({
-  eyebrow = 'Common Questions',
+  eyebrow,
   title,
   intro,
   items,
   footerLink,
 }: Props) {
+  const ts = useTranslations('Shared')
+
   if (items.length === 0) return null
 
   return (
@@ -25,7 +28,7 @@ export function FaqSection({
         <Reveal className="mb-10 max-w-2xl sm:mb-14">
           <p className="eyebrow mb-5 text-accent">
             <span className="rule" />
-            {eyebrow}
+            {eyebrow ?? ts('commonQuestions')}
           </p>
           <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
             {title}

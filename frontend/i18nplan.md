@@ -24,8 +24,8 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - QA signed off in [`i18n-qa.md`](i18n-qa.md) (Step 6)
 - GEO: English FAQs, facts, direct answers; Lalibela + Simien destination FAQs localized (Pass-2)
 
-### Missing / Pass-2 leftovers
-- Minor chrome labels + journal date filter; native review of Pass-2 MT; Amharic/CMS later — see Step 4 Pass-2 status + [`i18n-qa.md`](i18n-qa.md)
+### Missing / residual
+- Native review of MT drafts; JSON-LD tailor-made schema string; Amharic/CMS later — see Step 4 + [`i18n-qa.md`](i18n-qa.md)
 - Admin stays English-only (out of scope)
 
 ---
@@ -114,7 +114,7 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - RSC pages/components use `getLocale()` from `next-intl/server`; client components (nav dropdowns, `useDestinations`) use `useLocale()` and call the sync `getLocalized*` utils (JSON + data only, safe in client bundles).
 - Experience categories: grouping and `#anchor` ids stay keyed on the **English** category (`slugify`); only the visible label is localized (`getActivityCategoryLabels`).
 - Merge order for tours: English static → locale overlay → live API `from` / `featured`.
-- Metadata `title`/`description` on detail pages use localized fields; list pages now use `generateMetadata` (title from `Crumbs`, description from hero keys; Blog index description still English).
+- Metadata `title`/`description` on detail pages use localized fields; list pages now use `generateMetadata` (title from `Crumbs`, description from hero keys; Blog index description from `Blog.metaDescription`).
 
 ### Pass-2 status
 **Done (es, fr, de, zh — deep-merged into Step 4 overlays; card fields kept):**
@@ -126,12 +126,27 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - [x] **Tour itineraries (45):** `days`, `style`, `season`, `group`, `from` wording, `includes[]`, `excludes[]`, `itinerary[]`, `places[]`
 - [x] **Enquiry chips:** `EnquiryForm` uses `getLocalizedActivities(locale)` for `short` labels
 
+**Pass-2 chrome leftovers — done (en, es, fr, de, zh):**
+- [x] **Detail-page chrome** in message namespaces (no hard-coded English): `DestinationOverview`, `DestinationJourneys`, `DestinationEnquiry`, `TourOverview` / `Itinerary` / `Inclusions` / `Enquiry` / `PriceCard` (incl. ICU `Tours.nights` plural, From / per person / Tailor-made), `RelatedTours`, `TourRelatedExperiences`, `ExperienceStory` / `Places` / `Journeys` / `Enquiry`, `BlogRelatedCatalogue`, `BlogBody`, `RelatedPosts`
+- [x] **Breadcrumbs** on destination, tour, experience and blog detail pages (`Crumbs`, `Nav.journal`, `Crumbs.ariaLabel`; `PageHero` + `BlogHeader`)
+- [x] **CtaBand** props on destination / tour / blog detail + blog index → `Destinations.detailCta*`, `Tours.detailCta*`, `Blog.ctaTitle|ctaText|ctaSecondary|articleCta*`
+- [x] **Card CTAs** — `Cta.explore` (DestinationCard, ActivityCard), `Cta.seeTheJourney` (TourCard), `Cta.enquireNow`; card image alts via `Destinations.cardAlt` / `Tours.cardAlt`
+- [x] **Journal:** new `Blog` namespace (hero, archive, filter "All Writing" + aria + empty state, teaser, newsletter, article chrome, `metaDescription`); `BlogList` filter state no longer keyed on the English label
+- [x] **Journal dates:** formatted from the English display date with `Intl.DateTimeFormat(locale)` via `lib/i18n/format-date.ts` (no per-locale `date` overlays needed). `toIsoDate` now reuses the same timezone-safe parser
+- [x] **Home `Experiences`** featured rows → `Home.experiencesCard{1-4}{Eyebrow|Title|Text|Link}`
+- [x] Locale-aware links: detail components, `PageHero`, `FaqSection` now use `@/i18n/navigation` `Link` (previously jumped to unprefixed English URLs); `FaqSection` default eyebrow → `Shared.commonQuestions`
+- [x] Localized tour `from` handled: `isTailorMade()` accepts translated sentinels; `getPriceAmount()` extracts the `$` amount for price cards / enquiry line / Tours dropdown
+
 **Still English / minor leftovers:**
-- Journal `date` formatting; filter label "All Writing"
-- Some detail-page chrome labels ("At a Glance", "Related Journeys", breadcrumbs) still hard-coded English in places
-- Home `Experiences` feature-card blurbs outside catalogue overlays
-- Native-speaker review of Pass-2 MT drafts before production marketing claims
+- JSON-LD tailor-made price description string; rare “not found” metadata titles on detail routes (noindex)
+- Native-speaker review of MT drafts before production marketing claims
 - Amharic / CMS — later
+
+**Also finished in chrome mop-up:**
+- [x] `EnquiryForm` full UI (new `Enquiry` namespace + localized journey style chips)
+- [x] `/tours` “All Journeys” filter + empty state (`Tours.allJourneys` / `emptyStyle` / `filterAria`)
+- [x] Home “Where to next” names/regions from localized destinations + i18n `Link`
+- [x] Tour audience “Who this is for / What this is not” bodies via `Tours.audience*` keys
 
 **Done when (Pass-2 catalogue goal):** Detail pages show localized deep copy for destinations, tours, experiences, journal, and founder essay.
 

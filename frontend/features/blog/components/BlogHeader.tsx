@@ -1,29 +1,35 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import { ChevronRight } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import type { Post } from '@/features/blog/types/blog.types'
 import { cloudinaryImage } from '@/lib/cloudinary'
+import { formatDisplayDate } from '@/lib/i18n/format-date'
 
 type Props = {
   post: Post
 }
 
 export function BlogHeader({ post }: Props) {
+  const tc = useTranslations('Crumbs')
+  const tn = useTranslations('Nav')
+  const locale = useLocale()
+
   return (
     <header className="border-b border-border">
       <div className="shell pb-12 pt-32 sm:pb-16 sm:pt-36 lg:pt-40">
         <Reveal className="mx-auto max-w-3xl">
           <nav
-            aria-label="Breadcrumb"
+            aria-label={tc('ariaLabel')}
             className="mb-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px]"
           >
             <Link href="/" className="transition-colors hover:text-primary">
-              Home
+              {tc('home')}
             </Link>
             <ChevronRight className="h-3 w-3 opacity-50" aria-hidden />
             <Link href="/blog" className="transition-colors hover:text-primary">
-              Journal
+              {tn('journal')}
             </Link>
             <ChevronRight className="h-3 w-3 opacity-50" aria-hidden />
             <span className="text-foreground/80">{post.title}</span>
@@ -32,7 +38,7 @@ export function BlogHeader({ post }: Props) {
           <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
             <span className="text-accent">{post.category}</span>
             <span className="h-3 w-px bg-border" aria-hidden />
-            {post.date}
+            {formatDisplayDate(post.date, locale)}
             <span className="h-3 w-px bg-border" aria-hidden />
             {post.readTime}
           </p>

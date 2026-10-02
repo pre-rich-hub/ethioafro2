@@ -58,6 +58,7 @@ export default async function DestinationPage({
   const d = getDestination(slug, locale)
   if (!d) notFound()
   const tc = await getTranslations({ locale, namespace: 'Crumbs' })
+  const t = await getTranslations({ locale, namespace: 'Destinations' })
 
   const fallback = getRelatedToursForDestination(d, getLocalizedTours(locale), 3)
   const others = getLocalizedDestinations(locale).filter((o) => o.slug !== d.slug).slice(0, 4)
@@ -86,10 +87,10 @@ export default async function DestinationPage({
         title={d.name}
         lede={d.intro}
         image={d.image}
-        imageAlt={`${d.name}, Ethiopia`}
+        imageAlt={t('cardAlt', { name: d.name })}
         crumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Destinations', href: '/destinations' },
+          { label: tc('home'), href: '/' },
+          { label: tc('destinations'), href: '/destinations' },
           { label: d.name },
         ]}
       />
@@ -100,17 +101,17 @@ export default async function DestinationPage({
 
       {faqs.length > 0 && (
         <FaqSection
-          title={faqUi ? faqUi.title.replace('{name}', d.name) : `Planning ${d.name}`}
-          intro={faqUi?.intro ?? 'Season, altitude and how long to stay — answered plainly.'}
+          title={faqUi ? faqUi.title.replace('{name}', d.name) : t('detailFaqTitle', { name: d.name })}
+          intro={faqUi?.intro ?? t('detailFaqIntro')}
           items={faqs}
           footerLink={
             d.slug === 'lalibela'
               ? {
-                  label: faqUi?.lalibelaLink ?? 'Read: Lalibela at dawn',
+                  label: faqUi?.lalibelaLink ?? t('detailFaqLinkLalibela'),
                   href: '/blog/lalibela-at-dawn',
                 }
               : {
-                  label: faqUi?.defaultLink ?? 'When to visit Ethiopia',
+                  label: faqUi?.defaultLink ?? t('detailFaqLinkDefault'),
                   href: '/blog/when-to-visit-ethiopia',
                 }
           }
@@ -120,9 +121,9 @@ export default async function DestinationPage({
       <DestinationEnquiry d={d} others={others} />
 
       <CtaBand
-        title="Speak to someone who has been there this season"
-        text="Our designers travel these routes themselves. Ask about road conditions, festival dates or which lodge has the better view — you will get a straight answer."
-        secondary={{ label: 'All Destinations', href: '/destinations' }}
+        title={t('detailCtaTitle')}
+        text={t('detailCtaText')}
+        secondary={{ label: t('detailCtaSecondary'), href: '/destinations' }}
         image={d.image}
       />
     </>

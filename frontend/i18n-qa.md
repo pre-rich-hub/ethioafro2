@@ -57,11 +57,17 @@ Spot-checked locally: `/es/destinations/lalibela`, `/es/tours/the-historic-route
 
 Translations are **machine-assisted drafts** — schedule native-speaker review before treating them as final marketing copy.
 
-**Remaining (minor):**
+**Pass-2 chrome leftovers — finished (2026-10-02):** detail-page chrome (destination / tour / experience / journal), breadcrumbs, CtaBand strings, card CTAs, Journal (`Blog` namespace, filter label, empty state, `Intl` date formatting, meta description) and Home Experiences featured rows are all in `messages/*.json`.
 
-1. Detail-page UI chrome still hard-coded English in places (labels, some CtaBand/breadcrumb strings)
-2. Journal date formatting + “All Writing” filter label
-3. Home Experiences feature-card blurbs outside catalogue overlays
+Spot-checked on `:3000`: `/es/destinations/lalibela` (no “At a Glance”), `/es/blog` (no “All Writing”; localized meta description), `/es|fr|de|zh/blog/lalibela-at-dawn` (localized date, breadcrumb, Direct Answer, Read Next), `/es|fr|zh/tours/*` (nights plural, From / per person, Tailor-made), `/de/experiences/injera-and-ethiopian-cooking`, `/zh` Experiences section in Chinese.
+
+**Chrome mop-up also finished:** `EnquiryForm` (`Enquiry` namespace), `/tours` “All Journeys” filter + empty state, Home “Where to next” localized names/regions, tour audience bodies via `Tours.audience*` keys. Spot-checked `/es/contact`, `/es/tours`, `/es` (Where to next), `/zh` Experiences.
+
+**Truly residual:**
+
+1. Native-speaker review of machine-assisted translations
+2. JSON-LD tailor-made offer description (English schema string)
+3. Rare “not found” metadata titles on detail routes (noindex)
 
 ### Product / platform later
 
@@ -69,11 +75,6 @@ Translations are **machine-assisted drafts** — schedule native-speaker review 
 - CMS for catalogue copy instead of JSON overlays
 - Admin UI translation (out of scope)
 - Currency / price localization (USD display stays)
-
-### Minor chrome leftovers
-
-- Blog index meta description still English shell
-- A few hard-coded detail chrome strings (see remaining list above)
 
 ---
 

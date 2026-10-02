@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { ChevronRight } from 'lucide-react'
 
 type Crumb = { label: string; href?: string }
@@ -27,6 +28,8 @@ export function PageHero({
   align = 'left',
   compact = false,
 }: PageHeroProps) {
+  const tc = useTranslations('Crumbs')
+
   return (
     <section
       className={`relative isolate flex items-end overflow-hidden pt-28 ${
@@ -51,7 +54,7 @@ export function PageHero({
       <div className="shell pb-12 sm:pb-16 lg:pb-20">
         {crumbs.length > 0 && (
           <nav
-            aria-label="Breadcrumb"
+            aria-label={tc('ariaLabel')}
             className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] uppercase tracking-[0.16em] text-background/60"
           >
             {crumbs.map((c, i) => (

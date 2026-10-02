@@ -1,33 +1,49 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useMemo } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
+import { getLocalizedDestinations } from '@/features/destinations/utils/destination.utils'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
-const cld = (slug: string) =>
-  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
-
-const stops = [
-  { src: cld('lalibela'), location: 'Lalibela', region: 'Northern Highlands', href: '/destinations/lalibela' },
-  { src: cld('simien-mountains'), location: 'Simien Mountains', region: 'Northern Highlands', href: '/destinations/simien-mountains' },
-  { src: cld('danakil-depression'), location: 'Danakil Depression', region: 'Afar Lowlands', href: '/destinations/danakil-depression' },
-  { src: cld('omo-valley'), location: 'Omo Valley', region: 'Southern Rift', href: '/destinations/omo-valley' },
-  { src: cld('gondar'), location: 'Gondar', region: 'Northern Highlands', href: '/destinations/gondar' },
-  { src: cld('bale-mountains'), location: 'Bale Mountains', region: 'Southern Highlands', href: '/destinations/bale-mountains' },
-  { src: cld('lake-tana'), location: 'Lake Tana', region: 'Amhara', href: '/destinations/lake-tana' },
-]
+const STOP_SLUGS = [
+  'lalibela',
+  'simien-mountains',
+  'danakil-depression',
+  'omo-valley',
+  'gondar',
+  'bale-mountains',
+  'lake-tana',
+] as const
 
 // Three copies of the set so there's always more track to scroll into in
 // either direction — the effect of an infinite loop without ever actually
 // wrapping the DOM around.
-const loopStops = [...stops, ...stops, ...stops]
-
 const AUTO_SCROLL_SPEED = 0.4 // pixels per animation frame, ~24px/sec
 
 export function WhereToNext() {
   const t = useTranslations('Home')
+  const locale = useLocale()
+  const destinations = getLocalizedDestinations(locale)
+
+  const stops = useMemo(
+    () =>
+      STOP_SLUGS.map((slug) => {
+        const d = destinations.find((dest) => dest.slug === slug)
+        return {
+          src: cloudinaryImage(slug),
+          location: d?.name ?? slug,
+          region: d?.region ?? '',
+          href: `/destinations/${slug}`,
+        }
+      }),
+    [destinations],
+  )
+
+  const loopStops = useMemo(() => [...stops, ...stops, ...stops], [stops])
+
   const trackRef = useRef<HTMLDivElement>(null)
   const isDragging = useRef(false)
   const dragMoved = useRef(false)

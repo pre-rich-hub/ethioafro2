@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { ArrowRight, CalendarDays, Clock3, MapPin, Mountain } from 'lucide-react'
 import { Reveal } from '@/components/common/Reveal'
 import type { Destination } from '@/features/destinations/types/destination.types'
@@ -8,11 +9,13 @@ type Props = {
 }
 
 export function DestinationOverview({ d }: Props) {
+  const t = useTranslations('Destinations')
+  const tc = useTranslations('Cta')
   const glance = [
-    { label: 'Best time', value: d.bestTime, Icon: CalendarDays },
-    { label: 'Typical stay', value: d.duration, Icon: Clock3 },
-    { label: 'Altitude', value: d.altitude, Icon: Mountain },
-    { label: 'Region', value: d.region, Icon: MapPin },
+    { label: t('detailBestTime'), value: d.bestTime, Icon: CalendarDays },
+    { label: t('detailTypicalStay'), value: d.duration, Icon: Clock3 },
+    { label: t('detailAltitude'), value: d.altitude, Icon: Mountain },
+    { label: t('detailRegion'), value: d.region, Icon: MapPin },
   ]
 
   return (
@@ -20,10 +23,10 @@ export function DestinationOverview({ d }: Props) {
       <Reveal>
         <p className="eyebrow mb-5 text-accent">
           <span className="rule" />
-          At a Glance
+          {t('detailAtGlance')}
         </p>
         <h2 className="max-w-[24ch] text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-          {d.name} in plain terms
+          {t('detailInPlainTerms', { name: d.name })}
         </h2>
         <dl className="mt-8 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
           {glance.map(({ label, value, Icon }) => (
@@ -39,7 +42,7 @@ export function DestinationOverview({ d }: Props) {
 
         <p className="eyebrow mb-5 mt-14 text-accent">
           <span className="rule" />
-          Why We Go
+          {t('detailWhyWeGo')}
         </p>
         <h3 className="max-w-[24ch] text-balance font-serif text-2xl leading-[1.15] text-foreground sm:text-3xl">
           {d.teaser}
@@ -65,7 +68,7 @@ export function DestinationOverview({ d }: Props) {
 
           <p className="eyebrow relative mb-6 text-accent">
             <span className="rule" />
-            Highlights
+            {t('detailHighlights')}
           </p>
           <ul className="relative space-y-5">
             {d.highlights.map((h, i) => (
@@ -83,8 +86,11 @@ export function DestinationOverview({ d }: Props) {
           <div className="relative mt-7 flex items-start gap-3 border-t border-background/15 pt-6">
             <Mountain className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
             <p className="text-sm leading-relaxed text-background/60">
-              Best combined with a stay of <span className="text-background">{d.duration}</span>,
-              travelling <span className="text-background">{d.bestTime}</span>.
+              {t.rich('detailBestCombined', {
+                duration: d.duration,
+                bestTime: d.bestTime,
+                b: (chunks) => <span className="text-background">{chunks}</span>,
+              })}
             </p>
           </div>
 
@@ -92,8 +98,8 @@ export function DestinationOverview({ d }: Props) {
             href="/contact"
             className="group relative mx-auto mt-5 flex w-fit items-center gap-2.5 whitespace-nowrap rounded-sm border border-accent/60 px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-accent-foreground sm:text-xs"
           >
-            <span className="sm:hidden">Enquire now</span>
-            <span className="hidden sm:inline">Enquire about {d.name}</span>
+            <span className="sm:hidden">{tc('enquireNow')}</span>
+            <span className="hidden sm:inline">{t('detailEnquireNamed', { name: d.name })}</span>
             <ArrowRight className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>

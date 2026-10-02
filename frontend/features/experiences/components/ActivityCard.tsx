@@ -1,15 +1,12 @@
-import { slugify } from '@/features/experiences/utils/experience.utils'
-import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { ArrowRight, Clock3, MapPin } from 'lucide-react'
-import { PageHero } from '@/components/common/PageHero'
-import { Reveal } from '@/components/common/Reveal'
-import { CtaBand } from '@/features/enquiries'
-import { activities, activityCategories } from '@/features/experiences/data/experience.data'
+import { Link } from '@/i18n/navigation'
 import { type Activity } from '@/features/experiences/types/experience.types'
 
 export function ActivityCard({ a }: { a: Activity }) {
+  const t = useTranslations('Cta')
+
   return (
     <Link
       href={`/experiences/${a.slug}`}
@@ -44,7 +41,7 @@ export function ActivityCard({ a }: { a: Activity }) {
           </span>
         </div>
         <div className="mt-5 flex items-center justify-center gap-2 border-t border-border pt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors duration-300 group-hover:text-accent">
-          Explore
+          {t('explore')}
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </div>
       </div>

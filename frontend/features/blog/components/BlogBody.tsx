@@ -1,5 +1,6 @@
-import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import type { Post } from '@/features/blog/types/blog.types'
 
@@ -8,7 +9,17 @@ type Props = {
   next: Post
 }
 
+/** Author roles read mid-sentence ("..., head of journey design"): lower-case where the language does. */
+function roleInSentence(role: string, locale: string) {
+  if (locale === 'en') return role.toLowerCase()
+  if (locale === 'es' || locale === 'fr') return role.charAt(0).toLowerCase() + role.slice(1)
+  return role
+}
+
 export function BlogBody({ post, next }: Props) {
+  const t = useTranslations('Blog')
+  const locale = useLocale()
+
   return (
     <div className="shell py-14 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-2xl">
@@ -16,7 +27,7 @@ export function BlogBody({ post, next }: Props) {
           <Reveal>
             <aside className="mb-10 border border-border bg-muted/40 p-6 sm:p-7">
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
-                Direct Answer
+                {t('directAnswer')}
               </p>
               <p className="mt-3 text-pretty text-lg leading-relaxed text-foreground sm:text-xl">
                 {post.directAnswer}
@@ -41,15 +52,19 @@ export function BlogBody({ post, next }: Props) {
 
         <Reveal className="mt-14 border-t border-border pt-8">
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Written by <span className="font-medium text-foreground">{post.author}</span>,{' '}
-            {post.authorRole.toLowerCase()}. Questions about any of the above are always welcome —{' '}
-            <Link
-              href="/contact"
-              className="border-b border-accent/50 pb-0.5 text-primary transition-colors hover:border-accent hover:text-accent"
-            >
-              write to us
-            </Link>
-            .
+            {t.rich('writtenBy', {
+              author: post.author,
+              role: roleInSentence(post.authorRole, locale),
+              b: (chunks) => <span className="font-medium text-foreground">{chunks}</span>,
+              link: (chunks) => (
+                <Link
+                  href="/contact"
+                  className="border-b border-accent/50 pb-0.5 text-primary transition-colors hover:border-accent hover:text-accent"
+                >
+                  {chunks}
+                </Link>
+              ),
+            })}
           </p>
         </Reveal>
 
@@ -59,7 +74,7 @@ export function BlogBody({ post, next }: Props) {
             className="group block border border-border bg-card p-6 transition-colors hover:border-primary/40 sm:p-8"
           >
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
-              Read Next
+              {t('readNext')}
             </p>
             <p className="mt-3 text-balance font-serif text-xl text-foreground transition-colors group-hover:text-primary sm:text-2xl">
               {next.title}

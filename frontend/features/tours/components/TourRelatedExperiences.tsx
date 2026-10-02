@@ -1,5 +1,6 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import type { Activity } from '@/features/experiences/types/experience.types'
 
@@ -8,6 +9,8 @@ type Props = {
 }
 
 export function TourRelatedExperiences({ experiences }: Props) {
+  const t = useTranslations('Tours')
+
   if (experiences.length === 0) return null
 
   return (
@@ -17,17 +20,17 @@ export function TourRelatedExperiences({ experiences }: Props) {
           <div className="max-w-2xl">
             <p className="eyebrow mb-4 text-accent sm:mb-5">
               <span className="rule" />
-              Add Along The Way
+              {t('detailAddEyebrow')}
             </p>
             <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-              Experiences that fit this route
+              {t('detailAddTitle')}
             </h2>
           </div>
           <Link
             href="/experiences"
             className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
           >
-            All experiences
+            {t('detailAllExperiences')}
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </Reveal>
@@ -50,7 +53,7 @@ export function TourRelatedExperiences({ experiences }: Props) {
                     {activity.teaser}
                   </p>
                   <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
-                    View experience
+                    {t('detailViewExperience')}
                     <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </Link>

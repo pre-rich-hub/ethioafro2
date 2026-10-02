@@ -1,22 +1,9 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight, Mountain } from 'lucide-react'
-import { PageHero } from '@/components/common/PageHero'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
-import { TourCard } from '@/features/tours'
 import { EnquiryForm } from '@/features/enquiries'
-import { CtaBand } from '@/features/enquiries'
-import { destinations } from '@/features/destinations/data/destination.data'
-import { getDestination } from '@/features/destinations/utils/destination.utils'
-import { tours } from '@/features/tours/data/tour.data'
-import type { ReactNode } from 'react'
-import type { Tour } from '@/features/tours/types/tour.types'
 import type { Destination } from '@/features/destinations/types/destination.types'
-import type { Activity, ActivityCategory } from '@/features/experiences/types/experience.types'
-import type { Post } from '@/features/blog/types/blog.types'
-
 
 type Props = {
   d: Destination
@@ -24,26 +11,26 @@ type Props = {
 }
 
 export function DestinationEnquiry({ d, others }: Props) {
+  const t = useTranslations('Destinations')
+
   return (
     <section className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[1fr_1.15fr] lg:gap-20 lg:py-28">
         <Reveal>
           <p className="eyebrow mb-5 text-accent">
             <span className="rule" />
-            Plan This Destination
+            {t('detailPlanEyebrow')}
           </p>
           <h2 className="max-w-[20ch] text-balance text-3xl leading-[1.08] text-foreground sm:text-4xl lg:text-5xl">
-            Build {d.name} into your journey
+            {t('detailPlanTitle', { name: d.name })}
           </h2>
           <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground sm:text-lg">
-            Nothing here is fixed. Tell us how long you have and what else you
-            want to see, and a designer will draw the route — including the
-            flights, the guides and the hours that matter.
+            {t('detailPlanBody')}
           </p>
 
           <div className="mt-12">
             <p className="eyebrow mb-6 text-primary">
               <span className="rule" />
-              Also Consider
+              {t('detailAlsoConsider')}
             </p>
             <ul className="grid gap-3 sm:grid-cols-2">
               {others.map((o) => (

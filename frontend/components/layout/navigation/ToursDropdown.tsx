@@ -1,7 +1,7 @@
 'use client'
 
 import { getLocalizedTours } from '@/features/tours/utils/tour-catalog.utils'
-import { isTailorMade } from '@/features/tours/utils/tour.utils'
+import { getPriceAmount, isTailorMade } from '@/features/tours/utils/tour.utils'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
@@ -13,6 +13,7 @@ type Props = Pick<NavigationState, 'dismissed' | 'dismiss'>
 
 export function ToursDropdown({ dismissed, dismiss }: Props) {
   const tNav = useTranslations('Nav')
+  const tTours = useTranslations('Tours')
   const locale = useLocale()
   const tours = getLocalizedTours(locale)
 
@@ -66,7 +67,7 @@ export function ToursDropdown({ dismissed, dismiss }: Props) {
                   {t.days}
                 </span>
                 <span className="absolute bottom-3 right-3 font-serif text-sm text-background">
-                  {isTailorMade(t) ? 'Tailor-made' : t.from.split(' per ')[0]}
+                  {isTailorMade(t) ? tTours('tailorMade') : (getPriceAmount(t.from) ?? t.from)}
                 </span>
               </div>
               <div>

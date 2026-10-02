@@ -1,31 +1,6 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import {
-  ArrowRight,
-  CalendarDays,
-  Check,
-  Clock,
-  Compass,
-  MapPin,
-  ShieldCheck,
-  Users,
-  X,
-} from 'lucide-react'
-import { PageHero } from '@/components/common/PageHero'
+import { useTranslations } from 'next-intl'
 import { Reveal } from '@/components/common/Reveal'
-import { TourCard } from '@/features/tours/components/TourCard'
-import { EnquiryForm } from '@/features/enquiries'
-import { CtaBand } from '@/features/enquiries'
-import { getTour } from '@/features/tours/utils/tour-catalog.utils'
-import { isTailorMade } from '@/features/tours/utils/tour.utils'
-import { tours } from '@/features/tours/data/tour.data'
-import { getTourData } from '@/features/tours/api/tour-data.api'
-import type { ReactNode } from 'react'
 import type { Tour } from '@/features/tours/types/tour.types'
-import type { Destination } from '@/features/destinations/types/destination.types'
-import type { Activity, ActivityCategory } from '@/features/experiences/types/experience.types'
-import type { Post } from '@/features/blog/types/blog.types'
 import { railPad } from '@/features/tours/constants/tour-layout'
 
 type Props = {
@@ -33,6 +8,8 @@ type Props = {
 }
 
 export function TourItinerary({ t }: Props) {
+  const tt = useTranslations('Tours')
+
   return (
     <section className="border-y border-border bg-muted/40">
           <div className="shell py-16 sm:py-20 lg:py-28">
@@ -40,14 +17,13 @@ export function TourItinerary({ t }: Props) {
               <Reveal className="mb-12 max-w-2xl sm:mb-16">
                 <p className="eyebrow mb-5 text-accent">
                   <span className="rule" />
-                  Day by Day
+                  {tt('detailItineraryEyebrow')}
                 </p>
                 <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-                  The itinerary, as it usually runs
+                  {tt('detailItineraryTitle')}
                 </h2>
                 <p className="mt-5 text-pretty leading-relaxed text-muted-foreground sm:text-lg">
-                  A working draft rather than a fixed schedule — we move days around
-                  for weather, festivals and how you are feeling.
+                  {tt('detailItineraryLede')}
                 </p>
               </Reveal>
 

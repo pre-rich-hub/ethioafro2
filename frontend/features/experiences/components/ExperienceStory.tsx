@@ -1,28 +1,15 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { ArrowRight, CalendarDays, Clock3, Info, MapPin } from 'lucide-react'
-import { PageHero } from '@/components/common/PageHero'
 import { Reveal } from '@/components/common/Reveal'
-import { DestinationCard } from '@/features/destinations'
-import { TourCard } from '@/features/tours'
-import { EnquiryForm } from '@/features/enquiries'
-import { activities } from '@/features/experiences/data/experience.data'
-import { getActivity } from '@/features/experiences/utils/experience.utils'
-import { getDestination } from '@/features/destinations/utils/destination.utils'
-import { getTour } from '@/features/tours/utils/tour-catalog.utils'
-import type { ReactNode } from 'react'
-import type { Tour } from '@/features/tours/types/tour.types'
-import type { Destination } from '@/features/destinations/types/destination.types'
-import type { Activity, ActivityCategory } from '@/features/experiences/types/experience.types'
-import type { Post } from '@/features/blog/types/blog.types'
-
+import type { Activity } from '@/features/experiences/types/experience.types'
 
 type Props = {
   a: Activity
 }
 
 export function ExperienceStory({ a }: Props) {
+  const t = useTranslations('Experiences')
+
   return (
     <section className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.35fr_1fr] lg:gap-20 lg:py-24">
         <Reveal>
@@ -51,13 +38,13 @@ export function ExperienceStory({ a }: Props) {
             <div className="relative border border-accent/35 px-6 py-8 sm:px-8 sm:py-10">
               <p className="eyebrow text-accent">
                 <span className="rule" />
-                The details
+                {t('detailDetails')}
               </p>
               <dl className="mt-6 space-y-4">
                 {[
-                  { k: 'Time needed', v: a.duration, Icon: Clock3 },
-                  { k: 'Where', v: a.where, Icon: MapPin },
-                  { k: 'When', v: a.season, Icon: CalendarDays },
+                  { k: t('detailTimeNeeded'), v: a.duration, Icon: Clock3 },
+                  { k: t('detailWhere'), v: a.where, Icon: MapPin },
+                  { k: t('detailWhen'), v: a.season, Icon: CalendarDays },
                 ].map(({ k, v, Icon }) => (
                   <div key={k} className="flex items-start gap-3">
                     <Icon className="mt-1 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
@@ -70,7 +57,7 @@ export function ExperienceStory({ a }: Props) {
               </dl>
 
               <p className="mt-8 border-t border-background/15 pt-6 text-[10px] font-semibold uppercase tracking-[0.16em] text-background/50">
-                What&apos;s included
+                {t('detailIncluded')}
               </p>
               <ul className="mt-4 space-y-3">
                 {a.includes.map((inc) => (
@@ -85,7 +72,7 @@ export function ExperienceStory({ a }: Props) {
                 href="#add"
                 className="group mx-auto mt-8 flex w-fit items-center gap-2.5 whitespace-nowrap rounded-sm bg-accent px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-background sm:text-xs"
               >
-                Add to my journey
+                {t('detailAddToJourney')}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>

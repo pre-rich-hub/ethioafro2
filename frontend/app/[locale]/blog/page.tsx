@@ -10,28 +10,31 @@ import { buildPageMetadata } from '@/lib/seo/metadata'
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
   const tn = await getTranslations({ locale, namespace: 'Nav' })
-  // The journal index shell is not translated yet; description stays English.
+  const t = await getTranslations({ locale, namespace: 'Blog' })
   return buildPageMetadata({
     title: tn('journal'),
-    description:
-      'Planning guidance, destination essays and dispatches from the designers and guides who run our Ethiopian journeys.',
+    description: t('metaDescription'),
     path: '/blog',
     locale,
     image: cloudinaryImage('coffee-cupping-and-ceremony', 1200),
-    imageAlt: 'Ethiopian coffee ceremony',
+    imageAlt: t('metaImageAlt'),
   })
 }
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const t = await getTranslations('Blog')
+  const tc = await getTranslations('Crumbs')
+  const tn = await getTranslations('Nav')
+
   return (
     <>
       <PageHero
-        eyebrow="The Journal"
-        title="Notes from the people who run these trips"
-        lede="Practical writing from our own designers and guides — timing, packing, etiquette, and the reasoning behind how we operate."
+        eyebrow={t('heroEyebrow')}
+        title={t('heroTitle')}
+        lede={t('heroLede')}
         image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/coffee-cupping-and-ceremony.png"
-        imageAlt="Green coffee beans roasting over coals during an Ethiopian coffee ceremony"
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'Journal' }]}
+        imageAlt={t('heroImageAlt')}
+        crumbs={[{ label: tc('home'), href: '/' }, { label: tn('journal') }]}
         compact
       />
 
@@ -42,9 +45,9 @@ export default function BlogPage() {
       <JournalNewsletter />
 
       <CtaBand
-        title="Have a question these didn't answer?"
-        text="Nearly every post here began as a real question from a guest. Send us yours and it might be the next one we write."
-        secondary={{ label: 'Browse Tours', href: '/tours' }}
+        title={t('ctaTitle')}
+        text={t('ctaText')}
+        secondary={{ label: t('ctaSecondary'), href: '/tours' }}
         image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/the-historic-route.png"
       />
     </>

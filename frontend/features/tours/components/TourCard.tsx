@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { ArrowRight } from 'lucide-react'
 import { type Tour } from '@/features/tours/types/tour.types'
 
@@ -10,6 +11,9 @@ export function TourCard({
   tour: Tour
   sizes?: string
 }) {
+  const tt = useTranslations('Tours')
+  const tc = useTranslations('Cta')
+
   return (
     <Link
       href={`/tours/${t.slug}`}
@@ -17,7 +21,7 @@ export function TourCard({
     >
       <Image
         src={t.image || '/placeholder.svg'}
-        alt={`${t.title} — Ethiopia journey`}
+        alt={tt('cardAlt', { title: t.title })}
         fill
         sizes={sizes}
         className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -43,7 +47,7 @@ export function TourCard({
 
         {/* See the Journey link */}
         <div className="mt-5 inline-flex items-center gap-2.5 rounded-sm border border-accent-light/70 bg-charcoal/30 px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.16em] text-accent-light backdrop-blur-sm transition-all duration-300 group-hover:border-accent-light group-hover:bg-accent-light group-hover:text-charcoal sm:text-[11px]">
-          <span>See the Journey</span>
+          <span>{tc('seeTheJourney')}</span>
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </div>
       </div>

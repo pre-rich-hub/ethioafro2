@@ -1,31 +1,7 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import {
-  ArrowRight,
-  CalendarDays,
-  Check,
-  Clock,
-  Compass,
-  MapPin,
-  ShieldCheck,
-  Users,
-  X,
-} from 'lucide-react'
-import { PageHero } from '@/components/common/PageHero'
+import { useTranslations } from 'next-intl'
+import { Check, X } from 'lucide-react'
 import { Reveal } from '@/components/common/Reveal'
-import { TourCard } from '@/features/tours/components/TourCard'
-import { EnquiryForm } from '@/features/enquiries'
-import { CtaBand } from '@/features/enquiries'
-import { getTour } from '@/features/tours/utils/tour-catalog.utils'
-import { isTailorMade } from '@/features/tours/utils/tour.utils'
-import { tours } from '@/features/tours/data/tour.data'
-import { getTourData } from '@/features/tours/api/tour-data.api'
-import type { ReactNode } from 'react'
 import type { Tour } from '@/features/tours/types/tour.types'
-import type { Destination } from '@/features/destinations/types/destination.types'
-import type { Activity, ActivityCategory } from '@/features/experiences/types/experience.types'
-import type { Post } from '@/features/blog/types/blog.types'
 import { railPad } from '@/features/tours/constants/tour-layout'
 
 type Props = {
@@ -33,13 +9,15 @@ type Props = {
 }
 
 export function TourInclusions({ t }: Props) {
+  const tt = useTranslations('Tours')
+
   return (
     <section className="shell py-16 sm:py-20 lg:py-28">
           <div className={`grid gap-12 xl:grid-cols-2 xl:gap-16 ${railPad}`}>
             <Reveal>
               <p className="eyebrow mb-6 text-primary">
                 <span className="rule" />
-                What Is Included
+                {tt('detailIncluded')}
               </p>
               <ul className="space-y-4">
                 {t.includes.map((item) => (
@@ -58,7 +36,7 @@ export function TourInclusions({ t }: Props) {
             <Reveal delay={120}>
               <p className="eyebrow mb-6 text-muted-foreground">
                 <span className="rule" />
-                Not Included
+                {tt('detailNotIncluded')}
               </p>
               <ul className="space-y-4">
                 {t.excludes.map((item) => (

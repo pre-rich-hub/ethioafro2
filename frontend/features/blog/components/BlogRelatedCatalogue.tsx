@@ -1,5 +1,6 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import { DestinationCard } from '@/features/destinations'
 import { TourCard } from '@/features/tours'
@@ -12,6 +13,8 @@ type Props = {
 }
 
 export function BlogRelatedCatalogue({ destinations, tours }: Props) {
+  const t = useTranslations('Blog')
+
   if (destinations.length === 0 && tours.length === 0) return null
 
   return (
@@ -23,17 +26,17 @@ export function BlogRelatedCatalogue({ destinations, tours }: Props) {
               <div>
                 <p className="eyebrow mb-4 text-accent">
                   <span className="rule" />
-                  Related Destinations
+                  {t('relatedDestEyebrow')}
                 </p>
                 <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-                  Places this essay points toward
+                  {t('relatedDestTitle')}
                 </h2>
               </div>
               <Link
                 href="/destinations"
                 className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
               >
-                All destinations
+                {t('allDestinations')}
                 <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Reveal>
@@ -53,24 +56,24 @@ export function BlogRelatedCatalogue({ destinations, tours }: Props) {
               <div>
                 <p className="eyebrow mb-4 text-accent">
                   <span className="rule" />
-                  Related Journeys
+                  {t('relatedToursEyebrow')}
                 </p>
                 <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-                  Routes worth reading about next
+                  {t('relatedToursTitle')}
                 </h2>
               </div>
               <Link
                 href="/tours"
                 className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
               >
-                All tours
+                {t('allTours')}
                 <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Reveal>
             <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-              {tours.map((t, i) => (
-                <Reveal key={t.slug} delay={i * 90}>
-                  <TourCard tour={t} />
+              {tours.map((tour, i) => (
+                <Reveal key={tour.slug} delay={i * 90}>
+                  <TourCard tour={tour} />
                 </Reveal>
               ))}
             </div>
