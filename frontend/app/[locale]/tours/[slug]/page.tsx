@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getLocale } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -58,6 +58,7 @@ export async function generateMetadata({
     title: t.title,
     description: t.summary,
     path: `/tours/${slug}`,
+    locale,
     image: t.image,
     imageAlt: t.title,
   })
@@ -71,6 +72,7 @@ export default async function TourPage({
   const { slug } = await params
   const locale = await getLocale()
   const t = await getTourData(slug, locale)
+  const tc = await getTranslations({ locale, namespace: 'Crumbs' })
   if (!t) notFound()
 
   const others = getLocalizedTours(locale)
@@ -88,12 +90,15 @@ export default async function TourPage({
       <JsonLd
         data={graphJsonLd(
           organizationJsonLd(),
-          tourJsonLd(t),
-          breadcrumbJsonLd([
-            { name: 'Home', path: '/' },
-            { name: 'Tours', path: '/tours' },
-            { name: t.title, path: `/tours/${t.slug}` },
-          ]),
+          tourJsonLd(t, locale),
+          breadcrumbJsonLd(
+            [
+              { name: tc('home'), path: '/' },
+              { name: tc('tours'), path: '/tours' },
+              { name: t.title, path: `/tours/${t.slug}` },
+            ],
+            locale,
+          ),
         )}
       />
       <PageHero

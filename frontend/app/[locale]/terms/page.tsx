@@ -1,4 +1,5 @@
-import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { LegalContactCard, LegalContents, LegalSections } from '@/features/legal'
 import { termsSections } from '@/features/legal/data/terms.data'
@@ -6,13 +7,18 @@ import { cloudinaryImage } from '@/lib/cloudinary'
 import { company } from '@/lib/seo/entities'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = buildPageMetadata({
-  title: 'Terms & Conditions',
-  description: `Booking, payment, cancellation, liability, insurance and guest responsibilities for private journeys with ${company.name}.`,
-  path: '/terms',
-  image: cloudinaryImage('simien-mountains', 1200),
-  imageAlt: 'The Simien Mountains escarpment at first light',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: 'Legal' })
+  return buildPageMetadata({
+    title: t('termsTitle'),
+    description: t('termsLede', { company: company.name }),
+    path: '/terms',
+    locale,
+    image: cloudinaryImage('simien-mountains', 1200),
+    imageAlt: 'The Simien Mountains escarpment at first light',
+  })
+}
 
 export default async function TermsPage() {
   const t = await getTranslations('Legal')

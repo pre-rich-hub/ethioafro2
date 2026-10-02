@@ -5,15 +5,16 @@ import { navLinks } from '@/lib/constants/routes'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight, Globe, Mail, Phone } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 import { languages } from './navigation.data'
 import type { NavigationState } from './useNavigation'
 
-type Props = Pick<NavigationState, 'open' | 'setOpen' | 'isActive' | 'lang' | 'setLang'>
+type Props = Pick<NavigationState, 'open' | 'setOpen' | 'isActive' | 'lang'>
 
-export function MobileNavigation({ open, setOpen, isActive, lang, setLang }: Props) {
+export function MobileNavigation({ open, setOpen, isActive, lang }: Props) {
   const t = useTranslations('Nav')
   const tCta = useTranslations('Cta')
+  const pathname = usePathname()
 
   return (
     <div
@@ -74,9 +75,12 @@ export function MobileNavigation({ open, setOpen, isActive, lang, setLang }: Pro
           </span>
           <div className="flex flex-wrap gap-2">
             {languages.map((l) => (
-              <button
+              <Link
                 key={l.code}
-                onClick={() => setLang(l)}
+                href={pathname}
+                locale={l.code}
+                hrefLang={l.code}
+                onClick={() => setOpen(false)}
                 className={cn(
                   'rounded-full border px-4 py-2 text-sm transition-colors duration-200',
                   l.code === lang.code
@@ -85,7 +89,7 @@ export function MobileNavigation({ open, setOpen, isActive, lang, setLang }: Pro
                 )}
               >
                 {l.label}
-              </button>
+              </Link>
             ))}
           </div>
         </div>

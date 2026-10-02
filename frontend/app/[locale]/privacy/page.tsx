@@ -1,4 +1,5 @@
-import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { LegalContactCard, LegalContents, LegalSections } from '@/features/legal'
 import { privacySections } from '@/features/legal/data/privacy.data'
@@ -6,13 +7,18 @@ import { cloudinaryImage } from '@/lib/cloudinary'
 import { company } from '@/lib/seo/entities'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = buildPageMetadata({
-  title: 'Privacy Policy',
-  description: `How ${company.name} collects, uses, shares and protects the information you give us when planning a journey.`,
-  path: '/privacy',
-  image: cloudinaryImage('simien-mountains', 1200),
-  imageAlt: 'The Simien Mountains escarpment at first light',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: 'Legal' })
+  return buildPageMetadata({
+    title: t('privacyTitle'),
+    description: t('privacyLede', { company: company.name }),
+    path: '/privacy',
+    locale,
+    image: cloudinaryImage('simien-mountains', 1200),
+    imageAlt: 'The Simien Mountains escarpment at first light',
+  })
+}
 
 export default async function PrivacyPage() {
   const t = await getTranslations('Legal')

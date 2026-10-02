@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { CtaBand } from '@/features/enquiries'
 import { BlogArchive } from '@/features/blog/components/BlogArchive'
@@ -5,14 +7,20 @@ import { JournalNewsletter } from '@/features/blog/components/JournalNewsletter'
 import { cloudinaryImage } from '@/lib/cloudinary'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = buildPageMetadata({
-  title: 'The Journal',
-  description:
-    'Planning guidance, destination essays and dispatches from the designers and guides who run our Ethiopian journeys.',
-  path: '/blog',
-  image: cloudinaryImage('coffee-cupping-and-ceremony', 1200),
-  imageAlt: 'Ethiopian coffee ceremony',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const tn = await getTranslations({ locale, namespace: 'Nav' })
+  // The journal index shell is not translated yet; description stays English.
+  return buildPageMetadata({
+    title: tn('journal'),
+    description:
+      'Planning guidance, destination essays and dispatches from the designers and guides who run our Ethiopian journeys.',
+    path: '/blog',
+    locale,
+    image: cloudinaryImage('coffee-cupping-and-ceremony', 1200),
+    imageAlt: 'Ethiopian coffee ceremony',
+  })
+}
 
 export default function BlogPage() {
   return (

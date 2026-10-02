@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Hero } from '@/features/home/components/Hero'
 import { BrandIntro } from '@/features/home/components/BrandIntro'
@@ -12,12 +13,32 @@ import { Testimonial } from '@/features/home/components/Testimonial'
 import { Gallery } from '@/features/home/components/Gallery'
 import { PlanJourney } from '@/features/enquiries'
 import { getToursData } from '@/features/tours/api/tour-data.api'
+import { cloudinaryImage } from '@/lib/cloudinary'
 import { JsonLd } from '@/components/seo/JsonLd'
 import {
   graphJsonLd,
   organizationJsonLd,
   websiteJsonLd,
 } from '@/lib/seo/json-ld'
+import { defaultDocumentTitle } from '@/lib/seo/entities'
+import { buildPageMetadata } from '@/lib/seo/metadata'
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: 'Home' })
+  return {
+    ...buildPageMetadata({
+      title: defaultDocumentTitle,
+      description: t('heroBody'),
+      path: '/',
+      locale,
+      image: cloudinaryImage('lalibela', 1200),
+      imageAlt: 'Rock-hewn churches of Lalibela, Ethiopia',
+    }),
+    // Brand title on the home page; skip the "%s · Simien Ethiopia Tours" template.
+    title: { absolute: defaultDocumentTitle },
+  }
+}
 
 export default async function Page() {
   const locale = await getLocale()
@@ -26,7 +47,7 @@ export default async function Page() {
 
   return (
     <>
-      <JsonLd data={graphJsonLd(organizationJsonLd(), websiteJsonLd())} />
+      <JsonLd data={graphJsonLd(organizationJsonLd(), websiteJsonLd(locale))} />
       <Hero />
       <BrandIntro />
       <WhyEthiopia />

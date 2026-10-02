@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getLocale } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
@@ -45,6 +45,7 @@ export async function generateMetadata({
       title: p.title,
       description: p.excerpt,
       path: `/blog/${slug}`,
+      locale,
       image: p.image,
       imageAlt: p.title,
       type: 'article',
@@ -62,6 +63,8 @@ export default async function ArticlePage({
   const locale = await getLocale()
   const post = getPost(slug, locale)
   if (!post) notFound()
+  const tc = await getTranslations({ locale, namespace: 'Crumbs' })
+  const tn = await getTranslations({ locale, namespace: 'Nav' })
 
   const localizedPosts = getLocalizedPosts(locale)
   const index = localizedPosts.findIndex((p) => p.slug === post.slug)
@@ -74,12 +77,15 @@ export default async function ArticlePage({
       <JsonLd
         data={graphJsonLd(
           organizationJsonLd(),
-          articleJsonLd(post),
-          breadcrumbJsonLd([
-            { name: 'Home', path: '/' },
-            { name: 'Journal', path: '/blog' },
-            { name: post.title, path: `/blog/${post.slug}` },
-          ]),
+          articleJsonLd(post, locale),
+          breadcrumbJsonLd(
+            [
+              { name: tc('home'), path: '/' },
+              { name: tn('journal'), path: '/blog' },
+              { name: post.title, path: `/blog/${post.slug}` },
+            ],
+            locale,
+          ),
         )}
       />
       {/* Header */}

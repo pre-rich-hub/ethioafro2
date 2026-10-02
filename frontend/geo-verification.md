@@ -70,12 +70,28 @@ Run each prompt in a private/incognito session where possible. Note date, tool, 
 
 ---
 
+## Locale / i18n (Step 5)
+
+Sample URLs to spot-check (en is unprefixed; others use `/<locale>`):
+
+- `/` (en), `/es`, `/fr/tours`, `/de/destinations/lalibela`, `/zh/contact`
+- [ ] **view-source** on each: `<link rel="alternate" hreflang="…">` for en/es/fr/de/zh + `x-default` (→ English), and `<link rel="canonical">` points at the **same-locale** URL
+- [ ] `<html lang>` matches the locale; JSON-LD nodes carry `inLanguage` (`zh` → `zh-Hans`)
+- [ ] Organization JSON-LD `name` is still **Simien Ethiopia Tours** in every locale (brand, not translated)
+- [ ] `/sitemap.xml` lists every page × 5 locales (e.g. `/tours` and `/es/tours`, `/fr/tours`, `/de/tours`, `/zh/tours`)
+- [ ] Language picker / mobile menu render crawlable `<a href>` links with `hreflang`
+- [ ] Answer-engine spot checks: ask the same prompt in ES/FR/DE/ZH and note whether the localized URL is cited
+- Note: Contact/Tours FAQ JSON-LD uses the localized visible FAQs; destination FAQs and article bodies are still English (see `i18nplan.md` backlog)
+
+
+---
+
 ## Suggested follow-ups (backlog)
 
 - FAQ sets for Danakil + Omo destinations
 - FAQ on Home (planning a first trip) if Contact FAQs are not enough
 - More hand-written tour audience overrides beyond the four flagships
-- i18n / hreflang (after GEO measurement settles)
+- Localized destination FAQs / article bodies (hreflang itself is done — see Locale / i18n above)
 
 ---
 

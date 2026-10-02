@@ -3,17 +3,20 @@
 import { cn } from '@/lib/utils/cn'
 import { Check, ChevronDown, Globe } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/navigation'
 import { languages } from './navigation.data'
 import type { NavigationState } from './useNavigation'
 
-type Props = Pick<NavigationState, 'tone' | 'langRef' | 'langOpen' | 'setLangOpen' | 'lang' | 'setLang'>
+type Props = Pick<NavigationState, 'tone' | 'langRef' | 'langOpen' | 'setLangOpen' | 'lang'>
 
-export function LanguagePicker({ tone, langRef, langOpen, setLangOpen, lang, setLang }: Props) {
+export function LanguagePicker({ tone, langRef, langOpen, setLangOpen, lang }: Props) {
   const t = useTranslations('Nav')
+  const pathname = usePathname()
 
   return (
     <div ref={langRef} className="relative hidden sm:block">
       <button
+        type="button"
         aria-label={t('changeLanguage')}
         aria-haspopup="listbox"
         aria-expanded={langOpen}
@@ -49,20 +52,20 @@ export function LanguagePicker({ tone, langRef, langOpen, setLangOpen, lang, set
       >
         {languages.map((l) => (
           <li key={l.code}>
-            <button
+            <Link
+              href={pathname}
+              locale={l.code}
+              hrefLang={l.code}
               role="option"
               aria-selected={l.code === lang.code}
-              onClick={() => {
-                setLang(l)
-                setLangOpen(false)
-              }}
+              onClick={() => setLangOpen(false)}
               className="flex w-full items-center justify-between px-4 py-3 text-left text-sm text-popover-foreground/80 transition-colors duration-200 hover:bg-muted"
             >
               <span>{l.label}</span>
               {l.code === lang.code && (
                 <Check className="h-4 w-4 text-accent" />
               )}
-            </button>
+            </Link>
           </li>
         ))}
       </ul>

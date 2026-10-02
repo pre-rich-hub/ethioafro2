@@ -40,6 +40,19 @@ Use after deploying Steps 1–4. Site: `https://simienethiopiatours.com`
 
 No soft-404 or duplicate-title code fixes required from this audit.
 
+## Locale / i18n (Step 5)
+
+Sample URLs to spot-check (en is unprefixed; others use `/<locale>`):
+
+- `/` (en), `/es`, `/fr/tours`, `/de/destinations/lalibela`, `/zh/contact`
+- [ ] **view-source** on each: `<link rel="alternate" hreflang="…">` for en/es/fr/de/zh + `x-default` (→ English), and `<link rel="canonical">` points at the **same-locale** URL
+- [ ] `<html lang>` matches the locale; JSON-LD nodes carry `inLanguage` (`zh` → `zh-Hans`)
+- [ ] Organization JSON-LD `name` is still **Simien Ethiopia Tours** in every locale (brand, not translated)
+- [ ] `/sitemap.xml` lists every page × 5 locales (e.g. `/tours` and `/es/tours`, `/fr/tours`, `/de/tours`, `/zh/tours`)
+- [ ] Language picker / mobile menu render crawlable `<a href>` links with `hreflang`
+- [ ] Search Console: resubmit sitemap after deploy; watch for hreflang errors
+
+
 ## Rich results (optional, post-deploy)
 
 Validate with [Google Rich Results Test](https://search.google.com/test/rich-results):

@@ -13,14 +13,18 @@ import { LongerAdventures } from '@/features/experiences/components/LongerAdvent
 import { cloudinaryImage } from '@/lib/cloudinary'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = buildPageMetadata({
-  title: 'Experiences',
-  description:
-    'Add-on experiences for any Ethiopia journey — injera and cooking classes, tej and coffee tastings, running at altitude, Rift Valley cycling, farm days, village stays and clean-up days.',
-  path: '/experiences',
-  image: cloudinaryImage('coffee-cupping-and-ceremony', 1200),
-  imageAlt: 'Ethiopian coffee ceremony',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: 'Experiences' })
+  return buildPageMetadata({
+    title: t('heroEyebrow'),
+    description: `${t('heroTitle')}. ${t('heroLede')}`,
+    path: '/experiences',
+    locale,
+    image: cloudinaryImage('coffee-cupping-and-ceremony', 1200),
+    imageAlt: 'Ethiopian coffee ceremony',
+  })
+}
 
 export default async function ExperiencesPage() {
   const t = await getTranslations('Experiences')

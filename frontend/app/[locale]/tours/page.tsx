@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { FaqSection } from '@/components/seo/FaqSection'
@@ -8,19 +9,22 @@ import { TourTravelStyles } from '@/features/tours/components/TourTravelStyles'
 import { TourCollection } from '@/features/tours/components/TourCollection'
 import { TourPromises } from '@/features/tours/components/TourPromises'
 import { cloudinaryImage } from '@/lib/cloudinary'
-import { toursFaqs } from '@/lib/seo/faq-data'
 import { getToursFaqs } from '@/lib/i18n/faq-helpers'
 import { faqPageJsonLd, graphJsonLd, organizationJsonLd } from '@/lib/seo/json-ld'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = buildPageMetadata({
-  title: 'Tours & Journeys',
-  description:
-    'Private, tailor-made Ethiopian itineraries — historic route, highland wildlife, Danakil expedition, Omo immersion, festival, photography and birding journeys. Every route drawn from scratch.',
-  path: '/tours',
-  image: cloudinaryImage('simien-mountains', 1200),
-  imageAlt: 'Simien Mountains escarpment in northern Ethiopia',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: 'Tours' })
+  return buildPageMetadata({
+    title: t('heroEyebrow'),
+    description: `${t('heroTitle')}. ${t('heroLede')}`,
+    path: '/tours',
+    locale,
+    image: cloudinaryImage('simien-mountains', 1200),
+    imageAlt: 'Simien Mountains escarpment in northern Ethiopia',
+  })
+}
 
 export default async function ToursPage() {
   const locale = await getLocale()
@@ -32,7 +36,7 @@ export default async function ToursPage() {
 
   return (
     <>
-      <JsonLd data={graphJsonLd(organizationJsonLd(), faqPageJsonLd(toursFaqs))} />
+      <JsonLd data={graphJsonLd(organizationJsonLd(), faqPageJsonLd(localFaqs, locale))} />
       <PageHero
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}

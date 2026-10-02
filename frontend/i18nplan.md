@@ -19,12 +19,11 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - `<html lang={locale}>` via `DocumentShell`
 - LanguagePicker / mobile language list switch locale while preserving path
 - Message catalogs for Nav / Footer / Common / Cta / NotFound; chrome flips with locale
-- SEO: sitemap, metadata helper, JSON-LD (English-only today)
+- SEO (Step 5): `generateMetadata` on all public pages with locale; hreflang + same-locale canonical; sitemap × 5 locales; JSON-LD `inLanguage`; crawlable language links
 - GEO: English FAQs, facts, direct answers
 
 ### Missing
 - Marketing page shells still English (heroes, section labels)
-- No hreflang / localized `alternates`
 - Catalogue data (tours, destinations, journal) is English-only TypeScript
 - Admin stays English-only (out of scope for guest i18n)
 
@@ -114,7 +113,7 @@ Priority after this plan: product polish / citation follow-ups as needed.
 - RSC pages/components use `getLocale()` from `next-intl/server`; client components (nav dropdowns, `useDestinations`) use `useLocale()` and call the sync `getLocalized*` utils (JSON + data only, safe in client bundles).
 - Experience categories: grouping and `#anchor` ids stay keyed on the **English** category (`slugify`); only the visible label is localized (`getActivityCategoryLabels`).
 - Merge order for tours: English static → locale overlay → live API `from` / `featured`.
-- Metadata `title`/`description` on detail pages use localized fields; list-page static `metadata` objects (tours, destinations, experiences, blog index) remain English until Step 5 (`generateMetadata` + hreflang).
+- Metadata `title`/`description` on detail pages use localized fields; list pages now use `generateMetadata` (title from `Crumbs`, description from hero keys; Blog index description still English).
 
 ### Pass-2 backlog (not translated yet — still English)
 - **Tour itineraries:** day titles/descriptions, includes/excludes, `style`, `season`, `group`, `days`, `places` labels, price copy ("per person", "Tailor-made")
@@ -135,12 +134,12 @@ Priority after this plan: product polish / citation follow-ups as needed.
 **Goal:** International SEO does not regress.
 
 ### Tasks
-- [ ] `alternates.languages` / hreflang on all public pages via metadata helper
-- [ ] Extend `sitemap.ts` with locale variants (or sitemap index)
-- [ ] Localize root/default metadata descriptions where message keys exist
-- [ ] JSON-LD: set `inLanguage`; keep Organization name as **Simien Ethiopia Tours** (brand, not translated)
-- [ ] Ensure LanguagePicker links are crawlable `<a href>`
-- [ ] Update `seo-verification.md` / `geo-verification.md` with locale URL samples
+- [x] `alternates.languages` / hreflang on all public pages via metadata helper
+- [x] Extend `sitemap.ts` with locale variants (or sitemap index)
+- [x] Localize root/default metadata descriptions where message keys exist
+- [x] JSON-LD: set `inLanguage`; keep Organization name as **Simien Ethiopia Tours** (brand, not translated)
+- [x] Ensure LanguagePicker links are crawlable `<a href>`
+- [x] Update `seo-verification.md` / `geo-verification.md` with locale URL samples
 
 **Done when:** View-source shows hreflang; sitemap lists non-English URLs; brand entity name unchanged in schema.
 

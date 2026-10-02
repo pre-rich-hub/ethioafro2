@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getLocale } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { ArrowRight, CalendarDays, Clock3, Info, MapPin } from 'lucide-react'
 import { PageHero } from '@/components/common/PageHero'
 import { Reveal } from '@/components/common/Reveal'
@@ -45,6 +45,7 @@ export async function generateMetadata({
     title: a.title,
     description: a.teaser,
     path: `/experiences/${slug}`,
+    locale,
     image: a.image,
     imageAlt: a.title,
   })
@@ -59,6 +60,7 @@ export default async function ActivityPage({
   const locale = await getLocale()
   const a = getActivity(slug, locale)
   if (!a) notFound()
+  const tc = await getTranslations({ locale, namespace: 'Crumbs' })
 
   const localizedActivities = getLocalizedActivities(locale)
 
@@ -80,12 +82,15 @@ export default async function ActivityPage({
       <JsonLd
         data={graphJsonLd(
           organizationJsonLd(),
-          experienceJsonLd(a),
-          breadcrumbJsonLd([
-            { name: 'Home', path: '/' },
-            { name: 'Experiences', path: '/experiences' },
-            { name: a.title, path: `/experiences/${a.slug}` },
-          ]),
+          experienceJsonLd(a, locale),
+          breadcrumbJsonLd(
+            [
+              { name: tc('home'), path: '/' },
+              { name: tc('experiences'), path: '/experiences' },
+              { name: a.title, path: `/experiences/${a.slug}` },
+            ],
+            locale,
+          ),
         )}
       />
       <PageHero

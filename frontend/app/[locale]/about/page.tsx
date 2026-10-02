@@ -1,4 +1,5 @@
-import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { JsonLd } from '@/components/seo/JsonLd'
 import {
@@ -11,19 +12,24 @@ import {
 } from '@/features/about'
 import { CtaBand } from '@/features/enquiries'
 import { cloudinaryImage } from '@/lib/cloudinary'
-import { company } from '@/lib/seo/entities'
 import { graphJsonLd, organizationJsonLd } from '@/lib/seo/json-ld'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = buildPageMetadata({
-  title: 'Our Story',
-  description: company.foundingOneLiner,
-  path: '/about',
-  image: cloudinaryImage('lake-tana', 1200),
-  imageAlt: 'Lake Tana near Bahir Dar, Ethiopia',
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: 'About' })
+  return buildPageMetadata({
+    title: t('heroEyebrow'),
+    description: `${t('heroTitle')}. ${t('heroLede')}`,
+    path: '/about',
+    locale,
+    image: cloudinaryImage('lake-tana', 1200),
+    imageAlt: 'Lake Tana near Bahir Dar, Ethiopia',
+  })
+}
 
 export default async function AboutPage() {
+  const locale = await getLocale()
   const t = await getTranslations('About')
   const tc = await getTranslations('Crumbs')
   const ts = await getTranslations('Shared')

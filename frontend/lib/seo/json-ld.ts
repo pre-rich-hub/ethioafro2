@@ -5,16 +5,21 @@ import type { Tour } from '@/features/tours/types/tour.types'
 import { isTailorMade } from '@/features/tours/utils/tour.utils'
 import { company } from '@/lib/seo/entities'
 import type { FaqItem } from '@/lib/seo/faq.types'
-import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/seo/metadata'
+import {
+  absoluteLocalizedUrl,
+  DEFAULT_OG_IMAGE,
+  schemaLanguage,
+  SITE_URL,
+} from '@/lib/seo/metadata'
 
 type JsonLdObject = Record<string, unknown>
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`
 export const WEBSITE_ID = `${SITE_URL}/#website`
 
-function absoluteUrl(path: string) {
+function absoluteUrl(path: string, locale = 'en') {
   if (path.startsWith('http')) return path
-  return path === '/' ? SITE_URL : `${SITE_URL}${path}`
+  return absoluteLocalizedUrl(path, locale)
 }
 
 /** Parse display dates like "June 18, 2026" into ISO YYYY-MM-DD when possible. */
@@ -87,7 +92,7 @@ export function organizationJsonLd(): JsonLdObject {
   }
 }
 
-export function websiteJsonLd(): JsonLdObject {
+export function websiteJsonLd(locale = 'en'): JsonLdObject {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -96,12 +101,13 @@ export function websiteJsonLd(): JsonLdObject {
     name: company.name,
     description: company.ogDescription,
     publisher: { '@id': ORGANIZATION_ID },
-    inLanguage: 'en',
+    inLanguage: schemaLanguage(locale),
   }
 }
 
 export function breadcrumbJsonLd(
   crumbs: { name: string; path?: string }[],
+  locale = 'en',
 ): JsonLdObject {
   return {
     '@context': 'https://schema.org',
@@ -110,13 +116,13 @@ export function breadcrumbJsonLd(
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
-      ...(crumb.path ? { item: absoluteUrl(crumb.path) } : {}),
+      ...(crumb.path ? { item: absoluteUrl(crumb.path, locale) } : {}),
     })),
   }
 }
 
-export function tourJsonLd(tour: Tour): JsonLdObject {
-  const url = absoluteUrl(`/tours/${tour.slug}`)
+export function tourJsonLd(tour: Tour, locale = 'en'): JsonLdObject {
+  const url = absoluteUrl(`/tours/${tour.slug}`, locale)
   const duration = toIsoDuration(tour.days)
   const price = isTailorMade(tour) ? undefined : parseOfferPrice(tour.from)
 
@@ -139,6 +145,7 @@ export function tourJsonLd(tour: Tour): JsonLdObject {
     url,
     image: tour.image,
     touristType: tour.style,
+    inLanguage: schemaLanguage(locale),
     ...(duration ? { duration } : {}),
     provider: { '@id': ORGANIZATION_ID },
     offers: offer,
@@ -158,8 +165,11 @@ export function tourJsonLd(tour: Tour): JsonLdObject {
   }
 }
 
-export function destinationJsonLd(destination: Destination): JsonLdObject {
-  const url = absoluteUrl(`/destinations/${destination.slug}`)
+export function destinationJsonLd(
+  destination: Destination,
+  locale = 'en',
+): JsonLdObject {
+  const url = absoluteUrl(`/destinations/${destination.slug}`, locale)
   return {
     '@context': 'https://schema.org',
     '@type': 'TouristDestination',
@@ -169,6 +179,7 @@ export function destinationJsonLd(destination: Destination): JsonLdObject {
     url,
     image: destination.image,
     touristType: destination.tag,
+    inLanguage: schemaLanguage(locale),
     containedInPlace: {
       '@type': 'AdministrativeArea',
       name: destination.region,
@@ -181,8 +192,8 @@ export function destinationJsonLd(destination: Destination): JsonLdObject {
   }
 }
 
-export function experienceJsonLd(activity: Activity): JsonLdObject {
-  const url = absoluteUrl(`/experiences/${activity.slug}`)
+export function experienceJsonLd(activity: Activity, locale = 'en'): JsonLdObject {
+  const url = absoluteUrl(`/experiences/${activity.slug}`, locale)
   return {
     '@context': 'https://schema.org',
     '@type': 'TouristAttraction',
@@ -193,12 +204,13 @@ export function experienceJsonLd(activity: Activity): JsonLdObject {
     image: activity.image,
     isAccessibleForFree: false,
     touristType: activity.category,
+    inLanguage: schemaLanguage(locale),
     provider: { '@id': ORGANIZATION_ID },
   }
 }
 
-export function articleJsonLd(post: Post): JsonLdObject {
-  const url = absoluteUrl(`/blog/${post.slug}`)
+export function articleJsonLd(post: Post, locale = 'en'): JsonLdObject {
+  const url = absoluteUrl(`/blog/${post.slug}`, locale)
   const datePublished = toIsoDate(post.date)
 
   return {
@@ -221,14 +233,15 @@ export function articleJsonLd(post: Post): JsonLdObject {
       '@id': url,
     },
     articleSection: post.category,
-    inLanguage: 'en',
+    inLanguage: schemaLanguage(locale),
   }
 }
 
-export function faqPageJsonLd(faqs: FaqItem[]): JsonLdObject {
+export function faqPageJsonLd(faqs: FaqItem[], locale = 'en'): JsonLdObject {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: schemaLanguage(locale),
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,

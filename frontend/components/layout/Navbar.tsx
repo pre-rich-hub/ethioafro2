@@ -22,7 +22,6 @@ export function Navbar() {
     dismissed,
     setDismissed,
     lang,
-    setLang,
     langRef,
     dismiss,
     isActive,
@@ -63,7 +62,6 @@ export function Navbar() {
                 langOpen={langOpen}
                 setLangOpen={setLangOpen}
                 lang={lang}
-                setLang={setLang}
               />
 
               <Link
@@ -93,7 +91,7 @@ export function Navbar() {
         </nav>
       </header>
 
-      <MobileNavigation open={open} setOpen={setOpen} isActive={isActive} lang={lang} setLang={setLang} />
+      <MobileNavigation open={open} setOpen={setOpen} isActive={isActive} lang={lang} />
     </>
   )
 }

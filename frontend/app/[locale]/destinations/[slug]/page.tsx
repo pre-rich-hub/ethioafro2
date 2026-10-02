@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getLocale } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { FaqSection } from '@/components/seo/FaqSection'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -42,6 +42,7 @@ export async function generateMetadata({
     title: d.name,
     description: d.intro,
     path: `/destinations/${slug}`,
+    locale,
     image: d.image,
     imageAlt: d.name,
   })
@@ -56,6 +57,7 @@ export default async function DestinationPage({
   const locale = await getLocale()
   const d = getDestination(slug, locale)
   if (!d) notFound()
+  const tc = await getTranslations({ locale, namespace: 'Crumbs' })
 
   const fallback = getRelatedToursForDestination(d, getLocalizedTours(locale), 3)
   const others = getLocalizedDestinations(locale).filter((o) => o.slug !== d.slug).slice(0, 4)
@@ -66,13 +68,16 @@ export default async function DestinationPage({
       <JsonLd
         data={graphJsonLd(
           organizationJsonLd(),
-          destinationJsonLd(d),
-          breadcrumbJsonLd([
-            { name: 'Home', path: '/' },
-            { name: 'Destinations', path: '/destinations' },
-            { name: d.name, path: `/destinations/${d.slug}` },
-          ]),
-          ...(faqs.length ? [faqPageJsonLd(faqs)] : []),
+          destinationJsonLd(d, locale),
+          breadcrumbJsonLd(
+            [
+              { name: tc('home'), path: '/' },
+              { name: tc('destinations'), path: '/destinations' },
+              { name: d.name, path: `/destinations/${d.slug}` },
+            ],
+            locale,
+          ),
+          ...(faqs.length ? [faqPageJsonLd(faqs, locale)] : []),
         )}
       />
       <PageHero
