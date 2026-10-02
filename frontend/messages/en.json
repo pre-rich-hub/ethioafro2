@@ -315,7 +315,10 @@
     "responsibleP2": "It is a family story built on experience, opportunity and responsible tourism. Every journey you take with us is a small part of it.",
     "ctaTitle": "Start a conversation with the family",
     "ctaText": "Tell us roughly when you'd travel and what draws you to Ethiopia. You'll hear back from one of us — not a call centre.",
-    "ctaSecondaryCta": "Browse Tours"
+    "ctaSecondaryCta": "Browse Tours",
+    "founderEyebrow": "From the Founder",
+    "founderQuote": "Travel is both my profession and my passion.",
+    "founderRole": "Founder · {company}"
   },
   "Legal": {
     "privacyEyebrow": "Legal",

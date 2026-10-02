@@ -315,7 +315,10 @@
     "responsibleP2": "Es ist eine Familiengeschichte, die auf Erfahrung, Gelegenheit und verantwortungsvollem Tourismus aufgebaut ist. Jede Reise, die Sie mit uns machen, ist ein kleiner Teil davon.",
     "ctaTitle": "Starten Sie ein Gespräch mit der Familie",
     "ctaText": "Sagen Sie uns ungefähr, wann Sie reisen würden und was Sie an Äthiopien anzieht. Sie werden von einem von uns hören — nicht von einem Callcenter.",
-    "ctaSecondaryCta": "Touren ansehen"
+    "ctaSecondaryCta": "Touren ansehen",
+    "founderEyebrow": "Vom Gründer",
+    "founderQuote": "Reisen ist beides: mein Beruf und meine Leidenschaft.",
+    "founderRole": "Gründer · {company}"
   },
   "Legal": {
     "privacyEyebrow": "Rechtliches",

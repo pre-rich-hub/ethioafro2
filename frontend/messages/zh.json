@@ -315,7 +315,10 @@
     "responsibleP2": "这是一个建立在经验、机遇和负责任旅游基础上的家族故事。您与我们同行的每一段旅程，都是其中小小的一部分。",
     "ctaTitle": "与家族开始一次对话",
     "ctaText": "告诉我们您大概何时出行，以及吸引您来埃塞俄比亚的原因。回复您的将是我们中的一员——不是呼叫中心。",
-    "ctaSecondaryCta": "浏览行程"
+    "ctaSecondaryCta": "浏览行程",
+    "founderEyebrow": "创始人寄语",
+    "founderQuote": "旅行既是我的职业，也是我的热情所在。",
+    "founderRole": "创始人 · {company}"
   },
   "Legal": {
     "privacyEyebrow": "法律",
