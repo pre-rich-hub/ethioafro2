@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 import { contact } from '@/lib/constants/contact'
+import { company } from '@/lib/seo/entities'
 import { destinations } from '@/features/destinations/data/destination.data'
 import { tours } from '@/features/tours/data/tour.data'
 import { NewsletterForm } from '@/features/newsletter'
@@ -59,15 +60,15 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src="/images/logo.png"
-                alt="Simien Ethiopia Tours Logo"
+                alt={`${company.name} logo`}
                 width={56}
                 height={56}
                 className="h-14 w-14 rounded-full object-cover border border-accent-light/20"
               />
               <div className="flex flex-col">
-                <span className="font-serif text-3xl leading-none">Simien Ethiopia</span>
+                <span className="font-serif text-3xl leading-none">{company.wordmarkPrimary}</span>
                 <span className="text-[9px] font-semibold uppercase tracking-[0.28em] text-accent-light mt-1">
-                  Tours
+                  {company.wordmarkSecondary}
                 </span>
               </div>
             </div>
@@ -164,7 +165,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-background/15 pt-8 text-xs text-background/50 md:flex-row md:items-center md:justify-between">
           <p>
-            &copy; {new Date().getFullYear()} Simien Ethiopia Tours. All rights
+            &copy; {new Date().getFullYear()} {company.name}. All rights
             reserved.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-1">

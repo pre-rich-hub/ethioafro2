@@ -1,13 +1,22 @@
 import { PageHero } from '@/components/common/PageHero'
-import { CompanyTimeline, FamilyTeam, FounderLetter, InternationalPerspective, ResponsibleEmployment } from '@/features/about'
+import { JsonLd } from '@/components/seo/JsonLd'
+import {
+  AboutFacts,
+  CompanyTimeline,
+  FamilyTeam,
+  FounderLetter,
+  InternationalPerspective,
+  ResponsibleEmployment,
+} from '@/features/about'
 import { CtaBand } from '@/features/enquiries'
 import { cloudinaryImage } from '@/lib/cloudinary'
+import { company } from '@/lib/seo/entities'
+import { graphJsonLd, organizationJsonLd } from '@/lib/seo/json-ld'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
 export const metadata = buildPageMetadata({
   title: 'Our Story',
-  description:
-    'Simien Ethiopia Tours is a licensed, family-run Ethiopian tour company founded by Mihiret Getenat — born in Bahir Dar, trained in Addis Ababa, and guiding travellers since school days.',
+  description: company.foundingOneLiner,
   path: '/about',
   image: cloudinaryImage('lake-tana', 1200),
   imageAlt: 'Lake Tana near Bahir Dar, Ethiopia',
@@ -16,6 +25,7 @@ export const metadata = buildPageMetadata({
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={graphJsonLd(organizationJsonLd())} />
       <PageHero
         eyebrow="Our Story"
         title="A family business, born in Bahir Dar"
@@ -26,6 +36,8 @@ export default function AboutPage() {
       />
 
       <FounderLetter />
+
+      <AboutFacts />
 
       <CompanyTimeline />
 

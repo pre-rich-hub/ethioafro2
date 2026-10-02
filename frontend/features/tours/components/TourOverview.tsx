@@ -3,6 +3,7 @@ import { MapPin } from 'lucide-react'
 import { Reveal } from '@/components/common/Reveal'
 import type { Tour } from '@/features/tours/types/tour.types'
 import { getDestinationSlugForPlace } from '@/features/destinations/utils/destination-tours.utils'
+import { getTourAudience } from '@/features/tours/utils/tour-audience.utils'
 import { railPad } from '@/features/tours/constants/tour-layout'
 import type { ReactNode } from 'react'
 
@@ -13,6 +14,8 @@ type Props = {
 }
 
 export function TourOverview({ t, nightsLabel, priceCard }: Props) {
+  const audience = getTourAudience(t)
+
   return (
     <section className="shell py-16 sm:py-20 lg:py-28">
       <div className={railPad}>
@@ -28,6 +31,25 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
           <p className="mt-7 text-pretty leading-relaxed text-muted-foreground sm:text-lg">
             {t.summary}
           </p>
+
+          <div className="mt-10 grid gap-6 border border-border bg-card p-6 sm:grid-cols-2 sm:p-7">
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">
+                Who this is for
+              </p>
+              <p className="mt-3 text-pretty text-sm leading-relaxed text-foreground sm:text-[15px]">
+                {audience.forWhom}
+              </p>
+            </div>
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">
+                What this is not
+              </p>
+              <p className="mt-3 text-pretty text-sm leading-relaxed text-foreground sm:text-[15px]">
+                {audience.notFor}
+              </p>
+            </div>
+          </div>
 
           <div className="mt-10">
             <p className="eyebrow mb-5 text-primary">
@@ -64,7 +86,6 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
         </Reveal>
       </div>
 
-      {/* Inline on smaller screens; pinned in the rail from lg up */}
       <Reveal delay={120} className="mt-12 lg:hidden">
         {priceCard}
       </Reveal>

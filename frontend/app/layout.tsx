@@ -5,6 +5,11 @@ import { Footer } from '@/components/layout/Footer'
 import { Analytics } from '@/components/common/Analytics'
 import { FloatingSupport } from '@/features/support'
 import { RouteProgress } from '@/components/layout/RouteProgress'
+import {
+  company,
+  defaultDocumentTitle,
+  titleTemplate,
+} from '@/lib/seo/entities'
 import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/seo/metadata'
 import './globals.css'
 
@@ -22,19 +27,15 @@ const cormorant = Fraunces({
   display: 'swap',
 })
 
-const defaultTitle = 'Simien Ethiopia Tours — Journeys Through the Land of Origins'
-const defaultDescription =
-  'Private, tailor-made journeys through Ethiopia with a licensed Addis Ababa-based operator. Walk through kingdoms carved from stone, wake above the clouds in the Simien Mountains, and share coffee with families who have welcomed travellers for generations.'
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: defaultTitle,
-    template: '%s · Simien Ethiopia Tours',
+    default: defaultDocumentTitle,
+    template: titleTemplate,
   },
-  description: defaultDescription,
+  description: company.defaultDescription,
   keywords: [
-    'Simien Ethiopia Tours',
+    company.name,
     'Ethiopia tour operator',
     'Private Ethiopia Tours',
     'Addis Ababa layover tour',
@@ -49,9 +50,8 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: defaultTitle,
-    description:
-      'Private, tailor-made journeys through Ethiopia, designed around you by a licensed local operator.',
+    title: defaultDocumentTitle,
+    description: company.ogDescription,
     url: SITE_URL,
     type: 'website',
     images: [
@@ -64,9 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: defaultTitle,
-    description:
-      'Private, tailor-made journeys through Ethiopia, designed around you by a licensed local operator.',
+    title: defaultDocumentTitle,
+    description: company.ogDescription,
     images: [DEFAULT_OG_IMAGE],
   },
   icons: {

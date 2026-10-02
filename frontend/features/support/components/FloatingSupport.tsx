@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { MessageSquare, X, Send } from 'lucide-react'
 import { contact } from '@/lib/constants/contact'
+import { company } from '@/lib/seo/entities'
 import { streamAssistantChat } from '@/features/support/api/assistant.api'
 import { appendDelta } from '@/features/support/lib/assistant-stream'
 import type { StreamMessage } from '@/features/support/lib/assistant-stream'
@@ -41,7 +42,7 @@ export function FloatingSupport() {
 		{
 			id: 'welcome',
 			sender: 'bot',
-			text: 'Selam! I\'m the Simien Ethiopia Tours travel assistant. Ask me about any destination, tour or logistics question, and I\'ll help you shape a private itinerary.',
+			text: `Selam! I'm the ${company.name} travel assistant. Ask me about any destination, tour or logistics question, and I'll help you shape a private itinerary.`,
 			timestamp: new Date(),
 		},
 	])

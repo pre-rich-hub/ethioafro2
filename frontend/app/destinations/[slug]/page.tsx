@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { PageHero } from '@/components/common/PageHero'
+import { FaqSection } from '@/components/seo/FaqSection'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { destinations } from '@/features/destinations/data/destination.data'
 import { getDestination } from '@/features/destinations/utils/destination.utils'
 import { getRelatedToursForDestination } from '@/features/destinations/utils/destination-tours.utils'
@@ -10,11 +12,12 @@ import { DestinationOverview } from '@/features/destinations/components/Destinat
 import { DestinationJourneys } from '@/features/destinations/components/DestinationJourneys'
 import { DestinationEnquiry } from '@/features/destinations/components/DestinationEnquiry'
 import { CtaBand } from '@/features/enquiries'
+import { destinationFaqsBySlug } from '@/lib/seo/faq-data'
 import { buildPageMetadata } from '@/lib/seo/metadata'
-import { JsonLd } from '@/components/seo/JsonLd'
 import {
   breadcrumbJsonLd,
   destinationJsonLd,
+  faqPageJsonLd,
   graphJsonLd,
   organizationJsonLd,
 } from '@/lib/seo/json-ld'
@@ -53,6 +56,7 @@ export default async function DestinationPage({
 
   const fallback = getRelatedToursForDestination(d, tours, 3)
   const others = destinations.filter((o) => o.slug !== d.slug).slice(0, 4)
+  const faqs = destinationFaqsBySlug[d.slug] ?? []
 
   return (
     <>
@@ -65,6 +69,7 @@ export default async function DestinationPage({
             { name: 'Destinations', path: '/destinations' },
             { name: d.name, path: `/destinations/${d.slug}` },
           ]),
+          ...(faqs.length ? [faqPageJsonLd(faqs)] : []),
         )}
       />
       <PageHero
@@ -80,13 +85,23 @@ export default async function DestinationPage({
         ]}
       />
 
-      {/* Essay + highlights */}
       <DestinationOverview d={d} />
 
-      {/* Related tours */}
       <DestinationJourneys d={d} fallback={fallback} />
 
-      {/* Enquiry */}
+      {faqs.length > 0 && (
+        <FaqSection
+          title={`Planning ${d.name}`}
+          intro="Season, altitude and how long to stay — answered plainly."
+          items={faqs}
+          footerLink={
+            d.slug === 'lalibela'
+              ? { label: 'Read: Lalibela at dawn', href: '/blog/lalibela-at-dawn' }
+              : { label: 'When to visit Ethiopia', href: '/blog/when-to-visit-ethiopia' }
+          }
+        />
+      )}
+
       <DestinationEnquiry d={d} others={others} />
 
       <CtaBand

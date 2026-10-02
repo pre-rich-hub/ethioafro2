@@ -1,6 +1,10 @@
 import { PageHero } from '@/components/common/PageHero'
+import { FaqSection } from '@/components/seo/FaqSection'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { ContactEnquiry, ContactProcess, ContactPromises } from '@/features/contact'
 import { cloudinaryImage } from '@/lib/cloudinary'
+import { contactFaqs } from '@/lib/seo/faq-data'
+import { faqPageJsonLd, graphJsonLd, organizationJsonLd } from '@/lib/seo/json-ld'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
 export const metadata = buildPageMetadata({
@@ -15,6 +19,7 @@ export const metadata = buildPageMetadata({
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={graphJsonLd(organizationJsonLd(), faqPageJsonLd(contactFaqs))} />
       <PageHero
         eyebrow="Speak With a Designer"
         title="Start with a conversation, not a form"
@@ -36,6 +41,12 @@ export default function ContactPage() {
 
       <ContactPromises />
 
+      <FaqSection
+        title="Before you write"
+        intro="Straight answers about how planning with us actually works."
+        items={contactFaqs}
+        footerLink={{ label: 'Read our story', href: '/about' }}
+      />
     </>
   )
 }

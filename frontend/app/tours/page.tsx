@@ -1,10 +1,14 @@
 import { PageHero } from '@/components/common/PageHero'
+import { FaqSection } from '@/components/seo/FaqSection'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { CtaBand } from '@/features/enquiries'
 import { getToursData } from '@/features/tours/api/tour-data.api'
 import { TourTravelStyles } from '@/features/tours/components/TourTravelStyles'
 import { TourCollection } from '@/features/tours/components/TourCollection'
 import { TourPromises } from '@/features/tours/components/TourPromises'
 import { cloudinaryImage } from '@/lib/cloudinary'
+import { toursFaqs } from '@/lib/seo/faq-data'
+import { faqPageJsonLd, graphJsonLd, organizationJsonLd } from '@/lib/seo/json-ld'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
 export const metadata = buildPageMetadata({
@@ -21,6 +25,7 @@ export default async function ToursPage() {
 
   return (
     <>
+      <JsonLd data={graphJsonLd(organizationJsonLd(), faqPageJsonLd(toursFaqs))} />
       <PageHero
         eyebrow="Tours & Journeys"
         title="Starting points, not packages"
@@ -31,14 +36,18 @@ export default async function ToursPage() {
         compact
       />
 
-      {/* Ways to travel */}
       <TourTravelStyles tours={tours} />
 
-      {/* All journeys */}
       <TourCollection tours={tours} />
 
-      {/* Promises */}
       <TourPromises />
+
+      <FaqSection
+        title="How private journeys work"
+        intro="Pricing, fitness, group size and what is included — before you fall in love with a route."
+        items={toursFaqs}
+        footerLink={{ label: 'Talk to a designer', href: '/contact' }}
+      />
 
       <CtaBand
         title="None of these quite fit? Start blank"

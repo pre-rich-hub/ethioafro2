@@ -2,12 +2,12 @@ import { PageHero } from '@/components/common/PageHero'
 import { LegalContactCard, LegalContents, LegalSections } from '@/features/legal'
 import { privacySections } from '@/features/legal/data/privacy.data'
 import { cloudinaryImage } from '@/lib/cloudinary'
+import { company } from '@/lib/seo/entities'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
 export const metadata = buildPageMetadata({
   title: 'Privacy Policy',
-  description:
-    'How Simien Ethiopia Tours collects, uses, shares and protects the information you give us when planning a journey.',
+  description: `How ${company.name} collects, uses, shares and protects the information you give us when planning a journey.`,
   path: '/privacy',
   image: cloudinaryImage('simien-mountains', 1200),
   imageAlt: 'The Simien Mountains escarpment at first light',
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Legal"
         title="Privacy Policy"
-        lede="How Simien Ethiopia Tours handles the information shared by guests, website visitors and travel partners — in plain language."
+        lede={`How ${company.name} handles the information shared by guests, website visitors and travel partners — in plain language.`}
         image={cloudinaryImage('simien-mountains', 1920)}
         imageAlt="The Simien Mountains escarpment at first light"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]}

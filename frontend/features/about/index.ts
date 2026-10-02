@@ -1,3 +1,4 @@
+export { AboutFacts } from './components/AboutFacts'
 export { CompanyTimeline } from './components/CompanyTimeline'
 export { FamilyTeam } from './components/FamilyTeam'
 export { FounderLetter } from './components/FounderLetter'

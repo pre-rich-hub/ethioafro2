@@ -5,6 +5,7 @@ import {
   ShieldCheck,
   Sofa,
 } from 'lucide-react'
+import { company } from '@/lib/seo/entities'
 
 export const milestones = [
   {
@@ -28,7 +29,7 @@ export const milestones = [
     text: 'Guiding, planning tours, looking after guests and managing destinations for several established operators — learning every side of the work.',
   },
   {
-    place: 'Simien Ethiopia Tours',
+    place: company.name,
     title: 'A company of our own',
     text: 'A licensed Ethiopian tour company built around private, tailor-made journeys — named for the mountains where it all started.',
   },

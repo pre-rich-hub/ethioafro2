@@ -3,7 +3,8 @@ import type { Destination } from '@/features/destinations/types/destination.type
 import type { Activity } from '@/features/experiences/types/experience.types'
 import type { Tour } from '@/features/tours/types/tour.types'
 import { isTailorMade } from '@/features/tours/utils/tour.utils'
-import { contact } from '@/lib/constants/contact'
+import { company } from '@/lib/seo/entities'
+import type { FaqItem } from '@/lib/seo/faq.types'
 import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/seo/metadata'
 
 type JsonLdObject = Record<string, unknown>
@@ -41,22 +42,48 @@ export function organizationJsonLd(): JsonLdObject {
     '@context': 'https://schema.org',
     '@type': 'TravelAgency',
     '@id': ORGANIZATION_ID,
-    name: 'Simien Ethiopia Tours',
-    url: SITE_URL,
+    name: company.name,
+    legalName: company.name,
+    alternateName: `${company.wordmarkPrimary} ${company.wordmarkSecondary}`,
+    description: company.foundingOneLiner,
+    slogan: company.tagline,
+    url: company.url,
     logo: absoluteUrl('/images/logo.png'),
     image: DEFAULT_OG_IMAGE,
-    email: contact.email,
-    telephone: contact.phone,
+    email: company.email,
+    telephone: company.telephone,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Bole Medhaniallem, Cape Verde Street 1000',
-      addressLocality: 'Addis Ababa',
-      addressCountry: 'ET',
+      streetAddress: company.streetAddress,
+      addressLocality: company.addressLocality,
+      addressCountry: company.addressCountry,
     },
     areaServed: {
       '@type': 'Country',
-      name: 'Ethiopia',
+      name: company.areaServed,
     },
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'Bahir Dar',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Bahir Dar',
+        addressCountry: 'ET',
+      },
+    },
+    founder: {
+      '@type': 'Person',
+      name: company.founder,
+      jobTitle: 'Founder',
+    },
+    knowsAbout: [
+      'Private Ethiopia tours',
+      'Simien Mountains',
+      'Lalibela',
+      'Danakil Depression',
+      'Omo Valley',
+      'Ethiopian coffee journeys',
+    ],
   }
 }
 
@@ -65,8 +92,9 @@ export function websiteJsonLd(): JsonLdObject {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': WEBSITE_ID,
-    url: SITE_URL,
-    name: 'Simien Ethiopia Tours',
+    url: company.url,
+    name: company.name,
+    description: company.ogDescription,
     publisher: { '@id': ORGANIZATION_ID },
     inLanguage: 'en',
   }
@@ -194,6 +222,21 @@ export function articleJsonLd(post: Post): JsonLdObject {
     },
     articleSection: post.category,
     inLanguage: 'en',
+  }
+}
+
+export function faqPageJsonLd(faqs: FaqItem[]): JsonLdObject {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
   }
 }
 

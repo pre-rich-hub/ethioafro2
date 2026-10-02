@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils/cn'
+import { company } from '@/lib/seo/entities'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -13,12 +14,12 @@ export function Wordmark({
     <Link
       href="/"
       onClick={onClick}
-      aria-label="Simien Ethiopia Tours — home"
+      aria-label={`${company.name} — home`}
       className="flex items-center"
     >
       <Image
         src="/images/logo.png"
-        alt="Simien Ethiopia Tours Logo"
+        alt={`${company.name} logo`}
         width={56}
         height={56}
         priority
@@ -31,7 +32,7 @@ export function Wordmark({
             tone === 'dark' ? 'text-foreground' : 'text-background',
           )}
         >
-          Simien Ethiopia
+          {company.wordmarkPrimary}
         </span>
         <span
           className={cn(
@@ -39,7 +40,7 @@ export function Wordmark({
             tone === 'dark' ? 'text-accent' : 'text-accent-light',
           )}
         >
-          Tours
+          {company.wordmarkSecondary}
         </span>
       </span>
     </Link>

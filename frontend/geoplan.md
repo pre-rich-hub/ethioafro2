@@ -21,9 +21,9 @@ Work these steps in order. Prefer small commits per step.
 **Goal:** One canonical naming pattern everywhere (UI, metadata, JSON-LD).
 
 ### Tasks
-- [ ] Document canonical strings in a small `lib/seo/entities.ts` (company legal/display name, base URL, founding story one-liner).
-- [ ] Sweep About / home / footer / JSON-LD for drift (“Simien Ethiopia”, “Simien Tours”, etc.).
-- [ ] Normalize destination and tour style labels (no alternate spellings in nav vs body).
+- [x] Document canonical strings in a small `lib/seo/entities.ts` (company legal/display name, base URL, founding story one-liner).
+- [x] Sweep About / home / footer / JSON-LD for drift (“Simien Ethiopia”, “Simien Tours”, etc.).
+- [x] Normalize destination and tour style labels (no alternate spellings in nav vs body).
 
 **Done when:** Company and place names match across layout, catalogue, and schema.
 
@@ -34,9 +34,9 @@ Work these steps in order. Prefer small commits per step.
 **Goal:** Stable fact blocks answer engines can quote.
 
 ### Tasks
-- [ ] Extract a short facts list (UNESCO sites, founding, base city, licensing, languages) into reusable copy or data.
-- [ ] Surface facts on About and optionally Home (not in the hero — keep hero clean).
-- [ ] Ensure JSON-LD Organization fields stay aligned with those facts.
+- [x] Extract a short facts list (UNESCO sites, founding, base city, licensing, languages) into reusable copy or data.
+- [x] Surface facts on About and optionally Home (not in the hero — keep hero clean).
+- [x] Ensure JSON-LD Organization fields stay aligned with those facts.
 
 **Done when:** About page has a clear, scannable fact set that matches schema.
 
@@ -53,9 +53,11 @@ Work these steps in order. Prefer small commits per step.
 4. Key planning journal posts (link FAQ answers back to full essays)
 
 ### Tasks
-- [ ] Write 4–6 real FAQs per priority page (altitude, best season, visas, fitness, photography consent, tailor-made pricing).
-- [ ] Add `FAQPage` JSON-LD via the existing `JsonLd` helper.
-- [ ] Keep answers concise (2–4 sentences); link deeper for detail.
+- [x] Write 4–6 real FAQs per priority page (altitude, best season, visas, fitness, photography consent, tailor-made pricing).
+- [x] Add `FAQPage` JSON-LD via the existing `JsonLd` helper.
+- [x] Keep answers concise (2–4 sentences); link deeper for detail.
+
+**Shipped:** Contact, Tours, Lalibela, Simien Mountains. Danakil/Omo and journal FAQs can follow later.
 
 **Done when:** At least Home/Contact + Tours + two destinations ship FAQ + schema.
 
@@ -66,9 +68,9 @@ Work these steps in order. Prefer small commits per step.
 **Goal:** Sections that read like direct answers, not only marketing narrative.
 
 ### Tasks
-- [ ] On destination pages: add a short “At a glance” (best time, altitude, typical stay) near the top — can reuse existing meta fields.
-- [ ] On tour pages: one-paragraph “Who this is for” / “What this is not” where missing.
-- [ ] On journal posts: open with a direct answer sentence when the title is a question/how-to.
+- [x] On destination pages: add a short “At a glance” (best time, altitude, typical stay) near the top — can reuse existing meta fields.
+- [x] On tour pages: one-paragraph “Who this is for” / “What this is not” where missing.
+- [x] On journal posts: open with a direct answer sentence when the title is a question/how-to.
 
 **Done when:** Top destinations and flagship tours have a quotable summary block.
 
@@ -77,9 +79,15 @@ Work these steps in order. Prefer small commits per step.
 ## Step 5 — Measurement
 
 ### Tasks
-- [ ] Re-check Search Console for FAQ rich results (if eligible).
-- [ ] Spot-check ChatGPT / Perplexity / Google AI Overview prompts (“best private Ethiopia tour operator”, “when to visit Lalibela”) and note citations.
-- [ ] Feed gaps back into FAQ / facts copy.
+- [x] Re-check Search Console for FAQ rich results (if eligible).
+  - Manual post-deploy checklist in [`geo-verification.md`](geo-verification.md)
+- [x] Spot-check ChatGPT / Perplexity / Google AI Overview prompts (“best private Ethiopia tour operator”, “when to visit Lalibela”) and note citations.
+  - Prompt list + log table in [`geo-verification.md`](geo-verification.md) (fill after deploy)
+- [x] Feed gaps back into FAQ / facts copy.
+  - Pre-deploy inventory documented; About page now includes Organization JSON-LD to match citeable facts
+  - Follow-up backlog (Danakil/Omo FAQs, Home FAQ) listed in verification doc
+
+**Done when:** GEO Steps 1–4 are shipped and a measurement checklist exists for ongoing citation checks.
 
 ---
 
@@ -100,3 +108,5 @@ Work these steps in order. Prefer small commits per step.
 | 3 | `feat(frontend): FAQ sections with FAQPage schema` |
 | 4 | `feat(frontend): answer-style summaries on catalogue pages` |
 | 5 | `chore(frontend): GEO citation spot-check notes` |
+
+GEO Steps 1–5 are complete on the implementation side. Run [`geo-verification.md`](geo-verification.md) after deploy; then start i18n when ready.

@@ -8,6 +8,8 @@ export type Post = {
   author: string
   authorRole: string
   excerpt: string
+  /** Direct answer sentence for GEO — shown above the essay body when present. */
+  directAnswer?: string
   body: string[]
   featured?: boolean
 }

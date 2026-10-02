@@ -1,13 +1,7 @@
 import Image from 'next/image'
 import { Reveal } from '@/components/common/Reveal'
 import { cloudinaryImage } from '@/lib/cloudinary'
-
-const facts = [
-  ['3,000+', 'years of continuous civilization'],
-  ['9', 'UNESCO World Heritage Sites'],
-  ['80+', 'living languages and cultures'],
-  ['13', 'months in the Ethiopian calendar'],
-]
+import { ethiopiaFacts } from '@/lib/seo/facts'
 
 export function WhyEthiopia() {
   return (
@@ -36,28 +30,26 @@ export function WhyEthiopia() {
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-secondary-foreground/80">
               <p>
-                Few countries hold this much contrast inside one set of
-                borders — a highland kingdom that kept its own calendar and
-                script for millennia, sitting a short flight from one of the
-                hottest, lowest places on the continent.
+                Few countries hold this much contrast inside one set of borders — a
+                highland kingdom that kept its own calendar and script for millennia,
+                sitting a short flight from one of the hottest, lowest places on the
+                continent.
               </p>
               <p>
-                Guests rarely describe it as a trip they took. More often it
-                is a recalibration of what they assumed the world still had
-                left to show them.
+                Guests rarely describe it as a trip they took. More often it is a
+                recalibration of what they assumed the world still had left to show
+                them.
               </p>
             </div>
           </Reveal>
 
           <Reveal delay={140} className="flex items-center">
             <dl className="grid w-full grid-cols-2 gap-px overflow-hidden rounded-xl bg-secondary-foreground/15">
-              {facts.map(([stat, label]) => (
-                <div key={label} className="bg-secondary p-8 lg:p-10">
-                  <dt className="font-serif text-4xl text-accent lg:text-5xl">
-                    {stat}
-                  </dt>
+              {ethiopiaFacts.map((fact) => (
+                <div key={fact.label} className="bg-secondary p-8 lg:p-10">
+                  <dt className="font-serif text-4xl text-accent lg:text-5xl">{fact.value}</dt>
                   <dd className="mt-2 text-sm leading-relaxed text-secondary-foreground/70">
-                    {label}
+                    {fact.label}
                   </dd>
                 </div>
               ))}

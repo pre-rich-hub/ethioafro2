@@ -1,6 +1,7 @@
 import { Reveal } from '@/components/common/Reveal'
 import Image from 'next/image'
 import { cloudinaryImage } from '@/lib/cloudinary'
+import { company } from '@/lib/seo/entities'
 
 export function FounderLetter() {
   return (
@@ -28,7 +29,7 @@ export function FounderLetter() {
               Mihiret Getenat
             </p>
             <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px]">
-              Founder · Simien Ethiopia Tours
+              Founder · {company.name}
             </p>
           </div>
         </div>
@@ -54,7 +55,7 @@ export function FounderLetter() {
           me every side of the work.
         </p>
         <p>
-          Simien Ethiopia Tours grew out of that. It is a licensed Ethiopian
+          {company.name} grew out of that. It is a licensed Ethiopian
           company built for private, tailor-made journeys, and it is run
           today by my three brothers, our wider family, our team — and me.
         </p>
