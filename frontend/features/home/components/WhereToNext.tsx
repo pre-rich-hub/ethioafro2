@@ -5,14 +5,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
+const cld = (slug: string) =>
+  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
+
 const stops = [
-  { src: '/images/lalibela.png', location: 'Lalibela', region: 'Northern Highlands', href: '/destinations/lalibela' },
-  { src: '/images/hero-simien.png', location: 'Simien Mountains', region: 'Northern Highlands', href: '/destinations/simien-mountains' },
-  { src: '/images/danakil.png', location: 'Danakil Depression', region: 'Afar Lowlands', href: '/destinations/danakil-depression' },
-  { src: '/images/omo-valley.png', location: 'Omo Valley', region: 'Southern Rift', href: '/destinations/omo-valley' },
-  { src: '/images/gondar.png', location: 'Gondar', region: 'Northern Highlands', href: '/destinations/gondar' },
-  { src: '/images/bale-gelada.png', location: 'Bale Mountains', region: 'Southern Highlands', href: '/destinations/bale-mountains' },
-  { src: '/images/lake-tana.png', location: 'Lake Tana', region: 'Amhara', href: '/destinations/lake-tana' },
+  { src: cld('lalibela'), location: 'Lalibela', region: 'Northern Highlands', href: '/destinations/lalibela' },
+  { src: cld('simien-mountains'), location: 'Simien Mountains', region: 'Northern Highlands', href: '/destinations/simien-mountains' },
+  { src: cld('danakil-depression'), location: 'Danakil Depression', region: 'Afar Lowlands', href: '/destinations/danakil-depression' },
+  { src: cld('omo-valley'), location: 'Omo Valley', region: 'Southern Rift', href: '/destinations/omo-valley' },
+  { src: cld('gondar'), location: 'Gondar', region: 'Northern Highlands', href: '/destinations/gondar' },
+  { src: cld('bale-mountains'), location: 'Bale Mountains', region: 'Southern Highlands', href: '/destinations/bale-mountains' },
+  { src: cld('lake-tana'), location: 'Lake Tana', region: 'Amhara', href: '/destinations/lake-tana' },
 ]
 
 // Three copies of the set so there's always more track to scroll into in

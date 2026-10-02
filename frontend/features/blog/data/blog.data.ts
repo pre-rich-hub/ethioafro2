@@ -1,5 +1,8 @@
 import type { Post } from '@/features/blog/types/blog.types'
 
+const cloudinaryBlogImage = (publicId: string) =>
+  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${publicId}.png`
+
 export const posts: Post[] = [
   {
     slug: 'when-to-visit-ethiopia',
@@ -7,7 +10,7 @@ export const posts: Post[] = [
     category: 'Planning',
     date: 'June 18, 2026',
     readTime: '9 min read',
-    image: '/images/hero-simien.png',
+    image: cloudinaryBlogImage('simien-mountains'),
     author: 'Selam Bekele',
     authorRole: 'Head of Journey Design',
     excerpt:
@@ -27,7 +30,7 @@ export const posts: Post[] = [
     category: 'Destinations',
     date: 'May 30, 2026',
     readTime: '7 min read',
-    image: '/images/lalibela.png',
+    image: cloudinaryBlogImage('lalibela'),
     author: 'Yohannes Tesfaye',
     authorRole: 'Senior Guide, Northern Circuit',
     excerpt:
@@ -45,7 +48,7 @@ export const posts: Post[] = [
     category: 'Culture',
     date: 'May 9, 2026',
     readTime: '6 min read',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryBlogImage('coffee-cupping-and-ceremony'),
     author: 'Marta Alemu',
     authorRole: 'Culture & Community Lead',
     excerpt:
@@ -63,7 +66,7 @@ export const posts: Post[] = [
     category: 'Practical',
     date: 'April 22, 2026',
     readTime: '5 min read',
-    image: '/images/danakil.png',
+    image: cloudinaryBlogImage('danakil-depression'),
     author: 'Selam Bekele',
     authorRole: 'Head of Journey Design',
     excerpt:
@@ -81,7 +84,7 @@ export const posts: Post[] = [
     category: 'Responsible Travel',
     date: 'April 3, 2026',
     readTime: '8 min read',
-    image: '/images/omo-valley.png',
+    image: cloudinaryBlogImage('omo-valley'),
     author: 'Marta Alemu',
     authorRole: 'Culture & Community Lead',
     excerpt:
@@ -99,7 +102,7 @@ export const posts: Post[] = [
     category: 'Layover',
     date: 'March 14, 2026',
     readTime: '6 min read',
-    image: '/images/textile.png',
+    image: cloudinaryBlogImage('addis-ababa'),
     author: 'Yohannes Tesfaye',
     authorRole: 'Senior Guide, Northern Circuit',
     excerpt:

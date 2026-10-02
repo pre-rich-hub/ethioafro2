@@ -16,7 +16,7 @@ export default function BlogPage() {
         eyebrow="The Journal"
         title="Notes from the people who run these trips"
         lede="Practical writing from our own designers and guides — timing, packing, etiquette, and the reasoning behind how we operate."
-        image="/images/coffee-ceremony.png"
+        image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/coffee-cupping-and-ceremony.png"
         imageAlt="Green coffee beans roasting over coals during an Ethiopian coffee ceremony"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Journal' }]}
         compact
@@ -32,7 +32,7 @@ export default function BlogPage() {
         title="Have a question these didn't answer?"
         text="Nearly every post here began as a real question from a guest. Send us yours and it might be the next one we write."
         secondary={{ label: 'Browse Tours', href: '/tours' }}
-        image="/images/hero-simien.png"
+        image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/the-historic-route.png"
       />
     </>
   )
