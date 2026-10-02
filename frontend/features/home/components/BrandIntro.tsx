@@ -37,10 +37,10 @@ export function BrandIntro() {
           </p>
         </div>
         <Link
-          href="/how-we-travel"
+          href="/about"
           className="group mt-8 inline-flex items-center gap-2 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
         >
-          How we travel
+          Our story
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </Reveal>

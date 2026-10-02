@@ -1,6 +1,4 @@
 // Short, bookable add-ons that slot into any journey — shown at /experiences.
-// (The six guiding ideas that used to live there are now `experiences`
-// above, served at /how-we-travel.)
 export type ActivityCategory =
   | 'Food & Drink'
   | 'Coffee'

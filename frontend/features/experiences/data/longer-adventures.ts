@@ -10,8 +10,8 @@ export const longer = [
     href: '/tours/rift-valley-by-bike',
   },
   {
-    title: 'Mountain climbing',
-    text: 'Guided ascents of Ethiopia\'s highest summits.',
-    href: '/mountains',
+    title: 'Ras Dashen Summit Climb',
+    text: 'Guided ascent of Ethiopia\'s highest peak at about 4,550 metres.',
+    href: '/tours/ras-dashen-summit-climb',
   },
 ]

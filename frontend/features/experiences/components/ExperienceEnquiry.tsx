@@ -16,7 +16,6 @@ import type { Tour } from '@/features/tours/types/tour.types'
 import type { Destination } from '@/features/destinations/types/destination.types'
 import type { Activity, ActivityCategory } from '@/features/experiences/types/experience.types'
 import type { Post } from '@/features/blog/types/blog.types'
-import type { Peak } from '@/features/mountains/types/mountain.types'
 
 
 type Props = {

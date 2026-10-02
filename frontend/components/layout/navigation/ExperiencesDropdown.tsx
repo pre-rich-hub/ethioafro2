@@ -39,14 +39,6 @@ export function ExperiencesDropdown({ dismissed, dismiss }: Props) {
             View All Experiences
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" />
           </Link>
-          <Link
-            href="/how-we-travel"
-            onClick={dismiss('Experiences')}
-            className="group/cta mt-4 inline-flex items-center gap-2.5 self-start text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-300 hover:text-accent"
-          >
-            How We Travel
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" />
-          </Link>
         </div>
 
         <div className="grid grid-cols-4 gap-7">

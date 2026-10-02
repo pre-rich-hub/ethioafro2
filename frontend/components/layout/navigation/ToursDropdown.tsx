@@ -40,22 +40,6 @@ export function ToursDropdown({ dismissed, dismiss }: Props) {
             Explore All Tours
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" />
           </Link>
-          <Link
-            href="/mountains"
-            onClick={dismiss('Tours')}
-            className="group/cta mt-4 inline-flex items-center gap-2.5 self-start text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-300 hover:text-accent"
-          >
-            Mountain Climbing
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" />
-          </Link>
-          <Link
-            href="/festivals"
-            onClick={dismiss('Tours')}
-            className="group/cta mt-4 inline-flex items-center gap-2.5 self-start text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-300 hover:text-accent"
-          >
-            Festival Calendar
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-1" />
-          </Link>
         </div>
 
         <div className="grid grid-cols-3 gap-7">
