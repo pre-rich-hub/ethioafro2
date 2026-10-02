@@ -20,8 +20,8 @@ export default async function ToursPage() {
         eyebrow="Tours & Journeys"
         title="Starting points, not packages"
         lede="Every route here is drawn from years on the ground across Ethiopia. Treat them as a draft — the version you travel will be redrawn around you."
-        image="/images/luxury-lodge.png"
-        imageAlt="A terrace at a highland lodge above the Ethiopian escarpment at dusk"
+        image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/simien-mountains.png"
+        imageAlt="Simien Mountains escarpment in northern Ethiopia"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Tours' }]}
         compact
       />

@@ -1,11 +1,15 @@
 import type { Tour } from '@/features/tours/types/tour.types'
 import { TAILOR_MADE } from '@/features/tours/utils/tour.utils'
 
+/** Reuses destination Cloudinary public IDs (same cloud as destinations). */
+const cloudinaryTourImage = (destinationSlug: string) =>
+  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${destinationSlug}.png`
+
 export const tours: Tour[] = [
   {
     slug: 'the-historic-route',
     title: 'The Historic Route',
-    image: '/images/hero-lalibela.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '11 Days',
     nights: 10,
     style: 'Cultural · Luxury · Private',
@@ -72,7 +76,7 @@ export const tours: Tour[] = [
   {
     slug: 'simien-escarpment-trek',
     title: 'Simien Escarpment Trek',
-    image: '/images/hero-simien.png',
+    image: cloudinaryTourImage('simien-mountains'),
     days: '5 Days',
     nights: 4,
     style: 'Trekking · Small Group',
@@ -130,7 +134,7 @@ export const tours: Tour[] = [
   {
     slug: 'gondar-and-the-simien-rim',
     title: 'Gondar & the Simien Rim',
-    image: '/images/luxury-lodge.png',
+    image: cloudinaryTourImage('simien-mountains'),
     days: '4 Days',
     nights: 3,
     style: 'Cultural · Hiking · Private',
@@ -182,7 +186,7 @@ export const tours: Tour[] = [
   {
     slug: 'ras-dashen-traverse',
     title: 'Ras Dashen Traverse',
-    image: '/images/hero-simien.png',
+    image: cloudinaryTourImage('ras-dashen'),
     days: '10 Days',
     nights: 9,
     style: 'Climbing · Trekking · Expedition · Private',
@@ -254,7 +258,7 @@ export const tours: Tour[] = [
   {
     slug: 'the-complete-north',
     title: 'The Complete North',
-    image: '/images/hero-gondar.jpg',
+    image: cloudinaryTourImage('lalibela'),
     days: '15 Days',
     nights: 14,
     style: 'Cultural · Trekking · Private',
@@ -336,7 +340,7 @@ export const tours: Tour[] = [
   {
     slug: 'gheralta-and-axum',
     title: 'Gheralta & Axum',
-    image: '/images/hero-lalibela.png',
+    image: cloudinaryTourImage('gheralta'),
     days: '6 Days',
     nights: 5,
     style: 'Cultural · Hiking · Private',
@@ -397,7 +401,7 @@ export const tours: Tour[] = [
   {
     slug: 'lalibela-beyond-the-churches',
     title: 'Lalibela, Beyond the Churches',
-    image: '/images/lalibela.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '4 Days',
     nights: 3,
     style: 'Cultural · Hiking · Private',
@@ -448,7 +452,7 @@ export const tours: Tour[] = [
   {
     slug: 'addis-ababa-in-depth',
     title: 'Addis Ababa in Depth',
-    image: '/images/addis-skyline.png',
+    image: cloudinaryTourImage('addis-ababa'),
     days: '2 Days',
     nights: 1,
     style: 'Cultural · Family · Private',
@@ -504,7 +508,7 @@ export const tours: Tour[] = [
   {
     slug: 'southern-heritage-road',
     title: 'The Southern Heritage Road',
-    image: '/images/addis-skyline.png',
+    image: cloudinaryTourImage('tiya-adadi-mariam'),
     days: '1 Day',
     nights: 0,
     style: 'Cultural · Private',
@@ -547,7 +551,7 @@ export const tours: Tour[] = [
   {
     slug: 'debre-libanos-and-the-jemma-gorge',
     title: 'Debre Libanos & the Jemma Gorge',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryTourImage('debre-libanos'),
     days: '1 Day',
     nights: 0,
     style: 'Cultural · Wildlife · Private',
@@ -592,7 +596,7 @@ export const tours: Tour[] = [
   {
     slug: 'crater-lakes-and-the-holy-mountain',
     title: 'Crater Lakes & the Holy Mountain',
-    image: '/images/addis-skyline.png',
+    image: cloudinaryTourImage('bishoftu-zuqualla'),
     days: '1 Day',
     nights: 0,
     style: 'Hiking · Cultural · Private',
@@ -635,7 +639,7 @@ export const tours: Tour[] = [
   {
     slug: 'addis-and-its-highlands',
     title: 'Addis & Its Highlands',
-    image: '/images/addis-skyline.png',
+    image: cloudinaryTourImage('addis-ababa'),
     days: '5 Days',
     nights: 4,
     style: 'Cultural · Hiking · Private',
@@ -691,7 +695,7 @@ export const tours: Tour[] = [
   {
     slug: 'wenchi-crater-lake-escape',
     title: 'Wenchi Crater Lake Escape',
-    image: '/images/lake-tana.png',
+    image: cloudinaryTourImage('wenchi-crater-lake'),
     days: '2 Days',
     nights: 1,
     style: 'Hiking · Cultural · Private',
@@ -735,7 +739,7 @@ export const tours: Tour[] = [
   {
     slug: 'awash-and-the-fantale-volcano',
     title: 'Awash & the Fantale Volcano',
-    image: '/images/omo-valley.png',
+    image: cloudinaryTourImage('awash-national-park'),
     days: '3 Days',
     nights: 2,
     style: 'Wildlife · Private',
@@ -779,7 +783,7 @@ export const tours: Tour[] = [
   {
     slug: 'bale-mountains-and-sof-omar',
     title: 'Bale Mountains & Sof Omar',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryTourImage('bale-mountains'),
     days: '6 Days',
     nights: 5,
     style: 'Wildlife · Hiking · Private',
@@ -838,7 +842,7 @@ export const tours: Tour[] = [
   {
     slug: 'borana-wells-salt-and-bushcrows',
     title: 'Borana: Wells, Salt & Bushcrows',
-    image: '/images/omo-valley.png',
+    image: cloudinaryTourImage('borana-yabelo'),
     days: '5 Days',
     nights: 4,
     style: 'Cultural · Wildlife · Private',
@@ -892,7 +896,7 @@ export const tours: Tour[] = [
   {
     slug: 'jimma-the-coffee-kingdom',
     title: 'Jimma, the Coffee Kingdom',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryTourImage('jimma'),
     days: '3 Days',
     nights: 2,
     style: 'Cultural · Slow Travel · Private',
@@ -936,7 +940,7 @@ export const tours: Tour[] = [
   {
     slug: 'harar-and-the-walled-city',
     title: 'Harar & the Walled City',
-    image: '/images/textile.png',
+    image: cloudinaryTourImage('harar'),
     days: '4 Days',
     nights: 3,
     style: 'Cultural · Private',
@@ -987,7 +991,7 @@ export const tours: Tour[] = [
   {
     slug: 'southern-rift-and-konso',
     title: 'Southern Rift & Konso',
-    image: '/images/omo-valley.png',
+    image: cloudinaryTourImage('arba-minch-nechisar'),
     days: '6 Days',
     nights: 5,
     style: 'Cultural · Wildlife · Private',
@@ -1048,7 +1052,7 @@ export const tours: Tour[] = [
   {
     slug: 'sidama-and-yirgacheffe-coffee',
     title: 'Sidama & Yirgacheffe Coffee',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryTourImage('sidama-yirgacheffe'),
     days: '5 Days',
     nights: 4,
     style: 'Cultural · Slow Travel · Private',
@@ -1103,7 +1107,7 @@ export const tours: Tour[] = [
   {
     slug: 'the-coffee-road',
     title: 'The Coffee Road',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryTourImage('jimma'),
     days: '13 Days',
     nights: 12,
     style: 'Cultural · Slow Travel · Private',
@@ -1179,7 +1183,7 @@ export const tours: Tour[] = [
   {
     slug: 'ras-dashen-summit-climb',
     title: 'Ras Dashen Summit Climb',
-    image: '/images/hero-simien.png',
+    image: cloudinaryTourImage('ras-dashen'),
     days: '7 Days',
     nights: 6,
     style: 'Climbing · Trekking · Small Group',
@@ -1246,7 +1250,7 @@ export const tours: Tour[] = [
   {
     slug: 'simien-summits-in-comfort',
     title: 'Simien Summits in Comfort',
-    image: '/images/luxury-lodge.png',
+    image: cloudinaryTourImage('simien-mountains'),
     days: '5 Days',
     nights: 4,
     style: 'Climbing · Luxury · Private',
@@ -1302,7 +1306,7 @@ export const tours: Tour[] = [
   {
     slug: 'bale-summits-batu-and-tullu-dimtu',
     title: 'Bale Summits: Batu & Tullu Dimtu',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryTourImage('bale-mountains'),
     days: '7 Days',
     nights: 6,
     style: 'Climbing · Trekking · Private',
@@ -1368,7 +1372,7 @@ export const tours: Tour[] = [
   {
     slug: 'abune-yosef-ascent',
     title: 'Abune Yosef Ascent',
-    image: '/images/hero-lalibela.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '4 Days',
     nights: 3,
     style: 'Climbing · Trekking · Small Group',
@@ -1420,7 +1424,7 @@ export const tours: Tour[] = [
   {
     slug: 'mount-guna-ascent',
     title: 'Mount Guna Ascent',
-    image: '/images/hero-simien.png',
+    image: cloudinaryTourImage('lake-tana'),
     days: '3 Days',
     nights: 2,
     style: 'Climbing · Hiking · Private',
@@ -1463,7 +1467,7 @@ export const tours: Tour[] = [
   {
     slug: 'ethiopias-three-high-peaks',
     title: 'Ethiopia\'s Three High Peaks',
-    image: '/images/hero-simien.png',
+    image: cloudinaryTourImage('ras-dashen'),
     days: '18 Days',
     nights: 17,
     style: 'Climbing · Expedition · Private',
@@ -1550,7 +1554,7 @@ export const tours: Tour[] = [
   {
     slug: 'run-with-ethiopias-champions',
     title: 'Run with Ethiopia\'s Champions',
-    image: '/images/addis-skyline.png',
+    image: cloudinaryTourImage('addis-ababa'),
     days: '6 Days',
     nights: 5,
     style: 'Running · Active · Small Group',
@@ -1610,7 +1614,7 @@ export const tours: Tour[] = [
   {
     slug: 'rift-valley-by-bike',
     title: 'Rift Valley by Bike',
-    image: '/images/lake-tana.png',
+    image: cloudinaryTourImage('awash-national-park'),
     days: '5 Days',
     nights: 4,
     style: 'Cycling · Active · Small Group',
@@ -1664,7 +1668,7 @@ export const tours: Tour[] = [
   {
     slug: 'northern-ethiopia-for-families',
     title: 'Northern Ethiopia for Families',
-    image: '/images/gondar.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '9 Days',
     nights: 8,
     style: 'Family · Cultural · Private',
@@ -1725,7 +1729,7 @@ export const tours: Tour[] = [
   {
     slug: 'lakes-craters-and-wildlife-for-families',
     title: 'Lakes, Craters & Wildlife for Families',
-    image: '/images/lake-tana.png',
+    image: cloudinaryTourImage('bishoftu-zuqualla'),
     days: '6 Days',
     nights: 5,
     style: 'Family · Wildlife · Private',
@@ -1780,7 +1784,7 @@ export const tours: Tour[] = [
   {
     slug: 'the-north-in-style',
     title: 'The North in Style',
-    image: '/images/luxury-lodge.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '10 Days',
     nights: 9,
     style: 'Luxury · Cultural · Private',
@@ -1841,7 +1845,7 @@ export const tours: Tour[] = [
   {
     slug: 'christmas-to-epiphany',
     title: 'Christmas to Epiphany',
-    image: '/images/festival-timkat.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '16 Days',
     nights: 15,
     style: 'Festival · Cultural · Private',
@@ -1912,7 +1916,7 @@ export const tours: Tour[] = [
   {
     slug: 'lalibela-highlands-community-trek',
     title: 'Lalibela Highlands Community Trek',
-    image: '/images/hero-lalibela.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '5 Days',
     nights: 4,
     style: 'Trekking · Cultural · Small Group',
@@ -1969,7 +1973,7 @@ export const tours: Tour[] = [
   {
     slug: 'the-road-north',
     title: 'The Road North',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryTourImage('guassa-plateau'),
     days: '8 Days',
     nights: 7,
     style: 'Wildlife · Cultural · Private',
@@ -2035,7 +2039,7 @@ export const tours: Tour[] = [
   {
     slug: 'around-lake-tana',
     title: 'Around Lake Tana',
-    image: '/images/lake-tana.png',
+    image: cloudinaryTourImage('lake-tana'),
     days: '6 Days',
     nights: 5,
     style: 'Slow Travel · Cultural · Family · Private',
@@ -2096,7 +2100,7 @@ export const tours: Tour[] = [
   {
     slug: 'choke-mountains-trek',
     title: 'Choke Mountains Trek',
-    image: '/images/hero-simien.png',
+    image: cloudinaryTourImage('choke-mountains'),
     days: '5 Days',
     nights: 4,
     style: 'Trekking · Small Group',
@@ -2153,7 +2157,7 @@ export const tours: Tour[] = [
   {
     slug: 'northern-endemics-birding',
     title: 'Northern Endemics Birding',
-    image: '/images/hero-simien.png',
+    image: cloudinaryTourImage('simien-mountains'),
     days: '7 Days',
     nights: 6,
     style: 'Wildlife · Birding · Private',
@@ -2220,7 +2224,7 @@ export const tours: Tour[] = [
   {
     slug: 'highlands-and-wildlife',
     title: 'Highlands & Wildlife',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryTourImage('simien-mountains'),
     days: '9 Days',
     nights: 8,
     style: 'Expedition · Private',
@@ -2297,7 +2301,7 @@ export const tours: Tour[] = [
   {
     slug: 'sacred-waters-and-coffee',
     title: 'Sacred Waters & Coffee',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryTourImage('lake-tana'),
     days: '7 Days',
     nights: 6,
     style: 'Slow Travel · Private',
@@ -2364,7 +2368,7 @@ export const tours: Tour[] = [
   {
     slug: 'danakil-expedition',
     title: 'Danakil Expedition',
-    image: '/images/danakil.png',
+    image: cloudinaryTourImage('danakil-depression'),
     days: '6 Days',
     nights: 5,
     style: 'Expedition · Small Group',
@@ -2426,7 +2430,7 @@ export const tours: Tour[] = [
   {
     slug: 'omo-valley-immersion',
     title: 'Omo Valley Immersion',
-    image: '/images/omo-valley.png',
+    image: cloudinaryTourImage('omo-valley'),
     days: '10 Days',
     nights: 9,
     style: 'Cultural · Private',
@@ -2507,7 +2511,7 @@ export const tours: Tour[] = [
   {
     slug: 'timkat-festival-journey',
     title: 'Timkat Festival Journey',
-    image: '/images/festival-timkat.png',
+    image: cloudinaryTourImage('gondar'),
     days: '8 Days',
     nights: 7,
     style: 'Festival · Private',
@@ -2578,7 +2582,7 @@ export const tours: Tour[] = [
   {
     slug: 'ethiopia-through-the-lens',
     title: 'Ethiopia Through the Lens',
-    image: '/images/omo-valley.png',
+    image: cloudinaryTourImage('lalibela'),
     days: '9 Days',
     nights: 8,
     style: 'Photography · Private',
@@ -2655,7 +2659,7 @@ export const tours: Tour[] = [
   {
     slug: 'rift-valley-birding-trail',
     title: 'Rift Valley Birding Trail',
-    image: '/images/lake-tana.png',
+    image: cloudinaryTourImage('bale-mountains'),
     days: '8 Days',
     nights: 7,
     style: 'Wildlife · Birding · Private',

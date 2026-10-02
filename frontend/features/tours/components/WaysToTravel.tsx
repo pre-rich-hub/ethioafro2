@@ -4,35 +4,38 @@ import { ArrowRight, Compass, Gem, KeyRound, Users, UsersRound } from 'lucide-re
 import { Reveal } from '@/components/common/Reveal'
 import { type Tour } from '@/features/tours/types/tour.types'
 
+const cld = (slug: string) =>
+  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
+
 const styles = [
   {
     style: 'Private',
     Icon: KeyRound,
-    image: '/images/gondar.png',
+    image: cld('gondar'),
     text: 'Your own guide, vehicle and dates, with every day shaped around you.',
   },
   {
     style: 'Family',
     Icon: Users,
-    image: '/images/lake-tana.png',
+    image: cld('lake-tana'),
     text: 'Short drives, family rooms and days that mix one big sight with time to play.',
   },
   {
     style: 'Luxury',
     Icon: Gem,
-    image: '/images/luxury-lodge.png',
+    image: cld('lalibela'),
     text: 'The finest lodge at every stop, private guides, and nothing rushed.',
   },
   {
     style: 'Small Group',
     Icon: UsersRound,
-    image: '/images/hero-simien.png',
+    image: cld('simien-mountains'),
     text: 'Set departures with other travellers — shared crews, same senior guides.',
   },
   {
     style: 'Expedition',
     Icon: Compass,
-    image: '/images/danakil.png',
+    image: cld('danakil-depression'),
     text: 'Long, demanding journeys: summits, deserts and the far corners of the country.',
   },
 ]
