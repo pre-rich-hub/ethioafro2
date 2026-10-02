@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { CtaBand } from '@/features/enquiries'
 import { activities, activityCategories } from '@/features/experiences/data/experience.data'
@@ -17,16 +18,20 @@ export const metadata: Metadata = buildPageMetadata({
   imageAlt: 'Ethiopian coffee ceremony',
 })
 
-export default function ExperiencesPage() {
+export default async function ExperiencesPage() {
+  const t = await getTranslations('Experiences')
+  const tc = await getTranslations('Crumbs')
+  const ts = await getTranslations('Shared')
+
   return (
     <>
       <PageHero
-        eyebrow="Experiences"
-        title="Add a day you'll talk about for years"
-        lede="Short experiences that slot into any journey — in kitchens, coffee houses, farms and villages, on running trails and quiet Rift Valley roads."
+        eyebrow={t('heroEyebrow')}
+        title={t('heroTitle')}
+        lede={t('heroLede')}
         image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/coffee-cupping-and-ceremony.png"
         imageAlt="Coffee being poured from a traditional jebena during a coffee ceremony"
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'Experiences' }]}
+        crumbs={[{ label: tc('home'), href: '/' }, { label: tc('experiences') }]}
         compact
       />
 
@@ -46,9 +51,11 @@ export default function ExperiencesPage() {
       <LongerAdventures />
 
       <CtaBand
-        title="Build your experiences into a journey"
-        text="Tell us which experiences caught your eye and roughly when you'd travel. A designer will fit them into a route that makes sense."
-        secondary={{ label: 'See Tours', href: '/tours' }}
+        eyebrow={ts('speakWithDesigner')}
+        title={t('ctaTitle')}
+        text={t('ctaText')}
+        primary={{ label: ts('planYourJourney'), href: '/contact' }}
+        secondary={{ label: t('ctaSecondaryCta'), href: '/tours' }}
         image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/injera-and-ethiopian-cooking.png"
       />
     </>

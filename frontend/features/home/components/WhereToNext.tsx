@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const cld = (slug: string) =>
   `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
@@ -26,6 +27,7 @@ const loopStops = [...stops, ...stops, ...stops]
 const AUTO_SCROLL_SPEED = 0.4 // pixels per animation frame, ~24px/sec
 
 export function WhereToNext() {
+  const t = useTranslations('Home')
   const trackRef = useRef<HTMLDivElement>(null)
   const isDragging = useRef(false)
   const dragMoved = useRef(false)
@@ -135,10 +137,10 @@ export function WhereToNext() {
         <div>
           <p className="eyebrow mb-4 text-accent">
             <span className="rule" />
-            Keep Exploring
+            {t('exploreEyebrow')}
           </p>
           <h2 className="text-balance text-4xl leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
-            Where to next?
+            {t('exploreTitle')}
           </h2>
         </div>
         <div className="hidden shrink-0 gap-3 sm:flex">
@@ -146,7 +148,7 @@ export function WhereToNext() {
             <button
               key={dir}
               onClick={() => scrollBy(dir)}
-              aria-label={dir === -1 ? 'Scroll left' : 'Scroll right'}
+              aria-label={dir === -1 ? t('exploreScrollLeft') : t('exploreScrollRight')}
               className="flex h-12 w-12 items-center justify-center rounded-full border border-foreground/15 text-foreground transition-all duration-300 hover:border-accent hover:bg-accent hover:text-accent-foreground"
             >
               {dir === -1 ? (
@@ -209,7 +211,7 @@ export function WhereToNext() {
                 </h3>
                 <span className="mt-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-light sm:text-[11px]">
                   <span className="h-px w-6 bg-accent-light transition-all duration-500 group-hover:w-10" />
-                  Explore
+                  {t('exploreCta')}
                   <ArrowRight className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" />
                 </span>
               </div>

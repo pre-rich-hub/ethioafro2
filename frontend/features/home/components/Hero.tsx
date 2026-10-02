@@ -1,7 +1,10 @@
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
-export function Hero() {
+export async function Hero() {
+  const t = await getTranslations('Home')
+
   return (
     <section
       id="top"
@@ -22,12 +25,11 @@ export function Hero() {
 
       <div className="shell flex flex-1 flex-col items-center justify-center text-center pb-10 pt-32 sm:pb-14 lg:pb-16">
         <h1 className="max-w-[20ch] text-balance text-[2.6rem] font-medium leading-[1.04] text-background text-shadow-soft [animation:fade-up_1s_ease_0.1s_both] sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
-          Where the World Began
+          {t('heroTitle')}
         </h1>
 
         <p className="mt-5 max-w-[56ch] text-pretty leading-relaxed text-background/85 [animation:fade-up_1s_ease_0.25s_both] sm:mt-7 sm:text-lg">
-          Rock-hewn churches, highland kingdoms, and a landscape unlike
-          anywhere else — shaped into a journey built entirely around you.
+          {t('heroBody')}
         </p>
 
         <div className="mt-8 flex flex-col items-stretch gap-3 [animation:fade-up_1s_ease_0.4s_both] sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
@@ -35,18 +37,16 @@ export function Hero() {
             href="/tours"
             className="group inline-flex items-center justify-center gap-2.5 rounded-sm bg-pop px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-pop-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-pop/90 sm:text-xs"
           >
-            Explore Ethiopia
+            {t('heroExploreCta')}
           </Link>
           <Link
             href="/destinations"
             className="group inline-flex items-center justify-center gap-2.5 rounded-sm border border-background/40 bg-background/10 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-background backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-background/70 hover:bg-background/20 sm:text-xs"
           >
-            See destinations
+            {t('heroDestCta')}
           </Link>
         </div>
       </div>
     </section>
   )
 }
-
-

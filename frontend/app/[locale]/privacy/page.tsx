@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { LegalContactCard, LegalContents, LegalSections } from '@/features/legal'
 import { privacySections } from '@/features/legal/data/privacy.data'
@@ -13,23 +14,26 @@ export const metadata = buildPageMetadata({
   imageAlt: 'The Simien Mountains escarpment at first light',
 })
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  const t = await getTranslations('Legal')
+  const tc = await getTranslations('Crumbs')
+
   return (
     <>
       <PageHero
-        eyebrow="Legal"
-        title="Privacy Policy"
-        lede={`How ${company.name} handles the information shared by guests, website visitors and travel partners — in plain language.`}
+        eyebrow={t('privacyEyebrow')}
+        title={t('privacyTitle')}
+        lede={t('privacyLede', { company: company.name })}
         image={cloudinaryImage('simien-mountains', 1920)}
         imageAlt="The Simien Mountains escarpment at first light"
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]}
+        crumbs={[{ label: tc('home'), href: '/' }, { label: t('privacyCrumb') }]}
         compact
       />
       <section className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[260px_1fr] lg:gap-20 lg:py-24">
         <LegalContents updated="September 23, 2026" sections={privacySections} />
         <div className="max-w-3xl">
           <LegalSections sections={privacySections} />
-          <LegalContactCard related={{ label: 'Read our Terms & Conditions', href: '/terms' }} />
+          <LegalContactCard related={{ label: t('relatedTerms'), href: '/terms' }} />
         </div>
       </section>
     </>

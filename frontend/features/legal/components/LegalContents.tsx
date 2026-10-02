@@ -1,17 +1,20 @@
+import { getTranslations } from 'next-intl/server'
 import type { LegalSection } from '../types/legal.types'
 
-export function LegalContents({ updated, sections }: { updated: string; sections: LegalSection[] }) {
+export async function LegalContents({ updated, sections }: { updated: string; sections: LegalSection[] }) {
+  const t = await getTranslations('Legal')
+
   return (
     <aside className="lg:sticky lg:top-28 lg:self-start">
       <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px]">
-        Last updated
+        {t('lastUpdated')}
       </p>
       <p className="mt-1.5 font-serif text-xl text-foreground">{updated}</p>
 
       <nav aria-label="On this page" className="mt-8 border-t border-border pt-6">
         <p className="eyebrow mb-4 text-accent">
           <span className="rule" />
-          On this page
+          {t('onThisPage')}
         </p>
         <ol className="space-y-1">
           {sections.map((s, i) => (

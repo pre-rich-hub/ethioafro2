@@ -1,46 +1,38 @@
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
-import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 
-const principles = [
-  ['01', 'We ask first', 'before we assume what you want'],
-  ['02', 'We build once', 'a single itinerary, never a shelf product'],
-  ['03', 'We stay accountable', 'to the communities whose land we visit'],
-]
+export async function BrandIntro() {
+  const t = await getTranslations('Home')
 
-export function BrandIntro() {
+  const principles = [
+    [t('brandPrinciple1Bold'), t('brandPrinciple1Rest')],
+    [t('brandPrinciple2Bold'), t('brandPrinciple2Rest')],
+    [t('brandPrinciple3Bold'), t('brandPrinciple3Rest')],
+  ]
+
   return (
     <section id="about" className="scroll-mt-20 py-24 lg:py-40">
       <Reveal className="mx-auto max-w-[720px] px-6 text-center lg:px-10">
         <p className="mb-6 flex items-center justify-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-accent">
           <span className="h-px w-10 bg-accent" />
-          Our Philosophy
+          {t('brandEyebrow')}
           <span className="h-px w-10 bg-accent" />
         </p>
         <h2 className="text-balance font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
-          A country that rewards slow travel
+          {t('brandTitle')}
         </h2>
         <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
-          <p>
-            Ethiopia was never conquered by a European power, never fully
-            mapped by outsiders, and has kept its own calendar, its own
-            script and its own church for longer than most nations have
-            existed. Almost nothing here was built for a visitor.
-          </p>
-          <p>
-            We exist to open that country properly, without flattening it
-            into a package tour. Founded and run from Addis Ababa, our team
-            has spent more than ten years building the relationships — with
-            monks, elders, drivers and guides — that make a genuinely
-            private itinerary possible, in ten languages and counting.
-          </p>
+          <p>{t('brandP1')}</p>
+          <p>{t('brandP2')}</p>
         </div>
         <Link
           href="/about"
           className="group mt-8 inline-flex items-center gap-2 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors hover:text-accent sm:text-xs"
         >
-          Our story
+          {t('brandLink')}
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </Reveal>
@@ -61,9 +53,9 @@ export function BrandIntro() {
         delay={180}
         className="mx-auto mt-16 grid max-w-[1280px] gap-10 divide-y divide-border px-6 sm:grid-cols-3 sm:gap-8 sm:divide-y-0 sm:divide-x lg:px-10"
       >
-        {principles.map(([n, bold, rest]) => (
-          <div key={bold} className="pt-8 first:pt-0 sm:px-8 sm:pt-0 sm:first:pl-0">
-            <span className="font-serif text-sm text-accent">{n}</span>
+        {principles.map(([bold, rest], i) => (
+          <div key={i} className="pt-8 first:pt-0 sm:px-8 sm:pt-0 sm:first:pl-0">
+            <span className="font-serif text-sm text-accent">{String(i + 1).padStart(2, '0')}</span>
             <span className="mt-2 block font-serif text-xl text-foreground">
               {bold}
             </span>

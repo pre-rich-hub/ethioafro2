@@ -1,7 +1,16 @@
+import { getTranslations } from 'next-intl/server'
 import { Reveal } from '@/components/common/Reveal'
 import { milestones } from '../data/about.data'
 
-export function CompanyTimeline() {
+export async function CompanyTimeline() {
+  const t = await getTranslations('About')
+
+  const localisedMilestones = milestones.map((m, i) => ({
+    ...m,
+    title: t(`milestone${i + 1}Title` as Parameters<typeof t>[0]),
+    text: t(`milestone${i + 1}Text` as Parameters<typeof t>[0]),
+  }))
+
   return (
     <section className="relative isolate overflow-hidden bg-secondary text-secondary-foreground">
       <div
@@ -12,15 +21,15 @@ export function CompanyTimeline() {
         <Reveal className="mb-12 max-w-2xl sm:mb-16">
           <p className="eyebrow mb-5 text-accent">
             <span className="rule" />
-            The Journey So Far
+            {t('timelineEyebrow')}
           </p>
           <h2 className="text-balance text-3xl leading-[1.1] text-background sm:text-4xl lg:text-5xl">
-            From a lakeside town to travellers around the world
+            {t('timelineTitle')}
           </h2>
         </Reveal>
 
         <ol className="grid gap-px overflow-hidden border border-background/15 bg-background/15 sm:grid-cols-2 lg:grid-cols-3">
-          {milestones.map((m, i) => (
+          {localisedMilestones.map((m, i) => (
             <Reveal
               key={m.title}
               as="li"

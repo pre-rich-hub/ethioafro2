@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { Reveal } from '@/components/common/Reveal'
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { testimonials } from '@/features/home/data/testimonial.data'
@@ -13,6 +14,7 @@ const initialColors = [
 ]
 
 export function Testimonial() {
+  const t = useTranslations('Home')
   const trackRef = useRef<HTMLDivElement>(null)
   const isDragging = useRef(false)
   const dragMoved = useRef(false)
@@ -57,8 +59,8 @@ export function Testimonial() {
     <section className="bg-muted/40 py-24 lg:py-36">
       <div className="shell">
         <SectionHeading
-          eyebrow="In Their Words"
-          title="What guests actually said afterward"
+          eyebrow={t('testimonialsEyebrow')}
+          title={t('testimonialsTitle')}
           align="center"
         />
 
@@ -108,14 +110,14 @@ export function Testimonial() {
 
           <button
             onClick={() => scrollBy(-1)}
-            aria-label="Previous testimonial"
+            aria-label={t('testimonialsPrev')}
             className="absolute -left-4 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground opacity-0 shadow-lg transition-opacity duration-300 group-hover/carousel:opacity-100 sm:flex"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
           <button
             onClick={() => scrollBy(1)}
-            aria-label="Next testimonial"
+            aria-label={t('testimonialsNext')}
             className="absolute -right-4 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground opacity-0 shadow-lg transition-opacity duration-300 group-hover/carousel:opacity-100 sm:flex"
           >
             <ChevronRight className="h-4 w-4" />

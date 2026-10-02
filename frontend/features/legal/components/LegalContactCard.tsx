@@ -1,16 +1,19 @@
+import { getTranslations } from 'next-intl/server'
 import { contact } from '@/lib/constants/contact'
 import { ArrowRight, Mail, Phone } from 'lucide-react'
 import Link from 'next/link'
 
-export function LegalContactCard({ related }: { related: { label: string; href: string } }) {
+export async function LegalContactCard({ related }: { related: { label: string; href: string } }) {
+  const t = await getTranslations('Legal')
+
   return (
     <div className="mt-6 bg-secondary p-8 text-secondary-foreground sm:p-10">
       <p className="eyebrow text-accent">
         <span className="rule" />
-        Questions?
+        {t('questionsEyebrow')}
       </p>
       <p className="mt-4 max-w-lg font-serif text-2xl leading-snug text-background sm:text-3xl">
-        Ask us anything about this page — a real person will answer.
+        {t('questionsTitle')}
       </p>
       <div className="mt-7 flex flex-col gap-3 text-sm text-background/75 sm:flex-row sm:gap-8">
         <a

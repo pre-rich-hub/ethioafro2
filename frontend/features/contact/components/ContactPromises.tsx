@@ -1,13 +1,22 @@
+import { getTranslations } from 'next-intl/server'
 import { Reveal } from '@/components/common/Reveal'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { promises } from '@/features/contact/data/promises'
 
-export function ContactPromises() {
+export async function ContactPromises() {
+  const tp = await getTranslations('Promises')
+
+  const promises = [
+    { title: tp('promise1Title'), text: tp('promise1Text') },
+    { title: tp('promise2Title'), text: tp('promise2Text') },
+    { title: tp('promise3Title'), text: tp('promise3Text') },
+    { title: tp('promise4Title'), text: tp('promise4Text') },
+  ]
+
   return (
     <section className="shell py-16 sm:py-20 lg:py-28">
       <SectionHeading
-        eyebrow="Our Promise"
-        title="What stays true on every trip we run"
+        eyebrow={tp('contactEyebrow')}
+        title={tp('contactTitle')}
         align="center"
       />
       <div className="grid gap-x-10 gap-y-10 sm:grid-cols-2">

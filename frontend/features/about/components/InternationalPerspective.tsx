@@ -1,24 +1,30 @@
+import { getTranslations } from 'next-intl/server'
 import { Reveal } from '@/components/common/Reveal'
 import { MapPinned } from 'lucide-react'
 import { travelled, values } from '../data/about.data'
 
-export function InternationalPerspective() {
+export async function InternationalPerspective() {
+  const t = await getTranslations('About')
+
+  const localisedValues = values.map((v, i) => ({
+    ...v,
+    title: t(`value${i + 1}Title` as Parameters<typeof t>[0]),
+    text: t(`value${i + 1}Text` as Parameters<typeof t>[0]),
+  }))
+
   return (
     <section className="shell py-16 sm:py-20 lg:py-28">
       <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <Reveal>
           <p className="eyebrow mb-5 text-accent">
             <span className="rule" />
-            An International Perspective
+            {t('perspectiveEyebrow')}
           </p>
           <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
-            We know what travellers look for, because we travel too
+            {t('perspectiveTitle')}
           </h2>
           <p className="mt-6 text-pretty leading-relaxed text-muted-foreground sm:text-lg">
-            Representing the company at tourism fairs and business events,
-            and travelling widely beyond Ethiopia, taught us to see a trip
-            from the guest&apos;s side of the table. Five things come up
-            every time.
+            {t('perspectiveBody')}
           </p>
           <ul className="mt-8 flex flex-wrap gap-2">
             {travelled.map((p) => (
@@ -34,11 +40,11 @@ export function InternationalPerspective() {
         </Reveal>
 
         <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
-          {values.map(({ Icon, title, text }, i) => (
+          {localisedValues.map(({ Icon, title, text }, i) => (
             <Reveal
               key={title}
               delay={(i % 2) * 90}
-              className={`bg-background p-7 sm:p-8 ${i === values.length - 1 ? 'sm:col-span-2' : ''}`}
+              className={`bg-background p-7 sm:p-8 ${i === localisedValues.length - 1 ? 'sm:col-span-2' : ''}`}
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-accent/50 text-accent">
                 <Icon className="h-5 w-5" strokeWidth={1.5} />

@@ -1,9 +1,11 @@
+import { getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { FaqSection } from '@/components/seo/FaqSection'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { ContactEnquiry, ContactProcess, ContactPromises } from '@/features/contact'
 import { cloudinaryImage } from '@/lib/cloudinary'
 import { contactFaqs } from '@/lib/seo/faq-data'
+import { getContactFaqs } from '@/lib/i18n/faq-helpers'
 import { faqPageJsonLd, graphJsonLd, organizationJsonLd } from '@/lib/seo/json-ld'
 import { buildPageMetadata } from '@/lib/seo/metadata'
 
@@ -16,22 +18,26 @@ export const metadata = buildPageMetadata({
   imageAlt: 'Simien Mountains escarpment in northern Ethiopia',
 })
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const t = await getTranslations('Contact')
+  const tc = await getTranslations('Crumbs')
+  const localFaqs = getContactFaqs(t)
+
   return (
     <>
       <JsonLd data={graphJsonLd(organizationJsonLd(), faqPageJsonLd(contactFaqs))} />
       <PageHero
-        eyebrow="Speak With a Designer"
-        title="Start with a conversation, not a form"
-        lede="There is no call centre and no fixed package. Write to us directly and an Addis-based designer replies personally, almost always the same day."
+        eyebrow={t('heroEyebrow')}
+        title={t('heroTitle')}
+        lede={t('heroLede')}
         image={cloudinaryImage('simien-mountains', 1920)}
         imageAlt="A traveller looking out over the Ethiopian highlands at dawn"
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
+        crumbs={[{ label: tc('home'), href: '/' }, { label: tc('contact') }]}
         meta={[
-          { label: 'Reply Time', value: 'Within 24 hrs' },
-          { label: 'Based In', value: 'Addis Ababa' },
-          { label: 'Support', value: '24/7 In-Country' },
-          { label: 'Deposit', value: 'Only When Right' },
+          { label: t('metaReplyLabel'), value: t('metaReplyValue') },
+          { label: t('metaBasedLabel'), value: t('metaBasedValue') },
+          { label: t('metaSupportLabel'), value: t('metaSupportValue') },
+          { label: t('metaDepositLabel'), value: t('metaDepositValue') },
         ]}
       />
 
@@ -42,10 +48,10 @@ export default function ContactPage() {
       <ContactPromises />
 
       <FaqSection
-        title="Before you write"
-        intro="Straight answers about how planning with us actually works."
-        items={contactFaqs}
-        footerLink={{ label: 'Read our story', href: '/about' }}
+        title={t('faqTitle')}
+        intro={t('faqIntro')}
+        items={localFaqs}
+        footerLink={{ label: t('faqFooterLink'), href: '/about' }}
       />
     </>
   )

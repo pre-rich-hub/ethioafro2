@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const cld = (slug: string) =>
   `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/${slug}.png`
@@ -41,6 +42,7 @@ const shots = [
 ]
 
 export function Gallery() {
+  const t = useTranslations('Home')
   const [activeIndex, setActiveIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
 
@@ -82,7 +84,7 @@ export function Gallery() {
         {/* Bottom-left metadata overlay */}
         <div className="absolute bottom-6 left-6 z-20 max-w-[70vw] md:max-w-md text-balance">
           <span className="text-[9px] uppercase tracking-[0.2em] text-accent-light font-semibold">
-            Captured Moments
+            {t('galleryCaptured')}
           </span>
           <h3 className="text-xl sm:text-2xl lg:text-3xl text-white font-serif mt-1 font-normal tracking-wide">
             {shots[activeIndex].location}

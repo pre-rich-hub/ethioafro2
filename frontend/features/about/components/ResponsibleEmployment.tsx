@@ -1,8 +1,11 @@
+import { getTranslations } from 'next-intl/server'
 import { Reveal } from '@/components/common/Reveal'
 import Image from 'next/image'
 import { cloudinaryImage } from '@/lib/cloudinary'
 
-export function ResponsibleEmployment() {
+export async function ResponsibleEmployment() {
+  const t = await getTranslations('About')
+
   return (
     <section className="shell grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:gap-20 lg:py-28">
       <Reveal className="relative aspect-[4/5] overflow-hidden sm:aspect-[4/3] lg:aspect-[4/5]">
@@ -17,23 +20,14 @@ export function ResponsibleEmployment() {
       <Reveal delay={120}>
         <p className="eyebrow mb-5 text-accent">
           <span className="rule" />
-          More Than a Business
+          {t('responsibleEyebrow')}
         </p>
         <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-          Opening the industry to the people who live here
+          {t('responsibleTitle')}
         </h2>
         <div className="mt-7 space-y-5 text-pretty leading-relaxed text-muted-foreground sm:text-lg">
-          <p>
-            Tourism gave our family a future, and we want it to do the same
-            for others. We hire locally wherever we travel, and we make a
-            particular point of training and employing women who want to
-            become tour operators and guides.
-          </p>
-          <p>
-            It is a family story built on experience, opportunity and
-            responsible tourism. Every journey you take with us is a small
-            part of it.
-          </p>
+          <p>{t('responsibleP1')}</p>
+          <p>{t('responsibleP2')}</p>
         </div>
       </Reveal>
     </section>

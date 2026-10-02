@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
@@ -29,7 +30,7 @@ const featured = [
     title: 'Run where champions train',
     text: 'Dawn on the forest trails of Entoto, around 3,000 metres up, then the highland town of Bekoji — birthplace of Derartu Tulu, Kenenisa Bekele and the Dibaba sisters. Time it to the Great Ethiopian Run in late November.',
     href: '/tours/run-with-ethiopias-champions',
-    link: 'Run with Ethiopia\'s Champions',
+    link: "Run with Ethiopia's Champions",
     image: 'https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/run-where-champions-train.png',
   },
   {
@@ -43,17 +44,19 @@ const featured = [
   },
 ]
 
-export function Experiences() {
+export async function Experiences() {
+  const t = await getTranslations('Home')
+
   return (
     <section id="experiences" className="py-24 lg:py-36">
       <div className="shell">
         <Reveal className="max-w-2xl">
           <p className="mb-5 flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-accent">
             <span className="h-px w-10 bg-accent" />
-            Ways to Explore
+            {t('experiencesEyebrow')}
           </p>
           <h2 className="text-balance font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl">
-            Every way into Ethiopia, one team behind them all
+            {t('experiencesTitle')}
           </h2>
         </Reveal>
       </div>
@@ -114,7 +117,7 @@ export function Experiences() {
 
       <Reveal className="mt-12 flex justify-center sm:mt-14">
         <LinkButton href="/experiences" variant="outline">
-          Explore all
+          {t('experiencesAllCta')}
         </LinkButton>
       </Reveal>
     </section>

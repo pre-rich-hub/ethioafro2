@@ -1,15 +1,24 @@
+import { getTranslations } from 'next-intl/server'
 import { Reveal } from '@/components/common/Reveal'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { steps } from '../data/contact.data'
 
-export function ContactProcess() {
+export async function ContactProcess() {
+  const t = await getTranslations('Contact')
+
+  const steps = [
+    { n: '01', title: t('step1Title'), text: t('step1Text') },
+    { n: '02', title: t('step2Title'), text: t('step2Text') },
+    { n: '03', title: t('step3Title'), text: t('step3Text') },
+    { n: '04', title: t('step4Title'), text: t('step4Text') },
+  ]
+
   return (
     <section className="border-y border-border bg-muted/40">
       <div className="shell py-16 sm:py-20 lg:py-28">
         <SectionHeading
-          eyebrow="What Happens Next"
-          title="From first message to first draft"
-          aside="Four steps in total, and nothing is charged until the third one is right."
+          eyebrow={t('processEyebrow')}
+          title={t('processTitle')}
+          aside={t('processAside')}
         />
         <div className="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (

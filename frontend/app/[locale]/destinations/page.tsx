@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server'
 import { DestinationGrid, DestinationHero } from '@/features/destinations'
 import { CtaBand } from '@/features/enquiries'
 import { cloudinaryImage } from '@/lib/cloudinary'
@@ -12,7 +13,10 @@ export const metadata = buildPageMetadata({
   imageAlt: 'Rock-hewn churches of Lalibela, Ethiopia',
 })
 
-export default function DestinationsPage() {
+export default async function DestinationsPage() {
+  const t = await getTranslations('Destinations')
+  const ts = await getTranslations('Shared')
+
   return (
     <>
       <DestinationHero />
@@ -20,9 +24,11 @@ export default function DestinationsPage() {
       <DestinationGrid />
 
       <CtaBand
-        title="Can't decide where to start?"
-        text="A sentence is enough — the altitude you're comfortable with, the pace, roughly when you'd travel. A designer will reply with two or three routes worth considering."
-        secondary={{ label: 'Browse Tours', href: '/tours' }}
+        eyebrow={ts('speakWithDesigner')}
+        title={t('ctaTitle')}
+        text={t('ctaText')}
+        primary={{ label: ts('planYourJourney'), href: '/contact' }}
+        secondary={{ label: t('ctaSecondaryCta'), href: '/tours' }}
         image={cloudinaryImage('simien-mountains', 1920)}
       />
     </>

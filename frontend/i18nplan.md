@@ -82,10 +82,10 @@ Priority after this plan: product polish / citation follow-ups as needed.
 4. Legal page titles (privacy/terms) — full legal body may stay English initially with a notice, or ship translations if short enough
 
 ### Tasks
-- [ ] Extract page shell strings into message files
-- [ ] Use `getTranslations` / `useTranslations` in page components
-- [ ] FAQ **questions/answers**: start with Contact + Tours FAQ sets in all locales (high intent); destination FAQs can lag one step
-- [ ] Fallback: missing key → English (dev warning)
+- [x] Extract page shell strings into message files
+- [x] Use `getTranslations` / `useTranslations` in page components
+- [x] FAQ **questions/answers**: start with Contact + Tours FAQ sets in all locales (high intent); destination FAQs can lag one step
+- [x] Fallback: missing key → English (dev warning)
 
 **Done when:** Home, Contact, Tours, Destinations, Experiences, About shells flip language cleanly.
 

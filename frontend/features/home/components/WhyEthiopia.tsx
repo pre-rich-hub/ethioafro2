@@ -1,9 +1,19 @@
+import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import { Reveal } from '@/components/common/Reveal'
 import { cloudinaryImage } from '@/lib/cloudinary'
 import { ethiopiaFacts } from '@/lib/seo/facts'
 
-export function WhyEthiopia() {
+export async function WhyEthiopia() {
+  const t = await getTranslations('Home')
+
+  const factLabels = [
+    t('factLabel0'),
+    t('factLabel1'),
+    t('factLabel2'),
+    t('factLabel3'),
+  ]
+
   return (
     <section id="why" className="relative overflow-hidden bg-secondary text-secondary-foreground">
       <div className="absolute inset-0 opacity-25">
@@ -23,33 +33,24 @@ export function WhyEthiopia() {
           <Reveal>
             <p className="mb-6 flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-accent-light">
               <span className="h-px w-10 bg-accent-light" />
-              Why Ethiopia
+              {t('whyEyebrow')}
             </p>
             <h2 className="max-w-[15ch] text-balance font-serif text-4xl leading-[1.1] sm:text-5xl lg:text-6xl">
-              There is nowhere else quite like it
+              {t('whyTitle')}
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-secondary-foreground/80">
-              <p>
-                Few countries hold this much contrast inside one set of borders — a
-                highland kingdom that kept its own calendar and script for millennia,
-                sitting a short flight from one of the hottest, lowest places on the
-                continent.
-              </p>
-              <p>
-                Guests rarely describe it as a trip they took. More often it is a
-                recalibration of what they assumed the world still had left to show
-                them.
-              </p>
+              <p>{t('whyP1')}</p>
+              <p>{t('whyP2')}</p>
             </div>
           </Reveal>
 
           <Reveal delay={140} className="flex items-center">
             <dl className="grid w-full grid-cols-2 gap-px overflow-hidden rounded-xl bg-secondary-foreground/15">
-              {ethiopiaFacts.map((fact) => (
+              {ethiopiaFacts.map((fact, i) => (
                 <div key={fact.label} className="bg-secondary p-8 lg:p-10">
                   <dt className="font-serif text-4xl text-accent lg:text-5xl">{fact.value}</dt>
                   <dd className="mt-2 text-sm leading-relaxed text-secondary-foreground/70">
-                    {fact.label}
+                    {factLabels[i] ?? fact.label}
                   </dd>
                 </div>
               ))}

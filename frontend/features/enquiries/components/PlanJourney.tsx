@@ -1,31 +1,29 @@
+import { getTranslations } from 'next-intl/server'
 import { Check } from 'lucide-react'
 import { EnquiryForm } from '@/features/enquiries/components/EnquiryForm'
 import { Reveal } from '@/components/common/Reveal'
 
-export function PlanJourney() {
+export async function PlanJourney() {
+  const t = await getTranslations('Home')
+
+  const points = [t('planPoint1'), t('planPoint2'), t('planPoint3')]
+
   return (
     <section id="plan" className="relative overflow-hidden bg-secondary text-secondary-foreground">
       <div className="shell relative grid gap-12 py-20 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:py-32">
         <Reveal>
           <p className="eyebrow mb-6 text-accent-light">
             <span className="rule" />
-            Where It Begins
+            {t('planEyebrow')}
           </p>
           <h2 className="max-w-[16ch] text-balance font-serif text-[2.1rem] leading-[1.08] sm:text-5xl lg:text-[3.4rem]">
-            A journey shaped entirely around you
+            {t('planTitle')}
           </h2>
           <p className="mt-7 max-w-md text-pretty text-base leading-relaxed text-secondary-foreground/70 sm:text-lg">
-            There's no fixed package to adapt — just a conversation about
-            where you want to go, how you like to travel, and how much time
-            you actually have. From there, a designer builds a route made
-            specifically for that trip, and nothing else.
+            {t('planBody')}
           </p>
           <ul className="mt-10 space-y-4">
-            {[
-              'Planned in Addis, guided by people who live here',
-              'One quote up front, no add-ons later',
-              'A single point of contact from first email to touchdown home',
-            ].map((item) => (
+            {points.map((item) => (
               <li
                 key={item}
                 className="flex items-start gap-3 text-sm leading-relaxed text-secondary-foreground sm:text-base"

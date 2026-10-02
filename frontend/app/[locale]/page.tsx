@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server'
 import { Hero } from '@/features/home/components/Hero'
 import { BrandIntro } from '@/features/home/components/BrandIntro'
 import { WhyEthiopia } from '@/features/home/components/WhyEthiopia'
@@ -20,6 +21,7 @@ import {
 
 export default async function Page() {
   const tours = await getToursData()
+  const t = await getTranslations('Home')
 
   return (
     <>
@@ -31,9 +33,9 @@ export default async function Page() {
       <Journeys tours={tours} />
       <section className="shell pb-20 sm:pb-24 lg:pb-32">
         <SectionHeading
-          eyebrow="Ways to Travel"
-          title="Private, family, luxury or expedition"
-          aside="However you like to travel, there's a route built for it — and every one can be reshaped around you."
+          eyebrow={t('waysEyebrow')}
+          title={t('waysTitle')}
+          aside={t('waysAside')}
         />
         <WaysToTravel tours={tours} />
       </section>

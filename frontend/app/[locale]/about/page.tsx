@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/common/PageHero'
 import { JsonLd } from '@/components/seo/JsonLd'
 import {
@@ -22,17 +23,21 @@ export const metadata = buildPageMetadata({
   imageAlt: 'Lake Tana near Bahir Dar, Ethiopia',
 })
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations('About')
+  const tc = await getTranslations('Crumbs')
+  const ts = await getTranslations('Shared')
+
   return (
     <>
       <JsonLd data={graphJsonLd(organizationJsonLd())} />
       <PageHero
-        eyebrow="Our Story"
-        title="A family business, born in Bahir Dar"
-        lede="Shaped by years on the ground, a love of hospitality, and a lifelong devotion to showing Ethiopia properly."
+        eyebrow={t('heroEyebrow')}
+        title={t('heroTitle')}
+        lede={t('heroLede')}
         image={cloudinaryImage('lake-tana', 1920)}
         imageAlt="A fisherman in a papyrus tankwa on Lake Tana at dawn, near Bahir Dar"
-        crumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
+        crumbs={[{ label: tc('home'), href: '/' }, { label: tc('about') }]}
       />
 
       <FounderLetter />
@@ -48,9 +53,11 @@ export default function AboutPage() {
       <ResponsibleEmployment />
 
       <CtaBand
-        title="Start a conversation with the family"
-        text="Tell us roughly when you'd travel and what draws you to Ethiopia. You'll hear back from one of us — not a call centre."
-        secondary={{ label: 'Browse Tours', href: '/tours' }}
+        eyebrow={ts('speakWithDesigner')}
+        title={t('ctaTitle')}
+        text={t('ctaText')}
+        primary={{ label: ts('planYourJourney'), href: '/contact' }}
+        secondary={{ label: t('ctaSecondaryCta'), href: '/tours' }}
         image={cloudinaryImage('simien-mountains', 1920)}
       />
     </>

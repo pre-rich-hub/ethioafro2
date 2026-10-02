@@ -3,10 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useDestinations } from '../hooks/useDestinations'
 import { cloudinaryImage } from '@/lib/cloudinary'
 
 export function Destinations() {
+  const t = useTranslations('Home')
   const { featured, trackRef, active, scrollToIndex, onPointerDown, onPointerMove, endDrag, onCardClick } = useDestinations()
 
   return (
@@ -15,26 +17,25 @@ export function Destinations() {
         <div className="flex flex-col justify-center px-6 py-16 sm:px-10 lg:py-24">
           <p className="mb-6 flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-accent-light">
             <span className="h-px w-10 bg-accent-light" />
-            Signature Destinations
+            {t('destEyebrow')}
           </p>
           <h2 className="text-balance font-serif text-4xl leading-[1.1] sm:text-5xl">
-            One country, several extremes
+            {t('destTitle')}
           </h2>
           <p className="mt-6 max-w-sm text-pretty leading-relaxed text-primary-foreground/70">
-            From rock-hewn highlands to a volcanic basin below sea level, each
-            region tells a genuinely different story.
+            {t('destBody')}
           </p>
           <div className="mt-9 hidden items-center gap-2 lg:flex">
             <button
               onClick={() => scrollToIndex(active - 1)}
-              aria-label="Previous destination"
+              aria-label={t('destPrevAriaLabel')}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-foreground/25 text-primary-foreground transition-colors duration-300 hover:border-accent-light hover:text-accent-light"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
             <button
               onClick={() => scrollToIndex(active + 1)}
-              aria-label="Next destination"
+              aria-label={t('destNextAriaLabel')}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-foreground/25 text-primary-foreground transition-colors duration-300 hover:border-accent-light hover:text-accent-light"
             >
               <ArrowRight className="h-4 w-4" />
@@ -78,7 +79,7 @@ export function Destinations() {
                   {d.duration} · Private
                 </p>
                 <span className="mt-4 inline-flex items-center border border-background/40 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-background transition-colors duration-300 group-hover:border-accent-light group-hover:text-accent-light">
-                  View Destination
+                  {t('destViewCta')}
                 </span>
               </div>
             </Link>
@@ -100,7 +101,7 @@ export function Destinations() {
             />
             <div className="absolute inset-0 bg-charcoal/75" />
             <span className="relative inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-foreground transition-colors duration-300 group-hover:bg-accent/90">
-              Explore All Destinations
+              {t('destAllCta')}
               <ArrowRight className="h-4 w-4" />
             </span>
           </Link>
