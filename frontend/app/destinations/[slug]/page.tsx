@@ -1,20 +1,15 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight, Mountain } from 'lucide-react'
 import { PageHero } from '@/components/common/PageHero'
-import { Reveal } from '@/components/common/Reveal'
-import { TourCard } from '@/features/tours'
-import { EnquiryForm } from '@/features/enquiries'
-import { CtaBand } from '@/features/enquiries'
 import { destinations } from '@/features/destinations/data/destination.data'
 import { getDestination } from '@/features/destinations/utils/destination.utils'
+import { getRelatedToursForDestination } from '@/features/destinations/utils/destination-tours.utils'
 import { tours } from '@/features/tours/data/tour.data'
 
 import { DestinationOverview } from '@/features/destinations/components/DestinationOverview'
 import { DestinationJourneys } from '@/features/destinations/components/DestinationJourneys'
 import { DestinationEnquiry } from '@/features/destinations/components/DestinationEnquiry'
+import { CtaBand } from '@/features/enquiries'
 export function generateStaticParams() {
   return destinations.map((d) => ({ slug: d.slug }))
 }
@@ -43,16 +38,7 @@ export default async function DestinationPage({
   const d = getDestination(slug)
   if (!d) notFound()
 
-  // Tours naming this destination exactly come first — by its full name or
-  // the part before "&" (e.g. "Lake Tana" for "Lake Tana & Blue Nile"). A
-  // looser first-word match (e.g. "Simien") fills any remaining slots.
-  const names = [d.name, d.name.split(' & ')[0]]
-  const exact = tours.filter((t) => t.places.some((p) => names.includes(p)))
-  const loose = tours.filter(
-    (t) => !exact.includes(t) && t.places.some((p) => p.includes(d.name.split(' ')[0])),
-  )
-  const related = [...exact, ...loose].slice(0, 3)
-  const fallback = related.length ? related : tours.slice(0, 3)
+  const fallback = getRelatedToursForDestination(d, tours, 3)
   const others = destinations.filter((o) => o.slug !== d.slug).slice(0, 4)
 
   return (

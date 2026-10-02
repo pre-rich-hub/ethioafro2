@@ -1,12 +1,15 @@
 import type { Destination } from '@/features/destinations/types/destination.types'
 
+const cloudinaryDestinationImage = (slug: string) =>
+  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
+
 export const destinations: Destination[] = [
   {
     slug: 'simien-mountains',
     name: 'Simien Mountains',
     region: 'Northern Highlands',
     tag: 'National Park',
-    image: '/images/hero-simien.png',
+    image: cloudinaryDestinationImage('simien-mountains'),
     teaser:
       'An Afro-alpine escarpment where the ground simply stops, two thousand metres down.',
     intro:
@@ -33,7 +36,7 @@ export const destinations: Destination[] = [
     name: 'Gondar',
     region: 'Northern Highlands',
     tag: 'Imperial City',
-    image: '/images/gondar.png',
+    image: cloudinaryDestinationImage('gondar'),
     teaser:
       'A seventeenth-century royal capital of castles — and the gateway town for the Simien Mountains.',
     intro:
@@ -62,11 +65,11 @@ export const destinations: Destination[] = [
     name: 'Lalibela',
     region: 'Northern Highlands',
     tag: 'UNESCO Heritage',
-    image: '/images/lalibela.png',
+    image: cloudinaryDestinationImage('lalibela'),
     teaser:
       'Thirteenth-century churches cut entire from single blocks of volcanic rock, and never abandoned.',
     intro:
-      'King Lalibela is said to have dreamed of a New Jerusalem and had it quarried from the mountain rather than built upon it — a project that took a working population most of a century to finish.',
+      'King Lalibela is said to have dreamed of a New Jerusalem and had it quarried from the mountain rather than built upon it — a project that took a working population most of a century to finish. Eleven rock-hewn churches remain in active liturgical use today.',
     bestTime: 'October – March',
     duration: '2 – 3 days',
     altitude: '2,500 m',
@@ -75,10 +78,12 @@ export const destinations: Destination[] = [
       'The trench passages linking the northern and eastern church clusters',
       'Morning prayer beneath the frescoed ceiling of Bete Maryam',
       'A walk to Asheton Maryam, the monastery on the cliff above town',
+      'Yemrehanna Kristos, a cave church older than Lalibela itself, an hour into the hills',
     ],
     paragraphs: [
       'Twelve hundred masons, tradition says, spent decades lowering these churches out of the rock rather than raising them from the ground — each one begun as a trench cut around a single block of tuff, then hollowed from the top down until windows, doors and columns emerged from what had been solid stone.',
       'None of it is sealed behind rope lines. Priests still keep the liturgical calendar here, incense still moves through the same corridors pilgrims have used for eight hundred years, and a visit timed to the early service will put you inside that rhythm rather than beside it.',
+      'Most visitors see only the two town clusters. A second day opens the hills: Asheton Maryam on the ridge above, Nakuto La\'ab in its cave shrine, and Yemrehanna Kristos — a built church inside a natural cave, older than the town\'s famous excavations and almost empty at midday. Christmas (Genna) and Timkat turn the trenches into festival corridors; book rooms months ahead if you want those dates.',
     ],
     span: 'lg:col-span-7',
   },
@@ -87,11 +92,11 @@ export const destinations: Destination[] = [
     name: 'Lake Tana & Blue Nile',
     region: 'Amhara',
     tag: 'Slow Travel',
-    image: '/images/lake-tana.png',
+    image: cloudinaryDestinationImage('lake-tana'),
     teaser:
       'Island monasteries guarding centuries-old manuscripts, at the river\'s true source.',
     intro:
-      'Ethiopia\'s largest lake feeds the Blue Nile and shelters roughly twenty monastery communities across its islands and peninsulas, several holding illuminated goatskin gospels several hundred years old.',
+      'Ethiopia\'s largest lake feeds the Blue Nile and shelters roughly twenty monastery communities across its islands and peninsulas, several holding illuminated goatskin gospels several hundred years old. Bahir Dar is the gateway; the best hours are on the water before the day boats arrive.',
     bestTime: 'September – March',
     duration: '1 – 2 days',
     altitude: '1,788 m',
@@ -106,6 +111,7 @@ export const destinations: Destination[] = [
     paragraphs: [
       'The monastery paintings here follow a visual grammar centuries old — saints and demons rendered in the same flattened, wide-eyed style regardless of when a particular building was finished, so a fifteenth-century wall can sit beside a nineteenth-century one almost without a seam.',
       'We favour a private boat and an early start, ahead of the day-tripper crossings from Bahir Dar, followed by a slow breakfast on the water once the morning haze has burned off.',
+      'Tis Issat — the Blue Nile Falls — sits a short drive south of Bahir Dar. After the rains the curtain is wide and loud; in the dry months it narrows but the Portuguese bridge and the gorge walk remain worth the morning. Pair the lake with Gondar or the Simien for a northern circuit that never feels rushed, or use Bahir Dar as a soft landing after Addis before the mountains begin.',
     ],
     span: 'lg:col-span-6',
   },
@@ -114,23 +120,25 @@ export const destinations: Destination[] = [
     name: 'Danakil Depression',
     region: 'Afar Lowlands',
     tag: 'Expedition',
-    image: '/images/danakil.png',
+    image: cloudinaryDestinationImage('danakil-depression'),
     teaser:
       'One of the lowest, hottest points on the continent, and one of the most geologically active.',
     intro:
-      'A tectonic triple junction where three plates are slowly pulling apart, leaving behind an active lava lake, sulphur fields at Dallol, and salt flats still worked by hand.',
+      'A tectonic triple junction where the African and Arabian plates pull apart — sulphur fields at Dallol, salt flats at Lake Karum (Assale) still cut by hand, and Erta Ale, whose lava lake is often active but never guaranteed.',
     bestTime: 'November – February',
     duration: '3 – 4 days',
     altitude: '-125 m',
     highlights: [
       'The mineral terraces of Dallol at sunrise, before the heat sets in',
-      'A night ascent to the rim of Erta Ale, in near-continuous eruption since 1906',
-      'Afar camel trains cutting slabs of salt from Lake Karum for the highland trade',
+      'A night ascent to the rim of Erta Ale — lava lake when active, caldera and desert sky when quiet',
+      'Afar camel trains cutting slabs of salt from Lake Karum (Assale) for the highland trade',
       'A sky with no artificial light for hundreds of kilometres in any direction',
+      'The descent from Mekele into Hamed Ela as the temperature climbs through the afternoon',
     ],
     paragraphs: [
-      'This basin sits well below sea level, at the point where the African and Arabian plates are separating — the reason the crust here is thin enough to keep a lava lake permanently open and hot springs running mineral-bright yellows and greens.',
-      'We treat it as an expedition rather than a sightseeing day: reinforced vehicles, a guide trained in field medicine, an Afar community liaison, and a pace that respects a landscape with genuinely no margin for improvisation.',
+      'This basin sits well below sea level at a rift triple junction — the reason the crust here is thin enough for colourful hydrothermal fields and periodic lava lakes. Dallol\'s terraces shift colour with minerals and light; the salt plain around Karum remains a working landscape, not a museum.',
+      'Erta Ale has been in near-continuous activity for more than a century, but the open lava lake comes and goes. We climb for the caldera rim either way: when the lake is molten it is unforgettable; when it is quiet, the night sky and the crater floor still justify the walk.',
+      'We treat Danakil as an expedition rather than a sightseeing day: reinforced vehicles, a guide trained in field medicine, an Afar community liaison, chilled water without rationing, and a pace that respects heat, distance and a landscape with no margin for improvisation. Travel only in the cooler months of November to February.',
     ],
     span: 'lg:col-span-5',
   },
@@ -139,7 +147,7 @@ export const destinations: Destination[] = [
     name: 'Gheralta',
     region: 'Tigray',
     tag: 'Cliff Churches',
-    image: '/images/hero-lalibela.png',
+    image: cloudinaryDestinationImage('gheralta'),
     teaser:
       'Churches cut into sandstone towers, some reached only by handholds and bare feet.',
     intro:
@@ -165,23 +173,25 @@ export const destinations: Destination[] = [
     name: 'Ras Dashen',
     region: 'Northern Highlands',
     tag: 'Summit Trek',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryDestinationImage('ras-dashen'),
     teaser:
       'Ethiopia\'s highest peak, reached through the far side of the Simien few trekkers ever see.',
     intro:
-      'At 4,550 metres, Ras Dashen crowns the eastern Simien — a full week\'s walk from the road-served western rim, through river valleys, farming villages and the Afro-alpine base camp at Ambiko.',
+      'At about 4,550 metres, Ras Dashen (Ras Dejen) crowns the eastern Simien — typically a week\'s walk from the road-served western rim, through the Mesheha river valley, farming villages and the Afro-alpine base camp at Ambiko. Published summit heights vary slightly by survey; what matters on the ground is sustained altitude, not a single metre.',
     bestTime: 'October – February',
     duration: '6 – 10 days',
     altitude: '2,900 – 4,550 m',
     highlights: [
       'The pre-dawn summit push from Ambiko, reaching the top as the sun clears the eastern ridges',
-      'The Bwahit pass at 4,200 metres, the best ground in the park for walia ibex and Ethiopian wolf',
+      'The Bwahit pass at about 4,200 metres, strong ground for walia ibex and Ethiopian wolf',
       'The descent into the Mesheha river valley and back out through terraced barley fields',
-      'An optional second summit on Mount Berochwuha, 4,272 metres, on the return',
+      'An optional second summit on Mount Berochwuha, about 4,272 metres, on the return',
+      'Acclimatisation nights at Chenek before committing to the pass and Ambiko',
     ],
     paragraphs: [
-      'The summit itself is a scramble up a rock tower rather than a technical climb — what makes Ras Dashen serious is the altitude and the distance, not the difficulty. Most of the week is spent above 3,500 metres, and the day before the summit drops a thousand metres into a river valley only to climb it all back again.',
-      'The reward is a side of the Simien that the day-trip crowds never reach: villages where the trail runs past the threshing floors, children herding goats along the ridge, and camps with nothing in view but more mountain. We build in an acclimatisation day on the western rim first, and turn around without hesitation if the altitude says so.',
+      'The summit itself is a scramble up a rock tower rather than a technical climb — what makes Ras Dashen serious is the altitude and the distance, not ropes or ice. Most of the week sits above 3,500 metres, and the day before the summit drops roughly a thousand metres into a river valley only to climb it all back again to Ambiko.',
+      'The reward is a side of the Simien that day-trip crowds never reach: villages where the trail runs past threshing floors, children herding goats along the ridge, and camps with nothing in view but more mountain. Gelada, walia ibex and the occasional Ethiopian wolf appear on the western approaches; the eastern valleys feel quieter still.',
+      'We build in an acclimatisation day on the western rim first, carry a pulse oximeter above 3,500 metres, and turn around without hesitation if the altitude says so. Shorter seven-day summit programmes drive as far as Chenek; the full traverse from Sankaber remains the classic for walkers who want the whole massif.',
     ],
     span: 'lg:col-span-6',
   },
@@ -190,7 +200,7 @@ export const destinations: Destination[] = [
     name: 'Gorgora',
     region: 'Amhara',
     tag: 'Lakeshore History',
-    image: '/images/lake-tana.png',
+    image: cloudinaryDestinationImage('gorgora'),
     teaser:
       'A quiet north-shore village where Gondar\'s imperial story began, before there was a Gondar.',
     intro:
@@ -216,7 +226,7 @@ export const destinations: Destination[] = [
     name: 'Guassa Plateau',
     region: 'Northern Highlands',
     tag: 'Community Conservation',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryDestinationImage('guassa-plateau'),
     teaser:
       'Ethiopian wolves and geladas on highland moor a community has protected for four hundred years.',
     intro:
@@ -242,7 +252,7 @@ export const destinations: Destination[] = [
     name: 'Awra Amba',
     region: 'Amhara',
     tag: 'Community Visit',
-    image: '/images/textile.png',
+    image: cloudinaryDestinationImage('awra-amba'),
     teaser:
       'A weaving village founded on one idea: that men and women should share every kind of work.',
     intro:
@@ -268,7 +278,7 @@ export const destinations: Destination[] = [
     name: 'Choke Mountains',
     region: 'Northern Highlands',
     tag: 'Community Trek',
-    image: '/images/hero-simien.png',
+    image: cloudinaryDestinationImage('choke-mountains'),
     teaser:
       'The water tower of the Blue Nile, walked village to village with the families who live there.',
     intro:
@@ -294,7 +304,7 @@ export const destinations: Destination[] = [
     name: 'Hayk & Istifanos',
     region: 'Amhara',
     tag: 'Monastery Lake',
-    image: '/images/lake-tana.png',
+    image: cloudinaryDestinationImage('lake-hayk'),
     teaser:
       'A highland lake on the road to Lalibela, and the monastery where one of Ethiopia\'s great saints was taught.',
     intro:
@@ -320,24 +330,25 @@ export const destinations: Destination[] = [
     name: 'Axum',
     region: 'Tigray',
     tag: 'Ancient Capital',
-    image: '/images/festival-timkat.png',
+    image: cloudinaryDestinationImage('axum'),
     teaser:
       'Capital of an ancient trading empire, and Ethiopian Orthodoxy\'s spiritual centre.',
     intro:
-      'Between roughly 100 and 940 CE, the Kingdom of Aksum minted its own currency and traded across the Red Sea to India — a wealth still visible in the carved granite stelae left standing in its old necropolis.',
+      'Between roughly the first and tenth centuries CE, the Kingdom of Aksum minted its own currency and traded across the Red Sea as far as India — a wealth still visible in the carved granite stelae of its necropolis and in the churches that make the town Orthodoxy\'s spiritual capital.',
     bestTime: 'October – March',
     duration: '1 – 2 days',
     altitude: '2,131 m',
     highlights: [
-      'The Northern Stelae Field, including the fallen Great Stele — once the largest single block of stone ever raised',
-      'The Chapel of the Tablet, said by tradition to guard the Ark of the Covenant',
-      'The ruins attributed to the Queen of Sheba\'s palace, Dungur',
-      'A drive south into Tigray\'s cliffside churches, several reached only on foot',
-      'The temple at Yeha, raised around 700 BCE and the oldest standing building in Ethiopia',
+      'The Northern Stelae Field, including the fallen Great Stele — once among the largest single blocks of stone ever raised',
+      'The Chapel of the Tablet, said by tradition to guard the Ark of the Covenant — viewed from the permitted threshold',
+      'The ruins at Dungur, popularly linked to the Queen of Sheba',
+      'The Ezana Stone, a trilingual inscription that helped fix Aksum\'s place in late antiquity',
+      'The temple at Yeha, raised around 700 BCE and among the oldest standing buildings in Ethiopia',
     ],
     paragraphs: [
-      'The stelae are less monuments than engineering arguments: single pieces of granite carved to mimic multi-storey buildings, complete with false doors and window frames, quarried and raised without any of the machinery that would later be considered necessary for the job.',
-      'We usually pair a day in Axum with the Gheralta cliff churches an hour or so south — a different kind of ancient, reached by scrambling rather than driving, and rewarded with frescoes almost no visitor sees.',
+      'The stelae are less monuments than engineering arguments: single pieces of granite carved to mimic multi-storey buildings, complete with false doors and window frames, quarried and raised without the machinery later ages would consider necessary. The fallen Great Stele still dominates the field; the standing carved shafts show what the builders intended.',
+      'Tradition holds that the Ark of the Covenant rests in Axum\'s Chapel of the Tablet. Visitors do not enter; the threshold visit and the neighbouring St Mary of Zion complex are the public face of a claim that shapes Ethiopian Orthodox identity. We schedule mornings for the stelae and inscriptions, afternoons for the chapel precinct when light is softer.',
+      'Yeha, a short drive toward Adwa, predates Aksum\'s imperial peak — a sandstone temple from the pre-Aksumite period that rewards anyone curious about what came before the stelae. Pair Axum with Gheralta when regional access allows: cliff churches a few hours south, frescoed and still served by their priests.',
     ],
     span: 'lg:col-span-6',
   },
@@ -346,23 +357,25 @@ export const destinations: Destination[] = [
     name: 'Omo Valley',
     region: 'Southern Rift',
     tag: 'Cultural Immersion',
-    image: '/images/omo-valley.png',
+    image: cloudinaryDestinationImage('omo-valley'),
     teaser:
       'Home to more distinct ethnic groups than almost anywhere else on the continent.',
     intro:
-      'Along the lower Omo River, some sixteen communities — Hamar, Mursi, Karo, Dassanech, Nyangatom and others — maintain distinct languages, dress and ceremony within a few hours\' drive of one another.',
+      'Along the lower Omo River, some sixteen communities — Hamar, Mursi, Karo, Dassanech, Nyangatom and others — maintain distinct languages, dress and ceremony within a few hours\' drive of one another. The valley is not a theme park; pace and access are set by invitation and market calendars.',
     bestTime: 'June – September, December – March',
     duration: '5 – 8 days',
     altitude: '500 – 1,400 m',
     highlights: [
       'Saturday market at Key Afer, where several communities trade in one place',
       'An invitation-only Hamar bull-jumping coming-of-age ceremony, season permitting',
-      'A visit to a Mursi settlement in the company of an anthropologist who works there year-round',
+      'A visit to a Mursi settlement with a cultural mediator who works in the highlands regularly',
       'Riverside camps set beside the Omo rather than in a fenced compound',
+      'Dorze weaving villages in the Guge hills on the road south from Arba Minch',
     ],
     paragraphs: [
-      'The pace here is set by invitation, not by us. We work through relationships with elders that have been maintained for years, which means access is arranged in advance rather than negotiated at the roadside — no fee changes hands per photograph, ever.',
-      'A cultural mediator accompanies every visit, not to translate alone but to make clear who is asking to enter a community\'s space, and to make a genuine "no" easy to give.',
+      'The pace here is set by invitation, not by us. We work through relationships with elders maintained over years, which means access is arranged in advance rather than negotiated at the roadside — no fee changes hands per photograph, ever. Market days at Key Afer, Dimeka and Turmi structure the week more honestly than a fixed village checklist.',
+      'A cultural mediator accompanies every visit, not only to translate but to make clear who is asking to enter a community\'s space, and to make a genuine "no" easy to give. Bull-jumping and other ceremonies happen when families hold them, not when a bus arrives; we build buffer days so a real invitation can be accepted.',
+      'June to September suits the south when the northern highlands are wet; December to March is the other reliable window. Between Arba Minch and the lower Omo, Dorze and Konso offer highland craft and UNESCO terraces without rushing straight to the river. We never sell "tribal photography" as a product — only travel that communities have agreed to host.',
     ],
     span: 'lg:col-span-7',
   },
@@ -371,11 +384,11 @@ export const destinations: Destination[] = [
     name: 'Bale Mountains',
     region: 'Southern Highlands',
     tag: 'Wildlife',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryDestinationImage('bale-mountains'),
     teaser:
       'The single best place on earth to see a wild Ethiopian wolf.',
     intro:
-      'The Sanetti Plateau, at over 4,000 metres, is the largest continuous stretch of Afro-alpine habitat left in Africa — and home to roughly half of the fewer than five hundred Ethiopian wolves believed to survive.',
+      'The Sanetti Plateau, above 4,000 metres, is the largest continuous stretch of Afro-alpine habitat left in Africa — and home to roughly half of the fewer than five hundred Ethiopian wolves believed to survive. Below it, the Harenna forest holds wild Coffea arabica and a different, damper ecology.',
     bestTime: 'November – April',
     duration: '3 – 4 days',
     altitude: '2,500 – 4,377 m',
@@ -384,10 +397,12 @@ export const destinations: Destination[] = [
       'The Harenna forest, one of the last strongholds of wild Coffea arabica',
       'A morning list that can run to a dozen Ethiopia-only bird species',
       'Mountain nyala grazing the moorland edges near Dinsho at dusk',
+      'Tullu Dimtu at about 4,377 metres — the plateau\'s highest point, walked rather than scrambled',
     ],
     paragraphs: [
-      'Wild Arabica coffee still grows in the understorey of the Harenna forest below the plateau — one of the places botanists point to when tracing the plant back to its origin, before it ever reached a cup.',
-      'We split most itineraries across both faces of the range: the exposed, cold plateau for wolves and endemic birds, then a night dropped into Harenna\'s cloud forest for colobus monkeys and a different, damper kind of quiet.',
+      'Wild Arabica coffee still grows in the understorey of the Harenna forest below the plateau — one of the places botanists point to when tracing the plant back to its origin, before it ever reached a cup. Colobus monkeys move through the same canopy; the road over Sanetti is one of Africa\'s highest all-weather routes.',
+      'We split most itineraries across both faces of the range: the exposed, cold plateau for wolves and endemic birds at dawn, then a night dropped into Harenna\'s cloud forest for a damper kind of quiet. Dinsho on the northern side is the usual park gateway and the best ground for mountain nyala toward dusk.',
+      'November to April is the clearer, colder window on the plateau; nights regularly freeze. A dedicated wildlife guide and park scout are non-negotiable for wolf work — the animals are habituated to vehicles on Sanetti but still wild, and distance ethics matter. Pair Bale with the Rift lakes on the drive south from Addis, or with Sof Omar for a caves-and-highlands contrast.',
     ],
     span: 'lg:col-span-6',
   },
@@ -396,7 +411,7 @@ export const destinations: Destination[] = [
     name: 'Addis Ababa',
     region: 'Central Ethiopia',
     tag: 'Capital City',
-    image: '/images/addis-skyline.png',
+    image: cloudinaryDestinationImage('addis-ababa'),
     teaser:
       'Africa\'s diplomatic capital, and home to the most famous ancestor of us all.',
     intro:
@@ -423,7 +438,7 @@ export const destinations: Destination[] = [
     name: 'Debre Libanos',
     region: 'Central Ethiopia',
     tag: 'Monastery & Gorge',
-    image: '/images/bale-gelada.png',
+    image: cloudinaryDestinationImage('debre-libanos'),
     teaser:
       'A monastery above a Blue Nile gorge, founded by one of Ethiopia\'s greatest saints.',
     intro:
@@ -449,7 +464,7 @@ export const destinations: Destination[] = [
     name: 'Tiya & Adadi Mariam',
     region: 'Central Ethiopia',
     tag: 'UNESCO Heritage',
-    image: '/images/hero-lalibela.png',
+    image: cloudinaryDestinationImage('tiya-adadi-mariam'),
     teaser:
       'Carved stelae, a rock-hewn church and a million years of human tools — all south of the capital.',
     intro:
@@ -475,7 +490,7 @@ export const destinations: Destination[] = [
     name: 'Bishoftu & Mount Zuqualla',
     region: 'Central Ethiopia',
     tag: 'Crater Lakes',
-    image: '/images/lake-tana.png',
+    image: cloudinaryDestinationImage('bishoftu-zuqualla'),
     teaser:
       'Volcanic crater lakes an hour from Addis, and a holy mountain with a lake in its summit.',
     intro:
@@ -501,7 +516,7 @@ export const destinations: Destination[] = [
     name: 'Menagesha Suba Forest',
     region: 'Central Ethiopia',
     tag: 'Ancient Forest',
-    image: '/images/hero-simien.png',
+    image: cloudinaryDestinationImage('menagesha-suba-forest'),
     teaser:
       'A juniper forest protected by imperial decree since the fifteenth century, forty kilometres from Addis.',
     intro:
@@ -527,7 +542,7 @@ export const destinations: Destination[] = [
     name: 'Wenchi Crater Lake',
     region: 'Oromia',
     tag: 'Crater Lake',
-    image: '/images/lake-tana.png',
+    image: cloudinaryDestinationImage('wenchi-crater-lake'),
     teaser:
       'A lake inside an extinct volcano, with an island monastery, hot springs and waterfalls.',
     intro:
@@ -553,7 +568,7 @@ export const destinations: Destination[] = [
     name: 'Awash National Park',
     region: 'Oromia',
     tag: 'National Park',
-    image: '/images/danakil.png',
+    image: cloudinaryDestinationImage('awash-national-park'),
     teaser:
       'Ethiopia\'s oldest national park: a dormant volcano, a waterfall gorge and palm-fringed hot springs.',
     intro:
@@ -579,7 +594,7 @@ export const destinations: Destination[] = [
     name: 'Sof Omar Caves',
     region: 'Oromia',
     tag: 'Cave System',
-    image: '/images/lalibela.png',
+    image: cloudinaryDestinationImage('sof-omar-caves'),
     teaser:
       'Fifteen kilometres of river-carved limestone passages, sacred to two faiths.',
     intro:
@@ -605,7 +620,7 @@ export const destinations: Destination[] = [
     name: 'Borana & Yabelo',
     region: 'Oromia',
     tag: 'Pastoral Culture',
-    image: '/images/omo-valley.png',
+    image: cloudinaryDestinationImage('borana-yabelo'),
     teaser:
       'Singing wells, a salt lake inside a volcano, and a bird found nowhere else on earth.',
     intro:
@@ -631,7 +646,7 @@ export const destinations: Destination[] = [
     name: 'Jimma',
     region: 'Oromia',
     tag: 'Coffee Kingdom',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryDestinationImage('jimma'),
     teaser:
       'The palace of a coffee-rich Oromo king, in the heartland of wild Arabica.',
     intro:
@@ -657,7 +672,7 @@ export const destinations: Destination[] = [
     name: 'Harar',
     region: 'Eastern Ethiopia',
     tag: 'UNESCO Heritage',
-    image: '/images/textile.png',
+    image: cloudinaryDestinationImage('harar'),
     teaser:
       'Ethiopia\'s only walled city — 82 mosques, lanes too narrow for cars, and hyenas fed by hand at dusk.',
     intro:
@@ -684,7 +699,7 @@ export const destinations: Destination[] = [
     name: 'Arba Minch & Nechisar',
     region: 'Southern Rift',
     tag: 'Lakes & Wildlife',
-    image: '/images/lake-tana.png',
+    image: cloudinaryDestinationImage('arba-minch-nechisar'),
     teaser:
       'Forty springs, two Rift Valley lakes, and crocodiles basking on the shore of Lake Chamo.',
     intro:
@@ -710,7 +725,7 @@ export const destinations: Destination[] = [
     name: 'Konso',
     region: 'Southern Rift',
     tag: 'UNESCO Heritage',
-    image: '/images/omo-valley.png',
+    image: cloudinaryDestinationImage('konso'),
     teaser:
       'Stone-terraced hills and walled villages — a living landscape more than 400 years in the making.',
     intro:
@@ -736,7 +751,7 @@ export const destinations: Destination[] = [
     name: 'Sidama & Yirgacheffe',
     region: 'Southern Rift',
     tag: 'Coffee Country',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryDestinationImage('sidama-yirgacheffe'),
     teaser:
       'The hills behind the world\'s most famous coffees — and a UNESCO landscape where coffee grows under the trees.',
     intro:

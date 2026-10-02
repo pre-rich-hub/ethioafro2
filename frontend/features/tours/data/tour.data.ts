@@ -15,7 +15,7 @@ export const tours: Tour[] = [
     teaser:
       'Four UNESCO sites and three former capitals, linked by short domestic flights rather than long drives.',
     summary:
-      'The classic northern circuit, reordered around light and liturgy instead of road distance. Private access at the churches, boutique lodges along the way, and no day longer than it needs to be.',
+      'The classic northern circuit, reordered around light and liturgy instead of road distance. Early and late church visits when crowds are thinnest, boutique lodges along the way, and no day longer than it needs to be.',
     includes: [
       'All domestic flights within Ethiopia',
       'Private vehicle with a senior driver-guide throughout',
@@ -72,7 +72,7 @@ export const tours: Tour[] = [
   {
     slug: 'simien-escarpment-trek',
     title: 'Simien Escarpment Trek',
-    image: '/images/bale-gelada.png',
+    image: '/images/hero-simien.png',
     days: '5 Days',
     nights: 4,
     style: 'Trekking · Small Group',
@@ -336,7 +336,7 @@ export const tours: Tour[] = [
   {
     slug: 'gheralta-and-axum',
     title: 'Gheralta & Axum',
-    image: '/images/festival-timkat.png',
+    image: '/images/hero-lalibela.png',
     days: '6 Days',
     nights: 5,
     style: 'Cultural · Hiking · Private',
@@ -351,7 +351,7 @@ export const tours: Tour[] = [
       'Return flights Addis – Mekele and Axum – Addis',
       'A private vehicle and a Tigrayan guide from Gheralta itself',
       'Climbing guides and church entry at every site',
-      'Two nights in a community guesthouse, one lodge night in Axum',
+      'Three nights in community guesthouses in Gheralta, two lodge nights in Axum',
       'Full board in Gheralta, breakfast in Axum',
       'A priest\'s blessing arranged at Abuna Yemata Guh, where welcome',
     ],
@@ -504,7 +504,7 @@ export const tours: Tour[] = [
   {
     slug: 'southern-heritage-road',
     title: 'The Southern Heritage Road',
-    image: '/images/hero-lalibela.png',
+    image: '/images/addis-skyline.png',
     days: '1 Day',
     nights: 0,
     style: 'Cultural · Private',
@@ -592,7 +592,7 @@ export const tours: Tour[] = [
   {
     slug: 'crater-lakes-and-the-holy-mountain',
     title: 'Crater Lakes & the Holy Mountain',
-    image: '/images/lake-tana.png',
+    image: '/images/addis-skyline.png',
     days: '1 Day',
     nights: 0,
     style: 'Hiking · Cultural · Private',
@@ -735,7 +735,7 @@ export const tours: Tour[] = [
   {
     slug: 'awash-and-the-fantale-volcano',
     title: 'Awash & the Fantale Volcano',
-    image: '/images/danakil.png',
+    image: '/images/omo-valley.png',
     days: '3 Days',
     nights: 2,
     style: 'Wildlife · Private',
@@ -1111,9 +1111,9 @@ export const tours: Tour[] = [
     from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
-      'Every great coffee region in one journey — wild forest, royal Jimma, Sidama and Yirgacheffe, and Harar in the east.',
+      'Wild forest, royal Jimma, Sidama and Yirgacheffe, then Harar in the east — Ethiopia\'s coffee story in one journey.',
     summary:
-      'For coffee lovers and professionals: a complete journey through the country where Arabica began. The wild coffee forests of Kafa, the old coffee kingdom of Jimma, the washing stations of Sidama and the gardens of Yirgacheffe, then a flight east to Harar. Ceremonies, cuppings and farm visits all the way.',
+      'For coffee lovers and professionals: a journey through the landscapes where Arabica began. The wild coffee forests of Kafa, the old coffee kingdom of Jimma, the washing stations of Sidama and the gardens of Yirgacheffe, then a flight east to Harar. Ceremonies, cuppings and farm visits all the way — paced for tasting, not just ticking regions.',
     includes: [
       'Domestic flights to Dire Dawa and back',
       'A private vehicle and a coffee-specialist guide throughout',
@@ -1501,8 +1501,8 @@ export const tours: Tour[] = [
       },
       {
         day: 'Days 3 – 8',
-        title: 'Ras Dashen · 4,550 m',
-        text: 'Into the Simien to Chenek, over the Bwahit pass to Ambiko, a rest day, then the dawn summit of Ethiopia\'s highest peak and the return to Chenek.',
+        title: 'Ras Dashen · ≈ 4,550 m',
+        text: 'Day 3 into Chenek; Day 4 over Bwahit to Ambiko; Day 5 rest and acclimatise; Day 6 pre-dawn summit; Days 7–8 return over the pass to Chenek and Gondar.',
       },
       {
         day: 'Day 9',
@@ -1725,7 +1725,7 @@ export const tours: Tour[] = [
   {
     slug: 'lakes-craters-and-wildlife-for-families',
     title: 'Lakes, Craters & Wildlife for Families',
-    image: '/images/danakil.png',
+    image: '/images/lake-tana.png',
     days: '6 Days',
     nights: 5,
     style: 'Family · Wildlife · Private',
@@ -2168,7 +2168,7 @@ export const tours: Tour[] = [
       'A specialist bird guide throughout',
       'Return flights Addis Ababa – Gondar',
       'Private 4x4 transfers and all Simien park fees and scouts',
-      'Three nights at an escarpment lodge inside the park area',
+      'Six nights in total: Addis on arrival, Gondar, three on the Simien rim, and Addis again before departure',
       'Full board in the mountains, breakfast in Gondar and Addis',
       'A species checklist and daily sightings log',
     ],
@@ -2182,17 +2182,27 @@ export const tours: Tour[] = [
       {
         day: 'Day 1',
         title: 'Arrive Addis Ababa',
-        text: 'Private transfer and a briefing with your bird guide on the northern target list.',
+        text: 'Private transfer and a briefing with your bird guide on the northern target list — thick-billed raven, wattled ibis, spot-breasted plover, white-collared pigeon and lammergeier among the priorities.',
       },
       {
         day: 'Day 2',
         title: 'Gondar',
-        text: 'A morning flight north, then an afternoon on the wooded edges of the castle grounds and the town\'s church compounds.',
+        text: 'A morning flight north, then an afternoon on the wooded edges of the castle grounds and the town\'s church compounds for urban highland species before the park.',
       },
       {
-        day: 'Days 3 – 5',
-        title: 'Simien Mountains',
-        text: 'Three full days from Sankaber to Geech and Chenek: thick-billed raven, wattled ibis, spot-breasted plover and white-collared pigeon on the grassland, and lammergeier riding the escarpment updrafts.',
+        day: 'Day 3',
+        title: 'Debark to Sankaber',
+        text: 'Park formalities at Debark, then the first escarpment walk toward Sankaber: gelada on the cliffs, thick-billed ravens overhead, and wattled ibis on the grassland.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Sankaber to Geech',
+        text: 'A full day along the rim via Jinbar Falls into Geech territory — spot-breasted plover and white-collared pigeon on the high grassland, lammergeier on the updrafts.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Imet Gogo & Chenek',
+        text: 'The viewpoints around Imet Gogo and on to Chenek for cliff-edge raptors and any remaining highland specialities still needed for the list.',
       },
       {
         day: 'Day 6',
@@ -2202,7 +2212,7 @@ export const tours: Tour[] = [
       {
         day: 'Day 7',
         title: 'Departure',
-        text: 'A checklist review over breakfast before your departure — or two more days on the Guassa Plateau for the Ankober serin and blue-winged goose.',
+        text: 'A checklist review over breakfast before your departure — or extend two days onto the Guassa Plateau for Ankober serin and blue-winged goose.',
       },
     ],
     places: ['Gondar', 'Simien Mountains', 'Sankaber', 'Chenek'],
@@ -2241,24 +2251,44 @@ export const tours: Tour[] = [
         text: 'A briefing dinner with your wildlife specialist, kit check, and an early night ahead of the flight north.',
       },
       {
-        day: 'Days 2 – 4',
-        title: 'Simien Mountains',
-        text: 'Three escarpment walks of increasing length, close encounters with gelada troops, and sunrise from the Imet Gogo viewpoint.',
+        day: 'Day 2',
+        title: 'Gondar to Sankaber',
+        text: 'Fly to Gondar, drive to Debark for park formalities, then a first gentle rim walk toward Sankaber among gelada troops.',
+      },
+      {
+        day: 'Day 3',
+        title: 'Imet Gogo & the escarpment',
+        text: 'A longer day to the Imet Gogo viewpoint and along the cliffs — gelada at close range, lammergeier on the updrafts, and lodge or camp return by evening.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Chenek & walia cliffs',
+        text: 'Push toward Chenek for walia ibex habitat and a final Simien dawn, then descend to Gondar for the night.',
       },
       {
         day: 'Day 5',
-        title: 'Transfer south',
-        text: 'A flight back to Addis, then the Rift Valley road south with a birding stop at Lake Ziway.',
+        title: 'South via the Rift',
+        text: 'Flight to Addis, then the Rift Valley road with a birding and lakeshore stop at Ziway before continuing toward Bale.',
       },
       {
-        day: 'Days 6 – 8',
-        title: 'Bale Mountains',
-        text: 'Dawn wolf-tracking on the Sanetti Plateau, mountain nyala near Dinsho, and a day inside the Harenna cloud forest.',
+        day: 'Day 6',
+        title: 'Dinsho & mountain nyala',
+        text: 'Park HQ at Dinsho, an afternoon walk for mountain nyala and Menelik\'s bushbuck, and a night on the northern Bale edge.',
+      },
+      {
+        day: 'Day 7',
+        title: 'Sanetti Plateau wolves',
+        text: 'Pre-dawn onto Sanetti for Ethiopian wolf tracking when hunting activity peaks, with Afro-alpine birds between sightings.',
+      },
+      {
+        day: 'Day 8',
+        title: 'Harenna cloud forest',
+        text: 'Drop into Harenna for colobus, forest birds and wild coffee understorey — a damper contrast to the plateau.',
       },
       {
         day: 'Day 9',
         title: 'Addis & Departure',
-        text: 'A return flight, a visit to the National Museum with a curator, and an evening flight home.',
+        text: 'Return to Addis, an optional National Museum visit with context from your specialist, and an evening departure.',
       },
     ],
     places: ['Simien Mountains', 'Rift Valley Lakes', 'Bale Mountains'],
@@ -2271,18 +2301,18 @@ export const tours: Tour[] = [
     days: '7 Days',
     nights: 6,
     style: 'Slow Travel · Private',
-    season: 'Year-round',
+    season: 'Oct – May',
     from: TAILOR_MADE,
     group: '2 – 8 guests',
     teaser:
       'Island monasteries by boat, then south into the forest understorey where wild Arabica coffee still grows.',
     summary:
-      'The least demanding of our itineraries, built for guests who want depth over distance. Water, forest, ceremony, and very little time spent driving.',
+      'The least demanding of our itineraries, built for guests who want depth over distance. Water, forest, ceremony, and very little time spent driving. Best outside the heaviest highland rains of July and August.',
     includes: [
       'Domestic flights and all private transfers',
       'A private boat charter on Lake Tana',
-      'A farm-to-cup coffee immersion in the Kaffa forests',
-      'Two nights at a forest eco-lodge',
+      'A farm-to-cup coffee immersion in the Kafa forests',
+      'Two nights beside Lake Tana, three at a forest eco-lodge, one in Addis',
       'Breakfast and dinner daily',
       'A guided cupping session in Addis Ababa',
     ],
@@ -2295,25 +2325,40 @@ export const tours: Tour[] = [
       {
         day: 'Day 1',
         title: 'Arrive Addis Ababa',
-        text: 'A cupping session in the roastery district to set the palate before the journey begins.',
+        text: 'A cupping session in the roastery district to set the palate before the journey begins, then an early night ahead of the flight north.',
       },
       {
-        day: 'Days 2 – 3',
-        title: 'Lake Tana',
-        text: 'A private boat to Ura Kidane Mehret at first light, manuscripts shown by resident monks, and a slow afternoon on the water.',
+        day: 'Day 2',
+        title: 'Bahir Dar & Zege',
+        text: 'A morning flight to Bahir Dar, then a private boat across Lake Tana to the Zege Peninsula — coffee forest trails between monasteries, and Ura Kidane Mehret\'s painted interior at a quiet hour.',
       },
       {
-        day: 'Days 4 – 6',
-        title: 'Kaffa & Bonga forest',
-        text: 'Wild coffee harvested and roasted under the canopy with a farming family, and nights spent in the forest itself.',
+        day: 'Day 3',
+        title: 'Island monasteries & Tis Issat',
+        text: 'Manuscripts shown by resident monks on a second island visit, then the Blue Nile Falls in the afternoon light before an evening on the lakeshore.',
+      },
+      {
+        day: 'Day 4',
+        title: 'South to Kafa',
+        text: 'A return to Addis and the road west into the Kafa Biosphere Reserve, arriving at a forest lodge as the canopy cools.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Wild coffee understorey',
+        text: 'Walk the forest where Coffea arabica still grows without cultivation, harvest and roast with a farming family, and a ceremony that starts from the berry rather than the bag.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Bonga & the forest villages',
+        text: 'A second day among smallholder gardens around Bonga, cupping green and roasted samples side by side, with the night back under the trees.',
       },
       {
         day: 'Day 7',
         title: 'Addis & Departure',
-        text: 'A walk through Mercato with a local chef, a final lunch, and an evening flight.',
+        text: 'The drive or flight back to Addis, a walk through Merkato with a local chef if time allows, and an evening departure.',
       },
     ],
-    places: ['Lake Tana', 'Kaffa', 'Bonga Forest', 'Addis Ababa'],
+    places: ['Lake Tana', 'Kafa', 'Bonga Forest', 'Addis Ababa'],
     featured: true,
   },
   {
@@ -2327,10 +2372,11 @@ export const tours: Tour[] = [
     from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
-      'Sulphur springs, an open lava lake, and salt caravans crossing one of the lowest points on earth.',
+      'Sulphur terraces, salt caravans, and a night on Erta Ale — one of the lowest, hottest basins on earth.',
     summary:
-      'Our most physically demanding route, run with a field-medic-trained guide, reinforced vehicles and an Afar community liaison. Nights spent under skies with no light pollution for hundreds of kilometres.',
+      'Our most physically demanding route, run with a field-medic-trained guide, reinforced vehicles and an Afar community liaison. Erta Ale\'s lava lake is often active but not guaranteed; we climb for the caldera and the night sky either way. Nights spent under skies with no light pollution for hundreds of kilometres.',
     includes: [
+      'Domestic flights Addis Ababa – Mekele – Addis Ababa',
       'Afar regional permits and a dedicated local liaison',
       'Reinforced expedition vehicles with a support truck',
       'A field-medic-trained guide and satellite communication',
@@ -2352,17 +2398,17 @@ export const tours: Tour[] = [
       {
         day: 'Day 2',
         title: 'Mekele to Hamed Ela',
-        text: 'A morning flight, then the descent into the Afar depression as the temperature climbs steadily through the afternoon.',
+        text: 'A morning flight, then the descent into the Danakil Depression as the temperature climbs steadily through the afternoon toward camp at Hamed Ela.',
       },
       {
         day: 'Day 3',
-        title: 'Dallol & Lake Karum',
-        text: 'The sulphur terraces of Dallol at first light, salt caravans in the afternoon heat, and camp set on the open plain.',
+        title: 'Dallol & Lake Karum (Assale)',
+        text: 'The sulphur and salt terraces of Dallol at first light, Afar camel trains cutting slabs from Lake Karum — also known as Assale — in the afternoon heat, and camp on the open plain.',
       },
       {
         day: 'Day 4',
         title: 'Erta Ale',
-        text: 'A night ascent to the caldera rim to look down into the open lava lake, sleeping on the volcano itself.',
+        text: 'A night ascent to the caldera rim. When the lava lake is active you look down into molten rock; when it is quiet, the crater floor and the desert night sky are the reward. Sleep on the volcano itself.',
       },
       {
         day: 'Day 5',
@@ -2375,7 +2421,7 @@ export const tours: Tour[] = [
         text: 'A morning flight south and a day room before your evening departure.',
       },
     ],
-    places: ['Mekele', 'Dallol', 'Lake Assale', 'Erta Ale'],
+    places: ['Danakil Depression', 'Mekele', 'Dallol', 'Lake Karum (Assale)', 'Erta Ale'],
   },
   {
     slug: 'omo-valley-immersion',
@@ -2390,7 +2436,7 @@ export const tours: Tour[] = [
     teaser:
       'Market days and standing invitations, in one of the most ethnically diverse valleys anywhere on earth.',
     summary:
-      'Built around market schedules and invitations rather than a fixed route, with a cultural mediator travelling alongside your guide from start to finish.',
+      'Built around market schedules and invitations rather than a fixed village checklist, with a cultural mediator travelling alongside your guide from start to finish. No per-photo fees; community contributions are paid transparently at village level.',
     includes: [
       'A private vehicle and senior driver-guide',
       'A resident cultural mediator and translator throughout',
@@ -2408,27 +2454,52 @@ export const tours: Tour[] = [
       {
         day: 'Day 1',
         title: 'Arrive Addis Ababa',
-        text: 'An evening briefing with an anthropologist from Addis Ababa University on the communities you will meet.',
+        text: 'An evening briefing on the communities you will meet, photography consent, and how market calendars shape the week ahead.',
       },
       {
-        day: 'Days 2 – 3',
-        title: 'Rift Valley south',
-        text: 'Lakeside stops and hot springs on the way down, plus a morning with a weaving family in the Dorze highlands.',
+        day: 'Day 2',
+        title: 'South to the Rift',
+        text: 'Drive into the Rift Valley with a lakeshore stop, overnight near Arba Minch ahead of the highland villages.',
       },
       {
-        day: 'Days 4 – 7',
-        title: 'Turmi, Dimeka & the Hamar',
-        text: 'Market days, an invited bull-jumping ceremony where the season allows, and long evenings beside the river.',
+        day: 'Day 3',
+        title: 'Dorze highlands',
+        text: 'A morning with a weaving family in the Dorze villages of the Guge hills — bamboo houses, enset gardens — then continue toward the lower Omo.',
       },
       {
-        day: 'Days 8 – 9',
-        title: 'Mursi highlands & Karo',
-        text: 'Two unhurried days with a resident anthropologist, ending with the Omo escarpment at dusk.',
+        day: 'Day 4',
+        title: 'Key Afer & Turmi',
+        text: 'Saturday market at Key Afer when the calendar aligns, then settle near Turmi — the usual base for Hamar country.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Hamar invitations',
+        text: 'Village visits arranged through elders; if a bull-jumping ceremony is offered that week, we accept and leave the day flexible around it.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Dimeka market & river camps',
+        text: 'Market day at Dimeka when it falls, then a riverside camp beside the Omo rather than a fenced compound.',
+      },
+      {
+        day: 'Day 7',
+        title: 'Karo riverside',
+        text: 'Time with Karo communities along the river escarpment — body painting and settlement life on their terms, with the mediator present throughout.',
+      },
+      {
+        day: 'Day 8',
+        title: 'Mursi highlands',
+        text: 'Into the Mago approaches for a Mursi highland visit, paced slowly and only with prior arrangement — no roadside bargaining.',
+      },
+      {
+        day: 'Day 9',
+        title: 'Return north',
+        text: 'Begin the journey back toward Arba Minch or Jinka for the flight connection, with buffer time if a late invitation appears.',
       },
       {
         day: 'Day 10',
         title: 'Addis & Departure',
-        text: 'A flight north, a farewell lunch, and an evening departure.',
+        text: 'Flight to Addis Ababa, a farewell lunch, and an evening departure.',
       },
     ],
     places: ['Omo Valley', 'Dorze', 'Turmi', 'Dimeka', 'Mursi Highlands', 'Karo'],
@@ -2446,7 +2517,7 @@ export const tours: Tour[] = [
     teaser:
       'Ethiopian Epiphany — processions, an all-night vigil, and the royal bath flooded at dawn.',
     summary:
-      'A single fixed window each January, and one we plan a full year ahead, since rooms and vantage points along the procession route are gone early.',
+      'A single fixed window each January (Timkat falls around 19 January on the Gregorian calendar), planned a full year ahead because rooms and procession vantage points in Gondar book early.',
     includes: [
       'Reserved viewing positions at Fasilides\' Bath',
       'Domestic flights and all private transfers',
@@ -2462,24 +2533,44 @@ export const tours: Tour[] = [
     ],
     itinerary: [
       {
-        day: 'Days 1 – 2',
-        title: 'Addis Ababa',
-        text: 'Arrival, a visit to Holy Trinity Cathedral, and a briefing on the liturgical calendar behind the festival.',
+        day: 'Day 1',
+        title: 'Arrive Addis Ababa',
+        text: 'Arrival and a quiet evening — festival energy begins in Gondar, not the capital.',
       },
       {
-        day: 'Days 3 – 5',
-        title: 'Gondar for Timkat',
-        text: 'The Ketera eve procession, an all-night vigil, and the flooding of Fasilides\' Bath at dawn.',
+        day: 'Day 2',
+        title: 'Addis & Holy Trinity',
+        text: 'Holy Trinity Cathedral and a briefing on the liturgical calendar behind Timkat: Ketera eve, the vigil, and the baptismal immersion at dawn.',
       },
       {
-        day: 'Days 6 – 7',
-        title: 'Lalibela',
-        text: 'The rock churches during festival season, visiting the northern cluster before the crowds gather.',
+        day: 'Day 3',
+        title: 'Fly to Gondar',
+        text: 'Morning flight north, settle into rooms held for festival week, and a first walk of the royal enclosure without the crowds.',
+      },
+      {
+        day: 'Day 4',
+        title: 'Ketera — eve of Timkat',
+        text: 'Tabots leave their churches in procession toward Fasilides\' Bath; we hold reserved positions along the route and stay for the evening atmosphere.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Timkat dawn',
+        text: 'All-night vigil options for those who want them, then the flooding of Fasilides\' Bath at dawn and the joy of the immersion — the heart of the journey.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Fly to Lalibela',
+        text: 'A soft travel day south-east to Lalibela while Gondar empties; evening light on Bete Giyorgis if energy allows.',
+      },
+      {
+        day: 'Day 7',
+        title: 'Lalibela churches',
+        text: 'Northern and eastern clusters at quieter post-festival hours, with your scholar-guide on the liturgy that still fills these trenches year-round.',
       },
       {
         day: 'Day 8',
         title: 'Departure',
-        text: 'A return flight to Addis Ababa and an evening departure.',
+        text: 'Return flight to Addis Ababa and an evening departure.',
       },
     ],
     places: ['Addis Ababa', 'Gondar', 'Lalibela'],
@@ -2495,14 +2586,14 @@ export const tours: Tour[] = [
     from: TAILOR_MADE,
     group: '2 – 4 guests',
     teaser:
-      'A route timed entirely around the light — golden hour at Lalibela, blue hour over the salt flats.',
+      'A light-led route through Lalibela, the Simien rim, and the southern Rift — kept deliberately small.',
     summary:
-      'Every stop on this circuit is scheduled by light, not by convenience, with a working photographer as your guide and a vehicle built for shooting from the window. Kept deliberately small.',
+      'Nine days cannot honestly cover Lalibela, the full Danakil and the Omo without rushing. This itinerary stays in the highlands and Rift instead: rock churches at golden hour, Simien escarpment light, and consent-based portrait work around Arba Minch and the nearer Omo approaches. Danakil remains available as a separate expedition.',
     includes: [
       'A photographer-guide with advance location scouting',
-      'Golden-hour and blue-hour access at every site',
+      'Golden-hour and blue-hour access at every major site',
       'Domestic flights and a private vehicle fitted for photography',
-      'Consent-based portrait sessions with a cultural mediator in the Omo',
+      'Consent-based portrait sessions with a cultural mediator in the south',
       'Lodges chosen for the quality of their light, not just their comfort',
       'RAW file backup and field storage support',
     ],
@@ -2510,35 +2601,56 @@ export const tours: Tour[] = [
       'International flights and Ethiopian visa fees',
       'Travel insurance (required)',
       'Camera hire and personal equipment',
+      'Optional Danakil extension (quoted separately)',
     ],
     itinerary: [
       {
         day: 'Day 1',
         title: 'Arrive Addis Ababa',
-        text: 'A kit check and a working dinner covering light, logistics and portrait consent protocol.',
+        text: 'Kit check, backup workflow, and a working dinner on light, logistics and portrait consent protocol.',
       },
       {
-        day: 'Days 2 – 3',
-        title: 'Lalibela',
-        text: 'Dawn and dusk sessions in the rock churches on back-to-back days, skipping the flat midday hours entirely.',
+        day: 'Day 2',
+        title: 'Fly to Lalibela',
+        text: 'Afternoon recon of the trenches, then blue hour on Bete Giyorgis once day-trippers leave.',
       },
       {
-        day: 'Days 4 – 5',
-        title: 'Danakil Depression',
-        text: 'Dallol at first light, salt caravans in the afternoon glow, and the Erta Ale caldera after dark.',
+        day: 'Day 3',
+        title: 'Lalibela — dawn & dusk',
+        text: 'Northern cluster at sunrise service, long midday edit break, eastern cluster and Asheton Maryam light in the evening.',
       },
       {
-        day: 'Days 6 – 8',
-        title: 'Omo Valley',
-        text: 'Market days and invited portrait sessions with a mediator present, shot slowly and with genuine consent.',
+        day: 'Day 4',
+        title: 'Gondar castles',
+        text: 'Flight or drive to Gondar; Fasil Ghebbi and Debre Berhan Selassie ceiling in soft afternoon light.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Simien rim',
+        text: 'Into the park for gelada and escarpment vistas — Imet Gogo or Chenek viewpoints timed for late light, lodge on the rim.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Simien dawn, fly south',
+        text: 'Pre-dawn on the cliffs, return to Gondar, flight to Addis and connect toward Arba Minch.',
+      },
+      {
+        day: 'Day 7',
+        title: 'Arba Minch & Dorze',
+        text: 'Lake Chamo boat light in the morning; Dorze highland portraits and bamboo houses in the afternoon with a mediator present.',
+      },
+      {
+        day: 'Day 8',
+        title: 'Konso or nearer Omo',
+        text: 'UNESCO terraces at Konso, or a single nearer community visit arranged in advance — never a multi-stop "tribe circuit" in one day.',
       },
       {
         day: 'Day 9',
         title: 'Addis & Departure',
-        text: 'A first pass at editing the trip over coffee, then an evening flight home.',
+        text: 'Return to Addis, a first edit pass over coffee, and an evening departure.',
       },
     ],
-    places: ['Lalibela', 'Danakil Depression', 'Omo Valley'],
+    places: ['Lalibela', 'Gondar', 'Simien Mountains', 'Arba Minch', 'Dorze', 'Konso'],
   },
   {
     slug: 'rift-valley-birding-trail',
@@ -2547,17 +2659,17 @@ export const tours: Tour[] = [
     days: '8 Days',
     nights: 7,
     style: 'Wildlife · Birding · Private',
-    season: 'Year-round',
+    season: 'Oct – Apr',
     from: TAILOR_MADE,
     group: '2 – 6 guests',
     teaser:
-      'From Afro-alpine endemics on the Sanetti Plateau to pelicans on Lake Tana, built for a serious list.',
+      'From Afro-alpine endemics on the Sanetti Plateau to Rift Valley waterbirds — a focused southern and lakeside list.',
     summary:
-      'Ethiopia holds close to two dozen endemic bird species spread across sharply different habitats. We move between them efficiently, with a resident ornithologist and no detours that aren\'t about birds.',
+      'Ethiopia holds close to two dozen endemic bird species across sharply different habitats. This route stays in the Rift and Bale systems (with a Debre Libanos finale for gorge raptors), timed for the clearer, cooler months when highland endemics are most reliable.',
     includes: [
       'A resident ornithologist and endemics specialist throughout',
-      'Domestic flights and private 4x4 transfers',
-      'Private boat sessions on Lake Tana and the Rift Valley lakes',
+      'Domestic flights where useful and private 4x4 transfers',
+      'Private boat sessions on the Rift Valley lakes',
       'All national park fees, scouts and permits',
       'Full board at lodges chosen for proximity to habitat',
       'A species checklist and daily sightings log',
@@ -2571,27 +2683,37 @@ export const tours: Tour[] = [
       {
         day: 'Day 1',
         title: 'Arrive Addis Ababa',
-        text: 'A briefing with your ornithologist and an afternoon at the Ethiopian Wildlife and Natural History Society grounds.',
+        text: 'A briefing with your ornithologist and an afternoon at the Ethiopian Wildlife and Natural History Society grounds for a first urban highland list.',
       },
       {
         day: 'Day 2',
-        title: 'Rift Valley lakes',
-        text: 'Lake Ziway and Lake Langano for pelicans, storks and other Rift Valley waterbirds.',
+        title: 'Ziway & Langano',
+        text: 'South into the Rift: Lake Ziway for pelicans, storks and herons, then lakeshore scrub around Langano for dryland species at dusk.',
       },
       {
-        day: 'Days 3 – 4',
-        title: 'Bale Mountains',
-        text: 'The Sanetti Plateau for Afro-alpine endemics, then the Harenna forest for its highland forest species.',
+        day: 'Day 3',
+        title: 'Abijata-Shalla & onward to Bale',
+        text: 'Flamingos and shorebirds around Abijata-Shalla in the morning, then the climb toward Dinsho and the northern Bale forest edge.',
       },
       {
-        day: 'Days 5 – 6',
-        title: 'Lake Tana & Blue Nile',
-        text: 'Private boat sessions around the island monasteries, with reed-boat access into the reedbeds.',
+        day: 'Day 4',
+        title: 'Sanetti Plateau',
+        text: 'A full day above 4,000 metres for Afro-alpine endemics — Rouget\'s rail, spot-breasted plover, and the plateau\'s specialist grassland birds — with Ethiopian wolf as a non-avian bonus.',
+      },
+      {
+        day: 'Day 5',
+        title: 'Harenna forest',
+        text: 'Drop into the cloud forest on Bale\'s southern face for highland forest species, then begin the return toward the Rift.',
+      },
+      {
+        day: 'Day 6',
+        title: 'Hawassa lakeshore',
+        text: 'A boat and shoreline morning on Lake Hawassa for African fish eagle, weavers and wetland specialty birds, with an easy afternoon to catch up the checklist.',
       },
       {
         day: 'Day 7',
-        title: 'Debre Libanos',
-        text: 'The Jemma gorge escarpment for raptors, with gelada troops working the cliff edge below.',
+        title: 'Debre Libanos & the Jemma Gorge',
+        text: 'North of Addis for the gorge escarpment: raptors on the thermals and gelada on the cliffs below — a different habitat finish to the trip.',
       },
       {
         day: 'Day 8',
@@ -2599,6 +2721,6 @@ export const tours: Tour[] = [
         text: 'A final checklist review over breakfast, then an evening departure.',
       },
     ],
-    places: ['Rift Valley Lakes', 'Bale Mountains', 'Lake Tana', 'Debre Libanos'],
+    places: ['Rift Valley Lakes', 'Bale Mountains', 'Lake Hawassa', 'Debre Libanos'],
   },
 ]
