@@ -9,7 +9,7 @@ export const tours: Tour[] = [
   {
     slug: 'the-historic-route',
     title: 'The Historic Route',
-    image: cloudinaryTourImage('lalibela'),
+    image: cloudinaryTourImage('the-historic-route'),
     days: '11 Days',
     nights: 10,
     style: 'Cultural · Luxury · Private',
@@ -1372,7 +1372,7 @@ export const tours: Tour[] = [
   {
     slug: 'abune-yosef-ascent',
     title: 'Abune Yosef Ascent',
-    image: cloudinaryTourImage('lalibela'),
+    image: cloudinaryTourImage('abune-yosef-ascent'),
     days: '4 Days',
     nights: 3,
     style: 'Climbing · Trekking · Small Group',
@@ -1424,7 +1424,7 @@ export const tours: Tour[] = [
   {
     slug: 'mount-guna-ascent',
     title: 'Mount Guna Ascent',
-    image: cloudinaryTourImage('lake-tana'),
+    image: cloudinaryTourImage('mount-guna-ascent'),
     days: '3 Days',
     nights: 2,
     style: 'Climbing · Hiking · Private',
@@ -1845,7 +1845,7 @@ export const tours: Tour[] = [
   {
     slug: 'christmas-to-epiphany',
     title: 'Christmas to Epiphany',
-    image: cloudinaryTourImage('lalibela'),
+    image: cloudinaryTourImage('christmas-to-epiphany'),
     days: '16 Days',
     nights: 15,
     style: 'Festival · Cultural · Private',

@@ -1,6 +1,9 @@
 import type { ActivityCategory } from '@/features/experiences/types/experience.types'
 import type { Activity } from '@/features/experiences/types/experience.types'
 
+const cloudinaryExperienceImage = (slug: string) =>
+  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
+
 export const activityCategories: ActivityCategory[] = [
   'Food & Drink',
   'Coffee',
@@ -18,7 +21,7 @@ export const activities: Activity[] = [
     duration: 'Half a day',
     where: 'Addis Ababa',
     season: 'Year-round',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryExperienceImage('injera-and-ethiopian-cooking'),
     teaser:
       'Pour injera on the mitad, cook the stews that go with it, and eat together the Ethiopian way.',
     intro:
@@ -47,7 +50,7 @@ export const activities: Activity[] = [
     duration: 'An evening',
     where: 'Addis Ababa',
     season: 'Year-round',
-    image: '/images/luxury-lodge.png',
+    image: cloudinaryExperienceImage('tej-tella-and-areki'),
     teaser:
       'Honey wine, home-brewed beer and a clear highland spirit — with azmari musicians improvising as you drink.',
     intro:
@@ -75,7 +78,7 @@ export const activities: Activity[] = [
     duration: '2 – 3 hours',
     where: 'Addis Ababa, or any coffee region',
     season: 'Year-round',
-    image: '/images/coffee-ceremony.png',
+    image: cloudinaryExperienceImage('coffee-cupping-and-ceremony'),
     teaser:
       'Taste coffees from Sidama, Yirgacheffe, Jimma and Harar side by side, then share a ceremony in a family home.',
     intro:
@@ -102,7 +105,7 @@ export const activities: Activity[] = [
     duration: 'An early morning',
     where: 'Entoto, Addis Ababa',
     season: 'Year-round (best Oct – May)',
-    image: '/images/addis-skyline.png',
+    image: cloudinaryExperienceImage('run-where-champions-train'),
     teaser:
       'A dawn run on the forest trails of Entoto, around 3,000 metres up, where Ethiopia\'s great distance runners train.',
     intro:
@@ -130,7 +133,7 @@ export const activities: Activity[] = [
     duration: 'A full day',
     where: 'Central Rift Valley',
     season: 'Oct – May',
-    image: '/images/lake-tana.png',
+    image: cloudinaryExperienceImage('rift-valley-cycling-day'),
     teaser:
       'Quiet roads between the Rift Valley lakes, villages along the way, and a support vehicle never far behind.',
     intro:
@@ -157,7 +160,7 @@ export const activities: Activity[] = [
     duration: 'A full day',
     where: 'Highland villages',
     season: 'Harvest: Nov – Jan',
-    image: '/images/hero-lalibela.png',
+    image: cloudinaryExperienceImage('teff-farm-day'),
     teaser:
       'Plough with oxen, cut and thresh the teff that becomes injera, and share lunch with the family that grows it.',
     intro:
@@ -185,7 +188,7 @@ export const activities: Activity[] = [
     duration: 'Half a day or more',
     where: 'Borana, around Yabelo',
     season: 'Oct – Mar',
-    image: '/images/omo-valley.png',
+    image: cloudinaryExperienceImage('herding-with-the-borana'),
     teaser:
       'Spend time with Borana herders — at the singing wells, and out with the cattle their way of life revolves around.',
     intro:
@@ -212,7 +215,7 @@ export const activities: Activity[] = [
     duration: '1 – 3 nights',
     where: 'Lalibela highlands, Choke, Awra Amba, Gamo Highlands',
     season: 'Oct – May',
-    image: '/images/textile.png',
+    image: cloudinaryExperienceImage('village-homestay'),
     teaser:
       'Sleep in a community-run lodge or guesthouse and share daily life — meals, markets, work and evenings by the fire.',
     intro:
@@ -239,7 +242,7 @@ export const activities: Activity[] = [
     duration: 'Half a day',
     where: 'Entoto, the Simien trails, Lake Tana shores',
     season: 'Year-round',
-    image: '/images/hero-simien.png',
+    image: cloudinaryExperienceImage('leave-it-better'),
     teaser:
       'Give a morning back to the places you visit — a guided clean-up alongside local people who look after them.',
     intro:

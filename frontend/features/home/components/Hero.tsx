@@ -9,8 +9,8 @@ export function Hero() {
     >
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero-simien.png"
-          alt="Layered escarpments of the Simien Mountains at sunrise, Ethiopia"
+          src="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/lalibela.png"
+          alt="Rock-hewn churches of Lalibela at golden hour, Ethiopia"
           fill
           priority
           sizes="100vw"

@@ -20,9 +20,7 @@ export function DesktopNavigation({ tone, isActive, dismiss, dismissed, setDismi
         return (
           <li
             key={link.href}
-            // On narrower desktops the logo already links home, so the
-            // Home item is dropped to keep every label on one line.
-            className={cn('group py-5', link.href === '/' && 'hidden xl:block')}
+            className="group py-5"
             onMouseLeave={() => setDismissed(null)}
           >
             <Link

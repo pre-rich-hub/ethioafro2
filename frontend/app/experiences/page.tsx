@@ -18,7 +18,7 @@ export default function ExperiencesPage() {
         eyebrow="Experiences"
         title="Add a day you'll talk about for years"
         lede="Short experiences that slot into any journey — in kitchens, coffee houses, farms and villages, on running trails and quiet Rift Valley roads."
-        image="/images/coffee-ceremony.png"
+        image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/coffee-cupping-and-ceremony.png"
         imageAlt="Coffee being poured from a traditional jebena during a coffee ceremony"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Experiences' }]}
         compact
@@ -43,7 +43,7 @@ export default function ExperiencesPage() {
         title="Build your experiences into a journey"
         text="Tell us which experiences caught your eye and roughly when you'd travel. A designer will fit them into a route that makes sense."
         secondary={{ label: 'See Tours', href: '/tours' }}
-        image="/images/hero-lalibela.png"
+        image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/injera-and-ethiopian-cooking.png"
       />
     </>
   )
