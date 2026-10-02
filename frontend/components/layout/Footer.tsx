@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 import { contact } from '@/lib/constants/contact'
 import { company } from '@/lib/seo/entities'

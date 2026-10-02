@@ -3,7 +3,7 @@
 import { navLinks } from '@/lib/constants/routes'
 import { cn } from '@/lib/utils/cn'
 import { ChevronDown } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { DestinationsDropdown } from './DestinationsDropdown'
 import { ExperiencesDropdown } from './ExperiencesDropdown'
 import { ToursDropdown } from './ToursDropdown'

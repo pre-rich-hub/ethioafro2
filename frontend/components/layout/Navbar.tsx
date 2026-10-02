@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils/cn'
 import { Menu, X } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { DesktopNavigation } from './navigation/DesktopNavigation'
 import { LanguagePicker } from './navigation/LanguagePicker'
 import { MobileNavigation } from './navigation/MobileNavigation'

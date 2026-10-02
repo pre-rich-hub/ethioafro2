@@ -4,7 +4,7 @@ import { contact } from '@/lib/constants/contact'
 import { navLinks } from '@/lib/constants/routes'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight, Globe, Mail, Phone } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { languages } from './navigation.data'
 import type { NavigationState } from './useNavigation'
 

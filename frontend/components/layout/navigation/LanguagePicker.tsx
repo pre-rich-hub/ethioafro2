@@ -23,7 +23,7 @@ export function LanguagePicker({ tone, langRef, langOpen, setLangOpen, lang, set
         )}
       >
         <Globe className="h-[17px] w-[17px]" />
-        <span className="text-[11px] font-semibold tracking-[0.1em]">
+        <span className="text-[11px] font-semibold tracking-[0.1em] uppercase">
           {lang.code}
         </span>
         <ChevronDown

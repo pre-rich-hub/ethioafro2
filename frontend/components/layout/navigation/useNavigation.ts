@@ -1,11 +1,15 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
+import { useLocale } from 'next-intl'
 import { useEffect, useRef, useState } from 'react'
+import { usePathname, useRouter } from '@/i18n/navigation'
+import type { AppLocale } from '@/i18n/routing'
 import { languages } from './navigation.data'
 
 export function useNavigation() {
   const pathname = usePathname()
+  const router = useRouter()
+  const locale = useLocale() as AppLocale
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
@@ -13,8 +17,19 @@ export function useNavigation() {
   // the menu and it would stay open on the new page. Clicking any link inside
   // marks that dropdown dismissed until the pointer leaves it.
   const [dismissed, setDismissed] = useState<string | null>(null)
-  const [lang, setLang] = useState(languages[0])
   const langRef = useRef<HTMLDivElement>(null)
+
+  const lang = languages.find((l) => l.code === locale) ?? languages[0]
+
+  const setLang = (next: (typeof languages)[number]) => {
+    if (next.code === locale) {
+      setLangOpen(false)
+      return
+    }
+    router.replace(pathname, { locale: next.code })
+    setLangOpen(false)
+    setOpen(false)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 32)
@@ -26,7 +41,7 @@ export function useNavigation() {
   useEffect(() => {
     setOpen(false)
     setLangOpen(false)
-  }, [pathname])
+  }, [pathname, locale])
 
   const dismiss = (label: string) => () => setDismissed(label)
 
@@ -63,49 +78,20 @@ export function useNavigation() {
 
   const tone: 'light' | 'dark' = scrolled ? 'dark' : 'light'
 
-
   return {
-
-
     scrolled,
-
-
     open,
-
-
     setOpen,
-
-
     langOpen,
-
-
     setLangOpen,
-
-
     dismissed,
-
-
     setDismissed,
-
-
     lang,
-
-
     setLang,
-
-
     langRef,
-
-
     dismiss,
-
-
     isActive,
-
-
     tone,
-
-
   }
 }
 

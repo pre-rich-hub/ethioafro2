@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { AdminSidebar } from '@/features/admin/components/Sidebar'
+import { DocumentShell } from '@/components/layout/DocumentShell'
 import { getAdminApiBaseUrl } from '@/lib/config/env'
 
 export const metadata: Metadata = {
@@ -25,10 +26,6 @@ async function hasValidAdminSession() {
   if (!cookieHeader) return false
 
   try {
-    // Server-side guard: Next's rewrites only apply to browser requests, so a
-    // server component must fetch the backend directly. The incoming
-    // admin_session cookie is forwarded via the Cookie header. Env var mirrors
-    // the one next.config.mjs uses for the rewrite target.
     const response = await fetch(`${getAdminApiBaseUrl()}/api/v1/auth/me`, {
       headers: {
         Accept: 'application/json',
@@ -57,12 +54,12 @@ export default async function AdminLayout({
     redirect('/login')
   }
 
-  // Fixed overlay: the admin lives inside the marketing root layout, so we
-  // paint over the public nav/footer instead of touching them.
   return (
-    <div className="fixed inset-0 z-[60] flex bg-background">
-      <AdminSidebar />
-      <main className="h-full flex-1 overflow-y-auto">{children}</main>
-    </div>
+    <DocumentShell lang="en">
+      <div className="fixed inset-0 z-[60] flex bg-background">
+        <AdminSidebar />
+        <main className="h-full flex-1 overflow-y-auto">{children}</main>
+      </div>
+    </DocumentShell>
   )
 }

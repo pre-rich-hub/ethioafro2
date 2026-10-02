@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils/cn'
 import { company } from '@/lib/seo/entities'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 export function Wordmark({
   tone,

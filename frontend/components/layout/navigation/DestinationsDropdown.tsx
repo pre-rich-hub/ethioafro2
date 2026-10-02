@@ -4,7 +4,7 @@ import { destinations } from '@/features/destinations/data/destination.data'
 import { cn } from '@/lib/utils/cn'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import type { NavigationState } from './useNavigation'
 
 type Props = Pick<NavigationState, 'dismissed' | 'dismiss'>

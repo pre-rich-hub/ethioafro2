@@ -1,10 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { Fraunces, Inter } from 'next/font/google'
-import { Navbar } from '@/components/layout/Navbar'
-import { Footer } from '@/components/layout/Footer'
-import { Analytics } from '@/components/common/Analytics'
-import { FloatingSupport } from '@/features/support'
-import { RouteProgress } from '@/components/layout/RouteProgress'
 import {
   company,
   defaultDocumentTitle,
@@ -12,20 +6,6 @@ import {
 } from '@/lib/seo/entities'
 import { DEFAULT_OG_IMAGE, SITE_URL } from '@/lib/seo/metadata'
 import './globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-const cormorant = Fraunces({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-cormorant',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -96,30 +76,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+/** Root layout is a passthrough so `[locale]` and admin can each own `<html lang>`. */
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${cormorant.variable} bg-background`}
-    >
-      <body className="antialiased">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-primary focus:px-5 focus:py-3 focus:text-xs focus:font-semibold focus:uppercase focus:tracking-[0.14em] focus:text-primary-foreground"
-        >
-          Skip to content
-        </a>
-        <RouteProgress />
-        <Navbar />
-        <main id="main">{children}</main>
-        <Footer />
-        <FloatingSupport />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
-    </html>
-  )
+  return children
 }
