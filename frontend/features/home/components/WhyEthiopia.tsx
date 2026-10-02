@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Reveal } from '@/components/common/Reveal'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 const facts = [
   ['3,000+', 'years of continuous civilization'],
@@ -13,7 +14,7 @@ export function WhyEthiopia() {
     <section id="why" className="relative overflow-hidden bg-secondary text-secondary-foreground">
       <div className="absolute inset-0 opacity-25">
         <Image
-          src="/images/festival-timkat.png"
+          src={cloudinaryImage('christmas-to-epiphany', 1920)}
           alt=""
           aria-hidden
           fill

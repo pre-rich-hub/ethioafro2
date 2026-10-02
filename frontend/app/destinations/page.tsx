@@ -1,6 +1,7 @@
 import { DestinationGrid, DestinationHero } from '@/features/destinations'
 import type { Metadata } from 'next'
 import { CtaBand } from '@/features/enquiries'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 export const metadata: Metadata = {
   title: 'Destinations',
@@ -19,7 +20,7 @@ export default function DestinationsPage() {
         title="Can't decide where to start?"
         text="A sentence is enough — the altitude you're comfortable with, the pace, roughly when you'd travel. A designer will reply with two or three routes worth considering."
         secondary={{ label: 'Browse Tours', href: '/tours' }}
-        image="/images/hero-simien.png"
+        image={cloudinaryImage('simien-mountains', 1920)}
       />
     </>
   )

@@ -4,34 +4,37 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
 
+const cld = (slug: string) =>
+  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/${slug}.png`
+
 const shots = [
   {
-    src: '/images/lalibela.png',
+    src: cld('lalibela'),
     location: 'Lalibela',
     description: 'First light reaching the trench walls of Bete Maryam.',
   },
   {
-    src: '/images/hero-simien.png',
+    src: cld('simien-mountains'),
     location: 'Simien Mountains',
     description: 'A gelada troop working the grass along the escarpment edge.',
   },
   {
-    src: '/images/danakil.png',
+    src: cld('danakil-depression'),
     location: 'Danakil Depression',
     description: 'Mineral terraces at Dallol, still shifting colour by the hour.',
   },
   {
-    src: '/images/omo-valley.png',
+    src: cld('omo-valley'),
     location: 'Omo Valley',
     description: 'Early river mist lifting off the banks of the Omo.',
   },
   {
-    src: '/images/festival-timkat.png',
+    src: cld('christmas-to-epiphany'),
     location: 'Gondar',
     description: 'The Timkat crowd gathered around Fasilides\' flooded bath.',
   },
   {
-    src: '/images/lake-tana.png',
+    src: cld('lake-tana'),
     location: 'Lake Tana',
     description: 'A tankwa reed boat crossing toward the island monasteries.',
   },

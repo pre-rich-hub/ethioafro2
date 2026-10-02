@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { Reveal } from '@/components/common/Reveal'
 import type { Post } from '@/features/blog/types/blog.types'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 
 type Props = {
@@ -43,7 +44,7 @@ export function BlogHeader({ post }: Props) {
             <div className="mt-9 flex items-center gap-4 border-t border-border pt-7">
               <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full">
                 <Image
-                  src="/images/traveler-portrait.png"
+                  src={cloudinaryImage('coffee-cupping-and-ceremony', 200)}
                   alt=""
                   aria-hidden
                   fill

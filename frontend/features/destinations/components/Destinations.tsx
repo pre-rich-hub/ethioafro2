@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useDestinations } from '../hooks/useDestinations'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 export function Destinations() {
   const { featured, trackRef, active, scrollToIndex, onPointerDown, onPointerMove, endDrag, onCardClick } = useDestinations()
@@ -90,7 +91,7 @@ export function Destinations() {
             className="group relative flex h-[440px] w-[280px] shrink-0 select-none snap-start flex-col items-center justify-center gap-6 overflow-hidden rounded-sm p-8 text-center sm:h-[560px] sm:w-[360px]"
           >
             <Image
-              src="/images/bale-gelada.png"
+              src={cloudinaryImage('bale-mountains')}
               alt="Ethiopian wolf territory in the Bale Mountains"
               fill
               draggable={false}

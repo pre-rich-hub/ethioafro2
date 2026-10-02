@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Reveal } from '@/components/common/Reveal'
 import { LinkButton } from '@/components/common/LinkButton'
 import { contact } from '@/lib/constants/contact'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 interface CtaBandProps {
   eyebrow?: string
@@ -18,7 +19,7 @@ export function CtaBand({
   text,
   primary = { label: 'Plan Your Journey', href: '/contact' },
   secondary,
-  image = '/images/luxury-lodge.png',
+  image = cloudinaryImage('lake-tana', 1920),
 }: CtaBandProps) {
   return (
     <section className="relative isolate overflow-hidden bg-primary text-primary-foreground">

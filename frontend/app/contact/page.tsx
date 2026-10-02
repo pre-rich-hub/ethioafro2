@@ -1,5 +1,6 @@
 import { PageHero } from '@/components/common/PageHero'
 import { ContactEnquiry, ContactProcess, ContactPromises } from '@/features/contact'
+import { cloudinaryImage } from '@/lib/cloudinary'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function ContactPage() {
         eyebrow="Speak With a Designer"
         title="Start with a conversation, not a form"
         lede="There is no call centre and no fixed package. Write to us directly and an Addis-based designer replies personally, almost always the same day."
-        image="/images/traveler-portrait.png"
+        image={cloudinaryImage('simien-mountains', 1920)}
         imageAlt="A traveller looking out over the Ethiopian highlands at dawn"
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
         meta={[

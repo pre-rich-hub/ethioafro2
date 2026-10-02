@@ -48,7 +48,7 @@ export function BrandIntro() {
       <Reveal delay={100} className="mx-auto mt-16 max-w-[1280px] px-6 lg:px-10">
         <div className="relative aspect-[21/9] overflow-hidden rounded-xl">
           <Image
-            src="/images/coffee-ceremony.png"
+            src="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/coffee-cupping-and-ceremony.png"
             alt="Hands pouring coffee from a traditional Ethiopian jebena during a coffee ceremony"
             fill
             sizes="100vw"

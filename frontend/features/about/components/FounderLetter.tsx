@@ -1,5 +1,6 @@
 import { Reveal } from '@/components/common/Reveal'
 import Image from 'next/image'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 export function FounderLetter() {
   return (
@@ -59,7 +60,7 @@ export function FounderLetter() {
         </p>
         <div className="relative mt-10 aspect-[16/10] overflow-hidden">
           <Image
-            src="/images/hero-simien.png"
+            src={cloudinaryImage('simien-mountains')}
             alt="The Simien Mountains escarpment at first light"
             fill
             sizes="(max-width: 1024px) 100vw, 55vw"

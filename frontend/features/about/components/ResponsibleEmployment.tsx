@@ -1,13 +1,14 @@
 import { Reveal } from '@/components/common/Reveal'
 import Image from 'next/image'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 export function ResponsibleEmployment() {
   return (
     <section className="shell grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:gap-20 lg:py-28">
       <Reveal className="relative aspect-[4/5] overflow-hidden sm:aspect-[4/3] lg:aspect-[4/5]">
         <Image
-          src="/images/textile.png"
-          alt="An Ethiopian weaver at a traditional loom"
+          src={cloudinaryImage('village-homestay')}
+          alt="A village host welcoming guests during a community stay"
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover"
