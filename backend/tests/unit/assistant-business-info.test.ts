@@ -27,7 +27,7 @@ describe("business info grounding", () => {
 
   it("carries real contact routes rather than only a form link", () => {
     expect(BUSINESS_INFO).toContain("+1909-450-7246");
-    expect(BUSINESS_INFO).toContain("contact@simienethiopiatours.com");
+    expect(BUSINESS_INFO).toContain("info@simienethiopiatours.com");
     expect(BUSINESS_INFO).toContain("Monday to Saturday");
   });
 

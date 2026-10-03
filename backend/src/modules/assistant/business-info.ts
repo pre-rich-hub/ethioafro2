@@ -38,7 +38,7 @@ export const BUSINESS_INFO = `## How to book with us
 
 ## Reaching us
 - Phone and WhatsApp: +1909-450-7246
-- Email: contact@simienethiopiatours.com
+- Email: info@simienethiopiatours.com
 - Office: Bole Medhaniallem, Cape Verde Street 1000, Addis Ababa, Ethiopia
 - Office hours: Monday to Saturday, 8:00 AM to 5:30 PM
 - Full terms: /terms`;
