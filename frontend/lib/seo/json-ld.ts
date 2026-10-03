@@ -52,7 +52,7 @@ export function organizationJsonLd(): JsonLdObject {
     description: company.foundingOneLiner,
     slogan: company.tagline,
     url: company.url,
-    logo: absoluteUrl('/images/logo.png'),
+    logo: absoluteUrl('/images/simien-logo-dark.png'),
     image: DEFAULT_OG_IMAGE,
     email: company.email,
     telephone: company.telephone,

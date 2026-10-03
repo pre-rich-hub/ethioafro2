@@ -33,7 +33,7 @@ export function Navbar() {
       <header
         className={cn(
           'fixed inset-x-0 top-0 z-50 transition-all duration-500',
-          scrolled
+          scrolled || open
             ? 'border-b border-border bg-background/92 backdrop-blur-xl'
             : 'bg-gradient-to-b from-charcoal/55 to-transparent',
         )}

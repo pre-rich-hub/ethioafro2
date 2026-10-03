@@ -6,6 +6,17 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 
+// Two colourways of the same lockup: light lettering for the dark hero,
+// dark lettering once the header turns cream. Both stay mounted and
+// cross-fade so the swap never waits on an image load.
+const logoProps = {
+  width: 747,
+  height: 240,
+  priority: true,
+  sizes: '(min-width: 640px) 200px, 162px',
+}
+const logoClass = 'h-[52px] w-auto transition-opacity duration-500 sm:h-16'
+
 export function Wordmark({
   tone,
   onClick,
@@ -20,34 +31,21 @@ export function Wordmark({
       href="/"
       onClick={onClick}
       aria-label={t('homeAria', { name: company.name })}
-      className="flex items-center"
+      className="relative flex items-center transition-transform duration-300 hover:scale-[1.03]"
     >
       <Image
-        src="/images/logo.png"
+        {...logoProps}
+        src="/images/simien-logo-light.png"
         alt={`${company.name} logo`}
-        width={56}
-        height={56}
-        priority
-        className="h-14 w-14 rounded-full object-cover border border-accent/25 shadow-md transition-transform duration-300 hover:scale-105"
+        className={cn(logoClass, tone === 'dark' && 'opacity-0')}
       />
-      <span className="ml-3 flex flex-col">
-        <span
-          className={cn(
-            'font-serif text-2xl leading-none transition-colors duration-300',
-            tone === 'dark' ? 'text-foreground' : 'text-background',
-          )}
-        >
-          {company.wordmarkPrimary}
-        </span>
-        <span
-          className={cn(
-            'mt-1 text-[9px] font-semibold uppercase tracking-[0.28em]',
-            tone === 'dark' ? 'text-accent' : 'text-accent-light',
-          )}
-        >
-          {company.wordmarkSecondary}
-        </span>
-      </span>
+      <Image
+        {...logoProps}
+        src="/images/simien-logo-dark.png"
+        alt=""
+        aria-hidden
+        className={cn(logoClass, 'absolute left-0', tone === 'light' && 'opacity-0')}
+      />
     </Link>
   )
 }

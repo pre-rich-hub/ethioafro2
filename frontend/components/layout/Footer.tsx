@@ -61,21 +61,14 @@ export async function Footer() {
       <div className="shell py-16 sm:py-20">
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-10">
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/images/logo.png"
-                alt={t('logoAlt', { name: company.name })}
-                width={56}
-                height={56}
-                className="h-14 w-14 rounded-full object-cover border border-accent-light/20"
-              />
-              <div className="flex flex-col">
-                <span className="font-serif text-3xl leading-none">{company.wordmarkPrimary}</span>
-                <span className="text-[9px] font-semibold uppercase tracking-[0.28em] text-accent-light mt-1">
-                  {company.wordmarkSecondary}
-                </span>
-              </div>
-            </div>
+            <Image
+              src="/images/simien-logo-light.png"
+              alt={t('logoAlt', { name: company.name })}
+              width={747}
+              height={240}
+              sizes="250px"
+              className="h-20 w-auto"
+            />
             <p className="mt-5 max-w-xs text-pretty text-sm leading-relaxed text-background/60">
               {t('tagline')}
             </p>
