@@ -30,6 +30,13 @@ const nextConfig = {
   async redirects() {
     // Retired surfaces — keep old URLs from 404ing.
     return [
+      // Canonical host is apex (matches SITE_URL / metadataBase). Collapse www.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.simienethiopiatours.com' }],
+        destination: 'https://simienethiopiatours.com/:path*',
+        permanent: true,
+      },
       { source: '/outbound', destination: '/tours', permanent: true },
       { source: '/mountains', destination: '/tours', permanent: true },
       { source: '/festivals', destination: '/blog', permanent: true },

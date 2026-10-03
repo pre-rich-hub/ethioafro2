@@ -26,9 +26,7 @@ export const metadata: Metadata = {
     'South Omo tribes',
     'Ethiopia travel',
   ],
-  alternates: {
-    canonical: SITE_URL,
-  },
+  // Canonicals are set per-page via buildPageMetadata (locale-aware).
   openGraph: {
     title: defaultDocumentTitle,
     description: company.ogDescription,
