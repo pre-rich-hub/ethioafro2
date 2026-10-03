@@ -47,6 +47,16 @@ export async function Hero() {
           </Link>
         </div>
       </div>
+
+      <a
+        href="#about"
+        className="mb-6 flex flex-col items-center gap-3 self-center text-[10px] font-semibold uppercase tracking-[0.3em] text-background/85 transition-colors [animation:fade-up_1s_ease_0.6s_both] hover:text-background sm:mb-8"
+      >
+        {t('heroScroll')}
+        <span className="relative h-12 w-px overflow-hidden bg-background/30 sm:h-16">
+          <span className="absolute inset-x-0 top-0 h-2/5 animate-scroll-cue bg-background motion-reduce:animate-none" />
+        </span>
+      </a>
     </section>
   )
 }

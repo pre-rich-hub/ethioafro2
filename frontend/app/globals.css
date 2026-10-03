@@ -44,6 +44,7 @@
 
   --animate-slow-zoom: slow-zoom 22s ease-out forwards;
   --animate-marquee: marquee 42s linear infinite;
+  --animate-scroll-cue: scroll-cue 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
 :root {
@@ -161,6 +162,16 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+/* A short highlight that travels down the hero's scroll line */
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(250%);
   }
 }
 
