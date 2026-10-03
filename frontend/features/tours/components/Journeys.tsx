@@ -6,11 +6,22 @@ import { LinkButton } from '@/components/common/LinkButton'
 import { tours as staticTours } from '@/features/tours/data/tour.data'
 import { type Tour } from '@/features/tours/types/tour.types'
 
+// Homepage grid, in display order. Pinned by slug so the six cards stay
+// fixed regardless of which tours are flagged as featured in the admin.
+const homeTourSlugs = [
+  'lalibela-beyond-the-churches',
+  'gondar-and-the-simien-rim',
+  'wenchi-crater-lake-escape',
+  'danakil-expedition',
+  'gheralta-and-axum',
+  'addis-ababa-in-depth',
+]
+
 export async function Journeys({ tours = staticTours }: { tours?: Tour[] }) {
   const t = await getTranslations('Home')
-  // Capped so the homepage grid stays at two rows, even if more tours are
-  // flagged as featured in the admin.
-  const featured = tours.filter((tour) => tour.featured).slice(0, 6)
+  const featured = homeTourSlugs
+    .map((slug) => tours.find((tour) => tour.slug === slug))
+    .filter((tour): tour is Tour => tour !== undefined)
 
   return (
     <section id="tours" className="shell py-20 sm:py-24 lg:py-32">
