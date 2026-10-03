@@ -15,7 +15,7 @@ Use after deploying Steps 1–4. Site: `https://simienethiopiatours.com`
 ## Google Search Console (manual)
 
 - [ ] Verify property for `https://simienethiopiatours.com` (apex; matches `metadataBase`).
-- [ ] Vercel Domains: primary = apex; redirect `www` → apex (Next also 308s www in `next.config.mjs`).
+- [ ] Vercel Domains: set primary = `simienethiopiatours.com` and redirect `www` → apex (today Vercel still sends apex → www; flipping that aligns with `SITE_URL` / HTML canonicals). Do not add a Next host redirect until Domains is flipped, or you get a 308 loop.
 - [ ] Submit sitemap: `https://simienethiopiatours.com/sitemap.xml`
 - [ ] Confirm `/robots.txt` shows Allow `/`, Disallow `/admin` + `/login`, and the sitemap URL.
 - [ ] URL Inspection on samples:

@@ -29,14 +29,11 @@ const nextConfig = {
   },
   async redirects() {
     // Retired surfaces — keep old URLs from 404ing.
+    // Note: do NOT add www↔apex redirects here while Vercel Domains already
+    // redirects the other direction — that creates a 308 loop. Prefer setting
+    // primary = apex (www → apex) in the Vercel project Domains UI so it
+    // matches SITE_URL / metadataBase.
     return [
-      // Canonical host is apex (matches SITE_URL / metadataBase). Collapse www.
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.simienethiopiatours.com' }],
-        destination: 'https://simienethiopiatours.com/:path*',
-        permanent: true,
-      },
       { source: '/outbound', destination: '/tours', permanent: true },
       { source: '/mountains', destination: '/tours', permanent: true },
       { source: '/festivals', destination: '/blog', permanent: true },
