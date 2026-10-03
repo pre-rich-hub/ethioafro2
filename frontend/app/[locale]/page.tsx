@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { Hero } from '@/features/home/components/Hero'
 import { BrandIntro } from '@/features/home/components/BrandIntro'
-import { WhyEthiopia } from '@/features/home/components/WhyEthiopia'
 import { Destinations } from '@/features/destinations'
 import { Journeys } from '@/features/tours'
 import { Experiences } from '@/features/experiences'
@@ -50,7 +49,6 @@ export default async function Page() {
       <JsonLd data={graphJsonLd(organizationJsonLd(), websiteJsonLd(locale))} />
       <Hero />
       <BrandIntro />
-      <WhyEthiopia />
       <Destinations />
       <Journeys tours={tours} />
       <section className="shell pb-20 sm:pb-24 lg:pb-32">
