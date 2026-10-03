@@ -114,7 +114,7 @@ export async function Footer() {
     <footer className="bg-charcoal text-background">
       <div className="shell py-16 sm:py-20">
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-10">
-          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1 lg:row-span-2">
             <Image
               src="/images/simien-logo-light.png"
               alt={t('logoAlt', { name: company.name })}
@@ -192,6 +192,16 @@ export async function Footer() {
               </ul>
             </nav>
           ))}
+
+          <div className="col-span-2 flex flex-col gap-5 sm:col-span-3 lg:flex-row lg:items-end lg:justify-between lg:self-end">
+            <div>
+              <p className="font-serif text-xl text-background sm:text-2xl">
+                {t('newsletterTitle')}
+              </p>
+              <p className="mt-1.5 text-sm text-background/60">{t('newsletterBlurb')}</p>
+            </div>
+            <NewsletterForm />
+          </div>
         </div>
 
         <div className="mt-14 grid gap-10 border-t border-background/15 pt-10 lg:grid-cols-[4fr_3fr] lg:gap-12">
@@ -221,20 +231,6 @@ export async function Footer() {
               ))}
             </div>
           </section>
-        </div>
-
-        <div className="mt-14 border-t border-background/15 pt-8">
-          <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
-            <div className="max-w-md">
-              <p className="font-serif text-xl text-background sm:text-2xl">
-                {t('newsletterTitle')}
-              </p>
-              <p className="mt-1.5 text-sm text-background/60">
-                {t('newsletterBlurb')}
-              </p>
-            </div>
-            <NewsletterForm />
-          </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-background/15 pt-8 text-xs text-background/50 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6">
