@@ -1,0 +1,21 @@
+# Simien Ethiopia Tours
+
+> Simien Ethiopia Tours is an Addis Ababa-based tour operator offering private, tailor-made journeys through Ethiopia.
+
+This website contains tour itineraries, destination guides, travel experiences, planning articles, and contact information. English pages use unprefixed URLs; Spanish, French, German, and Chinese pages use /es, /fr, /de, and /zh respectively.
+
+## Plan a journey
+
+- [Tours](https://www.simienethiopiatours.com/tours): Browse journeys and their individual itineraries.
+- [Destinations](https://www.simienethiopiatours.com/destinations): Explore places to visit in Ethiopia.
+- [Experiences](https://www.simienethiopiatours.com/experiences): Discover cultural and outdoor experiences.
+- [Journal](https://www.simienethiopiatours.com/blog): Read travel stories and planning articles.
+- [About](https://www.simienethiopiatours.com/about): Learn about the company and its approach to travel.
+- [Contact](https://www.simienethiopiatours.com/contact): Enquire about a journey and confirm current availability and pricing.
+
+## Site information
+
+- [Sitemap](https://www.simienethiopiatours.com/sitemap.xml): Public page URLs and language alternatives.
+- [Robots](https://www.simienethiopiatours.com/robots.txt): Crawler directives.
+- [Privacy](https://www.simienethiopiatours.com/privacy): Privacy information.
+- [Terms](https://www.simienethiopiatours.com/terms): Website terms.
