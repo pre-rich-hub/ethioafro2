@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { cloudinaryImage } from '@/lib/cloudinary'
 import { locales, routing, type AppLocale } from '@/i18n/routing'
 
-export const SITE_URL = 'https://simienethiopiatours.com'
+export const SITE_URL = 'https://www.simienethiopiatours.com'
 
 export const DEFAULT_OG_IMAGE = cloudinaryImage('lalibela', 1200)
 

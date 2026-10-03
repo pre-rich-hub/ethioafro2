@@ -29,10 +29,8 @@ const nextConfig = {
   },
   async redirects() {
     // Retired surfaces — keep old URLs from 404ing.
-    // Note: do NOT add www↔apex redirects here while Vercel Domains already
-    // redirects the other direction — that creates a 308 loop. Prefer setting
-    // primary = apex (www → apex) in the Vercel project Domains UI so it
-    // matches SITE_URL / metadataBase.
+    // Vercel Domains owns the apex → www redirect. Keep www as primary to
+    // match SITE_URL / metadataBase; an opposite redirect here creates a loop.
     return [
       { source: '/outbound', destination: '/tours', permanent: true },
       { source: '/mountains', destination: '/tours', permanent: true },

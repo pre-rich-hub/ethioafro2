@@ -1,6 +1,6 @@
 # GEO Verification Checklist
 
-Use after deploying GEO Steps 1–4. Site: `https://simienethiopiatours.com`
+Use after deploying GEO Steps 1–4. Site: `https://www.simienethiopiatours.com`
 
 Companion to [`seo-verification.md`](seo-verification.md).
 

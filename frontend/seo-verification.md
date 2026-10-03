@@ -1,6 +1,6 @@
 # SEO Verification Checklist
 
-Use after deploying Steps 1–4. Site: `https://simienethiopiatours.com`
+Use after deploying Steps 1–4. Site: `https://www.simienethiopiatours.com`
 
 ## Analytics (code confirmed)
 
@@ -14,9 +14,9 @@ Use after deploying Steps 1–4. Site: `https://simienethiopiatours.com`
 
 ## Google Search Console (manual)
 
-- [ ] Verify property for `https://simienethiopiatours.com` (apex; matches `metadataBase`).
-- [ ] Vercel Domains: set primary = `simienethiopiatours.com` and redirect `www` → apex (today Vercel still sends apex → www; flipping that aligns with `SITE_URL` / HTML canonicals). Do not add a Next host redirect until Domains is flipped, or you get a 308 loop.
-- [ ] Submit sitemap: `https://simienethiopiatours.com/sitemap.xml`
+- [ ] Verify property for `https://www.simienethiopiatours.com` (www; matches `metadataBase`).
+- [ ] Vercel Domains: keep primary = `www.simienethiopiatours.com` and the existing apex → www redirect. This matches `SITE_URL` / HTML canonicals; do not add an opposite redirect in Next.js.
+- [ ] Submit sitemap: `https://www.simienethiopiatours.com/sitemap.xml`
 - [ ] Confirm `/robots.txt` shows Allow `/`, Disallow `/admin` + `/login`, and the sitemap URL.
 - [ ] URL Inspection on samples:
   - `/`
@@ -36,10 +36,18 @@ Use after deploying Steps 1–4. Site: `https://simienethiopiatours.com`
 | 404 `robots` | `noindex` |
 | Admin `robots` | `noindex, nofollow` |
 | Sitemap URL count | 98 public URLs |
-| Canonical / OG host | `https://simienethiopiatours.com` (apex) |
+| Canonical / OG host | `https://www.simienethiopiatours.com` (www) |
 | JSON-LD present | Home, tour, destination, experience, journal |
 
 No soft-404 or duplicate-title code fixes required from this audit.
+
+## Canonical hostname fix (2026-10-03)
+
+The shared SEO hostname now uses `www`, matching the production redirect and HTTP language links. The canonical / OG host row above reflects this update.
+
+- [ ] After deployment, check `/`, one `/tours/[slug]`, and `/fr/tours`: canonical, HTML language links, and HTTP `Link` language alternates agree on hostname and locale.
+- [ ] Confirm canonical destinations return HTTP 200; sitemap, robots sitemap reference, Open Graph, and JSON-LD URLs use `www`.
+- [ ] Rerun Lighthouse SEO on the homepage and a translated page; the canonical audit must pass.
 
 ## Locale / i18n (Step 5)
 

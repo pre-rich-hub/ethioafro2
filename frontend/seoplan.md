@@ -1,7 +1,7 @@
 # SEO Plan — Simien Ethiopia Tours
 
 Work the steps in order. Finish and commit one step before starting the next.
-Site: `https://simienethiopiatours.com`
+Site: `https://www.simienethiopiatours.com`
 
 Priority stack after this plan: **SEO → GEO → i18n**
 
@@ -36,7 +36,7 @@ Priority stack after this plan: **SEO → GEO → i18n**
 - Tour place chips link to matching destinations; related experiences on tour pages
 - Journal breadcrumbs align with JSON-LD; related destinations/tours per post
 - Home hero CTAs are crawlable `/tours` + `/destinations` links
-- Catalogue card alts improved; canonical host remains apex `simienethiopiatours.com`
+- Catalogue card alts improved; canonical host is `www.simienethiopiatours.com` (updated 2026-10-03 to match deployment)
 
 ### Done (Step 5)
 - [`seo-verification.md`](seo-verification.md) — Analytics + Search Console + rich-results checklist
@@ -53,7 +53,7 @@ Priority stack after this plan: **SEO → GEO → i18n**
 - [x] Add `frontend/app/robots.ts`
   - Allow `/`
   - Disallow `/admin`, `/login` (and any other private paths)
-  - Point `sitemap` to `https://simienethiopiatours.com/sitemap.xml`
+  - Point `sitemap` to `https://www.simienethiopiatours.com/sitemap.xml`
 - [x] Add `frontend/app/sitemap.ts`
   - Home + static pages: `/`, `/about`, `/contact`, `/tours`, `/destinations`, `/experiences`, `/blog`, `/privacy`, `/terms`
   - Dynamic entries from catalogues: all tour, destination, experience, and blog slugs
