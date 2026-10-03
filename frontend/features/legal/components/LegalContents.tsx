@@ -13,7 +13,6 @@ export async function LegalContents({ updated, sections }: { updated: string; se
 
       <nav aria-label="On this page" className="mt-8 border-t border-border pt-6">
         <p className="eyebrow mb-4 text-accent">
-          <span className="rule" />
           {t('onThisPage')}
         </p>
         <ol className="space-y-1">

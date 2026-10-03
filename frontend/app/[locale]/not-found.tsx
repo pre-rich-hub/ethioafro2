@@ -18,7 +18,6 @@ export default async function NotFound() {
   return (
     <section className="shell flex min-h-[72svh] flex-col items-center justify-center py-32 text-center">
       <p className="eyebrow justify-center text-accent">
-        <span className="rule" />
         {t('eyebrow')}
       </p>
       <h1 className="mt-6 max-w-[22ch] text-balance text-4xl leading-[1.08] text-foreground sm:text-5xl lg:text-6xl">

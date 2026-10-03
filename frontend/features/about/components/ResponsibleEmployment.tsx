@@ -19,7 +19,6 @@ export async function ResponsibleEmployment() {
       </Reveal>
       <Reveal delay={120}>
         <p className="eyebrow mb-5 text-accent">
-          <span className="rule" />
           {t('responsibleEyebrow')}
         </p>
         <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">

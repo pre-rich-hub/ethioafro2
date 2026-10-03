@@ -14,9 +14,7 @@ export function LoginForm() {
         <div className="rounded-xl border border-border bg-card p-8 shadow-lg md:p-10">
           <div className="mb-8 text-center">
             <p className="eyebrow justify-center text-accent">
-              <span className="rule" />
               Simien Ethiopia Tours
-              <span className="rule" />
             </p>
             <h1 className="mt-4 font-serif text-3xl text-foreground">Admin</h1>
             <p className="mt-1 text-sm text-muted-foreground">

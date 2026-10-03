@@ -21,7 +21,6 @@ export function ExperienceEnquiry({ a, others }: Props) {
         <div className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[1fr_1.15fr] lg:gap-20 lg:py-24">
           <Reveal>
             <p className="eyebrow mb-5 text-accent-light">
-              <span className="rule" />
               {t('detailAddEyebrow')}
             </p>
             <h2 className="max-w-[20ch] text-balance text-3xl leading-[1.08] text-background sm:text-4xl lg:text-5xl">

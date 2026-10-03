@@ -17,7 +17,6 @@ export async function InternationalPerspective() {
       <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <Reveal>
           <p className="eyebrow mb-5 text-accent">
-            <span className="rule" />
             {t('perspectiveEyebrow')}
           </p>
           <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">

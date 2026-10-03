@@ -37,7 +37,6 @@ export function ExperienceStory({ a }: Props) {
             />
             <div className="relative border border-accent/35 px-6 py-8 sm:px-8 sm:py-10">
               <p className="eyebrow text-accent">
-                <span className="rule" />
                 {t('detailDetails')}
               </p>
               <dl className="mt-6 space-y-4">

@@ -15,7 +15,6 @@ export async function ExperienceIntroduction() {
     <section className="shell grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-20 lg:py-24">
       <Reveal>
         <p className="eyebrow mb-5 text-accent">
-          <span className="rule" />
           {t('introEyebrow')}
         </p>
         <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">

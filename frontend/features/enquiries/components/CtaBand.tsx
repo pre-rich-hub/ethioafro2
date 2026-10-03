@@ -45,7 +45,6 @@ export async function CtaBand({
         <Reveal className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="eyebrow mb-5 text-accent-light">
-              <span className="rule" />
               {resolvedEyebrow}
             </p>
             <h2 className="text-balance text-3xl leading-[1.1] sm:text-4xl lg:text-5xl">

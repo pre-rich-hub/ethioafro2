@@ -17,9 +17,7 @@ export async function BrandIntro() {
     <section id="about" className="scroll-mt-20 py-24 lg:py-40">
       <Reveal className="mx-auto max-w-[720px] px-6 text-center lg:px-10">
         <p className="mb-6 flex items-center justify-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-accent">
-          <span className="h-px w-10 bg-accent" />
           {t('brandEyebrow')}
-          <span className="h-px w-10 bg-accent" />
         </p>
         <h2 className="text-balance font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl lg:text-6xl">
           {t('brandTitle')}

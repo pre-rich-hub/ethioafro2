@@ -11,7 +11,6 @@ export async function FounderLetter() {
     <section className="shell grid gap-14 py-16 sm:py-20 lg:grid-cols-[1fr_1.2fr] lg:gap-24 lg:py-28">
       <Reveal className="lg:sticky lg:top-28 lg:self-start">
         <p className="eyebrow mb-6 text-accent">
-          <span className="rule" />
           {t('founderEyebrow')}
         </p>
         <blockquote className="font-serif text-4xl leading-[1.08] text-foreground sm:text-5xl lg:text-[3.5rem]">

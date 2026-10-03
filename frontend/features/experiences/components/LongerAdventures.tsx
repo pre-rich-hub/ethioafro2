@@ -16,7 +16,6 @@ export async function LongerAdventures() {
       <div className="shell py-16 sm:py-20 lg:py-24">
         <Reveal className="mb-10 max-w-2xl sm:mb-12">
           <p className="eyebrow mb-4 text-accent">
-            <span className="rule" />
             {t('longerEyebrow')}
           </p>
           <h2 className="text-balance text-3xl leading-[1.1] text-background sm:text-4xl">

@@ -47,7 +47,6 @@ export function SectionHeading({
             align === 'center' && !aside && 'justify-center',
           )}
         >
-          <span className="rule" />
           {eyebrow}
         </p>
         <h2

@@ -23,7 +23,6 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
       <div className={railPad}>
         <Reveal>
           <p className="eyebrow mb-5 text-accent">
-            <span className="rule" />
             {tt('detailJourney')}
           </p>
           <h2 className="max-w-[22ch] text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
@@ -54,7 +53,6 @@ export function TourOverview({ t, nightsLabel, priceCard }: Props) {
 
           <div className="mt-10">
             <p className="eyebrow mb-5 text-primary">
-              <span className="rule" />
               {tt('detailPlaces')}
             </p>
             <ul className="flex flex-wrap gap-2">

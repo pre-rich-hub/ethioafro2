@@ -25,7 +25,6 @@ export function BlogRelatedCatalogue({ destinations, tours }: Props) {
             <Reveal className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <p className="eyebrow mb-4 text-accent">
-                  <span className="rule" />
                   {t('relatedDestEyebrow')}
                 </p>
                 <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
@@ -55,7 +54,6 @@ export function BlogRelatedCatalogue({ destinations, tours }: Props) {
             <Reveal className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <p className="eyebrow mb-4 text-accent">
-                  <span className="rule" />
                   {t('relatedToursEyebrow')}
                 </p>
                 <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">

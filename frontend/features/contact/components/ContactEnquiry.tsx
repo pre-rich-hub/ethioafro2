@@ -11,7 +11,6 @@ export async function ContactEnquiry() {
     <section className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[1fr_1.15fr] lg:gap-20 lg:py-28">
       <Reveal>
         <p className="eyebrow mb-5 text-accent">
-          <span className="rule" />
           {t('enquiryEyebrow')}
         </p>
         <h2 className="max-w-[18ch] text-balance text-3xl leading-[1.08] text-foreground sm:text-4xl lg:text-5xl">

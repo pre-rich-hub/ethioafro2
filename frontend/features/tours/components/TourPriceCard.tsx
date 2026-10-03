@@ -28,7 +28,6 @@ export function TourPriceCard({ t, nightsLabel }: Props) {
         {isTailorMade(t) || !price ? (
           <>
             <p className="eyebrow text-accent">
-              <span className="rule" />
               {tt('detailTailorEyebrow')}
             </p>
             <p className="mt-6 font-serif text-4xl leading-[1.05] text-background sm:text-5xl">
@@ -41,7 +40,6 @@ export function TourPriceCard({ t, nightsLabel }: Props) {
         ) : (
           <>
             <p className="eyebrow text-accent">
-              <span className="rule" />
               {tt('detailIndicative')}
             </p>
             <div className="mt-6 flex items-end gap-3">

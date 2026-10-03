@@ -16,7 +16,6 @@ export function TourItinerary({ t }: Props) {
             <div className={railPad}>
               <Reveal className="mb-12 max-w-2xl sm:mb-16">
                 <p className="eyebrow mb-5 text-accent">
-                  <span className="rule" />
                   {tt('detailItineraryEyebrow')}
                 </p>
                 <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">

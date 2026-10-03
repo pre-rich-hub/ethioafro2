@@ -152,7 +152,6 @@ export function WhereToNext() {
       <div className="shell mb-10 flex items-end justify-between gap-6 sm:mb-14">
         <div>
           <p className="eyebrow mb-4 text-accent">
-            <span className="rule" />
             {t('exploreEyebrow')}
           </p>
           <h2 className="text-balance text-4xl leading-[1.05] text-foreground sm:text-5xl lg:text-6xl">
@@ -226,7 +225,6 @@ export function WhereToNext() {
                   {s.location}
                 </h3>
                 <span className="mt-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-light sm:text-[11px]">
-                  <span className="h-px w-6 bg-accent-light transition-all duration-500 group-hover:w-10" />
                   {t('exploreCta')}
                   <ArrowRight className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" />
                 </span>

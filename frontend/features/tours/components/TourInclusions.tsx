@@ -16,7 +16,6 @@ export function TourInclusions({ t }: Props) {
           <div className={`grid gap-12 xl:grid-cols-2 xl:gap-16 ${railPad}`}>
             <Reveal>
               <p className="eyebrow mb-6 text-primary">
-                <span className="rule" />
                 {tt('detailIncluded')}
               </p>
               <ul className="space-y-4">
@@ -35,7 +34,6 @@ export function TourInclusions({ t }: Props) {
 
             <Reveal delay={120}>
               <p className="eyebrow mb-6 text-muted-foreground">
-                <span className="rule" />
                 {tt('detailNotIncluded')}
               </p>
               <ul className="space-y-4">

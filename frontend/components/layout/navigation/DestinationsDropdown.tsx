@@ -24,7 +24,6 @@ export function DestinationsDropdown({ dismissed, dismiss }: Props) {
         <div className="flex flex-col justify-between border-r border-border/60 pr-10">
           <div>
             <p className="mb-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-accent">
-              <span className="h-px w-8 bg-accent" />
               {t('destinationsEyebrow')}
             </p>
             <h3 className="font-serif text-[2rem] leading-[1.1] text-foreground mb-5">

@@ -13,7 +13,6 @@ export async function PlanJourney() {
       <div className="shell relative grid gap-12 py-20 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:py-32">
         <Reveal>
           <p className="eyebrow mb-6 text-accent-light">
-            <span className="rule" />
             {t('planEyebrow')}
           </p>
           <h2 className="max-w-[16ch] text-balance font-serif text-[2.1rem] leading-[1.08] sm:text-5xl lg:text-[3.4rem]">

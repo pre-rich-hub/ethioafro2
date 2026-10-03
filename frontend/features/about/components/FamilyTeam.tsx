@@ -10,9 +10,7 @@ export async function FamilyTeam() {
       <div className="shell py-16 sm:py-20 lg:py-28">
         <Reveal className="mx-auto mb-12 max-w-2xl text-center sm:mb-16">
           <p className="mb-5 flex items-center justify-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-accent sm:text-[11px]">
-            <span className="h-px w-10 bg-accent" />
             {t('teamEyebrow')}
-            <span className="h-px w-10 bg-accent" />
           </p>
           <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
             {t('teamTitle')}

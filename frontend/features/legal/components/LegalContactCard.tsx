@@ -9,7 +9,6 @@ export async function LegalContactCard({ related }: { related: { label: string; 
   return (
     <div className="mt-6 bg-secondary p-8 text-secondary-foreground sm:p-10">
       <p className="eyebrow text-accent">
-        <span className="rule" />
         {t('questionsEyebrow')}
       </p>
       <p className="mt-4 max-w-lg font-serif text-2xl leading-snug text-background sm:text-3xl">

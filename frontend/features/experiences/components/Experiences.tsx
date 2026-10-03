@@ -37,7 +37,6 @@ export async function Experiences() {
       <div className="shell">
         <Reveal className="max-w-2xl">
           <p className="mb-5 flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-accent">
-            <span className="h-px w-10 bg-accent" />
             {t('experiencesEyebrow')}
           </p>
           <h2 className="text-balance font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl">

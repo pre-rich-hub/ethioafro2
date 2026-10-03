@@ -22,7 +22,6 @@ export function DestinationOverview({ d }: Props) {
     <section className="shell grid gap-14 py-16 sm:py-20 lg:grid-cols-[1.35fr_1fr] lg:gap-20 lg:py-28">
       <Reveal>
         <p className="eyebrow mb-5 text-accent">
-          <span className="rule" />
           {t('detailAtGlance')}
         </p>
         <h2 className="max-w-[24ch] text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">
@@ -41,7 +40,6 @@ export function DestinationOverview({ d }: Props) {
         </dl>
 
         <p className="eyebrow mb-5 mt-14 text-accent">
-          <span className="rule" />
           {t('detailWhyWeGo')}
         </p>
         <h3 className="max-w-[24ch] text-balance font-serif text-2xl leading-[1.15] text-foreground sm:text-3xl">
@@ -67,7 +65,6 @@ export function DestinationOverview({ d }: Props) {
           />
 
           <p className="eyebrow relative mb-6 text-accent">
-            <span className="rule" />
             {t('detailHighlights')}
           </p>
           <ul className="relative space-y-5">

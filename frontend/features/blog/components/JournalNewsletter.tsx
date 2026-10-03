@@ -11,7 +11,6 @@ export function JournalNewsletter() {
         <div className="shell grid gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-24">
           <Reveal>
             <p className="eyebrow mb-5 text-accent-light">
-              <span className="rule" />
               {t('newsletterEyebrow')}
             </p>
             <h2 className="max-w-[22ch] text-balance text-3xl leading-[1.1] text-background sm:text-4xl">

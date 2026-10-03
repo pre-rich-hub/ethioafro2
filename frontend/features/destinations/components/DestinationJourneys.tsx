@@ -20,7 +20,6 @@ export function DestinationJourneys({ d, fallback }: Props) {
           <Reveal className="mb-10 flex flex-col justify-between gap-6 sm:mb-14 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <p className="eyebrow mb-4 text-accent sm:mb-5">
-                <span className="rule" />
                 {t('detailJourneysEyebrow', { name: d.name })}
               </p>
               <h2 className="text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl">

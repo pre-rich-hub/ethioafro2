@@ -85,7 +85,6 @@ export function PageHero({
           <p
             className={`eyebrow mb-5 text-accent-light ${align === 'center' ? 'justify-center' : ''}`}
           >
-            <span className="rule" />
             {eyebrow}
           </p>
           <h1 className="text-balance text-[2.15rem] font-medium leading-[1.05] text-background text-shadow-soft sm:text-5xl lg:text-6xl xl:text-[4.25rem]">

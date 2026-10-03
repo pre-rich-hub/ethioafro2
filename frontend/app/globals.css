@@ -119,12 +119,9 @@
 }
 
 @layer utilities {
-  /* Editorial micro-label: uppercase, letterspaced, hairline rule */
+  /* Editorial micro-label: uppercase, letterspaced */
   .eyebrow {
     @apply flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] sm:text-[11px];
-  }
-  .rule {
-    @apply h-px w-8 shrink-0 bg-current opacity-60 sm:w-10;
   }
   .shell {
     @apply mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-10;

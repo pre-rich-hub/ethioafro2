@@ -16,7 +16,6 @@ export function Destinations() {
       <div className="grid lg:grid-cols-[380px_1fr] xl:grid-cols-[440px_1fr]">
         <div className="flex flex-col justify-center px-6 py-16 sm:px-10 lg:py-24">
           <p className="mb-6 flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-accent-light">
-            <span className="h-px w-10 bg-accent-light" />
             {t('destEyebrow')}
           </p>
           <h2 className="text-balance font-serif text-4xl leading-[1.1] sm:text-5xl">
