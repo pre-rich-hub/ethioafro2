@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react'
 import { getLocale, getTranslations } from 'next-intl/server'
@@ -7,15 +8,68 @@ import { company } from '@/lib/seo/entities'
 import { getLocalizedDestinations } from '@/features/destinations/utils/destination.utils'
 import { getLocalizedTours } from '@/features/tours/utils/tour-catalog.utils'
 import { NewsletterForm } from '@/features/newsletter'
+import {
+  FacebookMark,
+  GetYourGuideLogo,
+  InstagramMark,
+  MastercardLogo,
+  PayPalLogo,
+  SafariBookingsLogo,
+  TikTokMark,
+  TripadvisorLogo,
+  ViatorLogo,
+  VisaLogo,
+  XMark,
+  YouTubeMark,
+} from './BrandMarks'
 
-// Add each profile URL to show its button; entries left blank stay hidden
-// so the footer never links to a dead "#".
+// Fill in each profile / listing URL to make its badge a link. Badges
+// without a URL still show, but as plain marks rather than dead links.
 const socials = [
-  { name: 'Facebook', href: '' },
-  { name: 'Instagram', href: '' },
-  { name: 'YouTube', href: '' },
-  { name: 'TripAdvisor', href: '' },
-].filter((s) => s.href)
+  { name: 'Instagram', href: '', mark: <InstagramMark /> },
+  { name: 'YouTube', href: '', mark: <YouTubeMark /> },
+  { name: 'Facebook', href: '', mark: <FacebookMark /> },
+  { name: 'TikTok', href: '', mark: <TikTokMark /> },
+  { name: 'X', href: '', mark: <XMark /> },
+]
+
+const platforms = [
+  { name: 'Viator', href: '', mark: <ViatorLogo /> },
+  { name: 'Tripadvisor', href: '', mark: <TripadvisorLogo /> },
+  { name: 'SafariBookings', href: '', mark: <SafariBookingsLogo /> },
+  { name: 'GetYourGuide', href: '', mark: <GetYourGuideLogo /> },
+]
+
+const payments = [
+  { name: 'Visa', mark: <VisaLogo /> },
+  { name: 'Mastercard', mark: <MastercardLogo /> },
+  { name: 'PayPal', mark: <PayPalLogo /> },
+]
+
+function MaybeLink({
+  href,
+  label,
+  className,
+  children,
+}: {
+  href: string
+  label: string
+  className: string
+  children: ReactNode
+}) {
+  return href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} title={label} className={className}>
+      {children}
+    </a>
+  ) : (
+    <span role="img" aria-label={label} title={label} className={className}>
+      {children}
+    </span>
+  )
+}
+
+const tileClass =
+  'flex h-16 items-center justify-center rounded-md bg-background px-3 shadow-sm ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-0.5'
 
 export async function Footer() {
   const t = await getTranslations('Footer')
@@ -98,21 +152,18 @@ export async function Footer() {
               </li>
             </ul>
 
-            {socials.length > 0 && (
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {socials.map(({ name, href }) => (
-                <a
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              {socials.map(({ name, href, mark }) => (
+                <MaybeLink
                   key={name}
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full border border-background/20 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-background/70 transition-colors duration-300 hover:border-accent-light hover:text-accent-light"
+                  label={name}
+                  className="grid h-11 w-11 place-items-center rounded-full bg-white p-2.5 shadow-sm ring-1 ring-black/10 transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  {name}
-                </a>
+                  {mark}
+                </MaybeLink>
               ))}
             </div>
-            )}
           </div>
 
           {columns.map((col) => (
@@ -143,6 +194,35 @@ export async function Footer() {
           ))}
         </div>
 
+        <div className="mt-14 grid gap-10 border-t border-background/15 pt-10 lg:grid-cols-[4fr_3fr] lg:gap-12">
+          <section aria-labelledby="footer-platforms">
+            <h3 id="footer-platforms" className="font-serif text-xl text-background sm:text-2xl">
+              {t('platformsTitle')}
+            </h3>
+            <p className="mt-1.5 text-sm text-background/60">{t('platformsBlurb')}</p>
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {platforms.map(({ name, href, mark }) => (
+                <MaybeLink key={name} href={href} label={name} className={tileClass}>
+                  {mark}
+                </MaybeLink>
+              ))}
+            </div>
+          </section>
+          <section aria-labelledby="footer-payments">
+            <h3 id="footer-payments" className="font-serif text-xl text-background sm:text-2xl">
+              {t('paymentsTitle')}
+            </h3>
+            <p className="mt-1.5 text-sm text-background/60">{t('paymentsBlurb')}</p>
+            <div className="mt-5 grid grid-cols-3 gap-3">
+              {payments.map(({ name, mark }) => (
+                <span key={name} role="img" aria-label={name} title={name} className={tileClass}>
+                  {mark}
+                </span>
+              ))}
+            </div>
+          </section>
+        </div>
+
         <div className="mt-14 border-t border-background/15 pt-8">
           <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
             <div className="max-w-md">
@@ -157,11 +237,25 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-background/15 pt-8 text-xs text-background/50 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-background/15 pt-8 text-xs text-background/50 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6">
           <p>
             &copy; {new Date().getFullYear()} {company.name}. {t('rightsReserved')}
           </p>
-          <div className="flex flex-wrap gap-x-6 gap-y-1">
+          <p className="order-last text-center text-[13px] font-semibold text-background/75 md:order-none">
+            {t.rich('builtBy', {
+              link: (chunks) => (
+                <a
+                  href="https://melba.et"
+                  target="_blank"
+                  rel="noopener"
+                  className="font-extrabold text-background transition-colors hover:text-accent-light"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
+          </p>
+          <div className="flex flex-wrap gap-x-6 gap-y-1 md:justify-end">
             <Link href="/privacy" className="py-1 transition-colors hover:text-background/80">
               {t('privacy')}
             </Link>

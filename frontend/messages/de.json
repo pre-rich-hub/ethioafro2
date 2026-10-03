@@ -37,8 +37,8 @@
     "responsibleTourism": "Verantwortungsvoller Tourismus",
     "whenToVisit": "Beste Reisezeit",
     "contactUs": "Kontakt",
-    "newsletterTitle": "Äthiopien weiter entdecken",
-    "newsletterBlurb": "Kuratierte Reisegeschichten und saisonale Inspiration unserer Designer. Vier Briefe im Jahr, nie mehr.",
+    "newsletterTitle": "Bleiben Sie in Kontakt",
+    "newsletterBlurb": "Reisegeschichten und Tipps aus Äthiopien, direkt in Ihr Postfach.",
     "rightsReserved": "Alle Rechte vorbehalten.",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
@@ -47,7 +47,12 @@
     "emailPlaceholder": "Ihre E-Mail",
     "subscribe": "Abonnieren",
     "subscribeSuccess": "Danke — der nächste Brief findet Sie.",
-    "subscribeError": "Etwas ist schiefgelaufen — bitte erneut versuchen."
+    "subscribeError": "Etwas ist schiefgelaufen — bitte erneut versuchen.",
+    "platformsTitle": "Vertrauenswürdige Reiseplattformen",
+    "platformsBlurb": "Hier finden und bewerten uns erfahrene Reisende.",
+    "paymentsTitle": "Wir akzeptieren",
+    "paymentsBlurb": "Sichere Zahlung per Karte oder PayPal.",
+    "builtBy": "Entwickelt von <link>Melba Technology</link>"
   },
   "Common": {
     "skipToContent": "Zum Inhalt springen",

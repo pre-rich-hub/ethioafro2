@@ -37,8 +37,8 @@
     "responsibleTourism": "Responsible Tourism",
     "whenToVisit": "When to Visit",
     "contactUs": "Contact Us",
-    "newsletterTitle": "Continue exploring Ethiopia",
-    "newsletterBlurb": "Curated travel stories and seasonal inspiration from our designers. Four letters a year, never more.",
+    "newsletterTitle": "Stay in touch",
+    "newsletterBlurb": "Ethiopia travel stories and tips, straight to your inbox.",
     "rightsReserved": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
@@ -47,7 +47,12 @@
     "emailPlaceholder": "Your email",
     "subscribe": "Subscribe",
     "subscribeSuccess": "Thank you — the next letter will find you.",
-    "subscribeError": "Something went wrong — please try again."
+    "subscribeError": "Something went wrong — please try again.",
+    "platformsTitle": "Trusted travel platforms",
+    "platformsBlurb": "Find and review us where seasoned travellers plan.",
+    "paymentsTitle": "We accept",
+    "paymentsBlurb": "Secure payments by card or PayPal.",
+    "builtBy": "Built by <link>Melba Technology</link>"
   },
   "Common": {
     "skipToContent": "Skip to content",

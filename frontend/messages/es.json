@@ -37,8 +37,8 @@
     "responsibleTourism": "Turismo responsable",
     "whenToVisit": "Cuándo visitar",
     "contactUs": "Contacto",
-    "newsletterTitle": "Sigue explorando Etiopía",
-    "newsletterBlurb": "Historias de viaje e inspiración de temporada de nuestros diseñadores. Cuatro cartas al año, nunca más.",
+    "newsletterTitle": "Manténgase en contacto",
+    "newsletterBlurb": "Historias y consejos de viaje por Etiopía, directo a su bandeja de entrada.",
     "rightsReserved": "Todos los derechos reservados.",
     "privacy": "Política de privacidad",
     "terms": "Términos y condiciones",
@@ -47,7 +47,12 @@
     "emailPlaceholder": "Tu correo",
     "subscribe": "Suscribirse",
     "subscribeSuccess": "Gracias — la próxima carta te encontrará.",
-    "subscribeError": "Algo salió mal — inténtalo de nuevo."
+    "subscribeError": "Algo salió mal — inténtalo de nuevo.",
+    "platformsTitle": "Plataformas de viaje de confianza",
+    "platformsBlurb": "Encuéntrenos y valórenos donde planifican los viajeros con experiencia.",
+    "paymentsTitle": "Aceptamos",
+    "paymentsBlurb": "Pagos seguros con tarjeta o PayPal.",
+    "builtBy": "Desarrollado por <link>Melba Technology</link>"
   },
   "Common": {
     "skipToContent": "Saltar al contenido",

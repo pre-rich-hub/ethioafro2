@@ -37,8 +37,8 @@
     "responsibleTourism": "负责任的旅游",
     "whenToVisit": "最佳出行季节",
     "contactUs": "联系我们",
-    "newsletterTitle": "继续探索埃塞俄比亚",
-    "newsletterBlurb": "来自我们行程设计师的精选旅行故事与季节灵感。一年四封，绝不滥发。",
+    "newsletterTitle": "保持联系",
+    "newsletterBlurb": "埃塞俄比亚旅行故事与贴士，直达您的邮箱。",
     "rightsReserved": "保留所有权利。",
     "privacy": "隐私政策",
     "terms": "条款与条件",
@@ -47,7 +47,12 @@
     "emailPlaceholder": "您的邮箱",
     "subscribe": "订阅",
     "subscribeSuccess": "谢谢——下一封信会找到您。",
-    "subscribeError": "出了点问题——请再试一次。"
+    "subscribeError": "出了点问题——请再试一次。",
+    "platformsTitle": "值得信赖的旅行平台",
+    "platformsBlurb": "在资深旅行者规划行程的平台上找到并评价我们。",
+    "paymentsTitle": "我们接受",
+    "paymentsBlurb": "支持银行卡或 PayPal 安全支付。",
+    "builtBy": "由 <link>Melba Technology</link> 构建"
   },
   "Common": {
     "skipToContent": "跳到主要内容",
