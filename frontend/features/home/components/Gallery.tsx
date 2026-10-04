@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
-const cld = (slug: string) =>
-  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/${slug}.png`
+const cld = (slug: string) => cloudinaryImage(slug, 1920)
 
 const shots = [
   {

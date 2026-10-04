@@ -41,7 +41,7 @@ export default async function ToursPage() {
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}
         lede={t('heroLede')}
-        image="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/simien-mountains.png"
+        image={cloudinaryImage('simien-mountains')}
         imageAlt="Simien Mountains escarpment in northern Ethiopia"
         crumbs={[{ label: tc('home'), href: '/' }, { label: tc('tours') }]}
         compact

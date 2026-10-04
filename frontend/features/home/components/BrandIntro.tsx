@@ -38,8 +38,8 @@ export async function BrandIntro() {
       <Reveal delay={100} className="mx-auto mt-16 max-w-[1280px] px-6 lg:px-10">
         <div className="relative aspect-[21/9] overflow-hidden rounded-xl">
           <Image
-            src="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/coffee-cupping-and-ceremony.png"
-            alt="Hands pouring coffee from a traditional Ethiopian jebena during a coffee ceremony"
+            src="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/file_0000000030fc81fd8f7f7ed44af67a16.png"
+            alt="Travellers walking a highland path through Ethiopia’s northern landscape"
             fill
             sizes="100vw"
             className="object-cover"

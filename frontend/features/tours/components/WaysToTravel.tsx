@@ -7,9 +7,9 @@ import { Link } from '@/i18n/navigation'
 import { Reveal } from '@/components/common/Reveal'
 import { localizeStyleToken } from '@/features/tours/utils/style-labels'
 import { type Tour } from '@/features/tours/types/tour.types'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
-const cld = (slug: string) =>
-  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${slug}.png`
+const cld = (slug: string) => cloudinaryImage(slug)
 
 /** English tokens stay in URLs / filters; labels + copy come from messages. */
 const styles = [

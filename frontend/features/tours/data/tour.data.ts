@@ -1,9 +1,9 @@
 import type { Tour } from '@/features/tours/types/tour.types'
 import { TAILOR_MADE } from '@/features/tours/utils/tour.utils'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
 /** Reuses destination Cloudinary public IDs (same cloud as destinations). */
-const cloudinaryTourImage = (destinationSlug: string) =>
-  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${destinationSlug}.png`
+const cloudinaryTourImage = (destinationSlug: string) => cloudinaryImage(destinationSlug)
 
 export const tours: Tour[] = [
   {

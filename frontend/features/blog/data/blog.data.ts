@@ -1,7 +1,7 @@
 import type { Post } from '@/features/blog/types/blog.types'
+import { cloudinaryImage } from '@/lib/cloudinary'
 
-const cloudinaryBlogImage = (publicId: string) =>
-  `https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1600/${publicId}.png`
+const cloudinaryBlogImage = (publicId: string) => cloudinaryImage(publicId)
 
 export const posts: Post[] = [
   {
