@@ -11,9 +11,6 @@ const HERO_VIDEO =
 function canPlayHeroVideo() {
   if (typeof window === 'undefined') return false
 
-  const isTabletUp = window.matchMedia('(min-width: 768px)').matches
-  if (!isTabletUp) return false
-
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false
 
   const connection = (
@@ -35,24 +32,24 @@ export function HeroBackground() {
   const [videoFailed, setVideoFailed] = useState(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 768px)')
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
     const update = () => setShowVideo(canPlayHeroVideo())
 
     update()
-    mediaQuery.addEventListener('change', update)
     reducedMotion.addEventListener('change', update)
 
     const connection = (
       navigator as Navigator & {
-        connection?: EventTarget & { addEventListener?: typeof mediaQuery.addEventListener }
+        connection?: EventTarget & {
+          addEventListener?: typeof reducedMotion.addEventListener
+          removeEventListener?: typeof reducedMotion.removeEventListener
+        }
       }
     ).connection
     connection?.addEventListener?.('change', update)
 
     return () => {
-      mediaQuery.removeEventListener('change', update)
       reducedMotion.removeEventListener('change', update)
       connection?.removeEventListener?.('change', update)
     }
