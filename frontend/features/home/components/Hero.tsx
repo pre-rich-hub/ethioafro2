@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
-import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
+import { HeroBackground } from './HeroBackground'
 
 export async function Hero() {
   const t = await getTranslations('Home')
@@ -10,18 +10,7 @@ export async function Hero() {
       id="top"
       className="relative isolate flex min-h-[100svh] w-full flex-col justify-end overflow-hidden"
     >
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="https://res.cloudinary.com/wwgwrs4y/image/upload/f_auto,q_auto,w_1920/lalibela.png"
-          alt="Rock-hewn churches of Lalibela at golden hour, Ethiopia"
-          fill
-          priority
-          sizes="100vw"
-          className="animate-slow-zoom object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/55 via-charcoal/25 to-charcoal/85" />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/10 to-transparent" />
-      </div>
+      <HeroBackground />
 
       <div className="shell flex flex-1 flex-col items-center justify-center text-center pb-10 pt-32 sm:pb-14 lg:pb-16">
         <h1 className="max-w-[20ch] text-balance text-[2.6rem] font-medium leading-[1.04] text-background text-shadow-soft [animation:fade-up_1s_ease_0.1s_both] sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
